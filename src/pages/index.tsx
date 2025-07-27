@@ -1,4 +1,14 @@
-import {Error, Header, initialState, Loader, NextButton, Questionnaire, QuizReducer, StartScreen} from "@/components";
+import {
+    Error,
+    Header,
+    initialState,
+    Loader,
+    NextButton,
+    Progress,
+    Questionnaire,
+    QuizReducer,
+    StartScreen
+} from "@/components";
 import {useEffect, useReducer} from "react";
 import {Main} from "@/components";
 import {Question} from "@/type/QuizTypes";
@@ -7,7 +17,7 @@ export default function Home() {
     const [{questions,status,index,answer,points},dispatch]=useReducer(QuizReducer,initialState);
 
     const numQuestions=questions.length;
-
+const maxPossiblePoints=questions.reduce((prev,cur)=>prev +cur.points,0)
     useEffect(()=>{
         async function FetchQuestion(){
             try {
@@ -27,15 +37,23 @@ export default function Home() {
             <Main>
                 {status === "loading" && <Loader/>}
                 {status === "error" && <Error/>}
-                {status === "ready" && <StartScreen
-                    numQuestions={numQuestions}
-                    dispatch={dispatch}/>}
-                {status === "active" && <Questionnaire
+                {status === "ready" && <StartScreen numQuestions={numQuestions} dispatch={dispatch}/>}
+                {status === "active" && (
+                    <>
+            <Progress
+                numQuestions={numQuestions}
+                index={index}
+                points={points}
+                maxPossiblePoints={maxPossiblePoints}
+                answer={answer}
+            />
+                    <Questionnaire
                     question={questions[index]}
                     answer={answer}
                     dispatch={dispatch}
-                />}
-                <NextButton dispatch={dispatch} answer={answer} />
+                />
+                    </>)}
+                <NextButton dispatch={dispatch} answer={answer}  />
             </Main>
         </div>
     );
