@@ -12,5 +12,8 @@ export type QuizStatus= "loading" | "error" | "ready" | "active" | "finished"
 export type QuizState ={
     questions: Question[];
     status: QuizStatus;
+    index: number;
+    answer: number |null;
+    points:number;
 }
 

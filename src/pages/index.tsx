@@ -1,10 +1,10 @@
-import {Error, Header, initialState, initialValue, Loader, Question, QuizReducer} from "@/components";
+import {Error, Header, initialState, Loader, NextButton, Questionnaire, QuizReducer, StartScreen} from "@/components";
 import {useEffect, useReducer} from "react";
 import {Main} from "@/components";
-import StartScreen from "@/components/StartScreen";
+import {Question} from "@/type/QuizTypes";
 
 export default function Home() {
-    const [{questions,status},dispatch]=useReducer(QuizReducer,initialState);
+    const [{questions,status,index,answer,points},dispatch]=useReducer(QuizReducer,initialState);
 
     const numQuestions=questions.length;
 
@@ -19,15 +19,23 @@ export default function Home() {
                 dispatch({type:"dataFailed"});
             }
         }
-            FetchQuestion()
+        FetchQuestion()
     },[])
     return (
-        <div>
+        <div className="app">
             <Header/>
             <Main>
                 {status === "loading" && <Loader/>}
                 {status === "error" && <Error/>}
-                {status === "ready" && <StartScreen numQuestions={numQuestions}/>}
+                {status === "ready" && <StartScreen
+                    numQuestions={numQuestions}
+                    dispatch={dispatch}/>}
+                {status === "active" && <Questionnaire
+                    question={questions[index]}
+                    answer={answer}
+                    dispatch={dispatch}
+                />}
+                <NextButton dispatch={dispatch} answer={answer} />
             </Main>
         </div>
     );

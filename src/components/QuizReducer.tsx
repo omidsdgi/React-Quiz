@@ -8,11 +8,25 @@ export type DataReceived ={
 export type DataFailed ={
     type: "dataFailed";
 }
-export type QuizAction= DataReceived | DataFailed;
+export type Start={
+    type: "start",
+}
+
+export type NewAnswer = {
+    type: "newAnswer",
+    payload: number;
+}
+export type NextQuestion = {
+    type: "nextQuestion",
+}
+export type QuizAction= DataReceived | DataFailed | Start | NewAnswer | NextQuestion;
 
 export const initialState :QuizState= {
     questions:[],
-    status:"loading"
+    status:"loading",
+    index:0,
+    answer:null,
+    points:0
 }
 
 export function QuizReducer(state:QuizState,action:QuizAction):QuizState {
@@ -28,6 +42,26 @@ export function QuizReducer(state:QuizState,action:QuizAction):QuizState {
                 ...state,
                 status:"error"
             }
+        case "start":
+            return {
+                ...state,
+                status:"active"
+            }
+        case "newAnswer":
+            const question = state.questions.at(state.index);
+            return {
+                ...state,
+                answer:action.payload,
+                points:action.payload === question?.correctOption
+                    ? state.points +question.points
+                    :state.points,
+            }
+            case "nextQuestion":
+                return {
+                    ...state,
+                    index:state.index + 1,
+                    answer:null
+                }
         default:
             throw new Error("Unknown action type");
     }
