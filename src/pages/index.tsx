@@ -12,12 +12,17 @@ import {
 import {useEffect, useReducer} from "react";
 import {Main} from "@/components";
 import {Question} from "@/type/QuizTypes";
+import Footer from "@/components/Footer";
+import Timer from "@/components/Timer";
 
 export default function Home() {
-    const [{questions,status,index,answer,points,highScore},dispatch]=useReducer(QuizReducer,initialState);
+    const [
+        {questions, status, index, answer, points, highScore, secondsRemaining},
+        dispatch]
+        =useReducer(QuizReducer,initialState);
 
     const numQuestions=questions.length;
-const maxPossiblePoints=questions.reduce((prev,cur)=>prev +cur.points,0)
+    const maxPossiblePoints=questions.reduce((prev,cur)=>prev +cur.points,0)
     useEffect(()=>{
         async function FetchQuestion(){
             try {
@@ -37,24 +42,42 @@ const maxPossiblePoints=questions.reduce((prev,cur)=>prev +cur.points,0)
             <Main>
                 {status === "loading" && <Loader/>}
                 {status === "error" && <Error/>}
-                {status === "ready" && <StartScreen numQuestions={numQuestions} dispatch={dispatch}/>}
+                {status === "ready" &&
+                    <StartScreen
+                        numQuestions={numQuestions}
+                        dispatch={dispatch}/>}
                 {status === "active" && (
                     <>
-            <Progress
-                numQuestions={numQuestions}
-                index={index}
-                points={points}
-                maxPossiblePoints={maxPossiblePoints}
-                answer={answer}
-            />
-                    <Questionnaire
-                    question={questions[index]}
-                    answer={answer}
-                    dispatch={dispatch}
-                />
-                <NextButton dispatch={dispatch} answer={answer} index={index} numQuestions={numQuestions} />
+                        <Progress
+                            numQuestions={numQuestions}
+                            index={index}
+                            points={points}
+                            maxPossiblePoints={maxPossiblePoints}
+                            answer={answer}
+                        />
+                        <Questionnaire
+                            question={questions[index]}
+                            answer={answer}
+                            dispatch={dispatch}
+                            points={points}
+                        />
+                        <Footer>
+                            <Timer secondsRemaining={secondsRemaining} dispatch={dispatch}/>
+                            <NextButton
+                                dispatch={dispatch}
+                                answer={answer}
+                                index={index}
+                                numQuestions={numQuestions}
+                            />
+                        </Footer>
                     </>)}
-                {status === "finished" && <FinishScreen points={points} maxPossiblePoints={maxPossiblePoints} highScore={highScore} dispatch={dispatch}/>}
+                {status === "finished" &&
+                    <FinishScreen
+                        points={points}
+                        maxPossiblePoints={maxPossiblePoints}
+                        highScore={highScore}
+                        dispatch={dispatch}
+                    />}
             </Main>
         </div>
     );

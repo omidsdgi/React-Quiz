@@ -1,32 +1,16 @@
 import { QuizState,Question,} from "../type/QuizTypes";
 
-export type DataReceived ={
-    type: "dataReceived";
-    payload: Question[];
-}
+export type Action =
+    | { type: "dataReceived"; payload: Question[] }
+    | { type: "dataFailed" }
+    | { type: "start" }
+    | { type: "newAnswer"; payload: number }
+    | { type: "nextQuestion" }
+    | { type: "finish" }
+    | { type: "restart" }
+    | { type: "tick" };
 
-export type DataFailed ={
-    type: "dataFailed";
-}
-export type Start={
-    type: "start",
-}
-
-export type NewAnswer = {
-    type: "newAnswer",
-    payload: number;
-}
-export type Finish = {
-    type: "finish",
-}
-export type NextQuestion = {
-    type: "nextQuestion",
-}
-export type Restart = {
-    type: "restart",
-}
-export type QuizAction= DataReceived | DataFailed | Start | NewAnswer | NextQuestion | Finish | Restart;
-
+export const SEC_PER_QUESTION=30
 export const initialState :QuizState= {
     questions:[],
     status:"loading",
@@ -34,9 +18,10 @@ export const initialState :QuizState= {
     answer:null,
     points:0,
     highScore:0,
+    secondsRemaining:null
 }
 
-export function QuizReducer(state:QuizState,action:QuizAction):QuizState {
+export function QuizReducer(state:QuizState,action:Action):QuizState {
     switch (action.type) {
         case "dataReceived":
             return {
@@ -52,7 +37,8 @@ export function QuizReducer(state:QuizState,action:QuizAction):QuizState {
         case "start":
             return {
                 ...state,
-                status:"active"
+                status:"active",
+                secondsRemaining: state.questions.length* SEC_PER_QUESTION
             }
         case "newAnswer":
             const question = state.questions.at(state.index);
@@ -67,6 +53,7 @@ export function QuizReducer(state:QuizState,action:QuizAction):QuizState {
                 return {
                     ...state,
                     index:state.index + 1,
+                    answer:null
                 }
 
         case "finish":
@@ -81,6 +68,13 @@ export function QuizReducer(state:QuizState,action:QuizAction):QuizState {
                 ...initialState,
                 questions:state.questions,
             status:"ready"
+            }
+        case "tick":
+            return {
+                ...state,
+                secondsRemaining:(state.secondsRemaining  && state.secondsRemaining- 1) ,
+                status:state.secondsRemaining === 0 ? "finished" : state.status,
+
             }
         default:
             throw new Error("Unknown action type");
