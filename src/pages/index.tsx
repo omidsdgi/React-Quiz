@@ -30,7 +30,7 @@ export default function Home() {
                 const data:Question[]=await res.json();
                 dispatch({type:"dataReceived",payload:data});
             }
-            catch (err){
+            catch {
                 dispatch({type:"dataFailed"});
             }
         }
