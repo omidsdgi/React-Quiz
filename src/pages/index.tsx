@@ -11,7 +11,6 @@ import {
 } from "@/components";
 import {useEffect, useReducer} from "react";
 import {Main} from "@/components";
-import {Question} from "@/type/QuizTypes";
 import Footer from "@/components/Footer";
 import Timer from "@/components/Timer";
 import {mockQuestions} from "@/mock/mockQuestions";
