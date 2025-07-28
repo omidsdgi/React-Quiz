@@ -15,5 +15,6 @@ export type QuizState ={
     index: number;
     answer: number |null;
     points:number;
+    highScore:number;
 }
 

@@ -1,5 +1,5 @@
 import {
-    Error,
+    Error, FinishScreen,
     Header,
     initialState,
     Loader,
@@ -14,7 +14,7 @@ import {Main} from "@/components";
 import {Question} from "@/type/QuizTypes";
 
 export default function Home() {
-    const [{questions,status,index,answer,points},dispatch]=useReducer(QuizReducer,initialState);
+    const [{questions,status,index,answer,points,highScore},dispatch]=useReducer(QuizReducer,initialState);
 
     const numQuestions=questions.length;
 const maxPossiblePoints=questions.reduce((prev,cur)=>prev +cur.points,0)
@@ -52,8 +52,9 @@ const maxPossiblePoints=questions.reduce((prev,cur)=>prev +cur.points,0)
                     answer={answer}
                     dispatch={dispatch}
                 />
+                <NextButton dispatch={dispatch} answer={answer} index={index} numQuestions={numQuestions} />
                     </>)}
-                <NextButton dispatch={dispatch} answer={answer}  />
+                {status === "finished" && <FinishScreen points={points} maxPossiblePoints={maxPossiblePoints} highScore={highScore} dispatch={dispatch}/>}
             </Main>
         </div>
     );

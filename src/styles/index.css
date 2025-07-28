@@ -176,7 +176,7 @@ progress {
   color: var(--color-light);
   border-radius: 100px;
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem 8rem;
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 1.6rem;
