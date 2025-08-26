@@ -1300,5 +1300,1049 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30
+    },
+    {
+        "id": 110,
+        "question": "why does using React.memo not improve performance when objects are passed as props?",
+        "options": [
+            "Because React.memo ignores object props by default",
+            "Because objects are compared by reference, so a new object is seen as changed every render",
+            "Because React.memo only works with primitive props like strings and numbers",
+            "Because React.memo automatically clones objects internally, causing re-renders",
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 111,
+        "question": "In React, why does using React.memo not improve performance when functions are passed as props?",
+        "options": [
+            "Because React.memo ignores function props during comparison",
+            "Because React.memo only optimizes state variables, not functions",
+            "Because React.memo automatically inlines functions, which forces re-renders",
+            "Because functions are reference types and get recreated on every render unless stabilized",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 112,
+        "question": "What is the main difference between useMemo and useCallback in React?",
+        "options": [
+            "useMemo prevents re-renders, while useCallback prevents re-execution of effects",
+            "useMemo is used only with primitive types, while useCallback is used only with objects",
+            "useMemo memoizes values, while useCallback memoizes functions",
+            "useMemo caches props, while useCallback caches state",
+        ],
+        "correctOption":2,
+        "points": 30
+    },
+    {
+        "id": 113,
+        "question": "What is the key difference between React.memo and the hooks useMemo/useCallback?",
+        "options": [
+            "React.memo memoizes components, while useMemo/useCallback memoize values or functions inside components",
+            "React.memo caches state, while useMemo caches props and useCallback caches context",
+            "React.memo prevents re-renders completely, while useMemo/useCallback only prevent re-execution of useEffect",
+            "React.memo works only with primitive props, while useMemo/useCallback work only with objects and arrays",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 114,
+        "question": "What is the role of the dependency array in useMemo?",
+        "options": [
+            "It prevents the function inside useMemo from ever running again",
+            "It specifies which props should be passed to React.memo",
+            "It ensures the memoized value is always recalculated on every render",
+            "It determines when the memoized value should be recalculated",
+        ],
+        "correctOption":3,
+        "points": 30
+    },
+    {
+        "id": 115,
+        "question": "What similarity exists between the dependency array in useMemo and React.memo?",
+        "options": [
+            "Both automatically stabilize function references without developer effort",
+            "Both control when a value or component should be re-computed or re-rendered based on changes",
+            "Both always prevent re-renders completely, regardless of changes",
+            "Both only work with primitive values and ignore objects or arrays",
+        ],
+        "correctOption":1,
+        "points": 20
+    },
+    {
+        "id": 116,
+        "question": "When using useMemo, what happens if the dependency array does not change between renders?",
+        "options": [
+            "A new value is always recalculated regardless of dependencies",
+            "The previously memoized (cached) value is returned instead of recalculating",
+            "React automatically removes the memoized value to save memory",
+            "The component will never re-render again",
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 117,
+        "question": "Which React hook is primarily used for memoizing props to prevent unnecessary re-renders?",
+        "options": [
+            "useState",
+            "useMemo",
+            "useCallback",
+            "React.memo",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 118,
+        "question": "Which React hook is used to avoid expensive recalculations of a value inside a component?",
+        "options": [
+            "useCallback",
+            "useMemo",
+            "useEffect",
+            "React.memo",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 119,
+        "question": "Which React hook is useful for memoizing values that are used in the dependency array of another hook?",
+        "options": [
+            "useMemo",
+            "useState",
+            "useRef",
+            "useCallback",
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 120,
+        "question": "When you want to prevent a child component from re-rendering due to unchanged props, which of the following is the most appropriate?",
+        "options": [
+            "useMemo inside the parent component to memoize props",
+            "React.memo wrapping the child component",
+            "useCallback to memoize the child component function",
+            "useEffect to control prop updates",
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 121,
+        "question": "To avoid expensive recalculations of a computed value that depends on multiple props or state variables, which hook is best suited?",
+        "options": [
+            "useMemo with a proper dependency array",
+            "useCallback wrapping the computation",
+            "React.memo wrapping the parent component",
+            "useEffect to store the computed value in state",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 122,
+        "question": "When a value is used in the dependency array of another hook, but is expensive to recompute, which hook should you use to stabilize it?",
+        "options": [
+            "useCallback for stabilizing the value",
+            "React.memo wrapping the component using the value",
+            "useRef to persist the value across renders",
+            "useMemo to memoize the value",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 123,
+        "question": "In a React component wrapped with React.memo, why might passing handleClick as an arrow function in JSX prevent memoization from working effectively?",
+        "options": [
+            "Because arrow functions cannot access props or state, so memoization fails",
+            "Because React.memo automatically converts arrow functions to function references",
+            "Because arrow functions create a new function on every render, causing props to appear changed even if the logic is the same",
+            "Because function references inside useCallback are recreated every render, similar to arrow functions",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 124,
+        "question": "When are the callbacks in useMemo and useEffect executed during the component lifecycle?",
+        "options": [
+            "useMemo runs after render commit, while useEffect runs during render",
+            "useMemo runs during rendering to provide a value, while useEffect runs after rendering to handle side effects",
+            "Both run during rendering before committing to the DOM",
+            "Both run after rendering, asynchronously",
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 125,
+        "question": "What is the primary purpose of useMemo compared to useEffect?",
+        "options": [
+            "Both are used for memoizing values inside a component",
+            "Both are used for managing side effects after rendering",
+            "useMemo handles side effects, while useEffect memoizes values",
+            "useMemo memoizes values, while useEffect handles side effects",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 126,
+        "question": "What do useMemo and useEffect each return?",
+        "options": [
+            "useMemo returns functions only, while useEffect returns computed values",
+            "Neither hook returns any value",
+            "useMemo returns a memoized value, while useEffect returns nothing (optionally a cleanup function)",
+            "Both return cleanup functions",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 127,
+        "question": "Why is it invalid to call a Hook using call/apply or indirectly inside another function?",
+        "options": [
+            "Because Hooks must be invoked directly so React can track them properly",
+            "Because Hooks cannot be reused across functions",
+            "Because call/apply breaks the scope of React state",
+            "Because indirect calls are only allowed in class components",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 128,
+        "question": "Why is it incorrect to call a Hook (like useState) inside a conditional statement in a component?",
+        "options": [
+            "Because Hooks automatically break if used inside loops or conditions",
+            "Because React cannot guarantee consistent order of Hooks across renders",
+            "Because Hooks can only be used once in each component",
+            "Because conditionals prevent Hooks from receiving props",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 129,
+        "question": "Where are Hooks allowed to be called?",
+        "options": [
+            "Inside React function components or custom Hooks",
+            "Inside class components only",
+            "Inside any regular JavaScript function",
+            "Inside event handlers only",
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 130,
+        "question": "What happens if a dependency used inside useEffect is not included in the dependency array?",
+        "options": [
+            "The effect may use stale values, leading to unexpected behavior",
+            "React automatically adds the missing dependency",
+            "React throws a runtime error immediately",
+            "The effect will run on every render regardless",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 131,
+        "question": "Why must Hooks always be called in the same order on every render?",
+        "options": [
+            "Because React only supports one Hook per component",
+            "Because changing the order will reset state but still work",
+            "Because Hooks automatically reorder themselves internally",
+            "Because React identifies each Hook call by its position in the render order",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 132,
+        "question": "Why is useMemo helpful when passing objects as props to memoized components?",
+        "options": [
+            "Because useMemo prevents the object from being garbage collected",
+            "Because useMemo automatically deep compares objects before passing them as props",
+            "Because useMemo ensures the same object reference is reused between renders if dependencies do not change",
+            "Because useMemo converts objects into primitive values for React.memo",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 133,
+        "question": "What is the main difference between useCallback and useMemo?",
+        "options": [
+            "useCallback memoizes primitive values, while useMemo memoizes objects and arrays",
+            "useCallback is used for side effects, while useMemo is used for rendering",
+            "useCallback prevents all re-renders, while useMemo only prevents re-renders of children",
+            "useCallback memoizes a function itself, while useMemo memoizes the result of executing a function",
+        ],
+        "correctOption":3,
+        "points": 20
+    },
+    {
+        "id": 134,
+        "question": "Why does React guarantee that setter functions from useState (like setCount) always have a stable identity?",
+        "options": [
+            "Because React automatically memoizes all functions declared inside components",
+            "Because setter functions are recreated on every render but hidden by React",
+            "To prevent unnecessary re-renders by keeping setter references stable across renders",
+            "To ensure that state variables are always primitive values",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 135,
+        "question": "What does it mean that the dispatch function from useReducer has a stable identity?",
+        "options": [
+            "The same function reference is reused on every render and does not change",
+            "It always produces the same state value for the same action",
+            "It is recreated on every render but behaves the same way",
+            "It can only handle primitive action types",
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 136,
+        "question": "Why is it safe to omit useState setters or useReducer dispatch from dependency arrays in useEffect, useCallback, or useMemo?",
+        "options": [
+            "Because React automatically adds them to the dependency array at runtime",
+            "Because React guarantees their identity is stable across renders, so they never change",
+            "Because these functions are re-created every render but compared by value",
+            "Because dependency arrays in Hooks only track primitive values by default",
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 137,
+        "question": "Why is it incorrect to omit a state variable used inside useEffect from its dependency array?",
+        "options": [
+            "Because React automatically re-adds the variable internally",
+            "Because dependency arrays only track setter functions, not values",
+            "Because the effect would run with stale values, not reflecting the latest state",
+            "Because state variables are guaranteed to be stable like setters",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 138,
+        "question": "If a prop is used inside a useCallback, why must it be included in the dependency array?",
+        "options": [
+            "Because React automatically freezes props unless included",
+            "Because props are treated like setter functions with stable identity",
+            "Because useCallback only works when props are primitive values",
+            "Because props can change between renders, and omitting them may cause stale closures",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 139,
+        "question": "Why should a non-memoized function defined inside a component be included in the dependency array if used in useEffect?",
+        "options": [
+            "Because a new function is created on each render, and omitting it causes effects to run with outdated references",
+            "Because React automatically memoizes functions if not included",
+            "Because functions inside components are stable like dispatch",
+            "Because dependency arrays only matter for state setters and props",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 140,
+        "question": "Why can a constantly changing Context value lead to performance issues in React apps?",
+        "options": [
+            "Because React ignores context updates for performance reasons",
+            "Because all consumers re-render on every value change, even if they don't need the updated part",
+            "Because Context automatically freezes values causing lag",
+            "Because useMemo cannot be used with Context values"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 141,
+        "question": "Which technique helps optimize a React Context to prevent unnecessary re-renders of consumers?",
+        "options": [
+            "Wrap the context value in useMemo so it only changes when actual data changes",
+            "Always pass new object literals directly as context value",
+            "Use class components instead of function components",
+            "Avoid using React.memo on consumer components"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 142,
+        "question": "What is an effective strategy when a Context has many consumers to avoid wasted renders?",
+        "options": [
+            "Convert all consumers to class components",
+            "Always update the entire context on any state change",
+            "Use a single large context for all app state to simplify updates",
+            "Split the context into multiple smaller contexts targeting specific state slices",
+        ],
+        "correctOption":3,
+        "points": 30
+    },
+    {
+        "id": 143,
+        "question": "How can passing children into a dedicated component inside a Context help optimize performance?",
+        "options": [
+            "It makes the entire subtree always re-render to stay consistent",
+            "It automatically freezes context values to prevent re-renders",
+            "It allows only the necessary part of the tree to re-render when the context value changes",
+            "It converts all consumers to use useMemo internally",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 144,
+        "question": "Why is it recommended to wrap a Context value in useMemo when it contains objects or arrays?",
+        "options": [
+            "Because it guarantees that all consumers will re-render on every render",
+            "Because it prevents unnecessary re-renders by keeping the reference stable between renders",
+            "Because useMemo automatically freezes the values to make them immutable",
+            "Because useMemo converts objects to primitive types for React.memo"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 145,
+        "question": "How does wrapping a Context consumer component with React.memo help with performance?",
+        "options": [
+            "It prevents the consumer from re-rendering unless its props change, even if the Context value changes",
+            "It automatically memoizes all context values used inside the component",
+            "It ensures that all children of the component are never updated",
+            "It merges multiple context values into a single reference"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 146,
+        "question": "What is the main advantage of combining the children pattern with React.memo in Context providers?",
+        "options": [
+            "It allows all children to automatically receive new props without re-rendering",
+            "Only the parts of the subtree that depend on the context value re-render, reducing wasted renders",
+            "It forces the entire subtree to render at least once on every change",
+            "It converts context values into static primitives for performance"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 147,
+        "question": "Why does passing an inline object as the value of a Context.Provider usually trigger unnecessary re-renders?",
+        "options": [
+            "Because React deeply compares object contents and finds changes on every render",
+            "Because a new object reference is created on each render, making React treat it as a different value",
+            "Because Context always re-renders its consumers no matter what the value is",
+            "Because objects are automatically converted into primitives when used in Context"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 148,
+        "question": "What is the recommended way to avoid unnecessary re-renders when passing an object to a Context.Provider?",
+        "options": [
+            "Wrap the Context.Provider component itself with React.memo",
+            "Create a new object literal inside the provider each time to ensure fresh data",
+            "Wrap the object in useMemo so the same reference is reused unless dependencies change",
+            "Convert the object into a serialized string before passing it to the provider"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 149,
+        "question": "How does wrapping a Context consumer with React.memo help reduce wasted re-renders?",
+        "options": [
+            "It re-renders only if its props change, even when the Context provider passes the same value",
+            "It forces all consumers of the same Context to re-render together for consistency",
+            "It automatically memoizes the Context value so providers do not create new objects",
+            "It makes React use shallow comparison for Context updates instead of full re-renders"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 151,
+        "question": "Which combination of techniques is most effective for reducing wasted renders in Context-heavy applications?",
+        "options": [
+            "Using useMemo for provider values, React.memo for consumers, and separating frequently changing values into different Contexts",
+            "Using useMemo for provider values, memoizing consumers partially, and passing state as separate Contexts",
+            "Using useMemo for provider values, React.memo for consumers, and the children pattern to isolate updates",
+            "Wrapping provider values in useCallback, using React.memo for consumers, and splitting large Contexts",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 152,
+        "question": "What does 'bundle size' represent in a React application?",
+        "options": [
+            "The number of React components in the project",
+            "The total size of all JavaScript and CSS files after build",
+            "The memory consumed by React in the browser",
+            "The amount of network requests per page",
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 153,
+        "question": "The bigger the bundle, the ...?",
+        "options": [
+            "faster the page loads",
+            "smaller the network usage",
+            "better the SEO ranking",
+            "slower the application becomes",
+        ],
+        "correctOption":3,
+        "points": 10
+    },
+    {
+        "id": 154,
+        "question": "What is the main goal of code splitting in React apps?",
+        "options": [
+            "To combine all files into a single bundle",
+            "To rewrite components into smaller functions",
+            "To split code into smaller chunks that load on demand",
+            "To reduce the number of React hooks in code",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 155,
+        "question": "Which React feature is commonly used for lazy loading components?",
+        "options": [
+            "React.StrictMode",
+            "React.Suspense with React.lazy",
+            "useMemo with useCallback",
+            "React.memo with props",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 156,
+        "question": "When splitting bundles by page router in frameworks like Next.js, what happens?",
+        "options": [
+            "All pages are still combined into one bundle",
+            "Only components with useEffect hooks are separated",
+            "Pages are split but still downloaded together at first load",
+            "Each page is delivered as a separate bundle, loaded only when visited",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 157,
+        "question": "What is the role of React.Suspense when using lazy loaded components?",
+        "options": [
+            "It delays rendering and shows a fallback to optimize performance",
+            "It delays rendering and shows a fallback until the component is loaded",
+            "It prevents components from re-rendering unnecessarily",
+            "It creates a separate bundle for each component automatically",
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 158,
+        question: "What is the main purpose of tree-shaking in modern bundlers?",
+        options: [
+            "To split JavaScript into multiple chunks",
+            "To remove unused code from the bundle",
+            "To improve CSS loading",
+            "To lazy-load images"
+        ],
+        correctOption: 1,
+        points: 10
+    },
+    {
+        "id": 159,
+        question: "Which React feature enables code splitting by loading components only when needed?",
+        options: [
+            "React.memo",
+            "useCallback",
+            "React.lazy with Suspense",
+            "StrictMode"
+        ],
+        correctOption: 2,
+        points: 10
+    },
+    {
+        "id": 160,
+        question: "How does using dynamic import() improve performance?",
+        options: [
+            "It loads modules only when required",
+            "It always reduces bundle size",
+            "It automatically compresses JavaScript",
+            "It preloads all modules at startup"
+        ],
+        correctOption: 0,
+        points: 10
+    },
+    {
+        "id": 161,
+        question: "Which official Next.js plugin helps analyze JavaScript bundle size?",
+        options: [
+            "webpack-analyze",
+            "eslint-plugin-next",
+            "next-optimizer",
+            "@next/bundle-analyzer",
+        ],
+        correctOption: 3,
+        points: 10
+    },
+    {
+        "id": 162,
+        question: "Why is the Next.js <Image /> component recommended instead of plain <img>?",
+        options: [
+            "It increases resolution of all images",
+            "It converts all formats to WebP",
+            "It automatically lazy-loads and optimizes images",
+            "It avoids caching on the browser"
+        ],
+        correctOption: 3,
+        points: 10
+    },
+    {
+        "id": 163,
+        question: "What is the role of caching in bundle optimization?",
+        options: [
+            "It reduces React component re-renders",
+            "It inlines critical CSS automatically",
+            "It prevents downloading unchanged bundles again",
+            "It forces all modules to preload"
+        ],
+        correctOption: 2,
+        points: 20
+    },
+    {
+        "id": 164,
+        question: "What is the main downside of importing large third-party libraries directly into your project?",
+        options: [
+            "They may disable React hooks",
+            "They increase the initial JavaScript load time",
+            "They prevent tree-shaking from working",
+            "They block Suspense fallback"
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+        "id": 165,
+        question: "If you import a library but never use it, what happens in a production build with tree-shaking enabled?",
+        options: [
+            "The library code will not be included in the final bundle",
+            "It will always remain in the bundle",
+            "It throws a runtime error at execution",
+            "It automatically preloads the library"
+        ],
+        correctOption: 0,
+        points: 30
+    },
+    {
+        "id": 166,
+        question: "How can unused CSS affect bundle performance?",
+        options: [
+            "It increases JavaScript execution time",
+            "It disables CSS modules",
+            "It bloats the bundle size unnecessarily",
+            "It forces inline styles only"
+        ],
+        correctOption: 3,
+        points: 20
+    },
+    {
+        "id": 167,
+        question: "In Next.js, what is the difference between preloading and prefetching?",
+        options: [
+            "Preloading happens during idle time, prefetching happens immediately",
+            "Preloading fetches immediately, prefetching waits for idle time",
+            "Both are identical in behavior",
+            "Both disable cache headers"
+        ],
+        correctOption: 1,
+        points:30
+    },
+    {
+        id: 168,
+        question: "What is the main purpose of using `preload` in web performance optimization?",
+        options: [
+            "To download resources only when the user clicks a link",
+            "To download critical resources as early as possible",
+            "To reduce the size of JavaScript bundles",
+            "To block unused CSS from being loaded"
+        ],
+        correctOption: 1,
+        points: 10
+    },
+    {
+        id: 169,
+        question: "How does `prefetch` improve the user experience in Next.js?",
+        options: [
+            "By executing JavaScript faster",
+            "By caching all images automatically",
+            "By loading future page resources during idle time",
+            "By reducing React re-renders"
+        ],
+        correctOption: 2,
+        points: 10
+    },
+    {
+        id: 170,
+        question: "Which of the following is the biggest risk of using `preload` incorrectly?",
+        options: [
+            "Increasing bundle splitting",
+            "Blocking lazy-loading of components",
+            "Overloading the network with too many high-priority requests",
+            "Preventing prefetch from working"
+        ],
+        correctOption: 2,
+        points: 20
+    },
+    {
+        id: 171,
+        question: "In Next.js, why does `<Link>` with `prefetch={true}` help navigation?",
+        options: [
+            "It reduces React rendering time",
+            "It preloads the target page’s code during idle time",
+            "It disables hydration errors",
+            "It loads CSS inline for the target page"
+        ],
+        correctOption: 1,
+        points: 10
+    },
+    {
+        id: 172,
+        question: "Which strategy is best for optimizing the initial load time of a page?",
+        options: [
+            "Disable caching",
+            "Prefetch all images",
+            "Prefetch non-critical scripts",
+            "Preload fonts and above-the-fold CSS",
+        ],
+        correctOption:3,
+        points: 20
+    },
+    {
+        id: 173,
+        question: "What is a reactive value in React?",
+        options: [
+            "A value that never changes during component lifecycle",
+            "A value that automatically triggers UI updates when changed",
+            "A constant value stored outside the component",
+            "A function that only runs once during rendering"
+        ],
+        correctOption: 1,
+        points: 10
+    },
+    {
+        id: 174,
+        question: "Which hook in React is primarily used to create reactive values?",
+        options: [
+            "useState",
+            "useReducer",
+            "useEffect",
+            "useMemo"
+        ],
+        correctOption: 3,
+        points: 10
+    },
+    {
+        id: 175,
+        question: "Why are normal variables in React components NOT reactive?",
+        options: [
+            "Because React ignores primitive values",
+            "Because JavaScript does not support functions",
+            "Because React does not track changes to plain variables",
+            "Because React only watches context",
+        ],
+        correctOption: 2,
+        points: 20
+    },
+    {        id: 176,
+        question: "Which of the following is TRUE about reactive values?",
+        options: [
+            "They automatically trigger re-renders or re-computations",
+            "They require manual DOM updates every time they change",
+            "They only work with numbers and strings",
+            "They cannot be used inside functional components"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 177,
+        question: "why must all reactive values be included in a dependency array of useEffect, useCallback, or useMemo?",
+        options: [
+            "To prevent stale values and ensure the effect or memoized function sees the latest value",
+            "To reduce bundle size",
+            "To avoid re-rendering the component",
+            "To disable React hooks linting"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 178,
+        question: "Which of the following is considered a reactive value in React?",
+        options: [
+            "Local variable inside render",
+            "A literal number inside useEffect",
+            "A prop passed from parent component",
+            "Module-level constant",
+        ],
+        correctOption: 2,
+        points: 10
+    },
+    {
+        id: 179,
+        question: "Which of these values does NOT need to be in the dependency array?",
+        options: [
+            "State value from useState",
+            "Function returned by useCallback",
+            "Setter function from useState",
+            "Prop passed from parent"
+        ],
+        correctOption: 2,
+        points: 10
+    },
+    {
+        id: 180,
+        question: "What can happen if a reactive value is NOT included in a dependency array?",
+        options: [
+            "React will throw a runtime error",
+            "Component will not mount",
+            "Nothing will happen, it’s safe to omit",
+            "Effect or memoized function may use stale values",
+        ],
+        correctOption: 3,
+        points: 30
+    },
+    {
+        id: 181,
+        question: "Which tool helps automatically detect missing dependencies in useEffect?",
+        options: [
+            "Prettier",
+            "React DevTools",
+            " ESLint rule",
+            "TypeScript compiler"
+        ],
+        correctOption: 2,
+        points: 10
+    },
+    {
+        "id": 182,
+        "question": "Why must a context value used inside a useEffect be included in the dependency array?",
+        "options": [
+            "Because React automatically tracks context changes even if they are not declared in dependencies",
+            "Because omitting it would cause the effect to potentially read outdated context values on re-renders, leading to inconsistent behavior",
+            "Because useEffect ignores context values unless explicitly listed, making the hook skip execution permanently",
+            "Because React internally serializes context values to compare them and needs the explicit declaration to avoid errors",
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 183,
+        "question": "What is a stale closure in React hooks?",
+        "options": [
+            "A closure that captures outdated values of state or props, causing logic inside an effect or callback to use old references instead of the latest ones",
+            "A closure that is preserved in memory to ensure deterministic state updates across renders regardless of dependency arrays",
+            "A closure that is garbage collected by JavaScript after re-rendering, leaving dangling references behind",
+            "A closure that is created when multiple effects overlap and share the same dependency values at different times",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 184,
+        "question": "Why is it generally discouraged to use objects or arrays directly as dependencies in useEffect or useCallback?",
+        "options": [
+            "Because objects and arrays are deeply compared by React by default, which is computationally expensive and may freeze the UI under heavy rendering",
+            "Because objects and arrays cannot be serialized into dependency arrays and React will throw an error when attempting to resolve them at runtime",
+            "Because objects and arrays are compared by reference, causing effects or callbacks to re-run on every render even if their contents did not change",
+            "Because objects and arrays cause memory leaks in hooks when stored in dependency arrays due to cyclic references with React’s fiber architecture",
+        ],
+        "correctOption":2,
+        "points": 30
+    },
+    {
+        "id": 185,
+        "question": "How can you avoid unnecessary dependencies when a function is causing re-renders?",
+        "options": [
+            "Declare the function as a global variable so it never updates with component state or props",
+            "Wrap the function in React.memo to ensure it never re-creates regardless of its inputs",
+            "Move the function into the effect or memoize it with useCallback so its reference remains stable",
+            "Only call the function conditionally to avoid including it in the dependency array",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 186,
+        "question": "If a function does not reference any reactive values (like state or props), what is the best practice?",
+        "options": [
+            "Keep it inside the component but wrap it with useEffect to prevent re-creation",
+            "Move it outside of the component so it is not re-created on every render",
+            "Memoize it with useMemo to ensure it runs only once and remains stable across renders",
+            "Convert it into a static method inside a React.memo component for better encapsulation",
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 187,
+        "question": "Instead of including an entire object as a dependency, what is a better approach?",
+        "options": [
+            "Include only the specific properties you actually use inside the effect",
+            "Use JSON.stringify on the object before passing it as a dependency to ensure value comparison",
+            "Clone the object on every render and memoize it with useCallback to stabilize it",
+            "Avoid using objects in dependencies by converting them to primitive values at runtime",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 188,
+        "question": "What can you do if an object does not work correctly as a dependency?",
+        "options": [
+            "Wrap the object in React.memo to prevent re-creation inside the dependency array",
+            "Place the object inside a state variable so React automatically compares it deeply",
+            "Convert the object into a function and call it inside useEffect instead of passing it",
+            "Move or memoize the object so its reference stays stable across renders",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 189,
+        "question": "If you have multiple related reactive values that must be dependencies, what is often a better pattern?",
+        "options": [
+            "Store them inside a useRef so React does not re-render when they change",
+            "Combine them with useReducer so the effect depends on a single stable state object",
+            "Merge them into one object and stringify it in the dependency array for comparison",
+            "Wrap them all in useMemo to make the dependency array shorter and easier to manage",
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 190,
+        "question": "Why is useEffect often described as an 'escape hatch' in React?",
+        "options": [
+            "Because it allows running side effects only when props or state change, which is not possible with regular rendering logic",
+            "Because it is the primary mechanism React provides for writing all business logic in a component, replacing the need for other hooks",
+            "Because it ensures components render synchronously with side effects applied immediately after DOM updates",
+            "Because it enables bypassing React's reconciliation algorithm and directly mutating the DOM safely",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 191,
+        "question": "Why should useEffect be considered a 'last resort' rather than the first tool to reach for?",
+        "options": [
+            "Because useEffect causes memory leaks by default unless explicitly cleaned up",
+            "Because React discourages side effects entirely and recommends only pure rendering logic inside components",
+            "Because most effects can be avoided by deriving state, using event handlers, or computing values directly during render",
+            "Because useEffect always blocks rendering until the effect has finished executing",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 192,
+        "question": "Which of the following is NOT a recommended use case for beginners when working with useEffect?",
+        "options": [
+            "Synchronizing an external system (like updating the document title) when props or state change",
+            "Responding to a user event like button click by updating state directly in the handler instead of using useEffect",
+            "Fetching data on component mount using useEffect with an empty dependency array",
+            "Subscribing to a global event bus and cleaning up on component unmount",
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 193,
+        "question": "What is the recommended way to synchronize multiple state variables with one another in React?",
+        "options": [
+            "Derive one state from the other or combine them in a single reducer, instead of writing an effect that manually updates one when the other changes",
+            "Use multiple useEffect hooks so that each state variable updates the other on every render cycle",
+            "Store all related states inside a ref object and mutate it directly to ensure they stay in sync without triggering re-renders",
+            "Wrap both state variables in a context provider so they automatically update each other whenever one changes",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 194,
+        "question": "Which statement best defines the stale closure problem in React?",
+        "options": [
+            "It happens when a function continues to use an outdated snapshot of state or props",
+            "It happens when React prevents a component from re-rendering after state updates",
+            "It happens when closures in JavaScript do not work with arrays and objects",
+            "It happens when useEffect runs more times than expected due to dependency arrays"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 195,
+        "question": "what causes the stale closure problem inside effects or callbacks?",
+        "options": [
+            "Functions always rebind automatically to the latest state and props",
+            "Functions hold onto the snapshot of state and props from when they were created",
+            "React intentionally freezes state values after the initial render",
+            "Closures in JavaScript only work with primitive values, not objects"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 196,
+        "question": "What is the stale closure problem in React?",
+        "options": [
+            "When a function keeps referencing outdated state or props values",
+            "When React automatically freezes state values after the first render",
+            "When a function cannot access props because of scoping issues",
+            "When React re-renders too often due to dependency arrays"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 197,
+        "question": "Which of the following is the best way to prevent the stale closure problem in React?",
+        "options": [
+            "Always use global variables instead of state",
+            "Freeze objects in state to keep them consistent across renders",
+            "Add the latest state or props as dependencies in useEffect or useCallback",
+            "Avoid using closures in React components",
+        ],
+        "correctOption": 2,
+        "points": 30
     }
+
 ];
