@@ -154,1045 +154,1026 @@ export const mockQuestions: Question[] = [
         correctOption: 3,
         points: 20,
     },
-    {
-        id: 16,
-        question: "What is the primary purpose of routing in a web application?",
-        options: [
-            "To load styles and scripts dynamically",
-            "To connect the frontend with the backend",
-            "To match different URLs to corresponding views or components",
-            "To handle form validation on the client side"
-        ],
-        correctOption: 2,
-        points: 10
-    },
-    {
-        id: 17,
-        question: "In React, what does a 'route' typically represent?",
-        options: [
-            "A function that fetches data from an API",
-            "A match between a URL path and a specific React component",
-            "A global state shared across components",
-            "A reference to a DOM node in the render tree"
-        ],
-        correctOption: 1,
-        points: 10
-    },
-    {
-        id: 18,
-        question: "What does routing in a React application enable users to do?",
-        options: [
-            "Navigate between different screens using links and the browser URL",
-            "Inject global styles into individual components",
-            "Automatically fetch and cache API responses",
-            "Synchronize component state with local storage"
-        ],
-        correctOption: 0,
-        points: 10
-    },
-    {
-        id: 19,
-        question: "What is React Router used for in React applications?",
-        options: [
-            "Managing application state globally",
-            "Handling navigation and routing between components",
-            "Styling React components",
-            "Fetching data from APIs"
-        ],
-        correctOption: 1,
-        points: 10
-    },
-
-    {
-        id: 20,
-        "question": "What is a Single Page Application (SPA)?",
-        "options": [
-            "An app that works only on a single device",
-            "A web app that loads a single HTML page and updates the UI dynamically",
-            "A website that requires reloading the page for each interaction",
-            "An app that is limited to only one route"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        id: 21,
-        "question": "What is one major benefit of using a Single Page Application?",
-        "options": [
-            "Pages reload faster on every click",
-            "Server load increases significantly",
-            "Navigation between pages feels faster and smoother",
-            "It does not require JavaScript"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        id: 22,
-        "question": "How does an SPA typically handle browser URLs?",
-        "options": [
-            "Each new page requires a full server request",
-            "It changes the URL without reloading the page using the History API",
-            "It hides the URL entirely",
-            "It reloads the page using server redirection"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        id: 23,
-        question: "Where is the rendering typically performed in a Single Page Application (SPA)?",
-        options: [
-            "Only on the server before sending HTML to the client",
-            "Primarily on the client using JavaScript to build and update the UI",
-            "Rendering is handled equally by client and server simultaneously",
-            "Rendering happens exclusively on external CDN servers"
-        ],
-        correctOption: 1,
-        points: 20
-    },
-    {
-        id: 24,
-        question: "What happens in a React application when the URL changes via routing?",
-        options: [
-            "The browser reloads the entire page from the server",
-            "The URL change is ignored and nothing updates",
-            "The DOM updates to reflect the new component matching the URL",
-            "The application closes and restarts"
-        ],
-        correctOption: 2,
-        points: 10
-    },
-
-    {
-        id: 25,
-        question: "In a Single Page Application (SPA), the page is updated primarily by what?",
-        options: [
-            "JavaScript executing in the browser",
-            "Server sending a new HTML page",
-            "Browser reloading the whole document",
-            "CSS stylesheets changing the layout"
-        ],
-        correctOption: 0,
-        points: 10
-    },
-
-    {
-        id: 26,
-        "question": "What is a common SEO challenge when using SPAs?",
-        "options": [
-            "SPAs cannot be hosted on secure servers",
-            "Search engines cannot index dynamically-rendered content easily",
-            "SPAs do not support links between pages",
-            "SPAs are not compatible with HTTPS"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        id: 27,
-        question: "What is a fundamental difference between client-side routing and server-side routing?",
-        options: [
-            "Client-side routing reloads the entire page on every navigation",
-            "Server-side routing never reloads the page",
-            "Both client-side and server-side routing behave exactly the same",
-            "Client-side routing updates views dynamically without full page reloads, while server-side routing reloads the entire page"
-        ],
-        correctOption: 3,
-        points: 20
-    },
-    {
-        id: 28,
-        "question": "Which technique can improve SEO for a Single Page Application?",
-        "options": [
-            "Using multiple HTML pages instead of JavaScript",
-            "Avoiding use of routing libraries like React Router",
-            "Using server-side rendering (SSR) or pre-rendering",
-            "Disabling JavaScript completely"
-        ],
-        "correctOption": 2,
-        "points": 30
-    },
-    {
-        id: 29,
-        "question": "What is ESLint primarily used for in JavaScript projects?",
-        "options": [
-            "Managing state between components",
-            "Linting and identifying problematic code patterns",
-            "Rendering UI elements",
-            "Running tests on components"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        id:30,
-        "question": "When is ESLint typically run?",
-        "options": [
-            "Only during deployment",
-            "When bundling with Webpack",
-            "During development or before commit",
-            "After production build"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        id:31,
-        "question": "Does ESLint only check for syntax errors?",
-        "options": [
-            "Yes, it only parses JavaScript syntax",
-            "No, it can enforce coding style and detect logic bugs",
-            "Yes, it replaces the need for a compiler",
-            "No, it compiles your code to production-ready bundles"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        id:32,
-        "question": "Which file is commonly used to configure ESLint rules?",
-        "options": [
-            ".eslint.config.js",
-            ".eslint",
-            ".eslintrc.json",
-            ".linterrc.js"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        id:33,
-        "question": "What is the purpose of plugins in ESLint?",
-        "options": [
-            "To improve runtime performance",
-            "To install TypeScript",
-            "To add custom rules or extend ESLint’s behavior",
-            "To convert JavaScript to HTML"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        id:34,
-        "question": "Which command runs ESLint via the CLI?",
-        "options": [
-            "eslint-check",
-            "lint-start",
-            "eslint .",
-            "node run eslint"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        id:35,
-        "question": "How can you exclude a file or folder from being linted?",
-        "options": [
-            "By adding it to .eslintignore",
-            "By removing it from package.json",
-            "By adding a comment in index.html",
-            "By renaming the file"
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
-        id:36,
-        "question": "Which statement about custom ESLint rules is true?",
-        "options": [
-            "You can write your own rule as a function that analyzes the AST",
-            "Rules can only be modified from the command line",
-            "Rules must be defined in the root HTML file",
-            "Custom rules are only supported in Angular projects"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        id:37,
-        "question": "How do you enable ESLint for React projects?",
-        "options": [
-            "Add 'react' in the plugins and 'plugin:react/recommended' in the extends array",
-            "Install Redux before using ESLint",
-            "Use `vite` instead of `eslint`",
-            "Only install `eslint` without any plugins"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        id:38,
-        "question": "What is the difference between 'rules', 'extends', and 'plugins' in ESLint config?",
-        "options": [
-            "'rules' is for plugins, 'extends' defines environments, 'plugins' lists globals",
-            "'rules' defines specific rule settings, 'extends' inherits base configs, 'plugins' adds extra rule sets",
-            "All three are the same and interchangeable",
-            "Only 'rules' is required; the rest are optional comments"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 39,
-        "question": "Why are there so many different ways of styling a React application?",
-        "options": [
-            "Because React enforces a specific styling method",
-            "Because CSS is not supported in React by default",
-            "Because React is unopinionated and allows flexibility based on project needs",
-            "Because JSX can only use inline styles"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 40,
-        "question": "What is the main benefit of using CSS Modules in a React application?",
-        "options": [
-            "They allow you to write CSS directly inside JSX using template literals",
-            "They automatically apply styles globally across all components",
-            "They enable CSS to be compiled into JavaScript at runtime",
-            "They scope CSS class names locally to the component by default",
-        ],
-        "correctOption": 3,
-        "points": 10
-    },
-    {
-        "id": 41,
-        "question": "What does it mean when CSS styles are 'scoped' to a React component?",
-        "options": [
-            "The styles are applied to the entire page by default",
-            "The styles can be reused across all components globally",
-            "The styles are only available in global.css files",
-            "The styles affect only the component where they are used"
-        ],
-        "correctOption": 3,
-        "points": 10
-    },
-    {
-        "id": 42,
-        "question": "What is one common problem with using global CSS styles in a React application?",
-        "options": [
-            "They cannot be used in server-side rendering",
-            "They are not supported by most modern browsers",
-            "They make it difficult to manage style conflicts between components",
-            "They require a special syntax in JSX to work"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 43,
-        "question": "Why might you store UI state in the URL of a React application?",
-        "options": [
-            "To reduce the size of component files",
-            "To make the application look cleaner",
-            "To enable users to share, bookmark, and revisit specific states of the UI",
-            "To prevent re-rendering of components"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 44,
-        "question": "Which of the following is an example of storing state in the URL?",
-        "options": [
-            "Setting a ?search=react query in the URL",
-            "Saving selected theme in localStorage",
-            "Using useState to manage input value",
-            "Passing props to a child component"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        "id": 45,
-        "question": "which hook is commonly used to access query string parameters from the URL when using React Router?",
-        "options": [
-            "useState",
-            "useEffect",
-            "useSearchParams",
-            "useMemo"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 46,
-        "question": "Which approach would help preserve UI state when a user refreshes the page?",
-        "options": [
-            "Storing the state in a local variable",
-            "Using useState without any persistence",
-            "Using React context only",
-            "Storing the state in the URL as query parameters"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-
-    {
-        "id": 47,
-        "question": "Which React hook is used to prevent unnecessary re-renders of child components?",
-        "options": [
-            "useEffect",
-            "useMemo",
-            "useCallback",
-            "useState"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 48,
-        "question": "What does React.memo() do?",
-        "options": [
-            "Memoizes the result of expensive calculations",
-            "Prevents a component from re-rendering if props haven't changed",
-            "Stores component state in memory",
-            "Creates a new component instance"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        "id": 49,
-        "question": "When should you use useMemo?",
-        "options": [
-            "Only for expensive calculations or complex object creations",
-            "To replace all useState hooks",
-            "For simple string concatenations",
-            "For every variable in your component",
-        ],
-        "correctOption": 3,
-        "points": 10
-    },
-    {
-        "id": 50,
-        "question": "Which technique helps avoid prop drilling in React?",
-        "options": [
-            "Using more useState hooks",
-            "Creating more components",
-            "Using React Context API",
-            "Adding more props to components"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 51,
-        "question": "What is the main difference between useCallback and useMemo?",
-        "options": [
-            "useCallback memoizes functions, useMemo memoizes values",
-            "useCallback is faster than useMemo",
-            "useMemo is for state, useCallback is for effects",
-            "They are exactly the same"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 52,
-        "question": "Which approach can cause performance issues in React?",
-        "options": [
-            "Using keys in list items",
-            "Creating objects or functions inside render methods",
-            "Using React.memo appropriately",
-            "Splitting components into smaller pieces"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        "id": 53,
-        "question": "What is the purpose of the 'key' prop in React lists?",
-        "options": [
-            "To add CSS styling",
-            "To help React identify which items have changed",
-            "To make components look better",
-            "To pass data between components"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 54,
-        "question": "Which hook would you use to optimize expensive calculations?",
-        "options": [
-            "useEffect",
-            "useState",
-            "useReducer",
-            "useMemo",
-        ],
-        "correctOption": 3,
-        "points": 10
-    },
-    {
-        "id": 55,
-        "question": "How can you prevent a component from re-rendering when its parent re-renders?",
-        "options": [
-            "Wrap it with React.memo",
-            "Use useEffect with empty dependency array",
-            "Use useState instead of props",
-            "Add more props to the component"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 56,
-        "question": "What happens when you don't provide a dependency array to useEffect?",
-        "options": [
-            "The effect runs only once",
-            "The effect never runs",
-            "The effect runs on every render",
-            "React throws an error"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-
-    {
-        "id": 57,
-        "question": "What is the primary benefit of using React.lazy() with Suspense?",
-        "options": [
-            "It enables code splitting and reduces initial bundle size",
-            "It makes components render faster",
-            "It prevents memory leaks",
-            "It improves SEO performance"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 58,
-        "question": "Which scenario would cause React.memo to be ineffective?",
-        "options": [
-            "When component receives the same props",
-            "When component receives new object references as props on every render",
-            "When component has no props",
-            "When component uses useState internally"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 59,
-        "question": "What happens when useMemo's dependency array contains a function that's recreated on every render?",
-        "options": [
-            "useMemo works perfectly",
-            "React throws an error",
-            "The memoized value is recalculated on every render, defeating optimization",
-            "The function gets automatically memoized"
-        ],
-        "correctOption": 2,
-        "points": 30
-    },
-    {
-        "id": 60,
-        "question": "Which technique helps prevent unnecessary Context re-renders?",
-        "options": [
-            "Using multiple Context providers",
-            "Adding more consumers",
-            "Using useEffect in Context",
-            "Splitting Context into multiple contexts for different data"
-        ],
-        "correctOption": 3,
-        "points": 20
-    },
-    {
-        "id": 61,
-        "question": "In React DevTools Profiler, what does the 'Committed' phase represent?",
-        "options": [
-            "Time spent actually applying changes to the DOM",
-            "Time spent calculating what changes are needed",
-            "Time spent in useEffect",
-            "Total component lifecycle time"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 62,
-        "question": "Why might using useCallback everywhere be counterproductive?",
-        "options": [
-            "It always improves performance",
-            "The overhead of memoization can exceed the benefits for simple functions",
-            "It causes memory leaks",
-            "It only works with class components"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 63,
-        "question": "What is the most effective way to optimize a large list rendering in React?",
-        "options": [
-            "Using React.memo on each list item",
-            "Using useCallback for all functions",
-            "Implementing virtualization (windowing)",
-            "Adding more useEffect hooks"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 64,
-        "question": "Which hook should you use to persist expensive computed values between renders?",
-        "options": [
-            "useState",
-            "useEffect",
-            "useRef",
-            "useMemo"
-        ],
-        "correctOption": 3,
-        "points": 10
-    },
-    {
-        "id": 65,
-        "question": "What is a potential issue with this code pattern?\n\nconst MyComponent = () => {\n  const [items, setItems] = useState([]);\n  const filterItems = items.filter(item => item.active);\n  return <List items={filterItems} />;\n}",
-        "options": [
-            "The filter operation runs on every render creating new array reference",
-            "It's perfectly optimized",
-            "useState is used incorrectly",
-            "List component will never update"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 66,
-        "question": "When using React.StrictMode, why do some effects run twice in development?",
-        "options": [
-            "It's a bug in React",
-            "To help detect side effects and ensure effects are properly cleaned up",
-            "To make the app run faster",
-            "To simulate production environment"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 67,
-        "question": "What does 'optimization' primarily focus on in React applications?",
-        "options": [
-            "Writing shorter code and using fewer files",
-            "Using the latest React features only",
-            "Reducing unnecessary re-renders, improving bundle size, and enhancing user experience",
-            "Converting all components to class components"
-        ],
-        "correctOption":2,
-        "points": 20
-    },
-    {
-        "id": 68,
-        "question": "What is the primary benefit of using React.lazy() with Suspense?",
-        "options": [
-            "It makes components render faster",
-            "It prevents memory leaks",
-            "It improves SEO performance",
-            "It enables code splitting and reduces initial bundle size",
-        ],
-        "correctOption":3,
-        "points": 10
-    },
-    {
-        "id": 69,
-        "question": "Which scenario would cause React.memo to be ineffective?",
-        "options": [
-            "When component receives the same props",
-            "When component has no props",
-            "When component receives new object references as props on every render",
-            "When component uses useState internally"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 70,
-        "question": "What happens when useMemo's dependency array contains a function that's recreated on every render?",
-        "options": [
-            "useMemo works perfectly",
-            "React throws an error",
-            "The memoized value is recalculated on every render, defeating optimization",
-            "The function gets automatically memoized"
-        ],
-        "correctOption": 2,
-        "points": 30
-    },
-    {
-        "id": 71,
-        "question": "Which technique helps prevent unnecessary Context re-renders?",
-        "options": [
-            "Using multiple Context providers",
-            "Adding more consumers",
-            "Using useEffect in Context",
-            "Splitting Context into multiple contexts for different data"
-        ],
-        "correctOption": 3,
-        "points": 20
-    },
-    {
-        "id": 72,
-        "question": "In React DevTools Profiler, what does the 'Committed' phase represent?",
-        "options": [
-            "Time spent actually applying changes to the DOM",
-            "Time spent calculating what changes are needed",
-            "Time spent in useEffect",
-            "Total component lifecycle time"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 73,
-        "question": "Why might using useCallback everywhere be counterproductive?",
-        "options": [
-            "It always improves performance",
-            "The overhead of memoization can exceed the benefits for simple functions",
-            "It causes memory leaks",
-            "It only works with class components"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 74,
-        "question": "What is the most effective way to optimize a large list rendering in React?",
-        "options": [
-            "Using React.memo on each list item",
-            "Using useCallback for all functions",
-            "Implementing virtualization (windowing)",
-            "Adding more useEffect hooks"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 75,
-        "question": "Which hook should you use to persist expensive computed values between renders?",
-        "options": [
-            "useRef",
-            "useState",
-            "useEffect",
-            "useMemo"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
+            {
+            "id": 16,
+            "question": "What is the main role of routing in a web application?",
+            "options": [
+                "Loading scripts and styles on demand",
+                "Connecting frontend logic with backend services",
+                "Mapping URLs to corresponding views or components",
+                "Managing client-side form validation"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 17,
+            "question": "In React, what does a route usually represent?",
+            "options": [
+                "A function that fetches remote data",
+                "A mapping between a URL path and a React component",
+                "A global state object shared across components",
+                "A reference to a DOM element in the tree"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 18,
+            "question": "What does routing allow users to do in a React app?",
+            "options": [
+                "Navigate between different screens using links and URLs",
+                "Apply global styles across many components",
+                "Cache API responses automatically in the browser",
+                "Persist component state to local storage"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 19,
+            "question": "What is React Router mainly used for?",
+            "options": [
+                "Managing global application state",
+                "Handling navigation and rendering matching components",
+                "Providing CSS utilities for components",
+                "Coordinating data fetching for pages"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 20,
+            "question": "What best describes a Single Page Application (SPA)?",
+            "options": [
+                "An app that runs only on a single device type",
+                "A web app that loads one HTML page and updates the UI dynamically",
+                "A site that reloads the browser on each navigation",
+                "An application that supports only one route"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 21,
+            "question": "What is a key advantage of an SPA?",
+            "options": [
+                "Pages always reload faster on each click",
+                "Server load becomes significantly higher",
+                "Navigation feels smoother and more responsive",
+                "No JavaScript is required for interactivity"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 22,
+            "question": "How do SPAs usually manage browser URLs?",
+            "options": [
+                "Each navigation triggers a full server request",
+                "They change the URL via the History API without reloads",
+                "They hide the URL from the user interface",
+                "They always use server-side redirects for navigation"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 23,
+            "question": "Where is rendering usually handled in a Single Page Application?",
+            "options": [
+                "Only on the server before sending HTML to the client",
+                "Primarily on the client using JavaScript to update the UI",
+                "Equally on client and server at the same time",
+                "Exclusively on external CDN servers"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 24,
+            "question": "What happens in React when routing changes the URL?",
+            "options": [
+                "The browser performs a full page reload from the server",
+                "The URL change is ignored and the page stays the same",
+                "The DOM updates to render the component matching the new URL",
+                "The application stops and restarts execution"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 25,
+            "question": "In an SPA, what mainly updates the page content?",
+            "options": [
+                "JavaScript executing in the browser to modify the DOM",
+                "The server sending a new HTML file for each page",
+                "A full browser reload on each navigation event",
+                "Only CSS rules changing the page layout"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 26,
+            "question": "What is a common SEO challenge for SPAs?",
+            "options": [
+                "They cannot be hosted on secure servers",
+                "Search engines may struggle to index dynamically rendered content",
+                "They do not allow linking between pages",
+                "They are incompatible with HTTPS protocols"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 27,
+            "question": "What is a key difference between client-side and server-side routing?",
+            "options": [
+                "Client-side always reloads the page on navigation",
+                "Server-side never performs a full page load",
+                "They are functionally identical in modern browsers",
+                "Client-side updates views without full reload; server-side reloads the page"
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 28,
+            "question": "Which approach improves SEO for a Single Page Application?",
+            "options": [
+                "Switching back to many static HTML pages only",
+                "Avoiding modern routing libraries entirely",
+                "Using server-side rendering (SSR) or pre-rendering techniques",
+                "Disabling JavaScript so pages are static"
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+        {
+            "id": 29,
+            "question": "What is ESLint mainly used for in JavaScript projects?",
+            "options": [
+                "Managing application state between components",
+                "Linting code and identifying problematic patterns",
+                "Rendering UI elements on the client",
+                "Running unit tests automatically"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 30,
+            "question": "When is ESLint typically run during development?",
+            "options": [
+                "Only during deployment to production",
+                "While bundling assets with Webpack",
+                "During development or before committing changes",
+                "Only after creating the production build"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 31,
+            "question": "Does ESLint only check for syntax errors?",
+            "options": [
+                "Yes, it only checks syntax",
+                "No, it also enforces style and finds logic issues",
+                "Yes, it replaces the compiler",
+                "No, it builds production bundles"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 32,
+            "question": "Which file is commonly used to configure ESLint rules?",
+            "options": [
+                ".eslint.config.js",
+                ".eslint",
+                ".eslintrc.json",
+                ".linterrc.js"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 33,
+            "question": "What is the purpose of plugins in ESLint?",
+            "options": [
+                "To boost runtime speed",
+                "To add TypeScript support",
+                "To extend ESLint with custom rules",
+                "To convert JS into HTML"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 34,
+            "question": "Which command runs ESLint from the CLI?",
+            "options": [
+                "eslint-check",
+                "lint-start",
+                "eslint .",
+                "node run eslint"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 35,
+            "question": "How can you exclude files or folders from being linted?",
+            "options": [
+                "Add them to .eslintignore",
+                "Remove them from package.json",
+                "Comment them in index.html",
+                "Rename the files"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 36,
+            "question": "Which statement about custom ESLint rules is true?",
+            "options": [
+                "You can write rules as functions that inspect the AST",
+                "Rules can only be set from the CLI",
+                "Rules must be in index.html",
+                "Custom rules work only in Angular"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 37,
+            "question": "How do you enable ESLint for React projects?",
+            "options": [
+                "Add 'react' plugin and 'plugin:react/recommended' in extends",
+                "Install Redux with ESLint",
+                "Use vite instead of eslint",
+                "Install eslint only, no plugins"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 38,
+            "question": "What is the difference between 'rules', 'extends', and 'plugins' in ESLint?",
+            "options": [
+                "'rules' is for plugins, 'extends' sets environments, 'plugins' adds globals",
+                "'rules' define rule configs, 'extends' inherit presets, 'plugins' add more rules",
+                "All three are the same and interchangeable",
+                "Only 'rules' matters; others are just comments"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 39,
+            "question": "Why are there many ways of styling React apps?",
+            "options": [
+                "Because React enforces one method",
+                "Because CSS is not supported by default",
+                "Because React is flexible and unopinionated",
+                "Because JSX only allows inline styles"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 40,
+            "question": "What is the main benefit of CSS Modules?",
+            "options": [
+                "They allow CSS in JSX strings",
+                "They apply styles globally",
+                "They compile CSS to JS at runtime",
+                "They scope class names locally to components"
+            ],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 41,
+            "question": "What does it mean when CSS is scoped to a component?",
+            "options": [
+                "The styles apply to the whole page",
+                "The styles are reusable across all components",
+                "The styles only exist in global.css",
+                "The styles affect only that component"
+            ],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 42,
+            "question": "What is a problem with global CSS styles?",
+            "options": [
+                "They can't be used in SSR",
+                "They are not supported by browsers",
+                "They may cause conflicts between components",
+                "They require special JSX syntax"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 43,
+            "question": "Why store UI state in the URL?",
+            "options": [
+                "To reduce file size",
+                "To make the UI look cleaner",
+                "To allow sharing and bookmarking states",
+                "To stop components from re-rendering"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 44,
+            "question": "Which is an example of storing state in the URL?",
+            "options": [
+                "Using ?search=react in the URL",
+                "Saving theme in localStorage",
+                "Managing input with useState",
+                "Passing props to children"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 45,
+            "question": "Which hook reads query params in React Router?",
+            "options": [
+                "useState",
+                "useEffect",
+                "useSearchParams",
+                "useMemo"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 46,
+            "question": "Which approach preserves UI state after refresh?",
+            "options": [
+                "Store state in localStorage",
+                "Use useState only",
+                "Use React context only",
+                "Keep state in a local variable"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 47,
+            "question": "Which hook prevents unnecessary re-renders?",
+            "options": [
+                "useEffect",
+                "useMemo",
+                "useCallback",
+                "useState"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 48,
+            "question": "What does React.memo() do?",
+            "options": [
+                "Caches heavy calculations",
+                "Skips re-render if props don't change",
+                "Stores state in memory",
+                "Creates a new component instance"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 49,
+            "question": "When should you use useMemo?",
+            "options": [
+                "For heavy calculations or object creation",
+                "To replace all useState hooks",
+                "For simple string concatenations",
+                "For every variable in components"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 50,
+            "question": "Which technique avoids prop drilling?",
+            "options": [
+                "Use more useState hooks",
+                "Create extra components",
+                "Use React Context API",
+                "Pass more props to children"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+            {
+            "id": 51,
+            "question": "What is the key difference between useCallback and useMemo?",
+            "options": [
+                "useCallback memoizes functions, useMemo memoizes values",
+                "useCallback stores values, useMemo stores functions",
+                "useMemo is only for effects, useCallback is for state",
+                "They both do the exact same thing"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 52,
+            "question": "Which approach may cause unnecessary re-renders in React?",
+            "options": [
+                "Using keys in lists",
+                "Creating new objects or functions inside render",
+                "Using React.memo correctly",
+                "Splitting code into small components"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 53,
+            "question": "What is the purpose of the 'key' prop in React lists?",
+            "options": [
+                "To apply CSS styles",
+                "To help React track list item changes",
+                "To improve component design",
+                "To send data between components"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 54,
+            "question": "Which hook is best for optimizing expensive calculations?",
+            "options": [
+                "useState",
+                "useEffect",
+                "useMemo",
+                "useReducer"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 55,
+            "question": "How can you stop a component from re-rendering with its parent?",
+            "options": [
+                "Wrap it with React.memo",
+                "Use useEffect with empty array",
+                "Move state from props to local state",
+                "Add extra props to the component"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 56,
+            "question": "What happens if no dependency array is provided to useEffect?",
+            "options": [
+                "It runs only once",
+                "It never runs",
+                "It runs on every render",
+                "React shows a warning"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 57,
+            "question": "What is the main benefit of React.lazy with Suspense?",
+            "options": [
+                "It speeds up rendering",
+                "It enables code splitting and smaller bundle size",
+                "It improves SEO ranking",
+                "It prevents memory issues"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 58,
+            "question": "When does React.memo fail to prevent re-renders?",
+            "options": [
+                "When props remain unchanged",
+                "When new object or array props are created every render",
+                "When component has no props",
+                "When component uses internal state"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 59,
+            "question": "What happens if useMemo depends on a function recreated each render?",
+            "options": [
+                "It recalculates every render, losing optimization",
+                "React throws an error",
+                "It works normally and caches correctly",
+                "The function is auto-memoized by React"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 60,
+            "question": "Which method reduces unnecessary Context re-renders?",
+            "options": [
+                "Using multiple Context providers",
+                "Adding more consumers",
+                "Placing useEffect in the Context",
+                "Splitting Context by data responsibility"
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 61,
+            "question": "In React Profiler, what does the 'Committed' phase measure?",
+            "options": [
+                "Time applying updates to the DOM",
+                "Time calculating what changed",
+                "Time running useEffect",
+                "Total render plus lifecycle time"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 62,
+            "question": "Why can overusing useCallback hurt performance?",
+            "options": [
+                "It always speeds up performance",
+                "Memoization overhead may outweigh benefits for simple functions",
+                "It leaks memory in some cases",
+                "It only works with class components"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 63,
+            "question": "What is the best way to handle very large lists in React?",
+            "options": [
+                "Wrap each item in React.memo",
+                "Use useCallback for all handlers",
+                "Apply list virtualization (windowing)",
+                "Add extra useEffect hooks"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 64,
+            "question": "Which hook keeps computed values between renders?",
+            "options": [
+                "useRef",
+                "useState",
+                "useEffect",
+                "useMemo"
+            ],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 65,
+            "question": "What is inefficient in this code?\n\nconst MyComponent = () => {\n  const [items, setItems] = useState([]);\n  const filtered = items.filter(i => i.active);\n  return <List items={filtered} />;\n}",
+            "options": [
+                "Filter creates a new array each render",
+                "The code is fully optimized",
+                "useState is misused",
+                "List will never update correctly"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 66,
+            "question": "Why do effects run twice under StrictMode in dev?",
+            "options": [
+                "Because of a React bug",
+                "To check cleanup of side effects",
+                "To make rendering faster",
+                "To match production exactly"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 67,
+            "question": "What does optimization mainly target in React apps?",
+            "options": [
+                "Shorter code and fewer files",
+                "Using only latest React hooks",
+                "Avoiding extra re-renders and reducing bundle size",
+                "Turning all functions into classes"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 68,
+            "question": "When is React.memo not effective?",
+            "options": [
+                "When props are stable across renders",
+                "When the component has no props",
+                "When new object references are passed as props",
+                "When state is managed internally"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 69,
+            "question": "Which technique avoids recalculating heavy values?",
+            "options": [
+                "useRef",
+                "useState",
+                "useEffect",
+                "useMemo"
+            ],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 70,
+            "question": "What does React.StrictMode primarily test?",
+            "options": [
+                "App speed",
+                "Side effect cleanup and warnings",
+                "Code style",
+                "Memory leaks only"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 71,
+            "question": "What is the main role of useCallback?",
+            "options": [
+                "Memoize function references between renders",
+                "Store state across renders",
+                "Trigger re-renders manually",
+                "Replace useMemo completely"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 72,
+            "question": "What is the recommended way to render thousands of items?",
+            "options": [
+                "Virtualization or windowing",
+                "Adding keys only",
+                "Using extra useState hooks",
+                "Wrapping everything in Context"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 73,
+            "question": "What does the React Profiler help you measure?",
+            "options": [
+                "Memory leaks in Node.js",
+                "Render times and re-renders",
+                "Bundle size and network usage",
+                "Code style errors"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 74,
+            "question": "What happens if you overuse useMemo?",
+            "options": [
+                "It adds overhead that may slow performance",
+                "It improves SEO significantly",
+                "It makes components pure by default",
+                "It replaces need for useState"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 75,
+            "question": "Which hook keeps a mutable value across renders without causing re-renders?",
+            "options": [
+                "useRef",
+                "useState",
+                "useEffect",
+                "useMemo"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
     {
         "id": 76,
-        "question": "What is a potential issue with this code pattern?" +
-            "const MyComponent = () => {  const [items, setItems] = useState([]);" +
-            " const filterItems = items.filter(item => item.active);" +
-            "  return <List items={filterItems} />;}",
+        "question": "Why can't we directly use fetch API calls inside a Redux reducer?",
         "options": [
-            "The filter operation runs on every render creating new array reference",
-            "It's perfectly optimized",
-            "useState is used incorrectly",
-            "List component will never update"
+            "Because reducers must be pure functions without asynchronous side effects",
+            "Because Redux reducers cannot access global browser APIs such as fetch",
+            "Because fetch can only be called from React components, not Redux code",
+            "Because reducers are automatically optimized and block async operations"
         ],
         "correctOption": 0,
         "points": 30
-    },
-    {
-        "id": 77,
-        "question": "When using React.StrictMode, why do some effects run twice in development?",
-        "options": [
-            "It's a bug in React",
-            "To help detect side effects and ensure effects are properly cleaned up",
-            "To make the app run faster",
-            "To simulate production environment"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 78,
-        "question": "What are the three main areas of React performance optimization?",
-        "options": [
-            "Use more hooks, add more components, write longer functions",
-            "Focus only on CSS optimization, database queries, and server responses",
-            "Increase component nesting, add more props, use class components",
-            "Prevent wasted renders, improve app speed, reduce bundle size",
-        ],
-        "correctOption": 3,
-        "points": 10
-    },
-    {
-        "id": 79,
-        "question": "Which technique directly addresses 'preventing wasted renders'?",
-        "options": [
-            "Code splitting with React.lazy",
-            "Compressing images and assets",
-            "Using React.memo to skip re-renders when props haven't changed",
-            "Minifying JavaScript bundle"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 80,
-        "question": "How does React.lazy() help with 'reducing bundle size'?",
-        "options": [
-            "It prevents components from re-rendering",
-            "It compresses the component code",
-            "It loads components only when they're needed (code splitting)",
-            "It removes unused CSS automatically"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 81,
-        "question": "Which approach best represents 'improving app speed' through DOM optimization?",
-        "options": [
-            "Using inline styles for all components",
-            "Implementing virtual scrolling for large lists to minimize DOM nodes",
-            "Adding more event listeners",
-            "Creating more nested div elements"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 82,
-        "question": "What is the performance impact when this pattern is used incorrectly?" +
-            "const Parent = () => {" +
-            "  const [count, setCount] = useState(0);" +
-            "  const expensiveValue = heavyCalculation(count);" +
-            "  return <Child value={expensiveValue} />;}",
-        "options": [
-            "It only affects bundle size",
-            "It causes wasted renders in Child component",
-            "It causes expensive recalculation on every render (app speed issue)",
-            "It has no performance impact"
-        ],
-        "correctOption": 2,
-        "points": 30
-    },
-    {
-        "id": 83,
-        "question": "Which combination of techniques addresses all three optimization areas simultaneously?",
-        "options": [
-            "React.memo + React.lazy + useMemo",
-            "useCallback + React.Suspense + React.memo",
-            "useMemo + useEffect + useState",
-            "React.lazy + useCallback + React.Fragment"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 84,
-        "question": "What are 'wasted renders' in React?",
-        "options": [
-            "Renders that take more than 16ms to complete",
-            "Initial renders when components first mount",
-            "Renders that happen when component props or state actually changed",
-            "Re-renders that occur even though the component output remains exactly the same",
-        ],
-        "correctOption": 3,
-        "points": 10
-    },
-    {
-        "id": 85,
-        "question": "When exactly does a React component instance get re-rendered?",
-        "options": [
-            "Only when its own state changes",
-            "When its state changes, context value changes, or parent component re-renders",
-            "Only when props are different from previous render",
-            "Only when useEffect dependencies change"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 86,
-        "question": "What happens when a Context value changes?",
-        "options": [
-            "Only the Provider component re-renders",
-            "All consumer components re-render, regardless of which part of context they use",
-            "Only components that use the changed part of context re-render",
-            "No components re-render automatically"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 87,
-        "question": "Which pattern causes unnecessary Context re-renders?" +
-            "nconst MyProvider = ({ children }) => {" +
-            "const [user, setUser] = useState(null);" +
-            " const [theme, setTheme] = useState('light');" +
-            " const value = { user, setUser, theme, setTheme };" +
-            "return <MyContext.Provider value={value}>{children}</MyContext.Provider>;}",
-        "options": [
-            "Using multiple state variables",
-            "Creating new object reference for value on every render",
-            "Having both user and theme in same context",
-            "Using useState instead of useReducer"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 88,
-        "question": "How can you prevent Context consumers from re-rendering when only part of context changes?",
-        "options": [
-            "Use React.memo on all consumer components",
-            "Use useCallback for all context functions",
-            "Split context into multiple contexts for different data",
-            "Store everything in component state instead"
-        ],
-        "correctOption": 2,
-        "points": 30
-    },
-    {
-        "id": 89,
-        "question": "What is the performance impact of this Context usage?" +
-            "const ExpensiveComponent = () => {" +
-            " const { theme } = useContext(AppContext); "+
-            "return <div className={theme}>Content</div>;}",
-        "options": [
-            "No performance issues",
-            "Component re-renders when user or settings change, even though it only uses theme",
-            "Only re-renders when theme changes",
-            "Never re-renders due to context"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 90,
-        "question": "Which solution optimizes the Context provider to prevent object recreation?",
-        "options": [
-            "const value = useMemo(() => ({ user, setUser }), [user]);",
-            "const value = { user, setUser };",
-            "const value = useCallback(() => ({ user, setUser }), []);",
-            "const value = useState({ user, setUser });"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 91,
-        "question": "Do props changes directly cause component re-renders?",
-        "options": [
-            "Yes, React watches all props for changes",
-            "No,Only if props are objects or arrays",
-            "Yes, but only for primitive props",
-            "No, props changes are a result of parent re-rendering, not the cause",
-        ],
-        "correctOption": 3,
-        "points": 20
-    },
-    {
-        "id": 92,
-        "question": "What does 'render' actually mean in React?",
-        "options": [
-            "Updating the actual DOM elements",
-            "Painting pixels on the screen",
-            "Running the component function to create Virtual DOM representation",
-            "Executing useEffect hooks"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 93,
-        "question": "Does a React 'render' mean the DOM actually gets updated?",
-        "options": [
-            "Yes, every render updates the DOM",
-            "No, render creates Virtual DOM, DOM updates only if changes are found during reconciliation",
-            "Only for class components",
-            "Only when state changes, not props"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 94,
-        "question": "What exactly is a 'wasted render'?",
-        "options": [
-            "A render that produces the same Virtual DOM output as before",
-            "A render that takes longer than 16ms",
-            "A render that updates the DOM unnecessarily",
-            "Any render triggered by parent component"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 95,
-        "question": "When do wasted renders become a performance problem?",
-        "options": [
-            "They are always a problem and should be eliminated",
-            "Only when they cause DOM updates",
-            "Never, React optimizes them automatically",
-            "When they happen frequently in components with expensive calculations or many children",
-        ],
-        "correctOption":3,
-        "points": 30
-    },
-    {
-        "id": 96,
-        "question": "Why is passing a heavy component as children usually more performant than rendering it directly inside a stateful parent?",
-        "options": [
-            "Because children are cached forever and never re-render",
-            "Because React treats children as a stable prop and reuses it if unchanged",
-            "Because children are executed in a separate rendering thread",
-            "Because children skip the virtual DOM completely",
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 97,
-        "question": "What happens if a heavy component is rendered directly inside a parent component with changing state?",
-        "options": [
-            "It will re-render every time the parent re-renders",
-            "It will render only once and never again",
-            "It will re-render only if the parent state matches its props",
-            "It will re-render only when React is in development mode",
-        ],
-        "correctOption": 0,
-        "points": 30
-    },{
-        "id": 98,
-        "question": "How does React decide whether to re-render children passed as props?",
-        "options": [
-            "React always re-renders children on every parent state change",
-            "React uses memoization automatically for all children",
-            "React only re-renders children if the reference to them changes",
-            "React ignores children props during reconciliation",
-        ],
-        "correctOption": 2,
-        "points": 30
-    },
-    {
-        "id": 99,
-        "question": "What is the best practice when dealing with expensive child components inside a parent with frequent state updates?",
-        "options": [
-            "Wrap the child with React.memo or pass it as children/prop",
-            "Recreate the child on every render to keep it fresh",
-            "Avoid using state in the parent",
-            "Move the expensive child outside of React’s tree",
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 100,
-        "question": "Why does using children not automatically guarantee better performance?",
-        "options": [
-            "Because children are always re-rendered regardless of props",
-            "Because React does not support children optimization",
-            "Because children bypass the virtual DOM diffing process",
-            "Because performance depends on whether children content changes or not",
-        ],
-        "correctOption": 3,
-        "points": 30
-    },
+    }
+        {
+            "id": 77,
+            "question": "When using React.StrictMode in development, why are some effects executed twice?",
+            "options": [
+                "Because React has an internal bug that repeats effects",
+                "To help developers detect side effects and confirm cleanup logic",
+                "To increase application rendering performance in development",
+                "To make development environment identical to production"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 78,
+            "question": "Which areas are the primary focus for performance optimization in React applications?",
+            "options": [
+                "Using more hooks, creating additional components, writing longer functions",
+                "Concentrating only on CSS, database queries, and backend responses",
+                "Increasing component nesting depth and switching to class components",
+                "Preventing wasted renders, improving runtime speed, reducing bundle size"
+            ],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 79,
+            "question": "Which technique directly reduces wasted re-renders in React?",
+            "options": [
+                "Splitting code with React.lazy",
+                "Compressing static assets such as images",
+                "Wrapping components with React.memo ",
+                "Minifying the JavaScript bundle before deployment"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 80,
+            "question": "How does React.lazy() contribute to reducing bundle size?",
+            "options": [
+                "It prevents repeated component rendering",
+                "It automatically compresses component code",
+                "It loads components only when they are needed",
+                "It removes unused CSS rules from the project"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 81,
+            "question": "Which approach best improves application speed by optimizing DOM usage?",
+            "options": [
+                "Applying inline styles to all React components",
+                "Using virtual scrolling for large lists",
+                "Attaching additional global event listeners",
+                "Adding more nested wrapper div elements"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 82,
+            "question": "What performance impact occurs if an expensive calculation is executed directly during render? const Parent = () => { const [count, setCount] = useState(0); const expensiveValue = heavyCalculation(count); return <Child value={expensiveValue} />; }",
+            "options": [
+                "It only increases the size of the JavaScript bundle",
+                "It leads to unnecessary re-renders of the Child component",
+                "It causes expensive recalculation on every render",
+                "It produces no measurable performance overhead"
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+        {
+            "id": 83,
+            "question": "Which combination of tools addresses all three React optimization areas at once?",
+            "options": [
+                "React.memo together with React.lazy and useMemo",
+                "useCallback in combination with React.Suspense and React.memo",
+                "useMemo along with useEffect and useState",
+                "React.lazy combined with useCallback and React.Fragment"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 84,
+            "question": "What are wasted renders in a React application?",
+            "options": [
+                "Renders that take longer than 16 milliseconds to execute",
+                "Initial renders that happen when a component first mounts",
+                "Renders triggered when state or props legitimately change",
+                "Re-renders where the component output remains identical to the previous result"
+            ],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 85,
+            "question": "When does a React component instance re-render?",
+            "options": [
+                "when its internal state changes, or its parent re-renders",
+                "When state changes, context values change, or its parent re-renders",
+                "Only if incoming props differ from the previous render",
+                "Only if useEffect dependencies are updated"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 86,
+            "question": "What happens when a React Context value changes?",
+            "options": [
+                "Only the Provider component re-renders after the change",
+                "All consumer components re-render",
+                "Only consumers reading the changed property re-render",
+                "No consumer re-renders unless explicitly forced"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 87,
+            "question": "Which pattern causes unnecessary re-renders when using Context? const MyProvider = ({ children }) => { const [user, setUser] = useState(null); const [theme, setTheme] = useState('light'); const value = { user, setUser, theme, setTheme }; return <MyContext.Provider value={value}>{children}</MyContext.Provider>; }",
+            "options": [
+                "Defining multiple state variables in the provider",
+                "Creating a new object reference for value during every render",
+                "Including both user and theme inside the same context",
+                "Using useState instead of useReducer for context state"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 88,
+            "question": "How can Context consumers be prevented from re-rendering when only unrelated data changes?",
+            "options": [
+                "Applying React.memo on all context consumers",
+                "Wrapping all context functions with useCallback",
+                "Splitting the context into multiple providers",
+                "Keeping all shared data inside component-level state instead"
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+        {
+            "id": 89,
+            "question": "What is the performance impact of this Context usage? const ExpensiveComponent = () => { const { theme } = useContext(AppContext); return <div className={theme}>Content</div>; }",
+            "options": [
+                "It introduces no performance issues at all",
+                "The component re-renders when unrelated context values change",
+                "The component only re-renders when the theme value itself changes",
+                "The component never re-renders automatically because of context"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 90,
+            "question": "Which solution avoids creating a new context value object on every render?",
+            "options": [
+                "const value = useMemo(() => ({ user, setUser }), [user]);",
+                "const value = { user, setUser };",
+                "const value = useCallback(() => ({ user, setUser }), []);",
+                "const value = useState({ user, setUser });"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 91,
+            "question": "Do prop changes directly trigger a React component to re-render?",
+            "options": [
+                "Yes, React monitors all props and re-renders automatically",
+                "No, only if props are arrays or objects with new references",
+                "Yes, but only when the props are primitive values",
+                "No, props changes occur because the parent re-rendered"
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 92,
+            "question": "What does the term 'render' mean in React?",
+            "options": [
+                "Applying updates directly to the DOM elements",
+                "Painting the pixels on the screen canvas",
+                "Executing the component function to create a Virtual DOM tree",
+                "Running all useEffect hooks inside the component"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 93,
+            "question": "Does a React render always update the actual DOM?",
+            "options": [
+                "Yes, every render immediately changes the DOM",
+                "No, only updates the real DOM if differences are found",
+                "This is true only for class-based components",
+                "Only when state changes but not when props change"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 94,
+            "question": "What exactly defines a wasted render in React?",
+            "options": [
+                "A render that results in the same Virtual DOM tree as before",
+                "A render that takes longer than sixteen milliseconds to finish",
+                "A render that unnecessarily updates the real DOM",
+                "Any render triggered because the parent component updated"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 95,
+            "question": "When do wasted renders actually become a performance issue?",
+            "options": [
+                "They are always problematic and must be avoided",
+                "Only when they lead to unnecessary DOM updates",
+                "Never, because React automatically optimizes them",
+                "When they occur frequently in components with expensive calculations or many children"
+            ],
+            "correctOption": 3,
+            "points": 30
+        },
+        {
+            "id": 96,
+            "question": "Why is passing a heavy component as children often more efficient than rendering it directly in a stateful parent?",
+            "options": [
+                "Because children are cached permanently and never re-render",
+                "Because React treats children as a stable prop reference and reuses it when unchanged",
+                "Because children execute in a separate rendering thread from parents",
+                "Because children bypass the Virtual DOM diffing mechanism"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 97,
+            "question": "What happens if a heavy component is rendered directly inside a parent that frequently updates state?",
+            "options": [
+                "The heavy component re-renders each time the parent re-renders",
+                "The component renders only once and never re-renders again",
+                "It re-renders only if the parent’s state matches its props exactly",
+                "It re-renders only when React runs in development mode"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 98,
+            "question": "How does React decide whether to re-render child components passed as props?",
+            "options": [
+                "always re-renders all children whenever parent state changes",
+                "applies memoization automatically to every child component",
+                " if their reference changes compared to the previous render",
+                "ignores children props completely during reconciliation"
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+        {
+            "id": 99,
+            "question": "What is the best practice for handling expensive child components inside a parent with frequent updates?",
+            "options": [
+                "Wrap the child component with React.memo or pass it as children/prop",
+                "Recreate the child on each render to always refresh it",
+                "Avoid using state in the parent component entirely",
+                "Place the heavy child outside of the React rendering tree"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 100,
+            "question": "Why does passing children not always guarantee better performance?",
+            "options": [
+                "Because children always re-render regardless of prop changes",
+                "Because React does not support optimization for children props",
+                "Because children completely skip the Virtual DOM comparison process",
+                "Because performance benefit depends on whether the children’s content remains unchanged"
+            ],
+            "correctOption": 3,
+            "points": 30
+        },
     {
         "id": 101,
         "question": "What is the purpose of memoization in React?",
@@ -2343,6 +2324,907 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30
+    },
+    {
+        id: 198,
+        question: "What is Redux?",
+        options: [
+            "A predictable state management library for web apps",
+            "A library for styling components",
+            "A built-in React API for managing side effects",
+            "A tool for minifying JavaScript bundles"
+        ],
+        correctOption: 0,
+        points: 10
+    },
+    {
+        id: 199,
+        question: "Is Redux a React-specific library?",
+        options: [
+            "Yes, it only works with React",
+            "No, it’s a standalone library that is only used with Angular",
+            "No, it’s a standalone library that can be used with web app",
+            "Yes, Redux is part of React",
+        ],
+        correctOption: 2,
+        points: 20
+    },
+    {
+        id: 200,
+        question: "Which rule must reducers always follow?",
+        options: [
+            "They can directly mutate the current state",
+            "They can include API calls inside the reducer",
+            "They can update state asynchronously with async/await",
+            "They must be pure functions without side effects",
+        ],
+        correctOption: 3,
+        points: 20
+    },
+    {
+        id: 201,
+        question: "What should a reducer return when it receives an unknown action?",
+        options: [
+            "It should throw an error immediately",
+            "It should return the current state unchanged",
+            "It should return null as the default value",
+            "It should reset the state back to initial"
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+        id: 202,
+        question: "Why are reducers required to avoid asynchronous logic?",
+        options: [
+            "Async logic makes reducers non-deterministic and hard to test",
+            "Reducers are not allowed to return promises in JavaScript",
+            "Async logic will always cause memory leaks in React",
+            "Reducers can only process numbers and strings synchronously"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 203,
+        question: "What is the difference between Redux and useReducer?",
+        options: [
+            "Redux works across the app, while useReducer is limited to a component",
+            "Redux is only for styling, while useReducer manages state",
+            "Redux is synchronous, while useReducer is asynchronous",
+            "Redux can only store strings, while useReducer handles objects"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 204,
+        question: "What does an action in Redux contain?",
+        options: [
+            "A type field and optionally a payload",
+            "A reducer function and state",
+            "Only an ID number",
+            "An array of middleware functions"
+        ],
+        correctOption: 0,
+        points: 10
+    },
+    {
+        id: 205,
+        question: "What is the role of dispatch in Redux?",
+        options: [
+            "It sends actions to the reducer to update the state",
+            "It saves the state permanently to local storage",
+            "It merges two reducers into one",
+            "It automatically refreshes the UI every second"
+        ],
+        correctOption: 0,
+        points: 10
+    },
+    {
+        id: 206,
+        question: "What is the function of the Redux store?",
+        options: [
+            "It holds the application state and allows access via methods",
+            "It only stores CSS styles for components",
+            "It executes side effects like fetching APIs",
+            "It automatically creates reducers without configuration"
+        ],
+        correctOption: 0,
+        points: 10
+    },
+    {
+        id: 207,
+        question: "Why might there be multiple reducers in a Redux store?",
+        options: [
+            "To manage different slices of application state independently",
+            "To create duplicate copies of the same logic",
+            "To reduce the file size of the application",
+            "To make reducers asynchronous by default"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 208,
+        question: "What is an action creator function?",
+        options: [
+            "A function that returns an action object to be dispatched",
+            "A reducer that directly updates the state",
+            "A function that deletes actions from memory",
+            "A middleware that delays action execution"
+        ],
+        correctOption: 0,
+        points: 10
+    },
+    {
+        id: 201,
+        question: "What is one key difference between Redux and the Context API?",
+        options: [
+            "Redux has middleware and DevTools for debugging",
+            "Context API generates reducers automatically",
+            "Redux is only used for styling components",
+            "Context API exists only inReact and Angular",
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 202,
+        question: "How does Redux differ from using useState in React?",
+        options: [
+            "Redux is meant only for async API requests",
+            "Redux handles global state, while useState is local",
+            "useState always saves values to localStorage",
+            "useState works only inside class components"
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+        id: 203,
+        question: "When is Redux better than Context + useReducer?",
+        options: [
+            "In very small apps with just a few states",
+            "When React is not part of the stack",
+            "In large apps needing global state and DevTools",
+            "When the goal is to avoid writing JavaScript",
+        ],
+        correctOption: 2,
+        points: 30
+    },
+    {
+        id: 204,
+        question: "Why do many modern React apps no longer need Redux?",
+        options: [
+            "Because Redux cannot be used with TypeScript or modern bundlers",
+            "Because React already provides hooks like useState, useReducer, and Context API",
+            "Because Redux is now deprecated and no longer supported",
+            "Because React apps no longer require any state management at all"
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+        id: 205,
+        question: "What is an ideal use case for Redux in a React application?",
+        options: [
+            "When there is a large amount of state that updates frequently across many components",
+            "When the app has only a single counter and minimal state changes",
+            "When styling components with CSS or Tailwind",
+            "When React is replaced entirely by Angular"
+        ],
+        correctOption: 0,
+        points: 30
+    },
+    {
+        id: 206,
+        question: "Which type of state is best managed locally in a React component?",
+        options: [
+            "Remote state fetched from an API",
+            "Global state shared between apps",
+            "Server-side state stored in a database",
+            "UI state, like modal visibility or active tabs",
+        ],
+        correctOption: 3,
+        points: 20
+    },
+    {
+        id: 207,
+        question: "Which type of state often requires tools like Redux, React Query, or Context API?",
+        options: [
+            "UI state, like which tab is active",
+            "Temporary variables inside a function",
+            "Remote state, like user data from an API",
+            "CSS class toggles"
+        ],
+        correctOption: 2,
+        points: 20
+    },
+    {
+        id: 208,
+        question: "When combining UI state and remote state in a component, which practice is recommended?",
+        options: [
+            "Avoid using useState or Context; fetch everything from API",
+            "Keep UI state local and remote state global using a state manager",
+            "Move all state to Redux regardless of size",
+            "Store UI state in the server to simplify components",
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+        id: 209,
+        question: "Which state management is best for remote state?",
+        options: [
+            "React Query or similar data-fetching libraries",
+            "useReducer only",
+            "Vanilla Redux without middleware",
+            "Manual fetch with setInterval"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 210,
+        question: "Why do many apps not need Redux anymore?",
+        options: [
+            "Most global state is actually remote and handled better with dedicated libraries",
+            "React removed support for Redux",
+            "Redux only works with old versions of React",
+            "Redux cannot store complex objects"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 211,
+        question: "What is the ideal use case for Redux?",
+        options: [
+            "When there is a lot of state that updates frequently across the app",
+            "When only one component has local state",
+            "When styling multiple components with CSS",
+            "When you only need asynchronous API calls"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 212,
+        question: "What is the difference between UI state and remote state?",
+        options: [
+            "UI state is local to components, while remote state comes from a server",
+            "UI state is fetched via HTTP, while remote state is always static",
+            "UI state must use Redux, while remote state uses Context",
+            "UI state is stored permanently, while remote state is temporary"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 213,
+        question: "When is Redux a better choice than React Query or Context API?",
+        options: [
+            "When the app has only UI state like modals and tabs",
+            "When the app uses only localStorage for state persistence",
+            "When the app has a lot of non-remote state that updates frequently across many components",
+            "When all state comes from APIs that update frequently across many components"
+        ],
+        correctOption: 2,
+        points: 30
+    },
+    {
+        id: 214,
+        question: "What is a reducer function in Redux?",
+        options: [
+            "A pure function that receives current state and an action and returns a new state",
+            "A function responsible for fetching data asynchronously from APIs",
+            "A function that renders and updates user interface components",
+            "A function that manages middleware and logging operations"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 215,
+        question: "What is the difference between Redux and useReducer?",
+        options: [
+            "useReducer provides middleware capabilities; Redux can handle asynchronous actions to a component or context",
+            "Redux manages global state and provides middleware and DevTools; useReducer is local to a component or context",
+            "Redux operations are synchronous; useReducer automatically handles asynchronous logic",
+            "There is no difference; both manage state in the exact same way"
+        ],
+        correctOption: 1,
+        points: 30
+    },
+    {
+        id: 216,
+        question: "What is the function of the store in Redux?",
+        options: [
+            "To hold the entire application state tree and manage all reducers centrally",
+            "To directly render components to the DOM whenever state changes",
+            "To automatically fetch remote data from APIs for components",
+            "To generate action creators for every possible state change"
+        ],
+        correctOption: 0,
+        points: 20
+    },
+    {
+        id: 217,
+        question: "Why might a Redux store have multiple reducers?",
+        options: [
+            "To allow multiple dispatch functions to run in parallel automatically",
+            "To manage React components directly within the store",
+            "To divide the state logic into smaller, focused slices",
+            "To handle styling and UI rendering in separate modules"
+        ],
+        correctOption: 2,
+        points: 15
+    },
+    {
+        id: 218,
+        question: "What is an action creator function in Redux?",
+        options: [
+            "A function that directly modifies state inside the store of application",
+            "A function that returns an action object to describe a change in state",
+            "A function that renders UI components based on actions",
+            "A function that merges multiple reducers into one"
+        ],
+        correctOption: 1,
+        points: 15
+    },
+    {
+        id: 219,
+        question: "Why do we separate state update logic from the rest of the application in Redux?",
+        options: [
+            "To prevent the Redux DevTools from being triggered accidentally",
+            "To reduce the final bundle size of the application",
+            "To make code predictable, maintainable, and easier to debug over time",
+            "To avoid using React components for state updates entirely"
+        ],
+        correctOption: 2,
+        points: 15
+    },
+    {
+        id: 220,
+        question: "Which state management solution is considered the best for handling remote state in modern React apps?",
+        options: [
+            "Redux, because it provides a single global store for all kinds of state and DevTools support",
+            "Context API, because it allows passing remote data deeply into the component tree",
+            "React Query, because it is designed for caching, fetching, and syncing server state",
+            "useReducer hook, because it manages local state updates within a component"
+        ],
+        correctOption: 2,
+        points: 20
+    },
+    {
+        id: 221,
+        question: "Why is Context API not ideal for managing large amounts of remote state?",
+        options: [
+            "Because Context API cannot technically pass data to deeply nested components",
+            "Because frequent updates in Context cause unnecessary re-renders, which impacts performance",
+            "Because Context API is only designed for styling and theming, not state management",
+            "Because Context API requires Redux in order to handle any state properly"
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+        id: 222,
+        question: "Why do many apps no longer need Redux for remote state?",
+        options: [
+            "Because Redux has been deprecated and is no longer supported in React applications",
+            "Because Context API fully replaces Redux and handles all remote state automatically",
+            "Because Redux can only manage UI state and cannot manage remote data in React applications at all",
+            "Because modern libraries like React Query handle fetching, caching, and syncing server state more effectively"
+        ],
+        correctOption: 3,
+        points: 20
+    },
+    {
+        id: 223,
+        question: "Which type of state is best managed locally in a React component?",
+        options: [
+            "UI state, like modal visibility or active tabs",
+            "Remote state fetched from an API",
+            "Global state shared between apps",
+            "Server-side state stored in a database"
+        ],
+        correctOption: 0,
+        points: 10
+    },
+    {
+        id: 224,
+        question: "Which type of state often requires tools like Redux, React Query, or Context API?",
+        options: [
+            "UI state, like which tab is active",
+            "Temporary variables inside a function",
+            "Remote state, like user data from an API",
+            "CSS class toggles"
+        ],
+        correctOption: 2,
+        points: 20
+    },
+    {
+        id: 225,
+        question: "Why do many modern React apps not use Redux anymore?",
+        options: [
+            "Because React automatically handles all state internally",
+            "Because most global state in apps is remote and can be managed with tools like React Query",
+            "Because Redux no longer works with React",
+            "Because UI state is always too small to matter"
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+        "id": 226,
+        "question": "What is the main role of middleware in Redux?",
+        "options": [
+            "To let components update state directly without reducers",
+            "To intercept actions and run extra logic like async calls or logging",
+            "To replace reducers with custom asynchronous state handlers",
+            "To make the store update itself automatically without dispatch"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 230,
+        "question": "In the Redux cycle, where is the recommended place to handle side effects such as API calls or logging?",
+        "options": [
+            "Inside reducers",
+            "Inside middleware",
+            "Directly in React components",
+            "Inside the store configuration"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 231,
+        "question": "What is the main purpose of redux-thunk in Redux?",
+        "options": [
+            "It automatically batches multiple state updates in reducers",
+            "It replaces Redux store with a new state management library",
+            "It memoizes selectors to prevent unnecessary React re-renders",
+            "It allows dispatching functions to handle asynchronous actions",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 232,
+        "question": "What allows Redux to wait before dispatching fetched data into the store?",
+        "options": [
+            "Reducer",
+            "Store",
+            "Thunk",
+            "Component"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 233,
+        "question": "Which of the following is NOT a feature of Redux Toolkit?",
+        "options": [
+            "createSlice for reducing boilerplate",
+            "createAsyncThunk for async logic",
+            "Built-in support for Immer",
+            "Class-based component lifecycle methods"
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 234,
+        "question": "Which of the following is NOT a feature of Redux Toolkit's createSlice?",
+        "options": [
+            "It automatically generates action creators and action types",
+            "It reducers to write mutable-looking code safely using Immer",
+            "It allows eliminates the need to configure a Redux store",
+            "It reduces boilerplate by combining state, reducers, and actions in one place"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+            "id": 235,
+            "question": "In Redux Toolkit, which library allows writing logic that looks like direct state mutation while ensuring immutability internally?",
+            "options": [
+                "Thunk",
+                "Saga",
+                "Selector",
+                "Immer",
+            ],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 236,
+            "question": "Which Redux Toolkit API simplifies reducer and action creation by combining them into one structure?",
+            "options": [
+                "createSlice",
+                "configureStore",
+                "combineReducers",
+                "applyMiddleware"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 237,
+            "question": "Which Redux Toolkit function sets up the store with good defaults like middleware and DevTools integration?",
+            "options": [
+                "createReducer",
+                "createStore",
+                "configureStore",
+                "setupStore"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+    {
+        "id": 238,
+        "question": "What is the recommended naming convention for action types in Redux?",
+        "options": [
+            "Single word names only",
+            "Only event name",
+            "Random strings for uniqueness",
+            "Two-part names,domain and event",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 239,
+        "question": "Which statement correctly describes action creators in Redux Toolkit's createSlice?",
+        "options": [
+            "They must be written manually by the developer",
+            "They are generated automatically and accept one payload",
+            "They require multiple arguments for each action call",
+            "They cannot be accessed outside of the slice logic"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+            "id": 240,
+            "question": "What is the main purpose of createSlice in Redux Toolkit?",
+            "options": [
+                "It installs external libraries for async handling",
+                "It manages routing and navigation inside React apps",
+                "It defines reducers and generates actions together",
+                "It creates global styles for components in the project"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 241,
+            "question": "Which statement about reducers inside createSlice is correct?",
+            "options": [
+                "They always return a completely new object",
+                "They are allowed to mutate state because of Immer",
+                "They cannot use payload values from dispatched actions",
+                "They only work if written as pure asynchronous functions"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 242,
+            "question": "How are action creators provided when using createSlice?",
+            "options": [
+                "They are created manually in a separate actions file",
+                "They are only available if connected with middleware",
+                "They are generated automatically based on reducer names",
+                "They must be imported directly from the Redux package",
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 243,
+            "question": "What is a key benefit of using createSlice over plain Redux?",
+            "options": [
+                "It reduces boilerplate by combining logic in one place",
+                "It prevents React from re-rendering during state updates",
+                "It adds built-in support for routing and query strings",
+                "It replaces the need for using any store or middleware"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+            {
+            "id": 244,
+            "question": "What does createSlice return after definition?",
+            "options": [
+                "A collection of selectors for reading global state",
+                "A middleware that listens for dispatched actions",
+                "A reducer function and auto-generated actions",
+                "A hook that manages asynchronous API requests"
+            ],
+            "correctOption":2,
+            "points": 20
+        },
+        {
+            "id": 245,
+            "question": "How are reducers inside createSlice typically written?",
+            "options": [
+                "As JSX components that render data from the store",
+                "As lifecycle hooks that are triggered by React updates",
+                "As asynchronous functions that always await API responses",
+                "As functions that can write directly to state using Immer",
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 246,
+            "question": "Which of the following is automatically created by createSlice?",
+            "options": [
+                "A default middleware for handling promises",
+                "Action creators for each reducer case",
+                "Hooks for managing component side effects",
+                "Global variables for application constants",
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 247,
+            "question": "What argument does an action creator from createSlice usually accept?",
+            "options": [
+                "A single payload value passed when dispatching",
+                "Multiple positional arguments of any type",
+                "No arguments since they are always constant",
+                "A configuration object with reducer options"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 248,
+            "question": "What role does Immer play inside createSlice reducers?",
+            "options": [
+                "It automatically merges reducers into a single function",
+                "It delays reducer execution until after the dispatch cycle",
+                "It allows writing mutations that are converted to immutable updates",
+                "It provides hooks for React to subscribe to store updates"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 249,
+            "question": "Which property inside createSlice defines how state is updated?",
+            "options": [
+                "The reducers field inside the slice configuration",
+                "The config field declared in store initialization",
+                "The middleware field imported from Redux core",
+                "The template field defined at the root project",
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 250,
+            "question": "What naming convention is used for action types from createSlice?",
+            "options": [
+                "They are namespaced as sliceName/reducerName",
+                "They are written as numeric identifiers for reducers",
+                "They are always prefixed with the string redux-",
+                "They are defined in HTML meta tags for the app"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 251,
+            "question": "How can you export the reducer generated by createSlice?",
+            "options": [
+                "By exporting createStore with slice.actions directly",
+                "By exporting slice.reducer from the slice object",
+                "By exporting reducer from Redux core package",
+                "By exporting a manual switch statement in store"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 252,
+            "question": "Why does createSlice reduce boilerplate code in Redux?",
+            "options": [
+                "Because it combines action creators and reducers together",
+                "Because it removes action from using React components",
+                "Because it combines the Redux store with local states",
+                "Because it combines middleware and devtools by default"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 253,
+            "question": "Which statement about initialState in createSlice is correct?",
+            "options": [
+                "It is optional because Redux automatically generates state",
+                "It defines the default shape of state managed by the slice",
+                "It must always be imported from an external JSON file",
+                "It cannot contain nested objects or arrays of values",
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+    {
+        "id": 254,
+        "question": "What is the purpose of the 'prepare' callback in Redux Toolkit?",
+        "options": [
+            "It modifies payload before it reaches the reducer",
+            "It schedules asynchronous actions in middleware",
+            "It automatically generates slice names",
+            "It validates reducer return types"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+            "id": 255,
+            "question": "Which of the following is a limitation of using React Context API compared to Redux?",
+            "options": [
+                "It is built into React and easy to set up a single context",
+                "It doesn't provide middleware support for async operations",
+                "It allows state management with useReducer",
+                "It offers integration with React DevTools"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 256,
+            "question": "What problem can occur when adding multiple contexts in a React application?",
+            "options": [
+                "Simplified DevTools integration",
+                "Improved global state performance",
+                "Automatic asynchronous operation handling",
+                "Provider hell with deeply nested wrappers",
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 257,
+            "question": "Which feature is missing in React Context API but available in Redux?",
+            "options": [
+                "Ability to create additional state slices easily",
+                "Optimization built into state updates",
+                "Support for async logic via middleware",
+                "Excellent DevTools for debugging"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 258,
+            "question": "Which of the following is an advantage of Redux compared to Context API?",
+            "options": [
+                "Built directly into React core",
+                "Requires no additional setup or packages",
+                "Optimizes performance out of the box",
+                "Simpler for a single state context"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 259,
+            "question": "What is one of the disadvantages Redux compared to React Context API?",
+            "options": [
+                "It is built into React itself",
+                "It requires additional packages and setup",
+                "It has no mechanism for async logic",
+                "It provides only React DevTools support"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 260,
+            "question": "Why might performance optimization be harder with React Context API?",
+            "options": [
+                "Context re-renders all consumers on update",
+                "Context does not support state slices",
+                "Context automatically batches updates",
+                "Context integrates with middleware by default"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 261,
+            "question": "Which tool provides better debugging experience for global state?",
+            "options": [
+                "useReducer inside Context API",
+                "React Context with React DevTools",
+                "Redux with its dedicated DevTools",
+                "Provider nesting in App.js"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 262,
+            "question": "Which situation is best suited for React Context API?",
+            "options": [
+                "When you need to share a rarely changing value",
+                "When you have a shopping cart with frequent updates",
+                "When you need middleware for async operations",
+                "When you have complex nested state with arrays"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 263,
+            "question": "What is a common use case of Context API?",
+            "options": [
+                "Managing small global UI state",
+                "Solving simple prop drilling",
+                "Handling deeply nested reducers",
+                "Debugging with Redux DevTools"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 264,
+            "question": "When is Redux a better choice than Context API?",
+            "options": [
+                "When you just want to pass a color theme",
+                "When state updates happen very frequently",
+                "When you need to share static data",
+                "When state is limited to a single subtree"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 265,
+            "question": "Why is Redux suitable for managing complex state structures?",
+            "options": [
+                "Because it is built into React",
+                "Because it has only one global provider",
+                "Because it avoids prop drilling automatically",
+                "Because Redux Toolkit allows state mutation",
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 266,
+            "question": "Which state management tool is more efficient for local subtree state?",
+            "options": [
+                "Redux Toolkit",
+                "Redux with middleware",
+                "React Context",
+                "React DevTools"
+            ],
+            "correctOption":2,
+            "points": 10
+        },
+    {
+        "id": 277,
+        "question": "Which state management tool is more efficient for changing values like theme or language?",
+        "options": [
+            "React Context",
+            "Redux Toolkit",
+            "Redux with middleware",
+            "Global store libraries"
+        ],
+        "correctOption": 0,
+        "points": 10
     }
 
-];
+
+]
