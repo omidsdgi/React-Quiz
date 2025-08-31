@@ -885,7 +885,7 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30
-    }
+    },
         {
             "id": 77,
             "question": "When using React.StrictMode in development, why are some effects executed twice?",
