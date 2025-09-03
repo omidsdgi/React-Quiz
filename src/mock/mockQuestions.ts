@@ -3266,7 +3266,7 @@ export const mockQuestions: Question[] = [
         "question": "What does 'data loading waterfall' mean in the context of React applications?",
         "options": [
             "Using advanced caching strategies to completely eliminate the need for repeated network calls",
-            "Multiple requests executed sequentially, causing slower loading",
+            "Multiple requests executed sequentially, causing slower loading-omid",
             "Executing all API requests in parallel regardless of dependencies",
             "Fetching data only for the components currently visible in the viewport",
         ],
