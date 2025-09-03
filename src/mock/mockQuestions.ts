@@ -3224,7 +3224,56 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10
+    },
+    {
+        "id": 278,
+        "question": "What is the main purpose of a feature-based folder structure in React applications?",
+        "options": [
+            "It organizes files strictly by type such as components, hooks, and styles",
+            "It groups related code (UI, logic, tests) by feature for better maintainability",
+            "It automatically optimizes bundle size without extra configuration",
+            "It enforces global state management across all features by default"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 279,
+        "question": "What is a common disadvantage  of using files only by type (components, hooks, styles) in large React projects?",
+        "options": [
+            "It makes reusing components across projects impossible",
+            "It mixes UI and logic in the same folder without separation",
+            "It makes testing features more difficult due to spread files",
+            "It automatically increases bundle size and slows down the app"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 280,
+        "question": "In a feature-based folder structure, where would you typically place components?",
+        "options": [
+            "Inside a global 'components' folder shared across the entire app",
+            "Inside each feature folder, grouped with related logic and styles",
+            "Inside a single 'pages' directory that holds all UI code",
+            "Inside a 'hooks' folder regardless of feature boundaries"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 281,
+        "question": "What does 'data loading waterfall' mean in the context of React applications?",
+        "options": [
+            "Using advanced caching strategies to completely eliminate the need for repeated network calls",
+            "Multiple requests executed sequentially, causing slower loading-omid",
+            "Executing all API requests in parallel regardless of dependencies",
+            "Fetching data only for the components currently visible in the viewport",
+        ],
+        "correctOption": 1,
+        "points": 30
     }
+
 
 
 ]
