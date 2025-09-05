@@ -1536,408 +1536,408 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 131,
-        "question": "Why must Hooks always be called in the same order on every render?",
-        "options": [
-            "Because React only supports one Hook per component",
-            "Because changing the order will reset state but still work",
-            "Because Hooks automatically reorder themselves internally",
-            "Because React identifies each Hook call by its position in the render order",
+        "question": "Why must Hooks be called in the same order every render?",
+        options: [
+            "React only supports one Hook per component",
+            "React identifies Hooks by their call position",
+            "Hooks automatically reorder themselves internally",
+            "React compares Hooks by their return values"
         ],
-        "correctOption": 3,
+        "correctOption": 1,
         "points": 20
     },
     {
         "id": 132,
-        "question": "Why is useMemo helpful when passing objects as props to memoized components?",
-        "options": [
-            "Because useMemo prevents the object from being garbage collected",
-            "Because useMemo automatically deep compares objects before passing them as props",
-            "Because useMemo ensures the same object reference is reused between renders if dependencies do not change",
-            "Because useMemo converts objects into primitive values for React.memo",
+        "question": "How does useMemo help with object props in memoized components?",
+        options: [
+            "It prevents garbage collection of objects",
+            "It converts objects to primitive values",
+            "It maintains stable object references",
+            "It performs deep comparison of objects"
         ],
-        "correctOption": 1,
+        correctOption: 2,
         "points": 20
     },
     {
         "id": 133,
-        "question": "What is the main difference between useCallback and useMemo?",
-        "options": [
-            "useCallback memoizes primitive values, while useMemo memoizes objects and arrays",
-            "useCallback is used for side effects, while useMemo is used for rendering",
-            "useCallback prevents all re-renders, while useMemo only prevents re-renders of children",
-            "useCallback memoizes a function itself, while useMemo memoizes the result of executing a function",
+        "question":"What is the key difference between useCallback and useMemo?",
+        options: [
+            "useCallback memoizes functions, useMemo memoizes values",
+            "useCallback prevents renders, useMemo prevents effects",
+            "useCallback handles async, useMemo handles sync logic",
+            "useCallback works with props, useMemo works with state"
         ],
-        "correctOption":3,
+        correctOption: 0,
         "points": 20
     },
     {
         "id": 134,
-        "question": "Why does React guarantee that setter functions from useState (like setCount) always have a stable identity?",
-        "options": [
-            "Because React automatically memoizes all functions declared inside components",
-            "Because setter functions are recreated on every render but hidden by React",
-            "To prevent unnecessary re-renders by keeping setter references stable across renders",
-            "To ensure that state variables are always primitive values",
+        "question":  "Why do useState setters have stable identity across renders?",
+        options: [
+            "React automatically memoizes all functions",
+            "Setters are recreated but hidden by React",
+            "React guarantees stable references for setters",
+            "Setters only work with primitive values"
         ],
-        "correctOption": 2,
+        correctOption: 2,
         "points": 20
     },
     {
         "id": 135,
-        "question": "What does it mean that the dispatch function from useReducer has a stable identity?",
-        "options": [
-            "The same function reference is reused on every render and does not change",
-            "It always produces the same state value for the same action",
-            "It is recreated on every render but behaves the same way",
-            "It can only handle primitive action types",
+        "question":"What does stable identity mean for useReducer dispatch?",
+        options: [
+            "The function reference never changes",
+            "It produces consistent action results",
+            "It handles all action types equally",
+            "It works with any reducer function"
         ],
-        "correctOption": 0,
+        correctOption: 0,
         "points": 20
     },
     {
         "id": 136,
-        "question": "Why is it safe to omit useState setters or useReducer dispatch from dependency arrays in useEffect, useCallback, or useMemo?",
-        "options": [
-            "Because React automatically adds them to the dependency array at runtime",
-            "Because React guarantees their identity is stable across renders, so they never change",
-            "Because these functions are re-created every render but compared by value",
-            "Because dependency arrays in Hooks only track primitive values by default",
+        "question": "Why can useState setters be omitted from dependency arrays?",
+        options: [
+            "React adds them automatically at runtime",
+            "React guarantees their stable identity",
+            "They're compared by value not reference",
+            "They only track primitive dependencies"
         ],
-        "correctOption": 1,
+        correctOption: 1,
         "points": 30
     },
     {
         "id": 137,
-        "question": "Why is it incorrect to omit a state variable used inside useEffect from its dependency array?",
-        "options": [
-            "Because React automatically re-adds the variable internally",
-            "Because dependency arrays only track setter functions, not values",
-            "Because the effect would run with stale values, not reflecting the latest state",
-            "Because state variables are guaranteed to be stable like setters",
+        "question":  "What happens when state variables are missing from useEffect dependencies?",
+        options: [
+            "React adds the variables automatically",
+            "The effect uses the latest values",
+            "The effect captures stale values",
+            "The effect runs on every render"
         ],
-        "correctOption": 2,
+        correctOption: 2,
         "points": 30
     },
     {
         "id": 138,
-        "question": "If a prop is used inside a useCallback, why must it be included in the dependency array?",
-        "options": [
-            "Because React automatically freezes props unless included",
-            "Because props are treated like setter functions with stable identity",
-            "Because useCallback only works when props are primitive values",
-            "Because props can change between renders, and omitting them may cause stale closures",
+        "question":  "Why must props be included in useCallback dependency arrays?",
+        options: [
+            "React freezes props unless included",
+            "Props have stable identity like setters",
+            "useCallback only works with primitives",
+            "Props can change causing stale closures"
         ],
-        "correctOption": 3,
+        correctOption: 3,
         "points": 20
     },
     {
         "id": 139,
-        "question": "Why should a non-memoized function defined inside a component be included in the dependency array if used in useEffect?",
-        "options": [
-            "Because a new function is created on each render, and omitting it causes effects to run with outdated references",
-            "Because React automatically memoizes functions if not included",
-            "Because functions inside components are stable like dispatch",
-            "Because dependency arrays only matter for state setters and props",
+        "question": "Why include component functions in useEffect dependency arrays?",
+        options: [
+            "Functions are recreated on every component render cycle",
+            "React automatically memoizes all functions in components",
+            "Functions have stable references like dispatch from useReducer",
+            "Dependency arrays only need to track function calls"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 140,
-        "question": "Why can a constantly changing Context value lead to performance issues in React apps?",
-        "options": [
-            "Because React ignores context updates for performance reasons",
-            "Because all consumers re-render on every value change, even if they don't need the updated part",
-            "Because Context automatically freezes values causing lag",
-            "Because useMemo cannot be used with Context values"
+        "question": "Why can frequently changing Context values cause performance issues?",
+        options: [
+            "React ignores all context updates for performance reasons",
+            "All consumers re-render whenever any context value changes",
+            "Context automatically freezes all values to prevent updates",
+            "useMemo cannot be used properly with Context values"
         ],
         "correctOption": 1,
         "points": 30
     },
     {
         "id": 141,
-        "question": "Which technique helps optimize a React Context to prevent unnecessary re-renders of consumers?",
-        "options": [
-            "Wrap the context value in useMemo so it only changes when actual data changes",
-            "Always pass new object literals directly as context value",
-            "Use class components instead of function components",
-            "Avoid using React.memo on consumer components"
+        "question": "How can you optimize Context to prevent unnecessary re-renders?",
+        options: [
+            "Wrap context values with useMemo for stable references",
+            "Always pass new object literals as context values",
+            "Use class components instead of functional components",
+            "Avoid using React.memo on any consumer components"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 142,
-        "question": "What is an effective strategy when a Context has many consumers to avoid wasted renders?",
-        "options": [
-            "Convert all consumers to class components",
-            "Always update the entire context on any state change",
-            "Use a single large context for all app state to simplify updates",
-            "Split the context into multiple smaller contexts targeting specific state slices",
+        "question": "What strategy helps avoid wasted renders in Context with many consumers?",
+        options: [
+            "Convert all consumers to class-based components only",
+            "Always update entire context on any state change",
+            "Use single large context for all application state",
+            "Split context into multiple focused smaller providers"
         ],
         "correctOption":3,
         "points": 30
     },
     {
         "id": 143,
-        "question": "How can passing children into a dedicated component inside a Context help optimize performance?",
-        "options": [
-            "It makes the entire subtree always re-render to stay consistent",
-            "It automatically freezes context values to prevent re-renders",
-            "It allows only the necessary part of the tree to re-render when the context value changes",
-            "It converts all consumers to use useMemo internally",
+        "question":"How does passing children help optimize Context performance?",
+        options: [
+            "Makes entire component subtree always re-render together",
+            "Automatically freezes all context values for performance",
+            "Allows only necessary parts to re-render on context value changes",
+            "Converts all consumers to use useMemo internally"
         ],
         "correctOption": 2,
         "points": 30
     },
     {
         "id": 144,
-        "question": "Why is it recommended to wrap a Context value in useMemo when it contains objects or arrays?",
-        "options": [
-            "Because it guarantees that all consumers will re-render on every render",
-            "Because it prevents unnecessary re-renders by keeping the reference stable between renders",
-            "Because useMemo automatically freezes the values to make them immutable",
-            "Because useMemo converts objects to primitive types for React.memo"
+        "question": "Why wrap Context values containing objects in useMemo?",
+        options: [
+            "Forces all consumers to re-render on every change",
+            "Keeps object references stable between component renders",
+            "Automatically freezes object values for immutability",
+            "Converts complex objects to primitive types automatically"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 145,
-        "question": "How does wrapping a Context consumer component with React.memo help with performance?",
-        "options": [
-            "It prevents the consumer from re-rendering unless its props change, even if the Context value changes",
-            "It automatically memoizes all context values used inside the component",
-            "It ensures that all children of the component are never updated",
-            "It merges multiple context values into a single reference"
+        "question": "How does React.memo help Context consumer performance?",
+        options: [
+            "Prevents re-render unless component props actually change",
+            "Automatically memoizes all context values in consumers",
+            "Ensures children components never update unnecessarily",
+            "Merges multiple context values together for efficiency"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 146,
-        "question": "What is the main advantage of combining the children pattern with React.memo in Context providers?",
-        "options": [
-            "It allows all children to automatically receive new props without re-rendering",
-            "Only the parts of the subtree that depend on the context value re-render, reducing wasted renders",
-            "It forces the entire subtree to render at least once on every change",
-            "It converts context values into static primitives for performance"
+        "question": "What advantage does children pattern with React.memo provide?",
+        options: [
+            "Children receive new props without any re-rendering",
+            "Only context-dependent components re-render when needed",
+            "Entire component subtree renders once per change",
+            "Context values automatically become static primitive types"
         ],
         "correctOption": 1,
         "points": 30
     },
     {
         "id": 147,
-        "question": "Why does passing an inline object as the value of a Context.Provider usually trigger unnecessary re-renders?",
-        "options": [
-            "Because React deeply compares object contents and finds changes on every render",
-            "Because a new object reference is created on each render, making React treat it as a different value",
-            "Because Context always re-renders its consumers no matter what the value is",
-            "Because objects are automatically converted into primitives when used in Context"
+        "question":  "Why do inline objects as Context values trigger unnecessary re-renders?",
+        options: [
+            "React deeply compares all object contents every render",
+            "New object references are created on every render",
+            "Context always re-renders all consumers regardless of values",
+            "Objects are automatically converted to primitives in Context"
         ],
         "correctOption": 1,
         "points": 30
     },
     {
         "id": 148,
-        "question": "What is the recommended way to avoid unnecessary re-renders when passing an object to a Context.Provider?",
-        "options": [
-            "Wrap the Context.Provider component itself with React.memo",
-            "Create a new object literal inside the provider each time to ensure fresh data",
-            "Wrap the object in useMemo so the same reference is reused unless dependencies change",
-            "Convert the object into a serialized string before passing it to the provider"
+        "question": "What's the recommended way to avoid re-renders with Context objects?",
+        options: [
+            "Wrap Context.Provider component itself with React.memo",
+            "Create new object literals each render for freshness",
+            "Wrap object values in useMemo with proper dependencies",
+            "Convert all objects to JSON strings before passing"
         ],
         "correctOption": 2,
         "points": 30
     },
     {
         "id": 149,
-        "question": "How does wrapping a Context consumer with React.memo help reduce wasted re-renders?",
-        "options": [
-            "It re-renders only if its props change, even when the Context provider passes the same value",
-            "It forces all consumers of the same Context to re-render together for consistency",
-            "It automatically memoizes the Context value so providers do not create new objects",
-            "It makes React use shallow comparison for Context updates instead of full re-renders"
+        "question": "How does React.memo reduce Context consumer re-renders?",
+        options: [
+            "Re-renders only when component props change, not context",
+            "Forces all consumers to render together for consistency",
+            "Automatically memoizes Context values in provider components",
+            "Uses shallow comparison for context updates instead"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 150,
+        "question": "What combination best reduces Context-related wasted renders?",
+        options: [
+            "useMemo for values, React.memo for consumers, children pattern",
+            "useMemo for values, partial memoization, separate state contexts",
+            "useCallback for values, React.memo for consumers, split contexts",
+            "useState for values, class consumers, single global contexts"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
         "id": 151,
-        "question": "Which combination of techniques is most effective for reducing wasted renders in Context-heavy applications?",
-        "options": [
-            "Using useMemo for provider values, React.memo for consumers, and separating frequently changing values into different Contexts",
-            "Using useMemo for provider values, memoizing consumers partially, and passing state as separate Contexts",
-            "Using useMemo for provider values, React.memo for consumers, and the children pattern to isolate updates",
-            "Wrapping provider values in useCallback, using React.memo for consumers, and splitting large Contexts",
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 152,
-        "question": "What does 'bundle size' represent in a React application?",
-        "options": [
-            "The number of React components in the project",
-            "The total size of all JavaScript and CSS files after build",
-            "The memory consumed by React in the browser",
-            "The amount of network requests per page",
+        "question": "What does bundle size represent in React applications?",
+        options: [
+            "Total number of React components in the project",
+            "Combined size of all JavaScript and CSS files",
+            "Memory consumed by React in browser runtime",
+            "Total amount of network requests per page load"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
         "id": 153,
-        "question": "The bigger the bundle, the ...?",
-        "options": [
-            "faster the page loads",
-            "smaller the network usage",
-            "better the SEO ranking",
-            "slower the application becomes",
+        "question": "How does larger bundle size affect application performance?",
+        options: [
+            "Makes web pages load much faster than before",
+            "Reduces network bandwidth usage significantly overall",
+            "Improves SEO ranking automatically for search engines",
+            "Makes applications load slower for end users"
         ],
         "correctOption":3,
         "points": 10
     },
     {
         "id": 154,
-        "question": "What is the main goal of code splitting in React apps?",
-        "options": [
-            "To combine all files into a single bundle",
-            "To rewrite components into smaller functions",
-            "To split code into smaller chunks that load on demand",
-            "To reduce the number of React hooks in code",
+        "question":  "What is the main goal of code splitting?",
+        options: [
+            "Combine all files into one single large bundle",
+            "Rewrite components into smaller atomic functions only",
+            "Split code into smaller chunks loaded on demand",
+            "Reduce total number of React hooks used throughout"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
         "id": 155,
-        "question": "Which React feature is commonly used for lazy loading components?",
-        "options": [
-            "React.StrictMode",
-            "React.Suspense with React.lazy",
-            "useMemo with useCallback",
-            "React.memo with props",
+        "question": "Which React feature enables lazy loading of components?",
+        options: [
+            "React.StrictMode combined with error boundary components",
+            "React.Suspense combined with React.lazy function calls",
+            "useMemo combined with useCallback hooks for optimization",
+            "React.memo combined with stable props for consistency"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 156,
-        "question": "When splitting bundles by page router in frameworks like Next.js, what happens?",
-        "options": [
-            "All pages are still combined into one bundle",
-            "Only components with useEffect hooks are separated",
-            "Pages are split but still downloaded together at first load",
-            "Each page is delivered as a separate bundle, loaded only when visited",
+        "question": "What happens with page-based bundle splitting in Next.js?",
+        options: [
+            "All pages are still combined into one large bundle",
+            "Only components with useEffect hooks get separated automatically",
+            "Pages are split but still downloaded together initially",
+            "Each page loads as a separate bundle when visited"
         ],
         "correctOption": 3,
         "points": 30
     },
     {
         "id": 157,
-        "question": "What is the role of React.Suspense when using lazy loaded components?",
-        "options": [
-            "It delays rendering and shows a fallback to optimize performance",
-            "It delays rendering and shows a fallback until the component is loaded",
-            "It prevents components from re-rendering unnecessarily",
-            "It creates a separate bundle for each component automatically",
+        "question":"What role does React.Suspense play with lazy components?",
+        options: [
+            "Shows fallback UI until lazy component finishes loading",
+            "Prevents unnecessary component re-renders during loading process",
+            "Creates separate bundles automatically for each component",
+            "Optimizes performance without requiring additional configuration"
         ],
-        "correctOption": 1,
+        "correctOption":0,
         "points": 30
     },
     {
         "id": 158,
-        question: "What is the main purpose of tree-shaking in modern bundlers?",
+        question: "What is the main purpose of tree-shaking?",
         options: [
-            "To split JavaScript into multiple chunks",
-            "To remove unused code from the bundle",
-            "To improve CSS loading",
-            "To lazy-load images"
+            "Split JavaScript code into multiple smaller chunks",
+            "Remove unused code from final production bundles",
+            "Improve CSS loading performance significantly for users",
+            "Automatically lazy-load images when they become visible"
         ],
         correctOption: 1,
         points: 10
     },
     {
         "id": 159,
-        question: "Which React feature enables code splitting by loading components only when needed?",
+        question: "Which feature enables component-based code splitting?",
         options: [
-            "React.memo",
-            "useCallback",
-            "React.lazy with Suspense",
-            "StrictMode"
+            "React.memo for component memoization and optimization",
+            "useCallback for function reference memoization stability",
+            "React.lazy with Suspense boundaries for loading states",
+            "StrictMode for development debugging and error detection"
         ],
         correctOption: 2,
         points: 10
     },
     {
         "id": 160,
-        question: "How does using dynamic import() improve performance?",
+        question: "How does dynamic import() improve performance?",
         options: [
-            "It loads modules only when required",
-            "It always reduces bundle size",
-            "It automatically compresses JavaScript",
-            "It preloads all modules at startup"
+            "Loads JavaScript modules only when actually required",
+            "Always reduces bundle size significantly for all applications",
+            "Automatically compresses JavaScript files during build process",
+            "Preloads all modules at application startup for speed"
         ],
         correctOption: 0,
         points: 10
     },
     {
         "id": 161,
-        question: "Which official Next.js plugin helps analyze JavaScript bundle size?",
+        question: "Which plugin helps analyze Next.js bundle sizes?",
         options: [
-            "webpack-analyze",
-            "eslint-plugin-next",
-            "next-optimizer",
-            "@next/bundle-analyzer",
+            "webpack-bundle-analyzer for build process analysis",
+            "eslint-plugin-next for code linting and quality",
+            "@next/bundle-analyzer for bundle size visualization",
+            "next-optimizer for performance optimization across board"
         ],
-        correctOption: 3,
+        correctOption: 2,
         points: 10
     },
     {
         "id": 162,
-        question: "Why is the Next.js <Image /> component recommended instead of plain <img>?",
+        question:"Why use Next.js Image component over regular img?",
         options: [
-            "It increases resolution of all images",
-            "It converts all formats to WebP",
-            "It automatically lazy-loads and optimizes images",
-            "It avoids caching on the browser"
+            "Increases resolution of all images automatically to HD",
+            "Converts all image formats to WebP for compression",
+            "Automatically lazy-loads and optimizes images for performance",
+            "Completely avoids browser caching for fresh content"
         ],
-        correctOption: 3,
+        correctOption: 2,
         points: 10
     },
     {
         "id": 163,
-        question: "What is the role of caching in bundle optimization?",
+        question: "How does caching help with bundle optimization?",
         options: [
-            "It reduces React component re-renders",
-            "It inlines critical CSS automatically",
-            "It prevents downloading unchanged bundles again",
-            "It forces all modules to preload"
+            "Reduces React component re-renders throughout the application",
+            "Automatically inlines critical CSS for faster rendering",
+            "Prevents downloading unchanged bundles on repeat visits",
+            "Forces all JavaScript modules to preload for speed"
         ],
         correctOption: 2,
         points: 20
     },
     {
         "id": 164,
-        question: "What is the main downside of importing large third-party libraries directly into your project?",
+        question: "What's the downside of importing large third-party libraries?",
         options: [
-            "They may disable React hooks",
-            "They increase the initial JavaScript load time",
-            "They prevent tree-shaking from working",
-            "They block Suspense fallback"
+            "They completely disable React hooks throughout application",
+            "They significantly increase initial JavaScript load time",
+            "They prevent tree-shaking optimization from working properly",
+            "They block Suspense fallback rendering during loading"
         ],
         correctOption: 1,
         points: 20
     },
     {
         "id": 165,
-        question: "If you import a library but never use it, what happens in a production build with tree-shaking enabled?",
+        question: "What happens to imported but unused libraries with tree-shaking?",
         options: [
-            "The library code will not be included in the final bundle",
-            "It will always remain in the bundle",
-            "It throws a runtime error at execution",
-            "It automatically preloads the library"
+            "Library code will not be included in final bundle",
+            "Library code will always remain in bundle regardless",
+            "Library code throws runtime error during execution phase",
+            "Library code automatically preloads for future potential use"
         ],
         correctOption: 0,
         points: 30
@@ -1946,70 +1946,70 @@ export const mockQuestions: Question[] = [
         "id": 166,
         question: "How can unused CSS affect bundle performance?",
         options: [
-            "It increases JavaScript execution time",
-            "It disables CSS modules",
-            "It bloats the bundle size unnecessarily",
-            "It forces inline styles only"
+            "Increases JavaScript execution time throughout the application",
+            "Completely disables CSS modules functionality across project",
+            "Bloats bundle size unnecessarily without providing value",
+            "Forces application to use inline styles only"
         ],
-        correctOption: 3,
+        correctOption: 2,
         points: 20
     },
     {
         "id": 167,
-        question: "In Next.js, what is the difference between preloading and prefetching?",
+        question:  "In Next.js, what differs preloading from prefetching?",
         options: [
-            "Preloading happens during idle time, prefetching happens immediately",
+            "Preloading waits for idle time, prefetching happens immediately",
             "Preloading fetches immediately, prefetching waits for idle time",
-            "Both are identical in behavior",
-            "Both disable cache headers"
+            "Both techniques have identical behavior in all situations",
+            "Both techniques disable cache headers completely for requests"
         ],
         correctOption: 1,
         points:30
     },
     {
         id: 168,
-        question: "What is the main purpose of using `preload` in web performance optimization?",
+        question:  "What is the main purpose of preload?",
         options: [
-            "To download resources only when the user clicks a link",
-            "To download critical resources as early as possible",
-            "To reduce the size of JavaScript bundles",
-            "To block unused CSS from being loaded"
+            "Download resources only when user clicks on links",
+            "Download critical resources as early as possible",
+            "Reduce size of JavaScript bundles automatically",
+            "Block unused CSS files from loading unnecessarily"
         ],
         correctOption: 1,
         points: 10
     },
     {
         id: 169,
-        question: "How does `prefetch` improve the user experience in Next.js?",
+        question: "How does prefetch improve user experience?",
         options: [
-            "By executing JavaScript faster",
-            "By caching all images automatically",
-            "By loading future page resources during idle time",
-            "By reducing React re-renders"
+            "Executes JavaScript code faster in browser runtime",
+            "Automatically caches all images for offline usage",
+            "Loads future page resources during browser idle time",
+            "Reduces React component re-renders significantly across application"
         ],
         correctOption: 2,
         points: 10
     },
     {
         id: 170,
-        question: "Which of the following is the biggest risk of using `preload` incorrectly?",
+        question: "What's the biggest risk of incorrect preload usage?",
         options: [
-            "Increasing bundle splitting",
-            "Blocking lazy-loading of components",
-            "Overloading the network with too many high-priority requests",
-            "Preventing prefetch from working"
+            "Increasing bundle splitting unnecessarily throughout application",
+            "Blocking lazy-loading of components during runtime",
+            "Overloading network with too many high-priority requests",
+            "Preventing prefetch functionality from working properly"
         ],
         correctOption: 2,
         points: 20
     },
     {
         id: 171,
-        question: "In Next.js, why does `<Link>` with `prefetch={true}` help navigation?",
+        question:  "Why does Link with prefetch=true help navigation?",
         options: [
-            "It reduces React rendering time",
-            "It preloads the target page’s code during idle time",
-            "It disables hydration errors",
-            "It loads CSS inline for the target page"
+            "Reduces React rendering time significantly for all components",
+            "Preloads target page JavaScript code during idle time",
+            "Completely disables hydration errors throughout the application",
+            "Loads CSS inline for target page improving render speed"
         ],
         correctOption: 1,
         points: 10
