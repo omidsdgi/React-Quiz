@@ -4,21 +4,21 @@ import { Question } from "@/type/QuizTypes";
 export const mockQuestions: Question[] = [
     {
         id: 1,
-        question: "Which is the most popular JavaScript framework?",
+        question: "Which JavaScript framework has the largest developer community as of 2024?",
         options: ["Angular", "React", "Svelte", "Vue"],
         correctOption: 1,
         points: 10,
     },
     {
         id: 2,
-        question: "Which company invented React?",
+        question:  "Which company originally created React?",
         options: ["Google", "Apple", "Netflix", "Facebook"],
         correctOption: 3,
         points: 10,
     },
     {
         id: 3,
-        question: "What's the fundamental building block of React apps?",
+        question:  "What are the primary building blocks of React applications?",
         options: ["Components", "Blocks", "Elements", "Effects"],
         correctOption: 0,
         points: 10,
@@ -26,14 +26,14 @@ export const mockQuestions: Question[] = [
     {
         id: 4,
         question:
-            "What's the name of the syntax we use to describe the UI in React components?",
+            "What syntax extension allows you to write HTML-like code in JavaScript?",
         options: ["FBJ", "Babel", "JSX", "ES2015"],
         correctOption: 2,
         points: 10,
     },
     {
         id: 5,
-        question: "How does data flow naturally in React apps?",
+        question:"In React&360;s data flow model, how does data typically move between components?",
         options: [
             "From parents to children",
             "From children to parents",
@@ -45,67 +45,67 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 6,
-        question: "How to pass data into a child component?",
+        question: "What mechanism is used to pass data from parent to child components?",
         options: ["State", "Props", "PropTypes", "Parameters"],
         correctOption: 1,
         points: 10,
     },
     {
         id: 7,
-        question: "When to use derived state?",
+        question: "When should you derive state from existing state variables?",
         options: [
-            "Whenever the state should not trigger a re-render",
-            "Whenever the state can be synchronized with an effect",
-            "Whenever the state should be accessible to all components",
-            "Whenever the state can be computed from another state variable",
+            "When state updates should not trigger re-renders",
+            "When state needs to be synchronized with useEffect",
+            "When state should be accessible globally",
+            "When one state can be calculated from another"
         ],
         correctOption: 3,
         points: 30,
     },
     {
         id: 8,
-        question: "What triggers a UI re-render in React?",
+        question: "What causes a React component to re-render?",
         options: [
-            "Running an effect",
-            "Passing props",
-            "Updating state",
-            "Adding event listeners to DOM elements",
+            "Running a useEffect hook",
+            "Receiving new props",
+            "Updating component state",
+            "Adding event listeners"
         ],
         correctOption: 2,
         points: 20,
     },
     {
         id: 9,
-        question: 'When do we directly "touch" the DOM in React?',
+        question:"In React applications, when should you directly manipulate the DOM?",
         options: [
-            "When we need to listen to an event",
-            "When we need to change the UI",
-            "When we need to add styles",
-            "Almost never",
+            "When adding event listeners",
+            "When updating component content",
+            "When applying dynamic styles",
+            "Almost never - React manages the DOM"
         ],
         correctOption: 3,
         points: 20,
     },
     {
         id: 10,
-        question: "In what situation do we use a callback to update state?",
+        question: "When should you use a callback function to update state in React?",
         options: [
-            "When updating the state will be slow",
-            "When the updated state is very data-intensive",
-            "When the state update should happen faster",
-            "When the new state depends on the previous state",
+            "When the update will be computationally expensive",
+            "When the new state contains large amounts of data",
+            "When you want the update to happen faster",
+            "When the new state depends on the previous state"
         ],
         correctOption: 3,
         points: 30,
     },
     {
         id: 11,
-        question: "If we pass a function to useState, when will that function be called?",
+        question:  "When is the initializer function passed to useState executed?",
         options: [
-            "On each re-render",
-            "Each time we update the state",
-            "Only on the initial render",
-            "The first time we update the state",
+            "On every component re-render",
+            "Every time state is updated",
+            "Only during the initial render",
+            "Only the first time state is updated"
         ],
         correctOption: 2,
         points: 30,
@@ -113,211 +113,211 @@ export const mockQuestions: Question[] = [
     {
         id: 12,
         question:
-            "Which hook to use for an API request on the component's initial render?",
+            "Which hook is primarily used for making API requests when a component mounts?",
         options: ["useState", "useEffect", "useRef", "useReducer"],
         correctOption: 1,
         points: 10,
     },
     {
         id: 13,
-        question: "Which variables should go into the useEffect dependency array?",
+        question:  "What should be included in a useEffect dependency array?",
         options: [
-            "Usually none",
-            "All our state variables",
-            "All state and props referenced in the effect",
-            "All variables needed for clean up",
+            "No dependencies are typically needed",
+            "All state variables in the component",
+            "All reactive values used inside the effect",
+            "Only variables needed for cleanup"
         ],
         correctOption: 2,
         points: 30,
     },
     {
         id: 14,
-        question: "An effect will always run on the initial render.",
+        question:  "Does a useEffect hook always run on the component's initial render?",
         options: [
-            "True",
-            "It depends on the dependency array",
-            "False",
-            "In depends on the code in the effect",
+            "Yes, regardless of the dependency array",
+            "It depends on the dependency array contents",
+            "No, it only runs on subsequent renders",
+            "It depends on the effect's cleanup function"
         ],
         correctOption: 0,
         points: 30,
     },
     {
         id: 15,
-        question: "When will an effect run if it doesn't have a dependency array?",
+        question: "How often will a useEffect run if no dependency array is provided?",
         options: [
             "Only when the component mounts",
             "Only when the component unmounts",
-            "The first time the component re-renders",
-            "Each time the component is re-rendered",
+            "Only on the first re-render",
+            "On every render of the component"
         ],
         correctOption: 3,
         points: 20,
     },
             {
             "id": 16,
-            "question": "What is the main role of routing in a web application?",
+            "question":  "What is the primary purpose of routing in web applications?",
             "options": [
-                "Loading scripts and styles on demand",
-                "Connecting frontend logic with backend services",
-                "Mapping URLs to corresponding views or components",
-                "Managing client-side form validation"
+                "Loading JavaScript modules on demand",
+                "Connecting frontend with backend APIs",
+                "Mapping URLs to corresponding views",
+                "Validating form inputs on the client"
             ],
             "correctOption": 2,
             "points": 10
         },
         {
             "id": 17,
-            "question": "In React, what does a route usually represent?",
+            "question": "In React Router, what does a route typically represent?",
             "options": [
-                "A function that fetches remote data",
-                "A mapping between a URL path and a React component",
-                "A global state object shared across components",
-                "A reference to a DOM element in the tree"
+                "A function for fetching remote data",
+                "A connection between a URL and a component",
+                "A global state object",
+                "A reference to a DOM element"
             ],
             "correctOption": 1,
             "points": 10
         },
         {
             "id": 18,
-            "question": "What does routing allow users to do in a React app?",
+            "question": "What capability does routing provide to users in React applications?",
             "options": [
-                "Navigate between different screens using links and URLs",
-                "Apply global styles across many components",
-                "Cache API responses automatically in the browser",
-                "Persist component state to local storage"
+                "Navigation between screens using URLs",
+                "Automatic global styling",
+                "Built-in API response caching",
+                "Persistent component state"
             ],
             "correctOption": 0,
             "points": 10
         },
         {
             "id": 19,
-            "question": "What is React Router mainly used for?",
+            "question": "What is React Router's main responsibility?",
             "options": [
                 "Managing global application state",
-                "Handling navigation and rendering matching components",
-                "Providing CSS utilities for components",
-                "Coordinating data fetching for pages"
+                "Handling navigation and component rendering",
+                "Providing CSS-in-JS utilities",
+                "Coordinating API data fetching"
             ],
             "correctOption": 1,
             "points": 10
         },
         {
             "id": 20,
-            "question": "What best describes a Single Page Application (SPA)?",
+            "question": "What defines a Single Page Application (SPA)?",
             "options": [
-                "An app that runs only on a single device type",
-                "A web app that loads one HTML page and updates the UI dynamically",
-                "A site that reloads the browser on each navigation",
-                "An application that supports only one route"
+                "An app that works on only one device",
+                "A web app that loads once and updates content dynamically",
+                "A website that reloads on each navigation",
+                "An app with exactly one route"
             ],
             "correctOption": 1,
             "points": 10
         },
         {
             "id": 21,
-            "question": "What is a key advantage of an SPA?",
+            "question":"What is a primary benefit of Single Page Applications?",
             "options": [
-                "Pages always reload faster on each click",
-                "Server load becomes significantly higher",
-                "Navigation feels smoother and more responsive",
-                "No JavaScript is required for interactivity"
+                "Faster page reloads on navigation",
+                "Reduced server computational load",
+                "Smoother and more responsive navigation",
+                "No JavaScript required for functionality"
             ],
             "correctOption": 2,
             "points": 10
         },
         {
             "id": 22,
-            "question": "How do SPAs usually manage browser URLs?",
+            "question":"How do SPAs handle URL changes during navigation?",
             "options": [
                 "Each navigation triggers a full server request",
-                "They change the URL via the History API without reloads",
-                "They hide the URL from the user interface",
-                "They always use server-side redirects for navigation"
+                "They update URLs using the History API without page reloads",
+                "They completely hide URLs from users",
+                "They always use server-side redirects"
             ],
             "correctOption": 1,
             "points": 20
         },
         {
             "id": 23,
-            "question": "Where is rendering usually handled in a Single Page Application?",
+            "question": "Where does rendering primarily occur in Single Page Applications?",
             "options": [
-                "Only on the server before sending HTML to the client",
-                "Primarily on the client using JavaScript to update the UI",
-                "Equally on client and server at the same time",
-                "Exclusively on external CDN servers"
+                "Exclusively on the server before sending HTML",
+                "Primarily on the client using JavaScript",
+                "Equally distributed between client and server",
+                "On external CDN servers only"
             ],
             "correctOption": 1,
             "points": 20
         },
         {
             "id": 24,
-            "question": "What happens in React when routing changes the URL?",
+            "question": "What happens when routing changes the URL in a React SPA?",
             "options": [
-                "The browser performs a full page reload from the server",
-                "The URL change is ignored and the page stays the same",
-                "The DOM updates to render the component matching the new URL",
-                "The application stops and restarts execution"
+                "The browser performs a full page reload",
+                "The URL change is ignored completely",
+                "React updates the UI to match the new URL",
+                "The application restarts execution"
             ],
             "correctOption": 2,
             "points": 10
         },
         {
             "id": 25,
-            "question": "In an SPA, what mainly updates the page content?",
+            "question": "What primarily drives content updates in Single Page Applications?",
             "options": [
-                "JavaScript executing in the browser to modify the DOM",
-                "The server sending a new HTML file for each page",
-                "A full browser reload on each navigation event",
-                "Only CSS rules changing the page layout"
+                "JavaScript manipulating the DOM",
+                "Server sending new HTML pages",
+                "Full browser reloads",
+                "CSS-only layout changes"
             ],
             "correctOption": 0,
             "points": 10
         },
         {
             "id": 26,
-            "question": "What is a common SEO challenge for SPAs?",
+            "question":  "What is a significant SEO challenge for Single Page Applications?",
             "options": [
-                "They cannot be hosted on secure servers",
-                "Search engines may struggle to index dynamically rendered content",
-                "They do not allow linking between pages",
-                "They are incompatible with HTTPS protocols"
+                "They cannot use secure HTTPS connections",
+                "Search engines may struggle with dynamic content indexing",
+                "They don't support inter-page linking",
+                "They're incompatible with modern web standards"
             ],
             "correctOption": 1,
             "points": 30
         },
         {
             "id": 27,
-            "question": "What is a key difference between client-side and server-side routing?",
+            "question": "How do client-side and server-side routing differ?",
             "options": [
-                "Client-side always reloads the page on navigation",
-                "Server-side never performs a full page load",
-                "They are functionally identical in modern browsers",
-                "Client-side updates views without full reload; server-side reloads the page"
+                "Client-side routing always triggers page reloads",
+                "Server-side routing never performs full page loads",
+                "They function identically in modern browsers",
+                "Client-side updates views without reloading; server-side triggers full page loads"
             ],
             "correctOption": 3,
             "points": 20
         },
         {
             "id": 28,
-            "question": "Which approach improves SEO for a Single Page Application?",
+            "question":"What approach can improve SEO for Single Page Applications?",
             "options": [
-                "Switching back to many static HTML pages only",
-                "Avoiding modern routing libraries entirely",
-                "Using server-side rendering (SSR) or pre-rendering techniques",
-                "Disabling JavaScript so pages are static"
+                "Converting to multiple static HTML pages only",
+                "Completely avoiding routing libraries",
+                "Implementing server-side rendering (SSR)",
+                "Disabling JavaScript entirely"
             ],
             "correctOption": 2,
             "points": 30
         },
         {
             "id": 29,
-            "question": "What is ESLint mainly used for in JavaScript projects?",
+            "question":  "What is ESLint's primary function in JavaScript projects?",
             "options": [
-                "Managing application state between components",
-                "Linting code and identifying problematic patterns",
-                "Rendering UI elements on the client",
-                "Running unit tests automatically"
+                "Managing application state",
+                "Analyzing code for potential issues and style problems",
+                "Rendering user interface components",
+                "Executing automated unit tests"
             ],
             "correctOption": 1,
             "points": 10
@@ -326,22 +326,22 @@ export const mockQuestions: Question[] = [
             "id": 30,
             "question": "When is ESLint typically run during development?",
             "options": [
-                "Only during deployment to production",
-                "While bundling assets with Webpack",
-                "During development or before committing changes",
-                "Only after creating the production build"
+                "Only during production deployment",
+                "During the build process with bundlers",
+                "During development and before code commits",
+                "Only after creating production builds"
             ],
             "correctOption": 2,
             "points": 10
         },
         {
             "id": 31,
-            "question": "Does ESLint only check for syntax errors?",
+            "question":  "Does ESLint only check for syntax errors?",
             "options": [
-                "Yes, it only checks syntax",
-                "No, it also enforces style and finds logic issues",
-                "Yes, it replaces the compiler",
-                "No, it builds production bundles"
+                "Yes, it only validates syntax",
+                "No, it also enforces code style and finds logic issues",
+                "Yes, it replaces the JavaScript compiler",
+                "No, it only builds production bundles"
             ],
             "correctOption": 1,
             "points": 10
@@ -360,19 +360,19 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 33,
-            "question": "What is the purpose of plugins in ESLint?",
+            "question": "What is the purpose of ESLint plugins?",
             "options": [
-                "To boost runtime speed",
-                "To add TypeScript support",
-                "To extend ESLint with custom rules",
-                "To convert JS into HTML"
+                "To improve JavaScript runtime performance",
+                "To add TypeScript compilation support",
+                "To extend ESLint with additional rules",
+                "To convert JavaScript to HTML"
             ],
             "correctOption": 2,
             "points": 20
         },
         {
             "id": 34,
-            "question": "Which command runs ESLint from the CLI?",
+            "question": "Which command runs ESLint from the command line?",
             "options": [
                 "eslint-check",
                 "lint-start",
@@ -384,72 +384,72 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 35,
-            "question": "How can you exclude files or folders from being linted?",
+            "question": "How can you exclude files from ESLint analysis?",
             "options": [
                 "Add them to .eslintignore",
                 "Remove them from package.json",
                 "Comment them in index.html",
-                "Rename the files"
+                "Rename the files with .skip extension"
             ],
             "correctOption": 0,
             "points": 20
         },
         {
             "id": 36,
-            "question": "Which statement about custom ESLint rules is true?",
+            "question": "What is true about creating custom ESLint rules?",
             "options": [
-                "You can write rules as functions that inspect the AST",
-                "Rules can only be set from the CLI",
-                "Rules must be in index.html",
-                "Custom rules work only in Angular"
+                "Rules can be written as functions that analyze the Abstract Syntax Tree",
+                "Rules can only be configured from command line",
+                "Rules must be embedded in HTML files",
+                "Custom rules only work with Angular projects"
             ],
             "correctOption": 0,
             "points": 30
         },
         {
             "id": 37,
-            "question": "How do you enable ESLint for React projects?",
+            "question": "How do you properly configure ESLint for a React project?",
             "options": [
-                "Add 'react' plugin and 'plugin:react/recommended' in extends",
-                "Install Redux with ESLint",
-                "Use vite instead of eslint",
-                "Install eslint only, no plugins"
+                "Install React plugin and extend recommended React rules",
+                "Install Redux alongside ESLint",
+                "Use Vite instead of ESLint configuration",
+                "Install ESLint only without additional plugins"
             ],
             "correctOption": 0,
             "points": 30
         },
         {
             "id": 38,
-            "question": "What is the difference between 'rules', 'extends', and 'plugins' in ESLint?",
+            "question": "How do 'rules', 'extends', and 'plugins' differ in ESLint configuration?",
             "options": [
-                "'rules' is for plugins, 'extends' sets environments, 'plugins' adds globals",
-                "'rules' define rule configs, 'extends' inherit presets, 'plugins' add more rules",
-                "All three are the same and interchangeable",
-                "Only 'rules' matters; others are just comments"
+                "'rules' configure plugins, 'extends' sets environments, 'plugins' add globals",
+                "'rules' define specific configurations, 'extends' inherit preset configurations, 'plugins' add new rule definitions",
+                "All three properties are interchangeable",
+                "Only 'rules' matter; others are just documentation"
             ],
             "correctOption": 1,
             "points": 30
         },
         {
             "id": 39,
-            "question": "Why are there many ways of styling React apps?",
+            "question":"Why are there multiple approaches to styling React components?",
             "options": [
-                "Because React enforces one method",
-                "Because CSS is not supported by default",
-                "Because React is flexible and unopinionated",
-                "Because JSX only allows inline styles"
+                "Because React enforces one specific method",
+                "Because CSS is not supported by default in React",
+                "Because React is unopinionated about styling approaches",
+                "Because JSX only supports inline styles"
             ],
             "correctOption": 2,
             "points": 10
         },
         {
             "id": 40,
-            "question": "What is the main benefit of CSS Modules?",
+            "question": "What is the main advantage of CSS Modules?",
             "options": [
-                "They allow CSS in JSX strings",
-                "They apply styles globally",
-                "They compile CSS to JS at runtime",
-                "They scope class names locally to components"
+                "They enable CSS-in-JS syntax",
+                "They apply styles globally by default",
+                "They compile CSS to JavaScript at runtime",
+                "They provide locally scoped class names"
             ],
             "correctOption": 3,
             "points": 10
@@ -458,53 +458,53 @@ export const mockQuestions: Question[] = [
             "id": 41,
             "question": "What does it mean when CSS is scoped to a component?",
             "options": [
-                "The styles apply to the whole page",
-                "The styles are reusable across all components",
+                "The styles apply to the entire page",
+                "The styles are reusable across components",
                 "The styles only exist in global.css",
-                "The styles affect only that component"
+                "The styles only affect that specific component"
             ],
             "correctOption": 3,
             "points": 10
         },
         {
             "id": 42,
-            "question": "What is a problem with global CSS styles?",
-            "options": [
-                "They can't be used in SSR",
-                "They are not supported by browsers",
-                "They may cause conflicts between components",
-                "They require special JSX syntax"
-            ],
+            "question": "What is a common problem with global CSS in large applications?",
+             "options": [
+                 "They cannot be used with server-side rendering",
+                 "They are not supported by modern browsers",
+                 "They may cause unintended style conflicts between components",
+                 "They require special JSX syntax"
+                 ],
             "correctOption": 2,
             "points": 10
         },
         {
             "id": 43,
-            "question": "Why store UI state in the URL?",
+            "question":"Why is storing UI state in the URL beneficial?",
             "options": [
-                "To reduce file size",
-                "To make the UI look cleaner",
-                "To allow sharing and bookmarking states",
-                "To stop components from re-rendering"
+                "To reduce JavaScript bundle size",
+                "To improve visual aesthetics",
+                "To enable sharing and bookmarking of application states",
+                "To prevent unnecessary component re-renders"
             ],
             "correctOption": 2,
             "points": 10
         },
         {
             "id": 44,
-            "question": "Which is an example of storing state in the URL?",
+            "question": "Which example demonstrates storing state in the URL?",
             "options": [
-                "Using ?search=react in the URL",
-                "Saving theme in localStorage",
-                "Managing input with useState",
-                "Passing props to children"
+                "Using query parameters like ?search=react",
+                "Saving theme preferences in localStorage",
+                "Managing form input with useState",
+                "Passing data through component props"
             ],
             "correctOption": 0,
             "points": 10
         },
         {
             "id": 45,
-            "question": "Which hook reads query params in React Router?",
+            "question": "Which React Router hook is used to read URL query parameters?",
             "options": [
                 "useState",
                 "useEffect",
@@ -516,19 +516,19 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 46,
-            "question": "Which approach preserves UI state after refresh?",
+            "question": "Which approach maintains UI state after a browser refresh?",
             "options": [
-                "Store state in localStorage",
-                "Use useState only",
-                "Use React context only",
-                "Keep state in a local variable"
+                "Storing state in localStorage or URL parameters",
+                "Using useState exclusively",
+                "Using React Context only",
+                "Keeping state in local variables"
             ],
             "correctOption": 0,
             "points": 10
         },
         {
             "id": 47,
-            "question": "Which hook prevents unnecessary re-renders?",
+            "question":  "Which hook prevents unnecessary function recreation on re-renders?",
             "options": [
                 "useEffect",
                 "useMemo",
@@ -542,10 +542,10 @@ export const mockQuestions: Question[] = [
             "id": 48,
             "question": "What does React.memo() do?",
             "options": [
-                "Caches heavy calculations",
-                "Skips re-render if props don't change",
-                "Stores state in memory",
-                "Creates a new component instance"
+                "Caches expensive calculations",
+                "Prevents component re-render when props haven't changed",
+                "Stores component state in memory",
+                "Creates new component instances"
             ],
             "correctOption": 1,
             "points": 10
@@ -554,7 +554,7 @@ export const mockQuestions: Question[] = [
             "id": 49,
             "question": "When should you use useMemo?",
             "options": [
-                "For heavy calculations or object creation",
+                "For expensive calculations or object creation",
                 "To replace all useState hooks",
                 "For simple string concatenations",
                 "For every variable in components"
@@ -564,12 +564,12 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 50,
-            "question": "Which technique avoids prop drilling?",
+            "question":  "Which technique helps avoid prop drilling?",
             "options": [
-                "Use more useState hooks",
-                "Create extra components",
-                "Use React Context API",
-                "Pass more props to children"
+                "Using more useState hooks",
+                "Creating additional wrapper components",
+                "Using React Context API",
+                "Passing more props through intermediary components"
             ],
             "correctOption": 2,
             "points": 10
@@ -578,22 +578,22 @@ export const mockQuestions: Question[] = [
             "id": 51,
             "question": "What is the key difference between useCallback and useMemo?",
             "options": [
-                "useCallback memoizes functions, useMemo memoizes values",
+                "useCallback memoizes functions, useMemo memoizes computed values",
                 "useCallback stores values, useMemo stores functions",
-                "useMemo is only for effects, useCallback is for state",
-                "They both do the exact same thing"
+                "useMemo is for effects, useCallback is for state",
+                "They perform identical functions"
             ],
             "correctOption": 0,
             "points": 10
         },
         {
             "id": 52,
-            "question": "Which approach may cause unnecessary re-renders in React?",
+            "question": "Which practice commonly causes unnecessary re-renders in React?",
             "options": [
-                "Using keys in lists",
-                "Creating new objects or functions inside render",
-                "Using React.memo correctly",
-                "Splitting code into small components"
+                "Using keys properly in lists",
+                "Creating new objects or functions inside render methods",
+                "Applying React.memo correctly",
+                "Splitting components into smaller pieces"
             ],
             "correctOption": 1,
             "points": 10
@@ -602,17 +602,17 @@ export const mockQuestions: Question[] = [
             "id": 53,
             "question": "What is the purpose of the 'key' prop in React lists?",
             "options": [
-                "To apply CSS styles",
-                "To help React track list item changes",
-                "To improve component design",
-                "To send data between components"
+                "To apply CSS styling to list items",
+                "To help React identify and track list item changes",
+                "To improve component visual design",
+                "To pass data between list components"
             ],
             "correctOption": 1,
             "points": 10
         },
         {
             "id": 54,
-            "question": "Which hook is best for optimizing expensive calculations?",
+            "question": "Which hook is most appropriate for optimizing expensive calculations?",
             "options": [
                 "useState",
                 "useEffect",
@@ -624,24 +624,24 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 55,
-            "question": "How can you stop a component from re-rendering with its parent?",
+            "question": "How can you prevent a component from re-rendering when its parent re-renders?",
             "options": [
-                "Wrap it with React.memo",
-                "Use useEffect with empty array",
+                "Wrap the component with React.memo",
+                "Use useEffect with an empty dependency array",
                 "Move state from props to local state",
-                "Add extra props to the component"
+                "Add additional props to the component"
             ],
             "correctOption": 0,
             "points": 10
         },
         {
             "id": 56,
-            "question": "What happens if no dependency array is provided to useEffect?",
-            "options": [
-                "It runs only once",
-                "It never runs",
-                "It runs on every render",
-                "React shows a warning"
+            "question":"What is the primary benefit of React.lazy combined with Suspense?",
+            options: [
+                "It accelerates rendering performance",
+                "It enables code splitting and reduces initial bundle size",
+                "It improves SEO rankings",
+                "It prevents memory leaks"
             ],
             "correctOption": 2,
             "points": 10
@@ -661,46 +661,46 @@ export const mockQuestions: Question[] = [
         {
             "id": 58,
             "question": "When does React.memo fail to prevent re-renders?",
-            "options": [
-                "When props remain unchanged",
-                "When new object or array props are created every render",
-                "When component has no props",
-                "When component uses internal state"
+            options: [
+                "When props remain unchanged between renders",
+                "When new object or function references are created each render",
+                "When the component has no props",
+                "When the component uses internal state"
             ],
             "correctOption": 1,
             "points": 20
         },
         {
             "id": 59,
-            "question": "What happens if useMemo depends on a function recreated each render?",
-            "options": [
-                "It recalculates every render, losing optimization",
-                "React throws an error",
+            "question":  "What happens when useMemo depends on a value that changes every render?",
+            options: [
+                "It recalculates every render, losing optimization benefits",
+                "React throws an error immediately",
                 "It works normally and caches correctly",
-                "The function is auto-memoized by React"
+                "The value is automatically memoized by React"
             ],
             "correctOption": 0,
             "points": 30
         },
         {
             "id": 60,
-            "question": "Which method reduces unnecessary Context re-renders?",
-            "options": [
-                "Using multiple Context providers",
-                "Adding more consumers",
-                "Placing useEffect in the Context",
-                "Splitting Context by data responsibility"
+            "question": "Which strategy reduces unnecessary Context re-renders?",
+            options: [
+                "Using multiple Context providers for everything",
+                "Adding more consumer components",
+                "Placing useEffect hooks in the Context",
+                "Splitting Context by logical data boundaries"
             ],
             "correctOption": 3,
             "points": 20
         },
         {
             "id": 61,
-            "question": "In React Profiler, what does the 'Committed' phase measure?",
-            "options": [
-                "Time applying updates to the DOM",
-                "Time calculating what changed",
-                "Time running useEffect",
+            "question": "In React Profiler, what does the 'Commit' phase measure?",
+            options: [
+                "Time spent applying updates to the DOM",
+                "Time spent calculating what changed",
+                "Time spent running useEffect hooks",
                 "Total render plus lifecycle time"
             ],
             "correctOption": 0,
@@ -708,11 +708,11 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 62,
-            "question": "Why can overusing useCallback hurt performance?",
-            "options": [
-                "It always speeds up performance",
-                "Memoization overhead may outweigh benefits for simple functions",
-                "It leaks memory in some cases",
+            "question":  "Why can overusing useCallback potentially hurt performance?",
+            options: [
+                "It always improves performance significantly",
+                "Memoization overhead may overstep benefits for simple functions",
+                "It causes memory leaks in certain cases",
                 "It only works with class components"
             ],
             "correctOption": 1,
@@ -720,20 +720,20 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 63,
-            "question": "What is the best way to handle very large lists in React?",
-            "options": [
-                "Wrap each item in React.memo",
-                "Use useCallback for all handlers",
-                "Apply list virtualization (windowing)",
-                "Add extra useEffect hooks"
+            "question": "What is the recommended approach for handling very large lists in React?",
+            options: [
+                "Wrapping each list item in React.memo",
+                "Using useCallback for all event handlers",
+                "Implementing list virtualization (windowing)",
+                "Adding more useEffect hooks"
             ],
             "correctOption": 2,
             "points": 20
         },
         {
             "id": 64,
-            "question": "Which hook keeps computed values between renders?",
-            "options": [
+            "question": "Which React hook memoizes computed values between renders?",
+            options: [
                 "useRef",
                 "useState",
                 "useEffect",
@@ -744,47 +744,47 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 65,
-            "question": "What is inefficient in this code?\n\nconst MyComponent = () => {\n  const [items, setItems] = useState([]);\n  const filtered = items.filter(i => i.active);\n  return <List items={filtered} />;\n}",
-            "options": [
-                "Filter creates a new array each render",
+            "question":  "What performance issue exists in this code?\n\nconst MyComponent = () => {\n  const [items, setItems] = useState([]);\n  const filtered = items.filter(i => i.active);\n  return <List items={filtered} />;\n}",
+            options: [
+                "Filter creates a new array on each render",
                 "The code is fully optimized",
-                "useState is misused",
-                "List will never update correctly"
+                "useState is used incorrectly",
+                "The List component will never update"
             ],
             "correctOption": 0,
             "points": 30
         },
         {
             "id": 66,
-            "question": "Why do effects run twice under StrictMode in dev?",
-            "options": [
-                "Because of a React bug",
-                "To check cleanup of side effects",
-                "To make rendering faster",
-                "To match production exactly"
+            "question":"Why do effects run twice in StrictMode during development?",
+            options: [
+                "Because of a React framework bug",
+                "To help detect side effects and test cleanup logic",
+                "To make rendering faster in development",
+                "To match production behavior exactly"
             ],
             "correctOption": 1,
             "points": 20
         },
         {
             "id": 67,
-            "question": "What does optimization mainly target in React apps?",
-            "options": [
-                "Shorter code and fewer files",
-                "Using only latest React hooks",
-                "Avoiding extra re-renders and reducing bundle size",
-                "Turning all functions into classes"
+            question: "What are the main targets of React performance optimization?",
+            options: [
+                "Writing shorter code and fewer files",
+                "Using only the latest React features",
+                "Reducing unnecessary re-renders and bundle size",
+                "Converting all functions to class components"
             ],
             "correctOption": 2,
             "points": 20
         },
         {
             "id": 68,
-            "question": "When is React.memo not effective?",
-            "options": [
-                "When props are stable across renders",
+            "question":"When is React.memo not effective for optimization?",
+            options: [
+                "When props remain stable across renders",
                 "When the component has no props",
-                "When new object references are passed as props",
+                "When new object references are passed as props each render",
                 "When state is managed internally"
             ],
             "correctOption": 2,
@@ -792,8 +792,8 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 69,
-            "question": "Which technique avoids recalculating heavy values?",
-            "options": [
+            "question": "Which hook prevents recalculation of expensive values?",
+            options: [
                 "useRef",
                 "useState",
                 "useEffect",
@@ -804,132 +804,132 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 70,
-            "question": "What does React.StrictMode primarily test?",
-            "options": [
-                "App speed",
-                "Side effect cleanup and warnings",
-                "Code style",
-                "Memory leaks only"
+            "question": "What does React.StrictMode primarily help developers identify?",
+            options: [
+                "Application performance bugs",
+                "Side effects and component lifecycle issues",
+                "Code style violations",
+                "Memory leaks exclusively"
             ],
             "correctOption": 1,
             "points": 20
         },
         {
             "id": 71,
-            "question": "What is the main role of useCallback?",
-            "options": [
-                "Memoize function references between renders",
-                "Store state across renders",
-                "Trigger re-renders manually",
-                "Replace useMemo completely"
+            "question": "What is useCallback's primary function?",
+            options: [
+                "Memoizing function references between renders",
+                "Storing state values across renders",
+                "Triggering re-renders manually",
+                "Completely replacing useMemo functionality"
             ],
             "correctOption": 0,
             "points": 10
         },
         {
             "id": 72,
-            "question": "What is the recommended way to render thousands of items?",
-            "options": [
-                "Virtualization or windowing",
-                "Adding keys only",
-                "Using extra useState hooks",
-                "Wrapping everything in Context"
+            "question": "What is the recommended technique for rendering thousands of list items?",
+            options: [
+                "Wrapping everything in Context providers",
+                "List virtualization or windowing",
+                "Adding key props only",
+                "Using additional useState hooks",
             ],
-            "correctOption": 0,
+            "correctOption":1,
             "points": 20
         },
         {
             "id": 73,
-            "question": "What does the React Profiler help you measure?",
-            "options": [
-                "Memory leaks in Node.js",
-                "Render times and re-renders",
-                "Bundle size and network usage",
-                "Code style errors"
+            "question": "What does the React Profiler help you analyze?",
+            options: [
+                "Node.js memory leaks",
+                "Component render times and re-render patterns",
+                "Network usage and bundle size",
+                "Code style and formatting errors"
             ],
             "correctOption": 1,
             "points": 10
         },
         {
             "id": 74,
-            "question": "What happens if you overuse useMemo?",
-            "options": [
-                "It adds overhead that may slow performance",
-                "It improves SEO significantly",
-                "It makes components pure by default",
-                "It replaces need for useState"
+            "question":  "What can happen if you overuse useMemo?",
+            options: [
+                "It adds memoization overhead that may decrease performance",
+                "It significantly improves SEO rankings",
+                "It makes all components pure by default",
+                "It eliminates the need for useState"
             ],
             "correctOption": 0,
             "points": 30
         },
         {
             "id": 75,
-            "question": "Which hook keeps a mutable value across renders without causing re-renders?",
-            "options": [
-                "useRef",
+            "question": "Which hook maintains a mutable value without triggering re-renders?",
+            options: [
                 "useState",
                 "useEffect",
+                "useRef",
                 "useMemo"
             ],
-            "correctOption": 0,
+            "correctOption": 2,
             "points": 10
         },
     {
         "id": 76,
-        "question": "Why can't we directly use fetch API calls inside a Redux reducer?",
-        "options": [
-            "Because reducers must be pure functions without asynchronous side effects",
-            "Because Redux reducers cannot access global browser APIs such as fetch",
-            "Because fetch can only be called from React components, not Redux code",
-            "Because reducers are automatically optimized and block async operations"
+        "question": "Why can't you directly use fetch API calls inside Redux reducers?",
+        options: [
+            "Reducers cannot access browser APIs like fetch",
+            "Reducers must be pure functions without side effects",
+            "Fetch can only be called from React components",
+            "Reducers automatically prevent async operations"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 30
     },
         {
             "id": 77,
-            "question": "When using React.StrictMode in development, why are some effects executed twice?",
-            "options": [
-                "Because React has an internal bug that repeats effects",
-                "To help developers detect side effects and confirm cleanup logic",
-                "To increase application rendering performance in development",
-                "To make development environment identical to production"
+            "question":  "Why do some effects execute twice in React.StrictMode during development?",
+            options: [
+                "Because React has an internal bug",
+                "To help developers detect side effects and verify cleanup logic",
+                "To increase rendering performance in development",
+                "To make development identical to production"
             ],
             "correctOption": 1,
             "points": 20
         },
         {
             "id": 78,
-            "question": "Which areas are the primary focus for performance optimization in React applications?",
-            "options": [
-                "Using more hooks, creating additional components, writing longer functions",
-                "Concentrating only on CSS, database queries, and backend responses",
-                "Increasing component nesting depth and switching to class components",
-                "Preventing wasted renders, improving runtime speed, reducing bundle size"
+            "question": "What are the primary areas of focus for React performance optimization?",
+            options: [
+                "Using more hooks and creating additional components",
+                "Focusing only on CSS and backend optimizations",
+                "Increasing component nesting depth",
+                "Preventing wasted renders and reducing bundle size"
             ],
             "correctOption": 3,
             "points": 10
         },
         {
             "id": 79,
-            "question": "Which technique directly reduces wasted re-renders in React?",
-            "options": [
-                "Splitting code with React.lazy",
-                "Compressing static assets such as images",
-                "Wrapping components with React.memo ",
-                "Minifying the JavaScript bundle before deployment"
+            "question":"Which technique most directly reduces wasted re-renders?",
+            options: [
+                "Code splitting with React.lazy",
+                "Compressing static assets like images",
+                "Wrapping components with React.memo",
+                "Minifying JavaScript bundles"
             ],
             "correctOption": 2,
             "points": 10
         },
         {
             "id": 80,
-            "question": "How does React.lazy() contribute to reducing bundle size?",
-            "options": [
-                "It prevents repeated component rendering",
+            "question":  "How does React.lazy() help reduce bundle size?",
+            options: [
+                "It prevents unnecessary component re-renders",
                 "It automatically compresses component code",
                 "It loads components only when they are needed",
-                "It removes unused CSS rules from the project"
+                "It removes unused CSS rules automatically"
             ],
             "correctOption": 2,
             "points": 20
@@ -3272,8 +3272,89 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30
-    }
-
-
+    },
+    {
+        "id": 282,
+        "question": "What is the main purpose of the HTTP PATCH method?",
+        "options": [
+            "It retrieves the complete data of a resource without modifications",
+            "It replaces the entire resource with the provided data",
+            "It applies partial modifications to an existing resource",
+            "It creates a completely new resource on the server"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 283,
+        "question": "How does the HTTP PUT method differ from PATCH?",
+        "options": [
+            "PUT retrieves an existing resource while PATCH deletes it",
+            "PUT replaces the full resource while PATCH updates only specific fields",
+            "PUT is only used for creating new resources while PATCH is for deleting",
+            "PUT sends partial data while PATCH requires the full object"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 284,
+        "question": "When should the POST method be preferred over PUT or PATCH?",
+        "options": [
+            "When partially updating only one property of an existing resource",
+            "When replacing an entire resource with new data",
+            "When creating a completely new resource on the server",
+            "When retrieving the current state of a resource"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 285,
+        "question": "Which scenario best fits the PATCH method?",
+        "options": [
+            "Uploading a new user profile picture without modifying other user data",
+            "Creating a new order with customer information details and list of items",
+            "Replacing an entire shopping cart with a new list of items",
+            "Fetching the order history for a customer"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+       {
+            "id": 286,
+            "question": "A user updates only the delivery address of an existing order without touching other fields. Which HTTP method is most appropriate?",
+            "options": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "correctOption": 3,
+            "points": 30
+        },
+        {
+            "id": 287,
+            "question": "The system needs to create a brand new pizza order on the server. Which HTTP method should be used?",
+            "options": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 288,
+            "question": "An admin replaces the entire pizza menu with a new list of items. Which HTTP method best fits this action?",
+            "options": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "correctOption": 2,
+            "points": 30
+        },
+        {
+            "id": 289,
+            "question": "A customer wants to view the details of a specific order by its ID. Which HTTP method should be used?",
+            "options": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 290,
+            "question": "A customer decides to cancel their order and remove it completely from the system. Which HTTP method should be used?",
+            "options": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+            "correctOption": 4,
+            "points": 30
+        }
 
 ]
