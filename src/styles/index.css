@@ -7,6 +7,7 @@
 
   --color-theme: #1098ad;
   --color-accent: #ffa94d;
+  --color-accent-dark: #c76819;
 }
 
 
@@ -256,4 +257,21 @@ progress {
 .counter * {
   font-size: inherit;
   padding: 0.8rem;
+}
+.level-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  margin: 2rem 0;
+}
+
+.btn-level {
+  background-color: var(--color-accent-dark);
+  border: 2px solid var(--color-accent-dark);
+  color:#0a0a0a;
+}
+
+.btn-level:hover {
+  background-color: var(--color-accent)!important;
+  border: 2px solid var(--color-accent)!important;
 }

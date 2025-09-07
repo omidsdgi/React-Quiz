@@ -1,4 +1,5 @@
 import { QuizState,Question,} from "../type/QuizTypes";
+import {mockQuestions} from "../mock/mockQuestions";
 
 export type Action =
     | { type: "dataReceived"; payload: Question[] }
@@ -8,7 +9,8 @@ export type Action =
     | { type: "nextQuestion" }
     | { type: "finish" }
     | { type: "restart" }
-    | { type: "tick" };
+    | { type: "tick" }
+    | { type: "selectLevel"; payload: "fundamental" | "intermediate" | "advanced" };
 
 export const SEC_PER_QUESTION=30
 export const initialState :QuizState= {
@@ -74,8 +76,21 @@ export function QuizReducer(state:QuizState,action:Action):QuizState {
                 ...state,
                 secondsRemaining:(state.secondsRemaining  && state.secondsRemaining- 1) ,
                 status:state.secondsRemaining === 0 ? "finished" : state.status,
-
             }
+            case "selectLevel":
+                let filtered:Question[]=[]
+                if(action.payload === "fundamental"){
+                    filtered=mockQuestions.filter(q=>q.points ===10)
+                }else if(action.payload === "intermediate"){
+                    filtered=mockQuestions.filter(q=>q.points ===20)
+                }else if(action.payload === "advanced"){
+                    filtered=mockQuestions.filter(q=>q.points ===30)
+                }
+                return {
+                    ...state,
+                    questions:filtered,
+                    status:"ready",
+                }
         default:
             throw new Error("Unknown action type");
     }
