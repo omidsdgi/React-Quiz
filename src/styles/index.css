@@ -118,7 +118,7 @@ progress {
 .btn {
   display: block;
   font-family: inherit;
-  color: inherit;
+  color: var(--color-light);;
   font-size: 2rem;
   border: 2px solid var(--color-dark);
   background-color: var(--color-dark);

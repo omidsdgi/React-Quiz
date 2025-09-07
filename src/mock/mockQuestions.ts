@@ -2004,130 +2004,130 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 171,
-        question:  "Why does Link with prefetch=true help navigation?",
-        options: [
-            "Reduces React rendering time significantly for all components",
-            "Preloads target page JavaScript code during idle time",
-            "Completely disables hydration errors throughout the application",
-            "Loads CSS inline for target page improving render speed"
+        question:  "Why does Link with prefetch=true improve navigation performance?",
+        "options": [
+            "It reduces React rendering time for all components",
+            "It preloads target page JavaScript during browser idle time",
+            "It disables hydration errors throughout the application",
+            "It inlines CSS for the target page improving render speed"
         ],
         correctOption: 1,
         points: 10
     },
     {
         id: 172,
-        question: "Which strategy is best for optimizing the initial load time of a page?",
-        options: [
-            "Disable caching",
-            "Prefetch all images",
-            "Prefetch non-critical scripts",
-            "Preload fonts and above-the-fold CSS",
+        question: "Which strategy is most effective for optimizing initial page load time?",
+        "options": [
+            "Disable caching for all resources",
+            "Prefetch all images on the page",
+            "Prefetch non-critical JavaScript files",
+            "Preload critical fonts and above-the-fold CSS"
         ],
         correctOption:3,
         points: 20
     },
     {
         id: 173,
-        question: "What is a reactive value in React?",
-        options: [
-            "A value that never changes during component lifecycle",
-            "A value that automatically triggers UI updates when changed",
-            "A constant value stored outside the component",
-            "A function that only runs once during rendering"
+        question: "What defines a reactive value in React?",
+        "options": [
+            "A value that remains constant during component lifecycle",
+            "A value that triggers component updates when it changes",
+            "A value stored outside the component scope",
+            "A function that executes only once during rendering"
         ],
         correctOption: 1,
         points: 10
     },
     {
         id: 174,
-        question: "Which hook in React is primarily used to create reactive values?",
-        options: [
+        question:  "Which hook is designed to create reactive computed values in React?",
+        "options": [
             "useState",
-            "useReducer",
             "useEffect",
-            "useMemo"
+            "useMemo",
+            "useCallback"
         ],
-        correctOption: 3,
+        "correctOption": 2,
         points: 10
     },
     {
         id: 175,
-        question: "Why are normal variables in React components NOT reactive?",
-        options: [
-            "Because React ignores primitive values",
-            "Because JavaScript does not support functions",
-            "Because React does not track changes to plain variables",
-            "Because React only watches context",
+        question:"Why are regular variables in React components not reactive?",
+        "options": [
+            "React ignores primitive data types",
+            "JavaScript doesn't support reactive programming",
+            "React doesn't track changes to regular variables",
+            "React only monitors Context values"
         ],
-        correctOption: 2,
+        "correctOption": 2,
         points: 20
     },
     {        id: 176,
-        question: "Which of the following is TRUE about reactive values?",
-        options: [
-            "They automatically trigger re-renders or re-computations",
-            "They require manual DOM updates every time they change",
-            "They only work with numbers and strings",
-            "They cannot be used inside functional components"
+        question:"What is true about reactive values in React?",
+        "options": [
+            "They automatically trigger re-renders when changed",
+            "They require manual DOM updates after changes",
+            "They only work with primitive data types",
+            "They cannot be used in functional components"
         ],
         correctOption: 0,
         points: 20
     },
     {
         id: 177,
-        question: "why must all reactive values be included in a dependency array of useEffect, useCallback, or useMemo?",
-        options: [
-            "To prevent stale values and ensure the effect or memoized function sees the latest value",
-            "To reduce bundle size",
-            "To avoid re-rendering the component",
-            "To disable React hooks linting"
+        question: "Why must reactive values be included in useEffect dependency arrays?",
+        "options": [
+            "To prevent stale closures and ensure current values",
+            "To reduce the final bundle size significantly",
+            "To prevent unnecessary component re-renders",
+            "To satisfy ESLint rules and best practices"
         ],
         correctOption: 0,
         points: 20
     },
     {
         id: 178,
-        question: "Which of the following is considered a reactive value in React?",
-        options: [
-            "Local variable inside render",
+        question:  "Which of these is considered a reactive value in React?",
+        "options": [
+            "A local variable declared inside render",
             "A literal number inside useEffect",
-            "A prop passed from parent component",
-            "Module-level constant",
+            "Props passed from a parent component",
+            "A module-level constant"
         ],
         correctOption: 2,
         points: 10
     },
     {
         id: 179,
-        question: "Which of these values does NOT need to be in the dependency array?",
-        options: [
-            "State value from useState",
-            "Function returned by useCallback",
-            "Setter function from useState",
-            "Prop passed from parent"
+        question:  "Which value does NOT need to be included in dependency arrays?",
+        "options": [
+            "State values from useState",
+            "Functions returned by useCallback",
+            "Setter functions from useState",
+            "Props passed from parent components"
         ],
         correctOption: 2,
         points: 10
     },
     {
         id: 180,
-        question: "What can happen if a reactive value is NOT included in a dependency array?",
-        options: [
-            "React will throw a runtime error",
-            "Component will not mount",
-            "Nothing will happen, it’s safe to omit",
-            "Effect or memoized function may use stale values",
+        question: "What happens when a reactive value is missing from a dependency array?",
+        "options": [
+            "React throws a runtime error immediately",
+            "The component fails to mount properly",
+            "The code works but may use stale values",
+            "Effects or memoized functions use stale values"
         ],
         correctOption: 3,
         points: 30
     },
     {
         id: 181,
-        question: "Which tool helps automatically detect missing dependencies in useEffect?",
-        options: [
-            "Prettier",
-            "React DevTools",
-            " ESLint rule",
+        question: "Which tool automatically detects missing dependencies in useEffect?",
+        "options": [
+            "Prettier code formatter",
+            "React DevTools browser extension",
+            "ESLint exhaustive-deps rule",
             "TypeScript compiler"
         ],
         correctOption: 2,
@@ -2135,12 +2135,12 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 182,
-        "question": "Why must a context value used inside a useEffect be included in the dependency array?",
+        "question":  "Why must context values used in useEffect be included in dependency arrays?",
         "options": [
-            "Because React automatically tracks context changes even if they are not declared in dependencies",
-            "Because omitting it would cause the effect to potentially read outdated context values on re-renders, leading to inconsistent behavior",
-            "Because useEffect ignores context values unless explicitly listed, making the hook skip execution permanently",
-            "Because React internally serializes context values to compare them and needs the explicit declaration to avoid errors",
+            "React automatically tracks context changes without dependencies",
+            "Effects may read outdated context values causing bugs",
+            "useEffect ignores context values unless explicitly listed",
+            "React serializes context values for comparison"
         ],
         "correctOption": 1,
         "points": 30
@@ -2149,82 +2149,82 @@ export const mockQuestions: Question[] = [
         "id": 183,
         "question": "What is a stale closure in React hooks?",
         "options": [
-            "A closure that captures outdated values of state or props, causing logic inside an effect or callback to use old references instead of the latest ones",
-            "A closure that is preserved in memory to ensure deterministic state updates across renders regardless of dependency arrays",
-            "A closure that is garbage collected by JavaScript after re-rendering, leaving dangling references behind",
-            "A closure that is created when multiple effects overlap and share the same dependency values at different times",
+            "A closure that captures outdated values from previous renders",
+            "A closure preserved in memory for deterministic updates",
+            "A closure garbage collected after re-rendering",
+            "A closure created when multiple effects overlap"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 184,
-        "question": "Why is it generally discouraged to use objects or arrays directly as dependencies in useEffect or useCallback?",
+        "question": "Why should objects not be used directly as dependencies in hooks?",
         "options": [
-            "Because objects and arrays are deeply compared by React by default, which is computationally expensive and may freeze the UI under heavy rendering",
-            "Because objects and arrays cannot be serialized into dependency arrays and React will throw an error when attempting to resolve them at runtime",
-            "Because objects and arrays are compared by reference, causing effects or callbacks to re-run on every render even if their contents did not change",
-            "Because objects and arrays cause memory leaks in hooks when stored in dependency arrays due to cyclic references with React’s fiber architecture",
+            "React deeply compares objects causing performance issues",
+            "Objects cannot be serialized into dependency arrays",
+            "Objects are compared by reference causing unnecessary re-runs",
+            "Objects cause memory leaks in React's fiber architecture"
         ],
         "correctOption":2,
         "points": 30
     },
     {
         "id": 185,
-        "question": "How can you avoid unnecessary dependencies when a function is causing re-renders?",
+        "question": "How can you prevent unnecessary re-runs when a function causes dependency issues?",
         "options": [
-            "Declare the function as a global variable so it never updates with component state or props",
-            "Wrap the function in React.memo to ensure it never re-creates regardless of its inputs",
-            "Move the function into the effect or memoize it with useCallback so its reference remains stable",
-            "Only call the function conditionally to avoid including it in the dependency array",
+            "Declare the function as a global variable",
+            "Wrap the function in React.memo",
+            "Move the function into the effect or memoize with useCallback",
+            "Call the function conditionally to avoid dependencies"
         ],
         "correctOption": 2,
         "points": 30
     },
     {
         "id": 186,
-        "question": "If a function does not reference any reactive values (like state or props), what is the best practice?",
+        "question": "What is the best practice for functions that don't reference reactive values?",
         "options": [
-            "Keep it inside the component but wrap it with useEffect to prevent re-creation",
-            "Move it outside of the component so it is not re-created on every render",
-            "Memoize it with useMemo to ensure it runs only once and remains stable across renders",
-            "Convert it into a static method inside a React.memo component for better encapsulation",
+            "Keep them inside components but wrap with useEffect",
+            "Move them outside the component to avoid recreation",
+            "Memoize them with useMemo for stability",
+            "Convert them to static methods in React.memo"
         ],
         "correctOption": 1,
         "points": 30
     },
     {
         "id": 187,
-        "question": "Instead of including an entire object as a dependency, what is a better approach?",
+        "question": "What is a better approach than including entire objects as dependencies?",
         "options": [
-            "Include only the specific properties you actually use inside the effect",
-            "Use JSON.stringify on the object before passing it as a dependency to ensure value comparison",
-            "Clone the object on every render and memoize it with useCallback to stabilize it",
-            "Avoid using objects in dependencies by converting them to primitive values at runtime",
+            "Include only the specific properties you actually use",
+            "Use JSON.stringify on objects for value comparison",
+            "Clone objects and memoize with useCallback",
+            "Convert objects to primitive values at runtime"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 188,
-        "question": "What can you do if an object does not work correctly as a dependency?",
+        "question": "How can you fix objects that don't work correctly as dependencies?",
         "options": [
-            "Wrap the object in React.memo to prevent re-creation inside the dependency array",
-            "Place the object inside a state variable so React automatically compares it deeply",
-            "Convert the object into a function and call it inside useEffect instead of passing it",
-            "Move or memoize the object so its reference stays stable across renders",
+            "Wrap objects in React.memo to prevent recreation",
+            "Place objects inside state variables for deep comparison",
+            "Convert objects into functions and call inside useEffect",
+            "Move or memoize objects to keep references stable"
         ],
         "correctOption": 3,
         "points": 30
     },
     {
         "id": 189,
-        "question": "If you have multiple related reactive values that must be dependencies, what is often a better pattern?",
+        "question":  "What pattern works better when you have multiple related reactive values?",
         "options": [
-            "Store them inside a useRef so React does not re-render when they change",
-            "Combine them with useReducer so the effect depends on a single stable state object",
-            "Merge them into one object and stringify it in the dependency array for comparison",
-            "Wrap them all in useMemo to make the dependency array shorter and easier to manage",
+            "Store them inside useRef to avoid re-renders",
+            "Combine them with useReducer for a single stable dependency",
+            "Merge them into one object and stringify for comparison",
+            "Wrap them all in useMemo for shorter dependency arrays"
         ],
         "correctOption": 1,
         "points": 30
@@ -2233,70 +2233,70 @@ export const mockQuestions: Question[] = [
         "id": 190,
         "question": "Why is useEffect often described as an 'escape hatch' in React?",
         "options": [
-            "Because it allows running side effects only when props or state change, which is not possible with regular rendering logic",
-            "Because it is the primary mechanism React provides for writing all business logic in a component, replacing the need for other hooks",
-            "Because it ensures components render synchronously with side effects applied immediately after DOM updates",
-            "Because it enables bypassing React's reconciliation algorithm and directly mutating the DOM safely",
+            "It allows side effects when props or state change",
+            "It's the primary mechanism for all business logic",
+            "It ensures synchronous rendering with immediate DOM updates",
+            "It bypasses React's reconciliation algorithm safely"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 191,
-        "question": "Why should useEffect be considered a 'last resort' rather than the first tool to reach for?",
+        "question":"Why should useEffect be considered a last resort?",
         "options": [
-            "Because useEffect causes memory leaks by default unless explicitly cleaned up",
-            "Because React discourages side effects entirely and recommends only pure rendering logic inside components",
-            "Because most effects can be avoided by deriving state, using event handlers, or computing values directly during render",
-            "Because useEffect always blocks rendering until the effect has finished executing",
+            "useEffect causes memory leaks by default",
+            "React discourages side effects entirely",
+            "Most effects can be avoided by deriving state or using event handlers",
+            "useEffect blocks rendering until completion"
         ],
         "correctOption": 2,
         "points": 30
     },
     {
         "id": 192,
-        "question": "Which of the following is NOT a recommended use case for beginners when working with useEffect?",
+        "question": "Which is NOT a recommended use case for useEffect?",
         "options": [
-            "Synchronizing an external system (like updating the document title) when props or state change",
-            "Responding to a user event like button click by updating state directly in the handler instead of using useEffect",
-            "Fetching data on component mount using useEffect with an empty dependency array",
-            "Subscribing to a global event bus and cleaning up on component unmount",
+            "Synchronizing external systems when props change",
+            "Updating state in response to user button clicks",
+            "Fetching data on component mount",
+            "Subscribing to global events with cleanup"
         ],
         "correctOption": 1,
         "points": 30
     },
     {
         "id": 193,
-        "question": "What is the recommended way to synchronize multiple state variables with one another in React?",
+        "question": "What is the recommended way to synchronize multiple state variables?",
         "options": [
-            "Derive one state from the other or combine them in a single reducer, instead of writing an effect that manually updates one when the other changes",
-            "Use multiple useEffect hooks so that each state variable updates the other on every render cycle",
-            "Store all related states inside a ref object and mutate it directly to ensure they stay in sync without triggering re-renders",
-            "Wrap both state variables in a context provider so they automatically update each other whenever one changes",
+            "Derive one state from another or use a single reducer",
+            "Use multiple useEffect hooks for each state variable",
+            "Store related states in a ref object and mutate directly",
+            "Use context providers to automatically sync states"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 194,
-        "question": "Which statement best defines the stale closure problem in React?",
+        "question":  "What best defines the stale closure problem in React?",
         "options": [
-            "It happens when a function continues to use an outdated snapshot of state or props",
-            "It happens when React prevents a component from re-rendering after state updates",
-            "It happens when closures in JavaScript do not work with arrays and objects",
-            "It happens when useEffect runs more times than expected due to dependency arrays"
+            "Functions use outdated snapshots of state or props",
+            "React prevents components from re-rendering after updates",
+            "Closures don't work with arrays and objects",
+            "useEffect runs more times than expected"
         ],
         "correctOption": 0,
         "points": 10
     },
     {
         "id": 195,
-        "question": "what causes the stale closure problem inside effects or callbacks?",
+        "question":  "What causes the stale closure problem in effects or callbacks?",
         "options": [
-            "Functions always rebind automatically to the latest state and props",
-            "Functions hold onto the snapshot of state and props from when they were created",
-            "React intentionally freezes state values after the initial render",
-            "Closures in JavaScript only work with primitive values, not objects"
+            "Functions automatically rebind to latest state and props",
+            "Functions hold snapshots from when they were created",
+            "React intentionally freezes state values after initial render",
+            "Closures only work with primitive values in JavaScript"
         ],
         "correctOption": 1,
         "points": 20
@@ -2305,22 +2305,22 @@ export const mockQuestions: Question[] = [
         "id": 196,
         "question": "What is the stale closure problem in React?",
         "options": [
-            "When a function keeps referencing outdated state or props values",
-            "When React automatically freezes state values after the first render",
-            "When a function cannot access props because of scoping issues",
-            "When React re-renders too often due to dependency arrays"
+            "Functions reference outdated state or props values",
+            "React freezes state values after the first render",
+            "Functions cannot access props due to scoping issues",
+            "React re-renders too often due to dependency arrays"
         ],
         "correctOption": 0,
         "points": 10
     },
     {
         "id": 197,
-        "question": "Which of the following is the best way to prevent the stale closure problem in React?",
+        "question":"What is the best way to prevent the stale closure problem?",
         "options": [
             "Always use global variables instead of state",
-            "Freeze objects in state to keep them consistent across renders",
-            "Add the latest state or props as dependencies in useEffect or useCallback",
-            "Avoid using closures in React components",
+            "Freeze objects in state for consistency",
+            "Add current state or props as dependencies in hooks",
+            "Avoid using closures in React components"
         ],
         "correctOption": 2,
         "points": 30
@@ -2329,8 +2329,8 @@ export const mockQuestions: Question[] = [
         id: 198,
         question: "What is Redux?",
         options: [
-            "A predictable state management library for web apps",
-            "A library for styling components",
+            "A predictable state management library for applications",
+            "A library for styling React components",
             "A built-in React API for managing side effects",
             "A tool for minifying JavaScript bundles"
         ],
@@ -2339,24 +2339,24 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 199,
-        question: "Is Redux a React-specific library?",
-        options: [
+        question: "Is Redux specific to React applications?",
+        "options": [
             "Yes, it only works with React",
-            "No, it’s a standalone library that is only used with Angular",
-            "No, it’s a standalone library that can be used with web app",
-            "Yes, Redux is part of React",
+            "No, it only works with Angular applications",
+            "No, it can be used with any JavaScript application",
+            "Yes, Redux is part of React core"
         ],
         correctOption: 2,
         points: 20
     },
     {
         id: 200,
-        question: "Which rule must reducers always follow?",
-        options: [
+        question:  "Which rule must Redux reducers always follow?",
+        "options": [
             "They can directly mutate the current state",
             "They can include API calls inside the reducer",
             "They can update state asynchronously with async/await",
-            "They must be pure functions without side effects",
+            "They must be pure functions without side effects"
         ],
         correctOption: 3,
         points: 20
@@ -3403,6 +3403,295 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10
+    },
+    {
+        "id": 295,
+        "question": "What is the best practice when modeling state in Redux?",
+        "options": [
+            "Store the entire UI tree directly inside the state",
+            "Duplicate entities in multiple parts of the state for faster access",
+            "Normalize data and avoid deeply nested structures",
+            "Keep derived values permanently stored in state"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 296,
+        "question": "Why is normalization recommended in Redux state design?",
+        "options": [
+            "It makes state harder to update consistently",
+            "It ensures all data is stored in nested objects",
+            "It makes selectors unnecessary in the application",
+            "It allows easy updates and avoids data duplication",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 297,
+        "question": "Given a blog app, which Redux state shape is more appropriate?\n\nOption A:\n{\n  posts: [\n    { id: 1, title: 'Post1', author: { id: 10, name: 'Omid' } },\n    { id: 2, title: 'Post2', author: { id: 10, name: 'Omid' } }\n  ]\n}\n\nOption B:\n{\n  posts: [1, 2],\n  entities: {\n    posts: {\n      1: { id: 1, title: 'Post1', author: 10 },\n      2: { id: 2, title: 'Post2', author: 10 }\n    },\n    users: {\n      10: { id: 10, name: 'Omid' }\n    }\n  }\n}\n",
+        "options": [
+            "Option B, because it avoids data duplication and keeps relationships normalized",
+            "Option A, because it is easier to read and directly reflects the UI tree",
+            "Option A, because nested objects load faster at runtime",
+            "Option B, because Redux automatically normalizes deeply nested objects"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 298,
+        "question": "Why do we need frameworks like React instead of using only vanilla JavaScript?",
+        "options": [
+            "Because JavaScript does not support DOM manipulation",
+            "Because vanilla JavaScript cannot work with APIs",
+            "Because frameworks make state management and UI updates easier in complex apps",
+            "Because frameworks replace JavaScript with a different language"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 299,
+        "question": "Which of the following is a key advantage of using React over vanilla JavaScript for building large applications?",
+        "options": [
+            "React directly modifies the DOM for faster rendering",
+            "React removes the need for event handling in JavaScript",
+            "React introduces the Virtual DOM for efficient updates and predictable rendering",
+            "React automatically converts CSS into JavaScript functions"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 300,
+        "question": "Why is component-based architecture in frameworks like React preferred over writing all UI logic in vanilla JavaScript?",
+        "options": [
+            "Because components allow code reuse, isolation, and easier testing",
+            "Because components remove the need for JavaScript functions entirely",
+            "Because vanilla JavaScript cannot handle conditional rendering",
+            "Because React components automatically generate database queries"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 301,
+        "question": "What was jQuery primarily used for in front-end development?",
+        "options": [
+            "To manage server-side state in databases",
+            "To simplify DOM manipulation, event handling, and AJAX requests",
+            "To replace HTML and CSS entirely",
+            "To compile JavaScript into machine code"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 164,
+        "question": "Why did developers widely adopt jQuery in the past?",
+        "options": [
+            "It replaced JavaScript as the programming language in browsers",
+            "It automatically optimized web performance without coding",
+            "It removed the need for CSS styling in web pages",
+            "It provided cross-browser compatibility and simplified common JavaScript tasks",
+        ],
+        "correctOption":3,
+        "points": 20
+    },
+    {
+        "id": 302,
+        "question": "Which of the following best describes a limitation of jQuery that led to the rise of modern frameworks like React?",
+        "options": [
+            "jQuery did not allow DOM manipulation or event handling",
+            "jQuery lacked structured state management and component-based architecture",
+            "jQuery could not run in modern browsers",
+            "jQuery automatically converted JavaScript into server-side code"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 303,
+        "question": "What is a web application?",
+        "options": [
+            "A software program that runs entirely on a user’s local machine without internet",
+            "A software application that runs on a web server and is accessed through a browser",
+            "A static website with only HTML and CSS",
+            "A desktop application that does not require a browser"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 304,
+        "question": "Which of the following features is commonly expected in a web application?",
+        "options": [
+            "The ability to interact with a server and update data dynamically",
+            "The requirement to be installed on the user’s device",
+            "The use of only static HTML pages without JavaScript",
+            "The ability to run offline without any server communication"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 305,
+        "question": "Why do modern web applications often use front-end frameworks like React or Vue?",
+        "options": [
+            "To convert all HTML into server-side scripts automatically",
+            "To simplify building interactive UIs, managing state, and optimizing performance",
+            "To remove the need for any backend server",
+            "To replace CSS with JavaScript for styling"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 306,
+        "question": "What is the main difference between a web page and a web application?",
+        "options": [
+            "Web pages allow full user interaction while web applications are static",
+            "Web pages require a server, but web applications do not",
+            "Web applications allow user interaction and dynamic behavior, while web pages are mostly static",
+            "Web applications are always offline, web pages are always online"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 307,
+        "question": "Which of the following best describes a web application compared to a simple web page?",
+        "options": [
+            "It is a static HTML document with no user input",
+            "It cannot be accessed through a browser",
+            "It is an interactive software running in a browser with dynamic data and state management",
+            "It always works offline without a server"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 308,
+        "question": "Why would you use a front-end framework like React for a web application but not necessarily for a simple web page?",
+        "options": [
+            "Because React helps manage dynamic UI, state, and user interactions efficiently in complex applications",
+            "Because React converts static HTML into server-side scripts automatically",
+            "Because React removes the need for CSS and HTML entirely",
+            "Because React is only needed for web pages without server communication"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 309,
+        "question": "What does it mean that the user interface needs to stay in sync with data?",
+        "options": [
+            "The data should never change to avoid UI updates",
+            "The UI should only update when the page reloads",
+            "The UI should be manually updated by modifying HTML elements directly",
+            "The UI should automatically reflect changes in the underlying data or state",
+        ],
+        "correctOption": 3,
+        "points": 10
+    },
+    {
+        "id": 310,
+        "question": "Which of the following ensures that the UI stays in sync with the underlying data in React?",
+        "options": [
+            "Directly manipulating DOM elements with vanilla JavaScript",
+            "Using state variables and re-rendering components when state changes",
+            "Using global variables without state management",
+            "Refreshing the page after every data change"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 311,
+        "question": "Why is it important for a user interface to stay in sync with data in modern web applications?",
+        "options": [
+            "To ensure the UI always displays accurate and up-to-date information to the user",
+            "To make the application load faster by preventing any state updates",
+            "To avoid using React or other frameworks entirely",
+            "To cache all previous data states permanently without updating the UI"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 312,
+        "question": "What is DOM traversing in JavaScript?",
+        "options": [
+            "Creating new DOM elements from scratch",
+            "Sending HTTP requests to the server",
+            "Navigating and accessing existing elements in the DOM tree",
+            "Compiling JavaScript code to machine code"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 313,
+        "question": "Why is DOM traversing important in front-end development?",
+        "options": [
+            "It allows developers to navigate, read, and manipulate the structure of web pages dynamically",
+            "It automatically optimizes the performance of all JavaScript code",
+            "It replaces the need for CSS in styling web pages",
+            "It enables server-side rendering without frameworks"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 314,
+        "question": "Which of the following is an example of DOM traversing?",
+        "options": [
+            "document.createElement('div')",
+            "element.parentNode.children[0]",
+            "fetch('api/data')",
+            "JSON.stringify({name: 'Omid'})"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 315,
+        "question": "What is the main difference between imperative and declarative programming?",
+        "options": [
+            "Imperative focuses on what should happen, declarative on how to do it",
+            "Declarative requires loops, imperative does not",
+            "Imperative is only used in server-side code, declarative only in front-end",
+            "Imperative focuses on how to do something step by step, declarative on what the outcome should be",
+        ],
+        "correctOption": 3,
+        "points": 10
+    },
+    {
+        "id": 316,
+        "question": "Which of the following is an example of a declarative approach in front-end development?",
+        "options": [
+            "Using a for loop to append list items to the DOM manually",
+            "Selecting DOM elements with getElementById and changing their style",
+            "Using JSX with map() to render a list of items in React",
+            "Manually updating innerHTML for each element in a loop"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 317,
+        "question": "Why is the declarative approach generally preferred in modern front-end frameworks like React?",
+        "options": [
+            "Because it reduces boilerplate, makes code easier to read, and automatically keeps the UI in sync with state",
+            "Because it completely removes the need for JavaScript in the browser",
+            "Because it forces all operations to run sequentially on the main thread",
+            "Because it replaces CSS with JavaScript styling automatically"
+        ],
+        "correctOption": 0,
+        "points": 30
     }
+
 
 ]
