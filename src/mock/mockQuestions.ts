@@ -634,23 +634,12 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 10
     },
-    {
-        "id": 56,
-        "question":"What is the primary benefit of React.lazy combined with Suspense?",
-        options: [
-            "It accelerates rendering performance",
-            "It enables code splitting and reduces initial bundle size",
-            "It improves SEO rankings",
-            "It prevents memory leaks"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
+
     {
         "id": 57,
         "question": "What is the main benefit of React.lazy with Suspense?",
         "options": [
-            "It speeds up rendering",
+            "It accelerates rendering performance",
             "It enables code splitting and smaller bundle size",
             "It improves SEO ranking",
             "It prevents memory issues"
@@ -742,18 +731,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 3,
         "points": 10
     },
-    {
-        "id": 65,
-        "question":  "What performance issue exists in this code?\n\nconst MyComponent = () => {\n  const [items, setItems] = useState([]);\n  const filtered = items.filter(i => i.active);\n  return <List items={filtered} />;\n}",
-        options: [
-            "Filter creates a new array on each render",
-            "The code is fully optimized",
-            "useState is used incorrectly",
-            "The List component will never update"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
+
     {
         "id": 66,
         "question":"Why do effects run twice in StrictMode during development?",
@@ -946,18 +924,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20
     },
-    {
-        "id": 82,
-        "question":  "What performance issue occurs in this code?\n\nconst Component = () => {\n  const [items, setItems] = useState([]);\n  const filtered = items.filter(i => i.active);\n  return <List items={filtered} />;\n}",
-        "options": [
-            "The filter method creates a new array on every render",
-            "The useState hook is implemented incorrectly in this context",
-            "The List component cannot receive filtered data as props",
-            "The component will never re-render when items change"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
+
     {
         "id": 83,
         "question": "Which combination addresses the three main React optimization areas?",
@@ -1006,18 +973,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20
     },
-    {
-        "id": 87,
-        "question": "What causes unnecessary re-renders in this Context pattern?\n\nconst Provider = ({ children }) => {\n  const [user, setUser] = useState(null);\n  const [theme, setTheme] = useState('light');\n  const value = { user, setUser, theme, setTheme };\n  return <Context.Provider value={value}>{children}</Context.Provider>;\n}",
-        "options": [
-            "Using multiple state variables in the same provider component",
-            "Creating a new object reference for value during every render",
-            "Including both user and theme inside the same context provider",
-            "Using useState instead of useReducer for context state management"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
+
     {
         "id": 88,
         "question":"How can you prevent Context consumers from re-rendering when unrelated data changes?",
@@ -1052,7 +1008,7 @@ export const mockQuestions: Question[] = [
             "const value = useState({ user, setUser }); // State approach"
         ],
         "correctOption": 0,
-        "points": 10
+        "points": 20
     },
     {
         "id": 91,
@@ -2277,18 +2233,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 30
     },
-    {
-        "id": 194,
-        "question":  "What best defines the stale closure problem in React?",
-        "options": [
-            "Functions use outdated snapshots of state or props",
-            "React prevents components from re-rendering after updates",
-            "Closures don't work with arrays and objects",
-            "useEffect runs more times than expected"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
+
     {
         "id": 195,
         "question":  "What causes the stale closure problem in effects or callbacks?",
@@ -2301,18 +2246,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20
     },
-    {
-        "id": 196,
-        "question": "What is the stale closure problem in React?",
-        "options": [
-            "Functions reference outdated state or props values",
-            "React freezes state values after the first render",
-            "Functions cannot access props due to scoping issues",
-            "React re-renders too often due to dependency arrays"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
+
     {
         "id": 197,
         "question":"What is the best way to prevent the stale closure problem?",
@@ -2363,475 +2297,476 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 201,
-        question: "What should a reducer return when it receives an unknown action?",
+        question: "What should a Redux reducer return when it receives an unknown action type?",
         options: [
-            "It should throw an error immediately",
+            "It should throw an error to indicate invalid action",
             "It should return the current state unchanged",
-            "It should return null as the default value",
-            "It should reset the state back to initial"
+            "It should return null to reset the state",
+            "It should return the initial state value"
         ],
         correctOption: 1,
         points: 20
     },
     {
         id: 202,
-        question: "Why are reducers required to avoid asynchronous logic?",
+        question: "Why must Redux reducers avoid asynchronous operations?",
         options: [
-            "Async logic makes reducers non-deterministic and hard to test",
-            "Reducers are not allowed to return promises in JavaScript",
-            "Async logic will always cause memory leaks in React",
-            "Reducers can only process numbers and strings synchronously"
+            "Async operations make reducers unpredictable and hard to test",
+            "Reducers cannot return promises in JavaScript",
+            "Async operations always cause memory leaks",
+            "Reducers can only process primitive data types"
         ],
         correctOption: 0,
         points: 20
     },
     {
         id: 203,
-        question: "What is the difference between Redux and useReducer?",
+        question:  "What is the primary difference between Redux and useReducer?",
         options: [
-            "Redux works across the app, while useReducer is limited to a component",
-            "Redux is only for styling, while useReducer manages state",
-            "Redux is synchronous, while useReducer is asynchronous",
-            "Redux can only store strings, while useReducer handles objects"
+            "Redux is synchronous, useReducer is asynchronous",
+            "Redux manages global state, useReducer manages local component state",
+            "Redux handles styling, useReducer manages state",
+            "Redux stores strings, useReducer handles objects"
         ],
-        correctOption: 0,
+        correctOption: 1,
         points: 20
     },
     {
         id: 204,
-        question: "What does an action in Redux contain?",
+        question: "What essential elements must every Redux action contain?",
         options: [
+            "A reducer function and current state",
+            "An array of middleware functions",
             "A type field and optionally a payload",
-            "A reducer function and state",
-            "Only an ID number",
-            "An array of middleware functions"
+            "Only a unique ID number",
         ],
-        correctOption: 0,
+        correctOption: 2,
         points: 10
     },
     {
         id: 205,
-        question: "What is the role of dispatch in Redux?",
+        question: "What is the primary role of dispatch in Redux?",
         options: [
-            "It sends actions to the reducer to update the state",
-            "It saves the state permanently to local storage",
-            "It merges two reducers into one",
-            "It automatically refreshes the UI every second"
+            "It saves state permanently to local storage",
+            "It sends actions to reducers to update state",
+            "It merges multiple reducers into one",
+            "It automatically refreshes the UI components"
         ],
-        correctOption: 0,
+        correctOption: 1,
         points: 10
     },
     {
         id: 206,
-        question: "What is the function of the Redux store?",
+        question: "What is the main function of the Redux store?",
         options: [
-            "It holds the application state and allows access via methods",
-            "It only stores CSS styles for components",
-            "It executes side effects like fetching APIs",
-            "It automatically creates reducers without configuration"
+            "Store CSS styles for application components",
+            "Execute side effects like API calls",
+            "Generate reducers for state management automatically",
+            "Hold application state and provide access"
         ],
-        correctOption: 0,
+        correctOption:3,
         points: 10
     },
     {
         id: 207,
-        question: "Why might there be multiple reducers in a Redux store?",
+        question: "Why use multiple reducers in a Redux application?",
         options: [
-            "To manage different slices of application state independently",
-            "To create duplicate copies of the same logic",
-            "To reduce the file size of the application",
-            "To make reducers asynchronous by default"
+            "Manage different parts of state separately",
+            "Create duplicate copies of state logic",
+            "Reduce total application bundle size significantly",
+            "Make all reducers asynchronous by default"
         ],
         correctOption: 0,
         points: 20
     },
     {
         id: 208,
-        question: "What is an action creator function?",
+        question:"What is an action creator in Redux?",
         options: [
-            "A function that returns an action object to be dispatched",
-            "A reducer that directly updates the state",
-            "A function that deletes actions from memory",
-            "A middleware that delays action execution"
+            "A reducer that updates state directly",
+            "A function returning action objects",
+            "A function removing actions from memory",
+            "Middleware that delays action execution timing"
         ],
-        correctOption: 0,
+        correctOption: 1,
         points: 10
     },
     {
-        id: 201,
-        question: "What is one key difference between Redux and the Context API?",
+        id: 209,
+        question:  "What advantage does Redux offer over Context API?",
         options: [
-            "Redux has middleware and DevTools for debugging",
-            "Context API generates reducers automatically",
-            "Redux is only used for styling components",
-            "Context API exists only inReact and Angular",
-        ],
-        correctOption: 0,
-        points: 20
-    },
-    {
-        id: 202,
-        question: "How does Redux differ from using useState in React?",
-        options: [
-            "Redux is meant only for async API requests",
-            "Redux handles global state, while useState is local",
-            "useState always saves values to localStorage",
-            "useState works only inside class components"
-        ],
-        correctOption: 1,
-        points: 20
-    },
-    {
-        id: 203,
-        question: "When is Redux better than Context + useReducer?",
-        options: [
-            "In very small apps with just a few states",
-            "When React is not part of the stack",
-            "In large apps needing global state and DevTools",
-            "When the goal is to avoid writing JavaScript",
+            "Context generates reducers automatically for developers",
+            "Redux is used only for styling",
+            "Redux provides middleware and debugging tools",
+            "Context works only with React frameworks"
         ],
         correctOption: 2,
-        points: 30
-    },
-    {
-        id: 204,
-        question: "Why do many modern React apps no longer need Redux?",
-        options: [
-            "Because Redux cannot be used with TypeScript or modern bundlers",
-            "Because React already provides hooks like useState, useReducer, and Context API",
-            "Because Redux is now deprecated and no longer supported",
-            "Because React apps no longer require any state management at all"
-        ],
-        correctOption: 1,
         points: 20
     },
     {
-        id: 205,
-        question: "What is an ideal use case for Redux in a React application?",
+        id: 210,
+        question: "How does Redux differ from useState?",
         options: [
-            "When there is a large amount of state that updates frequently across many components",
-            "When the app has only a single counter and minimal state changes",
-            "When styling components with CSS or Tailwind",
-            "When React is replaced entirely by Angular"
-        ],
-        correctOption: 0,
-        points: 30
-    },
-    {
-        id: 206,
-        question: "Which type of state is best managed locally in a React component?",
-        options: [
-            "Remote state fetched from an API",
-            "Global state shared between apps",
-            "Server-side state stored in a database",
-            "UI state, like modal visibility or active tabs",
+            "Redux handles only async API requests",
+            "useState saves to localStorage automatically",
+            "useState works only with class components",
+            "Redux handles global, useState local state"
         ],
         correctOption: 3,
         points: 20
     },
     {
-        id: 207,
-        question: "Which type of state often requires tools like Redux, React Query, or Context API?",
-        options: [
-            "UI state, like which tab is active",
-            "Temporary variables inside a function",
-            "Remote state, like user data from an API",
-            "CSS class toggles"
-        ],
-        correctOption: 2,
-        points: 20
-    },
-    {
-        id: 208,
-        question: "When combining UI state and remote state in a component, which practice is recommended?",
-        options: [
-            "Avoid using useState or Context; fetch everything from API",
-            "Keep UI state local and remote state global using a state manager",
-            "Move all state to Redux regardless of size",
-            "Store UI state in the server to simplify components",
-        ],
-        correctOption: 1,
-        points: 20
-    },
-    {
-        id: 209,
-        question: "Which state management is best for remote state?",
-        options: [
-            "React Query or similar data-fetching libraries",
-            "useReducer only",
-            "Vanilla Redux without middleware",
-            "Manual fetch with setInterval"
-        ],
-        correctOption: 0,
-        points: 20
-    },
-    {
-        id: 210,
-        question: "Why do many apps not need Redux anymore?",
-        options: [
-            "Most global state is actually remote and handled better with dedicated libraries",
-            "React removed support for Redux",
-            "Redux only works with old versions of React",
-            "Redux cannot store complex objects"
-        ],
-        correctOption: 0,
-        points: 20
-    },
-    {
         id: 211,
-        question: "What is the ideal use case for Redux?",
+        question: "When is Redux better than Context with useReducer?",
         options: [
-            "When there is a lot of state that updates frequently across the app",
-            "When only one component has local state",
-            "When styling multiple components with CSS",
-            "When you only need asynchronous API calls"
+            "For large apps needing global state tools",
+            "For small apps with minimal requirements",
+            "When React isn't part of stack",
+            "When avoiding JavaScript is the goal"
         ],
         correctOption: 0,
-        points: 20
+        points: 30
     },
     {
         id: 212,
-        question: "What is the difference between UI state and remote state?",
+        question: "Why don't modern React apps need Redux?",
         options: [
-            "UI state is local to components, while remote state comes from a server",
-            "UI state is fetched via HTTP, while remote state is always static",
-            "UI state must use Redux, while remote state uses Context",
-            "UI state is stored permanently, while remote state is temporary"
+            "Redux cannot work with TypeScript projects",
+            "React provides useState, useReducer, Context API",
+            "Redux is deprecated and no longer supported",
+            "React apps don't need state management"
         ],
-        correctOption: 0,
+        correctOption: 1,
         points: 20
     },
     {
         id: 213,
-        question: "When is Redux a better choice than React Query or Context API?",
+        question: "What scenario justifies using Redux in React?",
         options: [
-            "When the app has only UI state like modals and tabs",
-            "When the app uses only localStorage for state persistence",
-            "When the app has a lot of non-remote state that updates frequently across many components",
-            "When all state comes from APIs that update frequently across many components"
-        ],
-        correctOption: 2,
-        points: 30
-    },
-    {
-        id: 214,
-        question: "What is a reducer function in Redux?",
-        options: [
-            "A pure function that receives current state and an action and returns a new state",
-            "A function responsible for fetching data asynchronously from APIs",
-            "A function that renders and updates user interface components",
-            "A function that manages middleware and logging operations"
-        ],
-        correctOption: 0,
-        points: 20
-    },
-    {
-        id: 215,
-        question: "What is the difference between Redux and useReducer?",
-        options: [
-            "useReducer provides middleware capabilities; Redux can handle asynchronous actions to a component or context",
-            "Redux manages global state and provides middleware and DevTools; useReducer is local to a component or context",
-            "Redux operations are synchronous; useReducer automatically handles asynchronous logic",
-            "There is no difference; both manage state in the exact same way"
+            "Single counter with minimal state changes",
+            "Large frequently changing state across components",
+            "Styling components with CSS frameworks only",
+            "Replacing React with Angular for performance"
         ],
         correctOption: 1,
         points: 30
     },
     {
-        id: 216,
-        question: "What is the function of the store in Redux?",
+        id: 214,
+        question: "Which state is best managed locally?",
         options: [
-            "To hold the entire application state tree and manage all reducers centrally",
-            "To directly render components to the DOM whenever state changes",
-            "To automatically fetch remote data from APIs for components",
-            "To generate action creators for every possible state change"
+            "Remote data from external APIs",
+            "Global state shared between applications",
+            "UI state like modals and inputs",
+            "Server-side database state for users"
+        ],
+        correctOption: 2,
+        points: 20
+    },
+    {
+        id: 215,
+        question: "Which state requires global management tools?",
+        options: [
+            "UI state like active tab selection",
+            "Temporary variables in function scope",
+            "CSS class toggles for styling",
+            "Remote state like user API data"
+        ],
+        correctOption: 3,
+        points: 20
+    },
+    {
+        id: 216,
+        question: "Best approach for combining UI and remote state?",
+        options: [
+            "Keep UI local, manage remote globally",
+            "Store all state in APIs only",
+            "Move everything to Redux without exceptions",
+            "Store UI state on server always"
         ],
         correctOption: 0,
         points: 20
     },
     {
         id: 217,
-        question: "Why might a Redux store have multiple reducers?",
+        question: "Most effective tool for managing remote state?",
         options: [
-            "To allow multiple dispatch functions to run in parallel automatically",
-            "To manage React components directly within the store",
-            "To divide the state logic into smaller, focused slices",
-            "To handle styling and UI rendering in separate modules"
-        ],
-        correctOption: 2,
-        points: 15
-    },
-    {
-        id: 218,
-        question: "What is an action creator function in Redux?",
-        options: [
-            "A function that directly modifies state inside the store of application",
-            "A function that returns an action object to describe a change in state",
-            "A function that renders UI components based on actions",
-            "A function that merges multiple reducers into one"
-        ],
-        correctOption: 1,
-        points: 15
-    },
-    {
-        id: 219,
-        question: "Why do we separate state update logic from the rest of the application in Redux?",
-        options: [
-            "To prevent the Redux DevTools from being triggered accidentally",
-            "To reduce the final bundle size of the application",
-            "To make code predictable, maintainable, and easier to debug over time",
-            "To avoid using React components for state updates entirely"
-        ],
-        correctOption: 2,
-        points: 15
-    },
-    {
-        id: 220,
-        question: "Which state management solution is considered the best for handling remote state in modern React apps?",
-        options: [
-            "Redux, because it provides a single global store for all kinds of state and DevTools support",
-            "Context API, because it allows passing remote data deeply into the component tree",
-            "React Query, because it is designed for caching, fetching, and syncing server state",
-            "useReducer hook, because it manages local state updates within a component"
-        ],
-        correctOption: 2,
-        points: 20
-    },
-    {
-        id: 221,
-        question: "Why is Context API not ideal for managing large amounts of remote state?",
-        options: [
-            "Because Context API cannot technically pass data to deeply nested components",
-            "Because frequent updates in Context cause unnecessary re-renders, which impacts performance",
-            "Because Context API is only designed for styling and theming, not state management",
-            "Because Context API requires Redux in order to handle any state properly"
-        ],
-        correctOption: 1,
-        points: 20
-    },
-    {
-        id: 222,
-        question: "Why do many apps no longer need Redux for remote state?",
-        options: [
-            "Because Redux has been deprecated and is no longer supported in React applications",
-            "Because Context API fully replaces Redux and handles all remote state automatically",
-            "Because Redux can only manage UI state and cannot manage remote data in React applications at all",
-            "Because modern libraries like React Query handle fetching, caching, and syncing server state more effectively"
+            "useReducer hook only for state management",
+            "Plain Redux without any middleware support",
+            "Manual fetch with setInterval polling continuously",
+            "React Query or similar data-fetching libraries"
         ],
         correctOption: 3,
         points: 20
     },
     {
-        id: 223,
-        question: "Which type of state is best managed locally in a React component?",
+        id: 218,
+        question: "Why has Redux adoption decreased recently?",
         options: [
-            "UI state, like modal visibility or active tabs",
+            "React removed Redux support in versions",
+            "Redux only works with outdated React",
+            "Remote state better handled by specialized libraries",
+            "Redux cannot store complex data structures"
+        ],
+        correctOption: 2,
+        points: 20
+    },
+    {
+        id: 219,
+        question: "What defines the ideal Redux use case?",
+        options: [
+            "Single component with local state only",
+            "Styling multiple components with CSS frameworks",
+            "Making asynchronous API calls exclusively for data",
+            "Frequent state updates across many components"
+        ],
+        correctOption: 3,
+        points: 20
+    },
+    {
+        id: 220,
+        question: "How do UI and remote state differ?",
+        options: [
+            "UI requires HTTP, remote state static",
+            "UI is component-local, remote from servers",
+            "UI needs Redux, remote uses Context",
+            "UI is permanent, remote is temporary"
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+
+        id: 221,
+        question: "When choose Redux over React Query/Context?",
+        options: [
+            "When dealing only with UI modals",
+            "When using localStorage for all persistence",
+            "Complex non-remote state updating frequently across components",
+            "When all state originates from endpoints"
+        ],
+        correctOption: 2,
+        points: 30
+    },
+    {
+        id: 222,
+        question: "What is a reducer function in Redux?",
+        options: [
+            "Function for fetching data asynchronously from servers",
+            "Pure function taking state/action, returning new state",
+            "Function that renders UI components dynamically",
+            "Function managing middleware operations and logging"
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+        id: 223,
+        question: "How does Redux differ from useReducer?",
+        options: [
+            "useReducer provides middleware, Redux handles async",
+            "Redux is synchronous, useReducer handles async",
+            "Redux global with middleware/DevTools, useReducer local",
+            "Both manage state identically without differences"
+        ],
+        correctOption: 2,
+        points: 30
+    },
+    {
+        id: 224,
+        question: "Primary purpose of the Redux store?",
+        options: [
+            "Render components directly to DOM elements",
+            "Fetch remote data automatically for components",
+            "Generate action creators for state changes",
+            "Hold state tree and coordinate reducers"
+        ],
+        correctOption: 3,
+        points: 20
+    },
+    {
+        id: 225,
+        question: "Why might Redux store contain multiple reducers?",
+        options: [
+            "Enable parallel dispatch execution for performance",
+            "Organize state logic into focused slices",
+            "Manage React components within store structure",
+            "Handle styling and rendering operations separately"
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+        id: 226,
+        question: "What is an action creator function in Redux?",
+        "options": [
+            "A function that directly modifies state in the store",
+            "A function that returns an action object describing a state change",
+            "A function that renders UI components based on actions",
+            "A function that combines multiple reducers into one"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        id: 227,
+        question:"Why do we separate state update logic from components in Redux?",
+        "options": [
+            "To prevent Redux DevTools from being triggered",
+            "To reduce the final bundle size of the application",
+            "To make code predictable, maintainable, and easier to debug",
+            "To avoid using React components for state updates"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        id: 228,
+        question: "Which solution is best suited for handling server state in modern React apps?",
+        "options": [
+            "Redux with a single global store for all state types",
+            "Context API for passing remote data through component tree",
+            "React Query for caching, fetching, and syncing server state",
+            "useReducer hook for managing local component state"
+        ],
+        correctOption: 2,
+        points: 20
+    },
+    {
+        id: 229,
+        question:"What performance issue can arise when using Context API for frequently changing state?",
+        "options": [
+            "Context API cannot pass data to deeply nested components",
+            "Frequent updates cause unnecessary re-renders across all consumers",
+            "Context API is only designed for styling and theming",
+            "Context API requires Redux to handle any state properly"
+        ],
+        correctOption: 1,
+        points: 20
+    },
+    {
+        id: 230,
+        question: "Why do many modern React apps no longer need Redux for remote state?",
+        "options": [
+            "Redux has been deprecated and is no longer supported",
+            "Context API fully replaces Redux for all state management",
+            "Redux cannot manage remote data in React applications",
+            "Libraries like React Query handle server state more effectively"
+        ],
+        correctOption: 3,
+        points: 20
+    },
+    {
+        id: 231,
+        question: "Which type of state is best managed locally within a React component?",
+        "options": [
+            "UI state like modal visibility or active tabs",
             "Remote state fetched from an API",
-            "Global state shared between apps",
+            "Global state shared between multiple applications",
             "Server-side state stored in a database"
         ],
         correctOption: 0,
         points: 10
     },
     {
-        id: 224,
-        question: "Which type of state often requires tools like Redux, React Query, or Context API?",
-        options: [
-            "UI state, like which tab is active",
-            "Temporary variables inside a function",
-            "Remote state, like user data from an API",
-            "CSS class toggles"
+        id: 232,
+        question:"Which type of state typically requires global management tools?",
+        "options": [
+            "UI state like which tab is currently active",
+            "Temporary variables inside a function scope",
+            "Remote state like user data from an API",
+            "CSS class toggles for styling components"
         ],
         correctOption: 2,
-        points: 20
+        points: 10
     },
     {
-        id: 225,
-        question: "Why do many modern React apps not use Redux anymore?",
-        options: [
-            "Because React automatically handles all state internally",
-            "Because most global state in apps is remote and can be managed with tools like React Query",
-            "Because Redux no longer works with React",
-            "Because UI state is always too small to matter"
+        id: 233,
+        question: "What is the main reason Redux adoption has decreased in recent years?",
+        "options": [
+            "React automatically handles all state management internally",
+            "Most global state is remote and better handled by specialized libraries",
+            "Redux no longer works with current React versions",
+            "UI state requirements have become too complex for Redux"
         ],
         correctOption: 1,
         points: 20
     },
     {
-        "id": 226,
-        "question": "What is the main role of middleware in Redux?",
+        "id": 234,
+        "question": "What is the primary role of middleware in Redux?",
         "options": [
             "To let components update state directly without reducers",
-            "To intercept actions and run extra logic like async calls or logging",
-            "To replace reducers with custom asynchronous state handlers",
-            "To make the store update itself automatically without dispatch"
+            "To intercept actions and run additional logic like async calls",
+            "To replace reducers with custom asynchronous handlers",
+            "To make the store update automatically without dispatch"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
-        "id": 230,
-        "question": "In the Redux cycle, where is the recommended place to handle side effects such as API calls or logging?",
+        "id": 235,
+        "question":"Where should side effects like API calls be handled in Redux?",
         "options": [
-            "Inside reducers",
-            "Inside middleware",
-            "Directly in React components",
+            "Inside reducer functions",
+            "Inside middleware functions",
+            "Directly in React components only",
             "Inside the store configuration"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
-        "id": 231,
-        "question": "What is the main purpose of using Redux Thunk?",
+        "id": 236,
+        "question": "What is the main purpose of Redux Thunk?",
         "options": [
-            "To defer rendering of a component until data is ready",
+            "To defer rendering components until data is ready",
             "To optimize reducers by memoizing state updates",
             "To prevent unnecessary re-renders in functional components",
-            "To handle asynchronous logic before dispatching an action",
+            "To handle asynchronous logic before dispatching actions"
         ],
         "correctOption": 3,
         "points": 20
     },
     {
-        "id": 232,
-        "question": "What allows Redux to wait before dispatching fetched data into the store?",
+        "id": 237,
+        "question": "What enables Redux to handle asynchronous operations before updating state?",
         "options": [
-            "Reducer",
-            "Store",
-            "Thunk",
-            "Component"
+            "Reducer functions",
+            "Store configuration",
+            "Thunk middleware",
+            "Component lifecycle methods"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 233,
-        "question": "Which of the following is NOT a feature of Redux Toolkit?",
+        "id": 238,
+        "question": "Which feature is NOT provided by Redux Toolkit?",
         "options": [
-            "createSlice for reducing boilerplate",
-            "createAsyncThunk for async logic",
-            "Built-in support for Immer",
+            "createSlice for reducing boilerplate code",
+            "createAsyncThunk for handling async logic",
+            "Built-in support for Immer library",
             "Class-based component lifecycle methods"
         ],
         "correctOption": 3,
         "points": 20
     },
     {
-        "id": 234,
-        "question": "Which of the following is NOT a feature of Redux Toolkit's createSlice?",
+        "id": 239,
+        "question":"Which capability is NOT provided by Redux Toolkit's createSlice?",
         "options": [
-            "It automatically generates action creators and action types",
-            "It reducers to write mutable-looking code safely using Immer",
-            "It allows eliminates the need to configure a Redux store",
-            "It reduces boilerplate by combining state, reducers, and actions in one place"
+            "Automatically generates action creators and types",
+            "Allows writing mutable-looking code safely with Immer",
+            "Eliminates the need to configure a Redux store",
+            "Reduces boilerplate by combining state, reducers, and actions"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 235,
-        "question": "In Redux Toolkit, which library allows writing logic that looks like direct state mutation while ensuring immutability internally?",
+        "id": 240,
+        "question": "Which library in Redux Toolkit allows writing code that appears to mutate state while maintaining immutability?",
         "options": [
             "Thunk",
             "Saga",
@@ -2842,8 +2777,8 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 236,
-        "question": "Which Redux Toolkit API simplifies reducer and action creation by combining them into one structure?",
+        "id": 241,
+        "question": "Which Redux Toolkit API combines reducers and action creators into a single structure?",
         "options": [
             "createSlice",
             "configureStore",
@@ -2854,8 +2789,8 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 237,
-        "question": "Which Redux Toolkit function sets up the store with good defaults like middleware and DevTools integration?",
+        "id": 242,
+        "question": "Which Redux Toolkit function sets up the store with built-in middleware and DevTools?",
         "options": [
             "createReducer",
             "createStore",
@@ -2866,20 +2801,20 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 238,
-        "question": "What is the recommended naming convention for action types in Redux?",
+        "id": 243,
+        "question": "What is the recommended naming convention for Redux action types?",
         "options": [
             "Single word names only",
-            "Only event name",
+            "Event name only",
             "Random strings for uniqueness",
-            "Two-part names,domain and event",
+            "Domain/event pattern"
         ],
         "correctOption": 3,
         "points": 20
     },
     {
-        "id": 239,
-        "question": "Which statement correctly describes action creators in Redux Toolkit's createSlice?",
+        "id": 244,
+        "question":  "How are action creators handled in Redux Toolkit's createSlice?",
         "options": [
             "They must be written manually by the developer",
             "They are generated automatically and accept one payload",
@@ -2890,31 +2825,31 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 240,
-        "question": "What is the main purpose of createSlice in Redux Toolkit?",
+        "id": 245,
+        "question": "What is the primary purpose of createSlice in Redux Toolkit?",
         "options": [
             "It installs external libraries for async handling",
             "It manages routing and navigation inside React apps",
-            "It defines reducers and generates actions together",
+            "It defines reducers and generates actions creators together",
             "It creates global styles for components in the project"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 241,
-        "question": "Which statement about reducers inside createSlice is correct?",
+        "id": 246,
+        "question": "What is true about reducers inside createSlice?",
         "options": [
             "They always return a completely new object",
-            "They are allowed to mutate state because of Immer",
+            "They can write code that appears to mutate state due to Immer",
             "They cannot use payload values from dispatched actions",
-            "They only work if written as pure asynchronous functions"
+            "They only work if written as pure asynchronous functions component"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
-        "id": 242,
+        "id": 247,
         "question": "How are action creators provided when using createSlice?",
         "options": [
             "They are created manually in a separate actions file",
@@ -2926,284 +2861,284 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 243,
-        "question": "What is a key benefit of using createSlice over plain Redux?",
+        "id": 248,
+        "question": "What is a key advantage of createSlice over traditional Redux?",
         "options": [
-            "It reduces boilerplate by combining logic in one place",
-            "It prevents React from re-rendering during state updates",
-            "It adds built-in support for routing and query strings",
-            "It replaces the need for using any store or middleware"
+            "It reduces boilerplate by combining related logic",
+            "It prevents React components from re-rendering",
+            "It adds built-in routing and query string support",
+            "It eliminates the need for any store or middleware"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
-        "id": 244,
+        "id": 249,
         "question": "What does createSlice return after definition?",
         "options": [
             "A collection of selectors for reading global state",
             "A middleware that listens for dispatched actions",
-            "A reducer function and auto-generated actions",
+            "A reducer function and auto-generated actions creators",
             "A hook that manages asynchronous API requests"
         ],
         "correctOption":2,
         "points": 20
     },
     {
-        "id": 245,
+        "id": 250,
         "question": "How are reducers inside createSlice typically written?",
         "options": [
             "As JSX components that render data from the store",
             "As lifecycle hooks that are triggered by React updates",
             "As asynchronous functions that always await API responses",
-            "As functions that can write directly to state using Immer",
+            "As functions that directly modify state using Immer",
         ],
         "correctOption": 3,
         "points": 20
     },
     {
-        "id": 246,
-        "question": "Which of the following is automatically created by createSlice?",
-        "options": [
-            "A default middleware for handling promises",
-            "Action creators for each reducer case",
-            "Hooks for managing component side effects",
-            "Global variables for application constants",
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 247,
-        "question": "What argument does an action creator from createSlice usually accept?",
-        "options": [
-            "A single payload value passed when dispatching",
-            "Multiple positional arguments of any type",
-            "No arguments since they are always constant",
-            "A configuration object with reducer options"
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
-        "id": 248,
-        "question": "What role does Immer play inside createSlice reducers?",
-        "options": [
-            "It automatically merges reducers into a single function",
-            "It delays reducer execution until after the dispatch cycle",
-            "It allows writing mutations that are converted to immutable updates",
-            "It provides hooks for React to subscribe to store updates"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 249,
-        "question": "Which property inside createSlice defines how state is updated?",
-        "options": [
-            "The reducers field inside the slice configuration",
-            "The config field declared in store initialization",
-            "The middleware field imported from Redux core",
-            "The template field defined at the root project",
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
-        "id": 250,
-        "question": "What naming convention is used for action types from createSlice?",
-        "options": [
-            "They are namespaced as sliceName/reducerName",
-            "They are written as numeric identifiers for reducers",
-            "They are always prefixed with the string redux-",
-            "They are defined in HTML meta tags for the app"
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
         "id": 251,
-        "question": "How can you export the reducer generated by createSlice?",
+        "question":"What does createSlice automatically generate based on the reducer functions you define?",
         "options": [
-            "By exporting createStore with slice.actions directly",
-            "By exporting slice.reducer from the slice object",
-            "By exporting reducer from Redux core package",
-            "By exporting a manual switch statement in store"
+            "Middleware functions for handling async operations",
+            "Action creators with the same names as the reducers",
+            "Component hooks for state management",
+            "CSS classes for styling components"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 252,
-        "question": "Why does createSlice reduce boilerplate code in Redux?",
+        "question": "How many parameters do action creators generated by createSlice typically accept?",
         "options": [
-            "Because it combines action creators and reducers together",
-            "Because it removes action from using React components",
-            "Because it combines the Redux store with local states",
-            "Because it combines middleware and devtools by default"
+            "Zero parameters - they are always called without arguments",
+            "One parameter - a payload value that becomes action.payload",
+            "Two parameters - type and payload separately",
+            "Multiple parameters - as many as you define in the reducer"
         ],
-        "correctOption": 0,
-        "points": 20
+        "correctOption": 1,
+        "points": 10
     },
     {
         "id": 253,
-        "question": "Which statement about initialState in createSlice is correct?",
+        "question": "What does Immer enable you to do inside createSlice reducers?",
         "options": [
-            "It is optional because Redux automatically generates state",
-            "It defines the default shape of state managed by the slice",
-            "It must always be imported from an external JSON file",
-            "It cannot contain nested objects or arrays of values",
+            "Automatically fetch data from external APIs",
+            "Create multiple store instances for different features category",
+            "Write code that appears to mutate state but maintains immutability",
+            "Generate TypeScript type definitions automatically",
         ],
-        "correctOption": 1,
+        "correctOption": 2,
         "points": 20
     },
     {
         "id": 254,
-        "question": "What is the purpose of the 'prepare' callback in Redux Toolkit?",
+        "question": "In createSlice configuration, which property contains the functions that define state updates?",
         "options": [
-            "It modifies payload before it reaches the reducer",
-            "It schedules asynchronous actions in middleware",
-            "It automatically generates slice names",
-            "It validates reducer return types"
+            "The reducers field containing case reducer functions",
+            "The actions field containing action creator definitions",
+            "The middleware field containing side effect handlers",
+            "The selectors field containing state access functions"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
         "id": 255,
-        "question": "Which of the following is a limitation of using React Context API compared to Redux?",
+        "question": "What naming pattern do action types follow when generated by createSlice?",
         "options": [
-            "It is built into React and easy to set up a single context",
-            "It doesn't provide middleware support for async operations",
-            "It allows state management with useReducer",
-            "It offers integration with React DevTools"
+            "SLICE_NAME_REDUCER_NAME (e.g., 'COUNTER_INCREMENT')",
+            "sliceName/reducerName (e.g., 'counter/increment')",
+            "reducerName_sliceName (e.g., 'increment_counter')",
+            "Random UUID strings for uniqueness"
+        ],
+        "correctOption":1,
+        "points": 20
+    },
+    {
+        "id": 256,
+        "question": "How do you export the main reducer function from a createSlice result?",
+        "options": [
+            "Export slice.reducer from the slice object",
+            "Export slice.actions.reducer from the slice",
+            "Export createReducer(slice) as the main function",
+            "Export slice.store as the complete reducer"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 257,
+        "question":  "Which specific Redux boilerplate does createSlice eliminate?",
+        "options": [
+            "Writing separate action creators and action types manually",
+            "Configuring the Redux store and middleware",
+            "Creating component-level state management hooks",
+            "Defining routing and navigation logic"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 258,
+        "question": "What role does initialState serve in createSlice?",
+        "options": [
+            "It determines the component rendering order",
+            "It specifies which middleware to use with the slice",
+            "It defines the starting value for the slice's state",
+            "It configures the development tools integration"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
-        "id": 256,
-        "question": "What problem can occur when adding multiple contexts in a React application?",
+        "id": 259,
+        "question": "When would you use the 'prepare' callback in a createSlice reducer?",
         "options": [
-            "Simplified DevTools integration",
-            "Improved global state performance",
+            "To customize the action payload before it reaches the reducer logic",
+            "To define asynchronous operations that run after state updates",
+            "To specify which components can access this slice",
+            "To configure Redux DevTools for debugging purposes"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 260,
+        "question":  "Which Redux feature is NOT available in React Context API?",
+        "options": [
+            "State management with useReducer",
+            "Middleware support for handling side effects",
+            "Passing data through component tree",
+            "Integration with React DevTools"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 261,
+        "question": "What architectural problem can occur when using multiple Context providers?",
+        "options": [
+            "Built-in middleware integration",
+            "Simplified debugging experience",
             "Automatic asynchronous operation handling",
-            "Provider hell with deeply nested wrappers",
+            "Provider hell with deeply nested wrapper components"
         ],
         "correctOption": 3,
         "points": 20
     },
     {
-        "id": 257,
-        "question": "Which feature is missing in React Context API but available in Redux?",
+        "id": 262,
+        "question": "Which scenario is best suited for Redux over Context API?",
         "options": [
-            "Ability to create additional state slices easily",
-            "Optimization built into state updates",
-            "Support for async logic via middleware",
-            "Excellent DevTools for debugging"
+            "Passing theme colors through component tree",
+            "Managing frequently changing state across many components",
+            "Sharing user authentication status",
+            "Providing translation strings to many components"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 263,
+        "question": "What advantage does Redux provide over Context API for debugging?",
+        "options": [
+            "Automatic error boundary creation with Redux DevTools",
+            "Built-in TypeScript support",
+            "Time-travel debugging with Redux DevTools",
+            "Faster component rendering"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 258,
-        "question": "Which of the following is an advantage of Redux compared to Context API?",
-        "options": [
-            "Built directly into React core",
-            "Requires no additional setup or packages",
-            "Optimizes performance out of the box",
-            "Simpler for a single state context"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 259,
-        "question": "What is one of the disadvantages Redux compared to React Context API?",
+        "id": 264,
+        "question": "What is a disadvantage of Redux compared to Context API?",
         "options": [
             "It is built into React itself",
-            "It requires additional packages and setup",
-            "It has no mechanism for async logic",
+            "It requires additional packages and setup overhead",
+            "Redux can not handle asynchronous operations",
             "It provides only React DevTools support"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
-        "id": 260,
-        "question": "Why might performance optimization be harder with React Context API?",
+        "id": 265,
+        "question": "Why can Context API cause performance issues with frequent updates?",
         "options": [
-            "Context re-renders all consumers on update",
-            "Context does not support state slices",
-            "Context automatically batches updates",
-            "Context integrates with middleware by default"
+            "Context automatically re-renders all consumer components",
+            "Context cannot be split into smaller providers",
+            "Context requires manual optimization techniques",
+            "Context doesn't support memoization"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
-        "id": 261,
-        "question": "Which tool provides better debugging experience for global state?",
+        "id": 266,
+        "question": "Which tool provides the better debugging experience for state management?",
         "options": [
-            "useReducer inside Context API",
-            "React Context with React DevTools",
+            "Context API with React DevTools",
             "Redux with its dedicated DevTools",
-            "Provider nesting in App.js"
+            "useReducer with console logging",
+            "Local component state with debugger"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 267,
+        "question":"When is Context API the better choice over Redux?",
+        "options": [
+            "For complex state with nested data structures",
+            "For applications requiring middleware functionality",
+            "For sharing rarely changing values like theme or locale",
+            "For managing shopping cart with frequent item updates",
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 268,
+        "question":"What is the most appropriate use case for Context API?",
+        "options": [
+            "Managing complex application state with frequent updates",
+            "Avoiding prop drilling for values passed to many components",
+            "Handling asynchronous data fetching operations",
+            "Creating time-travel debugging functionality"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 269,
+        "question": "When should you choose Redux over Context API?",
+        "options": [
+            "For passing static configuration data",
+            "For simple theme switching functionality",
+            "For state that updates frequently",
+            "For sharing user preferences"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 262,
-        "question": "Which situation is best suited for React Context API?",
+        "id": 270,
+        "question":  "Why is Redux suitable for complex state management?",
         "options": [
-            "When you need to share a rarely changing value",
-            "When you have a shopping cart with frequent updates",
-            "When you need middleware for async operations",
-            "When you have complex nested state with arrays"
+            "Redux is built into React framework",
+            "Redux prevents all re-renders component automatically",
+            "Redux provides predictable state updates and debugging tools",
+            "Redux eliminates the need for component state"
         ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 263,
-        "question": "What is a common use case of Context API?",
-        "options": [
-            "Managing small global UI state",
-            "Solving simple prop drilling",
-            "Handling deeply nested reducers",
-            "Debugging with Redux DevTools"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        "id": 264,
-        "question": "When is Redux a better choice than Context API?",
-        "options": [
-            "When you just want to pass a color theme",
-            "When state updates happen very frequently",
-            "When you need to share static data",
-            "When state is limited to a single subtree"
-        ],
-        "correctOption": 1,
+        "correctOption": 2,
         "points": 20
     },
     {
-        "id": 265,
-        "question": "Why is Redux suitable for managing complex state structures?",
-        "options": [
-            "Because it is built into React",
-            "Because it has only one global provider",
-            "Because it avoids prop drilling automatically",
-            "Because Redux Toolkit allows state mutation",
-        ],
-        "correctOption": 3,
-        "points": 20
-    },
-    {
-        "id": 266,
-        "question": "Which state management tool is more efficient for local subtree state?",
+        "id": 271,
+        "question": "Which approach is more efficient for local component subtree state?",
         "options": [
             "Redux Toolkit",
             "Redux with middleware",
@@ -3214,8 +3149,8 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 277,
-        "question": "Which state management tool is more efficient for changing values like theme or language?",
+        "id": 272,
+        "question": "Which tool is most appropriate for rarely changing global values like theme?",
         "options": [
             "React Context",
             "Redux Toolkit",
@@ -3224,6 +3159,66 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10
+    },
+    {
+        "id": 273,
+        "question": "Which of the following demonstrates DOM traversal?",
+        "options": [
+            "document.createElement('div')",
+            "element.parentNode.nextSibling",
+            "fetch('api/data')",
+            "JSON.stringify({name: 'Omid'})"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 274,
+        "question": "What is the main difference between imperative and declarative programming?",
+        "options": [
+            "Imperative focuses on what should happen, declarative on how",
+            "Declarative focuses on what should happen, imperative on how",
+            "Imperative is faster, declarative is more readable",
+            "Declarative requires more code, imperative requires less"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 275,
+        "question": "Which approach represents declarative programming in React?",
+        "options": [
+            "Manually updating DOM elements with getElementById",
+            "Using JSX to describe what the UI should look like",
+            "Writing for loops to create HTML elements",
+            "Directly manipulating CSS styles with JavaScript"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 276,
+        "question": "Why is the declarative approach generally preferred in modern front-end frameworks like React?",
+        "options": [
+            "Because it reduces boilerplate, makes code easier to read, and automatically keeps the UI in sync with state",
+            "Because it completely removes the need for JavaScript in the browser",
+            "Because it forces all operations to run sequentially on the main thread",
+            "Because it replaces CSS with JavaScript styling automatically"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 277,
+        "question": "Why is DOM traversing important in front-end development?",
+        "options": [
+            "It allows developers to navigate, read, and manipulate the structure of web pages dynamically",
+            "It automatically optimizes the performance of all JavaScript code",
+            "It replaces the need for CSS in styling web pages",
+            "It enables server-side rendering without frameworks"
+        ],
+        "correctOption": 0,
+        "points": 30
     },
     {
         "id": 278,
@@ -3428,18 +3423,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 3,
         "points": 20
     },
-    {
-        "id": 297,
-        "question": "Given a blog app, which Redux state shape is more appropriate?\n\nOption A:\n{\n  posts: [\n    { id: 1, title: 'Post1', author: { id: 10, name: 'Omid' } },\n    { id: 2, title: 'Post2', author: { id: 10, name: 'Omid' } }\n  ]\n}\n\nOption B:\n{\n  posts: [1, 2],\n  entities: {\n    posts: {\n      1: { id: 1, title: 'Post1', author: 10 },\n      2: { id: 2, title: 'Post2', author: 10 }\n    },\n    users: {\n      10: { id: 10, name: 'Omid' }\n    }\n  }\n}\n",
-        "options": [
-            "Option B, because it avoids data duplication and keeps relationships normalized",
-            "Option A, because it is easier to read and directly reflects the UI tree",
-            "Option A, because nested objects load faster at runtime",
-            "Option B, because Redux automatically normalizes deeply nested objects"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
+
     {
         "id": 298,
         "question": "Why do we need frameworks like React instead of using only vanilla JavaScript?",
@@ -3489,18 +3473,6 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 164,
-        "question": "Why did developers widely adopt jQuery in the past?",
-        "options": [
-            "It replaced JavaScript as the programming language in browsers",
-            "It automatically optimized web performance without coding",
-            "It removed the need for CSS styling in web pages",
-            "It provided cross-browser compatibility and simplified common JavaScript tasks",
-        ],
-        "correctOption":3,
-        "points": 20
-    },
-    {
         "id": 302,
         "question": "Which of the following best describes a limitation of jQuery that led to the rise of modern frameworks like React?",
         "options": [
@@ -3524,18 +3496,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 10
     },
-    {
-        "id": 304,
-        "question": "Which of the following features is commonly expected in a web application?",
-        "options": [
-            "The ability to interact with a server and update data dynamically",
-            "The requirement to be installed on the user’s device",
-            "The use of only static HTML pages without JavaScript",
-            "The ability to run offline without any server communication"
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
+
     {
         "id": 305,
         "question": "Why do modern web applications often use front-end frameworks like React or Vue?",
@@ -3560,18 +3521,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 2,
         "points": 10
     },
-    {
-        "id": 307,
-        "question": "Which of the following best describes a web application compared to a simple web page?",
-        "options": [
-            "It is a static HTML document with no user input",
-            "It cannot be accessed through a browser",
-            "It is an interactive software running in a browser with dynamic data and state management",
-            "It always works offline without a server"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
+
     {
         "id": 308,
         "question": "Why would you use a front-end framework like React for a web application but not necessarily for a simple web page?",
@@ -3634,64 +3584,102 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 313,
-        "question": "Why is DOM traversing important in front-end development?",
+        "question": "Why did developers widely adopt jQuery in the past?",
         "options": [
-            "It allows developers to navigate, read, and manipulate the structure of web pages dynamically",
-            "It automatically optimizes the performance of all JavaScript code",
-            "It replaces the need for CSS in styling web pages",
-            "It enables server-side rendering without frameworks"
+            "It replaced JavaScript as the programming language in browsers",
+            "It automatically optimized web performance without coding",
+            "It removed the need for CSS styling in web pages",
+            "It provided cross-browser compatibility and simplified common JavaScript tasks",
         ],
-        "correctOption": 0,
-        "points": 30
+        "correctOption":3,
+        "points": 20
     },
     {
         "id": 314,
-        "question": "Which of the following is an example of DOM traversing?",
+        "question": "What is React?",
         "options": [
-            "document.createElement('div')",
-            "element.parentNode.children[0]",
-            "fetch('api/data')",
-            "JSON.stringify({name: 'Omid'})"
+            "A declarative, component-based, state-driven JavaScript library for building user interfaces",
+            "A full-featured JavaScript framework with built-in routing and state management",
+            "A CSS utility framework for creating responsive designs quickly",
+            "A server-side runtime environment for executing JavaScript outside the browser"
         ],
-        "correctOption": 1,
+        "correctOption": 0,
         "points": 20
     },
     {
         "id": 315,
-        "question": "What is the main difference between imperative and declarative programming?",
+        "question": "What does 'declarative' mean in the context of React?",
         "options": [
-            "Imperative focuses on what should happen, declarative on how to do it",
-            "Declarative requires loops, imperative does not",
-            "Imperative is only used in server-side code, declarative only in front-end",
-            "Imperative focuses on how to do something step by step, declarative on what the outcome should be",
+            "You specify *what* the UI should look like, not *how* to update it",
+            "You manually update the DOM step by step for every change",
+            "You write CSS classes to style the components",
+            "You use server-side rendering to generate HTML before sending it to the client"
         ],
-        "correctOption": 3,
-        "points": 10
+        "correctOption": 0,
+        "points": 20
     },
     {
         "id": 316,
-        "question": "Which of the following is an example of a declarative approach in front-end development?",
+        "question": "What does 'imperative' mean in programming, especially compared to declarative in React?",
         "options": [
-            "Using a for loop to append list items to the DOM manually",
-            "Selecting DOM elements with getElementById and changing their style",
-            "Using JSX with map() to render a list of items in React",
-            "Manually updating innerHTML for each element in a loop"
+            "You give step-by-step instructions on *how* to perform tasks",
+            "You only declare *what* the UI should look like",
+            "You style components using utility-first CSS classes",
+            "You let the framework automatically handle all DOM updates"
         ],
-        "correctOption": 2,
+        "correctOption": 0,
         "points": 20
     },
     {
         "id": 317,
-        "question": "Why is the declarative approach generally preferred in modern front-end frameworks like React?",
+        "question": "In Redux Toolkit, what is the role of case reducers in a slice?",
         "options": [
-            "Because it reduces boilerplate, makes code easier to read, and automatically keeps the UI in sync with state",
-            "Because it completely removes the need for JavaScript in the browser",
-            "Because it forces all operations to run sequentially on the main thread",
-            "Because it replaces CSS with JavaScript styling automatically"
+            "They define how the state should change in response to specific actions",
+            "They automatically fetch data from APIs",
+            "They style components using CSS classes",
+            "They replace the Redux store with a local state"
         ],
         "correctOption": 0,
-        "points": 30
-    }
+        "points": 20
+    },
+    {
+        id: 318,
+        question: "Which approach does React Router primarily use to define routes?",
+        options: ["Imperative", "Declarative", "Procedural", "Functional"],
+        correctOption: 1,
+        points: 20,
+    },
+    {
+        id: 319,
+        question: "For a large project with multiple layouts, which route definition method is most appropriate?",
+        options: [
+            "Defining routes with JSX inside <Routes>",
+            "Using Route Objects (createBrowserRouter)",
+            "Using Dynamic Routes",
+            "Using Protected Routes",
+        ],
+        correctOption: 1,
+        points: 20,
+    },
+    {
+        id: 320,
+        question: "What is the main difference between <Navigate> and useNavigate()?",
+        options: [
+            "<Navigate> is declarative, useNavigate() is imperative",
+            "<Navigate> only works with route objects, useNavigate() only works with JSX",
+            "They behave exactly the same",
+            "Neither is used for navigation",
+        ],
+        correctOption: 0,
+        points: 20,
+    },
+    {
+        id: 321,
+        question: "If you have a layout with a fixed Header and Footer where the content in the middle changes, which React Router feature should you use?",
+        options: ["Dynamic Routes", "Nested Routes", "Protected Routes", "Route Guards"],
+        correctOption: 1,
+        points: 20,
+    },
 
 
 ]
