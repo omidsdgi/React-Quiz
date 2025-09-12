@@ -3198,70 +3198,70 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 276,
-        "question": "Why is the declarative approach generally preferred in modern front-end frameworks like React?",
+        "question": "What is the primary benefit of declarative programming in React?",
         "options": [
-            "Because it reduces boilerplate, makes code easier to read, and automatically keeps the UI in sync with state",
-            "Because it completely removes the need for JavaScript in the browser",
-            "Because it forces all operations to run sequentially on the main thread",
-            "Because it replaces CSS with JavaScript styling automatically"
+            "You write step-by-step DOM manipulation instructions",
+            "You describe what the UI should look like",
+            "You manually track all state and DOM changes",
+            "You directly use querySelector for DOM updates"
         ],
-        "correctOption": 0,
-        "points": 30
+        "correctOption": 1,
+        "points": 20
     },
     {
         "id": 277,
         "question": "Why is DOM traversing important in front-end development?",
         "options": [
-            "It allows developers to navigate, read, and manipulate the structure of web pages dynamically",
-            "It automatically optimizes the performance of all JavaScript code",
-            "It replaces the need for CSS in styling web pages",
-            "It enables server-side rendering without frameworks"
+            "Allow to navigate, read, and manipulate of HTML structure",
+            "CSS styling replacement with JavaScript calculations",
+            "Automatic JavaScript performance optimization",
+            "Server-side HTML content generation"
         ],
         "correctOption": 0,
-        "points": 30
+        "points": 10
     },
     {
         "id": 278,
-        "question": "What is the main purpose of a feature-based folder structure in React applications?",
+        "question":  "How does feature-based folder structure improve maintainability?",
         "options": [
-            "It organizes files strictly by type such as components, hooks, and styles",
-            "It groups related code (UI, logic, tests) by feature for better maintainability",
-            "It automatically optimizes bundle size without extra configuration",
-            "It enforces global state management across all features by default"
+            "Files are separated by technical type only",
+            "Bundle size reduces through automatic tree-shaking",
+            "Related functionality groups together in modules",
+            "Global state management enforces across components"
         ],
-        "correctOption": 1,
-        "points": 30
+        "correctOption": 2,
+        "points": 20
     },
     {
         "id": 279,
-        "question": "What is a common disadvantage  of using files only by type (components, hooks, styles) in large React projects?",
+        "question": "What challenge arises from organizing projects by file type?",
         "options": [
-            "It makes reusing components across projects impossible",
-            "It mixes UI and logic in the same folder without separation",
-            "It makes testing features more difficult due to spread files",
-            "It automatically increases bundle size and slows down the app"
+            "Components become impossible to reuse",
+            "UI and logic mix in directories",
+            "Bundle size increases automatically",
+            "Related files spread across folders"
         ],
-        "correctOption": 2,
-        "points": 30
+        "correctOption": 3,
+        "points": 20
     },
     {
         "id": 280,
-        "question": "In a feature-based folder structure, where would you typically place components?",
+        "question": "Where should components be placed in feature-based architecture?",
         "options": [
-            "Inside a global 'components' folder shared across the entire app",
-            "Inside each feature folder, grouped with related logic and styles",
-            "Inside a single 'pages' directory that holds all UI code",
-            "Inside a 'hooks' folder regardless of feature boundaries"
+            "Within each feature directory with related files",
+            "In centralized components folder for sharing",
+            "Inside dedicated pages directory for routing",
+            "Mixed with hooks regardless of boundaries"
         ],
-        "correctOption": 1,
-        "points": 30
+        "correctOption": 0,
+        "points": 10
     },
     {
         "id": 281,
-        "question": "What does 'data loading waterfall' mean in the context of React applications?",
+        "question":"What does 'data loading waterfall' mean in React applications?",
         "options": [
             "Using advanced caching strategies to completely eliminate the need for repeated network calls",
-            "Multiple requests executed sequentially, causing slower loading-omid",
+            "Multiple requests executed sequentially, causing slower loading times",
             "Executing all API requests in parallel regardless of dependencies",
             "Fetching data only for the components currently visible in the viewport",
         ],
@@ -3272,132 +3272,157 @@ export const mockQuestions: Question[] = [
         "id": 282,
         "question": "What is the main purpose of the HTTP PATCH method?",
         "options": [
-            "It retrieves the complete data of a resource without modifications",
-            "It replaces the entire resource with the provided data",
-            "It applies partial modifications to an existing resource",
-            "It creates a completely new resource on the server"
+            "retrieves complete data of a resource without modifications",
+            "Replaces entire resource with provided data",
+            "Applies partial modifications to existing resource",
+            "Creates completely new resource on server"
         ],
         "correctOption": 2,
-        "points": 30
+        "points": 20
     },
     {
         "id": 283,
-        "question": "How does the HTTP PUT method differ from PATCH?",
+        "question": "How does HTTP PUT differ from PATCH?",
         "options": [
-            "PUT retrieves an existing resource while PATCH deletes it",
-            "PUT replaces the full resource while PATCH updates only specific fields",
-            "PUT is only used for creating new resources while PATCH is for deleting",
-            "PUT sends partial data while PATCH requires the full object"
+            "PUT retrieves resources, PATCH deletes them",
+            "PUT replaces full resource, PATCH updates fields",
+            "PUT creates new resources, PATCH deletes existing",
+            "PUT sends partial data, PATCH requires full"
         ],
         "correctOption": 1,
-        "points": 30
+        "points": 20
     },
     {
         "id": 284,
-        "question": "When should the POST method be preferred over PUT or PATCH?",
+        "question": "When should POST be preferred over PUT or PATCH?",
         "options": [
-            "When partially updating only one property of an existing resource",
-            "When replacing an entire resource with new data",
-            "When creating a completely new resource on the server",
-            "When retrieving the current state of a resource"
+            "Partially updating one property of resource",
+            "Replacing entire resource with new data",
+            "Creating completely new resource on server",
+            "Retrieving current state of existing resource"
         ],
         "correctOption": 2,
-        "points": 30
+        "points": 20
     },
     {
         "id": 285,
         "question": "Which scenario best fits the PATCH method?",
         "options": [
-            "Uploading a new user profile picture without modifying other user data",
-            "Creating a new order with customer information details and list of items",
-            "Replacing an entire shopping cart with a new list of items",
-            "Fetching the order history for a customer"
+            "Uploading profile picture without changing other data",
+            "Creating new order with customer and items",
+            "Replacing entire shopping cart with new items",
+            "Fetching order history for specific customer"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 286,
-        "question": "A user updates only the delivery address of an existing order without touching other fields. Which HTTP method is most appropriate?",
-        "options": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+        "question":  "If a user updates only delivery address of existing order, which HTTP method should be used?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH"
+        ],
         "correctOption": 3,
-        "points": 30
+        "points": 20
     },
     {
         "id": 287,
-        "question": "The system needs to create a brand new pizza order on the server. Which HTTP method should be used?",
-        "options": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+        "question": "if system needs to create brand new pizza order, which HTTP method should be used?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH"
+        ],
         "correctOption": 1,
-        "points": 30
+        "points": 20
     },
     {
         "id": 288,
-        "question": "An admin replaces the entire pizza menu with a new list of items. Which HTTP method best fits this action?",
-        "options": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+        "question":"if a admin replaces entire pizza menu with new list, which HTTP method should be used?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH"
+        ],
         "correctOption": 2,
-        "points": 30
+        "points": 20
     },
     {
         "id": 289,
-        "question": "A customer wants to view the details of a specific order by its ID. Which HTTP method should be used?",
-        "options": ["GET", "POST", "PUT", "PATCH", "DELETE"],
+        "question":  "If a customer views specific order details by ID, which HTTP method should be used?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH"
+        ],
         "correctOption": 0,
-        "points": 30
+        "points": 10
     },
     {
         "id": 290,
-        "question": "A customer decides to cancel their order and remove it completely from the system. Which HTTP method should be used?",
-        "options": ["GET", "POST", "PUT", "PATCH", "DELETE"],
-        "correctOption": 4,
-        "points": 30
+        "question": "If a customer cancels and removes order completely, which HTTP method should be used?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+        ],
+        "correctOption": 3,
+        "points": 10
     },
     {
         "id": 291,
-        "question": "What defines a pure function in JavaScript?",
+        "question":"What defines a pure function in JavaScript?",
         "options": [
-            "It always returns the same output for the same input",
-            "It can modify variables outside its scope",
-            "It depends on external states like Date or Math.random",
-            "It causes side effects such as DOM manipulation"
+            "Always returns same output for same input",
+            "Can modify variables outside its scope",
+            "Depends on external states like Date.now()",
+            "Causes side effects like DOM manipulation"
         ],
         "correctOption": 0,
         "points": 10
     },
     {
         "id": 292,
-        "question": "Which of the following makes a React component impure?",
+        "question":  "What makes a React component impure?",
         "options": [
             "Using props to render UI",
-            "Returning JSX consistently",
-            "Receiving children elements",
+            "Returning JSX consistently from component",
+            "Receiving children elements ",
             "Fetching data directly inside render",
         ],
         "correctOption": 3,
-        "points": 10
+        "points": 20
     },
     {
         "id": 293,
-        "question": "Why is it important for functions passed to useMemo or useCallback to be pure?",
+        "question":  "Why should functions in useMemo be pure?",
         "options": [
-            "Because impure functions are automatically memoized",
-            "Because impure functions may return inconsistent results",
-            "Because pure functions cannot accept arguments",
-            "Because useMemo only works with asynchronous functions"
+            "Impure functions are automatically memoized",
+            "Pure functions cannot accept any arguments",
+            "Impure functions may return conflicting results",
+            "useMemo only works with async functions"
         ],
-        "correctOption": 1,
-        "points": 10
+        "correctOption": 2,
+        "points": 20
     },
     {
         "id": 294,
-        "question": "Which action would break the purity of a React reducer?",
+        "question": "What breaks the purity of a Redux reducer?",
         "options": [
-            "Returning a new state object",
-            "Logging a message to the console",
-            "Spreading the previous state into a new one",
-            "Calculating the sum of two numbers"
+            "Returning new state object from reducer",
+            "Spreading previous state into new one",
+            "Calculating sum of two numbers",
+            "Logging message to console from reducer"
         ],
-        "correctOption": 1,
-        "points": 10
+        "correctOption": 3,
+        "points": 20
     },
     {
         "id": 295,
@@ -3409,11 +3434,11 @@ export const mockQuestions: Question[] = [
             "Keep derived values permanently stored in state"
         ],
         "correctOption": 2,
-        "points": 10
+        "points": 20
     },
     {
         "id": 296,
-        "question": "Why is normalization recommended in Redux state design?",
+        "question": "Why is normalization recommended in Redux state?",
         "options": [
             "It makes state harder to update consistently",
             "It ensures all data is stored in nested objects",
@@ -3423,39 +3448,50 @@ export const mockQuestions: Question[] = [
         "correctOption": 3,
         "points": 20
     },
-
+    {
+        "id": 297,
+        "question": "Why prefer React Query over fetch with useEffect?",
+        "options": [
+            "eliminates the need for backend APIs",
+            "automatically handles caching, refetching, and background updates",
+            "replaces Redux for all state management including local state",
+            "converts all API responses into static HTML automatically"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
     {
         "id": 298,
-        "question": "Why do we need frameworks like React instead of using only vanilla JavaScript?",
+        "question": "Why do we need frameworks like React?",
         "options": [
-            "Because JavaScript does not support DOM manipulation",
-            "Because vanilla JavaScript cannot work with APIs",
-            "Because frameworks make state management and UI updates easier in complex apps",
-            "Because frameworks replace JavaScript with a different language"
+            "JavaScript cannot support DOM manipulation",
+            "Vanilla JavaScript cannot work with APIs",
+            "Frameworks make state management easier in complex apps",
+            "Frameworks replace JavaScript with different language"
         ],
         "correctOption": 2,
         "points": 10
     },
     {
         "id": 299,
-        "question": "Which of the following is a key advantage of using React over vanilla JavaScript for building large applications?",
+        "question": "ٌWhat's a key advantage of React over vanilla JavaScript?",
         "options": [
-            "React directly modifies the DOM for faster rendering",
-            "React removes the need for event handling in JavaScript",
-            "React introduces the Virtual DOM for efficient updates and predictable rendering",
-            "React automatically converts CSS into JavaScript functions"
+            "React directly modifies DOM for speed",
+            "React removes need for event handling",
+            "React introduces Virtual DOM for efficiency",
+            "React converts CSS into JavaScript functions"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
         "id": 300,
-        "question": "Why is component-based architecture in frameworks like React preferred over writing all UI logic in vanilla JavaScript?",
+        "question": "Why prefer component-based architecture over vanilla JavaScript?",
         "options": [
-            "Because components allow code reuse, isolation, and easier testing",
-            "Because components remove the need for JavaScript functions entirely",
-            "Because vanilla JavaScript cannot handle conditional rendering",
-            "Because React components automatically generate database queries"
+            "Components allow reuse, isolation, and testing",
+            "Components remove need for JavaScript functions",
+            "Vanilla JavaScript cannot handle conditional rendering",
+            "Components automatically generate database queries"
         ],
         "correctOption": 0,
         "points": 30
@@ -3496,7 +3532,18 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 10
     },
-
+    {
+        "id": 304,
+        "question": "What is React Query mainly used for?",
+        "options": [
+            "To style React components with CSS-in-JS",
+            "To manage server state like fetching, caching, and synchronizing data",
+            "To replace React’s useState and useReducer for local state management",
+            "To build UI components without writing JSX"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
     {
         "id": 305,
         "question": "Why do modern web applications often use front-end frameworks like React or Vue?",
@@ -3679,6 +3726,522 @@ export const mockQuestions: Question[] = [
         options: ["Dynamic Routes", "Nested Routes", "Protected Routes", "Route Guards"],
         correctOption: 1,
         points: 20,
+    },
+    {
+        "id": 322,
+        "question": "Which of the following describes a key advantage of React Query in large applications?",
+        "options": [
+            "It ensures server state is cached, synchronized, and kept up-to-date across multiple components",
+            "It prevents components from re-rendering by removing dependency arrays",
+            "It compiles React code into server-side JavaScript automatically",
+            "It makes React applications independent of REST or GraphQL APIs"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 323,
+        "question": "Why is caching important in React Query?",
+        "options": [
+            "Because it prevents storing any data in memory",
+            "Because it allows data to be reused without refetching from the server every time",
+            "Because it replaces the need for state hooks like useState",
+            "Because it automatically generates UI components"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 324,
+        "question": "What is one main advantage of caching in React Query compared to using plain fetch calls?",
+        "options": [
+            "Cached data allows faster UI updates and reduces unnecessary network requests",
+            "Caching removes the need for APIs in web applications",
+            "Caching only stores styles for components, not data",
+            "Cached data replaces the need for useEffect entirely"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 325,
+        "question": "How does caching in React Query improve both performance and user experience?",
+        "options": [
+            "By keeping previously fetched data available instantly, while background refetch ensures data freshness",
+            "By forcing the UI to reload from scratch whenever new data is fetched",
+            "By completely preventing re-renders in all React components",
+            "By converting API responses into static HTML during build time"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 326,
+        "question": "In React Query, what does 'staleTime' define?",
+        "options": [
+            "How long cached data is considered fresh before React Query refetches it",
+            "How long React Query keeps inactive queries in memory",
+            "How often React Query clears localStorage",
+            "How many components can subscribe to the same query"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 327,
+        "question": "What is the difference between 'staleTime' and 'cacheTime' in React Query?",
+        "options": [
+            "staleTime controls freshness of data, cacheTime controls how long unused data stays in memory",
+            "staleTime deletes data permanently, cacheTime saves it forever",
+            "staleTime is for server updates, cacheTime is for local state updates",
+            "staleTime only applies to mutations, cacheTime only applies to queries"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 328,
+        "question": "Why would you increase the 'staleTime' value for certain queries in a React Query app?",
+        "options": [
+            "To reduce unnecessary background refetches when the data is unlikely to change frequently",
+            "To force React Query to clear all queries instantly after fetching",
+            "To ensure queries are removed from the cache as soon as a component unmounts",
+            "To automatically generate new API endpoints without developer input"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 329,
+        "question": "What does the useQuery hook from React Query return?",
+        "options": [
+            "Only the fetched data",
+            "An object containing the query state like data, isLoading, isError, and more",
+            "A function that must be manually called to fetch data",
+            "Only the error object if the request fails"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 330,
+        "question": "Which of the following is NOT typically included in the object returned by useQuery?",
+        "options": [
+            "data",
+            "isLoading",
+            "mutate",
+            "isError"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 331,
+        "question": "How does React Query’s useQuery output help improve UI responsiveness?",
+        "options": [
+            "By exposing query states like isLoading and isFetching, allowing the UI to react instantly to data-fetching changes",
+            "By automatically converting all data into static HTML at build time",
+            "By preventing components from re-rendering after data changes",
+            "By replacing the need for client-side state management libraries entirely"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 332,
+        "question": "What is Strapi primarily used for?",
+        "options": [
+            "Building frontend UI components",
+            "Managing and exposing content through APIs as a headless CMS",
+            "Optimizing bundle size in React applications",
+            "Handling client-side routing"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 333,
+        "question": "Which of the following is a key feature of Strapi?",
+        "options": [
+            "It provides built-in API generation with REST and GraphQL support",
+            "It replaces React state management libraries like Redux",
+            "It only works with serverless databases",
+            "It automatically generates frontend components"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 334,
+        "question": "Why is Strapi often preferred over traditional CMS platforms like WordPress in modern web development?",
+        "options": [
+            "Because it allows complete control over backend and API customization while remaining frontend-agnostic",
+            "Because it comes with a pre-built frontend theme system",
+            "Because it does not require authentication for any API requests",
+            "Because it only supports static site generation"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 335,
+        "question": "What is the main difference between running Strapi in development mode vs production mode?",
+        "options": [
+            "Development mode is for building and testing locally, while production mode is for running on a live server",
+            "Development mode provides better security than production mode",
+            "Production mode allows hot-reloading just like development mode",
+            "There is no real difference; both modes work the same"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 336,
+        "question": "Which of the following is TRUE about Strapi in production?",
+        "options": [
+            "It typically uses a persistent database like PostgreSQL or MySQL instead of SQLite",
+            "It always runs with hot-reload enabled",
+            "It does not require authentication for admin users",
+            "It can only run on localhost"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 337,
+        "question": "Why is it important to configure environment variables and reverse proxies (e.g., Nginx) when deploying Strapi to production?",
+        "options": [
+            "To ensure security, scalability, and proper performance handling for real-world traffic",
+            "To enable Strapi to automatically generate frontend components",
+            "To allow Strapi to run without a database connection",
+            "To bypass the need for user authentication in the admin panel"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 338,
+        "question": "Which feature of Strapi allows you to define data models visually without writing SQL?",
+        "options": [
+            "Content-Type Builder",
+            "GraphQL Playground",
+            "Database Seeding",
+            "Role Manager"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 339,
+        "question": "Which of the following can be managed through Strapi’s built-in Admin Panel?",
+        "options": [
+            "Content entries, user roles, and permissions",
+            "React component styling",
+            "Webpack configuration",
+            "Bundle size optimization"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 340,
+        "question": "How does Strapi expose content to be consumed by frontend applications?",
+        "options": [
+            "Through automatically generated REST and GraphQL APIs",
+            "By rendering static HTML pages",
+            "By exporting JSON files directly to the filesystem",
+            "Through WebSockets only"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 341,
+        "question": "In production, why is it recommended to replace the default SQLite database in Strapi?",
+        "options": [
+            "Because SQLite is not optimized for concurrency and scaling with high traffic",
+            "Because SQLite does not allow authentication",
+            "Because SQLite automatically deletes old records",
+            "Because SQLite is only supported in Windows OS"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 342,
+        "question": "Which method can be used to extend Strapi’s functionality beyond its core features?",
+        "options": [
+            "By creating custom plugins",
+            "By installing Redux middleware",
+            "By writing CSS modules",
+            "By using only environment variables"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 343,
+        "question": "Why is Strapi considered 'frontend-agnostic'?",
+        "options": [
+            "Because it provides data via APIs that can be consumed by any frontend framework or library",
+            "Because it comes with built-in frontend templates",
+            "Because it can only be used with React and Next.js",
+            "Because it does not support backend customization"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 344,
+        "question": "How does Strapi handle user authentication and role-based permissions?",
+        "options": [
+            "It has a built-in authentication system with customizable roles and policies",
+            "It requires third-party services like Auth0 to be installed by default",
+            "It uses only frontend session cookies with no backend validation",
+            "It stores all roles directly inside localStorage"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 345,
+        "question": "Why is using environment variables critical when deploying Strapi to production?",
+        "options": [
+            "To keep sensitive information like database credentials and API keys secure",
+            "To automatically generate GraphQL queries",
+            "To control React component rendering",
+            "To enable hot-reloading in production"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 346,
+        "question": "Why do we run Strapi in production mode instead of development mode?",
+        "options": [
+            "Because production mode is optimized for performance, security, and stability in live environments",
+            "Because production mode allows hot-reloading of content types during development",
+            "Because production mode uses a local SQLite database by default",
+            "Because production mode removes the need for any authentication"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 347,
+        "question": "Which of the following is a key benefit of using Strapi in production mode?",
+        "options": [
+            "Better scalability and the ability to handle concurrent requests more reliably",
+            "Automatic creation of frontend UI components",
+            "Unlimited admin accounts without authentication",
+            "Skipping database configuration entirely"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 348,
+        "question": "Why is it risky to keep Strapi running in development mode on a live server?",
+        "options": [
+            "Because development mode includes hot-reloading and weaker security settings that are unsuitable for production traffic",
+            "Because development mode prevents any content creation",
+            "Because development mode only supports GraphQL but not REST",
+            "Because development mode deletes all environment variables automatically"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 349,
+        "question": "Why is it risky to keep Strapi running in development mode on a live server?",
+        "options": [
+            "Because development mode includes hot-reloading and weaker security settings that are unsuitable for production traffic",
+            "Because development mode prevents any content creation",
+            "Because development mode only supports GraphQL but not REST",
+            "Because development mode deletes all environment variables automatically"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 350,
+        "question": "How does React Query keep data in sync with the server?",
+        "options": [
+            "By automatically refetching data in the background when queries become stale",
+            "By manually refreshing the page on every request",
+            "By storing data permanently in localStorage",
+            "By blocking UI updates until all API calls are finished"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 351,
+        "question": "Which mechanism allows React Query to keep cached data fresh without blocking the UI?",
+        "options": [
+            "Stale-while-revalidate strategy (show cached data, then refetch in background)",
+            "Server-side rendering only",
+            "Long polling on every state change",
+            "Manual refetching triggered by a button click"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 352,
+        "question": "Why is React Query considered efficient in synchronizing data with the server?",
+        "options": [
+            "Because it combines cache states, background refetching, and dependency-based updates to avoid unnecessary network requests",
+            "Because it always bypasses the cache and forces a fresh API call",
+            "Because it synchronizes data only once when the app starts",
+            "Because it mirrors the server database directly inside the client’s memory"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 353,
+        "question": "What does 'prefetching' data in React Query mean?",
+        "options": [
+            "Fetching data in advance before the component needs it",
+            "Fetching data only after the component renders",
+            "Deleting old cached data",
+            "Blocking UI until all data is fetched"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 354,
+        "question": "Why is prefetching useful in React Query?",
+        "options": [
+            "Because it reduces perceived loading time and makes the UI more responsive",
+            "Because it automatically writes data to localStorage",
+            "Because it removes the need for a backend API",
+            "Because it disables caching for the fetched data"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 355,
+        "question": "Which statement correctly describes how prefetching works in React Query?",
+        "options": [
+            "Prefetching loads and caches the data in advance, so when a component uses useQuery with the same key, the data is immediately available",
+            "Prefetching disables caching and forces a refetch every time the component mounts",
+            "Prefetching automatically converts data into static HTML",
+            "Prefetching prevents the component from ever re-rendering"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 356,
+        "question": "What is the primary purpose of a mutation in React Query?",
+        "options": [
+            "To create, update, or delete server data",
+            "To read cached server data only",
+            "To render React components",
+            "To automatically generate CSS styles"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 357,
+        "question": "Which React Query hook is used to perform mutations?",
+        "options": [
+            "useMutation",
+            "useQuery",
+            "useEffect",
+            "useState"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 358,
+        "question": "Why is it recommended to use mutation callbacks like onSuccess or onError in React Query?",
+        "options": [
+            "To update the cache or trigger side effects after the mutation succeeds or fails",
+            "To automatically convert mutations into queries",
+            "To prevent any UI updates after mutation",
+            "To disable caching permanently"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 359,
+        "question": "What does offline support in React Query allow?",
+        "options": [
+            "Queuing mutations and applying them once the network is available",
+            "Preventing any server communication permanently",
+            "Automatically reloading the page when offline",
+            "Converting all queries into static files"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 360,
+        "question": "How can React Query ensure a smooth user experience when the app is offline?",
+        "options": [
+            "By showing cached data and queuing mutations to run later",
+            "By disabling the UI completely",
+            "By preventing any query from being fetched again",
+            "By converting API calls into synchronous calls"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 361,
+        "question": "Which combination makes offline-first behavior effective in React Query?",
+        "options": [
+            "Caching, background refetching, and queuing mutations until network is available",
+            "Disabling staleTime and cacheTime permanently",
+            "Only using useState for server state",
+            "Deleting all cache whenever the app reconnects"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 362,
+        "question": "Why is React Query important for managing server data in React apps?",
+        "options": [
+            "Because it simplifies fetching, caching, and keeping server data in sync automatically",
+            "Because it replaces React’s useState and useEffect for local state only",
+            "Because it automatically generates frontend components",
+            "Because it disables network requests entirely"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 363,
+        "question": "Which of the following problems does React Query help solve in React applications?",
+        "options": [
+            "Avoiding redundant network requests and keeping multiple components synchronized with server data",
+            "Automatically styling components without CSS",
+            "Replacing the need for all backend APIs",
+            "Making React apps run without state management"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 364,
+        "question": "Why might a complex React app be difficult to manage without React Query?",
+        "options": [
+            "Because manually handling caching, background refetch, and synchronization across multiple components is error-prone and cumbersome",
+            "Because React Query is required to write JSX",
+            "Because it prevents any component from re-rendering",
+            "Because it automatically converts REST APIs to GraphQL"
+        ],
+        "correctOption": 0,
+        "points": 30
     },
 
 
