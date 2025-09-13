@@ -4243,6 +4243,546 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 30
     },
+    {
+        "id": 365,
+        "question": "What is the main difference between useQuery and useMutation in React Query?",
+        "options": [
+            "useQuery is used for data fetching, while useMutation is used for creating/updating/deleting data",
+            "useQuery only works with GraphQL, while useMutation only works with REST APIs",
+            "useQuery updates data automatically without cache, while useMutation only stores data locally",
+            "useQuery requires Redux, while useMutation works without state management"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 366,
+        "question": "Which hook in React Query is primarily used for fetching and caching server data?",
+        "options": [
+            "useMutation",
+            "useReducer",
+            "useQuery",
+            "useEffect"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 367,
+        "question": "In React Query, what happens if you provide the same queryKey to multiple useQuery hooks?",
+        "options": [
+            "Each query runs separately without caching",
+            "React Query shares the cached data between them",
+            "It causes an error and crashes the app",
+            "Only the first query executes, others are ignored"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 368,
+        "question": "Which of the following is a recommended pattern when using useQuery to prevent unnecessary network requests?",
+        "options": [
+            "Use a unique queryKey for each query and enable caching",
+            "Disable caching entirely for better performance",
+            "Wrap useQuery inside useEffect",
+            "Always refetch data manually instead of relying on cache"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 369,
+        "question": "Which of the following is a recommended pattern when using useQuery to prevent unnecessary network requests?",
+        "options": [
+            "Use a unique queryKey for each query and enable caching",
+            "Disable caching entirely for better performance",
+            "Wrap useQuery inside useEffect",
+            "Always refetch data manually instead of relying on cache"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 370,
+        "question": "Which hook is used in React Query to handle creating, updating, or deleting data on the server?",
+        "options": [
+            "useQuery",
+            "useMutation",
+            "useReducer",
+            "useState"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 371,
+        "question": "After a successful mutation, what is the recommended way to update cached queries in React Query?",
+        "options": [
+            "Manually reloading the page",
+            "Invalidating or updating relevant query keys",
+            "Resetting React state with useState",
+            "Running the same mutation again"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 372,
+        "question": "Which of the following is TRUE about useMutation compared to useQuery?",
+        "options": [
+            "useMutation is synchronous while useQuery is asynchronous",
+            "useMutation can only be used with GraphQL APIs",
+            "useMutation does not run automatically, it must be triggered manually",
+            "useMutation cannot handle error states"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+            {
+            "id": 373,
+            "question": "What is the primary purpose of the queryKey in useQuery?",
+            "options": [
+                "To provide a unique identifier for caching and refetching",
+                "To define the API endpoint URL",
+                "To specify the loading spinner type",
+                "To determine the mutation success callback"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 374,
+            "question": "In React Query, what is the difference between staleTime and cacheTime?",
+            "options": [
+                "staleTime controls how long data is considered fresh, while cacheTime controls how long inactive data stays in memory",
+                "staleTime defines retry attempts, while cacheTime defines error persistence",
+                "Both represent the same concept of cache duration",
+                "staleTime is only used in mutations, cacheTime only in queries"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 375,
+            "question": "How can you prevent a useQuery from automatically running when the component mounts?",
+            "options": [
+                "By removing queryKey",
+                "By using useMutation instead",
+                "By disabling React StrictMode",
+                "By setting enabled: false in the query options",
+            ],
+            "correctOption":3,
+            "points": 10
+        },
+        {
+            "id": 376,
+            "question": "Which callback in useMutation is best suited for updating the cache after a successful mutation?",
+            "options": ["onSettled", "onMutate", "onSuccess", "onError"],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 377,
+            "question": "Why are optimistic updates useful in useMutation?",
+            "options": [
+                "They retry failed requests automatically",
+                "They update the UI immediately before receiving a server response",
+                "They prevent memory leaks",
+                "They keep query keys unique"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 378,
+            "question": "Which React Query function is commonly used inside a mutation's onSuccess callback to refresh relevant queries?",
+            "options": ["resetQueries", "refetchQueries", "cancelQueries", "invalidateQueries"],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 379,
+            "question": "What happens when multiple queries are dependent in React Query?",
+            "options": [
+                "They run in parallel regardless of dependency",
+                "The next query waits until the previous one has data",
+                "All queries are cached under the same queryKey",
+                "Dependent queries are not supported in React Query"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 380,
+            "question": "Which tool helps visualize query and mutation states during development in React Query?",
+            "options": ["Redux DevTools", "React Query Devtools", "React Profiler", "Apollo Studio"],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 381,
+            "question": "What does useQuery return in case of an error?",
+            "options": [
+                "Only null data",
+                "An error object along with isError: true",
+                "Throws a JavaScript exception",
+                "Nothing is returned"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 382,
+            "question": "Which option in useQuery allows background data synchronization at regular intervals?",
+            "options": ["cacheTime", "refetchInterval", "retry", "keepPreviousData"],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 383,
+            "question": "What is the purpose of the onMutate callback in useMutation?",
+            "options": [
+                "It rolls back the optimistic update if mutation fails",
+                "It is called before the mutation function and is useful for optimistic updates",
+                "It clears the query cache",
+                "It retries the mutation on network failure"
+            ],
+            "correctOption": 1,
+            "points": 25
+        },
+        {
+            "id": 384,
+            "question": "How can you roll back an optimistic update if a mutation fails?",
+            "options": [
+                "By returning a rollback function from onMutate and calling it inside onError",
+                "By using invalidateQueries",
+                "By disabling cacheTime",
+                "By catching the error in useQuery"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 385,
+            "question": "Which option in useQuery is helpful when implementing pagination to avoid showing a blank state while fetching new data?",
+            "options": ["enabled", "refetchOnWindowFocus", "keepPreviousData", "retry"],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 386,
+            "question": "How does React Query ensure consistency between server and client after a mutation?",
+            "options": [
+                "By reloading the browser window",
+                "By automatically invalidating all queries",
+                "By using invalidateQueries or manually refetching affected queries",
+                "By clearing the entire cache"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 387,
+            "question": "What is query invalidation in React Query?",
+            "options": [
+                "Marking queries as stale so they refetch fresh data",
+                "Deleting all cached data permanently",
+                "Resetting query keys",
+                "Pausing queries until enabled again"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 388,
+            "question": "In React Query, what does hydrate/dehydrate refer to?",
+            "options": [
+                "Saving and restoring cached query state for server-side rendering",
+                "Synchronizing queries with Redux",
+                "Exporting query data to JSON files",
+                "Clearing memory leaks during refetch"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 389,
+            "question": "What is the primary purpose of React Hook Form?",
+            "options": [
+                "To manage server-side data fetching",
+                "To simplify form state management and validation",
+                "To create animations in React",
+                "To manage global application state"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 390,
+            "question": "Which hook is used to initialize a form in React Hook Form?",
+            "options": [
+                "useState",
+                "useForm",
+                "useController",
+                "useReducer"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 391,
+            "question": "In React Hook Form, what does the 'register' function do?",
+            "options": [
+                "It submits the form data to the server",
+                "It resets all form fields",
+                "It connects input fields to the form state and validation",
+                "It triggers re-rendering of the form"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 392,
+            "question": "Which function in React Hook Form is responsible for handling form submission?",
+            "options": [
+                "useSubmit",
+                "submitForm",
+                "handleSubmit",
+                "onSubmitHandler"
+            ],
+            "correctOption":2,
+            "points": 10
+        },
+        {
+            "id": 393,
+            "question": "How can you apply validation rules such as 'required' or 'minLength' in React Hook Form?",
+            "options": [
+                "By adding attributes directly to the input element",
+                "By wrapping input in a Validation component",
+                "By passing an options object to the register function",
+                "By using useValidation hook"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 394,
+            "question": "What does the 'errors' object returned by useForm represent?",
+            "options": [
+                "A list of server-side API errors",
+                "Runtime errors during form rendering",
+                "Validation errors for form fields",
+                "React component errors"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 395,
+            "question": "Why is React Hook Form considered performant compared to other form libraries?",
+            "options": [
+                "It automatically fetches data from APIs",
+                "It reduces re-renders by isolating component reactivity",
+                "It compiles forms into WebAssembly",
+                "It disables validation to improve speed"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 396,
+            "question": "Which hook should you use to control custom components (like a date picker) in React Hook Form?",
+            "options": [
+                "useController",
+                "useFormContext",
+                "useCustomInput",
+                "useReducer"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 397,
+            "question": "Which method lets you programmatically update a field’s value?",
+            "options": [
+                "updateField",
+                "setValue",
+                "patch",
+                "replaceValue"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 398,
+            "question": "What problem does useController solve?",
+            "options": [
+                "Integrating controlled components with React Hook Form",
+                "Handling async validation",
+                "Improving form styling",
+                "Fetching form data from APIs"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 399,
+            "question": "Why does React Hook Form rely primarily on uncontrolled inputs?",
+            "options": [
+                "Because uncontrolled inputs reduce re-renders and improve performance",
+                "Because controlled inputs are not supported in React",
+                "Because uncontrolled inputs automatically validate themselves",
+                "Because uncontrolled inputs are easier to style"
+            ],
+            "correctOption": 0,
+            "points": 25
+        },
+        {
+            "id": 400,
+            "question": "Which option best describes the role of resolvers in React Hook Form?",
+            "options": [
+                "They provide schema-based validation (e.g., Yup, Zod)",
+                "They handle async form submissions",
+                "They manage form context across components",
+                "They improve rendering performance"
+            ],
+            "correctOption": 0,
+            "points": 25
+        },
+        {
+            "id": 401,
+            "question": "Which hook would you use to read the current value of a field without subscribing to its updates?",
+            "options": [
+                "getValues",
+                "watch",
+                "setValue",
+                "trigger"
+            ],
+            "correctOption": 0,
+            "points": 25
+        },
+        {
+            "id": 402,
+            "question": "How can you implement async validation, such as checking if a username already exists?",
+            "options": [
+                "By using an async resolver or providing an async validate function in register",
+                "By using watch with a useEffect",
+                "By wrapping inputs in FormProvider",
+                "By manually calling setValue in onChange"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 403,
+            "question": "What is one key performance advantage of React Hook Form compared to Formik?",
+            "options": [
+                "React Hook Form uses uncontrolled inputs and refs, leading to fewer re-renders",
+                "Formik automatically caches all inputs in Redux",
+                "React Hook Form ships smaller bundle size but causes more re-renders",
+                "Formik doesn’t support validation"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+    {
+        "id": 404,
+        "question": "What is the primary purpose of the useForm hook in React Hook Form?",
+        "options": [
+            "To handle component lifecycle methods",
+            "To register input fields and manage form state",
+            "To create global state across components",
+            "To render conditional UI"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 405,
+        "question": "Which prop must be applied to an input field for React Hook Form to track its value?",
+        "options": [
+            "onChange",
+            "value",
+            "register",
+            "ref"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 406,
+        "question": "What does the handleSubmit function return?",
+        "options": [
+            "A callback that validates form inputs and triggers your submit handler",
+            "The final form values as an object",
+            "A reset function",
+            "Nothing, it just re-renders"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 407,
+        "question": "How can you provide default values to a form?",
+        "options": [
+            "By passing a defaultValues object to useForm",
+            "By setting the value attribute directly on inputs",
+            "By calling reset after rendering",
+            "By wrapping inputs in FormProvider"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 408,
+        "question": "Which hook allows you to subscribe to changes in specific form fields?",
+        "options": [
+            "useEffect",
+            "watch",
+            "useFormContext",
+            "trigger"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 409,
+        "question": "What is the main use of FormProvider and useFormContext?",
+        "options": [
+            "To style forms globally",
+            "To share form state across deeply nested components",
+            "To reset form values",
+            "To connect multiple forms together"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 410,
+        "question": "Which method is used to manually trigger validation for one or more fields?",
+        "options": [
+            "reset",
+            "validate",
+            "trigger",
+            "checkValidity"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 411,
+        "question": "How do you reset all fields in a form to their initial values?",
+        "options": [
+            "resetForm()",
+            "reset()",
+            "clear()",
+            "resetFields()"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+
 
 
 ]
