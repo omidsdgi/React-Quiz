@@ -4782,7 +4782,89 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20
     },
-
-
+        {
+            "id": 412,
+            "question": "In TanStack Query, which option should you set to 'false' to prevent a query from automatically running when the component mounts?",
+            "options": [
+                "`enabled`",
+                "`refetchOnMount`",
+                "`refetchIntervalOnMount`",
+                "`retry`"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 413,
+            "question": "Which TanStack Query option controls whether a query should refetch when the browser window regains focus?",
+            "options": [
+                "`enabled`",
+                "`refetchOnWindowFocus`",
+                "`refetchOnMount`",
+                "`refetchInterval`"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 414,
+            "question": "You want your query to poll data every 10 seconds, even when the browser tab is in the background. Which combination of options should you use?",
+            "options": [
+                "`refetchInterval: 10000` and `refetchIntervalInBackground: true`",
+                "`refetchOnWindowFocus: true` and `refetchInterval: 10000`",
+                "`enabled: true` and `refetchOnMount: always`",
+                "`retry: 3` and `refetchIntervalOnMount: true`"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 415,
+            "question": "In TanStack Query, what does the `refetchIntervalOnMount` option control?",
+            "options": [
+                "Whether a query should start polling immediately when the component mounts",
+                "Whether queries are refetched when the window regains focus",
+                "How many retries should be attempted on failure",
+                "Whether query data is considered fresh or stale"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+    {
+        "id": 416,
+        "question": "In TanStack Query, when cached data becomes stale, what happens?",
+        "options": [
+            "The cached data is automatically deleted from memory",
+            "The query state updates to 'stale' and developers can run custom functions or effects",
+            "The query immediately refetches data regardless of settings",
+            "All queries in the cache are reset"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 417,
+        "question": "Why is TanStack Query considered a state management library?",
+        "options": [
+            "Because it allows direct modification of React component state",
+            "Because it manages server state, caching, and keeps it in sync with the UI",
+            "Because it replaces Redux for all local state management",
+            "Because it automatically generates forms from API data"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 418,
+        "question": "Which combination of options allows polling of server data at a fixed interval even when the tab is in the background?",
+        "options": [
+            "`refetchInterval: 5000` and `refetchIntervalInBackground: true`",
+            "`staleTime: 0` and `enabled: true`",
+            "`cacheTime: 10000` and `refetchOnWindowFocus: true`",
+            "`retry: 3` and `refetchOnMount: false`"
+        ],
+        "correctOption": 0,
+        "points": 20
+    }
 
 ]
