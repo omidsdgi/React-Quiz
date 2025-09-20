@@ -116,7 +116,7 @@ export function StartScreen({ numQuestions, dispatch, state }: StartScreenProps)
                                 onChange={(e) => {
                                     const inputValue = e.target.value;
                                     if (inputValue === '') {
-                                        return; 
+                                        return;
                                     }
                                     const value = parseInt(inputValue);
                                     if (!isNaN(value)) {

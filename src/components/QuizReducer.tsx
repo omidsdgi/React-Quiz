@@ -76,7 +76,8 @@ export function QuizReducer(state:QuizState,action:Action):QuizState {
             return {
                 ...initialState,
                 highScore: state.highScore,
-                availableQuestions: state.availableQuestions
+                availableQuestions: state.availableQuestions,
+                status:"ready"
             }
         case "tick":
             return {
