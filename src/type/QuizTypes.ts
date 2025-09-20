@@ -1,28 +1,35 @@
 import React from "react";
-import {Action} from "@/components";
 
-export type Question ={
-    id: number;
+export interface Question {
+    id: string | number;
     question: string;
     options: string[];
     correctOption: number;
-    points:number
+    points: number;
 }
 
 export type QuizStatus= "loading" | "error" | "ready" | "active" | "finished"
 
-export type QuizState ={
+export interface QuizState {
     questions: Question[];
-    status: QuizStatus;
+    status: "loading" | "error" | "ready" | "active" | "finished";
     index: number;
-    answer: number |null;
-    points:number;
-    highScore:number;
-    secondsRemaining:number | null;
+    answer: number | null;
+    points: number;
+    highScore: number;
+    secondsRemaining: number | null;
+    selectedLevel: "fundamental" | "intermediate" | "advanced" | null;
+    availableQuestions: {
+        fundamental: Question[];
+        intermediate: Question[];
+        advanced: Question[];
+    };
 }
+
 export interface StartScreenProps {
     numQuestions: number;
     dispatch: React.Dispatch<Action>;
+    state: QuizState;
 }
 
 export interface QuestionnaireProps {
@@ -66,3 +73,14 @@ export interface FinishScreenProps {
     dispatch: React.Dispatch<Action>;
 }
 
+export type Action =
+    | { type: "dataReceived"; payload: Question[] }
+    | { type: "dataFailed" }
+    | { type: "start" }
+    | { type: "newAnswer"; payload: number }
+    | { type: "nextQuestion" }
+    | { type: "finish" }
+    | { type: "restart" }
+    | { type: "tick" }
+    | { type: "selectLevel"; payload: "fundamental" | "intermediate" | "advanced" }
+    | { type: "selectRange"; payload: { level: "fundamental" | "intermediate" | "advanced"; startIndex: number; endIndex: number } };

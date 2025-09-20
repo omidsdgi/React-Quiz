@@ -668,3 +668,991 @@ progress {
     border: 2px solid var(--color-accent-dark) !important;
   }
 }
+
+@import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
+:root {
+  --color-darkest: #343a40;
+  --color-dark: #495057;
+  --color-medium: #ced4da;
+  --color-light: #f1f3f5;
+
+  --color-theme: #1098ad;
+  --color-accent: #ffa94d;
+  --color-accent-dark: #c76819;
+
+  /* Bootstrap-like primary color */
+  --color-primary: #0d6efd;
+  --color-primary-hover: #0b5ed7;
+
+  /* Bootstrap info color for timer */
+  --color-info: #0dcaf0;
+  --color-info-hover: #31d2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-light);
+  background-color: var(--color-darkest);
+  padding: 3.2rem;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  html {
+    font-size: 55%; /* Slightly smaller base font for mobile */
+  }
+
+  body {
+    padding: 1.6rem; /* Reduce padding on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 50%; /* Even smaller for very small screens */
+  }
+
+  body {
+    padding: 1.2rem;
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  max-width: 50rem;
+  width: 100%; /* Ensure full width on mobile */
+}
+
+.app-header {
+  max-width: 66rem;
+  width: 100%;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Mobile header adjustments */
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+}
+
+.error {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 2rem;
+  background-color: #495057;
+  border-radius: 100px;
+}
+
+/* Mobile error adjustments */
+@media (max-width: 480px) {
+  .error {
+    padding: 1.5rem;
+    font-size: 1.4rem;
+    border-radius: 20px;
+  }
+}
+
+img {
+  width: 14rem;
+  height: auto; /* حفظ نسبت تصویر */
+  max-height: 10rem; /* محدود کردن ارتفاع */
+  object-fit: contain; /* حفظ نسبت بدون کشیدگی */
+}
+
+/* Mobile image adjustments */
+@media (max-width: 768px) {
+  img {
+    width: 12rem;
+    max-height: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  img {
+    width: 10rem;
+    max-height: 6rem;
+  }
+}
+
+h1 {
+  font-family:"Codystar";
+  font-size: 5.6rem;
+}
+
+/* Mobile heading adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-size: 3.6rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 768px) {
+  h3 {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+h4 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 768px) {
+  h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center; /* وسط‌چین کردن متن */
+}
+
+/* Mobile start section adjustments */
+@media (max-width: 480px) {
+  .start {
+    padding: 0 1rem; /* اضافه کردن padding در موبایل */
+  }
+}
+
+.progress {
+  margin-bottom: 4rem;
+  display: grid;
+  justify-content: space-between;
+  gap: 1.2rem;
+  grid-template-columns: auto auto;
+  font-size: 1.8rem;
+  color: var(--color-medium);
+}
+
+/* Mobile progress adjustments */
+@media (max-width: 768px) {
+  .progress {
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .progress {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    gap: 0.8rem;
+  }
+}
+
+progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  grid-column: 1 / -1;
+}
+
+/* Mobile progress bar adjustments */
+@media (max-width: 480px) {
+  progress {
+    height: 10px;
+  }
+}
+
+::-webkit-progress-bar {
+  background-color: var(--color-medium);
+  border-radius: 100px;
+}
+
+::-webkit-progress-value {
+  background-color: var(--color-theme);
+  border-radius: 100px;
+}
+
+.btn {
+  display: block;
+  font-family: inherit;
+  color: var(--color-light);
+  font-size: 2rem;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s;
+  touch-action: manipulation; /* Better touch response */
+  min-height: 44px; /* Minimum touch target size */
+}
+
+/* Mobile button adjustments */
+@media (max-width: 768px) {
+  .btn {
+    font-size: 1.8rem;
+    padding: 1.4rem 2rem;
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    font-size: 1.6rem;
+    padding: 1.6rem 2rem;
+    min-height: 52px;
+    border-radius: 12px;
+  }
+}
+
+.btn:not([disabled]):hover {
+  background-color: var(--color-darkest);
+}
+
+/* Mobile hover effects - disable on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .btn:not([disabled]):hover {
+    background-color: var(--color-dark);
+  }
+
+  .btn-option:not([disabled]):hover {
+    transform: none;
+  }
+}
+
+.btn-option:not([disabled]):hover {
+  transform: translateX(1.2rem);
+}
+
+/* Mobile transform adjustment */
+@media (max-width: 480px) {
+  .btn-option:not([disabled]):hover {
+    transform: translateX(0.8rem);
+  }
+}
+
+.btn[disabled]:hover {
+  cursor: not-allowed;
+}
+
+.btn-ui {
+  float: right;
+  background-color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important;
+  color: white !important;
+}
+
+.btn-ui:not([disabled]):hover {
+  background-color: var(--color-primary-hover) !important;
+  border: 2px solid var(--color-primary-hover) !important;
+}
+
+/* Mobile UI button adjustments */
+@media (max-width: 768px) {
+  .btn-ui {
+    float: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+/* Disable hover effects on touch devices for UI buttons */
+@media (hover: none) and (pointer: coarse) {
+  .btn-ui:not([disabled]):hover {
+    background-color: var(--color-primary) !important;
+    border: 2px solid var(--color-primary) !important;
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 3.2rem;
+}
+
+/* Mobile options adjustments */
+@media (max-width: 768px) {
+  .options {
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .options {
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.btn-option {
+  width: 100%;
+  text-align: left;
+}
+
+.btn-option.correct {
+  background-color: var(--color-theme);
+  border: 2px solid var(--color-theme);
+  color: var(--color-light);
+}
+
+.btn-option.wrong {
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: var(--color-darkest);
+}
+
+.answer {
+  transform: translateX(2rem);
+}
+
+/* Mobile answer adjustment */
+@media (max-width: 480px) {
+  .answer {
+    transform: translateX(1rem);
+  }
+}
+
+.result {
+  background-color: var(--color-theme);
+  color: var(--color-light);
+  border-radius: 100px;
+  text-align: center;
+  padding: 2rem 8rem;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+
+/* Mobile result adjustments */
+@media (max-width: 768px) {
+  .result {
+    padding: 2rem 4rem;
+    font-size: 1.8rem;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .result {
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    border-radius: 20px;
+  }
+}
+
+.result span {
+  font-size: 2.2rem;
+  margin-right: 4px;
+}
+
+/* Mobile result span adjustments */
+@media (max-width: 768px) {
+  .result span {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .result span {
+    font-size: 1.8rem;
+    margin-right: 2px;
+  }
+}
+
+.highscore {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+/* Mobile highscore adjustments */
+@media (max-width: 768px) {
+  .highscore {
+    font-size: 1.6rem;
+    margin-bottom: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .highscore {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 1.6rem;
+  color: var(--color-medium);
+  font-size: 1.4rem;
+}
+
+/* Mobile loader adjustments */
+@media (max-width: 768px) {
+  .loader-container {
+    margin-top: 3rem;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .loader-container {
+    margin-top: 2rem;
+    gap: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+.timer {
+  float: left;
+  font-size: 1.8rem;
+  color: var(--color-darkest);
+  background-color: var(--color-info);
+  border: 2px solid var(--color-info);
+  padding: 1.35rem 2.8rem;
+  border-radius: 100px;
+  font-weight: 500;
+}
+
+/* Mobile timer adjustments */
+@media (max-width: 768px) {
+  .timer {
+    font-size: 1.6rem;
+    padding: 1.2rem 2.4rem;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer {
+    float: none;
+    font-size: 1.4rem;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* CREDIT: https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
+.loader {
+  width: 50px;
+  height: 24px;
+  background: radial-gradient(circle closest-side, currentColor 90%, #0000) 0%
+  50%,
+  radial-gradient(circle closest-side, currentColor 90%, #0000) 50% 50%,
+  radial-gradient(circle closest-side, currentColor 90%, #0000) 100% 50%;
+  background-size: calc(100% / 3) 12px;
+  background-repeat: no-repeat;
+  animation: loader 1s infinite linear;
+}
+
+/* Mobile loader size adjustment */
+@media (max-width: 480px) {
+  .loader {
+    width: 40px;
+    height: 20px;
+    background-size: calc(100% / 3) 10px;
+  }
+}
+
+@keyframes loader {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}
+
+/* ********** */
+/* First counter example */
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 6rem;
+}
+
+/* Mobile counter adjustments */
+@media (max-width: 768px) {
+  .counter {
+    margin: 4rem 2rem;
+    font-size: 1.8rem;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .counter {
+    margin: 3rem 1rem;
+    font-size: 1.6rem;
+    gap: 0.6rem;
+  }
+}
+
+.counter * {
+  font-size: inherit;
+  padding: 0.8rem;
+}
+
+/* Mobile counter elements adjustments */
+@media (max-width: 480px) {
+  .counter * {
+    padding: 0.6rem;
+  }
+}
+
+.level-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  margin: 2rem 0;
+}
+
+/* Mobile level buttons adjustments */
+@media (max-width: 768px) {
+  .level-buttons {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .level-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+}
+
+.btn-level {
+  background-color: var(--color-accent-dark);
+  border: 2px solid var(--color-accent-dark);
+  color: #0a0a0a;
+}
+
+/* Mobile level button adjustments */
+@media (max-width: 480px) {
+  .btn-level {
+    width: 100%;
+    min-height: 52px;
+  }
+}
+
+.btn-level:hover {
+  background-color: var(--color-accent) !important;
+  border: 2px solid var(--color-accent) !important;
+}
+
+/* Disable hover effects on touch devices for level buttons */
+@media (hover: none) and (pointer: coarse) {
+  .btn-level:hover {
+    background-color: var(--color-accent-dark) !important;
+    border: 2px solid var(--color-accent-dark) !important;
+  }
+}
+
+/* Range selection styles */
+.range-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.range-input-group {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.range-input-group label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.6rem;
+  color: var(--color-light);
+}
+
+.range-input {
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  border: 2px solid var(--color-medium);
+  border-radius: 8px;
+  background-color: var(--color-light);
+  color: var(--color-darkest);
+  width: 100px;
+  text-align: center;
+}
+
+.range-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.range-info {
+  font-size: 1.8rem;
+  color: var(--color-info);
+  font-weight: 500;
+}
+
+.range-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.selected-info, .instruction {
+  font-size: 1.6rem;
+  color: var(--color-medium);
+  margin-bottom: 2rem;
+}
+
+.selected-info {
+  color: var(--color-info);
+  font-weight: 500;
+}
+
+.level-count {
+  display: block;
+  font-size: 1.2rem;
+  opacity: 0.8;
+  margin-top: 0.4rem;
+}
+
+/* Level list styles - modern card-based design */
+.level-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.level-card {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--color-dark), var(--color-darkest));
+  border: 2px solid var(--color-medium);
+  border-radius: 12px;
+  padding: 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.level-card:hover:not(.disabled) {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(13, 110, 253, 0.15);
+}
+
+.level-card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: var(--color-dark);
+}
+
+.level-card.disabled:hover {
+  transform: none;
+  border-color: var(--color-medium);
+  box-shadow: none;
+}
+
+.level-icon {
+  font-size: 3rem;
+  margin-right: 2rem;
+  min-width: 4rem;
+  text-align: center;
+}
+
+.level-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.level-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.level-header h4 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: var(--color-light);
+}
+
+.level-difficulty {
+  background: var(--color-info);
+  color: var(--color-darkest);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.level-description {
+  font-size: 1.4rem;
+  color: var(--color-medium);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.level-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.level-count, .level-points {
+  font-size: 1.3rem;
+  color: var(--color-info);
+  font-weight: 500;
+}
+
+.level-arrow {
+  font-size: 2rem;
+  color: var(--color-medium);
+  margin-left: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.level-card:hover:not(.disabled) .level-arrow {
+  transform: translateX(5px);
+  color: var(--color-primary);
+}
+
+/* Selected level info in range selection */
+.level-info-selected {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-info));
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+  color: white;
+}
+
+.level-info-selected .level-icon {
+  font-size: 3.5rem;
+  margin-right: 2rem;
+}
+
+.level-info-selected .level-details h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2.4rem;
+}
+
+.level-info-selected .level-details p {
+  margin: 0;
+  font-size: 1.4rem;
+  opacity: 0.9;
+}
+
+.level-stats {
+  font-size: 1.3rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+}
+
+/* Start quiz button enhancement */
+.start-quiz-btn {
+  margin-top: 3rem;
+  font-size: 2.2rem;
+  padding: 1.5rem 3rem;
+  background: linear-gradient(135deg, var(--color-primary), #0b5ed7);
+  border: none;
+  box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+}
+
+.start-quiz-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 110, 253, 0.4);
+}
+
+/* Mobile responsive for level cards */
+@media (max-width: 768px) {
+  .level-list {
+    gap: 1.2rem;
+    margin: 2rem 0;
+  }
+
+  .level-card {
+    padding: 1.5rem;
+  }
+
+  .level-icon {
+    font-size: 2.5rem;
+    margin-right: 1.5rem;
+    min-width: 3rem;
+  }
+
+  .level-header h4 {
+    font-size: 1.9rem;
+  }
+
+  .level-difficulty {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .level-description {
+    font-size: 1.3rem;
+  }
+
+  .level-stats {
+    gap: 1.5rem;
+  }
+
+  .level-info-selected {
+    padding: 1.5rem;
+  }
+
+  .level-info-selected .level-icon {
+    font-size: 3rem;
+    margin-right: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .level-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .level-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+  }
+
+  .level-header {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  .level-header h4 {
+    font-size: 1.8rem;
+  }
+
+  .level-stats {
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .level-arrow {
+    display: none;
+  }
+
+  .level-info-selected {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .level-info-selected .level-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .start-quiz-btn {
+    font-size: 1.8rem;
+    padding: 1.3rem 2rem;
+    margin-top: 2rem;
+  }
+}

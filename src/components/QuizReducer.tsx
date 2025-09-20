@@ -1,18 +1,9 @@
-import { QuizState,Question,} from "../type/QuizTypes";
+import {QuizState, Question, Action,} from "../type/QuizTypes";
 import {mockQuestions} from "../mock/mockQuestions";
 
-export type Action =
-    | { type: "dataReceived"; payload: Question[] }
-    | { type: "dataFailed" }
-    | { type: "start" }
-    | { type: "newAnswer"; payload: number }
-    | { type: "nextQuestion" }
-    | { type: "finish" }
-    | { type: "restart" }
-    | { type: "tick" }
-    | { type: "selectLevel"; payload: "fundamental" | "intermediate" | "advanced" };
 
 export const SEC_PER_QUESTION=30
+
 export const initialState :QuizState= {
     questions:[],
     status:"loading",
@@ -20,7 +11,23 @@ export const initialState :QuizState= {
     answer:null,
     points:0,
     highScore:0,
-    secondsRemaining:null
+    secondsRemaining:null,
+    selectedLevel: null,
+    availableQuestions: {
+        fundamental: mockQuestions.filter(q => q.points === 10),
+        intermediate: mockQuestions.filter(q => q.points === 20),
+        advanced: mockQuestions.filter(q => q.points === 30)
+    }
+}
+
+function getQuestionsByLevel(level: "fundamental" | "intermediate" | "advanced"): Question[] {
+    const pointsMap = {
+        fundamental: 10,
+        intermediate: 20,
+        advanced: 30
+    };
+
+    return mockQuestions.filter(q => q.points === pointsMap[level]);
 }
 
 export function QuizReducer(state:QuizState,action:Action):QuizState {
@@ -48,7 +55,7 @@ export function QuizReducer(state:QuizState,action:Action):QuizState {
                 ...state,
                 answer:action.payload,
                 points:action.payload === question?.correctOption
-                    ? state.points +question.points
+                    ? state.points +(question.points ||0)
                     :state.points,
             }
             case "nextQuestion":
@@ -68,29 +75,42 @@ export function QuizReducer(state:QuizState,action:Action):QuizState {
         case "restart":
             return {
                 ...initialState,
-                questions:state.questions,
-            status:"ready"
+                highScore: state.highScore,
+                availableQuestions: state.availableQuestions
             }
         case "tick":
             return {
                 ...state,
-                secondsRemaining:(state.secondsRemaining  && state.secondsRemaining- 1) ,
-                status:state.secondsRemaining === 0 ? "finished" : state.status,
+                secondsRemaining:state.secondsRemaining  ? state.secondsRemaining- 1 : 0 ,
+                status:state.secondsRemaining === 1 ? "finished" : state.status,
             }
-            case "selectLevel":
-                let filtered:Question[]=[]
-                if(action.payload === "fundamental"){
-                    filtered=mockQuestions.filter(q=>q.points ===10)
-                }else if(action.payload === "intermediate"){
-                    filtered=mockQuestions.filter(q=>q.points ===20)
-                }else if(action.payload === "advanced"){
-                    filtered=mockQuestions.filter(q=>q.points ===30)
-                }
-                return {
-                    ...state,
-                    questions:filtered,
-                    status:"ready",
-                }
+        case "selectLevel":
+            const filtered = getQuestionsByLevel(action.payload);
+            return {
+                ...state,
+                questions: filtered,
+                status: "ready",
+                selectedLevel: action.payload,
+                index: 0,
+                answer: null,
+                points: 0
+            };
+
+        case "selectRange":
+            const { level, startIndex, endIndex } = action.payload;
+            const levelQuestions = getQuestionsByLevel(level);
+            const selectedQuestions = levelQuestions.slice(startIndex - 1, endIndex);
+
+
+            return {
+                ...state,
+                questions: selectedQuestions,
+                status: "ready",
+                selectedLevel: level,
+                index: 0,
+                answer: null,
+                points: 0
+            };
         default:
             throw new Error("Unknown action type");
     }
