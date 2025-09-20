@@ -3498,264 +3498,274 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 301,
-        "question": "What was jQuery primarily used for in front-end development?",
+        "question":"What was jQuery primarily designed to accomplish?",
         "options": [
-            "To manage server-side state in databases",
-            "To simplify DOM manipulation, event handling, and AJAX requests",
-            "To replace HTML and CSS entirely",
-            "To compile JavaScript into machine code"
+            "Managing server-side database connections",
+            "simplify DOM manipulation and event handling",
+            "Replacing HTML markup with JavaScript syntax",
+            "Compiling JavaScript into optimized machine code"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
         "id": 302,
-        "question": "Which of the following best describes a limitation of jQuery that led to the rise of modern frameworks like React?",
+        "question":  "What jQuery limitation led to modern framework adoption?",
         "options": [
-            "jQuery did not allow DOM manipulation or event handling",
-            "jQuery lacked structured state management and component-based architecture",
-            "jQuery could not run in modern browsers",
-            "jQuery automatically converted JavaScript into server-side code"
+            "jQuery prevented DOM manipulation capabilities",
+            "jQuery converted code to server-side automatically",
+            "jQuery didn't provide structured state management patterns",
+            "jQuery could not execute in modern browsers",
         ],
-        "correctOption": 1,
+        "correctOption": 2,
         "points": 30
     },
     {
         "id": 303,
-        "question": "What is a web application?",
+        "question": "How is a web application different from a desktop application?",
         "options": [
-            "A software program that runs entirely on a user’s local machine without internet",
-            "A software application that runs on a web server and is accessed through a browser",
-            "A static website with only HTML and CSS",
-            "A desktop application that does not require a browser"
+            "Web applications run on servers and accessed via browsers",
+            "Web applications execute entirely on local machines",
+            "Web applications contain only static HTML content",
+            "Web applications require no browser for execution"
         ],
         "correctOption": 0,
         "points": 10
     },
     {
         "id": 304,
-        "question": "What is React Query mainly used for?",
+        "question":  "What is React Query's primary responsibility?",
         "options": [
-            "To style React components with CSS-in-JS",
-            "To manage server state like fetching, caching, and synchronizing data",
-            "To replace React’s useState and useReducer for local state management",
-            "To build UI components without writing JSX"
+            "Styling React components with CSS-in-JS",
+            "Managing server state including fetch and cache",
+            "Replacing useState hooks for local state",
+            "Building UI components without JSX syntax"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
         "id": 305,
-        "question": "Why do modern web applications often use front-end frameworks like React or Vue?",
+        "question": "Why do modern applications use front-end frameworks?",
         "options": [
-            "To convert all HTML into server-side scripts automatically",
-            "To simplify building interactive UIs, managing state, and optimizing performance",
-            "To remove the need for any backend server",
-            "To replace CSS with JavaScript for styling"
+            "Converting HTML into server scripts automatically",
+            "Simplifying interactive UI and state management",
+            "Eliminating need for backend server infrastructure",
+            "Replacing CSS with JavaScript styling approaches"
         ],
         "correctOption": 1,
         "points": 30
     },
     {
         "id": 306,
-        "question": "What is the main difference between a web page and a web application?",
+        "question":  "What distinguishes web applications from web pages?",
         "options": [
-            "Web pages allow full user interaction while web applications are static",
-            "Web pages require a server, but web applications do not",
-            "Web applications allow user interaction and dynamic behavior, while web pages are mostly static",
-            "Web applications are always offline, web pages are always online"
+            "Pages allow user interaction, apps are static",
+            "Pages require servers, apps work offline",
+            "Applications enable interaction, pages display content",
+            "Applications work offline, pages need internet"
         ],
         "correctOption": 2,
         "points": 10
     },
 
     {
-        "id": 308,
-        "question": "Why would you use a front-end framework like React for a web application but not necessarily for a simple web page?",
+        "id": 307,
+        "question": "When is React beneficial over plain HTML/CSS/JS?",
         "options": [
-            "Because React helps manage dynamic UI, state, and user interactions efficiently in complex applications",
-            "Because React converts static HTML into server-side scripts automatically",
-            "Because React removes the need for CSS and HTML entirely",
-            "Because React is only needed for web pages without server communication"
+            "React manages complex UI state and interactions efficiently",
+            "React converts HTML into server-side scripts automatically",
+            "React eliminates the need for CSS styling",
+            "React works only for pages without servers"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
-        "id": 309,
-        "question": "What does it mean that the user interface needs to stay in sync with data?",
+        "id": 308,
+        "question": "What does keeping UI synchronized with data mean?",
         "options": [
-            "The data should never change to avoid UI updates",
-            "The UI should only update when the page reloads",
-            "The UI should be manually updated by modifying HTML elements directly",
-            "The UI should automatically reflect changes in the underlying data or state",
+            "Data should remain static to avoid updates",
+            "UI should update only during page refreshes",
+            "UI elements should be manually updated",
+            "UI should automatically reflect current data state"
         ],
         "correctOption": 3,
         "points": 10
     },
     {
-        "id": 310,
-        "question": "Which of the following ensures that the UI stays in sync with the underlying data in React?",
+        "id": 309,
+        "question": "How does React maintain UI-data synchronization?",
         "options": [
-            "Directly manipulating DOM elements with vanilla JavaScript",
-            "Using state variables and re-rendering components when state changes",
+            "Directly manipulating DOM with vanilla JavaScript",
+            "Using state variables and triggering re-renders",
             "Using global variables without state management",
-            "Refreshing the page after every data change"
+            "Refreshing entire page after each change"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
-        "id": 311,
-        "question": "Why is it important for a user interface to stay in sync with data in modern web applications?",
+        "id": 310,
+        "question":  "Why is UI-data synchronization crucial in applications?",
         "options": [
-            "To ensure the UI always displays accurate and up-to-date information to the user",
-            "To make the application load faster by preventing any state updates",
-            "To avoid using React or other frameworks entirely",
-            "To cache all previous data states permanently without updating the UI"
+            "Ensures users see accurate and current information",
+            "Makes applications load faster by preventing updates",
+            "Allows avoiding React or similar frameworks",
+            "Caches old data without updating interface"
         ],
         "correctOption": 0,
-        "points": 30
+        "points": 20
     },
     {
-        "id": 312,
-        "question": "What is DOM traversing in JavaScript?",
+        "id": 311,
+        "question": "What does DOM traversal enable in JavaScript?",
         "options": [
-            "Creating new DOM elements from scratch",
-            "Sending HTTP requests to the server",
-            "Navigating and accessing existing elements in the DOM tree",
-            "Compiling JavaScript code to machine code"
+            "Creating entirely new DOM elements",
+            "Sending HTTP requests to server endpoints",
+            "Navigating and accessing existing DOM elements",
+            "Compiling JavaScript code to machine language"
         ],
         "correctOption": 2,
         "points": 10
     },
     {
-        "id": 313,
-        "question": "Why did developers widely adopt jQuery in the past?",
+        "id": 312,
+        "question": "What made jQuery popular among developers?",
         "options": [
-            "It replaced JavaScript as the programming language in browsers",
-            "It automatically optimized web performance without coding",
-            "It removed the need for CSS styling in web pages",
-            "It provided cross-browser compatibility and simplified common JavaScript tasks",
+            "Replaced JavaScript as browser language",
+            "Automatically optimized web performance",
+            "Eliminated need for CSS styling",
+            "Provided cross-browser support for common DOM tasks"
         ],
         "correctOption":3,
         "points": 20
     },
     {
-        "id": 314,
-        "question": "What is React?",
+        "id": 313,
+        "question": "How would you best describe React?",
         "options": [
-            "A declarative, component-based, state-driven JavaScript library for building user interfaces",
-            "A full-featured JavaScript framework with built-in routing and state management",
-            "A CSS utility framework for creating responsive designs quickly",
-            "A server-side runtime environment for executing JavaScript outside the browser"
+            "declarative, component-based, state-driven JavaScript library for building UIs",
+            "full-featured JavaScript framework with built-in routing and state management",
+            "CSS utility framework for creating responsive designs quickly",
+            "server-side runtime environment for executing JavaScript outside the browser"
         ],
         "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 314,
+        "question":"What characterizes declarative programming in React?",
+        "options": [
+            "You manually update DOM elements step-by-step",
+            "You write CSS classes for component styling",
+            "You specify what the UI should look like",
+            "You use server-side rendering for HTML"
+        ],
+        "correctOption": 2,
         "points": 20
     },
     {
         "id": 315,
-        "question": "What does 'declarative' mean in the context of React?",
+        "question":  "How does imperative differ from declarative programming?",
         "options": [
-            "You specify *what* the UI should look like, not *how* to update it",
-            "You manually update the DOM step by step for every change",
-            "You write CSS classes to style the components",
-            "You use server-side rendering to generate HTML before sending it to the client"
+            "You provide step-by-step instructions for execution",
+            "You only declare what UI should display",
+            "You style components using utility-first CSS",
+            "You let frameworks handle all DOM updates"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
         "id": 316,
-        "question": "What does 'imperative' mean in programming, especially compared to declarative in React?",
+        "question":"What role do case reducers play in Redux Toolkit?",
         "options": [
-            "You give step-by-step instructions on *how* to perform tasks",
-            "You only declare *what* the UI should look like",
-            "You style components using utility-first CSS classes",
-            "You let the framework automatically handle all DOM updates"
+            "They replace Redux store with local state",
+            "They automatically fetch data from external APIs",
+            "They style components using predefined CSS classes",
+            "They define how state changes for specific actions",
         ],
-        "correctOption": 0,
+        "correctOption": 3,
         "points": 20
     },
     {
-        "id": 317,
-        "question": "In Redux Toolkit, what is the role of case reducers in a slice?",
+        id: 317,
+        question: "What programming approach does React Router follow?",
         "options": [
-            "They define how the state should change in response to specific actions",
-            "They automatically fetch data from APIs",
-            "They style components using CSS classes",
-            "They replace the Redux store with a local state"
+            "Imperative programming with manual DOM updates",
+            "Declarative programming with component-based routing",
+            "Procedural programming with sequential execution",
+            "Functional programming with pure function composition"
         ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
-        id: 318,
-        question: "Which approach does React Router primarily use to define routes?",
-        options: ["Imperative", "Declarative", "Procedural", "Functional"],
         correctOption: 1,
         points: 20,
     },
     {
+        id: 318,
+        question:  "Which route definition works best for large projects?",
+        "options": [
+            "Route objects with createBrowserRouter configuration",
+            "JSX route definitions inside Routes components",
+            "Dynamic routes for all page components",
+            "Protected routes for authentication handling"
+        ],
+        correctOption: 0,
+        points: 20,
+    },
+    {
         id: 319,
-        question: "For a large project with multiple layouts, which route definition method is most appropriate?",
-        options: [
-            "Defining routes with JSX inside <Routes>",
-            "Using Route Objects (createBrowserRouter)",
-            "Using Dynamic Routes",
-            "Using Protected Routes",
+        question:"How do Navigate and useNavigate differ?",
+        "options": [
+            "Navigate works with objects, useNavigate with JSX",
+            "Navigate is declarative, useNavigate is imperative",
+            "They provide identical functionality and behavior",
+            "Neither component is used for navigation"
         ],
         correctOption: 1,
         points: 20,
     },
     {
         id: 320,
-        question: "What is the main difference between <Navigate> and useNavigate()?",
-        options: [
-            "<Navigate> is declarative, useNavigate() is imperative",
-            "<Navigate> only works with route objects, useNavigate() only works with JSX",
-            "They behave exactly the same",
-            "Neither is used for navigation",
+        question: "For layouts with fixed header/footer, which feature helps?",
+        "options": [
+            "Dynamic routes for different content sections",
+            "Nested routes for hierarchical layout structure",
+            "Protected routes for user authentication",
+            "Route guards for access control management"
         ],
-        correctOption: 0,
-        points: 20,
-    },
-    {
-        id: 321,
-        question: "If you have a layout with a fixed Header and Footer where the content in the middle changes, which React Router feature should you use?",
-        options: ["Dynamic Routes", "Nested Routes", "Protected Routes", "Route Guards"],
         correctOption: 1,
         points: 20,
     },
     {
-        "id": 322,
-        "question": "Which of the following describes a key advantage of React Query in large applications?",
+        "id": 321,
+        "question":"What advantage does React Query provide in large apps?",
         "options": [
-            "It ensures server state is cached, synchronized, and kept up-to-date across multiple components",
-            "It prevents components from re-rendering by removing dependency arrays",
-            "It compiles React code into server-side JavaScript automatically",
-            "It makes React applications independent of REST or GraphQL APIs"
+            "Server state caching and synchronization across components",
+            "Prevents re-rendering by removing dependency arrays",
+            "Compiles React code into server-side JavaScript",
+            "Makes applications independent of REST APIs"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
-        "id": 323,
-        "question": "Why is caching important in React Query?",
+        "id": 322,
+        "question":  "Why is caching valuable in React Query?",
         "options": [
-            "Because it prevents storing any data in memory",
-            "Because it allows data to be reused without refetching from the server every time",
-            "Because it replaces the need for state hooks like useState",
-            "Because it automatically generates UI components"
+            "Prevents storing any data in memory",
+            "Allows data reuse without repeated server requests",
+            "Replaces need for hooks like useState",
+            "Automatically generates UI components for display"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
-        "id": 324,
-        "question": "What is one main advantage of caching in React Query compared to using plain fetch calls?",
+        "id": 323,
+        "question":"How does caching improve performance over plain fetch?",
         "options": [
-            "Cached data allows faster UI updates and reduces unnecessary network requests",
+            "Cached data enables faster UI updates and reduces unnecessary network requests",
             "Caching removes the need for APIs in web applications",
             "Caching only stores styles for components, not data",
             "Cached data replaces the need for useEffect entirely"
@@ -3764,343 +3774,176 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 325,
-        "question": "How does caching in React Query improve both performance and user experience?",
+        "id": 324,
+        "question":  "How does React Query caching enhance user experience?",
         "options": [
-            "By keeping previously fetched data available instantly, while background refetch ensures data freshness",
-            "By forcing the UI to reload from scratch whenever new data is fetched",
-            "By completely preventing re-renders in all React components",
-            "By converting API responses into static HTML during build time"
+            "forces the UI to reload from scratch whenever new data is fetched",
+            "completely prevents re-renders in all React components",
+            "Keeps data instantly available while ensuring freshness",
+            "converts API responses into static HTML during build time"
         ],
-        "correctOption": 0,
+        "correctOption": 2,
         "points": 30
     },
     {
-        "id": 326,
-        "question": "In React Query, what does 'staleTime' define?",
+        "id": 325,
+        "question":  "What does staleTime control in React Query?",
         "options": [
-            "How long cached data is considered fresh before React Query refetches it",
-            "How long React Query keeps inactive queries in memory",
+            "How long inactive queries stay in memory",
             "How often React Query clears localStorage",
-            "How many components can subscribe to the same query"
+            "How many components can subscribe to queries",
+            "How long data remains fresh before refetching",
         ],
-        "correctOption": 0,
+        "correctOption": 3,
         "points": 10
     },
     {
-        "id": 327,
+        "id": 326,
         "question": "What is the difference between 'staleTime' and 'cacheTime' in React Query?",
         "options": [
-            "staleTime controls freshness of data, cacheTime controls how long unused data stays in memory",
+            "staleTime controls freshness, cacheTime controls memory duration",
+            "staleTime controls data freshness, while cacheTime controls cache duration",
             "staleTime deletes data permanently, cacheTime saves it forever",
             "staleTime is for server updates, cacheTime is for local state updates",
             "staleTime only applies to mutations, cacheTime only applies to queries"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 20
     },
     {
-        "id": 328,
-        "question": "Why would you increase the 'staleTime' value for certain queries in a React Query app?",
+        "id": 327,
+        "question": "When would you increase staleTime for queries?",
         "options": [
-            "To reduce unnecessary background refetches when the data is unlikely to change frequently",
-            "To force React Query to clear all queries instantly after fetching",
-            "To ensure queries are removed from the cache as soon as a component unmounts",
-            "To automatically generate new API endpoints without developer input"
+            "To reduce unnecessary refetches for stable data",
+            "To force React Query to clear queries instantly",
+            "To remove queries from cache when unmounting",
+            "To automatically generate new API endpoints"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
-        "id": 329,
-        "question": "What does the useQuery hook from React Query return?",
+        "id": 328,
+        "question": "What does useQuery hook return to components?",
         "options": [
-            "Only the fetched data",
-            "An object containing the query state like data, isLoading, isError, and more",
+            "Only the fetched data from server",
             "A function that must be manually called to fetch data",
+            "Query state object with data, loading, error",
             "Only the error object if the request fails"
         ],
-        "correctOption": 1,
+        "correctOption": 2,
         "points": 10
     },
     {
-        "id": 330,
-        "question": "Which of the following is NOT typically included in the object returned by useQuery?",
+        "id": 329,
+        "question":  "Which property is NOT in useQuery return object?",
         "options": [
-            "data",
-            "isLoading",
-            "mutate",
-            "isError"
+            "data property containing fetched information",
+            "isLoading boolean indicating fetch status",
+            "mutate function for triggering updates",
+            "isError boolean indicating failure state"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 331,
-        "question": "How does React Query’s useQuery output help improve UI responsiveness?",
+        "id": 330,
+        "question":"How does useQuery output improve UI responsiveness?",
         "options": [
-            "By exposing query states like isLoading and isFetching, allowing the UI to react instantly to data-fetching changes",
-            "By automatically converting all data into static HTML at build time",
-            "By preventing components from re-rendering after data changes",
-            "By replacing the need for client-side state management libraries entirely"
+            "Exposes states like isLoading and isFetching for instant UI reactions",
+            "automatically converting all data into static HTML at build time",
+            "prevents components from re-rendering after data changes",
+            "replacing the need for client-side state management libraries entirely"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
-        "id": 332,
-        "question": "What is Strapi primarily used for?",
+        "id": 331,
+        "question": "What is Strapi's primary function?",
         "options": [
-            "Building frontend UI components",
-            "Managing and exposing content through APIs as a headless CMS",
+            "Building frontend UI component libraries",
+            "Managing content and exposing APIs as CMS",
             "Optimizing bundle size in React applications",
-            "Handling client-side routing"
+            "Handling client-side routing and navigation"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
-        "id": 333,
-        "question": "Which of the following is a key feature of Strapi?",
+        "id": 332,
+        "question": "Which feature distinguishes Strapi from traditional CMS?",
         "options": [
-            "It provides built-in API generation with REST and GraphQL support",
-            "It replaces React state management libraries like Redux",
-            "It only works with serverless databases",
-            "It automatically generates frontend components"
+            "Provides automatic API generation with REST/GraphQL",
+            "Replaces React state management libraries completely",
+            "Works exclusively with serverless databases",
+            "Automatically generates frontend components for display"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
-        "id": 334,
-        "question": "Why is Strapi often preferred over traditional CMS platforms like WordPress in modern web development?",
+        "id": 333,
+        "question":  "Why choose Strapi over WordPress for modern development?",
         "options": [
-            "Because it allows complete control over backend and API customization while remaining frontend-agnostic",
-            "Because it comes with a pre-built frontend theme system",
-            "Because it does not require authentication for any API requests",
-            "Because it only supports static site generation"
+            "Allows complete backend control while staying frontend-agnostic",
+            "comes with a pre-built frontend theme system",
+            "requires no authentication for any API requests",
+            " only supports static site generation"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
-        "id": 335,
-        "question": "What is the main difference between running Strapi in development mode vs production mode?",
+        "id": 334,
+        "question": "What differs between Strapi development and production modes?",
         "options": [
-            "Development mode is for building and testing locally, while production mode is for running on a live server",
-            "Development mode provides better security than production mode",
-            "Production mode allows hot-reloading just like development mode",
-            "There is no real difference; both modes work the same"
+            "Development provides better security than production",
+            "Production allows hot-reloading like development mode",
+            "Development for local testing, production for live servers",
+            "Both modes function identically in all aspects"
+        ],
+        "correctOption":2,
+        "points": 10
+    },
+    {
+        "id": 335,
+        "question": "How does React Query maintain server synchronization?",
+        "options": [
+            "By automatically refetching stale data in background",
+            "By manually refreshing page on every request",
+            "By storing data permanently in localStorage",
+            "By blocking UI updates until calls finish"
         ],
         "correctOption": 0,
         "points": 10
     },
     {
         "id": 336,
-        "question": "Which of the following is TRUE about Strapi in production?",
+        "question":  "What mechanism keeps React Query cache fresh?",
         "options": [
-            "It typically uses a persistent database like PostgreSQL or MySQL instead of SQLite",
-            "It always runs with hot-reload enabled",
-            "It does not require authentication for admin users",
-            "It can only run on localhost"
+            "Server-side rendering exclusively for updates",
+            "Stale-while-revalidate strategy for background updates",
+            "Manual refetching triggered by button clicks",
+            "Long polling on every state change",
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 20
     },
     {
         "id": 337,
-        "question": "Why is it important to configure environment variables and reverse proxies (e.g., Nginx) when deploying Strapi to production?",
+        "question":"Why is React Query efficient for server synchronization?",
         "options": [
-            "To ensure security, scalability, and proper performance handling for real-world traffic",
-            "To enable Strapi to automatically generate frontend components",
-            "To allow Strapi to run without a database connection",
-            "To bypass the need for user authentication in the admin panel"
+            "Bypasses the cache and forces a fresh API call",
+            "Because it synchronizes data only once when the app starts",
+            "Combines cache, refetch, and dependency updates efficiently",
+            "Mirrors the server database directly inside the client’s memory"
         ],
-        "correctOption": 0,
+        "correctOption":2,
         "points": 30
     },
     {
         "id": 338,
-        "question": "Which feature of Strapi allows you to define data models visually without writing SQL?",
-        "options": [
-            "Content-Type Builder",
-            "GraphQL Playground",
-            "Database Seeding",
-            "Role Manager"
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
-        "id": 339,
-        "question": "Which of the following can be managed through Strapi’s built-in Admin Panel?",
-        "options": [
-            "Content entries, user roles, and permissions",
-            "React component styling",
-            "Webpack configuration",
-            "Bundle size optimization"
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
-        "id": 340,
-        "question": "How does Strapi expose content to be consumed by frontend applications?",
-        "options": [
-            "Through automatically generated REST and GraphQL APIs",
-            "By rendering static HTML pages",
-            "By exporting JSON files directly to the filesystem",
-            "Through WebSockets only"
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
-        "id": 341,
-        "question": "In production, why is it recommended to replace the default SQLite database in Strapi?",
-        "options": [
-            "Because SQLite is not optimized for concurrency and scaling with high traffic",
-            "Because SQLite does not allow authentication",
-            "Because SQLite automatically deletes old records",
-            "Because SQLite is only supported in Windows OS"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 342,
-        "question": "Which method can be used to extend Strapi’s functionality beyond its core features?",
-        "options": [
-            "By creating custom plugins",
-            "By installing Redux middleware",
-            "By writing CSS modules",
-            "By using only environment variables"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 343,
-        "question": "Why is Strapi considered 'frontend-agnostic'?",
-        "options": [
-            "Because it provides data via APIs that can be consumed by any frontend framework or library",
-            "Because it comes with built-in frontend templates",
-            "Because it can only be used with React and Next.js",
-            "Because it does not support backend customization"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 344,
-        "question": "How does Strapi handle user authentication and role-based permissions?",
-        "options": [
-            "It has a built-in authentication system with customizable roles and policies",
-            "It requires third-party services like Auth0 to be installed by default",
-            "It uses only frontend session cookies with no backend validation",
-            "It stores all roles directly inside localStorage"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 345,
-        "question": "Why is using environment variables critical when deploying Strapi to production?",
-        "options": [
-            "To keep sensitive information like database credentials and API keys secure",
-            "To automatically generate GraphQL queries",
-            "To control React component rendering",
-            "To enable hot-reloading in production"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 346,
-        "question": "Why do we run Strapi in production mode instead of development mode?",
-        "options": [
-            "Because production mode is optimized for performance, security, and stability in live environments",
-            "Because production mode allows hot-reloading of content types during development",
-            "Because production mode uses a local SQLite database by default",
-            "Because production mode removes the need for any authentication"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 347,
-        "question": "Which of the following is a key benefit of using Strapi in production mode?",
-        "options": [
-            "Better scalability and the ability to handle concurrent requests more reliably",
-            "Automatic creation of frontend UI components",
-            "Unlimited admin accounts without authentication",
-            "Skipping database configuration entirely"
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
-        "id": 348,
-        "question": "Why is it risky to keep Strapi running in development mode on a live server?",
-        "options": [
-            "Because development mode includes hot-reloading and weaker security settings that are unsuitable for production traffic",
-            "Because development mode prevents any content creation",
-            "Because development mode only supports GraphQL but not REST",
-            "Because development mode deletes all environment variables automatically"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 349,
-        "question": "Why is it risky to keep Strapi running in development mode on a live server?",
-        "options": [
-            "Because development mode includes hot-reloading and weaker security settings that are unsuitable for production traffic",
-            "Because development mode prevents any content creation",
-            "Because development mode only supports GraphQL but not REST",
-            "Because development mode deletes all environment variables automatically"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 350,
-        "question": "How does React Query keep data in sync with the server?",
-        "options": [
-            "By automatically refetching data in the background when queries become stale",
-            "By manually refreshing the page on every request",
-            "By storing data permanently in localStorage",
-            "By blocking UI updates until all API calls are finished"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 351,
-        "question": "Which mechanism allows React Query to keep cached data fresh without blocking the UI?",
-        "options": [
-            "Stale-while-revalidate strategy (show cached data, then refetch in background)",
-            "Server-side rendering only",
-            "Long polling on every state change",
-            "Manual refetching triggered by a button click"
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
-        "id": 352,
-        "question": "Why is React Query considered efficient in synchronizing data with the server?",
-        "options": [
-            "Because it combines cache states, background refetching, and dependency-based updates to avoid unnecessary network requests",
-            "Because it always bypasses the cache and forces a fresh API call",
-            "Because it synchronizes data only once when the app starts",
-            "Because it mirrors the server database directly inside the client’s memory"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 353,
         "question": "What does 'prefetching' data in React Query mean?",
         "options": [
             "Fetching data in advance before the component needs it",
@@ -4112,7 +3955,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 354,
+        "id": 339,
         "question": "Why is prefetching useful in React Query?",
         "options": [
             "Because it reduces perceived loading time and makes the UI more responsive",
@@ -4124,13 +3967,193 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 355,
+        "id": 340,
         "question": "Which statement correctly describes how prefetching works in React Query?",
         "options": [
             "Prefetching loads and caches the data in advance, so when a component uses useQuery with the same key, the data is immediately available",
             "Prefetching disables caching and forces a refetch every time the component mounts",
             "Prefetching automatically converts data into static HTML",
             "Prefetching prevents the component from ever re-rendering"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 341,
+        "question": "What is event bubbling in the DOM?",
+        "options": [
+            "Events travel from target element up to document root",
+            "Events travel from document root down to target element",
+            "Events execute only on the clicked element",
+            "Events prevent all other handlers from executing"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 342,
+        "question": "What is event capturing in the DOM?",
+        "options": [
+            "Events execute only on parent elements",
+            "Events travel from document root down to target element",
+            "Events travel from target element up to ancestors",
+            "Events prevent propagation to child elements"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 343,
+        "question": "In which order do event phases occur?",
+        "options": [
+            "Target phase, bubbling phase, capturing phase",
+            "Bubbling phase, target phase, capturing phase",
+            "Capturing phase, target phase, bubbling phase",
+            "Target phase, capturing phase, bubbling phase"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 344,
+        "question": "How do you register an event listener for capturing phase?",
+        "options": [
+            "element.addEventListener('click', handler, true)",
+            "element.addEventListener('click', handler, false)",
+            "element.addEventListener('click', handler, {bubble: false})",
+            "element.addEventListener('click', handler, {capture: false})"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 345,
+        "question": "What does event.stopPropagation() accomplish?",
+        "options": [
+            "Prevents default browser behavior for events",
+            "Removes all event listeners from element",
+            "Prevents event from continuing through phases",
+            "Triggers event on all parent elements"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 346,
+        "question": "When would you use event capturing over bubbling?",
+        "options": [
+            "When you need to handle events before children",
+            "When you want events to execute on target only",
+            "When you need to prevent all event propagation",
+            "When you want to remove event listeners automatically"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 347,
+        "question": "What happens if you call stopPropagation() during capturing?",
+        "options": [
+            "Event continues to target and bubbling phases",
+            "Event stops and skips target and bubbling phases",
+            "Event jumps directly to bubbling phase",
+            "Event executes on all elements simultaneously"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 348,
+        "question": "How does event delegation utilize event bubbling?",
+        "options": [
+            "Attaches listeners to each individual child element",
+            "Prevents events from reaching parent elements",
+            "Uses parent listener to handle child events",
+            "Creates separate event phases for each element"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 349,
+        "question": "What is event.target in the context of bubbling?",
+        "options": [
+            "The element currently handling the event",
+            "The element where the event originally occurred",
+            "The topmost parent element in hierarchy",
+            "The element that registered the event listener"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 350,
+        "question": "What is event.currentTarget during event propagation?",
+        "options": [
+            "The document root element for all events",
+            "The element where event originally occurred",
+            "The element currently executing event handler",
+            "The element that will handle event next"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 351,
+        "question": "Why is event delegation beneficial for dynamic content?",
+        "options": [
+            "Eliminates need for event listeners on elements",
+            "Handles events for elements added after page load",
+            "Prevents events from propagating to children",
+            "Automatically removes listeners when elements disappear"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 352,
+        "question": "What occurs during the target phase of event propagation?",
+        "options": [
+            "Event travels from document to target element",
+            "Event travels from target element to document",
+            "Event executes handlers registered on target element",
+            "Event stops propagation automatically after execution"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 353,
+        "question": "How can you determine which phase an event is in?",
+        "options": [
+            "Check event.phase property for current phase",
+            "Check event.eventPhase property for current phase",
+            "Compare event.target with event.currentTarget values",
+            "Use event.stopPropagation() to test behavior"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 354,
+        "question": "What happens with multiple listeners on same element?",
+        "options": [
+            "Only the first registered listener executes",
+            "Only the last registered listener executes",
+            "All listeners execute in registration order",
+            "Listeners execute in reverse registration order"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 370,
+        "question": "Can you mix capturing and bubbling listeners on elements?",
+        "options": [
+            "Yes, capturing listeners run first, then bubbling",
+            "No, you must choose one phase per element",
+            "Yes, but bubbling listeners execute first",
+            "No, mixing phases causes JavaScript errors"
         ],
         "correctOption": 0,
         "points": 30
@@ -4865,6 +4888,541 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20
-    }
+    },
+        {
+            "id": 419,
+            "question": "What does CRUD stand for in application development?",
+            "options": [
+                "Create, Read, Update, Delete",
+                "Compute, Render, Upload, Deploy",
+                "Check, Run, Undo, Debug",
+                "Connect, Retry, Update, Deliver"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 420,
+            "question": "Which of the following represents the 'Read' operation in a CRUD system?",
+            "options": [
+                "Adding a new user to the database",
+                "Fetching a list of cabins from Supabase",
+                "Changing a user's password",
+                "Deleting a cabin from the system"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 421,
+            "question": "In the context of React and Supabase, which hook is most commonly used for performing the 'Update' operation in CRUD?",
+            "options": [
+                "useEffect",
+                "useQuery",
+                "useMutation",
+                "useContext"
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+    {
+            "id": 422,
+            "question": "Which CRUD operation is performed when a new record is inserted into a database?",
+            "options": ["Create", "Read", "Update", "Delete"],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 423,
+            "question": "Which CRUD operation is being executed when data is retrieved from an API endpoint?",
+            "options": ["Create", "Read", "Update", "Delete"],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 424,
+            "question": "When modifying an existing user's email address, which CRUD operation is applied?",
+            "options": ["Create", "Read", "Update", "Delete"],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 425,
+            "question": "Which CRUD action is executed when a record is permanently removed from a database?",
+            "options": ["Create", "Read", "Update", "Delete"],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 426,
+            "question": "In React applications, which hook is most suitable for executing Create, Update, or Delete operations?",
+            "options": ["useEffect", "useState", "useMutation", "useContext"],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 427,
+            "question": "Which CRUD operation usually requires invalidating or refetching cached queries in client-side state management libraries?",
+            "options": ["Read", "Create/Update/Delete", "All of them", "None of them"],
+            "correctOption": 1,
+            "points": 25
+        },
+        {
+            "id": 428,
+            "question": "Why is the Update operation often considered more complex than Create in CRUD systems?",
+            "options": [
+                "Because it does not require validation",
+                "Because it must handle both existing and new values correctly",
+                "Because it always deletes old records first",
+                "Because it bypasses state management"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 429,
+            "question": "What does TypeScript mainly add to JavaScript?",
+            "options": [
+                "Server-side rendering capabilities",
+                "Static type checking",
+                "Automatic UI rendering",
+                "Database connectivity"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 430,
+            "question": "Which of the following will TypeScript flag as an error?",
+            "options": [
+                "let age: number = 30;",
+                "age = 40;",
+                "age = 'thirty';",
+                "console.log(age);"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 431,
+            "question": "Why does TypeScript check function parameter types?",
+            "options": [
+                "To optimize runtime performance",
+                "To prevent passing arguments of incorrect type",
+                "To convert JS code to HTML",
+                "To automatically fetch data from APIs"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 432,
+            "question": "Which of these will TypeScript catch?",
+            "options": [
+                "Accessing a property that does not exist on an object",
+                "Logic errors in algorithms",
+                "Network request failures",
+                "CSS styling errors"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 433,
+            "question": "How does TypeScript handle null and undefined in a variable of type string?",
+            "options": [
+                "It automatically converts null to empty string",
+                "It throws a compile-time error if strict mode is enabled",
+                "It ignores the value",
+                "It treats undefined as zero"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 434,
+            "question": "Why is TypeScript considered helpful in large-scale React projects?",
+            "options": [
+                "It reduces runtime type errors and improves developer productivity",
+                "It automatically styles components",
+                "It replaces Redux for state management",
+                "It converts JSX to HTML directly"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 435,
+            "question": "Which TypeScript feature helps prevent passing an incorrect object shape to a function?",
+            "options": [
+                "Interfaces and type annotations",
+                "React hooks",
+                "Async/await",
+                "CSS modules"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 436,
+            "question": "What kind of errors does TypeScript detect before the program runs?",
+            "options": [
+                "Runtime network errors",
+                "Compile-time type errors",
+                "CSS styling mistakes",
+                "User input mistakes"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 437,
+            "question": "Which of the following will TypeScript catch during development, before execution?",
+            "options": [
+                "Accessing a property that does not exist on an object",
+                "Logic errors in a sorting function",
+                "API response failures",
+                "Broken HTML layout"
+            ],
+            "correctOption": 0,
+            "points": 15
+        },
+        {
+            "id": 438,
+            "question": "Why is detecting errors at compile-time useful in large React projects?",
+            "options": [
+                "It prevents runtime crashes and improves code reliability",
+                "It reduces network latency",
+                "It automatically fetches data from APIs",
+                "It generates CSS styles automatically"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 439,
+            "question": "Which scenario is a compile-time error that TypeScript can detect?",
+            "options": [
+                "Calling a function with arguments of incorrect type",
+                "Server not responding to a fetch request",
+                "Button not triggering an event",
+                "User entering wrong credentials"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 440,
+            "question": "Which TypeScript feature ensures errors are detected before runtime?",
+            "options": [
+                "Static type checking",
+                "React hooks",
+                "CSS modules",
+                "Browser dev tools"
+            ],
+            "correctOption": 0,
+            "points": 25
+        },
+    {
+        "id": 441,
+        "question": "At which stage does TypeScript execute its type checks?",
+        "options": [
+            "During runtime in the browser",
+            "During compilation before running the code",
+            "After the code is deployed to production",
+            "When the user interacts with the UI"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 442,
+        "question": "Why is React Hook Form (RHF) popular among React developers?",
+        "options": [
+            "It automatically generates CSS for forms",
+            "It provides easy and performant form state management with minimal re-renders",
+            "It replaces Redux entirely for all state management",
+            "It converts forms to server-side code automatically"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 443,
+        "question": "Why does React Hook Form (RHF) typically trigger fewer re-renders compared to other form libraries?",
+        "options": [
+            "Because it uses uncontrolled components and refs instead of tracking every input state in React state",
+            "Because it automatically batches network requests",
+            "Because it only works with functional components",
+            "Because it converts inputs to server-side variables"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 444,
+        "question": "In React forms, what is a controlled component?",
+        "options": [
+            "A component that handles its own state internally without React",
+            "A component where React state drives the input value and updates on every change",
+            "A component that automatically fetches data from the server",
+            "A component that cannot receive props"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 445,
+        "question": "In React Hook Form, what is the best practice for showing validation errors using field touch state?",
+        "options": [
+            "Always show error messages immediately on component mount",
+            "Use the `touchedFields` state (or `onTouched` event) to display errors only after the user interacts with the field",
+            "Display errors only after the form is submitted",
+            "Manually track input blur events with useState"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 446,
+        "question": "Which is the best practice for showing error messages in React Hook Form?",
+        "options": [
+            "Show all error messages immediately on form mount",
+            "Show errors only after form submission regardless of user interaction",
+            "Use `touchedFields` to show errors after the user interacts with the input",
+            "Manually implement state to track blur events instead of using RHF"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 422,
+        "question": "Why does using `onTouched` improve user experience in forms built with React Hook Form?",
+        "options": [
+            "Because it prevents unnecessary re-renders by skipping validation logic",
+            "Because it ensures error messages are shown only after user interaction, reducing confusion",
+            "Because it disables inputs until the form is submitted",
+            "Because it automatically fixes validation rules without developer effort"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+        {
+            "id": 423,
+            "question": "Why do we use the spread operator (`...register`) when integrating inputs with React Hook Form?",
+            "options": [
+                "Because it copies only the value property of the input",
+                "Because it automatically passes all necessary props like name, onChange, onBlur, and ref to the input",
+                "Because it removes the need to manually define validation rules",
+                "Because it prevents React from re-rendering the input"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 424,
+            "question": "What would happen if you use `register('email')` without the spread operator inside an input?",
+            "options": [
+                "Nothing, the form will still work the same",
+                "It will throw a TypeScript error but work in runtime",
+                "The input will not be connected to the form state because the returned object is not applied to props",
+                "It will automatically infer validation without spreading"
+            ],
+            "correctOption": 2,
+            "points": 25
+        },
+        {
+            "id": 425,
+            "question": "Which of the following best describes what `...register('name', { required: 'This field is required' })` does?",
+            "options": [
+                "It spreads only the validation rules into the component",
+                "It adds a custom hook into the component props",
+                "It spreads both event handlers and validation rules needed by React Hook Form into the input",
+                "It overrides default HTML attributes of the input"
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+        {
+            "id": 426,
+            "question": "What is the main idea of the Render Props pattern in React?",
+            "options": [
+                "Passing JSX elements as props",
+                "Passing a function as a prop to control what to render",
+                "Rendering props automatically inside React DOM",
+                "Using context API to render props"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 427,
+            "question": "Which of the following best demonstrates the Render Props pattern?",
+            "options": [
+                "<DataProvider><Child /></DataProvider>",
+                "<DataProvider render={(data) => <Child data={data} />} />",
+                "<Child data={useData()} />",
+                "<Provider><Consumer>{value => <Child value={value} />}</Consumer></Provider>"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 428,
+            "question": "Why has the usage of Render Props pattern decreased in modern React applications?",
+            "options": [
+                "Because it is no longer supported in React 18",
+                "Because Hooks provide a simpler way to share stateful logic",
+                "Because Context API completely replaced it",
+                "Because it caused errors in strict mode"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 429,
+            "question": "What is the main purpose of the Compound Component Pattern in React?",
+            "options": [
+                "To bundle multiple components into one file for easier imports",
+                "To allow related components to work together under a unified API",
+                "To reduce the size of the final JavaScript bundle",
+                "To avoid writing any props in child components"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 430,
+            "question": "Which technique is most commonly used to share state between parent and child components in the Compound Component Pattern?",
+            "options": [
+                "Prop drilling",
+                "React Context",
+                "Redux store",
+                "Direct DOM manipulation"
+            ],
+            "correctOption": 1,
+            "points": 15
+        },
+        {
+            "id": 431,
+            "question": "Why is using a compound component like Tabs with Tabs.List and Tabs.Panel preferred over a single Tabs component with many props?",
+            "options": [
+                "It makes the API more flexible and declarative",
+                "It reduces the need for TypeScript typings",
+                "It automatically optimizes rendering performance",
+                "It eliminates the need for CSS"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 432,
+            "question": "What problem does the Compound Component Pattern solve compared to a single monolithic component?",
+            "options": [
+                "It reduces JSX nesting and makes the UI flat",
+                "It avoids hard-coding the component structure and gives consumers flexibility in composition",
+                "It ensures better tree-shaking during build time",
+                "It automatically memoizes all child components"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 433,
+            "question": "When implementing a Compound Component Pattern, how do children usually access the parent’s state and logic?",
+            "options": [
+                "By calling a function exported from the parent",
+                "By reading from global variables",
+                "Through React.createContext and useContext inside children",
+                "By importing parent’s hook directly"
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+        {
+            "id": 434,
+            "question": "Why is React Portal often used to render a Modal?",
+            "options": [
+                "To replace the need for CSS styling in modals",
+                "To render the modal outside the root DOM hierarchy for proper stacking",
+                "To improve server-side rendering performance",
+                "To automatically close the modal on route changes"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+
+        {
+            "id": 435,
+            "question": "What problem does rendering a Modal with React Portal solve?",
+            "options": [
+                "Ensures modal is always centered on screen",
+                "Avoids z-index and overflow issues by rendering outside parent container",
+                "Allows modal to automatically manage its own state",
+                "Improves the performance of large component trees"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 436,
+            "question": "What is the main purpose of using React Portal when rendering a modal?",
+            "options": [
+                "To reduce the number of re-renders of the modal",
+                "To render the modal outside the normal parent DOM hierarchy",
+                "To improve the performance of state updates",
+                "To automatically add animations to the modal"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+            {
+                "id": 437,
+                "question": "Where is the modal typically rendered when using React Portal?",
+                "options": [
+                    "Inside the closest parent component",
+                    "Directly in the component tree of App",
+                    "In a separate DOM node such as a div with id='modal-root'",
+                    "In the virtual DOM but not the real DOM"
+                ],
+                "correctOption": 2,
+                "points": 10
+            },
+            {
+                "id": 438,
+                "question": "Why is using React Portal beneficial for modals in terms of CSS and layout?",
+                "options": [
+                    "Because it automatically sets the modal's z-index",
+                    "Because it avoids CSS conflicts like overflow: hidden and stacking context issues",
+                    "Because it converts modal styles into inline styles",
+                    "Because it removes the need for CSS classes"
+                ],
+                "correctOption": 1,
+                "points": 30
+            },
+            {
+                "id": 439,
+                "question": "Which React method is used to render content into a Portal?",
+                "options": [
+                    "ReactDOM.render()",
+                    "ReactDOM.createPortal()",
+                    "React.createElement()",
+                    "usePortal()"
+                ],
+                "correctOption": 1,
+                "points": 10
+            },
+            {
+                "id": 440,
+                "question": "In terms of accessibility (a11y), what is an important step when building a Portal Modal?",
+                "options": [
+                    "Ensuring the modal has a random ID",
+                    "Making sure focus is trapped inside the modal until closed",
+                    "Applying inline styles only",
+                    "Rendering the modal with useEffect"
+                ],
+                "correctOption": 1,
+                "points": 30
+            }
 
 ]
