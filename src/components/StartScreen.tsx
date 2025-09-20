@@ -114,8 +114,26 @@ export function StartScreen({ numQuestions, dispatch, state }: StartScreenProps)
                                 max={maxQuestions}
                                 value={startRange}
                                 onChange={(e) => {
-                                    const value = Math.max(1, parseInt(e.target.value) || 1);
-                                    setStartRange(Math.min(value, maxQuestions));
+                                    const inputValue = e.target.value;
+                                    if (inputValue === '') {
+                                        return; 
+                                    }
+                                    const value = parseInt(inputValue);
+                                    if (!isNaN(value)) {
+                                        setStartRange(value);
+                                    }
+                                }}
+                                onBlur={(e) => {
+                                    const value = parseInt(e.target.value);
+                                    if (isNaN(value) || value < 1) {
+                                        setStartRange(1);
+                                    } else if (value > maxQuestions) {
+                                        setStartRange(maxQuestions);
+                                    }
+
+                                    if (endRange < value) {
+                                        setEndRange(value);
+                                    }
                                 }}
                                 className="range-input"
                             />
@@ -129,8 +147,22 @@ export function StartScreen({ numQuestions, dispatch, state }: StartScreenProps)
                                 max={maxQuestions}
                                 value={endRange}
                                 onChange={(e) => {
-                                    const value = parseInt(e.target.value) || startRange;
-                                    setEndRange(Math.min(Math.max(value, startRange), maxQuestions));
+                                    const inputValue = e.target.value;
+                                    if (inputValue === '') {
+                                        return;
+                                    }
+                                    const value = parseInt(inputValue);
+                                    if (!isNaN(value)) {
+                                        setEndRange(value);
+                                    }
+                                }}
+                                onBlur={(e) => {
+                                    const value = parseInt(e.target.value);
+                                    if (isNaN(value) || value < startRange) {
+                                        setEndRange(startRange);
+                                    } else if (value > maxQuestions) {
+                                        setEndRange(maxQuestions);
+                                    }
                                 }}
                                 className="range-input"
                             />
@@ -204,7 +236,7 @@ export function StartScreen({ numQuestions, dispatch, state }: StartScreenProps)
             {numQuestions > 0 && (
                 <button
                     className="btn btn-ui start-quiz-btn"
-                    onClick={() => dispatch({ type: "start" })}
+                    onClick={() => dispatch({type: "start"})}
                 >
                     Start Quiz ({numQuestions} questions)
                 </button>
