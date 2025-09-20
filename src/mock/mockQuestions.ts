@@ -4147,6 +4147,186 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
+        "id": 355,
+        "question": "What is the primary purpose of the useRef hook?",
+        "options": [
+            "Managing component state that triggers re-renders",
+            "Storing mutable values that persist across renders",
+            "Creating side effects after component renders",
+            "Memoizing expensive calculations between renders"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 356,
+        "question": "What happens when you update a ref's current value?",
+        "options": [
+            "Component re-renders automatically after update",
+            "Component re-renders only on next state change",
+            "Component does not re-render from ref changes",
+            "Component re-renders after short delay period"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 357,
+        "question": "How do you access a DOM element using useRef?",
+        "options": [
+            "Pass ref object to element's ref prop",
+            "Call ref.current() method on element",
+            "Use ref.getValue() to retrieve element",
+            "Access element through ref.element property"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 358,
+        "question": "When should you access ref.current in function components?",
+        "options": [
+            "During component render phase directly",
+            "Inside useEffect or event handlers only",
+            "Only during component initialization phase",
+            "Anytime within component function body"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 359,
+        "question": "What value does useRef return initially?",
+        "options": [
+            "Object with current property set to initial value",
+            "Function that returns current reference value",
+            "Array containing current value and setter function",
+            "Promise that resolves to reference value"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 360,
+        "question": "How does useRef differ from useState for storing values?",
+        "options": [
+            "useRef triggers re-renders, useState does not",
+            "useRef preserves values, useState resets them",
+            "useRef does not trigger re-renders, useState does",
+            "useRef works asynchronously, useState works synchronously"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 361,
+        "question": "What is a common use case for useRef with timers?",
+        "options": [
+            "Storing timer IDs to clear them later",
+            "Creating multiple timers simultaneously for performance",
+            "Triggering component re-renders when timer completes",
+            "Converting synchronous code into asynchronous operations"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 362,
+        "question": "Why use useRef to store previous values?",
+        "options": [
+            "useRef automatically tracks value history",
+            "useRef triggers updates when values change",
+            "useRef persists values without causing re-renders",
+            "useRef provides built-in comparison functions"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 363,
+        "question": "What happens to refs when component unmounts?",
+        "options": [
+            "Refs are automatically cleared and garbage collected",
+            "Refs persist in memory until manually cleared",
+            "Refs throw errors if accessed after unmount",
+            "Refs are transferred to parent component"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 364,
+        "question": "Can you pass refs as props to child components?",
+        "options": [
+            "Yes, refs can be passed like any other props",
+            "No, refs cannot be passed between components",
+            "Yes, but only using forwardRef for components",
+            "No, refs only work within single component"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 365,
+        "question": "What is forwardRef used for with refs?",
+        "options": [
+            "Creating multiple refs within single component",
+            "Passing refs from parent to child components",
+            "Converting refs into state variables automatically",
+            "Clearing refs when components unmount"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 366,
+        "question": "When is useRef preferable to regular variables?",
+        "options": [
+            "When you need values to persist across renders",
+            "When you want to trigger component re-renders",
+            "When you need to share values between components",
+            "When you want to reset values on each render"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 367,
+        "question": "What type of data can be stored in useRef?",
+        "options": [
+            "Only DOM element references for manipulation",
+            "Only primitive values like strings and numbers",
+            "Any mutable value including objects and functions",
+            "Only values that implement specific interface"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 368,
+        "question": "How do you focus an input element using useRef?",
+        "options": [
+            "inputRef.current.focus() inside useEffect or handler",
+            "inputRef.focus() directly during component render",
+            "inputRef.current() method call with focus parameter",
+            "inputRef.setValue() with focus property set true"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 369,
+        "question": "What is the key difference between refs and state?",
+        "options": [
+            "Refs store immutable data, state stores mutable data",
+            "Refs trigger re-renders, state maintains component lifecycle",
+            "Refs persist without re-renders, state triggers re-renders",
+            "Refs work with objects, state works with primitives"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
         "id": 370,
         "question": "Can you mix capturing and bubbling listeners on elements?",
         "options": [
@@ -4159,7 +4339,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 356,
+        "id": 371,
         "question": "What is the primary purpose of a mutation in React Query?",
         "options": [
             "To create, update, or delete server data",
@@ -4171,7 +4351,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 357,
+        "id": 372,
         "question": "Which React Query hook is used to perform mutations?",
         "options": [
             "useMutation",
@@ -4183,7 +4363,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 358,
+        "id": 373,
         "question": "Why is it recommended to use mutation callbacks like onSuccess or onError in React Query?",
         "options": [
             "To update the cache or trigger side effects after the mutation succeeds or fails",
@@ -4195,7 +4375,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 359,
+        "id": 374,
         "question": "What does offline support in React Query allow?",
         "options": [
             "Queuing mutations and applying them once the network is available",
@@ -4207,7 +4387,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 360,
+        "id": 375,
         "question": "How can React Query ensure a smooth user experience when the app is offline?",
         "options": [
             "By showing cached data and queuing mutations to run later",
@@ -4219,7 +4399,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 361,
+        "id": 376,
         "question": "Which combination makes offline-first behavior effective in React Query?",
         "options": [
             "Caching, background refetching, and queuing mutations until network is available",
@@ -4231,7 +4411,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 362,
+        "id": 377,
         "question": "Why is React Query important for managing server data in React apps?",
         "options": [
             "Because it simplifies fetching, caching, and keeping server data in sync automatically",
@@ -4243,7 +4423,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 363,
+        "id": 378,
         "question": "Which of the following problems does React Query help solve in React applications?",
         "options": [
             "Avoiding redundant network requests and keeping multiple components synchronized with server data",
@@ -4255,7 +4435,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 364,
+        "id": 379,
         "question": "Why might a complex React app be difficult to manage without React Query?",
         "options": [
             "Because manually handling caching, background refetch, and synchronization across multiple components is error-prone and cumbersome",
@@ -4267,7 +4447,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 365,
+        "id": 380,
         "question": "What is the main difference between useQuery and useMutation in React Query?",
         "options": [
             "useQuery is used for data fetching, while useMutation is used for creating/updating/deleting data",
@@ -4279,7 +4459,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 366,
+        "id": 381,
         "question": "Which hook in React Query is primarily used for fetching and caching server data?",
         "options": [
             "useMutation",
@@ -4291,7 +4471,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 367,
+        "id": 382,
         "question": "In React Query, what happens if you provide the same queryKey to multiple useQuery hooks?",
         "options": [
             "Each query runs separately without caching",
@@ -4303,7 +4483,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 368,
+        "id": 383,
         "question": "Which of the following is a recommended pattern when using useQuery to prevent unnecessary network requests?",
         "options": [
             "Use a unique queryKey for each query and enable caching",
@@ -4315,7 +4495,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 369,
+        "id": 384,
         "question": "Which of the following is a recommended pattern when using useQuery to prevent unnecessary network requests?",
         "options": [
             "Use a unique queryKey for each query and enable caching",
@@ -4327,7 +4507,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 370,
+        "id": 385,
         "question": "Which hook is used in React Query to handle creating, updating, or deleting data on the server?",
         "options": [
             "useQuery",
@@ -4339,7 +4519,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 371,
+        "id": 386,
         "question": "After a successful mutation, what is the recommended way to update cached queries in React Query?",
         "options": [
             "Manually reloading the page",
@@ -4351,7 +4531,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 372,
+        "id": 387,
         "question": "Which of the following is TRUE about useMutation compared to useQuery?",
         "options": [
             "useMutation is synchronous while useQuery is asynchronous",
@@ -4363,7 +4543,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
             {
-            "id": 373,
+            "id": 388,
             "question": "What is the primary purpose of the queryKey in useQuery?",
             "options": [
                 "To provide a unique identifier for caching and refetching",
@@ -4375,7 +4555,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 374,
+            "id": 389,
             "question": "In React Query, what is the difference between staleTime and cacheTime?",
             "options": [
                 "staleTime controls how long data is considered fresh, while cacheTime controls how long inactive data stays in memory",
@@ -4387,7 +4567,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 375,
+            "id": 390,
             "question": "How can you prevent a useQuery from automatically running when the component mounts?",
             "options": [
                 "By removing queryKey",
@@ -4399,14 +4579,14 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 376,
+            "id": 391,
             "question": "Which callback in useMutation is best suited for updating the cache after a successful mutation?",
             "options": ["onSettled", "onMutate", "onSuccess", "onError"],
             "correctOption": 2,
             "points": 20
         },
         {
-            "id": 377,
+            "id": 392,
             "question": "Why are optimistic updates useful in useMutation?",
             "options": [
                 "They retry failed requests automatically",
@@ -4418,14 +4598,14 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 378,
+            "id": 393,
             "question": "Which React Query function is commonly used inside a mutation's onSuccess callback to refresh relevant queries?",
             "options": ["resetQueries", "refetchQueries", "cancelQueries", "invalidateQueries"],
             "correctOption": 3,
             "points": 20
         },
         {
-            "id": 379,
+            "id": 394,
             "question": "What happens when multiple queries are dependent in React Query?",
             "options": [
                 "They run in parallel regardless of dependency",
@@ -4437,7 +4617,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 380,
+            "id": 395,
             "question": "Which tool helps visualize query and mutation states during development in React Query?",
             "options": ["Redux DevTools", "React Query Devtools", "React Profiler", "Apollo Studio"],
             "correctOption": 1,
@@ -4456,14 +4636,14 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 382,
+            "id": 396,
             "question": "Which option in useQuery allows background data synchronization at regular intervals?",
             "options": ["cacheTime", "refetchInterval", "retry", "keepPreviousData"],
             "correctOption": 1,
             "points": 20
         },
         {
-            "id": 383,
+            "id": 397,
             "question": "What is the purpose of the onMutate callback in useMutation?",
             "options": [
                 "It rolls back the optimistic update if mutation fails",
@@ -4475,7 +4655,7 @@ export const mockQuestions: Question[] = [
             "points": 25
         },
         {
-            "id": 384,
+            "id": 398,
             "question": "How can you roll back an optimistic update if a mutation fails?",
             "options": [
                 "By returning a rollback function from onMutate and calling it inside onError",
@@ -4487,14 +4667,14 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 385,
+            "id": 399,
             "question": "Which option in useQuery is helpful when implementing pagination to avoid showing a blank state while fetching new data?",
             "options": ["enabled", "refetchOnWindowFocus", "keepPreviousData", "retry"],
             "correctOption": 2,
             "points": 20
         },
         {
-            "id": 386,
+            "id": 400,
             "question": "How does React Query ensure consistency between server and client after a mutation?",
             "options": [
                 "By reloading the browser window",
@@ -4506,7 +4686,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 387,
+            "id": 401,
             "question": "What is query invalidation in React Query?",
             "options": [
                 "Marking queries as stale so they refetch fresh data",
@@ -4518,7 +4698,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 388,
+            "id": 402,
             "question": "In React Query, what does hydrate/dehydrate refer to?",
             "options": [
                 "Saving and restoring cached query state for server-side rendering",
@@ -4530,7 +4710,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 389,
+            "id": 403,
             "question": "What is the primary purpose of React Hook Form?",
             "options": [
                 "To manage server-side data fetching",
@@ -4542,7 +4722,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 390,
+            "id": 404,
             "question": "Which hook is used to initialize a form in React Hook Form?",
             "options": [
                 "useState",
@@ -4554,7 +4734,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 391,
+            "id": 405,
             "question": "In React Hook Form, what does the 'register' function do?",
             "options": [
                 "It submits the form data to the server",
@@ -4566,7 +4746,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 392,
+            "id": 406,
             "question": "Which function in React Hook Form is responsible for handling form submission?",
             "options": [
                 "useSubmit",
@@ -4578,7 +4758,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 393,
+            "id": 407,
             "question": "How can you apply validation rules such as 'required' or 'minLength' in React Hook Form?",
             "options": [
                 "By adding attributes directly to the input element",
@@ -4590,7 +4770,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 394,
+            "id": 408,
             "question": "What does the 'errors' object returned by useForm represent?",
             "options": [
                 "A list of server-side API errors",
@@ -4602,7 +4782,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 395,
+            "id": 409,
             "question": "Why is React Hook Form considered performant compared to other form libraries?",
             "options": [
                 "It automatically fetches data from APIs",
@@ -4614,7 +4794,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 396,
+            "id": 410,
             "question": "Which hook should you use to control custom components (like a date picker) in React Hook Form?",
             "options": [
                 "useController",
@@ -4626,7 +4806,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 397,
+            "id": 411,
             "question": "Which method lets you programmatically update a field’s value?",
             "options": [
                 "updateField",
@@ -4638,7 +4818,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 398,
+            "id": 412,
             "question": "What problem does useController solve?",
             "options": [
                 "Integrating controlled components with React Hook Form",
@@ -4650,7 +4830,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 399,
+            "id": 413,
             "question": "Why does React Hook Form rely primarily on uncontrolled inputs?",
             "options": [
                 "Because uncontrolled inputs reduce re-renders and improve performance",
@@ -4662,7 +4842,7 @@ export const mockQuestions: Question[] = [
             "points": 25
         },
         {
-            "id": 400,
+            "id": 414,
             "question": "Which option best describes the role of resolvers in React Hook Form?",
             "options": [
                 "They provide schema-based validation (e.g., Yup, Zod)",
@@ -4674,7 +4854,7 @@ export const mockQuestions: Question[] = [
             "points": 25
         },
         {
-            "id": 401,
+            "id": 415,
             "question": "Which hook would you use to read the current value of a field without subscribing to its updates?",
             "options": [
                 "getValues",
@@ -4686,7 +4866,7 @@ export const mockQuestions: Question[] = [
             "points": 25
         },
         {
-            "id": 402,
+            "id": 416,
             "question": "How can you implement async validation, such as checking if a username already exists?",
             "options": [
                 "By using an async resolver or providing an async validate function in register",
@@ -4698,7 +4878,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 403,
+            "id": 417,
             "question": "What is one key performance advantage of React Hook Form compared to Formik?",
             "options": [
                 "React Hook Form uses uncontrolled inputs and refs, leading to fewer re-renders",
@@ -4710,7 +4890,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
     {
-        "id": 404,
+        "id": 418,
         "question": "What is the primary purpose of the useForm hook in React Hook Form?",
         "options": [
             "To handle component lifecycle methods",
@@ -4722,7 +4902,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 405,
+        "id": 419,
         "question": "Which prop must be applied to an input field for React Hook Form to track its value?",
         "options": [
             "onChange",
@@ -4734,7 +4914,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 406,
+        "id": 420,
         "question": "What does the handleSubmit function return?",
         "options": [
             "A callback that validates form inputs and triggers your submit handler",
@@ -4746,7 +4926,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 407,
+        "id": 421,
         "question": "How can you provide default values to a form?",
         "options": [
             "By passing a defaultValues object to useForm",
@@ -4758,7 +4938,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 408,
+        "id": 422,
         "question": "Which hook allows you to subscribe to changes in specific form fields?",
         "options": [
             "useEffect",
@@ -4770,7 +4950,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 409,
+        "id": 423,
         "question": "What is the main use of FormProvider and useFormContext?",
         "options": [
             "To style forms globally",
@@ -4782,7 +4962,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 410,
+        "id": 424,
         "question": "Which method is used to manually trigger validation for one or more fields?",
         "options": [
             "reset",
@@ -4794,7 +4974,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 411,
+        "id": 425,
         "question": "How do you reset all fields in a form to their initial values?",
         "options": [
             "resetForm()",
@@ -4806,7 +4986,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
         {
-            "id": 412,
+            "id": 426,
             "question": "In TanStack Query, which option should you set to 'false' to prevent a query from automatically running when the component mounts?",
             "options": [
                 "`enabled`",
@@ -4818,7 +4998,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 413,
+            "id": 427,
             "question": "Which TanStack Query option controls whether a query should refetch when the browser window regains focus?",
             "options": [
                 "`enabled`",
@@ -4830,7 +5010,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 414,
+            "id": 428,
             "question": "You want your query to poll data every 10 seconds, even when the browser tab is in the background. Which combination of options should you use?",
             "options": [
                 "`refetchInterval: 10000` and `refetchIntervalInBackground: true`",
@@ -4842,7 +5022,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 415,
+            "id": 429,
             "question": "In TanStack Query, what does the `refetchIntervalOnMount` option control?",
             "options": [
                 "Whether a query should start polling immediately when the component mounts",
@@ -4854,7 +5034,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
     {
-        "id": 416,
+        "id": 430,
         "question": "In TanStack Query, when cached data becomes stale, what happens?",
         "options": [
             "The cached data is automatically deleted from memory",
@@ -4866,7 +5046,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 417,
+        "id": 431,
         "question": "Why is TanStack Query considered a state management library?",
         "options": [
             "Because it allows direct modification of React component state",
@@ -4878,7 +5058,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 418,
+        "id": 432,
         "question": "Which combination of options allows polling of server data at a fixed interval even when the tab is in the background?",
         "options": [
             "`refetchInterval: 5000` and `refetchIntervalInBackground: true`",
@@ -4890,7 +5070,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
         {
-            "id": 419,
+            "id": 433,
             "question": "What does CRUD stand for in application development?",
             "options": [
                 "Create, Read, Update, Delete",
@@ -4902,7 +5082,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 420,
+            "id": 434,
             "question": "Which of the following represents the 'Read' operation in a CRUD system?",
             "options": [
                 "Adding a new user to the database",
@@ -4914,7 +5094,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 421,
+            "id": 435,
             "question": "In the context of React and Supabase, which hook is most commonly used for performing the 'Update' operation in CRUD?",
             "options": [
                 "useEffect",
@@ -4926,49 +5106,49 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
     {
-            "id": 422,
+            "id": 436,
             "question": "Which CRUD operation is performed when a new record is inserted into a database?",
             "options": ["Create", "Read", "Update", "Delete"],
             "correctOption": 0,
             "points": 10
         },
         {
-            "id": 423,
+            "id": 437,
             "question": "Which CRUD operation is being executed when data is retrieved from an API endpoint?",
             "options": ["Create", "Read", "Update", "Delete"],
             "correctOption": 1,
             "points": 10
         },
         {
-            "id": 424,
+            "id": 438,
             "question": "When modifying an existing user's email address, which CRUD operation is applied?",
             "options": ["Create", "Read", "Update", "Delete"],
             "correctOption": 2,
             "points": 10
         },
         {
-            "id": 425,
+            "id": 439,
             "question": "Which CRUD action is executed when a record is permanently removed from a database?",
             "options": ["Create", "Read", "Update", "Delete"],
             "correctOption": 3,
             "points": 10
         },
         {
-            "id": 426,
+            "id": 440,
             "question": "In React applications, which hook is most suitable for executing Create, Update, or Delete operations?",
             "options": ["useEffect", "useState", "useMutation", "useContext"],
             "correctOption": 2,
             "points": 20
         },
         {
-            "id": 427,
+            "id": 441,
             "question": "Which CRUD operation usually requires invalidating or refetching cached queries in client-side state management libraries?",
             "options": ["Read", "Create/Update/Delete", "All of them", "None of them"],
             "correctOption": 1,
             "points": 25
         },
         {
-            "id": 428,
+            "id": 442,
             "question": "Why is the Update operation often considered more complex than Create in CRUD systems?",
             "options": [
                 "Because it does not require validation",
@@ -4980,7 +5160,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 429,
+            "id": 443,
             "question": "What does TypeScript mainly add to JavaScript?",
             "options": [
                 "Server-side rendering capabilities",
@@ -4992,7 +5172,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 430,
+            "id": 444,
             "question": "Which of the following will TypeScript flag as an error?",
             "options": [
                 "let age: number = 30;",
@@ -5004,7 +5184,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 431,
+            "id": 445,
             "question": "Why does TypeScript check function parameter types?",
             "options": [
                 "To optimize runtime performance",
@@ -5016,7 +5196,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 432,
+            "id": 446,
             "question": "Which of these will TypeScript catch?",
             "options": [
                 "Accessing a property that does not exist on an object",
@@ -5028,7 +5208,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 433,
+            "id": 447,
             "question": "How does TypeScript handle null and undefined in a variable of type string?",
             "options": [
                 "It automatically converts null to empty string",
@@ -5040,7 +5220,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 434,
+            "id": 448,
             "question": "Why is TypeScript considered helpful in large-scale React projects?",
             "options": [
                 "It reduces runtime type errors and improves developer productivity",
@@ -5052,7 +5232,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 435,
+            "id": 449,
             "question": "Which TypeScript feature helps prevent passing an incorrect object shape to a function?",
             "options": [
                 "Interfaces and type annotations",
@@ -5064,7 +5244,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 436,
+            "id": 450,
             "question": "What kind of errors does TypeScript detect before the program runs?",
             "options": [
                 "Runtime network errors",
@@ -5076,7 +5256,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 437,
+            "id": 451,
             "question": "Which of the following will TypeScript catch during development, before execution?",
             "options": [
                 "Accessing a property that does not exist on an object",
@@ -5088,7 +5268,7 @@ export const mockQuestions: Question[] = [
             "points": 15
         },
         {
-            "id": 438,
+            "id": 452,
             "question": "Why is detecting errors at compile-time useful in large React projects?",
             "options": [
                 "It prevents runtime crashes and improves code reliability",
@@ -5100,7 +5280,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 439,
+            "id": 453,
             "question": "Which scenario is a compile-time error that TypeScript can detect?",
             "options": [
                 "Calling a function with arguments of incorrect type",
@@ -5112,7 +5292,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 440,
+            "id": 454,
             "question": "Which TypeScript feature ensures errors are detected before runtime?",
             "options": [
                 "Static type checking",
@@ -5124,7 +5304,7 @@ export const mockQuestions: Question[] = [
             "points": 25
         },
     {
-        "id": 441,
+        "id": 455,
         "question": "At which stage does TypeScript execute its type checks?",
         "options": [
             "During runtime in the browser",
@@ -5136,7 +5316,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 442,
+        "id": 456,
         "question": "Why is React Hook Form (RHF) popular among React developers?",
         "options": [
             "It automatically generates CSS for forms",
@@ -5148,7 +5328,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 443,
+        "id": 457,
         "question": "Why does React Hook Form (RHF) typically trigger fewer re-renders compared to other form libraries?",
         "options": [
             "Because it uses uncontrolled components and refs instead of tracking every input state in React state",
@@ -5160,7 +5340,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 444,
+        "id": 458,
         "question": "In React forms, what is a controlled component?",
         "options": [
             "A component that handles its own state internally without React",
@@ -5172,7 +5352,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 445,
+        "id": 459,
         "question": "In React Hook Form, what is the best practice for showing validation errors using field touch state?",
         "options": [
             "Always show error messages immediately on component mount",
@@ -5184,7 +5364,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 446,
+        "id": 460,
         "question": "Which is the best practice for showing error messages in React Hook Form?",
         "options": [
             "Show all error messages immediately on form mount",
@@ -5196,7 +5376,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 422,
+        "id": 461,
         "question": "Why does using `onTouched` improve user experience in forms built with React Hook Form?",
         "options": [
             "Because it prevents unnecessary re-renders by skipping validation logic",
@@ -5208,7 +5388,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
         {
-            "id": 423,
+            "id": 462,
             "question": "Why do we use the spread operator (`...register`) when integrating inputs with React Hook Form?",
             "options": [
                 "Because it copies only the value property of the input",
@@ -5220,7 +5400,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 424,
+            "id": 463,
             "question": "What would happen if you use `register('email')` without the spread operator inside an input?",
             "options": [
                 "Nothing, the form will still work the same",
@@ -5232,7 +5412,7 @@ export const mockQuestions: Question[] = [
             "points": 25
         },
         {
-            "id": 425,
+            "id": 464,
             "question": "Which of the following best describes what `...register('name', { required: 'This field is required' })` does?",
             "options": [
                 "It spreads only the validation rules into the component",
@@ -5244,7 +5424,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 426,
+            "id": 465,
             "question": "What is the main idea of the Render Props pattern in React?",
             "options": [
                 "Passing JSX elements as props",
@@ -5256,7 +5436,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 427,
+            "id": 466,
             "question": "Which of the following best demonstrates the Render Props pattern?",
             "options": [
                 "<DataProvider><Child /></DataProvider>",
@@ -5268,7 +5448,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 428,
+            "id": 467,
             "question": "Why has the usage of Render Props pattern decreased in modern React applications?",
             "options": [
                 "Because it is no longer supported in React 18",
@@ -5280,7 +5460,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 429,
+            "id": 468,
             "question": "What is the main purpose of the Compound Component Pattern in React?",
             "options": [
                 "To bundle multiple components into one file for easier imports",
@@ -5292,7 +5472,7 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 430,
+            "id": 469,
             "question": "Which technique is most commonly used to share state between parent and child components in the Compound Component Pattern?",
             "options": [
                 "Prop drilling",
@@ -5304,7 +5484,7 @@ export const mockQuestions: Question[] = [
             "points": 15
         },
         {
-            "id": 431,
+            "id": 470,
             "question": "Why is using a compound component like Tabs with Tabs.List and Tabs.Panel preferred over a single Tabs component with many props?",
             "options": [
                 "It makes the API more flexible and declarative",
@@ -5316,7 +5496,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 432,
+            "id": 471,
             "question": "What problem does the Compound Component Pattern solve compared to a single monolithic component?",
             "options": [
                 "It reduces JSX nesting and makes the UI flat",
@@ -5328,7 +5508,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 433,
+            "id": 472,
             "question": "When implementing a Compound Component Pattern, how do children usually access the parent’s state and logic?",
             "options": [
                 "By calling a function exported from the parent",
@@ -5340,7 +5520,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 434,
+            "id": 473,
             "question": "Why is React Portal often used to render a Modal?",
             "options": [
                 "To replace the need for CSS styling in modals",
@@ -5353,7 +5533,7 @@ export const mockQuestions: Question[] = [
         },
 
         {
-            "id": 435,
+            "id": 474,
             "question": "What problem does rendering a Modal with React Portal solve?",
             "options": [
                 "Ensures modal is always centered on screen",
@@ -5365,7 +5545,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 436,
+            "id": 475,
             "question": "What is the main purpose of using React Portal when rendering a modal?",
             "options": [
                 "To reduce the number of re-renders of the modal",
@@ -5377,7 +5557,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
             {
-                "id": 437,
+                "id": 476,
                 "question": "Where is the modal typically rendered when using React Portal?",
                 "options": [
                     "Inside the closest parent component",
@@ -5389,7 +5569,7 @@ export const mockQuestions: Question[] = [
                 "points": 10
             },
             {
-                "id": 438,
+                "id": 477,
                 "question": "Why is using React Portal beneficial for modals in terms of CSS and layout?",
                 "options": [
                     "Because it automatically sets the modal's z-index",
@@ -5401,7 +5581,7 @@ export const mockQuestions: Question[] = [
                 "points": 30
             },
             {
-                "id": 439,
+                "id": 478,
                 "question": "Which React method is used to render content into a Portal?",
                 "options": [
                     "ReactDOM.render()",
@@ -5413,7 +5593,7 @@ export const mockQuestions: Question[] = [
                 "points": 10
             },
             {
-                "id": 440,
+                "id": 479,
                 "question": "In terms of accessibility (a11y), what is an important step when building a Portal Modal?",
                 "options": [
                     "Ensuring the modal has a random ID",
