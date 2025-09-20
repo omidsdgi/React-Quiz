@@ -8,6 +8,14 @@
   --color-theme: #1098ad;
   --color-accent: #ffa94d;
   --color-accent-dark: #c76819;
+
+  /* Bootstrap-like primary color */
+  --color-primary: #0d6efd;
+  --color-primary-hover: #0b5ed7;
+
+  /* Bootstrap info color for timer */
+  --color-info: #0dcaf0;
+  --color-info-hover: #31d2f2;
 }
 
 * {
@@ -329,6 +337,14 @@ progress {
 
 .btn-ui {
   float: right;
+  background-color: var(--color-primary) !important;
+  border: 2px solid var(--color-primary) !important;
+  color: white !important;
+}
+
+.btn-ui:not([disabled]):hover {
+  background-color: var(--color-primary-hover) !important;
+  border: 2px solid var(--color-primary-hover) !important;
 }
 
 /* Mobile UI button adjustments */
@@ -337,6 +353,14 @@ progress {
     float: none;
     width: 100%;
     margin-top: 1rem;
+  }
+}
+
+/* Disable hover effects on touch devices for UI buttons */
+@media (hover: none) and (pointer: coarse) {
+  .btn-ui:not([disabled]):hover {
+    background-color: var(--color-primary) !important;
+    border: 2px solid var(--color-primary) !important;
   }
 }
 
@@ -487,10 +511,12 @@ progress {
 .timer {
   float: left;
   font-size: 1.8rem;
-  color: var(--color-medium);
-  border: 2px solid var(--color-dark);
+  color: var(--color-darkest);
+  background-color: var(--color-info);
+  border: 2px solid var(--color-info);
   padding: 1.35rem 2.8rem;
   border-radius: 100px;
+  font-weight: 500;
 }
 
 /* Mobile timer adjustments */
