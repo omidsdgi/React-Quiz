@@ -210,27 +210,38 @@ export function StartScreen({ numQuestions, dispatch, state }: StartScreenProps)
             )}
 
             <div className="level-list">
-                {levelInfo.map((level) => (
-                    <div
-                        key={level.key}
-                        className={`level-card ${level.count === 0 ? 'disabled' : ''}`}
-                        onClick={() => level.count > 0 && handleLevelSelect(level.key)}
-                    >
-                        <div className="level-icon">{level.icon}</div>
-                        <div className="level-content">
-                            <div className="level-header">
-                                <h4>{level.title}</h4>
-                                <span className="level-difficulty">{level.difficulty}</span>
+                {levelInfo.map((level) => {
+                    const isSelected = selectedLevel === level.key;
+
+                    return (
+                        <div
+                            key={level.key}
+                            className={`level-card ${level.count === 0 ? 'disabled' : ''} ${
+                                isSelected ? 'selected' : ''
+                            }`}
+                            onClick={() => level.count > 0 && handleLevelSelect(level.key)}
+                        >
+                            <div className="level-icon">{level.icon}</div>
+                            <div className="level-content">
+                                <div className="level-header">
+                                    <h4>{level.title}</h4>
+                                    <span className="level-difficulty">{level.difficulty}</span>
+                                </div>
+                                <p className="level-description">{level.description}</p>
+                                <div className="level-stats">
+                                    <span className="level-count">{level.count} questions</span>
+                                    <span className="level-points">{level.points} points for each question</span>
+                                </div>
                             </div>
-                            <p className="level-description">{level.description}</p>
-                            <div className="level-stats">
-                                <span className="level-count">{level.count} questions</span>
-                                <span className="level-points">{level.points} pts each</span>
-                            </div>
+                            <div className="level-arrow">→</div>
+                            {isSelected && (
+                                <div className="selected-indicator">
+                                    <span>✓</span>
+                                </div>
+                            )}
                         </div>
-                        <div className="level-arrow">→</div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
 
             {numQuestions > 0 && (

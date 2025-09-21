@@ -86,6 +86,7 @@ export function QuizReducer(state:QuizState,action:Action):QuizState {
                 status:state.secondsRemaining === 1 ? "finished" : state.status,
             }
         case "selectLevel":
+            console.log(`Reducer: selectLevel called with ${action.payload}`);
             const filtered = getQuestionsByLevel(action.payload);
             return {
                 ...state,
