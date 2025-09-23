@@ -5,8 +5,8 @@ import {mockQuestions} from "../mock/mockQuestions";
 
 export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
     const [selectedLevel, setSelectedLevel] = useState<"fundamental" | "intermediate" | "advanced" | null>(null);
-    const [startRange, setStartRange] = useState<number>(1);
-    const [endRange, setEndRange] = useState<number>(10);
+    const [startRange, setStartRange] = useState<string>("1");
+    const [endRange, setEndRange] = useState<string>("10");
     const [showRangeSelection, setShowRangeSelection] = useState<boolean>(false);
 
     // تعداد سوالات موجود برای هر سطح - با safe access
@@ -113,32 +113,23 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
                                 min="1"
                                 max={maxQuestions}
                                 value={startRange}
-                                onChange={(e) => {
-                                    const inputValue = e.target.value;
-                                    if (inputValue === '') {
-                                        return;
-                                    }
-                                    const value = parseInt(inputValue);
-                                    if (!isNaN(value)) {
-                                        setStartRange(value);
-                                    }
-                                }}
+                                onChange={(e) => setStartRange(e.target.value)} // می‌تونه خالی باشه
                                 onBlur={(e) => {
-                                    const value = parseInt(e.target.value);
+                                    let value = parseInt(e.target.value);
                                     if (isNaN(value) || value < 1) {
-                                        setStartRange(1);
+                                        value = 1;
                                     } else if (value > maxQuestions) {
-                                        setStartRange(maxQuestions);
+                                        value = maxQuestions;
                                     }
+                                    setStartRange(String(value));
 
-                                    if (endRange < value) {
-                                        setEndRange(value);
+                                    if (parseInt(endRange) < value) {
+                                        setEndRange(String(value));
                                     }
                                 }}
                                 className="range-input"
                             />
                         </label>
-
                         <label>
                             To question:
                             <input
@@ -146,23 +137,15 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
                                 min={startRange}
                                 max={maxQuestions}
                                 value={endRange}
-                                onChange={(e) => {
-                                    const inputValue = e.target.value;
-                                    if (inputValue === '') {
-                                        return;
-                                    }
-                                    const value = parseInt(inputValue);
-                                    if (!isNaN(value)) {
-                                        setEndRange(value);
-                                    }
-                                }}
+                                onChange={(e) => setEndRange(e.target.value)}
                                 onBlur={(e) => {
-                                    const value = parseInt(e.target.value);
-                                    if (isNaN(value) || value < startRange) {
-                                        setEndRange(startRange);
+                                    let value = parseInt(e.target.value);
+                                    if (isNaN(value) || value < parseInt(startRange)) {
+                                        value = parseInt(startRange);
                                     } else if (value > maxQuestions) {
-                                        setEndRange(maxQuestions);
+                                        value = maxQuestions;
                                     }
+                                    setEndRange(String(value));
                                 }}
                                 className="range-input"
                             />
