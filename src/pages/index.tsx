@@ -16,10 +16,10 @@ import Timer from "@/components/Timer";
 import {mockQuestions} from "@/mock/mockQuestions";
 
 export default function Home() {
-    const [
-        {questions, status, index, answer, points, highScore, secondsRemaining},
-        dispatch]
-        =useReducer(QuizReducer,initialState);
+    const [state, dispatch] = useReducer(QuizReducer, initialState);
+
+    const {questions, status, index, answer, points, highScore, secondsRemaining} = state;
+
 
     const numQuestions=questions.length;
     const maxPossiblePoints=questions.reduce((prev,cur)=>prev +cur.points,0)
@@ -35,7 +35,9 @@ export default function Home() {
                 {status === "ready" &&
                     <StartScreen
                         numQuestions={numQuestions}
-                        dispatch={dispatch}/>}
+                        dispatch={dispatch}
+                        state={state}
+                    />}
                 {status === "active" && (
                     <>
                         <Progress

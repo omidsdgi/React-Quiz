@@ -3,7 +3,7 @@ import {useState} from "react";
 import {mockQuestions} from "../mock/mockQuestions";
 
 
-export function StartScreen({ numQuestions, dispatch, state }: StartScreenProps) {
+export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
     const [selectedLevel, setSelectedLevel] = useState<"fundamental" | "intermediate" | "advanced" | null>(null);
     const [startRange, setStartRange] = useState<number>(1);
     const [endRange, setEndRange] = useState<number>(10);
