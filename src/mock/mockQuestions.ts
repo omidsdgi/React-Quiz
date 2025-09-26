@@ -986,7 +986,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 2,
         "points": 30
     },
-    
+
     {
         "id": 90,
         "question": "Which approach prevents creating new context value objects on every render?",
