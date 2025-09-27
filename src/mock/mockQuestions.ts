@@ -986,18 +986,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 2,
         "points": 30
     },
-    {
-        "id": 89,
-        "question": "What is the performance impact when a component uses Context?\n\nconst Component = () => {\n  const { theme } = useContext(AppContext);\n  return <div className={theme}>Content</div>;\n}",
-        "options": [
-            "No performance issues exist in this implementation",
-            "Component re-renders when any context value changes",
-            "Component only re-renders when theme specifically changes",
-            "Component never re-renders due to context updates"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
+
     {
         "id": 90,
         "question": "Which approach prevents creating new context value objects on every render?",
@@ -4328,12 +4317,12 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 370,
-        "question": "Can you mix capturing and bubbling listeners on elements?",
+        "question":"Can you mix capturing and bubbling event listeners on the same element?",
         "options": [
-            "Yes, capturing listeners run first, then bubbling",
-            "No, you must choose one phase per element",
-            "Yes, but bubbling listeners execute first",
-            "No, mixing phases causes JavaScript errors"
+            "Yes, capturing listeners run first, followed by bubbling listeners",
+            "No, you must choose only one phase per element",
+            "Yes, but bubbling listeners execute before capturing listeners",
+            "No, mixing phases triggers JavaScript errors"
         ],
         "correctOption": 0,
         "points": 30
@@ -4343,7 +4332,7 @@ export const mockQuestions: Question[] = [
         "question": "What is the primary purpose of a mutation in React Query?",
         "options": [
             "To create, update, or delete server data",
-            "To read cached server data only",
+            "To read server data from the cache only",
             "To render React components",
             "To automatically generate CSS styles"
         ],
@@ -4352,115 +4341,115 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 372,
-        "question": "Which React Query hook is used to perform mutations?",
+        "question": "Which React Query hook is used for modifying server data?",
         "options": [
-            "useMutation",
-            "useQuery",
-            "useEffect",
-            "useState"
+            "useQuery for fetching data",
+            "useMutation for modifying server data",
+            "useEffect for managing side effects",
+            "useState for updating local state"
         ],
-        "correctOption": 0,
-        "points": 20
+        "correctOption": 1,
+    "points": 10
     },
     {
         "id": 373,
-        "question": "Why is it recommended to use mutation callbacks like onSuccess or onError in React Query?",
+        "question":"Why use mutation callbacks like onSuccess in React Query?",
         "options": [
-            "To update the cache or trigger side effects after the mutation succeeds or fails",
-            "To automatically convert mutations into queries",
-            "To prevent any UI updates after mutation",
-            "To disable caching permanently"
+            "To update the cache or trigger side effects after a mutation",
+            "To transform mutations into query operations",
+            "To block UI updates after data changes",
+            "To permanently disable caching mechanisms"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 374,
-        "question": "What does offline support in React Query allow?",
+        "question": "What does offline support enable in React Query?",
         "options": [
-            "Queuing mutations and applying them once the network is available",
-            "Preventing any server communication permanently",
-            "Automatically reloading the page when offline",
-            "Converting all queries into static files"
+            "Blocking all server communication permanently",
+            "Automatically reloading the entire page when offline",
+            "Turning queries into static file operations",
+            "Queuing mutations until the network is available"
         ],
-        "correctOption": 0,
+        "correctOption": 3,
         "points": 10
     },
     {
         "id": 375,
-        "question": "How can React Query ensure a smooth user experience when the app is offline?",
+        "question": "How does React Query provide a smooth offline experience?",
         "options": [
-            "By showing cached data and queuing mutations to run later",
-            "By disabling the UI completely",
-            "By preventing any query from being fetched again",
-            "By converting API calls into synchronous calls"
+            "By disabling all UI components",
+            "By serving cached data and queuing mutations",
+            "By blocking queries from executing again",
+            "By converting asynchronous API calls into synchronous ones"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 20
     },
     {
         "id": 376,
-        "question": "Which combination makes offline-first behavior effective in React Query?",
+        "question":"Which combination supports effective offline-first behavior?",
         "options": [
-            "Caching, background refetching, and queuing mutations until network is available",
-            "Disabling staleTime and cacheTime permanently",
-            "Only using useState for server state",
-            "Deleting all cache whenever the app reconnects"
+            "Permanently disabling staleTime and cacheTime",
+            "Managing server state only with useState",
+            "Combining caching, background refetching, and mutation queuing",
+            "Clearing the cache whenever the app reconnects"
         ],
-        "correctOption": 0,
+        "correctOption": 2,
         "points": 30
     },
     {
         "id": 377,
-        "question": "Why is React Query important for managing server data in React apps?",
+        "question":  "Why is React Query valuable for managing server state?",
         "options": [
-            "Because it simplifies fetching, caching, and keeping server data in sync automatically",
-            "Because it replaces React’s useState and useEffect for local state only",
-            "Because it automatically generates frontend components",
-            "Because it disables network requests entirely"
+            "It automates fetching, caching, and synchronization of data",
+            "It only replaces React’s useState and useEffect for local state",
+            "It automatically generates UI components",
+            "It completely disables all network requests"
         ],
         "correctOption": 0,
         "points": 10
     },
     {
         "id": 378,
-        "question": "Which of the following problems does React Query help solve in React applications?",
+        "question": "Which problems does React Query solve in applications?",
         "options": [
-            "Avoiding redundant network requests and keeping multiple components synchronized with server data",
-            "Automatically styling components without CSS",
-            "Replacing the need for all backend APIs",
-            "Making React apps run without state management"
+            "Automatically applying styles to components without CSS",
+            "Preventing duplicate network requests and keeping server data in sync",
+            "Eliminating the need for any backend APIs",
+            "Allowing React apps to work entirely without state management"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 20
     },
     {
         "id": 379,
-        "question": "Why might a complex React app be difficult to manage without React Query?",
+        "question": "Why is manual server state management challenging?",
         "options": [
-            "Because manually handling caching, background refetch, and synchronization across multiple components is error-prone and cumbersome",
-            "Because React Query is required to write JSX",
-            "Because it prevents any component from re-rendering",
-            "Because it automatically converts REST APIs to GraphQL"
+            "Because React Query is needed to create components",
+            "Because it blocks component rendering completely",
+            "Because caching, synchronization, and updates are complex to handle by hand",
+            "Because it automatically transforms APIs between REST and GraphQL"
         ],
-        "correctOption": 0,
+        "correctOption": 2,
         "points": 30
     },
     {
         "id": 380,
-        "question": "What is the main difference between useQuery and useMutation in React Query?",
+        "question":"How do useQuery and useMutation differ in purpose?",
         "options": [
-            "useQuery is used for data fetching, while useMutation is used for creating/updating/deleting data",
-            "useQuery only works with GraphQL, while useMutation only works with REST APIs",
-            "useQuery updates data automatically without cache, while useMutation only stores data locally",
-            "useQuery requires Redux, while useMutation works without state management"
+            "useQuery styles components, useMutation handles routing",
+            "useQuery manages local storage, useMutation controls authentication",
+            "useQuery updates the DOM, useMutation adds event listeners",
+            "useQuery fetches data, useMutation modifies data",
         ],
-        "correctOption": 0,
-        "points": 30
+        "correctOption": 3,
+        "points": 20
     },
     {
         "id": 381,
-        "question": "Which hook in React Query is primarily used for fetching and caching server data?",
+        "question": "Which React Query hook is mainly responsible for fetching and caching server data?",
         "options": [
             "useMutation",
             "useReducer",
@@ -4472,43 +4461,43 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 382,
-        "question": "In React Query, what happens if you provide the same queryKey to multiple useQuery hooks?",
+        "question": "In React Query, what occurs when multiple useQuery hooks use the same queryKey?",
         "options": [
-            "Each query runs separately without caching",
-            "React Query shares the cached data between them",
-            "It causes an error and crashes the app",
-            "Only the first query executes, others are ignored"
+            "Each query executes independently without caching",
+            "React Query shares and reuses the cached data across them",
+            "It throws an error and crashes the application",
+            "Only the first query runs while the others are skipped"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 383,
-        "question": "Which of the following is a recommended pattern when using useQuery to prevent unnecessary network requests?",
+        "question": "Which pattern helps prevent unnecessary network requests when using useQuery?",
         "options": [
-            "Use a unique queryKey for each query and enable caching",
-            "Disable caching entirely for better performance",
-            "Wrap useQuery inside useEffect",
-            "Always refetch data manually instead of relying on cache"
+            "Use a unique queryKey with caching enabled",
+            "Disable caching to always fetch fresh data",
+            "Wrap useQuery inside useEffect on every render",
+            "Manually trigger refetch on every component mount"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 384,
-        "question": "Which of the following is a recommended pattern when using useQuery to prevent unnecessary network requests?",
+        "question":"Which practice improves efficiency when using useQuery?",
         "options": [
-            "Use a unique queryKey for each query and enable caching",
-            "Disable caching entirely for better performance",
-            "Wrap useQuery inside useEffect",
-            "Always refetch data manually instead of relying on cache"
+            "Provide unique queryKeys and leverage caching",
+            "Turn off caching completely for faster updates",
+            "Call useQuery only inside a useEffect hook",
+            "Refetch data manually each time instead of using cache"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 385,
-        "question": "Which hook is used in React Query to handle creating, updating, or deleting data on the server?",
+        "question":"Which React Query hook is used for creating, updating, or deleting server data?",
         "options": [
             "useQuery",
             "useMutation",
@@ -4520,23 +4509,23 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 386,
-        "question": "After a successful mutation, what is the recommended way to update cached queries in React Query?",
+        "question":  "After a successful mutation, what is the recommended way to update cached queries?",
         "options": [
-            "Manually reloading the page",
-            "Invalidating or updating relevant query keys",
-            "Resetting React state with useState",
-            "Running the same mutation again"
+            "Reload the entire page to get fresh data",
+            "Invalidate or update related query keys",
+            "Reset local state manually using useState",
+            "Run the same mutation again to refresh data"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 387,
-        "question": "Which of the following is TRUE about useMutation compared to useQuery?",
+        "question": "Which statement about useMutation compared to useQuery is correct?",
         "options": [
-            "useMutation is synchronous while useQuery is asynchronous",
-            "useMutation can only be used with GraphQL APIs",
-            "useMutation does not run automatically, it must be triggered manually",
+            "useMutation executes synchronously by default",
+            "useMutation only works with GraphQL APIs",
+            "useMutation must be triggered manually and does not run automatically",
             "useMutation cannot handle error states"
         ],
         "correctOption": 2,
@@ -4545,12 +4534,12 @@ export const mockQuestions: Question[] = [
             {
             "id": 388,
             "question": "What is the primary purpose of the queryKey in useQuery?",
-            "options": [
-                "To provide a unique identifier for caching and refetching",
-                "To define the API endpoint URL",
-                "To specify the loading spinner type",
-                "To determine the mutation success callback"
-            ],
+                "options": [
+                    "Uniquely identify queries for caching and refetching",
+                    "Define the API endpoint URL",
+                    "Specify the type of loading spinner to show",
+                    "Configure mutation success callbacks"
+                ],
             "correctOption": 0,
             "points": 20
         },
@@ -4558,41 +4547,46 @@ export const mockQuestions: Question[] = [
             "id": 389,
             "question": "In React Query, what is the difference between staleTime and cacheTime?",
             "options": [
-                "staleTime controls how long data is considered fresh, while cacheTime controls how long inactive data stays in memory",
-                "staleTime defines retry attempts, while cacheTime defines error persistence",
+                "staleTime defines retry attempts; cacheTime defines error persistence",
                 "Both represent the same concept of cache duration",
-                "staleTime is only used in mutations, cacheTime only in queries"
+                "staleTime determines how long data is considered fresh; cacheTime controls how long inactive data stays in memory",
+                "staleTime is only used for mutations; cacheTime only for queries"
             ],
-            "correctOption": 0,
+            "correctOption": 2,
             "points": 30
         },
         {
             "id": 390,
-            "question": "How can you prevent a useQuery from automatically running when the component mounts?",
+            "question":"How can you prevent a useQuery from automatically running when a component mounts?",
             "options": [
-                "By removing queryKey",
-                "By using useMutation instead",
-                "By disabling React StrictMode",
-                "By setting enabled: false in the query options",
+                "Remove the queryKey entirely",
+                "Use useMutation instead of useQuery",
+                "Disable React StrictMode in the app",
+                "Set enabled: false in the query options"
             ],
             "correctOption":3,
             "points": 10
         },
         {
             "id": 391,
-            "question": "Which callback in useMutation is best suited for updating the cache after a successful mutation?",
-            "options": ["onSettled", "onMutate", "onSuccess", "onError"],
+            "question":  "Which callback in useMutation is typically used to update the cache after a successful mutation?",
+            "options": [
+                "onSettled",
+                "onMutate",
+                "onSuccess",
+                "onError"
+            ],
             "correctOption": 2,
             "points": 20
         },
         {
             "id": 392,
-            "question": "Why are optimistic updates useful in useMutation?",
+            "question":  "Why are optimistic updates useful in useMutation?",
             "options": [
-                "They retry failed requests automatically",
-                "They update the UI immediately before receiving a server response",
-                "They prevent memory leaks",
-                "They keep query keys unique"
+                "They automatically retry failed requests",
+                "They update the UI immediately before server response",
+                "They prevent memory leaks in components",
+                "They enforce unique query keys"
             ],
             "correctOption": 1,
             "points": 30
@@ -4600,7 +4594,12 @@ export const mockQuestions: Question[] = [
         {
             "id": 393,
             "question": "Which React Query function is commonly used inside a mutation's onSuccess callback to refresh relevant queries?",
-            "options": ["resetQueries", "refetchQueries", "cancelQueries", "invalidateQueries"],
+            "options": [
+                "resetQueries",
+                "refetchQueries",
+                "cancelQueries",
+                "invalidateQueries"
+            ],
             "correctOption": 3,
             "points": 20
         },
@@ -4608,18 +4607,23 @@ export const mockQuestions: Question[] = [
             "id": 394,
             "question": "What happens when multiple queries are dependent in React Query?",
             "options": [
-                "They run in parallel regardless of dependency",
-                "The next query waits until the previous one has data",
-                "All queries are cached under the same queryKey",
-                "Dependent queries are not supported in React Query"
+                "They run in parallel ignoring dependencies",
+                "The next query waits for previous query's data",
+                "All queries share the same queryKey",
+                "Dependent queries are not supported"
             ],
             "correctOption": 1,
             "points": 20
         },
         {
             "id": 395,
-            "question": "Which tool helps visualize query and mutation states during development in React Query?",
-            "options": ["Redux DevTools", "React Query Devtools", "React Profiler", "Apollo Studio"],
+            "question": "Which tool helps visualize query and mutation states during development?",
+            "options": [
+                "Redux DevTools",
+                "React Query Devtools",
+                "React Profiler",
+                "Apollo Studio"
+            ],
             "correctOption": 1,
             "points": 10
         },
@@ -4637,50 +4641,36 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 396,
-            "question": "Which option in useQuery allows background data synchronization at regular intervals?",
-            "options": ["cacheTime", "refetchInterval", "retry", "keepPreviousData"],
+            "question": "Which option in useQuery allows background synchronization at intervals?",
+            "options": [
+                "cacheTime",
+                "refetchInterval",
+                "retry",
+                "keepPreviousData"
+            ],
             "correctOption": 1,
             "points": 20
         },
         {
-            "id": 397,
-            "question": "What is the purpose of the onMutate callback in useMutation?",
-            "options": [
-                "It rolls back the optimistic update if mutation fails",
-                "It is called before the mutation function and is useful for optimistic updates",
-                "It clears the query cache",
-                "It retries the mutation on network failure"
-            ],
-            "correctOption": 1,
-            "points": 25
-        },
-        {
-            "id": 398,
-            "question": "How can you roll back an optimistic update if a mutation fails?",
-            "options": [
-                "By returning a rollback function from onMutate and calling it inside onError",
-                "By using invalidateQueries",
-                "By disabling cacheTime",
-                "By catching the error in useQuery"
-            ],
-            "correctOption": 0,
-            "points": 30
-        },
-        {
             "id": 399,
-            "question": "Which option in useQuery is helpful when implementing pagination to avoid showing a blank state while fetching new data?",
-            "options": ["enabled", "refetchOnWindowFocus", "keepPreviousData", "retry"],
+            "question": "Which useQuery option helps with pagination to avoid blank state while fetching new data?",
+            "options": [
+                "enabled",
+                "refetchOnWindowFocus",
+                "keepPreviousData",
+                "retry"
+            ],
             "correctOption": 2,
             "points": 20
         },
         {
             "id": 400,
-            "question": "How does React Query ensure consistency between server and client after a mutation?",
+            "question":  "How does React Query ensure consistency between server and client after a mutation?",
             "options": [
-                "By reloading the browser window",
-                "By automatically invalidating all queries",
-                "By using invalidateQueries or manually refetching affected queries",
-                "By clearing the entire cache"
+                "Reload the browser window",
+                "Automatically invalidate all queries",
+                "Use invalidateQueries or manually refetch affected queries",
+                "Clear the entire cache"
             ],
             "correctOption": 2,
             "points": 20
