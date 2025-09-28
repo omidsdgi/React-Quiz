@@ -4197,134 +4197,134 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 360,
-        "question": "How does useRef differ from useState for storing values?",
+        "question":  "How does useRef differ from useState when storing values across renders?",
         "options": [
-            "useRef triggers re-renders, useState does not",
-            "useRef preserves values, useState resets them",
-            "useRef does not trigger re-renders, useState does",
-            "useRef works asynchronously, useState works synchronously"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 361,
-        "question": "What is a common use case for useRef with timers?",
-        "options": [
-            "Storing timer IDs to clear them later",
-            "Creating multiple timers simultaneously for performance",
-            "Triggering component re-renders when timer completes",
-            "Converting synchronous code into asynchronous operations"
+            "useRef updates do not trigger re-renders, while useState updates do",
+            "useRef values reset on every render, while useState persists them",
+            "useRef only stores DOM nodes, while useState can store any data",
+            "useRef is asynchronous, while useState is synchronous"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
-        "id": 362,
-        "question": "Why use useRef to store previous values?",
+        "id": 361,
+        "question":"What is a common use case for using useRef with timers?",
         "options": [
-            "useRef automatically tracks value history",
-            "useRef triggers updates when values change",
-            "useRef persists values without causing re-renders",
-            "useRef provides built-in comparison functions"
+            "Automatically re-rendering the component when the timer completes",
+            "Storing a timer ID so it can be cleared later",
+            "Synchronizing multiple timers across components",
+            "Replacing setTimeout with a synchronous execution"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 362,
+        "question": "Why is useRef often used to store previous values in a component?",
+        "options": [
+            "Because useRef automatically tracks a history of values",
+            "Because useRef values trigger updates when they change",
+            "Because useRef stores values without causing re-renders",
+            "Because useRef has built-in comparison helpers for values"
         ],
         "correctOption": 2,
         "points": 30
     },
     {
         "id": 363,
-        "question": "What happens to refs when component unmounts?",
+        "question": "What happens to a ref when its component unmounts?",
         "options": [
-            "Refs are automatically cleared and garbage collected",
-            "Refs persist in memory until manually cleared",
-            "Refs throw errors if accessed after unmount",
-            "Refs are transferred to parent component"
+            "The ref value stays in memory until you clear it manually",
+            "The ref is reset and its memory can be freed automatically",
+            "Accessing the ref after unmount will throw an error",
+            "The ref is passed to the parent component automatically"
         ],
-        "correctOption": 0,
-        "points": 30
+        "correctOption": 1,
+        "points": 20
     },
     {
         "id": 364,
-        "question": "Can you pass refs as props to child components?",
+        "question": "Can refs be passed to child components as props?",
         "options": [
-            "Yes, refs can be passed like any other props",
-            "No, refs cannot be passed between components",
-            "Yes, but only using forwardRef for components",
-            "No, refs only work within single component"
+            "Yes, refs can always be passed like any normal prop",
+            "No, refs cannot be shared between components",
+            "Yes, but it requires using forwardRef in the child component",
+            "No, refs only work in the component where they are declared"
         ],
         "correctOption": 2,
         "points": 30
     },
     {
         "id": 365,
-        "question": "What is forwardRef used for with refs?",
+        "question": "What is the primary purpose of forwardRef in React?",
         "options": [
-            "Creating multiple refs within single component",
-            "Passing refs from parent to child components",
-            "Converting refs into state variables automatically",
-            "Clearing refs when components unmount"
+            "To create multiple refs inside a single component",
+            "To allow a parent component to pass a ref to a child component",
+            "To convert refs into state variables automatically",
+            "To clear a ref when a component unmounts"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 366,
-        "question": "When is useRef preferable to regular variables?",
+        "question": "When is useRef preferable over using a regular variable in a function component?",
         "options": [
-            "When you need values to persist across renders",
-            "When you want to trigger component re-renders",
-            "When you need to share values between components",
-            "When you want to reset values on each render"
+            "When you need a value to persist across re-renders",
+            "When you want a change in value to trigger a re-render",
+            "When you need to share values between different components",
+            "When you want to reset a value every time the component renders"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
         "id": 367,
-        "question": "What type of data can be stored in useRef?",
+        "question": "What types of values can be stored in a useRef?",
         "options": [
-            "Only DOM element references for manipulation",
-            "Only primitive values like strings and numbers",
-            "Any mutable value including objects and functions",
-            "Only values that implement specific interface"
+            "Only DOM element references for direct manipulation",
+            "Only primitive values like numbers and strings",
+            "Any mutable value including objects, arrays, or functions",
+            "Only values that implement a special React interface"
         ],
         "correctOption": 2,
         "points": 10
     },
     {
         "id": 368,
-        "question": "How do you focus an input element using useRef?",
+        "question":"How can you focus an input element using useRef?",
         "options": [
-            "inputRef.current.focus() inside useEffect or handler",
-            "inputRef.focus() directly during component render",
-            "inputRef.current() method call with focus parameter",
-            "inputRef.setValue() with focus property set true"
+            "By calling inputRef.current.focus() inside an effect or event handler",
+            "By calling inputRef.focus() directly during render",
+            "By invoking inputRef.current() with 'focus' as a parameter",
+            "By setting a 'focus' property with inputRef.setValue()"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
         "id": 369,
-        "question": "What is the key difference between refs and state?",
+        "question": "What is the main difference between refs and state in React?",
         "options": [
-            "Refs store immutable data, state stores mutable data",
-            "Refs trigger re-renders, state maintains component lifecycle",
-            "Refs persist without re-renders, state triggers re-renders",
-            "Refs work with objects, state works with primitives"
+            "Refs store immutable values, while state stores mutable values",
+            "Refs trigger re-renders, while state manages lifecycle events",
+            "Refs persist values without re-rendering, while state updates trigger re-renders",
+            "Refs only store objects, while state only stores primitive values"
         ],
         "correctOption": 2,
         "points": 10
     },
     {
         "id": 370,
-        "question":"Can you mix capturing and bubbling event listeners on the same element?",
+        "question":"Can you attach both capturing and bubbling event listeners on the same element in React?",
         "options": [
-            "Yes, capturing listeners run first, followed by bubbling listeners",
-            "No, you must choose only one phase per element",
-            "Yes, but bubbling listeners execute before capturing listeners",
-            "No, mixing phases triggers JavaScript errors"
+            "Yes, bubbling listeners run before capturing listeners on the same element",
+            "No, React allows only one event phase per element",
+            "Yes, capturing listeners run before bubbling listeners on the same element",
+            "No, attaching both phases causes runtime errors"
         ],
-        "correctOption": 0,
+        "correctOption": 2,
         "points": 30
     },
     {
