@@ -3969,43 +3969,103 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 341,
-        "question": "What is event bubbling in the DOM?",
+        "question": "Which statement best defines event delegation in JavaScript?",
         "options": [
-            "Events travel from target element up to document root",
-            "Events travel from document root down to target element",
-            "Events execute only on the clicked element",
-            "Events prevent all other handlers from executing"
+            "Attaching separate event listeners to each child element individually",
+            "Using a single event listener on a parent to handle events of its children",
+            "Stopping event propagation at the target element",
+            "Automatically delegating event handling to external libraries"
         ],
-        "correctOption": 0,
-        "points": 10
+        "correctOption": 1,
+        "points": 30
     },
     {
         "id": 342,
-        "question": "What is event capturing in the DOM?",
+        "question": "What is the main idea behind event delegation?",
         "options": [
-            "Events execute only on parent elements",
-            "Events travel from document root down to target element",
-            "Events travel from target element up to ancestors",
-            "Events prevent propagation to child elements"
+            "Attaching listeners directly to each child element",
+            "Using a parent element's listener to handle child events",
+            "Preventing events from reaching the target element",
+            "Automatically binding handlers during DOM creation"
         ],
         "correctOption": 1,
-        "points": 10
+        "points": 30
     },
     {
         "id": 343,
-        "question": "In which order do event phases occur?",
+        "question": "Which phase of event propagation makes event delegation possible?",
         "options": [
-            "Target phase, bubbling phase, capturing phase",
-            "Bubbling phase, target phase, capturing phase",
-            "Capturing phase, target phase, bubbling phase",
-            "Target phase, capturing phase, bubbling phase"
+            "Capturing phase",
+            "Target phase",
+            "Bubbling phase",
+            "Initialization phase"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
         "id": 344,
-        "question": "How do you register an event listener for capturing phase?",
+        "question": "What is a key advantage of event delegation?",
+        "options": [
+            "It reduces memory usage by minimizing event listeners",
+            "It blocks default browser actions automatically",
+            "It ensures handlers run only once per event",
+            "It prevents child elements from firing events"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 345,
+        "question": "How can you identify the actual clicked element in event delegation?",
+        "options": [
+            "By checking event.currentTarget",
+            "By checking event.target",
+            "By calling event.getSource()",
+            "By checking parentNode of the target element"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 346,
+        "question": "What is event bubbling in the DOM?",
+        "options": [
+            "Events propagate from the target element up to the document root",
+            "Events propagate from the document root down to the target element",
+            "Events execute only on the element that was clicked",
+            "Events prevent other listeners from executing"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 347,
+        "question": "What is event capturing in the DOM?",
+        "options": [
+            "Events execute only on parent elements",
+            "Events propagate from the target element up to its ancestors",
+            "Events propagate from the document root down to the target element",
+            "Events stop propagation to child elements"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 348,
+        "question":  "In which order do the event propagation phases occur?",
+        "options": [
+            "Target phase → bubbling phase → capturing phase",
+            "Bubbling phase → target phase → capturing phase",
+            "Capturing phase → target phase → bubbling phase",
+            "Target phase → capturing phase → bubbling phase"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 349,
+        "question": "How do you register an event listener to run during the capturing phase?",
         "options": [
             "element.addEventListener('click', handler, true)",
             "element.addEventListener('click', handler, false)",
@@ -4016,187 +4076,188 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 345,
-        "question": "What does event.stopPropagation() accomplish?",
+        "id": 350,
+        "question": "What does event.stopPropagation() do?",
         "options": [
-            "Prevents default browser behavior for events",
-            "Removes all event listeners from element",
-            "Prevents event from continuing through phases",
-            "Triggers event on all parent elements"
-        ],
+            "Prevents the default browser behavior",
+            "Removes all listeners from the element",
+            "Stops the event from propagating further through phases",
+            "Triggers the event on all parent elements"
+
+            ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 346,
-        "question": "When would you use event capturing over bubbling?",
+        "id": 351,
+        "question":  "When would you prefer event capturing over bubbling?",
         "options": [
-            "When you need to handle events before children",
-            "When you want events to execute on target only",
-            "When you need to prevent all event propagation",
-            "When you want to remove event listeners automatically"
+            "When you want to handle events before they reach child elements",
+            "When you want events to execute only on the target",
+            "When you need to block all propagation completely",
+            "When you want listeners to be removed automatically"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
-        "id": 347,
-        "question": "What happens if you call stopPropagation() during capturing?",
+        "id": 352,
+        "question":"What happens if you call stopPropagation() during the capturing phase?",
         "options": [
-            "Event continues to target and bubbling phases",
-            "Event stops and skips target and bubbling phases",
-            "Event jumps directly to bubbling phase",
-            "Event executes on all elements simultaneously"
+            "Event continues to the target and then bubbling phase",
+            "Event jumps directly to the bubbling phase",
+            "Event stops and does not reach target or bubbling phases",
+            "Event executes on all elements at the same time"
         ],
-        "correctOption": 1,
+        "correctOption": 2,
         "points": 30
     },
     {
-        "id": 348,
-        "question": "How does event delegation utilize event bubbling?",
+        "id": 353,
+        "question": "How does event delegation make use of event bubbling?",
         "options": [
-            "Attaches listeners to each individual child element",
-            "Prevents events from reaching parent elements",
-            "Uses parent listener to handle child events",
-            "Creates separate event phases for each element"
+            "By attaching listeners to each child element individually",
+            "By preventing events from reaching parent elements",
+            "By using a parent listener to handle events from child elements",
+            "By creating separate event phases for each element"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 349,
-        "question": "What is event.target in the context of bubbling?",
+        "id": 354,
+        "question":  "What does event.target refer to in event bubbling?",
         "options": [
-            "The element currently handling the event",
-            "The element where the event originally occurred",
-            "The topmost parent element in hierarchy",
+            "The element whose listener is currently executing",
+            "The element where the event was originally triggered",
+            "The topmost ancestor element",
             "The element that registered the event listener"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
-        "id": 350,
-        "question": "What is event.currentTarget during event propagation?",
-        "options": [
-            "The document root element for all events",
-            "The element where event originally occurred",
-            "The element currently executing event handler",
-            "The element that will handle event next"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 351,
-        "question": "Why is event delegation beneficial for dynamic content?",
-        "options": [
-            "Eliminates need for event listeners on elements",
-            "Handles events for elements added after page load",
-            "Prevents events from propagating to children",
-            "Automatically removes listeners when elements disappear"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 352,
-        "question": "What occurs during the target phase of event propagation?",
-        "options": [
-            "Event travels from document to target element",
-            "Event travels from target element to document",
-            "Event executes handlers registered on target element",
-            "Event stops propagation automatically after execution"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 353,
-        "question": "How can you determine which phase an event is in?",
-        "options": [
-            "Check event.phase property for current phase",
-            "Check event.eventPhase property for current phase",
-            "Compare event.target with event.currentTarget values",
-            "Use event.stopPropagation() to test behavior"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 354,
-        "question": "What happens with multiple listeners on same element?",
-        "options": [
-            "Only the first registered listener executes",
-            "Only the last registered listener executes",
-            "All listeners execute in registration order",
-            "Listeners execute in reverse registration order"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
         "id": 355,
-        "question": "What is the primary purpose of the useRef hook?",
+        "question": "What does event.currentTarget represent during event propagation?",
         "options": [
-            "Managing component state that triggers re-renders",
-            "Storing mutable values that persist across renders",
-            "Creating side effects after component renders",
-            "Memoizing expensive calculations between renders"
+            "The root element of the document",
+            "The element where the event was first triggered",
+            "The element whose event listener is currently running",
+            "The element that will handle the event next"
         ],
-        "correctOption": 1,
-        "points": 10
+        "correctOption": 2,
+        "points": 20
     },
     {
         "id": 356,
-        "question": "What happens when you update a ref's current value?",
+        "question": "Why is event delegation useful when working with dynamic elements?",
         "options": [
-            "Component re-renders automatically after update",
-            "Component re-renders only on next state change",
-            "Component does not re-render from ref changes",
-            "Component re-renders after short delay period"
+            "It avoids adding separate listeners to every child element",
+            "It allows handling events for elements created after page load",
+            "It stops events from bubbling up the DOM tree",
+            "It removes event listeners automatically when elements are deleted"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 357,
+        "question":  "What specifically happens in the target phase of event propagation?",
+        "options": [
+            "The event moves from the document down to the target",
+            "The event bubbles back up from the target to the document",
+            "Event listeners on the target element are executed",
+            "The event stops automatically after reaching the target"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 357,
-        "question": "How do you access a DOM element using useRef?",
-        "options": [
-            "Pass ref object to element's ref prop",
-            "Call ref.current() method on element",
-            "Use ref.getValue() to retrieve element",
-            "Access element through ref.element property"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
         "id": 358,
-        "question": "When should you access ref.current in function components?",
+        "question": "How can you check which phase an event is currently in?",
         "options": [
-            "During component render phase directly",
-            "Inside useEffect or event handlers only",
-            "Only during component initialization phase",
-            "Anytime within component function body"
+            "By inspecting event.phase property",
+            "By using the event.eventPhase property",
+            "By comparing event.target with event.currentTarget",
+            "By calling stopPropagation() and checking the result"
         ],
         "correctOption": 1,
         "points": 30
     },
     {
         "id": 359,
-        "question": "What value does useRef return initially?",
+        "question": "What happens if multiple event listeners are attached to the same element for the same event?",
         "options": [
-            "Object with current property set to initial value",
-            "Function that returns current reference value",
-            "Array containing current value and setter function",
-            "Promise that resolves to reference value"
+            "Only the first added listener runs",
+            "Only the most recent listener runs",
+            "All listeners run in the order they were registered",
+            "Listeners run in reverse order of registration"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 360,
+        "question": "What is the main purpose of the useRef hook in React?",
+        "options": [
+            "To store state values that trigger re-renders",
+            "To hold mutable values that persist across renders",
+            "To run side effects after component updates",
+            "To memoize expensive calculations between renders"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 361,
+        "question":  "What happens when you update the current property of a ref?",
+        "options": [
+            "The component re-renders immediately",
+            "The component re-renders on the next state change",
+            "The component does not re-render due to ref changes",
+            "The component re-renders after a short delay"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 362,
+        "question": "How do you connect a ref to a DOM element in React?",
+        "options": [
+            "Pass the ref object to the element's ref attribute",
+            "Call ref.current() on the element during render",
+            "Use ref.getValue() to fetch the element reference",
+            "Access the element via ref.element property"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 363,
+        "question": "When is the correct time to safely access ref.current in a function component?",
+        "options": [
+            "Directly during the render phase",
+            "Inside useEffect or event handlers",
+            "Only during initial mounting",
+            "At any point in the component body"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 364,
+        "question":  "What does useRef return when it is first initialized?",
+        "options": [
+            "An object with a current property set to the initial value",
+            "A function that returns the reference value",
+            "An array containing the current value and a setter",
+            "A promise that resolves with the reference value"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
-        "id": 360,
+        "id": 365,
         "question":  "How does useRef differ from useState when storing values across renders?",
         "options": [
             "useRef updates do not trigger re-renders, while useState updates do",
@@ -4208,7 +4269,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 361,
+        "id": 366,
         "question":"What is a common use case for using useRef with timers?",
         "options": [
             "Automatically re-rendering the component when the timer completes",
@@ -4220,7 +4281,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 362,
+        "id": 367,
         "question": "Why is useRef often used to store previous values in a component?",
         "options": [
             "Because useRef automatically tracks a history of values",
@@ -4232,7 +4293,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 363,
+        "id": 368,
         "question": "What happens to a ref when its component unmounts?",
         "options": [
             "The ref value stays in memory until you clear it manually",
@@ -4244,7 +4305,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 364,
+        "id": 369,
         "question": "Can refs be passed to child components as props?",
         "options": [
             "Yes, refs can always be passed like any normal prop",
@@ -4256,7 +4317,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 365,
+        "id": 370,
         "question": "What is the primary purpose of forwardRef in React?",
         "options": [
             "To create multiple refs inside a single component",
@@ -4268,7 +4329,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 366,
+        "id": 371,
         "question": "When is useRef preferable over using a regular variable in a function component?",
         "options": [
             "When you need a value to persist across re-renders",
@@ -4280,7 +4341,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 367,
+        "id": 372,
         "question": "What types of values can be stored in a useRef?",
         "options": [
             "Only DOM element references for direct manipulation",
@@ -4292,7 +4353,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 368,
+        "id": 373,
         "question":"How can you focus an input element using useRef?",
         "options": [
             "By calling inputRef.current.focus() inside an effect or event handler",
@@ -4304,7 +4365,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 369,
+        "id": 374,
         "question": "What is the main difference between refs and state in React?",
         "options": [
             "Refs store immutable values, while state stores mutable values",
@@ -4316,7 +4377,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 370,
+        "id": 375,
         "question":"Can you attach both capturing and bubbling event listeners on the same element in React?",
         "options": [
             "Yes, bubbling listeners run before capturing listeners on the same element",
@@ -4328,7 +4389,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 371,
+        "id": 376,
         "question": "What is the primary purpose of a mutation in React Query?",
         "options": [
             "To create, update, or delete server data",
@@ -4340,7 +4401,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 372,
+        "id": 377,
         "question": "Which React Query hook is used for modifying server data?",
         "options": [
             "useQuery for fetching data",
@@ -4352,7 +4413,7 @@ export const mockQuestions: Question[] = [
     "points": 10
     },
     {
-        "id": 373,
+        "id": 378,
         "question":"Why use mutation callbacks like onSuccess in React Query?",
         "options": [
             "To update the cache or trigger side effects after a mutation",
@@ -4364,7 +4425,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 374,
+        "id": 379,
         "question": "What does offline support enable in React Query?",
         "options": [
             "Blocking all server communication permanently",
@@ -4376,7 +4437,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 375,
+        "id": 380,
         "question": "How does React Query provide a smooth offline experience?",
         "options": [
             "By disabling all UI components",
@@ -4388,7 +4449,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 376,
+        "id": 381,
         "question":"Which combination supports effective offline-first behavior?",
         "options": [
             "Permanently disabling staleTime and cacheTime",
@@ -4400,7 +4461,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 377,
+        "id": 382,
         "question":  "Why is React Query valuable for managing server state?",
         "options": [
             "It automates fetching, caching, and synchronization of data",
@@ -4412,7 +4473,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 378,
+        "id": 383,
         "question": "Which problems does React Query solve in applications?",
         "options": [
             "Automatically applying styles to components without CSS",
@@ -4424,7 +4485,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 379,
+        "id": 384,
         "question": "Why is manual server state management challenging?",
         "options": [
             "Because React Query is needed to create components",
@@ -4436,7 +4497,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 380,
+        "id": 385,
         "question":"How do useQuery and useMutation differ in purpose?",
         "options": [
             "useQuery styles components, useMutation handles routing",
@@ -4448,7 +4509,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 381,
+        "id": 386,
         "question": "Which hook in React Query is primarily used for fetching and caching server data?",
         "options": [
             "useMutation",
@@ -4460,7 +4521,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 382,
+        "id": 387,
         "question": "In React Query, what happens if you provide the same queryKey to multiple useQuery hooks?",
         "options": [
             "Each query runs separately without caching",
@@ -4472,7 +4533,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 383,
+        "id": 388,
         "question": "Which of the following is a recommended pattern when using useQuery to prevent unnecessary network requests?",
         "options": [
             "Use a unique queryKey for each query and enable caching",
@@ -4484,7 +4545,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 384,
+        "id": 389,
         "question": "Which of the following is a recommended pattern when using useQuery to prevent unnecessary network requests?",
         "options": [
             "Use a unique queryKey for each query and enable caching",
@@ -4496,7 +4557,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 385,
+        "id": 390,
         "question": "Which hook is used in React Query to handle creating, updating, or deleting data on the server?",
         "options": [
             "useQuery",
@@ -4508,7 +4569,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 386,
+        "id": 391,
         "question": "After a successful mutation, what is the recommended way to update cached queries in React Query?",
         "options": [
             "Manually reloading the page",
@@ -4520,7 +4581,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 387,
+        "id": 392,
         "question": "Which of the following is TRUE about useMutation compared to useQuery?",
         "options": [
             "useMutation is synchronous while useQuery is asynchronous",
@@ -4532,7 +4593,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
             {
-            "id": 388,
+            "id": 393,
             "question": "What is the primary purpose of the queryKey in useQuery?",
             "options": [
                 "To provide a unique identifier for caching and refetching",
@@ -4544,7 +4605,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 389,
+            "id": 394,
             "question": "In React Query, what is the difference between staleTime and cacheTime?",
             "options": [
                 "staleTime controls how long data is considered fresh, while cacheTime controls how long inactive data stays in memory",
@@ -4556,7 +4617,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 390,
+            "id": 395,
             "question": "How can you prevent a useQuery from automatically running when the component mounts?",
             "options": [
                 "By removing queryKey",
@@ -4568,14 +4629,14 @@ export const mockQuestions: Question[] = [
             "points": 10
         },
         {
-            "id": 391,
+            "id": 396,
             "question": "Which callback in useMutation is best suited for updating the cache after a successful mutation?",
             "options": ["onSettled", "onMutate", "onSuccess", "onError"],
             "correctOption": 2,
             "points": 20
         },
         {
-            "id": 392,
+            "id": 397,
             "question": "Why are optimistic updates useful in useMutation?",
             "options": [
                 "They retry failed requests automatically",
@@ -4587,14 +4648,14 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 393,
+            "id": 398,
             "question": "Which React Query function is commonly used inside a mutation's onSuccess callback to refresh relevant queries?",
             "options": ["resetQueries", "refetchQueries", "cancelQueries", "invalidateQueries"],
             "correctOption": 3,
             "points": 20
         },
         {
-            "id": 394,
+            "id": 399,
             "question": "What happens when multiple queries are dependent in React Query?",
             "options": [
                 "They run in parallel regardless of dependency",
@@ -4606,14 +4667,14 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 395,
+            "id": 400,
             "question": "Which tool helps visualize query and mutation states during development in React Query?",
             "options": ["Redux DevTools", "React Query Devtools", "React Profiler", "Apollo Studio"],
             "correctOption": 1,
             "points": 10
         },
         {
-            "id": 381,
+            "id": 401,
             "question": "What does useQuery return in case of an error?",
             "options": [
                 "Only null data",
