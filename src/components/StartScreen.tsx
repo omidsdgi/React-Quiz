@@ -5,9 +5,10 @@ import {mockQuestions} from "../mock/mockQuestions";
 
 export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
     const [selectedLevel, setSelectedLevel] = useState<"fundamental" | "intermediate" | "advanced" | null>(null);
-    const [startRange, setStartRange] = useState<string>("1");
-    const [endRange, setEndRange] = useState<string>("10");
+    const [startRange, setStartRange] = useState<number>(1);
+    const [endRange, setEndRange] = useState<number>(10);
     const [showRangeSelection, setShowRangeSelection] = useState<boolean>(false);
+
 
     // تعداد سوالات موجود برای هر سطح - با safe access
     const getLevelQuestionCount = (level: "fundamental" | "intermediate" | "advanced"): number => {
@@ -109,11 +110,21 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
                         <label>
                             From question:
                             <input
-                                type="number"
+                                type="text"
+                                inputMode="numeric"
+                                pattern="[0-9]*"
                                 min="1"
                                 max={maxQuestions}
-                                value={startRange}
-                                onChange={(e) => setStartRange(e.target.value)} // می‌تونه خالی باشه
+                                value={startRange === 0 ? '' : startRange}
+                                onChange={(e) => {
+                                    const value = e.target.value;
+
+                                    // اجازه خالی بودن یا فقط اعداد
+                                    if (value === '' || /^\d+$/.test(value)) {
+                                        const numValue = value === '' ? 0 : parseInt(value);
+                                        setStartRange(numValue);
+                                    }
+                                }}
                                 onBlur={(e) => {
                                     let value = parseInt(e.target.value);
                                     if (isNaN(value) || value < 1) {
@@ -121,10 +132,12 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
                                     } else if (value > maxQuestions) {
                                         value = maxQuestions;
                                     }
-                                    setStartRange(String(value));
 
-                                    if (parseInt(endRange) < value) {
-                                        setEndRange(String(value));
+                                    setStartRange(value);
+
+                                    // تنظیم endRange اگر نیاز باشد
+                                    if (endRange < value) {
+                                        setEndRange(value);
                                     }
                                 }}
                                 className="range-input"
@@ -133,19 +146,31 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
                         <label>
                             To question:
                             <input
-                                type="number"
+                                type="text"
+                                inputMode="numeric"
+                                pattern="[0-9]*"
                                 min={startRange}
                                 max={maxQuestions}
-                                value={endRange}
-                                onChange={(e) => setEndRange(e.target.value)}
+                                value={endRange === 0 ? '' : endRange}
+                                onChange={(e) => {
+                                    const value = e.target.value;
+
+                                    // اجازه خالی بودن یا فقط اعداد
+                                    if (value === '' || /^\d+$/.test(value)) {
+                                        const numValue = value === '' ? 0 : parseInt(value);
+                                        setEndRange(numValue);
+                                    }
+                                }}
                                 onBlur={(e) => {
                                     let value = parseInt(e.target.value);
-                                    if (isNaN(value) || value < parseInt(startRange)) {
-                                        value = parseInt(startRange);
+                                    const minValue = Math.max(1, startRange);
+                                    if (isNaN(value) || value < minValue) {
+                                        value = minValue;
                                     } else if (value > maxQuestions) {
                                         value = maxQuestions;
                                     }
-                                    setEndRange(String(value));
+
+                                    setEndRange(value);
                                 }}
                                 className="range-input"
                             />
