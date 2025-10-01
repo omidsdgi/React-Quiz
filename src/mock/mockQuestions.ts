@@ -731,19 +731,6 @@ export const mockQuestions: Question[] = [
         "correctOption": 3,
         "points": 10
     },
-
-    {
-        "id": 66,
-        "question":"Why do effects run twice in StrictMode during development?",
-        options: [
-            "Because of a React framework bug",
-            "To help detect side effects and test cleanup logic",
-            "To make rendering faster in development",
-            "To match production behavior exactly"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
     {
         "id": 67,
         question: "What are the main targets of React performance optimization?",
@@ -3475,10 +3462,10 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 300,
-        "question": "Why prefer component-based architecture over vanilla JavaScript?",
+        "question": "Why is component-based architecture preferred over vanilla JavaScript?",
         "options": [
-            "Components allow reuse, isolation, and testing",
-            "Components remove need for JavaScript functions",
+            "Components enable reuse, isolation, and easier testing",
+            "Components eliminate the need for any JavaScript functions",
             "Vanilla JavaScript cannot handle conditional rendering",
             "Components automatically generate database queries"
         ],
@@ -3487,47 +3474,47 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 301,
-        "question":"What was jQuery primarily designed to accomplish?",
+        "question":"What was jQuery primarily designed to do?",
         "options": [
-            "Managing server-side database connections",
-            "simplify DOM manipulation and event handling",
-            "Replacing HTML markup with JavaScript syntax",
-            "Compiling JavaScript into optimized machine code"
+            "Manage server-side database connections",
+            "Simplify DOM manipulation and event handling",
+            "Replace HTML markup with JavaScript syntax",
+            "Compile JavaScript into optimized machine code"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
         "id": 302,
-        "question":  "What jQuery limitation led to modern framework adoption?",
+        "question":  "Which limitation of jQuery led to adoption of modern frameworks?",
         "options": [
             "jQuery prevented DOM manipulation capabilities",
-            "jQuery converted code to server-side automatically",
-            "jQuery didn't provide structured state management patterns",
-            "jQuery could not execute in modern browsers",
+            "jQuery automatically converted code to server-side scripts",
+            "jQuery lacked structured state management patterns",
+            "jQuery could not run in modern browsers"
         ],
         "correctOption": 2,
         "points": 30
     },
     {
         "id": 303,
-        "question": "How is a web application different from a desktop application?",
+        "question": "How does a web application differ from a regular desktop application?",
         "options": [
-            "Web applications run on servers and accessed via browsers",
+            "Web applications run on servers and are accessed via browsers",
             "Web applications execute entirely on local machines",
             "Web applications contain only static HTML content",
-            "Web applications require no browser for execution"
+            "Web applications do not require a browser to run"
         ],
         "correctOption": 0,
         "points": 10
     },
     {
         "id": 304,
-        "question":  "What is React Query's primary responsibility?",
+        "question":  "What is the primary role of React Query in React applications?",
         "options": [
-            "Styling React components with CSS-in-JS",
-            "Managing server state including fetch and cache",
-            "Replacing useState hooks for local state",
+            "Styling React components using CSS-in-JS",
+            "Managing server state including fetching and caching",
+            "Replacing useState for local state management",
             "Building UI components without JSX syntax"
         ],
         "correctOption": 1,
@@ -3535,73 +3522,72 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 305,
-        "question": "Why do modern applications use front-end frameworks?",
+        "question": "Why do modern applications rely on front-end frameworks?",
         "options": [
-            "Converting HTML into server scripts automatically",
-            "Simplifying interactive UI and state management",
-            "Eliminating need for backend server infrastructure",
-            "Replacing CSS with JavaScript styling approaches"
+            "To automatically convert HTML into server scripts",
+            "To simplify interactive UI and manage application state",
+            "To eliminate the need for backend infrastructure",
+            "To replace CSS with JavaScript styling solutions"
         ],
         "correctOption": 1,
         "points": 30
     },
     {
         "id": 306,
-        "question":  "What distinguishes web applications from web pages?",
+        "question": "What differentiates a web application from a web page?",
         "options": [
-            "Pages allow user interaction, apps are static",
+            "Pages allow interaction, apps are purely static",
             "Pages require servers, apps work offline",
-            "Applications enable interaction, pages display content",
-            "Applications work offline, pages need internet"
+            "Applications enable interaction, pages mainly display content",
+            "Applications run offline, pages need internet"
         ],
         "correctOption": 2,
         "points": 10
     },
-
     {
         "id": 307,
-        "question": "When is React beneficial over plain HTML/CSS/JS?",
+        "question": "When is React more beneficial than plain HTML/CSS/JS?",
         "options": [
-            "React manages complex UI state and interactions efficiently",
-            "React converts HTML into server-side scripts automatically",
-            "React eliminates the need for CSS styling",
-            "React works only for pages without servers"
+            "React efficiently manages complex UI state and interactions",
+            "React automatically converts HTML into server-side scripts",
+            "React removes the need for CSS styling",
+            "React works only for pages without a server"
         ],
         "correctOption": 0,
         "points": 30
     },
     {
         "id": 308,
-        "question": "What does keeping UI synchronized with data mean?",
+        "question":  "What does keeping the UI synchronized with data mean?",
         "options": [
-            "Data should remain static to avoid updates",
-            "UI should update only during page refreshes",
-            "UI elements should be manually updated",
-            "UI should automatically reflect current data state"
+            "Data should remain static to avoid frequent updates",
+            "UI updates occur only during full page refreshes",
+            "UI elements need manual updates for data changes",
+            "UI automatically reflects the current state of data"
         ],
         "correctOption": 3,
         "points": 10
     },
     {
         "id": 309,
-        "question": "How does React maintain UI-data synchronization?",
+        "question":"How does React ensure UI stays in sync with data?",
         "options": [
-            "Directly manipulating DOM with vanilla JavaScript",
-            "Using state variables and triggering re-renders",
-            "Using global variables without state management",
-            "Refreshing entire page after each change"
+            "By directly manipulating the DOM using vanilla JavaScript",
+            "By using state variables and triggering re-renders",
+            "By relying solely on global variables without state management",
+            "By refreshing the entire page after each data change"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 310,
-        "question":  "Why is UI-data synchronization crucial in applications?",
+        "question": "Why is UI-data synchronization crucial in applications?",
         "options": [
-            "Ensures users see accurate and current information",
-            "Makes applications load faster by preventing updates",
-            "Allows avoiding React or similar frameworks",
-            "Caches old data without updating interface"
+            "It ensures users see accurate and up-to-date information",
+            "It speeds up applications by preventing updates",
+            "It allows avoiding React or similar frameworks",
+            "It caches old data without updating the interface"
         ],
         "correctOption": 0,
         "points": 20
