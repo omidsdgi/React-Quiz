@@ -3594,12 +3594,12 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 311,
-        "question": "What does DOM traversal enable in JavaScript?",
+        "question":"What does DOM traversal allow developers to do in JavaScript?",
         "options": [
-            "Creating entirely new DOM elements",
-            "Sending HTTP requests to server endpoints",
-            "Navigating and accessing existing DOM elements",
-            "Compiling JavaScript code to machine language"
+            "Create new elements and attach them to the DOM",
+            "Send asynchronous requests to a server",
+            "Navigate and access nodes already present in the DOM",
+            "Convert JavaScript code into machine instructions"
         ],
         "correctOption": 2,
         "points": 10
