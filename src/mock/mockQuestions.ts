@@ -6311,5 +6311,125 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30
-    }
+    },
+    {
+            "id": 541,
+            "question": "What best describes Next.js in relation to React?",
+            "options": [
+                "A standalone JavaScript library for DOM manipulation",
+                "A meta-framework built on top of React for web applications",
+                "A database engine designed for React components",
+                "A CSS preprocessor used with React"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 542,
+            "question": "What does it mean that Next.js is an opinionated framework?",
+            "options": [
+                "It enforces a specific set of conventions for building React apps",
+                "It restricts the use of JavaScript and JSX syntax",
+                "It prevents developers from using React hooks directly",
+                "It automatically converts all React code into static HTML"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 543,
+            "question": "Which statement best explains why Next.js is called a meta-framework?",
+            "options": [
+                "It converts React into a server-only framework",
+                "It removes the need for React components entirely",
+                "it replaces React's component model with template files",
+                "It provides a higher-level structure built around React’s ecosystem",
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 544,
+            "question": "Which of the following is NOT a key feature of Next.js?",
+            "options": [
+                "File-based routing conventions",
+                "Server-side rendering and static generation",
+                "CSS-only component styling system",
+                "Server-side data fetching and mutation"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 545,
+            "question": "What advantage does Next.js provide over plain React for full-stack development?",
+            "options": [
+                "It removes the need to write any server-side code at all",
+                "It integrates server-side rendering, routing, and data fetching into one framework",
+                "It guarantees no JavaScript will be sent to the client",
+                "It automatically generates database schemas from components"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 546,
+            "question": "Which of the following React features require framework-level integration provided by Next.js?",
+            "options": [
+                "Suspense, Server Components, and Server Actions",
+                "State management using useState and useEffect",
+                "Styling with CSS Modules and inline styles",
+                "DOM manipulation with document.querySelector"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 547,
+            "question": "What does 'file-based routing' in Next.js refer to?",
+            "options": [
+                "Manually defining routes in a central routing configuration",
+                "Routing structure automatically generated from the filesystem",
+                "Routing based on URL query parameters only",
+                "Using server middleware for navigation"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 548,
+            "question": "Which rendering types are supported by Next.js out of the box?",
+            "options": [
+                "Only client-side rendering and static generation",
+                "Server-side rendering (dynamic and static) and client-side rendering",
+                "Only static generation at build time",
+                "Server-only rendering without client hydration support"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 549,
+            "question": "How does Next.js handle data fetching compared to plain React?",
+            "options": [
+                "Next.js allows fetching and mutating data directly on the server before rendering",
+                "Next.js requires all data fetching to happen on the client only",
+                "Next.js uses Redux for all data operations",
+                "Next.js prevents using asynchronous operations in components"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 560,
+            "question": "What is a major benefit of Next.js optimizations?",
+            "options": [
+                "Automatically converting JavaScript into a native mobile app",
+                "Removing the need to minify or bundle any client assets",
+                "Improved performance and SEO through pre-rendering and smart caching",
+                "Enforcing a single large client bundle for easier caching"
+            ],
+            "correctOption": 2,
+            "points": 30
+        }
 ]
