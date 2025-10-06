@@ -6863,6 +6863,150 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 0,
             "points": 30
-        }
+        },
+    {
+        "id": 597,
+        "question": "How does a Page Component behave by default in Next.js?",
+        "options": [
+            "To run on the server unless marked with 'use client'",
+            "To always execute on the client for every route",
+            "To render both server and client content automatically",
+            "To generate only static HTML without interactivity"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 598,
+        "question": "What is the purpose of a loading.js file in a Next.js App Router project?",
+        "options": [
+            "To render a temporary loading state or skeleton UI while a server component is fetching data",
+            "To fetch data on the client side using hooks like useEffect",
+            "To replace the page component entirely with static HTML for SEO",
+            "To automatically convert server components to client components when state changes"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 599,
+        "question": "What happens if JavaScript is disabled in the browser while a loading.js component is used in Next.js?",
+        "options": [
+            "To convert server components into client components automatically",
+            "To run the loading.js component with full interactivity",
+            "To prevent the server from rendering the page",
+            "To show only the server-rendered content without interactive loading",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 600,
+        "question": "Why does a child component in Next.js not always need to be marked with 'use client'?",
+        "options": [
+            "To force the child to always execute on the client regardless of state",
+            "To allow server components to render it without requiring client-side state or hooks",
+            "To prevent server components from being able to render it at all",
+            "To automatically convert the child into a server component"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 601,
+        "question": "In Next.js, where is a Server Component subtree executed by default?",
+        "options": [
+            "To execute entirely on the client regardless of state",
+            "To switch execution between server and client automatically",
+            "To run on the server unless a Client Component is inside",
+            "To render only static HTML without server processing"
+        ],
+        "correctOption":2,
+        "points": 20
+    },
+    {
+        "id": 602,
+        "question": "What does serialization mean in the context of Server Components in Next.js?",
+        "options": [
+            "To execute JavaScript functions before sending data to the client",
+            "To convert data structures into a transferable format like JSON",
+            "To encrypt props to secure them during server-side rendering",
+            "To compile server code into a client-compatible bundle"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 603,
+        "question": "Which type of prop can be safely used in a Server Component in Next.js?",
+        "options": [
+            "To pass functions or class instances directly as component props",
+            "To include browser-only objects like window or document in props",
+            "To share React hooks or event handlers as props between components",
+            "To use serializable props such as strings, numbers, and plain objects",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 604,
+        "question": "Why can't functions or class instances be passed as props in Server Components in Next.js?",
+        "options": [
+            "To avoid serialization errors since functions and classes cannot be converted to JSON",
+            "To prevent duplicate rendering of components during client hydration proses",
+            "To reduce bundle size by skipping complex objects in server rendering",
+            "To keep server components isolated from client-side state and events"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 605,
+        "question": "What is the main difference between using async/await in Server Components and Client Components in Next.js?",
+        "options": [
+            "To only support async/await when combined with useEffect in both server and client components",
+            "To execute async/await automatically on both server and client without any restriction",
+            "To allow direct async/await usage in Server Components but require external effects in Client Components",
+            "To restrict async/await usage entirely in Server Components for performance reasons",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 606,
+        "question": "When does a Server Component render in a Next.js application?",
+        "options": [
+            "To render only once during the initial build process of the application",
+            "To render continuously whenever client-side state changes occur",
+            "To render on every navigation or URL change that triggers a new request",
+            "To render automatically after all client components finish hydrating",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 607,
+        "question": "What does streaming mean in the context of Server-Side Rendering in Next.js?",
+        "options": [
+            "To buffer the entire HTML output on the server before sending it to the client browse",
+            "To send HTML chunks to the browser as soon as they are ready instead of waiting for the full page",
+            "To prefetch all client assets before rendering any server content",
+            "To synchronize client and server states before starting the rendering process"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 608,
+        "question": "Which of the following is NOT an advantage of streaming in Next.js Server-Side Rendering?",
+        "options": [
+            "To improve the time to first render by sending partial HTML early",
+            "To enhance user experience through faster perceived loading",
+            "To delay the first byte of HTML until all server components are ready",
+            "To allow the browser to progressively render available content"
+        ],
+        "correctOption": 2,
+        "points": 30
+    }
 
 ]
