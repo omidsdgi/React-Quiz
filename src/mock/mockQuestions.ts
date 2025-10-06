@@ -6504,8 +6504,104 @@ export const mockQuestions: Question[] = [
         "correctOption": 2,
         "points": 30
     },
+        {
+            "id": 567,
+            "question": "Which statement correctly describes a Client Component in Next.js?",
+            "options": [
+                "To handle user interactions and local state within the component",
+                "To fetch data on the server and send pre-rendered HTML to the client",
+                "To render static content without JavaScript on the client",
+                "To generate page metadata for SEO at build time"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 568,
+            "question": "Which statement about Server Components is true?",
+            "options": [
+                "To fetch data using async/await and render on the server",
+                "To manage client-side local state with useState",
+                "To handle click events and interactive forms",
+                "To require JavaScript for rendering on the client"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 569,
+            "question": "Which rule applies when passing props from a Server Component to a Client Component?",
+            "options": [
+                "To pass only serializable values, avoiding functions or class instances",
+                "To pass useState hooks directly to maintain local reactivity",
+                "To pass any component references without serialization",
+                "To pass client-side event handlers to Server Components"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 570,
+            "question": "Which scenario requires lifting state up in Next.js?",
+            "options": [
+                "To render static Server Components without interactivity",
+                "To share local state between multiple Client Components",
+                "To fetch data only at build time using SSG",
+                "To generate metadata for SEO without user interaction"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 571,
+            "question": "Which behavior correctly describes when a Client Component re-renders?",
+            "options": [
+                "To re-render only when navigation occurs",
+                "To re-render when sibling Server Components update",
+                "To re-render on every server data fetch automatically",
+                "To re-render on local state or prop changes within the component",
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 572,
+            "question": "Which of the following is NOT suitable for a Server Component?",
+            "options": [
+                "To fetch data from an API using async/await function",
+                "To manage interactive form inputs and local state",
+                "To render static content for SEO",
+                "To output pre-rendered HTML to the client"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 573,
+            "question": "Which import restriction is true for Client Components?",
+            "options": [
+                "To import any Server or Client Component without restriction",
+                "To import Server Components but not Client Components",
+                "To import only static JSON or HTML files",
+                "To import only other Client Components ",
+            ],
+            "correctOption": 3,
+            "points": 30
+        },
+        {
+            "id": 574,
+            "question": "Which statement about Server Components and Client Components is NOT true?",
+            "options": [
+                "To Server Components cannot automatically re-render on Client Component state changes",
+                "To Server Components can render both Server and Client Components passed as props",
+                "To Client Components can handle local state and interactivity",
+                "To Client Components are preferred for pre-rendering SEO content"
+            ],
+            "correctOption": 3,
+            "points": 30
+        },
     {
-        "id": 567,
+        "id": 575,
         "question": "Which of the following is NOT a common problem with Client-Side Rendering (CSR)?",
         "options": [
             "Slower initial page load due to JavaScript execution",
@@ -6517,7 +6613,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 568,
+        "id": 576,
         "question": "Which of the following is NOT a common limitation of Server-Side Rendering (SSR)?",
         "options": [
             "Higher server load due to rendering pages on each request",
@@ -6529,7 +6625,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 569,
+        "id": 577,
         "question": "In which rendering method does the UI behave like a function where state changes trigger re-renders?",
         "options": [
             "Server-Side Rendering (SSR), because server sends updated HTML on each state change",
@@ -6541,7 +6637,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 570,
+        "id": 578,
         "question": "In React or Next.js, what does it mean when we say 'UI behaves like a function'?",
         "options": [
             "The UI executes server-side functions to fetch new HTML each time",
@@ -6553,7 +6649,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 571,
+        "id": 579,
         "question": "How does UI behave differently in CSR versus SSR regarding state and data?",
         "options": [
             "In CSR, UI updates based on component state; in SSR, UI is generated from server-provided data",
@@ -6565,7 +6661,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
         {
-            "id": 572,
+            "id": 580,
             "question": "What is the main purpose of React Server Components (RSC)?",
             "options": [
                 "To replace all client-side components with server-rendered HTML and eliminate any client-side interactivity entirely, forcing users to rely only on server responses",
@@ -6577,7 +6673,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 573,
+            "id": 581,
             "question": "Which of the following best describes a Client Component in React Server Components architecture?",
             "options": [
                 "A regular component that runs on the client and is created using the 'use client' directive",
@@ -6589,7 +6685,7 @@ export const mockQuestions: Question[] = [
             "points": 20
         },
         {
-            "id": 574,
+            "id": 582,
             "question": "Which statement is TRUE about Server Components in RSC architecture?",
             "options": [
                 "They are rendered only on the server and do not increase client bundle size",
@@ -6601,7 +6697,7 @@ export const mockQuestions: Question[] = [
             "points": 30
         },
         {
-            "id": 575,
+            "id": 583,
             "question": "Are React Server Components active by default in new React apps like Vite?",
             "options": [
                 "Yes, but only if 'use server' directive is added to every component",
@@ -6611,6 +6707,162 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 3,
             "points": 20
+        },
+    {
+        "id": 584,
+        "question": "Which of the following components in Next.js should be Client Components rather than Server Components?",
+        "options": [
+            "To a component that handles user interactions like clicks and input forms",
+            "To a component that only fetches and displays data from a database",
+            "To a component that renders static content with no interactivity",
+            "To a component that outputs metadata for SEO purposes"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+        {
+            "id": 585,
+            "question": "Which behavior correctly describes when a Client Component re-renders in Next.js?",
+            "options": [
+                "To re-render automatically on server-side data fetch completion",
+                "To re-render only when the URL changes due to navigation",
+                "To re-render on local state or prop changes inside the component",
+                "To re-render when any parent Server Component updates"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 586,
+            "question": "Which statement about Server Components is accurate regarding data fetching?",
+            "options": [
+                "To fetch data and update local state on every user interaction",
+                "To fetch data only on the client side using hooks",
+                "To fetch data using async/await directly in the component",
+                "To prevent fetching data entirely and only render static HTML"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 587,
+            "question": "When passing props from a Server Component to a Client Component, which restriction applies?",
+            "options": [
+                "To pass state hooks directly for automatic reactivity",
+                "To pass client-side event handlers for server processing",
+                "To pass any component instance without serialization",
+                "To pass only serializable data, avoiding functions or classes",
+            ],
+            "correctOption": 3,
+            "points": 30
+        },
+        {
+            "id": 588,
+            "question": "Which situation requires lifting state up to a parent component in Next.js?",
+            "options": [
+                "To share state only between Server Components for faster rendering",
+                "To share state between multiple Client Components for coordinated updates",
+                "To pass server-rendered props to static HTML without interactivity",
+                "To prevent any client-side re-renders by using Server Components"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 589,
+            "question": "Which import rule correctly applies to Client Components in Next.js?",
+            "options": [
+                "To import only other Client Components and cannot import Server Components back",
+                "To import any Server or Client Components without restriction",
+                "To import Server Components but not Client Components",
+                "To import only static HTML files and JSON data"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 590,
+            "question": "Which statement correctly describes rendering capabilities of Server Components?",
+            "options": [
+                "To render only static HTML without any component nesting",
+                "To render only Client Components and ignore server logic",
+                "To render both Client and Server Components passed as props",
+                "To prevent any nested components from rendering"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 591,
+            "question": "Which of the following is NOT allowed when passing props from a Server Component to a Client Component?",
+            "options": [
+                "To pass a string value for display purposes",
+                "To pass a number or boolean for rendering",
+                "To pass a function as a prop for event handling",
+                "To pass a serializable object like JSON"
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+        {
+            "id": 592,
+            "question": "Which scenario is NOT suitable for a Client Component in Next.js?",
+            "options": [
+                "To handle a button click with local state updates",
+                "To manage form input fields interactively",
+                "To re-render content on state changes",
+                "To fetch data using async/await inside a Server Component instead",
+            ],
+            "correctOption": 3,
+            "points": 30
+        },
+        {
+            "id": 593,
+            "question": "Which statement about Server Components is FALSE?",
+            "options": [
+                "To fetch data using async/await in the component",
+                "To render both Server and Client Components passed as props",
+                "To improve performance by offloading computation to the server",
+                "To re-render automatically on every local state change",
+            ],
+            "correctOption": 3,
+            "points": 30
+        },
+        {
+            "id": 594,
+            "question": "Which rule about importing components in Next.js is NOT correct?",
+            "options": [
+                "Allow Server Components to import both Client and Server Components",
+                "Allow Client Components to import Server Components and return to client-side logic",
+                "Allow Client Components to import other Client Components",
+                "Allow circular imports across client-server boundaries"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 595,
+            "question": "Which situation does NOT require lifting state up in Next.js?",
+            "options": [
+                "To propagate a user action from child to parent for centralized handling",
+                "To synchronize UI changes across multiple interactive components",
+                "To keep local state isolated in a single Client Component with no siblings",
+                "To share input values across multiple Client Components",
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+        {
+            "id": 596,
+            "question": "Which statement about re-render behavior is NOT true?",
+            "options": [
+                "To Server Components re-render automatically on local state changes in child Client Components",
+                "To Client Components re-render on state or prop changes in child Server Components",
+                "To Server Components re-render on navigation or URL change in child Client Components",
+                "To Client Components can render Server Components passed as props in child Server Components"
+            ],
+            "correctOption": 0,
+            "points": 30
         }
 
 ]
