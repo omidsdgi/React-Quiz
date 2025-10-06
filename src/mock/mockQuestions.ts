@@ -6431,5 +6431,186 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 2,
             "points": 30
+        },
+    {
+        "id": 561,
+        "question": "Which approach is recommended for navigating between internal pages in a Next.js application?",
+        "options": [
+            "Using standard <a> tags for internal links",
+            "Using window.location.href assignments for navigation",
+            "Using the Next.js <Link> component for client-side transitions",
+            "Using only form submissions to change pages"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 562,
+        "question": "Why should you generally avoid using the <a> tag for internal navigation in Next.js?",
+        "options": [
+            "Because <a> prevents server-side rendering from working",
+            "Because <a> triggers a full page reload, bypassing Next.js client-side routing",
+            "Because <a> cannot include CSS classes for styling",
+            "Because <a> automatically disables JavaScript execution",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 563,
+        "question": "Why is using the Next.js <Link> component recommended over a standard <a> tag for internal navigation?",
+        "options": [
+            "It prefetches linked routes and enables fast client-side navigation",
+            "It automatically converts HTML into server-rendered pages",
+            "It disables JavaScript execution to speed up navigation",
+            "It ensures external links are opened in a new browser window"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 564,
+        "question": "Do pages in Next.js automatically refetch data when a user revisits them?",
+        "options": [
+            "Only pages using static generation refetch data automatically",
+            "Yes, Next.js always refetches data for every navigation",
+            "No, pages served from the client cache",
+            "Yes, but only when navigating through the browser’s back button"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 565,
+        "question": "What is the main purpose of the layout file in a Next.js application?",
+        "options": [
+            "To handle API requests and server-side logic for each route",
+            "To manage client-side routing and navigation between pages",
+            "To define global page structure and shared UI elements across routes",
+            "To store metadata and SEO configurations for dynamic routes"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 566,
+        "question": "What is the main purpose of page metadata in Next.js?",
+        "options": [
+            "To manage internal navigation between pages in the application",
+            "To store configuration data such as user settings or global variables",
+            "To define SEO-related information such as title and description for each page",
+            "To handle background data fetching and caching before rendering"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 567,
+        "question": "Which of the following is NOT a common problem with Client-Side Rendering (CSR)?",
+        "options": [
+            "Slower initial page load due to JavaScript execution",
+            "Longer time to interactive on slower devices",
+            "Reduced SEO performance because content loads after hydration",
+            "Better accessibility for search engine crawlers and static tools",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 568,
+        "question": "Which of the following is NOT a common limitation of Server-Side Rendering (SSR)?",
+        "options": [
+            "Higher server load due to rendering pages on each request",
+            "Slower time to first byte for complex pages",
+            "Automatic client-side interactivity without hydration",
+            "Longer deployment complexity for dynamic applications"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 569,
+        "question": "In which rendering method does the UI behave like a function where state changes trigger re-renders?",
+        "options": [
+            "Server-Side Rendering (SSR), because server sends updated HTML on each state change",
+            "Client-Side Rendering (CSR), because state updates directly trigger component re-renders",
+            "Static Site Generation (SSG), because pages are pre-built and do not respond to state",
+            "Incremental Static Regeneration (ISR), because state is only updated periodically"
+        ],
+        "correctOption":1,
+        "points": 20
+    },
+    {
+        "id": 570,
+        "question": "In React or Next.js, what does it mean when we say 'UI behaves like a function'?",
+        "options": [
+            "The UI executes server-side functions to fetch new HTML each time",
+            "The UI stores all application data and acts as a database",
+            "The UI is a representation of state and props, automatically updating when data changes",
+            "The UI does not change even if state or props update",
+        ],
+        "correctOption":2,
+        "points": 20
+    },
+    {
+        "id": 571,
+        "question": "How does UI behave differently in CSR versus SSR regarding state and data?",
+        "options": [
+            "In CSR, UI updates based on component state; in SSR, UI is generated from server-provided data",
+            "In CSR, UI is static and does not react to state; in SSR, UI updates automatically on client",
+            "In CSR, UI fetches server data for every render; in SSR, UI relies on local state only",
+            "In CSR, UI and server data are identical; in SSR, state drives all interactions"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+        {
+            "id": 572,
+            "question": "What is the main purpose of React Server Components (RSC)?",
+            "options": [
+                "To replace all client-side components with server-rendered HTML and eliminate any client-side interactivity entirely, forcing users to rely only on server responses",
+                "To allow rendering some components entirely on the server, reducing client bundle size and enabling full-stack patterns",
+                "To automatically convert all frontend JavaScript logic into backend APIs without any developer intervention or framework setup",
+                "To disable React hooks in client components completely for performance improvements, preventing state and effects from being used in interactive components"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 573,
+            "question": "Which of the following best describes a Client Component in React Server Components architecture?",
+            "options": [
+                "A regular component that runs on the client and is created using the 'use client' directive",
+                "A component that only executes on the server and does not appear in the client bundle",
+                "A component that automatically fetches data from the server without rendering",
+                "A component that disables interactivity and only renders static HTML"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 574,
+            "question": "Which statement is TRUE about Server Components in RSC architecture?",
+            "options": [
+                "They are rendered only on the server and do not increase client bundle size",
+                "They are rendered on both client and server simultaneously",
+                "They require the 'use client' directive to function",
+                "They always include JavaScript in the client bundle for hydration"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 575,
+            "question": "Are React Server Components active by default in new React apps like Vite?",
+            "options": [
+                "Yes, but only if 'use server' directive is added to every component",
+                "No, React Server Components are deprecated in modern frameworks",
+                "Yes, they are enabled automatically in all React apps",
+                "No, they need to be implemented via frameworks like Next.js App Router",
+            ],
+            "correctOption": 3,
+            "points": 20
         }
+
 ]
