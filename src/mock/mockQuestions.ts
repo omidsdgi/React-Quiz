@@ -4651,12 +4651,12 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 400,
-            "question":  "How does React Query ensure consistency between server and client after a mutation?",
+            "question": "How does React Query ensure consistency between server and client after a mutation?",
             "options": [
-                "Reload the browser window",
-                "Automatically invalidate all queries",
-                "Use invalidateQueries or manually refetch affected queries",
-                "Clear the entire cache"
+                "Reload the browser window automatically",
+                "Automatically invalidate all cached queries",
+                "Invalidate specific queries or manually refetch",
+                "Clear the entire cache immediately"
             ],
             "correctOption": 2,
             "points": 20
@@ -4665,20 +4665,20 @@ export const mockQuestions: Question[] = [
             "id": 401,
             "question": "What is query invalidation in React Query?",
             "options": [
-                "Marking queries as stale so they refetch fresh data",
+                "Marking queries stale to trigger refetch",
                 "Deleting all cached data permanently",
-                "Resetting query keys",
-                "Pausing queries until enabled again"
+                "Resetting all query keys globally",
+                "Pausing queries until manually enabled"
             ],
             "correctOption": 0,
             "points": 20
         },
         {
             "id": 402,
-            "question": "In React Query, what does hydrate/dehydrate refer to?",
+            "question": "What does hydrate/dehydrate refer to in React Query?",
             "options": [
-                "Saving and restoring cached query state for server-side rendering",
-                "Synchronizing queries with Redux",
+                "Saving and restoring query state for SSR",
+                "Synchronizing queries with Redux store",
                 "Exporting query data to JSON files",
                 "Clearing memory leaks during refetch"
             ],
@@ -4689,17 +4689,17 @@ export const mockQuestions: Question[] = [
             "id": 403,
             "question": "What is the primary purpose of React Hook Form?",
             "options": [
-                "To manage server-side data fetching",
-                "To simplify form state management and validation",
-                "To create animations in React",
-                "To manage global application state"
+                "Managing server-side data fetching",
+                "Simplifying form state and validation",
+                "Creating component animations",
+                "Managing global application state"
             ],
             "correctOption": 1,
             "points": 10
         },
         {
             "id": 404,
-            "question": "Which hook is used to initialize a form in React Hook Form?",
+            "question": "Which hook initializes a form in React Hook Form?",
             "options": [
                 "useState",
                 "useForm",
@@ -4711,19 +4711,19 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 405,
-            "question": "In React Hook Form, what does the 'register' function do?",
+            "question": "What does the register function do in React Hook Form?",
             "options": [
-                "It submits the form data to the server",
-                "It resets all form fields",
-                "It connects input fields to the form state and validation",
-                "It triggers re-rendering of the form"
+                "Submits form data to server",
+                "Resets all form fields",
+                "Connects inputs to form state",
+                "Triggers form re-rendering"
             ],
             "correctOption": 2,
             "points": 10
         },
         {
             "id": 406,
-            "question": "Which function in React Hook Form is responsible for handling form submission?",
+            "question": "Which function handles form submission in React Hook Form?",
             "options": [
                 "useSubmit",
                 "submitForm",
@@ -4735,22 +4735,22 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 407,
-            "question": "How can you apply validation rules such as 'required' or 'minLength' in React Hook Form?",
+            "question": "How do you apply validation rules in React Hook Form?",
             "options": [
-                "By adding attributes directly to the input element",
-                "By wrapping input in a Validation component",
-                "By passing an options object to the register function",
-                "By using useValidation hook"
+                "Add attributes directly to input",
+                "Wrap input in Validation component",
+                "Pass options object to register",
+                "Use useValidation hook"
             ],
             "correctOption": 2,
             "points": 20
         },
         {
             "id": 408,
-            "question": "What does the 'errors' object returned by useForm represent?",
+            "question": "What does the errors object represent in useForm?",
             "options": [
-                "A list of server-side API errors",
-                "Runtime errors during form rendering",
+                "List of server-side API errors",
+                "Runtime errors during rendering",
                 "Validation errors for form fields",
                 "React component errors"
             ],
@@ -4759,19 +4759,19 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 409,
-            "question": "Why is React Hook Form considered performant compared to other form libraries?",
+            "question": "Why is React Hook Form performant?",
             "options": [
-                "It automatically fetches data from APIs",
-                "It reduces re-renders by isolating component reactivity",
-                "It compiles forms into WebAssembly",
-                "It disables validation to improve speed"
+                "Automatically fetches data from APIs",
+                "Reduces re-renders with isolated reactivity",
+                "Compiles forms into WebAssembly",
+                "Disables validation for speed"
             ],
             "correctOption": 1,
             "points": 30
         },
         {
             "id": 410,
-            "question": "Which hook should you use to control custom components (like a date picker) in React Hook Form?",
+            "question": "Which hook controls custom components in React Hook Form?",
             "options": [
                 "useController",
                 "useFormContext",
@@ -4815,7 +4815,7 @@ export const mockQuestions: Question[] = [
                 "Because uncontrolled inputs are easier to style"
             ],
             "correctOption": 0,
-            "points": 25
+            "points": 20
         },
         {
             "id": 414,
@@ -4827,7 +4827,7 @@ export const mockQuestions: Question[] = [
                 "They improve rendering performance"
             ],
             "correctOption": 0,
-            "points": 25
+            "points": 30
         },
         {
             "id": 415,
@@ -4839,7 +4839,7 @@ export const mockQuestions: Question[] = [
                 "trigger"
             ],
             "correctOption": 0,
-            "points": 25
+            "points": 30
         },
         {
             "id": 416,
@@ -5121,7 +5121,7 @@ export const mockQuestions: Question[] = [
             "question": "Which CRUD operation usually requires invalidating or refetching cached queries in client-side state management libraries?",
             "options": ["Read", "Create/Update/Delete", "All of them", "None of them"],
             "correctOption": 1,
-            "points": 25
+            "points": 30
         },
         {
             "id": 442,
@@ -5277,7 +5277,7 @@ export const mockQuestions: Question[] = [
                 "Browser dev tools"
             ],
             "correctOption": 0,
-            "points": 25
+            "points": 30
         },
     {
         "id": 455,
@@ -5319,10 +5319,10 @@ export const mockQuestions: Question[] = [
         "id": 458,
         "question": "In React forms, what is a controlled component?",
         "options": [
-            "A component that handles its own state internally without React",
-            "A component where React state drives the input value and updates on every change",
-            "A component that automatically fetches data from the server",
-            "A component that cannot receive props"
+            "A component that manages its own state internally",
+            "A component where React controls the input value",
+            "A component that fetches data automatically",
+            "A component that cannot receive any props"
         ],
         "correctOption": 1,
         "points": 10
@@ -5385,7 +5385,7 @@ export const mockQuestions: Question[] = [
                 "It will automatically infer validation without spreading"
             ],
             "correctOption": 2,
-            "points": 25
+            "points": 30
         },
         {
             "id": 464,
@@ -5457,7 +5457,7 @@ export const mockQuestions: Question[] = [
                 "Direct DOM manipulation"
             ],
             "correctOption": 1,
-            "points": 15
+            "points": 20
         },
         {
             "id": 470,
@@ -7007,6 +7007,365 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30
-    }
-
+    },
+    {
+        "id": 609,
+        "question": "Why can't React hooks be used inside Server Components?",
+        "options": [
+            "Because hooks require client-side reactivity and state",
+            "Because hooks are deprecated in modern React",
+            "Because hooks only work with class components",
+            "Because hooks increase server load significantly"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 610,
+        "question": "What happens if you try to use useState in a Server Component?",
+        "options": [
+            "The component automatically converts to client",
+            "React throws an error during rendering",
+            "The state works but doesn't update",
+            "The hook is ignored silently"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 611,
+        "question": "Which React feature requires client-side execution and cannot work in Server Components?",
+        "options": [
+            "Component composition and nesting",
+            "Props passing between components",
+            "State management with hooks",
+            "JSX syntax for rendering"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 612,
+        "question": "Why does useEffect not work in Server Components?",
+        "options": [
+            "Because it runs after rendering on client",
+            "Because it's too slow for server",
+            "Because it only works with async data",
+            "Because it requires special configuration"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 613,
+        "question": "What is the fundamental reason hooks don't work in Server Components?",
+        "options": [
+            "Hooks depend on component lifecycle and re-renders",
+            "Hooks are not compatible with async/await",
+            "Hooks require browser APIs to function",
+            "Hooks are only for class components"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 614,
+        "question": "What information does the server need to render a Client Component?",
+        "options": [
+            "Only the component's props with serialized values",
+            "Props, code reference, and client execution placeholder",
+            "Complete JavaScript bundle including all dependencies",
+            "Only the component name with its CSS styles"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 615,
+        "question": "What is RSC Payload in React Server Components?",
+        "options": [
+            "The complete JavaScript bundle sent to client",
+            "Serialized Server Component tree with Client placeholders",
+            "Only the HTML output from server rendering",
+            "The database query results for all components"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 616,
+        "question": "What does RSC Payload contain for Client Components?",
+        "options": [
+            "Full component code with implementation details",
+            "Component location reference with serialized props",
+            "Only the component's rendered HTML structure",
+            "Complete source code including all comments"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 617,
+        "question": "Why is it called 'RSC Payload' instead of just 'data'?",
+        "options": [
+            "Because it's based on random naming convention",
+            "Because it carries structured component tree data",
+            "Because it only contains external API responses",
+            "Because it's compressed for network transmission"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 618,
+        "question": "What happens to Client Component code in RSC Payload?",
+        "options": [
+            "The code is fully included in the payload",
+            "Only reference sent, code loads separately later",
+            "The code is converted to plain HTML strings",
+            "The code is executed on the server first"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 619,
+        "question": "How does RSC Payload handle Server Component output?",
+        "options": [
+            "Sends complete component source code to client",
+            "Includes rendered HTML with all serialized data",
+            "Converts everything to standard JSON format only",
+            "Skips Server Components entirely from payload"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 620,
+        "question": "Why can't functions be included in RSC Payload?",
+        "options": [
+            "Because functions are too large for network transfer",
+            "Because functions cannot be serialized into JSON",
+            "Because functions only work on the server side",
+            "Because functions are deprecated in modern React"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 621,
+        "question": "What is the purpose of component references in RSC Payload?",
+        "options": [
+            "To indicate where client should load component code",
+            "To store all component state data permanently",
+            "To generate complete component documentation",
+            "To optimize server-side memory usage patterns"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 622,
+        "question": "How does the client use RSC Payload to render the page?",
+        "options": [
+            "Executes all code from payload directly on mount",
+            "Reconstructs tree using references and passed props",
+            "Converts payload to static HTML without JavaScript",
+            "Sends payload back to server for further processing"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 623,
+        "question": "What makes RSC Payload efficient for performance?",
+        "options": [
+            "It includes all JavaScript upfront for better caching",
+            "It sends minimal data using component references",
+            "It eliminates need for any client-side JavaScript",
+            "It compresses everything into optimized binary format"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 624,
+        "question": "What is the main difference between SSR and RSC?",
+        "options": [
+            "SSR renders on server, RSC on client only",
+            "SSR sends HTML, RSC sends component instructions",
+            "SSR is faster, RSC is more interactive",
+            "SSR uses React, RSC uses plain JavaScript"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 625,
+        "question": "How do SSR and RSC handle component rendering?",
+        "options": [
+            "SSR renders all components, RSC splits server and client",
+            "SSR only renders client, RSC only renders server",
+            "Both render everything on server before sending",
+            "Both render everything on client after downloading"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 626,
+        "question": "What do SSR and RSC have in common?",
+        "options": [
+            "Both eliminate need for client JavaScript entirely",
+            "Both render initial content on the server",
+            "Both require 'use server' directive for components",
+            "Both prevent any component interactivity on client"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 627,
+        "question": "How does data fetching differ between SSR and RSC?",
+        "options": [
+            "Both fetch data exactly the same way",
+            "Neither supports data fetching at all",
+            "SSR fetches on client, RSC fetches on server",
+            "SSR fetches before render, RSC fetches during render",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 628,
+        "question": "What is sent to the client in SSR vs RSC?",
+        "options": [
+            "SSR sends JSON, RSC sends complete HTML markup",
+            "SSR sends HTML, RSC sends serialized tree payload",
+            "Both send identical HTML without any differences",
+            "SSR sends nothing, RSC sends full JavaScript bundle"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 629,
+        "question": "How do SSR and RSC handle JavaScript bundles?",
+        "options": [
+            "SSR includes all components, RSC only client ones",
+            "SSR excludes all code, RSC includes everything",
+            "Both include identical JavaScript in final bundle",
+            "Neither sends any JavaScript to the browser"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 630,
+        "question": "Can SSR and RSC be used together?",
+        "options": [
+            "No, they are mutually exclusive rendering methods",
+            "Yes, RSC can render first then SSR hydrates",
+            "Yes, modern frameworks combine both for optimization",
+            "No, RSC completely replaces SSR in all cases"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 631,
+        "question": "How does hydration differ between SSR and RSC?",
+        "options": [
+            "SSR hydrates all components, RSC only client ones",
+            "SSR skips hydration, RSC requires full hydration",
+            "Both hydrate components in exactly same way",
+            "Neither requires hydration for any components"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 632,
+        "question": "What advantage does RSC have over traditional SSR?",
+        "options": [
+            "RSC eliminates need for any server rendering",
+            "RSC reduces client bundle by keeping code server-side",
+            "RSC makes all components interactive without JavaScript",
+            "RSC renders everything faster than SSR always"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 633,
+        "question": "How do SSR and RSC affect SEO?",
+        "options": [
+            "Both provide server-rendered content for better indexing",
+            "SSR improves SEO, RSC completely breaks indexing",
+            "RSC improves SEO, SSR prevents crawler access",
+            "Neither has any impact on search rankings"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 634,
+        "question": "Which statement about SSR and RSC is correct?",
+        "options": [
+            "SSR is newer technology replacing older RSC",
+            "RSC is evolution of SSR with better optimization",
+            "Both are identical with different naming only",
+            "SSR works only with React, RSC with all frameworks"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 635,
+        "question": "How do SSR and RSC handle component state?",
+        "options": [
+            "SSR preserves all state, RSC loses state completely",
+            "Both require client-side state management for interactivity",
+            "RSC manages state, SSR cannot handle any state",
+            "Neither can manage component state at all"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 636,
+        "question": "What happens on navigation in SSR vs RSC?",
+        "options": [
+            "SSR refetches everything, RSC updates only changed parts",
+            "Both reload entire page from server completely",
+            "SSR updates partially, RSC always does full reload",
+            "Neither supports navigation between different pages"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 637,
+        "question": "Which rendering approach requires more server resources?",
+        "options": [
+            "Traditional SSR due to complete page rendering",
+            "RSC due to component-level streaming and logic",
+            "Both require exactly same server resource amounts",
+            "Neither requires any server resources at all"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 638,
+        "question": "How do SSR and RSC impact Time to Interactive?",
+        "options": [
+            "SSR faster always, RSC slower in all scenarios",
+            "RSC can be faster by reducing client JavaScript",
+            "Both have identical Time to Interactive metrics",
+            "Neither affects Time to Interactive at all"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
 ]
