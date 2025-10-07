@@ -7368,4 +7368,124 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 30
     },
+    {
+        "id": 639,
+        "question": "What does the '@' symbol represent in Next.js import paths?",
+        "options": [
+            "A special decorator for component styling",
+            "An alias for the project root directory",
+            "A prefix for external npm package imports",
+            "A marker for server-only component imports"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 640,
+        "question": "Why is '@' used instead of relative paths in Next.js?",
+        "options": [
+            "To automatically optimize component bundle size",
+            "To enable TypeScript type checking automatically",
+            "To avoid long relative paths like '../../../components'",
+            "To make imports work only on server",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 641,
+        "question": "Where is the '@' alias configured in Next.js?",
+        "options": [
+            "In package.json under dependencies section only",
+            "In tsconfig.json or jsconfig.json paths configuration",
+            "In next.config.js webpack externals section only",
+            "In .env file as environment variable"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 642,
+        "question": "What path does '@/app/_components/Logo' typically resolve to?",
+        "options": [
+            "The node_modules folder with app namespace",
+            "The project root then app/_components/Logo path",
+            "A CDN URL for external component libraries",
+            "The public folder for static asset files"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 643,
+        "question": "Can you customize the '@' alias in Next.js?",
+        "options": [
+            "Yes, by modifying paths in tsconfig.json file",
+            "No, '@' is hardcoded and cannot change",
+            "Yes, but only in production build environment",
+            "No, changing it breaks all Next.js features"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 644,
+        "question": "What is the benefit of using '@' over relative paths?",
+        "options": [
+            "It makes imports work faster at runtime",
+            "It automatically tree-shakes unused component code",
+            "It prevents deep nesting with cleaner syntax",
+            "It enables server-side rendering for components"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 645,
+        "question": "Is '@' alias specific to Next.js only?",
+        "options": [
+            "Yes, it only works in Next.js apps",
+            "Yes, but can be polyfilled for other tools",
+            "No, it's a native JavaScript ES6 feature",
+            "No, it's common in many modern frameworks",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 646,
+        "question": "What happens if '@' is not configured properly?",
+        "options": [
+            "Next.js will throw module not found errors",
+            "Imports will work but run slower than normal",
+            "The app will build but crash at runtime",
+            "TypeScript will auto-fix the configuration"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 647,
+        "question": "Can you use multiple custom aliases besides '@'?",
+        "options": [
+            "No, Next.js only allows single alias configuration",
+            "Yes, but maximum three aliases are allowed",
+            "Yes, by defining multiple paths in config",
+            "No, only '@' and '~' are permitted"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 648,
+        "question": "Does '@' alias work in both JavaScript and TypeScript?",
+        "options": [
+            "Yes, but requires additional Babel plugin setup",
+            "No, it only works with TypeScript projects",
+            "Yes, when configured in jsconfig or tsconfig",
+            "No, it's exclusive to JavaScript ES modules"
+        ],
+        "correctOption": 2,
+        "points": 20
+    }
 ]
