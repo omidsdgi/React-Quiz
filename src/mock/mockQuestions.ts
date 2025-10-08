@@ -7517,5 +7517,605 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20
+    },
+    {
+        "id": 649,
+        "question": "What is the purpose of next/font in Next.js?",
+        "options": [
+            "To automatically optimize and load fonts efficiently",
+            "To convert all fonts to web-safe formats",
+            "To generate custom fonts from templates",
+            "To compress images alongside font files"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 650,
+        "question": "Which module is used to load Google Fonts in Next.js?",
+        "options": [
+            "next/font/adobe",
+            "next/font/google",
+            "next/font/cdn",
+            "next/font/remote"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 651,
+        "question": "What happens when you use next/font/google?",
+        "options": [
+            "Fonts are loaded from Google CDN at runtime",
+            "Fonts are self-hosted and bundled at build time",
+            "Fonts require manual CDN link in HTML",
+            "Fonts are downloaded only when user scrolls",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 652,
+        "question": "Why does Next.js self-host Google Fonts?",
+        "options": [
+            "To eliminate external requests and improve privacy",
+            "To reduce font file size automatically",
+            "To enable offline font editing features",
+            "To convert fonts to proprietary format"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 653,
+        "question": "How do you apply a font loaded with next/font?",
+        "options": [
+            "By using the className property from font",
+            "By manually linking CSS file in head",
+            "By importing font directly in global CSS",
+            "By adding font URL to next.config.js"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 654,
+        "question": "What is font subsetting in Next.js?",
+        "options": [
+            "Loading only specific font weights and styles",
+            "Converting fonts to smaller file formats",
+            "Including only used characters in font files",
+            "Splitting fonts across multiple CDN servers"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 655,
+        "question": "Which property specifies font subsets to load?",
+        "options": [
+            "characters: ['latin']",
+            "include: ['latin']",
+            "subsets: ['latin']",
+            "languages: ['latin']"
+        ],
+        "correctOption":2,
+        "points": 20
+    },
+    {
+        "id": 656,
+        "question": "How do you load custom local fonts in Next.js?",
+        "options": [
+            "Using next/font/google with custom URL",
+            "Using next/font/local with font file path",
+            "Using standard CSS @font-face rules only",
+            "Using import statement in global styles"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 657,
+        "question": "What is the benefit of font display swap?",
+        "options": [
+            "It prevents layout shift during font loading",
+            "It shows fallback text until font loads",
+            "It preloads all font variants at once",
+            "It disables font loading on slow connections"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 658,
+        "question": "How do you set font display behavior in Next.js?",
+        "options": [
+            "Using fontDisplay: 'swap' in next.config.js",
+            "Using display: 'swap' in font configuration",
+            "Using CSS font-display property manually",
+            "Using preload: true in font options"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 659,
+        "question": "Can you use multiple fonts in a Next.js app?",
+        "options": [
+            "Yes, by importing multiple font instances",
+            "No, only one font per application",
+            "Yes, but maximum three fonts allowed",
+            "No, mixing fonts breaks optimization"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 660,
+        "question": "What does preload option do for fonts?",
+        "options": [
+            "It loads font before any other resources",
+            "It caches font permanently in browser",
+            "It converts font to inline base64",
+            "It downloads font only when visible"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 661,
+        "question": "How does Next.js prevent layout shift with fonts?",
+        "options": [
+            "By using CSS size-adjust property automatically",
+            "By loading fonts before HTML rendering",
+            "By setting fixed heights for text",
+            "By disabling font loading on mobile"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 662,
+        "question": "What is the advantage of variable fonts in Next.js?",
+        "options": [
+            "They load faster than standard fonts",
+            "They include multiple weights in one file",
+            "They automatically adjust to screen size",
+            "They work without JavaScript enabled"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 663,
+        "question": "How do you load a variable font in Next.js?",
+        "options": [
+            "Using next/font/google with variable: true",
+            "Using next/font/variable with font name",
+            "Same as regular fonts, Next.js detects it",
+            "Using CSS @font-face with font-variation"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 664,
+        "question": "Can fonts be applied globally in Next.js?",
+        "options": [
+            "Yes, but only in _app.js file",
+            "No, fonts must be applied per component",
+            "Yes, by applying className to body in layout",
+            "No, global fonts are not supported",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 665,
+        "question": "What happens to unused font weights with next/font?",
+        "options": [
+            "They are included in bundle for consistency",
+            "They are automatically excluded from build",
+            "They are loaded on demand when needed",
+            "They are converted to lighter formats"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 666,
+        "question": "How does next/font improve Core Web Vitals?",
+        "options": [
+            "By reducing Cumulative Layout Shift with font optimization",
+            "By eliminating all JavaScript from pages",
+            "By compressing images alongside fonts",
+            "By loading fonts only on fast connections"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 667,
+        "question": "Can you use next/font with Tailwind CSS?",
+        "options": [
+            "Yes, by adding font variable to Tailwind config",
+            "No, Tailwind requires manual font loading",
+            "Yes, but only with CDN fonts",
+            "No, they are incompatible technologies"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 668,
+        "question": "What is the fallback font strategy in next/font?",
+        "options": [
+            "It automatically generates system font fallbacks",
+            "It loads generic sans-serif as backup",
+            "It displays blank space until font loads",
+            "It converts text to images temporarily"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 669,
+        "question": "What is the primary purpose of Next.js Image component?",
+        "options": [
+            "To automatically optimize and lazy-load images",
+            "To convert all images to SVG format",
+            "To generate images from text descriptions",
+            "To compress videos alongside image files"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 670,
+        "question": `Which component should you use instead of '<img>' tag?`,
+        "options": [
+            "<Picture> from next/image",
+            "<Image> from next/image",
+            "<Img> from next/component",
+            "<OptimizedImage> from next/core"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 671,
+        "question": "What does Next.js Image component do automatically?",
+        "options": [
+            "Removes all metadata from image files automatically",
+            "Converts images to WebP format and lazy-loads",
+            "Uploads images to CDN automatically",
+            "Generates alt text using AI"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 672,
+        "question": "Why is lazy loading important for images?",
+        "options": [
+            "It improves SEO ranking significantly",
+            "It loads images only when entering viewport",
+            "It prevents users from downloading images",
+            "It converts images to smaller formats"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 673,
+        "question": "Which property is required for static image imports?",
+        "options": [
+            "url with file path string",
+            "source with image location",
+            "src with imported image object",
+            "path with relative directory"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 674,
+        "question": "How do you specify image dimensions for remote images?",
+        "options": [
+            "Next.js detects dimensions automatically",
+            "Using width and height props explicitly",
+            "Using size prop with single value",
+            "Using dimensions prop with object",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 675,
+        "question": "What is the purpose of the fill property?",
+        "options": [
+            "It fills empty space with background color",
+            "It makes image fill parent container",
+            "It adds padding around the image",
+            "It duplicates image to fill grid"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 676,
+        "question": "Which property controls how image fits in container?",
+        "options": [
+            "fit property with CSS values",
+            "resize property with custom values",
+            "scale property with numeric values",
+            "objectFit property with CSS values",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 677,
+        "question": "What does priority property do for images?",
+        "options": [
+            "It disables lazy loading for above-fold images",
+            "It increases image quality significantly",
+            "It loads image before HTML parsing",
+            "It caches image permanently in browser"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 678,
+        "question": "When should you use priority property?",
+        "options": [
+            "For all images to improve performance",
+            "For largest contentful paint (LCP) images",
+            "For background images in components",
+            "For thumbnail images in galleries"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 679,
+        "question": "How does Next.js handle different screen sizes?",
+        "options": [
+            "It generates multiple image sizes automatically",
+            "It crops images based on viewport",
+            "It uses same size for all devices",
+            "It converts images to vector format"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 680,
+        "question": "What is the purpose of sizes property?",
+        "options": [
+            "It defines exact image dimensions in pixels",
+            "It tells browser which size to download",
+            "It sets maximum file size limit",
+            "It configures compression quality level"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 681,
+        "question": "Which image formats does Next.js optimize to?",
+        "options": [
+            "WebP and AVIF for modern browsers",
+            "JPEG and PNG for all browsers",
+            "SVG and GIF for animations",
+            "BMP and TIFF for quality"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 682,
+        "question": "How do you allow external image domains?",
+        "options": [
+            "Add domains to images.domains in next.config.js",
+            "Add URLs to allowedSources in package.json",
+            "Add hosts to imageHosts in tsconfig.json",
+            "Add origins to externalImages in .env"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 683,
+        "question": "What happens without configuring remote domains?",
+        "options": [
+            "Images load but without optimization",
+            "Next.js throws error and blocks image",
+            "Images are downloaded to local server",
+            "Images load with default placeholder"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 684,
+        "question": "What is the purpose of placeholder property?",
+        "options": [
+            "It replaces broken images automatically",
+            "It sets background color for transparency",
+            "It shows blurred preview while loading",
+            "It adds caption text below image",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 685,
+        "question": "Which placeholder value creates blur effect?",
+        "options": [
+            "placeholder='blur'",
+            "placeholder='loading'",
+            "placeholder='skeleton'",
+            "placeholder='preview'"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 686,
+        "question": "How do you provide custom blur placeholder?",
+        "options": [
+            "Using blurDataURL prop with base64 string",
+            "Using blurImage prop with file path",
+            "Using placeholder prop with image URL",
+            "Using loading prop with preview data"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 687,
+        "question": "What is the quality property range for images?",
+        "options": [
+            "0 to 100, where 0 is highest",
+            "1 to 100, where 100 is highest",
+            "0 to 10, where 10 is highest",
+            "1 to 10, where 1 is highest",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 688,
+        "question": "What is the default quality value in Next.js?",
+        "options": [
+            "100 for maximum image quality",
+            "90 for high quality output",
+            "75 for balanced size and quality",
+            "50 for smallest file size",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 689,
+        "question": "How does Image component prevent layout shift?",
+        "options": [
+            "By reserving space using width and height",
+            "By loading all images before render",
+            "By using fixed container dimensions",
+            "By disabling image loading initially"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 690,
+        "question": "What happens when you omit width and height?",
+        "options": [
+            "Next.js calculates them from file",
+            "Image loads without optimization",
+            "Component throws runtime error",
+            "You must use fill property instead",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 691,
+        "question": "Can you style Next.js Image component?",
+        "options": [
+            "Yes, using className or style props",
+            "No, styling is not supported",
+            "Yes, but only inline styles",
+            "No, only Tailwind classes work"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 692,
+        "question": "What is the purpose of loader property?",
+        "options": [
+            "It customizes image optimization service URL",
+            "It converts images to different formats",
+            "It shows loading spinner during fetch",
+            "It preloads images before rendering",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 693,
+        "question": "How does Next.js handle image caching?",
+        "options": [
+            "It disables caching for dynamic images",
+            "It caches optimized images automatically",
+            "It requires manual cache configuration",
+            "It stores images only in memory"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 694,
+        "question": "What is the benefit of automatic image optimization?",
+        "options": [
+            "It reduces bandwidth and improves load times",
+            "It removes need for image editing",
+            "It generates alt text automatically",
+            "It converts all images to vectors"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 695,
+        "question": "Can Image component work with SVG files?",
+        "options": [
+            "Yes, but SVGs are not optimized",
+            "No, only raster formats supported",
+            "Yes, and they are converted to PNG",
+            "No, use regular img tag instead"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 696,
+        "question": "What does unoptimized property do?",
+        "options": [
+            "It reduces image quality to minimum",
+            "It serves original image without processing",
+            "It removes all image metadata",
+            "It disables lazy loading feature"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 697,
+        "question": "How does Image component improve Core Web Vitals?",
+        "options": [
+            "By optimizing LCP, CLS, and loading performance",
+            "By removing all JavaScript from pages",
+            "By compressing HTML alongside images",
+            "By loading images only on WiFi"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 698,
+        "question": "What is responsive image loading in Next.js?",
+        "options": [
+            "It rotates images based on orientation",
+            "It adjusts image aspect ratio automatically",
+            "It serves appropriately sized images per device",
+            "It changes image format by browser"
+        ],
+        "correctOption": 2,
+        "points": 30
     }
 ]
