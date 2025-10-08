@@ -4798,9 +4798,9 @@ export const mockQuestions: Question[] = [
             "question": "What problem does useController solve?",
             "options": [
                 "Integrating controlled components with React Hook Form",
-                "Handling async validation",
-                "Improving form styling",
-                "Fetching form data from APIs"
+                "Handling async validation across multiple fields",
+                "Improving form styling with custom CSS",
+                "Fetching form data from external APIs"
             ],
             "correctOption": 0,
             "points": 20
@@ -4809,77 +4809,77 @@ export const mockQuestions: Question[] = [
             "id": 413,
             "question": "Why does React Hook Form rely primarily on uncontrolled inputs?",
             "options": [
-                "Because uncontrolled inputs reduce re-renders and improve performance",
-                "Because controlled inputs are not supported in React",
-                "Because uncontrolled inputs automatically validate themselves",
+                "Because uncontrolled inputs validate themselves automatically",
+                "Because controlled inputs are not React-compatible",
+                "Because uncontrolled inputs reduce re-renders significantly",
                 "Because uncontrolled inputs are easier to style"
             ],
-            "correctOption": 0,
+            "correctOption":2,
             "points": 20
         },
         {
             "id": 414,
-            "question": "Which option best describes the role of resolvers in React Hook Form?",
+            "question": "Which option best describes the role of resolvers?",
             "options": [
-                "They provide schema-based validation (e.g., Yup, Zod)",
-                "They handle async form submissions",
+                "They provide schema-based validation support",
+                "They handle async form submissions automatically",
                 "They manage form context across components",
-                "They improve rendering performance"
+                "They improve rendering performance significantly"
             ],
             "correctOption": 0,
             "points": 30
         },
         {
             "id": 415,
-            "question": "Which hook would you use to read the current value of a field without subscribing to its updates?",
+            "question": "Which hook reads field value without subscribing to updates?",
             "options": [
-                "getValues",
-                "watch",
                 "setValue",
+                "watch",
+                "getValues",
                 "trigger"
             ],
-            "correctOption": 0,
+            "correctOption": 2,
             "points": 30
         },
         {
             "id": 416,
-            "question": "How can you implement async validation, such as checking if a username already exists?",
+            "question": "How can you implement async validation for username?",
             "options": [
-                "By using an async resolver or providing an async validate function in register",
-                "By using watch with a useEffect",
-                "By wrapping inputs in FormProvider",
-                "By manually calling setValue in onChange"
+                "By using watch with useEffect hook",
+                "By wrapping inputs in FormProvider component",
+                "By manually calling setValue in onChange",
+                "By using async resolver or validate function",
             ],
-            "correctOption": 0,
+            "correctOption": 3,
             "points": 30
         },
         {
             "id": 417,
-            "question": "What is one key performance advantage of React Hook Form compared to Formik?",
+            "question": "What is one key performance advantage of React Hook Form?",
             "options": [
-                "React Hook Form uses uncontrolled inputs and refs, leading to fewer re-renders",
-                "Formik automatically caches all inputs in Redux",
-                "React Hook Form ships smaller bundle size but causes more re-renders",
-                "Formik doesn’t support validation"
+                "It uses uncontrolled inputs reducing re-renders",
+                "It automatically caches all inputs in Redux",
+                "It ships smaller bundle but causes re-renders",
+                "It doesn't support any validation rules"
             ],
             "correctOption": 0,
             "points": 30
         },
     {
         "id": 418,
-        "question": "What is the primary purpose of the useForm hook in React Hook Form?",
+        "question": "What is the primary purpose of the useForm hook?",
         "options": [
             "To handle component lifecycle methods",
-            "To register input fields and manage form state",
+            "To register inputs and manage form state",
             "To create global state across components",
-            "To render conditional UI"
+            "To render conditional UI elements"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
         "id": 419,
-        "question": "Which prop must be applied to an input field for React Hook Form to track its value?",
+        "question": "Which prop must be applied for React Hook Form tracking?",
         "options": [
             "onChange",
             "value",
@@ -4891,31 +4891,31 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 420,
-        "question": "What does the handleSubmit function return?",
+        "question":  "What does the handleSubmit function return?",
         "options": [
-            "A callback that validates form inputs and triggers your submit handler",
-            "The final form values as an object",
-            "A reset function",
-            "Nothing, it just re-renders"
+            "The final form values as object",
+            "A reset function for form fields",
+            "Nothing, it just triggers re-renders component",
+            "A callback validating inputs and triggering handler",
         ],
-        "correctOption": 0,
+        "correctOption": 3,
         "points": 10
     },
     {
         "id": 421,
         "question": "How can you provide default values to a form?",
         "options": [
-            "By passing a defaultValues object to useForm",
-            "By setting the value attribute directly on inputs",
-            "By calling reset after rendering",
-            "By wrapping inputs in FormProvider"
+            "By setting value attribute directly on inputs",
+            "By passing defaultValues object to useForm",
+            "By calling reset after component rendering",
+            "By wrapping inputs in FormProvider component"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 10
     },
     {
         "id": 422,
-        "question": "Which hook allows you to subscribe to changes in specific form fields?",
+        "question": "Which hook allows subscribing to specific field changes?",
         "options": [
             "useEffect",
             "watch",
@@ -4929,9 +4929,9 @@ export const mockQuestions: Question[] = [
         "id": 423,
         "question": "What is the main use of FormProvider and useFormContext?",
         "options": [
-            "To style forms globally",
-            "To share form state across deeply nested components",
-            "To reset form values",
+            "To style forms globally across application",
+            "To share form state across nested components",
+            "To reset form values automatically",
             "To connect multiple forms together"
         ],
         "correctOption": 1,
@@ -4939,7 +4939,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 424,
-        "question": "Which method is used to manually trigger validation for one or more fields?",
+        "question":  "Which method manually triggers validation for fields?",
         "options": [
             "reset",
             "validate",
@@ -4951,7 +4951,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 425,
-        "question": "How do you reset all fields in a form to their initial values?",
+        "question": "How do you reset all fields to initial values?",
         "options": [
             "resetForm()",
             "reset()",
@@ -4963,7 +4963,7 @@ export const mockQuestions: Question[] = [
     },
         {
             "id": 426,
-            "question": "In TanStack Query, which option should you set to 'false' to prevent a query from automatically running when the component mounts?",
+            "question":  "Which option prevents query from running on mount?",
             "options": [
                 "`enabled`",
                 "`refetchOnMount`",
@@ -4975,7 +4975,7 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 427,
-            "question": "Which TanStack Query option controls whether a query should refetch when the browser window regains focus?",
+            "question":  "Which option controls refetch on window focus?",
             "options": [
                 "`enabled`",
                 "`refetchOnWindowFocus`",
@@ -4987,7 +4987,7 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 428,
-            "question": "You want your query to poll data every 10 seconds, even when the browser tab is in the background. Which combination of options should you use?",
+            "question":"How do you poll data every 10 seconds in background?",
             "options": [
                 "`refetchInterval: 10000` and `refetchIntervalInBackground: true`",
                 "`refetchOnWindowFocus: true` and `refetchInterval: 10000`",
@@ -4999,48 +4999,48 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 429,
-            "question": "In TanStack Query, what does the `refetchIntervalOnMount` option control?",
+            "question": "What does refetchIntervalOnMount option control?",
             "options": [
-                "Whether a query should start polling immediately when the component mounts",
-                "Whether queries are refetched when the window regains focus",
-                "How many retries should be attempted on failure",
-                "Whether query data is considered fresh or stale"
+                "Whether queries refetch when window regains focus",
+                "Whether query starts polling immediately on mount",
+                "How many retries attempted on failure",
+                "Whether query data is fresh or stale"
             ],
-            "correctOption": 0,
+            "correctOption": 1,
             "points": 20
         },
     {
         "id": 430,
-        "question": "In TanStack Query, when cached data becomes stale, what happens?",
+        "question": "What happens when cached data becomes stale?",
         "options": [
-            "The cached data is automatically deleted from memory",
-            "The query state updates to 'stale' and developers can run custom functions or effects",
-            "The query immediately refetches data regardless of settings",
-            "All queries in the cache are reset"
+            "Cached data is deleted from memory automatically",
+            "Query state updates to 'stale' allowing custom effects",
+            "Query immediately refetches data regardless of settings",
+            "All queries in cache are reset"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 431,
-        "question": "Why is TanStack Query considered a state management library?",
+        "question":  "Why is TanStack Query considered state management library?",
         "options": [
-            "Because it allows direct modification of React component state",
-            "Because it manages server state, caching, and keeps it in sync with the UI",
-            "Because it replaces Redux for all local state management",
-            "Because it automatically generates forms from API data"
+            "It allows direct modification of component state",
+            "It manages server state and keeps UI synchronized",
+            "It replaces Redux for all local state",
+            "It automatically generates forms from API data"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 432,
-        "question": "Which combination of options allows polling of server data at a fixed interval even when the tab is in the background?",
+        "question":"Which combination allows polling data in background?",
         "options": [
-            "`refetchInterval: 5000` and `refetchIntervalInBackground: true`",
-            "`staleTime: 0` and `enabled: true`",
-            "`cacheTime: 10000` and `refetchOnWindowFocus: true`",
-            "`retry: 3` and `refetchOnMount: false`"
+            "refetchInterval: 5000 and refetchIntervalInBackground: true",
+            "staleTime: 0 and enabled: true",
+            "cacheTime: 10000 and refetchOnWindowFocus: true",
+            "retry: 3 and refetchOnMount: false"
         ],
         "correctOption": 0,
         "points": 20
@@ -5049,29 +5049,29 @@ export const mockQuestions: Question[] = [
             "id": 433,
             "question": "What does CRUD stand for in application development?",
             "options": [
-                "Create, Read, Update, Delete",
                 "Compute, Render, Upload, Deploy",
+                "Create, Read, Update, Delete",
                 "Check, Run, Undo, Debug",
                 "Connect, Retry, Update, Deliver"
             ],
-            "correctOption": 0,
+            "correctOption": 1,
             "points": 10
         },
         {
             "id": 434,
-            "question": "Which of the following represents the 'Read' operation in a CRUD system?",
+            "question": "Which of the following represents the 'Read' operation?",
             "options": [
-                "Adding a new user to the database",
+                "Adding a new user to database",
                 "Fetching a list of cabins from Supabase",
-                "Changing a user's password",
-                "Deleting a cabin from the system"
+                "Changing a user's password field",
+                "Deleting a cabin from system"
             ],
             "correctOption": 1,
             "points": 20
         },
         {
             "id": 435,
-            "question": "In the context of React and Supabase, which hook is most commonly used for performing the 'Update' operation in CRUD?",
+            "question": "Which hook is most commonly used for 'Update' operation?",
             "options": [
                 "useEffect",
                 "useQuery",
@@ -5083,56 +5083,86 @@ export const mockQuestions: Question[] = [
         },
     {
             "id": 436,
-            "question": "Which CRUD operation is performed when a new record is inserted into a database?",
-            "options": ["Create", "Read", "Update", "Delete"],
+            "question": "Which CRUD operation inserts new record into database?",
+        "options": [
+            "Create",
+            "Read",
+            "Update",
+            "Delete"
+        ],
             "correctOption": 0,
             "points": 10
         },
         {
             "id": 437,
-            "question": "Which CRUD operation is being executed when data is retrieved from an API endpoint?",
-            "options": ["Create", "Read", "Update", "Delete"],
+            "question": "Which CRUD operation retrieves data from API endpoint?",
+            "options": [
+                "Create",
+                "Read",
+                "Update",
+                "Delete"
+            ],
             "correctOption": 1,
             "points": 10
         },
         {
             "id": 438,
-            "question": "When modifying an existing user's email address, which CRUD operation is applied?",
-            "options": ["Create", "Read", "Update", "Delete"],
+            "question": "When modifying existing user's email, which CRUD applies?",
+            "options": [
+                "Create",
+                "Read",
+                "Update",
+                "Delete"
+            ],
             "correctOption": 2,
             "points": 10
         },
         {
             "id": 439,
-            "question": "Which CRUD action is executed when a record is permanently removed from a database?",
-            "options": ["Create", "Read", "Update", "Delete"],
+            "question": "Which CRUD action permanently removes record from database?",
+            "options": [
+                "Create",
+                "Read",
+                "Update",
+                "Delete"
+            ],
             "correctOption": 3,
             "points": 10
         },
         {
             "id": 440,
-            "question": "In React applications, which hook is most suitable for executing Create, Update, or Delete operations?",
-            "options": ["useEffect", "useState", "useMutation", "useContext"],
+            "question":"Which hook is most suitable for Create, Update, Delete?",
+            "options": [
+                "useEffect",
+                "useState",
+                "useMutation",
+                "useContext"
+            ],
             "correctOption": 2,
             "points": 20
         },
         {
             "id": 441,
-            "question": "Which CRUD operation usually requires invalidating or refetching cached queries in client-side state management libraries?",
-            "options": ["Read", "Create/Update/Delete", "All of them", "None of them"],
+            "question": "Which CRUD operation requires invalidating cached queries?",
+            "options": [
+                "Only Read",
+                "Create/Update/Delete",
+                "All of them",
+                "None of them"
+            ],
             "correctOption": 1,
             "points": 30
         },
         {
             "id": 442,
-            "question": "Why is the Update operation often considered more complex than Create in CRUD systems?",
+            "question":  "Why is Update often more complex than Create?",
             "options": [
+                "Because it bypasses state management entirely",
                 "Because it does not require validation",
-                "Because it must handle both existing and new values correctly",
+                "Because it must handle existing and new values",
                 "Because it always deletes old records first",
-                "Because it bypasses state management"
             ],
-            "correctOption": 1,
+            "correctOption": 3,
             "points": 30
         },
         {
@@ -5149,7 +5179,7 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 444,
-            "question": "Which of the following will TypeScript flag as an error?",
+            "question":"Which of the following will TypeScript flag as error?",
             "options": [
                 "let age: number = 30;",
                 "age = 40;",
@@ -5161,11 +5191,11 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 445,
-            "question": "Why does TypeScript check function parameter types?",
+            "question":  "Why does TypeScript check function parameter types?",
             "options": [
-                "To optimize runtime performance",
+                "To optimize runtime performance automatically",
                 "To prevent passing arguments of incorrect type",
-                "To convert JS code to HTML",
+                "To convert JavaScript code to HTML",
                 "To automatically fetch data from APIs"
             ],
             "correctOption": 1,
@@ -5175,32 +5205,32 @@ export const mockQuestions: Question[] = [
             "id": 446,
             "question": "Which of these will TypeScript catch?",
             "options": [
-                "Accessing a property that does not exist on an object",
-                "Logic errors in algorithms",
-                "Network request failures",
-                "CSS styling errors"
+                "Accessing non-existent property on object",
+                "Logic errors in sorting algorithms",
+                "Network request failures at runtime",
+                "CSS styling errors in components"
             ],
             "correctOption": 0,
             "points": 10
         },
         {
             "id": 447,
-            "question": "How does TypeScript handle null and undefined in a variable of type string?",
+            "question": "How does TypeScript handle null in string variable?",
             "options": [
+                "It ignores the value completely",
+                "It treats undefined as zero value",
                 "It automatically converts null to empty string",
-                "It throws a compile-time error if strict mode is enabled",
-                "It ignores the value",
-                "It treats undefined as zero"
+                "It throws compile error if strict mode enabled",
             ],
-            "correctOption": 1,
+            "correctOption": 3,
             "points": 20
         },
         {
             "id": 448,
-            "question": "Why is TypeScript considered helpful in large-scale React projects?",
+            "question": "Why is TypeScript helpful in large React projects?",
             "options": [
-                "It reduces runtime type errors and improves developer productivity",
-                "It automatically styles components",
+                "It reduces runtime errors and improves productivity",
+                "It automatically styles all React components",
                 "It replaces Redux for state management",
                 "It converts JSX to HTML directly"
             ],
@@ -5209,24 +5239,24 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 449,
-            "question": "Which TypeScript feature helps prevent passing an incorrect object shape to a function?",
+            "question":  "Which TypeScript feature prevents incorrect object shapes?",
             "options": [
                 "Interfaces and type annotations",
-                "React hooks",
-                "Async/await",
-                "CSS modules"
+                "React hooks for state",
+                "Async/await syntax",
+                "CSS modules system"
             ],
             "correctOption": 0,
             "points": 20
         },
         {
             "id": 450,
-            "question": "What kind of errors does TypeScript detect before the program runs?",
+            "question": "What kind of errors does TypeScript detect before runtime?",
             "options": [
-                "Runtime network errors",
-                "Compile-time type errors",
-                "CSS styling mistakes",
-                "User input mistakes"
+                "Runtime network connection errors",
+                "Compile-time type mismatches",
+                "CSS styling layout mistakes",
+                "User input validation errors"
             ],
             "correctOption": 1,
             "points": 10
