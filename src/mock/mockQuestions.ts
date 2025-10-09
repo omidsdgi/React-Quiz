@@ -5261,86 +5261,86 @@ export const mockQuestions: Question[] = [
             "correctOption": 1,
             "points": 10
         },
-        {
-            "id": 451,
-            "question": "Which of the following will TypeScript catch during development, before execution?",
-            "options": [
-                "Accessing a property that does not exist on an object",
-                "Logic errors in a sorting function",
-                "API response failures",
-                "Broken HTML layout"
-            ],
-            "correctOption": 0,
-            "points": 15
-        },
-        {
-            "id": 452,
-            "question": "Why is detecting errors at compile-time useful in large React projects?",
-            "options": [
-                "It prevents runtime crashes and improves code reliability",
-                "It reduces network latency",
-                "It automatically fetches data from APIs",
-                "It generates CSS styles automatically"
-            ],
-            "correctOption": 0,
-            "points": 20
-        },
-        {
-            "id": 453,
-            "question": "Which scenario is a compile-time error that TypeScript can detect?",
-            "options": [
-                "Calling a function with arguments of incorrect type",
-                "Server not responding to a fetch request",
-                "Button not triggering an event",
-                "User entering wrong credentials"
-            ],
-            "correctOption": 0,
-            "points": 20
-        },
-        {
-            "id": 454,
-            "question": "Which TypeScript feature ensures errors are detected before runtime?",
-            "options": [
-                "Static type checking",
-                "React hooks",
-                "CSS modules",
-                "Browser dev tools"
-            ],
-            "correctOption": 0,
-            "points": 30
-        },
+    {
+        "id": 451,
+        "question": "Which of the following will TypeScript catch during development?",
+        "options": [
+            "Accessing property that doesn't exist on objects",
+            "Logic errors in complex sorting algorithms",
+            "API response failures during runtime execution",
+            "Broken HTML layout and structure issues"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 452,
+        "question": "Why is detecting errors at compile-time useful?",
+        "options": [
+            "Generates CSS styles for components automatically",
+            "Prevents runtime crashes improving code reliability",
+            "Reduces network latency improving page speed",
+            "Automatically fetches data from external APIs",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 453,
+        "question": "Which scenario is a compile-time error TypeScript detects?",
+        "options": [
+            "Server not responding to network requests",
+            "Button element not triggering click events",
+            "Calling function with incorrect argument types",
+            "User entering wrong login credentials"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 454,
+        "question": "Which TypeScript feature ensures errors before runtime?",
+        "options": [
+            "React hooks implementation",
+            "Static type checking system",
+            "CSS modules integration",
+            "Browser developer tools"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
     {
         "id": 455,
-        "question": "At which stage does TypeScript execute its type checks?",
+        "question": "At which stage does TypeScript execute type checks?",
         "options": [
-            "During runtime in the browser",
-            "During compilation before running the code",
-            "After the code is deployed to production",
-            "When the user interacts with the UI"
+            "During runtime execution in browser",
+            "During compilation before code runs",
+            "After deployment to production server",
+            "When user interacts with UI elements"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
         "id": 456,
-        "question": "Why is React Hook Form (RHF) popular among React developers?",
+        "question": "Why is React Hook Form popular among developers?",
         "options": [
-            "It automatically generates CSS for forms",
-            "It provides easy and performant form state management with minimal re-renders",
-            "It replaces Redux entirely for all state management",
-            "It converts forms to server-side code automatically"
+            "Automatically generates CSS for form elements",
+            "Provides performant form state management",
+            "Replaces Redux for all state management",
+            "Converts forms to server-side code"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
         "id": 457,
-        "question": "Why does React Hook Form (RHF) typically trigger fewer re-renders compared to other form libraries?",
+        "question": "Why does React Hook Form trigger fewer re-renders?",
         "options": [
-            "Because it uses uncontrolled components and refs instead of tracking every input state in React state",
-            "Because it automatically batches network requests",
-            "Because it only works with functional components",
-            "Because it converts inputs to server-side variables"
+            "Uses uncontrolled inputs reducing re-renders",
+            "Automatically batches all network requests",
+            "Only works with functional components",
+            "Converts inputs to server variables"
         ],
         "correctOption": 0,
         "points": 20
@@ -5349,98 +5349,98 @@ export const mockQuestions: Question[] = [
         "id": 458,
         "question": "In React forms, what is a controlled component?",
         "options": [
-            "A component that manages its own state internally",
-            "A component where React controls the input value",
-            "A component that fetches data automatically",
-            "A component that cannot receive any props"
+            "Component managing its own internal state",
+            "Component fetching data from APIs automatically",
+            "Component where React controls input value",
+            "Component that cannot receive any props"
         ],
-        "correctOption": 1,
+        "correctOption": 2,
         "points": 10
     },
     {
         "id": 459,
-        "question": "In React Hook Form, what is the best practice for showing validation errors using field touch state?",
+        "question": "What is best practice for showing validation errors?",
         "options": [
-            "Always show error messages immediately on component mount",
-            "Use the `touchedFields` state (or `onTouched` event) to display errors only after the user interacts with the field",
-            "Display errors only after the form is submitted",
-            "Manually track input blur events with useState"
+            "Show all error messages on mount",
+            "Use touchedFields after user interaction",
+            "Display errors only after submission",
+            "Manually track blur with useState"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 460,
-        "question": "Which is the best practice for showing error messages in React Hook Form?",
+        "question": "Which is best practice for error messages in forms?",
         "options": [
-            "Show all error messages immediately on form mount",
-            "Show errors only after form submission regardless of user interaction",
-            "Use `touchedFields` to show errors after the user interacts with the input",
-            "Manually implement state to track blur events instead of using RHF"
+            "Manually implement blur tracking",
+            "Show all errors immediately on mount",
+            "Show errors only after form submission",
+            "Use touchedFields after user interaction",
         ],
-        "correctOption": 2,
+        "correctOption": 3,
         "points": 20
     },
     {
         "id": 461,
-        "question": "Why does using `onTouched` improve user experience in forms built with React Hook Form?",
+        "question": "Why does using onTouched improve user experience?",
         "options": [
-            "Because it prevents unnecessary re-renders by skipping validation logic",
-            "Because it ensures error messages are shown only after user interaction, reducing confusion",
-            "Because it disables inputs until the form is submitted",
-            "Because it automatically fixes validation rules without developer effort"
+            "Prevents unnecessary component re-renders",
+            "Disables inputs until form submission",
+            "Shows errors only after user interaction",
+            "Automatically fixes all validation rules"
         ],
-        "correctOption": 1,
+        "correctOption": 2,
         "points": 30
     },
-        {
-            "id": 462,
-            "question": "Why do we use the spread operator (`...register`) when integrating inputs with React Hook Form?",
-            "options": [
-                "Because it copies only the value property of the input",
-                "Because it automatically passes all necessary props like name, onChange, onBlur, and ref to the input",
-                "Because it removes the need to manually define validation rules",
-                "Because it prevents React from re-rendering the input"
-            ],
-            "correctOption": 1,
-            "points": 20
-        },
-        {
-            "id": 463,
-            "question": "What would happen if you use `register('email')` without the spread operator inside an input?",
-            "options": [
-                "Nothing, the form will still work the same",
-                "It will throw a TypeScript error but work in runtime",
-                "The input will not be connected to the form state because the returned object is not applied to props",
-                "It will automatically infer validation without spreading"
-            ],
-            "correctOption": 2,
-            "points": 30
-        },
-        {
-            "id": 464,
-            "question": "Which of the following best describes what `...register('name', { required: 'This field is required' })` does?",
-            "options": [
-                "It spreads only the validation rules into the component",
-                "It adds a custom hook into the component props",
-                "It spreads both event handlers and validation rules needed by React Hook Form into the input",
-                "It overrides default HTML attributes of the input"
-            ],
-            "correctOption": 2,
-            "points": 30
-        },
-        {
-            "id": 465,
-            "question": "What is the main idea of the Render Props pattern in React?",
-            "options": [
-                "Passing JSX elements as props",
-                "Passing a function as a prop to control what to render",
-                "Rendering props automatically inside React DOM",
-                "Using context API to render props"
-            ],
-            "correctOption": 1,
-            "points": 10
-        },
+    {
+        "id": 462,
+        "question": "Why use spread operator with register function?",
+        "options": [
+            "Copies only the input value property",
+            "Passes all necessary props automatically",
+            "Removes need for validation rules",
+            "Prevents React from re-rendering input"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 463,
+        "question": "What happens if you use register without spreading?",
+        "options": [
+            "Nothing changes, form works the same",
+            "TypeScript throws error but works fine",
+            "Input won't connect to form state",
+            "Automatically infers validation rules"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 464,
+        "question": "Which best describes what ...register does?",
+        "options": [
+            "Spreads only validation rules to component",
+            "Adds custom hook into component props",
+            "Spreads handlers and validation rules",
+            "Overrides default HTML element attributes"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 465,
+        "question": "What is the main idea of Render Props pattern?",
+        "options": [
+            "Passing JSX elements as component props",
+            "Passing function as prop controlling render",
+            "Rendering props automatically inside DOM",
+            "Using context API to render props"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
         {
             "id": 466,
             "question": "Which of the following best demonstrates the Render Props pattern?",
