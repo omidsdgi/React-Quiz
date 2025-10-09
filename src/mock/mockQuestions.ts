@@ -5441,185 +5441,184 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 10
     },
-        {
-            "id": 466,
-            "question": "Which of the following best demonstrates the Render Props pattern?",
-            "options": [
-                "<DataProvider><Child /></DataProvider>",
-                "<DataProvider render={(data) => <Child data={data} />} />",
-                "<Child data={useData()} />",
-                "<Provider><Consumer>{value => <Child value={value} />}</Consumer></Provider>"
-            ],
-            "correctOption": 1,
-            "points": 20
-        },
-        {
-            "id": 467,
-            "question": "Why has the usage of Render Props pattern decreased in modern React applications?",
-            "options": [
-                "Because it is no longer supported in React 18",
-                "Because Hooks provide a simpler way to share stateful logic",
-                "Because Context API completely replaced it",
-                "Because it caused errors in strict mode"
-            ],
-            "correctOption": 1,
-            "points": 30
-        },
-        {
-            "id": 468,
-            "question": "What is the main purpose of the Compound Component Pattern in React?",
-            "options": [
-                "To bundle multiple components into one file for easier imports",
-                "To allow related components to work together under a unified API",
-                "To reduce the size of the final JavaScript bundle",
-                "To avoid writing any props in child components"
-            ],
-            "correctOption": 1,
-            "points": 10
-        },
-        {
-            "id": 469,
-            "question": "Which technique is most commonly used to share state between parent and child components in the Compound Component Pattern?",
-            "options": [
-                "Prop drilling",
-                "React Context",
-                "Redux store",
-                "Direct DOM manipulation"
-            ],
-            "correctOption": 1,
-            "points": 20
-        },
-        {
-            "id": 470,
-            "question": "Why is using a compound component like Tabs with Tabs.List and Tabs.Panel preferred over a single Tabs component with many props?",
-            "options": [
-                "It makes the API more flexible and declarative",
-                "It reduces the need for TypeScript typings",
-                "It automatically optimizes rendering performance",
-                "It eliminates the need for CSS"
-            ],
-            "correctOption": 0,
-            "points": 20
-        },
-        {
-            "id": 471,
-            "question": "What problem does the Compound Component Pattern solve compared to a single monolithic component?",
-            "options": [
-                "It reduces JSX nesting and makes the UI flat",
-                "It avoids hard-coding the component structure and gives consumers flexibility in composition",
-                "It ensures better tree-shaking during build time",
-                "It automatically memoizes all child components"
-            ],
-            "correctOption": 1,
-            "points": 20
-        },
-        {
-            "id": 472,
-            "question": "When implementing a Compound Component Pattern, how do children usually access the parent’s state and logic?",
-            "options": [
-                "By calling a function exported from the parent",
-                "By reading from global variables",
-                "Through React.createContext and useContext inside children",
-                "By importing parent’s hook directly"
-            ],
-            "correctOption": 2,
-            "points": 30
-        },
-        {
-            "id": 473,
-            "question": "Why is React Portal often used to render a Modal?",
-            "options": [
-                "To replace the need for CSS styling in modals",
-                "To render the modal outside the root DOM hierarchy for proper stacking",
-                "To improve server-side rendering performance",
-                "To automatically close the modal on route changes"
-            ],
-            "correctOption": 1,
-            "points": 10
-        },
-
-        {
-            "id": 474,
-            "question": "What problem does rendering a Modal with React Portal solve?",
-            "options": [
-                "Ensures modal is always centered on screen",
-                "Avoids z-index and overflow issues by rendering outside parent container",
-                "Allows modal to automatically manage its own state",
-                "Improves the performance of large component trees"
-            ],
-            "correctOption": 1,
-            "points": 30
-        },
-        {
-            "id": 475,
-            "question": "What is the main purpose of using React Portal when rendering a modal?",
-            "options": [
-                "To reduce the number of re-renders of the modal",
-                "To render the modal outside the normal parent DOM hierarchy",
-                "To improve the performance of state updates",
-                "To automatically add animations to the modal"
-            ],
-            "correctOption": 1,
-            "points": 20
-        },
-            {
-                "id": 476,
-                "question": "Where is the modal typically rendered when using React Portal?",
-                "options": [
-                    "Inside the closest parent component",
-                    "Directly in the component tree of App",
-                    "In a separate DOM node such as a div with id='modal-root'",
-                    "In the virtual DOM but not the real DOM"
-                ],
-                "correctOption": 2,
-                "points": 10
-            },
-            {
-                "id": 477,
-                "question": "Why is using React Portal beneficial for modals in terms of CSS and layout?",
-                "options": [
-                    "Because it automatically sets the modal's z-index",
-                    "Because it avoids CSS conflicts like overflow: hidden and stacking context issues",
-                    "Because it converts modal styles into inline styles",
-                    "Because it removes the need for CSS classes"
-                ],
-                "correctOption": 1,
-                "points": 30
-            },
-            {
-                "id": 478,
-                "question": "Which React method is used to render content into a Portal?",
-                "options": [
-                    "ReactDOM.render()",
-                    "ReactDOM.createPortal()",
-                    "React.createElement()",
-                    "usePortal()"
-                ],
-                "correctOption": 1,
-                "points": 10
-            },
-            {
-                "id": 479,
-                "question": "In terms of accessibility (a11y), what is an important step when building a Portal Modal?",
-                "options": [
-                    "Ensuring the modal has a random ID",
-                    "Making sure focus is trapped inside the modal until closed",
-                    "Applying inline styles only",
-                    "Rendering the modal with useEffect"
-                ],
-                "correctOption": 1,
-                "points": 30
-            },
+    {
+        "id": 466,
+        "question": "Which best demonstrates the Render Props pattern?",
+        "options": [
+            "<DataProvider><Child /></DataProvider>",
+            "<DataProvider render={data => <Child data={data} />} />",
+            "<Child data={useData()} />",
+            "<Provider><Consumer>{value => <Child value={value} />}</Consumer></Provider>"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 467,
+        "question": "Why has Render Props usage decreased in recent years?",
+        "options": [
+            "No longer supported in React 18 version",
+            "Hooks provide simpler way to share logic",
+            "Context API completely replaced the pattern",
+            "Caused errors in React strict mode"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 468,
+        "question": "What is main purpose of Compound Component Pattern?",
+        "options": [
+            "Bundle multiple components into single file",
+            "Allow related components work together unified",
+            "Reduce size of final JavaScript bundle",
+            "Avoid writing any props in child components"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 469,
+        "question": "Which technique shares state in Compound Component Pattern?",
+        "options": [
+            "Prop drilling through component tree",
+            "React Context for state sharing",
+            "Redux store for global state",
+            "Direct DOM manipulation methods"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 470,
+        "question": "Why prefer compound components over single component?",
+        "options": [
+            "Makes API more flexible and declarative",
+            "Reduces need for TypeScript typings",
+            "Automatically optimizes rendering performance",
+            "Eliminates need for CSS styling"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 471,
+        "question": "What problem does Compound Component Pattern solve?",
+        "options": [
+            "Reduces JSX nesting making UI flat",
+            "Avoids hard-coding giving flexibility",
+            "Ensures better tree-shaking during build",
+            "Automatically memoizes all child components"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 472,
+        "question": "How do children access parent state in Compound Component pattern?",
+        "options": [
+            "Calling function exported from parent",
+            "Reading from global variables directly",
+            "Through React Context and useContext",
+            "Importing parent hook directly"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 473,
+        "question": "Why is React Portal often used for Modal?",
+        "options": [
+            "Replaces need for CSS styling modals",
+            "Renders modal outside root DOM hierarchy",
+            "Improves server-side rendering performance",
+            "Automatically closes modal on route changes"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 474,
+        "question": "What problem does rendering Modal with Portal solve?",
+        "options": [
+            "Ensures modal always centered on screen",
+            "Avoids z-index and overflow issues",
+            "Allows modal to manage own state",
+            "Improves performance of large trees"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 475,
+        "question": "What is main purpose of React Portal for modals?",
+        "options": [
+            "Reduces number of modal re-renders",
+            "Renders modal outside parent DOM hierarchy",
+            "Improves performance of state updates",
+            "Automatically adds animations to modal"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 476,
+        "question": "Where is modal typically rendered using React Portal?",
+        "options": [
+            "Inside closest parent component directly",
+            "Directly in component tree of App",
+            "In separate DOM node like modal-root",
+            "In virtual DOM but not real DOM"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 477,
+        "question": "Why is Portal beneficial for modals regarding CSS?",
+        "options": [
+            "Automatically sets modal's z-index property",
+            "Avoids overflow hidden and stacking issues",
+            "Converts modal styles into inline styles",
+            "Removes need for CSS classes entirely"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 478,
+        "question": "Which React method is used to render into Portal?",
+        "options": [
+            "ReactDOM.render()",
+            "React.createElement()",
+            "ReactDOM.createPortal()",
+            "usePortal()"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 479,
+        "question": "What is important for accessibility in Portal Modal?",
+        "options": [
+            "Rendering modal with useEffect hook",
+            "Ensuring modal has random ID assigned",
+            "Applying inline styles only to elements",
+            "Making sure focus trapped inside modal",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
     {
         "id": 480,
         "question": "What is prefetching in React Query?",
         "options": [
-            "Fetching data in advance before components need it",
-            "Fetching data only after components have rendered",
-            "Deleting cached data to free up memory",
-            "Blocking UI updates until all data loads"
+            "Fetching data only after component renders",
+            "Fetching data before components need it",
+            "Deleting cached data to free memory",
+            "Blocking UI updates until data loads"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 10
     },
     {
