@@ -5623,12 +5623,12 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 481,
-        "question": "What is the primary benefit of prefetching data?",
+        "question": "What is primary benefit of prefetching data?",
         "options": [
-            "Automatically writes all data to localStorage",
-            "Reduces perceived loading time and improves responsiveness",
-            "Eliminates the need for backend API calls",
-            "Disables caching mechanisms for better performance"
+            "Automatically writes data to localStorage",
+            "Reduces loading time improving responsiveness",
+            "Eliminates need for backend API calls",
+            "Disables caching for better performance"
         ],
         "correctOption": 1,
         "points": 20
@@ -5637,10 +5637,10 @@ export const mockQuestions: Question[] = [
         "id": 482,
         "question": "How does prefetching work with React Query caching?",
         "options": [
-            "Prefetching bypasses cache and forces fresh requests",
-            "Prefetching automatically converts data into static HTML",
-            "Prefetching loads and caches data for instant availability",
-            "Prefetching prevents components from ever re-rendering"
+            "Prefetching bypasses cache forcing fresh requests",
+            "Prefetching converts data into static HTML",
+            "Prefetching loads and caches for instant use",
+            "Prefetching prevents components from re-rendering"
         ],
         "correctOption": 2,
         "points": 30
@@ -5649,7 +5649,7 @@ export const mockQuestions: Question[] = [
         "id": 483,
         "question": "Which method is used to prefetch queries manually?",
         "options": [
-            "queryClient.prefetchQuery() with query configuration",
+            "queryClient.prefetchQuery() with query config",
             "useQuery() with prefetch parameter set true",
             "usePrefetch() hook in component body",
             "React.prefetch() with query key and function"
@@ -5661,22 +5661,22 @@ export const mockQuestions: Question[] = [
         "id": 484,
         "question": "When should you typically implement prefetching?",
         "options": [
-            "After user has already navigated to page",
-            "Before user likely needs the data soon",
-            "Only when network connection is very slow",
-            "During component unmounting phase for cleanup"
+            "After user already navigated to page",
+            "Before user likely needs data soon",
+            "Only when network connection very slow",
+            "During component unmounting for cleanup"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 485,
-        "question": "What happens when a component uses useQuery after prefetching?",
+        "question": "What happens when component uses useQuery after prefetch?",
         "options": [
             "useQuery ignores prefetched data and refetches",
             "useQuery throws error if data was prefetched",
-            "useQuery immediately returns the prefetched cached data",
-            "useQuery waits for prefetch to complete first"
+            "useQuery immediately returns cached data",
+            "useQuery waits for prefetch to complete"
         ],
         "correctOption": 2,
         "points": 30
@@ -5685,82 +5685,82 @@ export const mockQuestions: Question[] = [
         "id": 486,
         "question": "How can you prefetch data on user hover events?",
         "options": [
-            "Use onMouseEnter event to trigger prefetchQuery",
-            "Use onClick event to start prefetching process",
+            "Use onMouseEnter event triggering prefetchQuery",
+            "Use onClick event to start prefetching",
             "Use onLoad event when component mounts",
-            "Use onScroll event when user scrolls page"
+            "Use onScroll event when user scrolls"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
         "id": 487,
-        "question": "What is the difference between prefetching and preloading?",
+        "question": "What is difference between prefetching and preloading?",
         "options": [
-            "Prefetching loads data, preloading loads components",
-            "Prefetching is automatic, preloading is manual",
-            "Prefetching blocks rendering, preloading is async",
-            "Prefetching and preloading are identical concepts"
+            "Preload works in background, prefetch blocks rendering components",
+            "Prefetch has high priority, preload has low priority",
+            "Preload for critical current resources, prefetch for future needs",
+            "Prefetch for same page, preload for next page"
         ],
-        "correctOption": 0,
+        "correctOption": 2,
         "points": 30
     },
     {
         "id": 488,
         "question": "Can you prefetch queries with different parameters?",
         "options": [
-            "No, prefetching only works with static queries",
-            "Yes, by passing different query keys and functions",
-            "No, parameters must match original query exactly",
-            "Yes, but only primitive parameter types work"
+            "No, prefetching works with static queries",
+            "Yes, but only primitive types work",
+            "No, parameters must match original exactly",
+            "Yes, by passing different keys and functions",
         ],
-        "correctOption": 1,
+        "correctOption": 3,
         "points": 20
     },
     {
         "id": 489,
         "question": "What happens to prefetched data that goes unused?",
         "options": [
+            "Data immediately deleted after prefetch completes",
             "Data remains cached until cacheTime expires",
-            "Data is immediately deleted after prefetch completes",
-            "Data causes memory leaks if not used",
-            "Data automatically converts to localStorage entries"
+            "Data causes memory leaks if unused",
+            "Data automatically converts to localStorage"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 30
     },
     {
         "id": 490,
-        "question": "How does prefetching improve user experience in navigation?",
+        "question": "How does prefetching improve user navigation experience?",
         "options": [
-            "Makes pages load instantly when users navigate",
-            "Prevents users from navigating to invalid routes",
+            "Makes pages load instantly when navigating",
+            "Prevents users navigating to invalid routes",
             "Automatically updates browser history for users",
-            "Reduces server load by caching all data"
+            "Reduces server load by caching data"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
         "id": 491,
-        "question": "What is a potential downside of excessive prefetching?",
+        "question": "What is the main problem with prefetching too many resources?",
         "options": [
-            "Improves performance but increases code complexity",
-            "Loads unnecessary data and wastes network bandwidth",
+            "Increases code complexity without benefits",
             "Makes React Query cache completely unusable",
+            "Wastes user bandwidth downloading unused data",
             "Prevents normal useQuery hooks from working"
         ],
-        "correctOption": 1,
+        "correctOption": 2,
         "points": 30
     },
     {
         "id": 492,
         "question": "Can prefetching work with mutations in React Query?",
         "options": [
-            "Yes, mutations can be prefetched like queries",
-            "No, prefetching only applies to read operations",
-            "Yes, but mutations execute immediately when prefetched",
-            "No, mutations require user interaction to trigger"
+            "Yes, mutations can prefetch like queries",
+            "No, prefetching only applies to reads",
+            "Yes, but mutations execute immediately",
+            "No, mutations require user interaction"
         ],
         "correctOption": 1,
         "points": 20
@@ -5769,57 +5769,57 @@ export const mockQuestions: Question[] = [
         "id": 493,
         "question": "How do you prefetch data during application startup?",
         "options": [
-            "Use prefetchQuery in main component useEffect",
-            "Call prefetchQuery directly in module scope",
-            "Use prefetchQuery inside component render function",
-            "Prefetching cannot occur during application startup"
+            "Use prefetchQuery in main useEffect",
+            "Call prefetchQuery directly in module",
+            "Use prefetchQuery inside render function",
+            "Prefetching cannot occur during startup"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
         "id": 494,
-        "question": "What is the relationship between prefetching and staleTime?",
+        "question": "What is relationship between prefetching and staleTime?",
         "options": [
-            "Prefetching and staleTime work completely independently",
-            "Prefetched data respects staleTime configuration settings",
-            "Prefetching ignores staleTime and always refetches",
-            "Prefetching automatically sets staleTime to zero",
+            "Prefetching and staleTime work independently",
+            "Prefetching ignores staleTime always refetches",
+            "Prefetching automatically sets staleTime zero",
+            "Prefetched data respects staleTime settings",
         ],
-        "correctOption": 1,
+        "correctOption": 3,
         "points": 30
     },
     {
         "id": 495,
         "question": "How does prefetching improve pagination user experience?",
         "options": [
-            "Automatically updates page URLs in browser history",
-            "Loads next page data before user clicks pagination",
-            "Prevents users from navigating to invalid pages",
-            "Reduces total number of pages in dataset"
+            "Automatically updates page URLs in history",
+            "Loads next page data before clicking",
+            "Prevents users navigating to invalid pages",
+            "Reduces total number of pages dataset"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 496,
-        "question": "When should you prefetch the next page in pagination?",
+        "question": "When should you prefetch next page in pagination?",
         "options": [
-            "Only after user clicks on next button",
-            "when application startup for loading all pages",
-            "When current page data finishes loading successfully",
-            "Only when user hovers over pagination controls"
+            "Only after user clicks next button",
+            "When application startup loading all pages",
+            "When current page data finishes loading",
+            "Only when user hovers pagination controls"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
         "id": 497,
-        "question": "What is a common strategy for pagination prefetching?",
+        "question": "What is common strategy for pagination prefetching?",
         "options": [
             "Prefetch all pages at application startup",
             "Prefetch only previous pages for navigation",
-            "Prefetch next few pages while viewing current",
+            "Prefetch next few pages while viewing",
             "Prefetch random pages to improve performance"
         ],
         "correctOption": 2,
@@ -5827,11 +5827,11 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 498,
-        "question": "How do you prefetch next page data in React Query?",
+        "question": "How do you prefetch next page data?",
         "options": [
             "queryClient.prefetchQuery with next page parameters",
-            "useQuery with prefetch option set to true",
-            "usePagination hook with automatic prefetching enabled",
+            "useQuery with prefetch option set true",
+            "usePagination hook with automatic prefetching",
             "React.prefetch with page number and data"
         ],
         "correctOption": 0,
@@ -5841,10 +5841,10 @@ export const mockQuestions: Question[] = [
         "id": 499,
         "question": "What happens when user navigates to prefetched page?",
         "options": [
-            "Page loads instantly from cache without loading state",
-            "Page ignores cache and refetches data completely",
-            "Page throws error if prefetched data expired",
-            "Page waits for prefetch operation to complete"
+            "Page loads instantly from cache without loading",
+            "Page ignores cache and refetches data",
+            "Page throws error if prefetched expired",
+            "Page waits for prefetch operation completion"
         ],
         "correctOption": 0,
         "points": 30
@@ -5853,10 +5853,10 @@ export const mockQuestions: Question[] = [
         "id": 500,
         "question": "Should you prefetch all pages in large datasets?",
         "options": [
-            "Yes, but only for datasets under 100 pages",
-            "No, prefetching only works for single pages",
+            "Yes, but only for datasets under pages",
+            "No, prefetching only works for singles",
             "Yes, prefetching all pages improves performance",
-            "No, this wastes bandwidth and memory resources",
+            "No, this wastes bandwidth and memory"
         ],
         "correctOption": 3,
         "points": 30
