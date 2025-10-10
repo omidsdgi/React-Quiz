@@ -8356,5 +8356,364 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30
+    },{
+        "id": 719,
+        "question": "What is the purpose of environment variables in Next.js?",
+        "options": [
+            "Store configuration data outside source code",
+            "Improve application runtime performance",
+            "Generate dynamic routes automatically",
+            "Optimize images during build process"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 720,
+        "question": "Which file is used to define environment variables?",
+        "options": [
+            "config.js for all environments",
+            "settings.json for configuration",
+            ".env.local for local development",
+            "variables.env for production"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 721,
+        "question": "How do you access environment variables in Next.js?",
+        "options": [
+            "Using env.get('VARIABLE_NAME') method",
+            "Using process.env.VARIABLE_NAME syntax",
+            "Using getEnv('VARIABLE_NAME') function",
+            "Using config.VARIABLE_NAME notation"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 722,
+        "question": "What prefix exposes env variables to the browser?",
+        "options": [
+            "BROWSER_ prefix for client side",
+            "PUBLIC_ prefix for frontend usage",
+            "CLIENT_ prefix for browser exposure",
+            "NEXT_PUBLIC_ prefix for client access",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 723,
+        "question": "Can you access server-only env variables in browser?",
+        "options": [
+            "Yes, all variables available everywhere",
+            "No, only NEXT_PUBLIC_ variables accessible",
+            "Yes, but only in production mode",
+            "No, unless explicitly configured"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 724,
+        "question": "What happens to env variables without NEXT_PUBLIC_ prefix?",
+        "options": [
+            "They remain server-side only for security",
+            "They become public automatically",
+            "They are ignored during build process",
+            "They throw error in production"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 725,
+        "question": "Which env file has highest priority in Next.js?",
+        "options": [
+            ".env.production takes highest priority",
+            ".env.development has most precedence",
+            ".env.local overrides other env files",
+            ".env is always prioritized first"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 726,
+        "question": "What is the purpose of .env.production file?",
+        "options": [
+            "Variables specific to production builds",
+            "Backup variables for all environments",
+            "Testing variables before deployment",
+            "Development variables for staging"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 727,
+        "question": "Should .env.local be committed to git repository?",
+        "options": [
+            "Yes, for team collaboration purposes",
+            "No, it contains sensitive local data",
+            "Yes, but only for public projects",
+            "No, unless encrypted properly first"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 728,
+        "question": "How do you provide default values for env variables?",
+        "options": [
+            "Using config.defaults object",
+            "Using fallback.env for defaults",
+            "Using .env file for default values",
+            "Using defaults.json configuration file",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 729,
+        "question": "Can you use env variables in next.config.js?",
+        "options": [
+            "Yes, but only NEXT_PUBLIC_ variables",
+            "No, config runs before env loading",
+            "Yes, using process.env directly",
+            "No, requires separate config file"
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 730,
+        "question": "What is the purpose of .env.example file?",
+        "options": [
+            "Backup of production environment variables",
+            "Template showing required env variables",
+            "Example values for testing purposes",
+            "Default fallback for missing variables"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 731,
+        "question": "How are env variables loaded in Next.js?",
+        "options": [
+            "Automatically at build and runtime",
+            "Manually using loadEnv() function",
+            "Only during initial server startup",
+            "Through external configuration service"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 732,
+        "question": "Can you override env variables at runtime?",
+        "options": [
+            "No, unless using serverless functions",
+            "Yes, using runtime configuration API",
+            "Yes, but only in development mode",
+            "No, they are set at build time",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 733,
+        "question": "What happens when env variable is undefined?",
+        "options": [
+            "Variable gets empty string as default",
+            "Next.js throws build error immediately",
+            "process.env.VAR returns undefined value",
+            "Application crashes at runtime"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 734,
+        "question": "How do you use env variables in API routes?",
+        "options": [
+            "Access via process.env like server code",
+            "Import from special env module",
+            "Use getEnv() helper function",
+            "Pass through request headers"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 735,
+        "question": "Can you use env variables in client components?",
+        "options": [
+            "Yes, all variables available automatically",
+            "No, client components cannot access env",
+            "Only if prefixed with NEXT_PUBLIC_",
+            "Yes, but requires special import"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 736,
+        "question": "What is the risk of exposing env variables to browser?",
+        "options": [
+            "Sensitive data visible in client code",
+            "Increases bundle size significantly",
+            "Slows down page load performance",
+            "Breaks server-side rendering"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 737,
+        "question": "How do you validate required env variables?",
+        "options": [
+            "Next.js validates automatically at build",
+            "Check at runtime or use validation library",
+            "Use validateEnv() built-in function",
+            "Define in env.schema.json file"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 738,
+        "question": "Can you use multiline values in env files?",
+        "options": [
+            "Yes, using quotes and newline characters",
+            "No, env values must be single line",
+            "Yes, but only in .env.local file",
+            "No, requires JSON format instead"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 739,
+        "question": "What is the purpose of .env.development.local?",
+        "options": [
+            "Local overrides for development environment",
+            "Shared development variables for team",
+            "Production testing before deployment",
+            "Backup of development configurations"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 740,
+        "question": "How do env variables work in Docker containers?",
+        "options": [
+            "Automatically copied from host system",
+            "Cannot use env variables in containers",
+            "Pass via docker run -e or compose file",
+            "Must rebuild image for each change",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 741,
+        "question": "Can you use env variables for database connection strings?",
+        "options": [
+            "Yes, but only in development",
+            "No, use config files instead",
+            "Yes, common practice for security",
+            "No, hardcode for better performance"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 742,
+        "question": "What is best practice for API keys in Next.js?",
+        "options": [
+            "Store in NEXT_PUBLIC_ for easy access",
+            "Store in server-side env variables only",
+            "Hardcode directly in source code",
+            "Store in public constants file"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 743,
+        "question": "How do you handle env variables in Vercel deployment?",
+        "options": [
+            "Commit all env files to repository",
+            "Add through Vercel dashboard or CLI",
+            "Upload .env.local file to server",
+            "Configure in vercel.json file"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 744,
+        "question": "Can you use env variables in middleware?",
+        "options": [
+            "No, middleware cannot access env",
+            "Yes, all variables available",
+            "No, requires separate configuration",
+            "Yes, but only non-NEXT_PUBLIC_ variables",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 745,
+        "question": "What happens to NEXT_PUBLIC_ variables in build output?",
+        "options": [
+            "Inlined into JavaScript bundle code",
+            "Kept separate in env file",
+            "Encrypted for security purposes",
+            "Removed from production build"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 746,
+        "question": "How do you use different API URLs per environment?",
+        "options": [
+            "Use different env files per environment",
+            "Use if statements checking NODE_ENV",
+            "Use switch case for each environment",
+            "Use separate config.js per environment"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 747,
+        "question": "Can you access env variables in getStaticProps?",
+        "options": [
+            "Yes, but only NEXT_PUBLIC_ variables",
+            "No, only available in API routes",
+            "Yes, runs on server with full access",
+            "No, use runtime configuration instead"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 748,
+        "question": "What is the recommended way to type env variables?",
+        "options": [
+            "Create TypeScript declaration file for process.env",
+            "Use any type for all variables",
+            "Next.js types them automatically",
+            "No typing needed for env variables"
+        ],
+        "correctOption": 0,
+        "points": 30
     }
 ]
