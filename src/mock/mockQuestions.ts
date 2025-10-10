@@ -8895,4 +8895,184 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 30
     },
+    {
+        "id": 764,
+        "question": "What is selective hydration with Suspense?",
+        "options": [
+            "Choosing which components to hydrate manually",
+            "Hydrating components independently when ready",
+            "Hydrating only visible components on screen",
+            "Partial hydration based on user interaction"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 765,
+        "question": "How does streaming affect SEO?",
+        "options": [
+            "Content still indexed but loads progressively",
+            "Completely breaks search engine crawling",
+            "Improves SEO by loading faster",
+            "No effect on SEO whatsoever"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 766,
+        "question": "Can you use Suspense with client-side data fetching?",
+        "options": [
+            "Yes, but requires manual configuration",
+            "No, only server-side fetching works",
+            "Yes, with libraries supporting Suspense",
+            "No, Suspense is server-only feature"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 767,
+        "question": "What is the purpose of startTransition with Suspense?",
+        "options": [
+            "Marks updates as non-urgent allowing interruption",
+            "Initiates streaming from server immediately",
+            "Starts CSS transitions during loading",
+            "Begins data fetching before rendering",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 768,
+        "question": "How does Suspense handle concurrent requests?",
+        "options": [
+            "Renders whichever resolves first independently",
+            "Cancels slower requests automatically",
+            "Waits for all requests to finish",
+            "Queues requests in order received"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 769,
+        "question": "Can you show different fallbacks for different sections?",
+        "options": [
+            "No, fallback is global configuration",
+            "Yes, but requires custom hook",
+            "No, only one fallback per page",
+            "Yes, using multiple Suspense boundaries",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 770,
+        "question": "What happens if fallback component also suspends?",
+        "options": [
+            "Automatically retries rendering fallback",
+            "Application crashes with error",
+            "Shows blank screen indefinitely",
+            "Parent Suspense boundary catches it",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 771,
+        "question": "How does Suspense improve user experience?",
+        "options": [
+            "Prevents users from leaving page",
+            "Makes application load twice as fast",
+            "Eliminates all loading states completely",
+            "Shows meaningful loading states reducing frustration",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 772,
+        "question": "Can Suspense be used for non-data operations?",
+        "options": [
+            "Yes, any async operation throwing promise",
+            "No, only data fetching supported",
+            "Yes, but only image loading",
+            "No, strictly for API calls"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 773,
+        "question": "What is the relationship between Suspense and loading states?",
+        "options": [
+            "Suspense declaratively manages loading states",
+            "Suspense eliminates need for loading states",
+            "Suspense converts loading to error states",
+            "Suspense and loading states are unrelated"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 774,
+        "question": "How does streaming affect bandwidth usage?",
+        "options": [
+            "Reduces bandwidth by compressing streams",
+            "Same total data sent more efficiently",
+            "Increases bandwidth due to chunking",
+            "No effect on bandwidth whatsoever"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 775,
+        "question": "Can you cancel Suspense loading programmatically?",
+        "options": [
+            "Yes, but only during development",
+            "Yes, using cancelSuspense() method",
+            "No, Suspense resolves when promise settles",
+            "No, requires page refresh to cancel"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 776,
+        "question": "What is Out-of-Order Streaming in React?",
+        "options": [
+            "Streaming data in reverse chronological order",
+            "Components stream in priority order not sequential",
+            "Random component rendering for performance",
+            "Streaming only non-critical components late"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 777,
+        "question": "How does Suspense work with React Server Components?",
+        "options": [
+            "Converts Server Components to Client Components",
+            "Suspense doesn't work with Server Components",
+            "Allows async Server Components to suspend",
+            "Disables Server Components during loading",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 778,
+        "question": "What is the best practice for Suspense boundaries?",
+        "options": [
+            "Wrap every single component individually",
+            "Only use one boundary per application",
+            "Place where loading states make sense",
+            "Avoid Suspense in production builds"
+        ],
+        "correctOption": 2,
+        "points": 20
+    }
 ]
