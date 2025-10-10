@@ -8715,5 +8715,184 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30
-    }
+    },{
+        "id": 749,
+        "question": "What is streaming in React and Next.js?",
+        "options": [
+            "Sending HTML chunks to browser progressively",
+            "Playing video content in components",
+            "Real-time data updates via WebSocket",
+            "Continuous data flow from database"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 750,
+        "question": "What is the purpose of React Suspense?",
+        "options": [
+            "Pauses component rendering permanently",
+            "Delays JavaScript execution temporarily",
+            "Shows fallback UI while content loads",
+            "Suspends user interactions until ready"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 751,
+        "question": "How does Suspense work with streaming?",
+        "options": [
+            "Stops streaming until data is ready",
+            "Converts streaming to static rendering",
+            "Disables streaming for better performance",
+            "Shows fallback while streaming component content",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 752,
+        "question": "What does fallback prop specify in Suspense?",
+        "options": [
+            "Backup component for rendering",
+            "UI to show while content loading",
+            "Default data when fetch fails",
+            "Alternative route on error",
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 753,
+        "question": "Can you nest multiple Suspense boundaries?",
+        "options": [
+            "Yes, but maximum three levels",
+            "No, only one per page allowed",
+            "Yes, for granular loading states",
+            "No, causes infinite loading loops"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 754,
+        "question": "What triggers Suspense boundary in components?",
+        "options": [
+            "Async operations like data fetching",
+            "State updates in child components",
+            "Props changes from parent component",
+            "CSS animations and transitions"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 755,
+        "question": "How does streaming improve Time to First Byte?",
+        "options": [
+            "Caches responses on CDN edge",
+            "Sends initial HTML faster without waiting",
+            "Compresses data before sending response",
+            "Reduces server processing time significantly"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 756,
+        "question": "What is the difference between streaming and SSR?",
+        "options": [
+            "Streaming works offline, SSR needs server",
+            "Streaming is faster, SSR is slower",
+            "Streaming sends chunks, SSR waits for all",
+            "Streaming for client, SSR for server"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 757,
+        "question": "Can Server Components use Suspense boundaries?",
+        "options": [
+            "No, Server Components render synchronously",
+            "Yes, for async data fetching operations",
+            "No, only Client Components support it",
+            "Yes, but only in development mode",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 758,
+        "question": "What happens when Suspense boundary catches promise?",
+        "options": [
+            "Shows fallback until promise resolves",
+            "Throws error stopping component render",
+            "Cancels promise and retries fetch",
+            "Converts promise to synchronous code"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 759,
+        "question": "How does loading.js relate to Suspense?",
+        "options": [
+            "It's automatic Suspense boundary for routes",
+            "It replaces Suspense in Next.js completely",
+            "It loads files before Suspense renders",
+            "It defines loading speed for Suspense"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 760,
+        "question": "Can you use Suspense with React.lazy?",
+        "options": [
+            "No, lazy requires different loading method",
+            "Yes, for code-splitting components lazily",
+            "Yes, but only for small components",
+            "No, lazy and Suspense are incompatible"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 761,
+        "question": "What is progressive rendering in streaming?",
+        "options": [
+            "Rendering components as data becomes available",
+            "Gradually improving image quality over time",
+            "Slowly loading page from top to bottom",
+            "Rendering based on user scroll position"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 762,
+        "question": "How does Suspense improve perceived performance?",
+        "options": [
+            "Actually makes code run faster",
+            "Caches everything in browser memory",
+            "Prefetches all data before rendering",
+            "Shows content immediately reducing wait time",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 763,
+        "question": "Can Suspense work with error boundaries?",
+        "options": [
+            "No, they serve completely different purposes",
+            "Yes, error boundaries catch Suspense errors",
+            "Yes, but only in production builds",
+            "No, Suspense replaces error boundaries"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
 ]
