@@ -5697,12 +5697,12 @@ export const mockQuestions: Question[] = [
         "id": 487,
         "question": "What is difference between prefetching and preloading?",
         "options": [
-            "Preload works in background, prefetch blocks rendering components",
-            "Prefetch has high priority, preload has low priority",
-            "Preload for critical current resources, prefetch for future needs",
-            "Prefetch for same page, preload for next page"
+            "Prefetching loads data, preloading components",
+            "Prefetching automatic, preloading is manual",
+            "Prefetching blocks render, preloading async",
+            "Prefetching and preloading are identical"
         ],
-        "correctOption": 2,
+        "correctOption": 0,
         "points": 30
     },
     {
@@ -5710,23 +5710,23 @@ export const mockQuestions: Question[] = [
         "question": "Can you prefetch queries with different parameters?",
         "options": [
             "No, prefetching works with static queries",
-            "Yes, but only primitive types work",
-            "No, parameters must match original exactly",
             "Yes, by passing different keys and functions",
+            "No, parameters must match original exactly",
+            "Yes, but only primitive types work"
         ],
-        "correctOption": 3,
+        "correctOption": 1,
         "points": 20
     },
     {
         "id": 489,
         "question": "What happens to prefetched data that goes unused?",
         "options": [
-            "Data immediately deleted after prefetch completes",
             "Data remains cached until cacheTime expires",
+            "Data immediately deleted after prefetch completes",
             "Data causes memory leaks if unused",
             "Data automatically converts to localStorage"
         ],
-        "correctOption": 1,
+        "correctOption": 0,
         "points": 30
     },
     {
@@ -5743,14 +5743,14 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 491,
-        "question": "What is the main problem with prefetching too many resources?",
+        "question": "What is potential downside of excessive prefetching?",
         "options": [
-            "Increases code complexity without benefits",
-            "Makes React Query cache completely unusable",
-            "Wastes user bandwidth downloading unused data",
-            "Prevents normal useQuery hooks from working"
+            "Improves performance increasing code complexity",
+            "Loads unnecessary data wasting bandwidth",
+            "Makes React Query cache unusable",
+            "Prevents normal useQuery hooks working"
         ],
-        "correctOption": 2,
+        "correctOption": 1,
         "points": 30
     },
     {
@@ -5782,11 +5782,11 @@ export const mockQuestions: Question[] = [
         "question": "What is relationship between prefetching and staleTime?",
         "options": [
             "Prefetching and staleTime work independently",
-            "Prefetching ignores staleTime always refetches",
-            "Prefetching automatically sets staleTime zero",
             "Prefetched data respects staleTime settings",
+            "Prefetching ignores staleTime always refetches",
+            "Prefetching automatically sets staleTime zero"
         ],
-        "correctOption": 3,
+        "correctOption": 1,
         "points": 30
     },
     {
@@ -5847,6 +5847,18 @@ export const mockQuestions: Question[] = [
             "Page waits for prefetch operation completion"
         ],
         "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 500,
+        "question": "Should you prefetch all pages in large datasets?",
+        "options": [
+            "Yes, but only for datasets under pages",
+            "No, prefetching only works for singles",
+            "Yes, prefetching all pages improves performance",
+            "No, this wastes bandwidth and memory"
+        ],
+        "correctOption": 3,
         "points": 30
     },
     {
