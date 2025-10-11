@@ -9086,5 +9086,365 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20
-    }
+    },
+    {
+        "id": 779,
+        "question": "How do you create a dynamic route in Next.js App Router?",
+        "options": [
+            "Using :param syntax in route configuration",
+            "Using [param] bracket folder naming convention",
+            "Using {param} curly brace in file names",
+            "Using <param> angle bracket folder structure"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 780,
+        "question": "How do you access dynamic route parameters in page component?",
+        "options": [
+            "Using useParams() hook from React Router",
+            "Using getParams() helper function from Next",
+            "Through params prop passed to component",
+            "Through query prop in component props"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 781,
+        "question": "What is the structure for dynamic route folder?",
+        "options": [
+            "app/posts/:id/page.js for single parameter route",
+            "app/posts/{id}/page.js for single parameter route",
+            "app/posts/<id>/page.js for single parameter route",
+            "app/posts/[id]/page.js for single parameter route"
+        ],
+        "correctOption": 3,
+        "points": 10
+    },
+    {
+        "id": 782,
+        "question": "How do you create catch-all dynamic routes?",
+        "options": [
+            "Using [...slug] bracket folder naming",
+            "Using [*slug] asterisk for catch-all",
+            "Using [slug*] suffix for multiple",
+            "Using [slug...] suffix for paths"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 783,
+        "question": "What does [...slug] match in routes?",
+        "options": [
+            "Only single segment in the URL",
+            "All segments after the base path",
+            "Exactly two segments in the path",
+            "Optional single segment in URL"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 784,
+        "question": "How do you create optional catch-all routes?",
+        "options": [
+            "Using [...slug]? with question mark suffix",
+            "Using [slug...]? optional bracket syntax",
+            "Using [[...slug]] double bracket notation",
+            "Using [...slug|optional] pipe notation"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 785,
+        "question": "What is difference between [...slug] and [[...slug]]?",
+        "options": [
+            "[...slug] matches base route automatically",
+            "[[...slug]] matches base route too",
+            "[[...slug]] requires minimum two segments",
+            "[...slug] matches optional parameters"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 786,
+        "question": "How do you access catch-all route parameters?",
+        "options": [
+            "params.slug returns array of segments",
+            "params.slug returns single string value",
+            "params.slug returns object with keys",
+            "params.slug returns comma-separated string"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 787,
+        "question": "Can you have multiple dynamic segments in one route?",
+        "options": [
+            "No, only one dynamic segment allowed",
+            "Yes, but maximum three segments only",
+            "No, requires separate route definitions",
+            "Yes, like [category]/[id]/page.js structure"
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 788,
+        "question": "How do you generate static paths for dynamic routes?",
+        "options": [
+            "Using getStaticPaths in page component",
+            "Using generateMetadata exported function",
+            "Using generateStaticParams exported function",
+            "Using getServerSideProps for paths"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 789,
+        "question": "What does generateStaticParams return for dynamic routes?",
+        "options": [
+            "Array of parameter objects for routes",
+            "Object with route configuration settings",
+            "String array of valid route paths",
+            "Promise resolving to route mappings"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 790,
+        "question": "When is generateStaticParams executed in Next.js?",
+        "options": [
+            "During runtime when user visits route",
+            "During build time for static generation",
+            "After page loads in browser client",
+            "Before server starts in development"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 791,
+        "question": "Can dynamic routes be Server Components by default?",
+        "options": [
+            "No, they must be Client Components",
+            "Yes, unless marked with 'use client'",
+            "No, dynamic routes always run client-side",
+            "Yes, but only for static generation"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 792,
+        "question": "How do you handle 404 for invalid dynamic routes?",
+        "options": [
+            "Using custom error.js in route folder",
+            "Using not-found.js file in route folder",
+            "Using notFound() function from next/navigation",
+            "Using return null in page component"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 793,
+        "question": "What is the priority order for route matching?",
+        "options": [
+            "Dynamic routes match before static routes",
+            "Catch-all routes have highest priority always",
+            "Static routes match before dynamic routes",
+            "All routes have equal matching priority"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 794,
+        "question": "Can you use params in layout components?",
+        "options": [
+            "No, params only available in pages",
+            "Yes, params passed to layout components",
+            "No, layouts don't receive any props",
+            "Yes, but only for root layouts"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 795,
+        "question": "How do you create nested dynamic routes?",
+        "options": [
+            "Using separate configuration file for nesting",
+            "Using [param1]/[param2] folder structure nesting",
+            "Using nested brackets like [[param1][param2]]",
+            "Using comma-separated params in single bracket"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 796,
+        "question": "What happens when dynamic route doesn't match?",
+        "options": [
+            "Shows custom not-found.js component UI",
+            "Redirects to home page automatically",
+            "Shows blank screen without errors",
+            "Throws 500 server error immediately"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 797,
+        "question": "Can you use searchParams with dynamic routes?",
+        "options": [
+            "Yes, alongside params in page props",
+            "No, params and searchParams conflict",
+            "Yes, but only in Client Components",
+            "No, use useSearchParams hook instead"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 798,
+        "question": "How do you validate dynamic route parameters?",
+        "options": [
+            "Using validateParams in page component",
+            "Using Zod schema in route handler",
+            "In page component before fetching data",
+            "Using middleware for parameter validation"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 799,
+        "question": "What is dynamicParams configuration option for?",
+        "options": [
+            "Controls behavior for non-generated params",
+            "Enables dynamic parameter validation rules",
+            "Sets maximum number of dynamic segments",
+            "Configures parameter encoding format"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 800,
+        "question": "Can you use dynamic routes with parallel routes?",
+        "options": [
+            "No, parallel routes cannot be dynamic",
+            "Yes, but requires special configuration",
+            "No, they serve different purposes entirely",
+            "Yes, using @folder/[param] structure combination"
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 801,
+        "question": "How do you generate metadata for dynamic routes?",
+        "options": [
+            "Using metadata object with dynamic values",
+            "Using generateMetadata function with params",
+            "Using getMetadata exported async function",
+            "Using metadataParams in page configuration"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 802,
+        "question": "What does revalidate option do for dynamic routes?",
+        "options": [
+            "Validates parameter format before rendering",
+            "Controls ISR regeneration time interval",
+            "Revalidates user authentication tokens",
+            "Checks parameter values against schema"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 803,
+        "question": "Can catch-all routes coexist with static routes?",
+        "options": [
+            "Yes, static routes take higher priority",
+            "No, catch-all overrides all other routes",
+            "Yes, but requires manual configuration",
+            "No, they cause routing conflicts always"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 804,
+        "question": "How do you handle loading states for dynamic routes?",
+        "options": [
+            "Using loading.js in the route folder",
+            "Using isLoading prop in page component",
+            "Using Suspense boundary around page",
+            "Using useLoading hook in component"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 805,
+        "question": "What is the difference between params and searchParams?",
+        "options": [
+            "params from URL path, searchParams from query",
+            "params for client, searchParams for server",
+            "params are strings, searchParams are objects",
+            "params are optional, searchParams required"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 806,
+        "question": "Can you use dynamic routes with route groups?",
+        "options": [
+            "No, route groups don't support dynamics",
+            "Yes, like (group)/[param]/page.js structure",
+            "Yes, but only with catch-all routes",
+            "No, they have different purposes entirely"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 807,
+        "question": "How do you redirect from dynamic route based on param?",
+        "options": [
+            "Using redirect() function from next/navigation",
+            "Using return redirect in page component",
+            "Using Router.push in useEffect hook",
+            "Using <Redirect> component in JSX"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 808,
+        "question": "What happens with special characters in dynamic params?",
+        "options": [
+            "Next.js URL encodes them automatically",
+            "They cause routing errors immediately",
+            "They are stripped from parameters",
+            "They must be manually encoded first"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
 ]
