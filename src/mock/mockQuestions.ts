@@ -9447,4 +9447,364 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 30
     },
+    {
+        "id": 809,
+        "question": "How do you generate dynamic metadata in Next.js pages?",
+        "options": [
+            "Export generateMetadata function from page",
+            "Use metadata object with dynamic values",
+            "Call setMetadata hook in component body",
+            "Import getMetadata from next/metadata"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 810,
+        "question": "What parameters does generateMetadata function receive?",
+        "options": [
+            "Only params object from route segments",
+            "Only searchParams from URL query string",
+            "Both params and searchParams as objects",
+            "Only request object with full details"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 811,
+        "question": "Can generateMetadata be an async function?",
+        "options": [
+            "No, metadata must be synchronous always",
+            "Yes, it can fetch data asynchronously",
+            "No, async causes hydration errors",
+            "Yes, but only in production mode"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 812,
+        "question": "What does generateMetadata function return?",
+        "options": [
+            "Promise resolving to metadata object",
+            "String containing page title only",
+            "Array of meta tags for head",
+            "Metadata object with title and description"
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 813,
+        "question": "How do you set dynamic Open Graph images?",
+        "options": [
+            "Using openGraph.images array in metadata",
+            "Using og:image meta tag in head",
+            "Using setOGImage function from Next",
+            "Using dynamicOG property in config"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 814,
+        "question": "Can you access parent metadata in generateMetadata?",
+        "options": [
+            "Yes, but only in root layout",
+            "No, each route generates independently",
+            "Yes, through third parameter parent",
+            "No, metadata doesn't support inheritance"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 815,
+        "question": "What is the purpose of parent parameter?",
+        "options": [
+            "Access parent component props directly",
+            "Get metadata from parent route segments",
+            "Reference parent layout configuration",
+            "Inherit styles from parent components"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 816,
+        "question": "How do you set dynamic page title with params?",
+        "options": [
+            "Using title property with template string",
+            "Using setTitle hook in component body",
+            "Using dynamicTitle in route config",
+            "Using <title> tag in page JSX"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 817,
+        "question": "Can you fetch data inside generateMetadata function?",
+        "options": [
+            "Yes, using async/await for API calls",
+            "No, fetching must happen in page",
+            "Yes, but only from static files",
+            "No, metadata must be synchronous"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 818,
+        "question": "What happens when generateMetadata throws an error?",
+        "options": [
+            "Shows custom error page to user",
+            "Falls back to static metadata object",
+            "Page renders without any metadata",
+            "Next.js shows 500 error page"
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 819,
+        "question": "How do you set dynamic canonical URLs?",
+        "options": [
+            "Using alternates.canonical in metadata",
+            "Using <link rel='canonical'> in JSX",
+            "Using setCanonical from next/head",
+            "Using canonical property in config"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 820,
+        "question": "Can static metadata and generateMetadata coexist?",
+        "options": [
+            "Yes, but static takes priority always",
+            "No, only one method allowed per route",
+            "Yes, but generateMetadata takes priority",
+            "No, Next.js throws build error"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 821,
+        "question": "How do you set different metadata per locale?",
+        "options": [
+            "Check locale in generateMetadata params",
+            "Use separate metadata per language file",
+            "Import translations in metadata object",
+            "Use i18n config in next.config.js"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 822,
+        "question": "What is title.template used for in metadata?",
+        "options": [
+            "Defines title format for child routes",
+            "Creates dynamic title from database",
+            "Validates title length and format",
+            "Generates SEO-friendly title strings"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 823,
+        "question": "How do you override parent title template?",
+        "options": [
+            "Use title.default in child metadata",
+            "Use title.absolute in child metadata",
+            "Use title.override in child metadata",
+            "Use title.custom in child metadata"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 824,
+        "question": "Can you use environment variables in generateMetadata?",
+        "options": [
+            "No, env variables unavailable there",
+            "Yes, using process.env like usual",
+            "No, only in page components",
+            "Yes, but only NEXT_PUBLIC_ variables"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 825,
+        "question": "How do you set dynamic Twitter Card metadata?",
+        "options": [
+            "Using <meta> tags in page JSX",
+            "Using twitter property in metadata object",
+            "Using setTwitterCard from next/head",
+            "Using socialMedia.twitter in config"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 826,
+        "question": "What does metadataBase property define?",
+        "options": [
+            "Base URL for relative metadata URLs",
+            "Default metadata for all pages",
+            "Primary language for content",
+            "Root directory for metadata files"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 827,
+        "question": "Can you conditionally return different metadata?",
+        "options": [
+            "Yes, based on params or conditions",
+            "No, metadata must be static always",
+            "Yes, but only in development mode",
+            "No, causes hydration mismatches"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 828,
+        "question": "How do you set dynamic meta description?",
+        "options": [
+            "Using description property in metadata",
+            "Using <meta name='description'> tag",
+            "Using setDescription hook in component",
+            "Using desc property in route config"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 829,
+        "question": "What is robots property used for in metadata?",
+        "options": [
+            "Control search engine crawling behavior",
+            "Validate bot traffic to website",
+            "Generate robots.txt file automatically",
+            "Block malicious bots from site"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 830,
+        "question": "Can you merge parent and child metadata objects?",
+        "options": [
+            "No, child completely overrides parent",
+            "Yes, Next.js merges them automatically",
+            "Yes, but requires manual spread operator",
+            "No, each route is independent"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 831,
+        "question": "How do you set dynamic alternate language URLs?",
+        "options": [
+            "Using alternates.languages in metadata",
+            "Using <link hreflang> tags in JSX",
+            "Using i18n config in next.config",
+            "Using setLanguages from next/head"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 832,
+        "question": "What happens when both metadata and generateMetadata exist?",
+        "options": [
+            "Metadata object takes priority always",
+            "Next.js throws compilation error",
+            "generateMetadata takes priority",
+            "Both merge into single metadata"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 833,
+        "question": "Can you use React hooks in generateMetadata?",
+        "options": [
+            "Yes, all React hooks work normally",
+            "No, it's not a React component",
+            "Yes, but only useState and useEffect",
+            "No, causes server-side errors"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 834,
+        "question": "How do you set dynamic viewport metadata?",
+        "options": [
+            "Using viewport property in metadata",
+            "Using <meta viewport> tag in JSX",
+            "Using setViewport from next/head",
+            "Using screen property in config"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 835,
+        "question": "What is icons property used for in metadata?",
+        "options": [
+            "Generate icon sprites automatically",
+            "Define favicon and app icons paths",
+            "Optimize icon loading performance",
+            "Convert images to icon formats"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 836,
+        "question": "Can you cache results of generateMetadata function?",
+        "options": [
+            "No, metadata generates on every request",
+            "Yes, but only in production builds",
+            "No, caching causes stale metadata",
+            "Yes, Next.js caches automatically"
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 837,
+        "question": "How do you set dynamic author metadata?",
+        "options": [
+            "Using <meta name='author'> tag",
+            "Using authors array in metadata object",
+            "Using setAuthor hook in component",
+            "Using author property in config"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 838,
+        "question": "What is manifest property for in metadata?",
+        "options": [
+            "Link to web app manifest file",
+            "Generate manifest.json automatically",
+            "Configure PWA settings directly",
+            "Define app configuration manifest"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
 ]
