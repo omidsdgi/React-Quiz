@@ -10483,12 +10483,12 @@ export const mockQuestions: Question[] = [
         "id": 895,
         "question": "How do you invalidate Router Cache?",
         "options": [
-            "Use router.refresh() from next/navigation",
+            "Use resetRouter from next/router",
             "Use clearRouter from next/cache",
             "Use invalidateCache on router object",
-            "Use resetRouter from next/router"
+            "Use router.refresh() from next/navigation",
         ],
-        "correctOption": 0,
+        "correctOption": 3,
         "points": 20
     },
     {
@@ -10526,5 +10526,245 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20
+    },
+    {
+        "id": 899,
+        "question": "Can you use multiple tags per fetch?",
+        "options": [
+            "Yes, pass array of tag strings",
+            "No, only one tag allowed per fetch",
+            "Yes, but maximum three tags",
+            "No, causes cache conflicts"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 900,
+        "question": "What is unstable_cache function for?",
+        "options": [
+            "Caching function results with custom keys",
+            "Clearing unstable cache entries manually",
+            "Validating cache before using data",
+            "Debugging cache issues in development"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 901,
+        "question": "How does unstable_cache differ from fetch cache?",
+        "options": [
+            "Works with non-fetch async functions",
+            "Only caches fetch API requests",
+            "Stores data in browser only",
+            "Requires manual cache invalidation"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 902,
+        "question": "What does cache: 'reload' do in fetch?",
+        "options": [
+            "Reloads page after fetching data",
+            "Fetches fresh data and updates cache",
+            "Clears cache before each request",
+            "Revalidates cache before using it"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 903,
+        "question": "Can you cache POST requests in Next.js?",
+        "options": [
+            "No, only GET requests are cached",
+            "Yes, all HTTP methods cache automatically",
+            "No, POST always bypasses cache",
+            "Yes, with special cache configuration"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 904,
+        "question": "What happens when cache becomes stale?",
+        "options": [
+            "Cache deletes automatically from storage",
+            "Stale data served, revalidation happens background",
+            "Request blocks until fresh data fetched",
+            "Error thrown to user immediately"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 905,
+        "question": "How do you disable all caching?",
+        "options": [
+            "Set export const dynamic = 'force-dynamic'",
+            "Use noCache: true in config",
+            "Add disableCache to next.config.js",
+            "Use cache: false in all fetches"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 906,
+        "question": "What is the purpose of cache headers?",
+        "options": [
+            "Control browser and CDN caching behavior",
+            "Define cache storage location path",
+            "Set maximum cache entry size",
+            "Configure cache encryption settings"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 907,
+        "question": "Can you cache third-party API responses?",
+        "options": [
+            "Yes, using fetch with cache options",
+            "No, only internal APIs cache",
+            "Yes, but requires proxy setup",
+            "No, third-party blocks caching"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 908,
+        "question": "What does fetch next.revalidate: false do?",
+        "options": [
+            "Disables caching for this request",
+            "Caches indefinitely until rebuild",
+            "Validates data before caching it",
+            "Revalidates on every request"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 909,
+        "question": "How does caching affect dynamic routes?",
+        "options": [
+            "Each param value cached separately",
+            "All params share single cache",
+            "Dynamic routes never use cache",
+            "Cache only works with static params"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 910,
+        "question": "What is the benefit of Request Memoization?",
+        "options": [
+            "Eliminates duplicate requests per render",
+            "Caches requests across page reloads",
+            "Reduces server memory usage significantly",
+            "Speeds up network request timing"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 911,
+        "question": "Can you cache errors in Next.js?",
+        "options": [
+            "No, only successful responses cache",
+            "Yes, error responses can cache",
+            "No, errors bypass cache completely",
+            "Yes, but only 404 errors"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 912,
+        "question": "What does cache: 'no-cache' do in fetch?",
+        "options": [
+            "Skips cache completely for request",
+            "Revalidates cache before using data",
+            "Caches only in memory temporarily",
+            "Disables browser cache for request"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 913,
+        "question": "How do you check if data is cached?",
+        "options": [
+            "Check response headers for cache status",
+            "Use isCached from next/cache",
+            "Check build output logs only",
+            "Use cacheCheck helper function"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 914,
+        "question": "What is the cache hierarchy in Next.js?",
+        "options": [
+            "Request Memo → Data Cache → Full Route",
+            "Full Route → Data Cache → Request Memo",
+            "Data Cache → Request Memo → Full Route",
+            "All caches work independently"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 915,
+        "question": "Can you customize cache storage location?",
+        "options": [
+            "No, Next.js controls storage internally",
+            "Yes, using cacheDirectory in config",
+            "No, cache uses fixed .next folder",
+            "Yes, with custom cache adapter"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 916,
+        "question": "What happens to cache on deployment?",
+        "options": [
+            "Cache persists across deployments automatically",
+            "Cache clears on every deployment",
+            "Cache transfers to new deployment",
+            "Cache rebuilds during deployment"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 917,
+        "question": "How do you cache database queries?",
+        "options": [
+            "Using unstable_cache around query function",
+            "Using cacheQuery from database library",
+            "Using queryCache in database config",
+            "Database queries auto-cache by default"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 918,
+        "question": "What is stale-while-revalidate strategy?",
+        "options": [
+            "Serve stale data while fetching fresh",
+            "Block request until validation completes",
+            "Serve fresh data or nothing",
+            "Validate then serve cached data"
+        ],
+        "correctOption": 0,
+        "points": 30
     },
 ]
