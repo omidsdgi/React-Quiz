@@ -10287,4 +10287,244 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 20
     },
+    {
+        "id": 879,
+        "question": "What is the default caching behavior in Next.js?",
+        "options": [
+            "No caching by default for requests",
+            "Aggressive caching for all requests automatically",
+            "Caching only for static assets files",
+            "Manual caching configuration required always"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 880,
+        "question": "Which layers does Next.js cache data?",
+        "options": [
+            "Request Memoization, Data Cache, Full Route",
+            "Browser Cache, Server Cache, CDN Cache",
+            "Memory Cache, Disk Cache, Network Cache",
+            "Component Cache, API Cache, Image Cache"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 881,
+        "question": "What is Request Memoization in Next.js?",
+        "options": [
+            "Caching duplicate requests during single render",
+            "Storing requests in browser localStorage",
+            "Memoizing component render results only",
+            "Caching API responses across pages"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 882,
+        "question": "How long does Request Memoization last?",
+        "options": [
+            "Permanently until manual cache clear",
+            "Across entire user session duration",
+            "Only during single server render",
+            "For 60 seconds after request"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 883,
+        "question": "What is the Data Cache in Next.js?",
+        "options": [
+            "Temporary memory cache for components",
+            "Persistent storage for fetch requests",
+            "Browser cache for static assets",
+            "Database query result caching"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 884,
+        "question": "How do you opt out of Data Cache?",
+        "options": [
+            "Using cache: 'no-store' in fetch",
+            "Using noCache: true in config",
+            "Using disableCache from next/cache",
+            "Using skipCache property in request"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 885,
+        "question": "What does Full Route Cache store?",
+        "options": [
+            "User session data per route",
+            "API responses for route handlers",
+            "Only JavaScript bundles for routes",
+            "Complete rendered HTML and RSC payload",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 886,
+        "question": "When is Full Route Cache created?",
+        "options": [
+            "During build time for static routes",
+            "On first user request dynamically",
+            "After page loads in browser",
+            "When user navigates between pages"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 887,
+        "question": "What does cache: 'force-cache' do in fetch?",
+        "options": [
+            "Clears cache before fetching data",
+            "Uses cached data or fetches fresh",
+            "Forces new fetch ignoring cache",
+            "Validates cache before using it"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 888,
+        "question": "What does cache: 'no-store' do in fetch?",
+        "options": [
+            "Stores data without caching metadata",
+            "Caches only on client not server",
+            "Always fetches fresh data skipping cache",
+            "Temporarily stores data in memory"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 889,
+        "question": "How do you set custom cache duration?",
+        "options": [
+            "Using next.revalidate option in fetch",
+            "Using cacheTime property in request",
+            "Using duration from next/cache",
+            "Using ttl property in config"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 890,
+        "question": "What does revalidate: 3600 mean?",
+        "options": [
+            "Cache expires after 3600 milliseconds",
+            "Cache revalidates every 3600 seconds",
+            "Cache stores 3600 entries maximum",
+            "Cache clears after 3600 requests"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 891,
+        "question": "Can you revalidate cache programmatically?",
+        "options": [
+            "Yes, using revalidatePath or revalidateTag",
+            "No, only automatic revalidation works",
+            "Yes, using clearCache from next/cache",
+            "No, requires server restart always"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 892,
+        "question": "What is the Router Cache in Next.js?",
+        "options": [
+            "Server-side cache for route handlers",
+            "Client-side cache for route segments",
+            "Browser cache for router library",
+            "Memory cache for navigation history"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 893,
+        "question": "How long does Router Cache persist?",
+        "options": [
+            "Permanently until browser closes completely",
+            "For current session or time-based",
+            "Only during single page navigation",
+            "Until user clicks refresh button"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 894,
+        "question": "What happens when you navigate back in Next.js?",
+        "options": [
+            "Page always fetches fresh data",
+            "Page reloads from server completely",
+            "Router Cache provides instant navigation",
+            "Browser cache serves the page"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 895,
+        "question": "How do you invalidate Router Cache?",
+        "options": [
+            "Use router.refresh() from next/navigation",
+            "Use clearRouter from next/cache",
+            "Use invalidateCache on router object",
+            "Use resetRouter from next/router"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 896,
+        "question": "What is cache tagging used for?",
+        "options": [
+            "Grouping related cache entries together",
+            "Marking cache priority levels",
+            "Labeling cache with metadata",
+            "Organizing cache by file type"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 897,
+        "question": "How do you add tags to fetch cache?",
+        "options": [
+            "Using cacheTag property in request",
+            "Using tags attribute on function",
+            "Using next.tags array in fetch",
+            "Using setTag from next/cache",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 898,
+        "question": "What does revalidateTag function do?",
+        "options": [
+            "Validates tag format and syntax",
+            "Revalidates all cache entries with tag",
+            "Tags cache for future revalidation",
+            "Removes specific tags from cache"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
 ]
