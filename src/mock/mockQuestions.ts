@@ -10047,5 +10047,244 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 30
     },
-   
+    {
+        "id": 859,
+        "question": "What happens during ISR regeneration?",
+        "options": [
+            "Old page shown while new generates",
+            "Page shows loading state to users",
+            "Users wait for regeneration completion",
+            "Page returns 503 error temporarily"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 860,
+        "question": "How do you revalidate specific pages only?",
+        "options": [
+            "Using revalidatePath with page path",
+            "Using revalidateAll with page filter",
+            "Using updatePage from next/cache",
+            "Using refreshPage with page ID"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 861,
+        "question": "What is cache tagging in Next.js?",
+        "options": [
+            "Labeling cache entries for targeted revalidation",
+            "Tagging pages with SEO metadata",
+            "Marking components for code splitting",
+            "Organizing routes in folder structure"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 862,
+        "question": "How do you add cache tags?",
+        "options": [
+            "Using tags option in fetch requests",
+            "Using cacheTag property in config",
+            "Using setTag from next/cache",
+            "Using tag attribute on components"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 863,
+        "question": "What does revalidateTag function do?",
+        "options": [
+            "Validates tag format and syntax",
+            "Revalidates all pages with that tag",
+            "Tags pages for future revalidation",
+            "Removes tags from cache entries"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 864,
+        "question": "Can you use headers in static rendering?",
+        "options": [
+            "Yes, headers available in static pages",
+            "No, forces switch to dynamic rendering",
+            "Yes, but only response headers",
+            "No, throws compilation errors"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 865,
+        "question": "What is the purpose of unstable_cache?",
+        "options": [
+            "Cache function results with custom logic",
+            "Clear unstable cache entries manually",
+            "Validate cache before using data",
+            "Debug caching issues in development"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 866,
+        "question": "How does static rendering improve performance?",
+        "options": [
+            "Reduces server load with pre-rendering",
+            "Eliminates JavaScript from pages",
+            "Compresses HTML automatically",
+            "Removes unused CSS from bundles"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 867,
+        "question": "What is the trade-off of dynamic rendering?",
+        "options": [
+            "Increases build time significantly",
+            "Reduces SEO ranking potential",
+            "Slower response time per request",
+            "Larger JavaScript bundle sizes"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 868,
+        "question": "Can you use searchParams in static pages?",
+        "options": [
+            "Yes, searchParams work in static",
+            "No, forces dynamic rendering mode",
+            "Yes, but only with generateStaticParams",
+            "No, causes build errors"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 869,
+        "question": "What does export const dynamic = 'error' do?",
+        "options": [
+            "Throws error if dynamic rendering needed",
+            "Enables error boundaries for page",
+            "Catches dynamic errors automatically",
+            "Shows error page to users"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 870,
+        "question": "How do you check rendering type in development?",
+        "options": [
+            "Check console logs during build",
+            "Use Next.js DevTools browser extension",
+            "Check page source HTML comments",
+            "Look at network request timing"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 871,
+        "question": "What is partial pre-rendering in Next.js?",
+        "options": [
+            "Rendering only visible viewport content",
+            "Mix static shell with dynamic content",
+            "Pre-rendering half of page components",
+            "Building pages in multiple stages"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 872,
+        "question": "Can you use ISR with dynamic routes?",
+        "options": [
+            "Yes, with generateStaticParams and revalidate",
+            "No, dynamic routes always render dynamically",
+            "Yes, but only with catch-all routes",
+            "No, causes build configuration errors"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 873,
+        "question": "What happens when revalidate time expires?",
+        "options": [
+            "Page deletes from cache immediately",
+            "Next request triggers background regeneration",
+            "Users see loading state always",
+            "Server returns 404 error"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 874,
+        "question": "How do you opt out of caching?",
+        "options": [
+            "Use cache: 'no-store' in fetch",
+            "Use noCache property in config",
+            "Use disableCache from next/cache",
+            "Use cache: false in request"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 875,
+        "question": "What is the benefit of static over dynamic?",
+        "options": [
+            "Faster response time and lower costs",
+            "Better personalization per user",
+            "More flexibility with real-time data",
+            "Easier authentication implementation"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 876,
+        "question": "Can you use dynamic rendering in Server Components?",
+        "options": [
+            "No, Server Components always static",
+            "Yes, Server Components support both modes",
+            "No, only Client Components support it",
+            "Yes, but loses Server Component benefits"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 877,
+        "question": "What does fetch cache option 'force-cache' do?",
+        "options": [
+            "Forces caching even for dynamic data",
+            "Clears cache before fetching data",
+            "Validates cache before using it",
+            "Forces fresh fetch ignoring cache"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 878,
+        "question": "How do you debug rendering issues?",
+        "options": [
+            "Check build output and page indicators",
+            "Use debugRender from next/debug",
+            "Add debug: true to config",
+            "Enable verbose mode in browser"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
 ]
