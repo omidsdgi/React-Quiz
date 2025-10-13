@@ -11007,4 +11007,244 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 20
     },
+    {
+        "id": 939,
+        "question": "Can Server Components access browser APIs?",
+        "options": [
+            "Yes, all browser APIs available",
+            "No, they run on server only",
+            "Yes, but only window object",
+            "No, unless using polyfills"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 940,
+        "question": "Can Client Components fetch data on server?",
+        "options": [
+            "No, Client Components always fetch client-side",
+            "Yes, during initial server render only",
+            "No, fetching requires Server Components",
+            "Yes, using special fetch configuration"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 941,
+        "question": "What is the recommended composition strategy?",
+        "options": [
+            "Use Client Components for everything",
+            "Use Server Components by default",
+            "Mix both equally throughout app",
+            "Separate Server and Client completely"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 942,
+        "question": "How do you share state between Server and Client?",
+        "options": [
+            "Pass state through props boundary",
+            "Use shared context provider",
+            "Store in global variable",
+            "Cannot share state between them"
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 943,
+        "question": "What is component tree colocation in RSC?",
+        "options": [
+            "Placing related Server and Client together",
+            "Storing components in same folder",
+            "Rendering components at same time",
+            "Sharing component logic between types"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 944,
+        "question": "Can you conditionally render Server Components?",
+        "options": [
+            "Yes, using standard conditional logic",
+            "No, Server Components always render",
+            "Yes, but only in Client Components",
+            "No, causes streaming errors"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 945,
+        "question": "What is the lifting content pattern in RSC?",
+        "options": [
+            "Moving Client Components higher in tree",
+            "Lifting Server Components into Client slots",
+            "Hoisting state to parent components",
+            "Promoting components to root level"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 946,
+        "question": "How does RSC improve initial page load?",
+        "options": [
+            "Reduces JavaScript sent to browser",
+            "Compresses HTML more efficiently",
+            "Preloads all components upfront",
+            "Eliminates CSS from bundle"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 947,
+        "question": "What is the component payload in RSC?",
+        "options": [
+            "Serialized component tree from server",
+            "JavaScript bundle for components",
+            "Component props and state data",
+            "CSS styles for components"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 948,
+        "question": "Can you use hooks in Server Components?",
+        "options": [
+            "Yes, all React hooks work",
+            "No, hooks are Client-only features",
+            "Yes, but only useEffect hook",
+            "No, unless using async hooks"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 949,
+        "question": "What is the main benefit of hybrid composition?",
+        "options": [
+            "Simplifies component architecture design",
+            "Optimizes both performance and interactivity",
+            "Eliminates need for state management",
+            "Reduces total number of components"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 950,
+        "question": "How do you pass event handlers to Server Components?",
+        "options": [
+            "Wrap handler in serializable format",
+            "Use special serverAction helper function",
+            "Cannot pass handlers to Server Components",
+            "Pass through context provider instead"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 951,
+        "question": "What is the component split strategy in RSC?",
+        "options": [
+            "Separating interactive from static parts",
+            "Splitting large files into smaller",
+            "Dividing components by route segments",
+            "Breaking components into atoms"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 952,
+        "question": "Can Server Components re-render without page reload?",
+        "options": [
+            "Yes, through server actions or navigation",
+            "No, requires full page refresh",
+            "Yes, but only with client state",
+            "No, Server Components are static"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 953,
+        "question": "What is the recommended pattern for forms in RSC?",
+        "options": [
+            "Use Client Component for entire form",
+            "Use Server Component with Server Actions",
+            "Use Client wrapper with Server children",
+            "Use only Server Components throughout"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 954,
+        "question": "How does composition affect Time to Interactive?",
+        "options": [
+            "More Server Components reduce TTI time",
+            "More Client Components reduce TTI time",
+            "Composition has no effect on TTI",
+            "Only static components affect TTI"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 955,
+        "question": "What is the main challenge of RSC composition?",
+        "options": [
+            "Deciding component placement in tree",
+            "Managing component file organization",
+            "Handling CSS-in-JS styling",
+            "Debugging component render issues"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 956,
+        "question": "Can you use third-party Client libraries in Server Components?",
+        "options": [
+            "Yes, with special import syntax",
+            "No, they violate server boundary",
+            "Yes, but only pure libraries",
+            "No, unless they support RSC"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 957,
+        "question": "What is the wrapper pattern in RSC?",
+        "options": [
+            "Client Component wrapping Server children",
+            "Server Component wrapping Client children",
+            "HOC pattern for component composition",
+            "Layout wrapping all page components"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 958,
+        "question": "How do you optimize the dependency tree?",
+        "options": [
+            "Minimize Client Components and push down",
+            "Use only Server Components throughout",
+            "Flatten tree structure completely",
+            "Increase component nesting depth"
+        ],
+        "correctOption": 0,
+        "points": 30
+    }
 ]
