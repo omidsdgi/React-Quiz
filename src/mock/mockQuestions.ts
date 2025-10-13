@@ -10767,4 +10767,244 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 30
     },
+    {
+        "id": 919,
+        "question": "What is knitting in React Server Components?",
+        "options": [
+            "Optimizing component bundle size automatically",
+            "Combining Server and Client Components together",
+            "Connecting components with shared state",
+            "Merging multiple layouts into one"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 920,
+        "question": "What is the traditional React rendering paradigm?",
+        "options": [
+            "Server renders HTML then client hydrates",
+            "Everything renders on client side only",
+            "Server sends static HTML without JavaScript",
+            "Client requests data then renders components"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 921,
+        "question": "How does RSC paradigm differ from traditional React?",
+        "options": [
+            "RSC eliminates client-side JavaScript completely",
+            "RSC only works with static generation",
+            "RSC allows server and client rendering",
+            "RSC requires full page reloads"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 922,
+        "question": "What is the dependency tree in RSC?",
+        "options": [
+            "Tree showing component render order visually",
+            "Hierarchy of Server and Client Components",
+            "NPM package dependencies for project",
+            "Database relationship structure diagram"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 923,
+        "question": "Can Server Components import Client Components?",
+        "options": [
+            "Yes, Server can import Client Components",
+            "No, only Client imports Server allowed",
+            "Yes, but causes hydration errors",
+            "No, they must be separate"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 924,
+        "question": "Can Client Components import Server Components?",
+        "options": [
+            "Yes, with special import syntax",
+            "No, it breaks component boundary rules",
+            "Yes, but only in development",
+            "No, causes infinite render loops"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 925,
+        "question": "What is hybrid composition in Next.js?",
+        "options": [
+            "Mixing Server and Client Components strategically",
+            "Combining multiple rendering strategies together",
+            "Using both React and Vue",
+            "Merging CSS and JavaScript files"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 926,
+        "question": "How can Client Components access Server Components?",
+        "options": [
+            "Import them directly using standard import",
+            "Via context API shared between both",
+            "Through props as children or slots",
+            "Using useServer hook from React",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 927,
+        "question": "What is the children pattern in RSC composition?",
+        "options": [
+            "Inheriting props from parent components",
+            "Nesting components in folder structure",
+            "Passing Server Components as children prop",
+            "Creating child routes in routing",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 928,
+        "question": "Why use children pattern over direct import?",
+        "options": [
+            "Allows Client wrapping Server Components safely",
+            "Improves performance by lazy loading",
+            "Reduces bundle size significantly always",
+            "Enables better TypeScript type checking"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 929,
+        "question": "What is the composition boundary in RSC?",
+        "options": [
+            "Limit on component nesting depth",
+            "Border between different route segments",
+            "Maximum props that can pass",
+            "Line between Server and Client Components",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 930,
+        "question": "Can you pass functions through composition boundary?",
+        "options": [
+            "Yes, all functions serialize automatically",
+            "No, unless wrapped in useCallback",
+            "Yes, but only arrow functions",
+            "No, functions cannot cross boundary",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 931,
+        "question": "What data types can cross Server-Client boundary?",
+        "options": [
+            "Only primitive types like strings",
+            "Serializable data excluding functions classes",
+            "All JavaScript types including symbols",
+            "Only JSON-compatible data structures"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 932,
+        "question": "What is the slots pattern in RSC?",
+        "options": [
+            "Passing multiple Server Components as props",
+            "Time slots for rendering components",
+            "Memory slots for component caching",
+            "Route slots for parallel rendering"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 933,
+        "question": "How does the dependency tree affect bundle size?",
+        "options": [
+            "More Client Components increase bundle size",
+            "Server Components always increase bundle",
+            "Tree structure doesn't affect size",
+            "Deeper trees always reduce bundle"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 934,
+        "question": "What happens when Client Component wraps Server Component?",
+        "options": [
+            "Server Component becomes Client Component automatically",
+            "Server Component executes on client side",
+            "Server Component maintains server execution boundary",
+            "Causes hydration mismatch errors always"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 935,
+        "question": "Can you use context across Server-Client boundary?",
+        "options": [
+            "No, context doesn't cross boundaries",
+            "Yes, but only for static values",
+            "No, unless using special provider",
+            "Yes, context works everywhere seamlessly"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 936,
+        "question": "What is the interleaving pattern in RSC?",
+        "options": [
+            "Alternating Server and Client Components",
+            "Interleaving data fetching with rendering",
+            "Mixing static and dynamic rendering",
+            "Combining multiple data sources together"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 937,
+        "question": "Why keep components as Server Components when possible?",
+        "options": [
+            "Server Components render faster always",
+            "Reduces client bundle and improves performance",
+            "Server Components have more features",
+            "Client Components cause security issues"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 938,
+        "question": "What determines if component should be Server or Client?",
+        "options": [
+            "Need for interactivity and browser APIs",
+            "Component file size and complexity",
+            "Number of props component receives",
+            "Position in component tree structure"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
 ]
