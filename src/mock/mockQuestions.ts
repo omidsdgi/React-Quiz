@@ -11246,5 +11246,246 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30
-    }
+    },
+    {
+        "id": 959,
+        "question": "Where should filter state be stored in Next.js?",
+        "options": [
+            "In localStorage for persistence across sessions",
+            "In URL searchParams for share-ability",
+            "In global Redux store for access",
+            "In component state using useState"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 960,
+        "question": "Why store filter values in URL searchParams?",
+        "options": [
+            "Improves component render performance significantly",
+            "Reduces server load and bandwidth",
+            "Allows sharing and bookmarking filtered state",
+            "Enables offline functionality without network"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 961,
+        "question": "How do you read searchParams in Server Components?",
+        "options": [
+            "Through searchParams prop passed to page",
+            "Using useSearchParams hook from next/navigation",
+            "Through query prop in component",
+            "Using getSearchParams helper from next/server"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 962,
+        "question": "How do you update searchParams in Client Components?",
+        "options": [
+            "Using setSearchParams from next/navigation",
+            "Using updateParams from next/router",
+            "Using useRouter and router.replace method",
+            "Using window.location.search directly"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 963,
+        "question": "Should filter component be Server or Client Component?",
+        "options": [
+            "Server Component for better SEO",
+            "Client Component for interactivity handling",
+            "Server Component for performance always",
+            "Either works depending on requirements"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 964,
+        "question": "How do you preserve other searchParams when updating?",
+        "options": [
+            "Merge new params with existing URLSearchParams",
+            "Clear all params then set new",
+            "Use preserveParams option in router",
+            "Next.js preserves them automatically"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 965,
+        "question": "What triggers re-render when searchParams change?",
+        "options": [
+            "Manual refresh required by user",
+            "Navigation updates page automatically",
+            "setState call in component",
+            "Browser reload after URL change"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 966,
+        "question": "How do you create filter buttons with searchParams?",
+        "options": [
+            "Use form with GET method",
+            "Use Link component with updated href",
+            "Use <a> tag with new URL",
+            "Use onClick updating window.location"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 967,
+        "question": "How do you clear all filters from URL?",
+        "options": [
+            "Set searchParams to empty object",
+            "Navigate to pathname without search",
+            "Use clearFilters from next/navigation",
+            "Call resetParams on router object"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 968,
+        "question": "Can you use multiple filter criteria simultaneously?",
+        "options": [
+            "Yes, using multiple searchParams keys",
+            "No, only one filter allowed",
+            "Yes, but maximum three filters",
+            "No, causes URL parsing errors"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 969,
+        "question": "How do you handle filter with pagination?",
+        "options": [
+            "Use separate state for each",
+            "Use different routes per page",
+            "Store pagination in cookies only",
+            "Combine both in searchParams with keys",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 970,
+        "question": "What happens to filters on page navigation?",
+        "options": [
+            "Filters reset to default values",
+            "Filters lost unless manually saved",
+            "Filters persist in URL automatically",
+            "Filters save to localStorage",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 971,
+        "question": "How do you set default filter values?",
+        "options": [
+            "Use defaultParams in router config",
+            "Check if searchParam exists or use default",
+            "Set in component initial state",
+            "Define in next.config.js file"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 972,
+        "question": "Should you debounce filter input updates?",
+        "options": [
+            "No, update URL on every keystroke",
+            "Yes, to reduce navigation and renders",
+            "No, Next.js debounce&#8217;s automatically",
+            "Yes, but only in production"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 973,
+        "question": "How do you style active filter button?",
+        "options": [
+            "Next.js adds active class automatically",
+            "Use activeClassName prop on Link",
+            "Compare searchParam with button value",
+            "Use CSS :active pseudo-class"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 974,
+        "question": "Can filters work with Server Components?",
+        "options": [
+            "No, filters require client interactivity",
+            "Yes, searchParams passed to Server Components",
+            "Yes, but only with forms",
+            "No, Server Components are static"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 975,
+        "question": "How do you create a search filter component?",
+        "options": [
+            "Use input with onChange updating searchParams",
+            "Use form with POST method",
+            "Use searchBox from next/ui",
+            "Use filter prop on data array"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 976,
+        "question": "What is best practice for filter URL structure?",
+        "options": [
+            "Use encoded keys like ?filter=encoded",
+            "Use short keys like ?c=b",
+            "Use numbered keys like ?f1=value",
+            "Use descriptive keys like ?category=books",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 977,
+        "question": "How do you handle multiple values for one filter?",
+        "options": [
+            "Use JSON encoded string",
+            "Use array notation in URL",
+            "Use separate keys for each value",
+            "Use comma-separated string in searchParam",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 978,
+        "question": "Should you validate filter values from URL?",
+        "options": [
+            "Yes, users can manipulate URL params",
+            "No, Next.js validates automatically",
+            "Yes, but only in production",
+            "No, validation causes performance issues"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+
 ]
