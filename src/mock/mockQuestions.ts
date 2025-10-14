@@ -11726,5 +11726,245 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30
-    }
+    },
+    {
+        "id": 999,
+        "question": "Where should UI state like modal visibility be stored?",
+        "options": [
+            "On server for consistency across requests",
+            "In client component state with useState",
+            "In cookies for server access",
+            "In URL searchParams for sharing"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1000,
+        "question": "Where should user authentication state be managed in web apps?",
+        "options": [
+            "In client localStorage for convenience",
+            "In URL searchParams for tracking",
+            "On server with cookies or sessions",
+            "In client Context for access"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1001,
+        "question": "Where should filter state be stored in Next.js?",
+        "options": [
+            "On server in database always",
+            "In client component state only",
+            "In URL searchParams readable by both",
+            "In cookies for persistence"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1002,
+        "question": "Where should shopping cart state be stored?",
+        "options": [
+            "On server database for persistence",
+            "In client localStorage temporarily",
+            "In URL for sharing capability",
+            "Both client storage and server sync"
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 1003,
+        "question": "Where should form validation state be stored?",
+        "options": [
+            "On server only for security",
+            "In client for UX and server for security",
+            "In URL searchParams for tracking",
+            "In cookies for persistence"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1004,
+        "question": "Where should temporary loading states be stored?",
+        "options": [
+            "In client component state only",
+            "On server for consistency",
+            "In URL for tracking progress",
+            "In cookies for persistence"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1005,
+        "question": "Where should theme preferences be stored in Next.js?",
+        "options": [
+            "In client localStorage for speed",
+            "On server database for sync",
+            "In cookies accessible by both sides",
+            "In URL searchParams for sharing"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1006,
+        "question": "Where should cached API responses be stored?",
+        "options": [
+            "On server with data cache",
+            "In client with caching library",
+            "Both server cache and client cache",
+            "In URL for debugging"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1007,
+        "question": "Where should sensitive data like tokens be stored?",
+        "options": [
+            "In client localStorage for access",
+            "In URL searchParams for convenience",
+            "On server in httpOnly cookies",
+            "In client sessionStorage temporary"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1008,
+        "question": "Where should pagination state be stored in Next.js?",
+        "options": [
+            "On server in database always",
+            "In client component state only",
+            "In URL searchParams for navigation",
+            "In cookies for remembering"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1009,
+        "question": "Where should real-time notifications be stored?",
+        "options": [
+            "On server pushed to client",
+            "In client polled from server",
+            "In URL for tracking updates",
+            "In cookies for persistence"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1010,
+        "question": "Where should form input state during typing be stored?",
+        "options": [
+            "Send to server on every keystroke",
+            "In client state until submission",
+            "In URL for real-time sharing",
+            "In cookies for auto-save"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1011,
+        "question": "Where should user session data be stored in web apps?",
+        "options": [
+            "In client localStorage for speed",
+            "In URL searchParams for access",
+            "On server with session management",
+            "In client Context for sharing"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1012,
+        "question": "What is the main advantage of server-side state?",
+        "options": [
+            "Faster client-side rendering always",
+            "Better security and data consistency",
+            "Easier state management code",
+            "Works offline without network"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1013,
+        "question": "What is the main advantage of client-side state?",
+        "options": [
+            "Better security for sensitive data",
+            "Automatic sync across devices",
+            "Instant updates without server round-trip",
+            "Data persists after browser close"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1014,
+        "question": "Where should state that needs SEO indexing be stored?",
+        "options": [
+            "In client localStorage for speed",
+            "On server or URL searchParams",
+            "In client Context for access",
+            "In cookies for persistence"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1015,
+        "question": "Where should state shared across pages be stored?",
+        "options": [
+            "In URL searchParams for navigation",
+            "In client Context for access",
+            "On server database for persistence",
+            "Depends on state type and requirements"
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 1016,
+        "question": "Can Client Components access server-side state directly in Next.js?",
+        "options": [
+            "Yes, through automatic state sync",
+            "No, must pass via props or API",
+            "Yes, using special server hooks",
+            "No, unless using Context"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1017,
+        "question": "Can Server Components access client-side state directly in Next.js?",
+        "options": [
+            "Yes, through cookies or headers",
+            "No, client state unavailable on server",
+            "Yes, using special client functions",
+            "No, unless passed via props"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1018,
+        "question": "Where should optimistic UI updates be stored?",
+        "options": [
+            "On server immediately for consistency",
+            "In client state before server confirmation",
+            "In URL for tracking changes",
+            "In cookies for rollback capability"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
 ]
