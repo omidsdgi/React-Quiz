@@ -11479,13 +11479,252 @@ export const mockQuestions: Question[] = [
         "id": 978,
         "question": "Should you validate filter values from URL?",
         "options": [
-            "Yes, users can manipulate URL params",
-            "No, Next.js validates automatically",
+            "No, validation causes performance issues",
             "Yes, but only in production",
-            "No, validation causes performance issues"
+            "No, Next.js validates automatically",
+            "Yes, users can manipulate URL params",
         ],
         "correctOption": 0,
         "points": 30
     },
-
+    {
+        "id": 979,
+        "question": "How do you create a dropdown filter?",
+        "options": [
+            "Use select with onChange updating URL",
+            "Use dropdown from next/components",
+            "Use menu with static options",
+            "Use radio buttons with forms"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 980,
+        "question": "Can you use filter with static generation?",
+        "options": [
+            "Yes, using generateStaticParams but limited to three filters",
+            "No, filtering requires dynamic rendering",
+            "Yes, using generateStaticParams for combinations",
+            "No, static pages cannot have params",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 981,
+        "question": "How do you reset single filter while keeping others?",
+        "options": [
+            "Set filter key value to empty string",
+            "Delete specific key from URLSearchParams",
+            "Use resetFilter with filter name",
+            "Navigate to base URL manually"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 982,
+        "question": "What is the benefit of URL-based filters over state?",
+        "options": [
+            "Faster component rendering performance overall",
+            "Smaller JavaScript bundle size reduction",
+            "Shareable links and browser navigation support",
+            "Better TypeScript type safety"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 983,
+        "question": "How do you handle filter loading states?",
+        "options": [
+            "Use Suspense boundary around filtered content",
+            "Use isLoading from useSearchParams hook",
+            "Use loading prop on filter component",
+            "Next.js shows loading automatically"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 984,
+        "question": "Should filters be accessible via keyboard?",
+        "options": [
+            "No, increases complexity unnecessarily",
+            "No, mouse interaction sufficient",
+            "Yes, for accessibility and usability",
+            "Yes, but only in forms",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 985,
+        "question": "How do you create a range filter (min-max)?",
+        "options": [
+            "Use single param with dash separator",
+            "Use two searchParams for min and max",
+            "Use range component from next/ui",
+            "Use slider with single value"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 986,
+        "question": "Can you animate filter transitions in Next.js?",
+        "options": [
+            "No, routing prevents animations",
+            "Yes, but only with framer-motion",
+            "No, breaks navigation behavior",
+            "Yes, using CSS transitions on elements",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 987,
+        "question": "How do you show active filter count?",
+        "options": [
+            "Use filterCount from useRouter hook",
+            "Count non-empty searchParams keys",
+            "Next.js tracks count automatically",
+            "Use global state counter variable"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 988,
+        "question": "What is best pattern for complex filter logic?",
+        "options": [
+            "Extract filter logic into helper function",
+            "Inline all logic in component",
+            "Use external filter library always",
+            "Create separate filter page route"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 989,
+        "question": "How do you handle filter conflicts?",
+        "options": [
+            "Use filterResolver from next/navigation",
+            "Validate and resolve in filter logic",
+            "Allow all conflicts to pass through",
+            "Disable conflicting filter options"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 990,
+        "question": "Should you show filter results count?",
+        "options": [
+            "No, increases server load unnecessarily",
+            "Yes, improves user experience feedback",
+            "No, users can count themselves",
+            "Yes, but only for small datasets",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 991,
+        "question": "How do you create mobile-friendly filters?",
+        "options": [
+            "Use responsive design with drawer or modal",
+            "Create separate mobile filter page",
+            "Hide filters on mobile completely",
+            "Use horizontal scroll for options"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 992,
+        "question": "Can filters affect SEO in Next.js?",
+        "options": [
+            "No, searchParams ignored by crawlers",
+            "Yes, but only with robots meta",
+            "No, filters are client-only",
+            "Yes, filtered pages can be indexed",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 993,
+        "question": "How do you implement "Apply Filters" button pattern?",
+        "options": [
+            "Update URL on each selection immediately",
+            "Use form submission to apply filters",
+            "Store temp state then batch update URL",
+            "Next.js handles batch updates automatically"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 994,
+        "question": "What is the performance impact of many filters?",
+        "options": [
+            "More filters increase URL complexity minimally",
+            "More filters slow rendering significantly",
+            "Filter count doesn't affect performance",
+            "More filters reduce server response time"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 995,
+        "question": "How do you handle filter with sorting?",
+        "options": [
+            "Combine both in single param value",
+            "Use separate searchParam keys for each",
+            "Use different routes for sorting",
+            "Store sorting in separate state"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 996,
+        "question": "Should you preserve filters across different pages?",
+        "options": [
+            "Always preserve for consistency",
+            "Never preserve to avoid confusion",
+            "Only preserve on same route",
+            "Depends on user experience requirements",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 997,
+        "question": "How do you test filter functionality?",
+        "options": [
+            "Next.js tests filters automatically",
+            "Test URL updates and rendered results",
+            "Use filterTest from testing library",
+            "Only test UI interaction visually",
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 998,
+        "question": "What accessibility features should filters have?",
+        "options": [
+            "Accessibility handled by Next.js automatically",
+            "ARIA labels, keyboard nav, screen reader support",
+            "Only color contrast and font size",
+            "Just keyboard navigation is sufficient",
+        ],
+        "correctOption": 1,
+        "points": 30
+    }
 ]
