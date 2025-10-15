@@ -12111,4 +12111,317 @@ export const mockQuestions: Question[] = [
         "correctOption": 2,
         "points": 30
     },
+        {
+            "id": 1031,
+            "question": "What is a Route Handler in Next.js App Router?",
+            "options": [
+                "A component that renders UI pages",
+                "A function handling HTTP requests",
+                "A middleware for authentication only",
+                "A configuration file for routing"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 1032,
+            "question": "What does the HTTP GET method represent in REST APIs?",
+            "options": [
+                "Creating new resources on server",
+                "Deleting existing resources from server",
+                "Retrieving data from the server",
+                "Updating existing resources on server"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 1033,
+            "question": "What is the purpose of HTTP POST method?",
+            "options": [
+                "To retrieve data from server",
+                "To delete resources from server",
+                "To create new resources server",
+                "To replace entire resource completely"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 1034,
+            "question": "What does an API endpoint represent in web development?",
+            "options": [
+                "A URL for accessing resources",
+                "A database connection string only",
+                "A React component for forms",
+                "A CSS styling configuration file"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 1035,
+            "question": "What is the main difference between PUT and PATCH methods?",
+            "options": [
+                "PUT is faster than PATCH",
+                "PUT replaces all, PATCH updates partially",
+                "PUT creates, PATCH deletes resources",
+                "PUT is public, PATCH is private"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 1036,
+            "question": "What does the HTTP DELETE method do?",
+            "options": [
+                "Removes resources from the server",
+                "Updates existing resources on server",
+                "Creates backup of server data",
+                "Retrieves deleted items from server"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 1037,
+            "question": "What is a RESTFul API in web development?",
+            "options": [
+                "A database management system only",
+                "Architecture using HTTP methods standards",
+                "A frontend framework for React",
+                "A styling library for CSS"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 1038,
+            "question": "What is the correct filename for creating a Route Handler in Next.js?",
+            "options": [
+                "api.js or api.ts file",
+                "handler.js or handler.ts file",
+                "route.js or route.ts file",
+                "endpoint.js or endpoint.ts file"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 1039,
+            "question": "Why can't route.js and page.js exist in the same folder?",
+            "options": [
+                "They serve different URL paths",
+                "They conflict on same route",
+                "Next.js doesn't support route files",
+                "Page files have higher priority"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 1040,
+            "question": "What does HTTP status code 201 indicate?",
+            "options": [
+                "Resource successfully created on server",
+                "Request was successfully deleted completely",
+                "Server error occurred during request",
+                "Resource not found on server"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1041,
+            "question": "What is the purpose of HTTP status codes?",
+            "options": [
+                "To style API responses properly",
+                "To indicate request outcome status",
+                "To encrypt data during transmission",
+                "To compress response data size"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 1042,
+            "question": "What does idempotent mean for HTTP methods like PUT?",
+            "options": [
+                "Multiple identical requests same result",
+                "Faster response time for requests",
+                "Requires authentication for every request",
+                "Only works with JSON data"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1043,
+            "question": "What is the request object in Route Handlers?",
+            "options": [
+                "Contains incoming HTTP request data",
+                "A configuration for database connection",
+                "A React component state object",
+                "A styling object for responses"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 1044,
+            "question": "What is the difference between App Router and Pages Router API routes?",
+            "options": [
+                "App uses route.js, Pages uses api folder",
+                "No difference, they are identical",
+                "Pages doesn't support API routes",
+                "App Router is slower overall"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1045,
+            "question": "What does HTTP verb mean in web development?",
+            "options": [
+                "A database query language syntax",
+                "Methods defining request type action",
+                "A JavaScript function for APIs",
+                "A CSS property for styling"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 1046,
+            "question": "What is the purpose of NextResponse.json() in Route Handlers?",
+            "options": [
+                "To parse incoming JSON data",
+                "To return JSON response easily",
+                "To validate JSON schema structure",
+                "To compress JSON file size"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 1047,
+            "question": "What does CRUD stand for in API development?",
+            "options": [
+                "Create, Read, Update, Delete operations",
+                "Connect, Request, Upload, Download operations",
+                "Cache, Render, Upload, Display operations",
+                "Compile, Run, Update, Debug operations"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 1048,
+            "question": "What is dynamic routing in Route Handlers?",
+            "options": [
+                "Routes created automatically at build",
+                "Routes with variable path segments",
+                "Routes that change every request",
+                "Routes only for authenticated users"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+        "id": 1049,
+        "question": "How do you export a POST handler in a Route Handler file?",
+        "options": [
+            "export default function POST(request)",
+            "export const POST = (request)",
+            "export async function POST(request)",
+            "export handler POST = (request)"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1050,
+        "question": "What URL path would access a Route Handler at app/api/users/route.js?",
+        "options": [
+            "http://localhost:3000/users endpoint path",
+            "http://localhost:3000/api/users endpoint path",
+            "http://localhost:3000/route/users endpoint path",
+            "http://localhost:3000/api/route/users endpoint path"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1051,
+        "question": "How do you return JSON data from a Route Handler?",
+        "options": [
+            "return Response.json(data) or NextResponse.json(data)",
+            "return JSON.stringify(data) as string",
+            "return { json: data } object",
+            "return new JsonResponse(data) constructor"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+   {
+        "id": 1052,
+        "question": "Which HTTP method is used to delete a resource in REST APIs?",
+        "options": [
+            "REMOVE method for resource deletion",
+            "DELETE method for resource deletion",
+            "DESTROY method for resource deletion",
+            "DROP method for resource deletion"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1053,
+        "question": "How do you access request body data in a POST Route Handler?",
+        "options": [
+            "const data = request.body.json()",
+            "const data = await request.json()",
+            "const data = request.getBody()",
+            "const data = await request.body()"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1054,
+        "question": "Where should you create a Route Handler for API endpoints in Next.js?",
+        "options": [
+            "Inside pages directory with api prefix",
+            "Inside app directory following folder structure",
+            "Inside public directory for api routes",
+            "Inside src/api directory with route files"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1055,
+        "question": "Can you export multiple HTTP methods from a single route.js file?",
+        "options": [
+            "No, only one method allowed",
+            "Yes, export GET, POST, etc.",
+            "Only GET and POST together",
+            "Only with middleware configuration enabled"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1056,
+        "question": "How do you access URL parameters in a Route Handler?",
+        "options": [
+            "Through request.query.get() method available",
+            "Through request.params object directly accessible",
+            "Through context.params in second argument",
+            "Through request.url.params object property"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    
 ]
