@@ -12651,5 +12651,184 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 10
     },
-    
+    {
+        "id": 1076,
+        "question": "Where are cookies typically checked for authentication?",
+        "options": [
+            "In React component state only",
+            "In middleware or server components",
+            "In CSS files for styling",
+            "In package.json configuration file"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1077,
+        "question": "How does middleware access request headers in Next.js?",
+        "options": [
+            "request.headers.get('header-name') method call",
+            "request.getHeader('header-name') function call",
+            "request.header['header-name'] array access",
+            "headers('header-name') global function call"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1078,
+        "question": "What is the security risk of storing JWT in localStorage?",
+        "options": [
+            "Vulnerable to XSS attacks completely",
+            "Takes too much storage space",
+            "Cannot be accessed by JavaScript",
+            "Automatically expires after one hour"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1079,
+        "question": "How can you implement conditional middleware execution based on path?",
+        "options": [
+            "Use multiple middleware.js files structure",
+            "Use matcher config or conditional logic",
+            "Middleware always runs on paths",
+            "Create separate auth.js for conditions"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1080,
+        "question": "What is the purpose of httpOnly flag in authentication cookies?",
+        "options": [
+            "Makes cookie accessible via JavaScript",
+            "Increases cookie expiration time significantly",
+            "Prevents JavaScript access to cookie",
+            "Compresses cookie data for performance"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1081,
+        "question": "How do you pass data from middleware to route handlers?",
+        "options": [
+            "Through request headers modification carefully",
+            "Using global variables for sharing",
+            "Cannot pass data between them",
+            "Through URL query parameters only"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1082,
+        "question": "What happens when middleware modifies request URL in Next.js?",
+        "options": [
+            "Browser URL changes immediately visible",
+            "Causes infinite redirect loop error",
+            "Middleware crashes with error message",
+            "Internal rewrite without browser change",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 1083,
+        "question": "How does Next.js middleware handle Server Components authentication?",
+        "options": [
+            "Runs before components render entirely",
+            "Runs after components render completely",
+            "Cannot interact with components ever",
+            "Only works with client components"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1084,
+        "question": "What is the difference between rewrite and redirect in middleware?",
+        "options": [
+            "Rewrite changes URL, redirect internal",
+            "No difference between them functionally",
+            "Redirect changes URL, rewrite internal",
+            "Both change browser URL visibly",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1085,
+        "question": "How can you implement rate limiting in Next.js middleware?",
+        "options": [
+            "Track requests using headers storage",
+            "Next.js handles it automatically always",
+            "Impossible in middleware layer currently",
+            "Only possible with external services"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1086,
+        "question": "What is the recommended way to verify JWT tokens in middleware?",
+        "options": [
+            "Store secret in environment variables",
+            "Hardcode secret in middleware file",
+            "Use client-side validation only approach",
+            "No verification needed for JWTs"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1087,
+        "question": "How does middleware interact with Edge Runtime in Next.js?",
+        "options": [
+            "Middleware only runs in Node",
+            "Must specify Edge explicitly always",
+            "Middleware runs in Edge automatically",
+            "Edge Runtime doesn't support middleware"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1088,
+        "question": "What is the security benefit of using SameSite cookie attribute?",
+        "options": [
+            "Encrypts cookie data automatically always",
+            "Increases cookie storage size limit",
+            "Makes cookies accessible cross-origin freely",
+            "Prevents CSRF attacks effectively now",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 1089,
+        "question": "How can you implement multi-factor authentication flow in middleware?",
+        "options": [
+            "Check for MFA token presence",
+            "Middleware cannot handle MFA ever",
+            "Only possible in client components",
+            "Requires separate server for MFA"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1090,
+        "question": "What is the impact of middleware on static page generation?",
+        "options": [
+            "Static pages ignore middleware completely",
+            "Middleware runs on every request",
+            "Middleware only runs at build",
+            "Causes static pages to fail"
+        ],
+        "correctOption": 1,
+        "points": 30
+    }
 ]
