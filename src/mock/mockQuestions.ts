@@ -12423,5 +12423,233 @@ export const mockQuestions: Question[] = [
         "correctOption": 2,
         "points": 20
     },
+    {
+        "id": 1057,
+        "question": "What is authentication in web applications?",
+        "options": [
+            "Verifying user identity and credentials",
+            "Determining user access permissions level",
+            "Encrypting data during network transmission",
+            "Storing user data in database"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1058,
+        "question": "What is authorization in web applications?",
+        "options": [
+            "Creating new user account registration",
+            "Logging user into the system",
+            "Checking what user can access",
+            "Validating user email address format"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1059,
+        "question": "What is the main difference between authentication and authorization?",
+        "options": [
+            "Authorization comes before authentication always",
+            "Both are exactly the same",
+            "Authentication verifies identity, authorization checks permissions",
+            "Authentication is for APIs only"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1060,
+        "question": "What is middleware in Next.js applications?",
+        "options": [
+            "A database connection layer only",
+            "Code running before request completion",
+            "A styling library for components",
+            "A testing framework for apps"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1061,
+        "question": "What is the correct filename for Next.js middleware?",
+        "options": [
+            "handler.js or handler.ts file",
+            "auth.js or auth.ts file",
+            "middleware.js or middleware.ts file",
+            "guard.js or guard.ts file"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1062,
+        "question": "Where should the middleware.js file be placed in Next.js?",
+        "options": [
+            "Inside app directory with routes",
+            "Inside pages directory with API",
+            "Inside public folder for access",
+            "At project root or src",
+        ],
+        "correctOption": 3,
+        "points": 10
+    },
+    {
+        "id": 1063,
+        "question": "When does Next.js middleware execute during a request?",
+        "options": [
+            "After response is sent back",
+            "Only during build time process",
+            "Before route handler runs completely",
+            "After component renders on page"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1064,
+        "question": "What can middleware be used for in Next.js?",
+        "options": [
+            "Only for styling components properly",
+            "Authentication, redirects, and request modification",
+            "Only for database queries execution",
+            "Only for static file serving"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1065,
+        "question": "What does a typical authentication flow verify?",
+        "options": [
+            "User permissions for specific resources",
+            "Username and password are correct",
+            "User's internet connection speed level",
+            "User's browser version compatibility info"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1066,
+        "question": "What is a common example of authorization?",
+        "options": [
+            "User logging into the system",
+            "Validating email format structure correctly",
+            "Checking if user is admin",
+            "Hashing user password for security"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1067,
+        "question": "What does the middleware matcher config do?",
+        "options": [
+            "Defines which routes middleware applies",
+            "Matches user credentials with database",
+            "Connects to external API services",
+            "Validates form input data types"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1068,
+        "question": "What is a JWT in authentication context?",
+        "options": [
+            "JavaScript Testing Tool for apps",
+            "JSON Web Token for auth",
+            "Java Web Technology for servers",
+            "Joint Web Transport protocol standard"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1069,
+        "question": "What happens if middleware returns NextResponse.redirect()?",
+        "options": [
+            "Request continues to original destination",
+            "User redirected to different URL",
+            "Middleware throws an error immediately",
+            "Response is cached permanently forever"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1070,
+        "question": "Can middleware run on all routes by default?",
+        "options": [
+            "No, must specify routes explicitly",
+            "Yes, except static files explicitly",
+            "Only on API routes specifically",
+            "Only on dynamic routes only"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1071,
+        "question": "What is session-based authentication?",
+        "options": [
+            "Storing auth state on server",
+            "Using only cookies for auth",
+            "Authentication without any password required",
+            "Only for mobile app authentication"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1072,
+        "question": "What is token-based authentication?",
+        "options": [
+            "Using session cookies for storage",
+            "Client stores token after login",
+            "Server stores all user data",
+            "No authentication is required ever"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1073,
+        "question": "What is role-based access control (RBAC)?",
+        "options": [
+            "Permissions based on user roles",
+            "Authentication using email only verification",
+            "Database backup strategy for security",
+            "Encryption method for sensitive data"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1074,
+        "question": "What does NextResponse.next() do in middleware?",
+        "options": [
+            "Stops request processing completely now",
+            "Continues to next middleware layer",
+            "Redirects to home page immediately",
+            "Throws authentication error to user"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1075,
+        "question": "What is protected route in Next.js?",
+        "options": [
+            "Route requiring authentication to access",
+            "Route encrypted with SSL certificate",
+            "Route only for admin users",
+            "Route with faster loading speed"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
     
 ]
