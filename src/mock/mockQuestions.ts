@@ -11657,7 +11657,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 993,
-        "question": "How do you implement "Apply Filters" button pattern?",
+        "question": "How do you implement Apply Filters button pattern?",
         "options": [
             "Update URL on each selection immediately",
             "Use form submission to apply filters",
@@ -11965,6 +11965,150 @@ export const mockQuestions: Question[] = [
             "In cookies for rollback capability"
         ],
         "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1019,
+        "question": "Where should draft content be stored?",
+        "options": [
+            "On server auto-saved periodically",
+            "In client localStorage temporarily",
+            "Both client and server for safety",
+            "In URL for sharing drafts"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1020,
+        "question": "Where should analytics tracking state be stored?",
+        "options": [
+            "In client and sent to server",
+            "On server only for privacy",
+            "In URL for debugging issues",
+            "In cookies for persistence"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1021,
+        "question": "Where should feature flags be stored in Next.js?",
+        "options": [
+            "In client for instant toggles",
+            "On server for controlled rollout",
+            "In URL for testing features",
+            "In cookies for user targeting"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1022,
+        "question": "What state requires server-side storage for security?",
+        "options": [
+            "UI theme and appearance preferences",
+            "Temporary loading and error states",
+            "Authentication tokens and user roles",
+            "Modal open/close toggle state"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1023,
+        "question": "What state is best kept client-side for performance?",
+        "options": [
+            "User authentication and authorization",
+            "User preferences synced across devices",
+            "Shopping cart with checkout data",
+            "Temporary UI interactions and animations",
+        ],
+        "correctOption":3,
+        "points": 20
+    },
+    {
+        "id": 1024,
+        "question": "How do you sync state between client and server in Next.js?",
+        "options": [
+            "Using Server Actions, revalidation, or polling",
+            "Using automatic state sync library",
+            "Using built-in framework sync methods",
+            "Framework syncs automatically always"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1025,
+        "question": "Where should A/B test variant state be stored?",
+        "options": [
+            "In client for instant switching",
+            "On server for consistent experience",
+            "In URL for testing variants",
+            "In localStorage for persistence"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1026,
+        "question": "Where should scroll position state be stored?",
+        "options": [
+            "On server for consistency",
+            "In client state or sessionStorage",
+            "In URL searchParams always",
+            "In cookies for persistence"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1027,
+        "question": "Where should multi-step form progress be stored?",
+        "options": [
+            "In client state until submission form",
+            "On server after each step",
+            "In URL for navigation support",
+            "Depends on form complexity and requirements"
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 1028,
+        "question": "What is the trade-off of client-side state?",
+        "options": [
+            "Better performance but potential data loss",
+            "Worse security but easier access",
+            "Faster updates but no persistence",
+            "All of the above considerations"
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 1029,
+        "question": "What is the trade-off of server-side state?",
+        "options": [
+            "Better security but slower updates",
+            "More persistence but complex code",
+            "Easier sync but higher costs",
+            "All of the above considerations"
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 1030,
+        "question": "Where should WebSocket connection state be stored?",
+        "options": [
+            "On server for connection management",
+            "In client for real-time updates",
+            "Both client and server coordination",
+            "In URL for connection tracking"
+        ],
+        "correctOption": 2,
         "points": 30
     },
 ]
