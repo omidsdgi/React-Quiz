@@ -13000,5 +13000,184 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 10
     },
-
+    {
+        "id": 1106,
+        "question": "Do Server Actions work without JavaScript enabled?",
+        "options": [
+            "Yes, with progressive enhancement support",
+            "No, JavaScript is required always",
+            "Only on modern browsers specifically",
+            "Only with external libraries installed"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1107,
+        "question": "How do you pass data to Server Actions?",
+        "options": [
+            "Through function parameters or FormData",
+            "Only through global variables storage",
+            "Through URL query strings only",
+            "Through localStorage in browser only"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1108,
+        "question": "What is the security benefit of Server Actions?",
+        "options": [
+            "Code never sent to client",
+            "Faster than API endpoints always",
+            "Automatically encrypts all data fully",
+            "Prevents all SQL injection attacks"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1109,
+        "question": "Can you return JSX from Server Actions?",
+        "options": [
+            "Yes, for optimistic updates support",
+            "No, only JSON data",
+            "Only in client components specifically",
+            "Only with special configuration setup"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1110,
+        "question": "How do Server Actions trigger cache revalidation?",
+        "options": [
+            "Using revalidatePath or revalidateTag functions",
+            "Automatically without any code needed",
+            "Cache never revalidates with actions",
+            "Only through manual page refresh"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1111,
+        "question": "What is the execution context of Server Actions?",
+        "options": [
+            "Always runs on server environment",
+            "Runs on client browser side",
+            "Runs on both simultaneously always",
+            "Runs only during build process"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1112,
+        "question": "Can you use Server Actions with useTransition hook?",
+        "options": [
+            "No, incompatible with React hooks",
+            "Yes, for pending states handling",
+            "Only with useEffect hook together",
+            "Only in class components specifically"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1113,
+        "question": "What happens when Server Action throws an error?",
+        "options": [
+            "Caught by error boundaries properly",
+            "Application crashes completely immediately always",
+            "Error is silently ignored always",
+            "Automatically retries three times always"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1114,
+        "question": "How do Server Actions differ from traditional form submissions?",
+        "options": [
+            "Server Actions don't require routing",
+            "Traditional forms are always faster",
+            "Server Actions only work offline",
+            "No difference between them ever"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1115,
+        "question": "Can Server Actions access cookies and headers?",
+        "options": [
+            "Yes, using Next.js helper functions",
+            "No, security prevents this access",
+            "Only cookies, not headers ever",
+            "Only in production environment mode"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1116,
+        "question": "What is closure in Server Actions context?",
+        "options": [
+            "Actions can access outer scope",
+            "Actions are always isolated completely",
+            "Only global variables are accessible",
+            "Closure is not supported here"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1117,
+        "question": "How do you handle validation in Server Actions?",
+        "options": [
+            "Validate data before processing logic",
+            "Validation happens automatically always on client",
+            "Server Actions skip validation entirely",
+            "Only client-side validation is possible"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1118,
+        "question": "Can Server Actions be used with TypeScript?",
+        "options": [
+            "No, JavaScript only support available",
+            "Yes, with full type safety",
+            "Only with custom configuration setup",
+            "Only in development mode usage"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1119,
+        "question": "What is binding in Server Actions?",
+        "options": [
+            "Passing arguments with bind method",
+            "Connecting to database systems only",
+            "Creating event listeners for forms",
+            "Styling components with CSS rules"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1120,
+        "question": "How do Server Actions integrate with React's Suspense?",
+        "options": [
+            "Actions work with Suspense boundaries",
+            "Suspense is incompatible with actions",
+            "Only client actions support Suspense",
+            "Requires special Suspense configuration always"
+        ],
+        "correctOption": 0,
+        "points": 30
+    }
 ]
