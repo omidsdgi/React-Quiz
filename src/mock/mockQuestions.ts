@@ -12830,5 +12830,175 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30
-    }
+    },
+    {
+        "id": 1091,
+        "question": "What is a Server Action in Next.js?",
+        "options": [
+            "Asynchronous functions running on server",
+            "Client-side event handler for forms",
+            "CSS animation for server components",
+            "Database query builder for APIs"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1092,
+        "question": "What directive marks a function as Server Action?",
+        "options": [
+            "'use action' at function top",
+            "'server only' at function top",
+            "'use server' at function top",
+            "'async server' at function top"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1093,
+        "question": "Where can you define Server Actions in Next.js?",
+        "options": [
+            "Only in API route files",
+            "In Server Components or files",
+            "Only in client component files",
+            "Only in middleware.js configuration file"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1094,
+        "question": "What is a standalone Server Action file?",
+        "options": [
+            "File with only CSS styles",
+            "File inside public folder only",
+            "File with 'use server' directive",
+            "File for environment variables config"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1095,
+        "question": "Where can Server Actions be invoked from?",
+        "options": [
+            "Only from server components always",
+            "Only from middleware.js configuration file",
+            "Only from API route handlers",
+            "Server/Client Components and forms too",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+
+    {
+        "id": 1096,
+        "question": "Can Server Actions be called from Client Components?",
+        "options": [
+            "No, only from servers",
+            "Yes, by importing them properly",
+            "Only with special middleware setup",
+            "Only during build time phase"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1097,
+        "question": "What is the main difference between Server Actions and API endpoints?",
+        "options": [
+            "Server Actions simpler, no routes",
+            "API endpoints are always faster",
+            "Server Actions only for databases",
+            "No difference between them functionally"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1098,
+        "question": "What happens during the Server Action execution flow?",
+        "options": [
+            "Requires manual API endpoint creation",
+            "Everything runs on client side",
+            "Only executes during build time",
+            "Client calls, server executes, returns",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 1099,
+        "question": "Can you use Server Actions in form submissions?",
+        "options": [
+            "No, only API routes",
+            "Only with JavaScript enabled always",
+            "Yes, with action prop directly",
+            "Only in client components specifically"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1100,
+        "question": "What do Server Actions automatically handle?",
+        "options": [
+            "Only CSS styling for forms",
+            "POST requests and serialization",
+            "Only database connection pooling tasks",
+            "Only frontend state management logic"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1101,
+        "question": "How does Next.js create endpoints for Server Actions?",
+        "options": [
+            "You must manually create them",
+            "Automatically generates POST endpoints internally",
+            "Only works with GET requests",
+            "Requires external server configuration setup"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1102,
+        "question": "What is the relationship between Server Actions and caching?",
+        "options": [
+            "Server Actions revalidate cache automatically",
+            "Server Actions cannot affect cache",
+            "Cache only works with APIs",
+            "Server Actions disable all caching"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1103,
+        "question": "Can Server Actions be used for data mutations?",
+        "options": [
+            "No, only for reading",
+            "Yes, for create, update, delete",
+            "Only for deletion operations specifically",
+            "Only with external database services"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1104,
+        "question": "What does 'use server' inside a function do?",
+        "options": [
+            "Marks single function as action",
+            "Marks entire file as server",
+            "Creates API endpoint automatically always",
+            "Enables server-side rendering only mode"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+
 ]
