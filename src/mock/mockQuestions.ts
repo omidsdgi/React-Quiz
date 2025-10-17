@@ -13360,4 +13360,184 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 10
     },
+    {
+        "id": 1136,
+        "question": "Can you use multiple useFormStatus in same form?",
+        "options": [
+            "No, only one per form",
+            "Only in Server Components specifically",
+            "Only with nested forms structure",
+            "Yes, in different child components",
+        ],
+        "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 1137,
+        "question": "What is progressive enhancement with Server Actions and forms?",
+        "options": [
+            "Forms work without JavaScript enabled",
+            "Forms only work with JavaScript",
+            "Forms automatically validate all data",
+            "Forms submit faster than normal"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1138,
+        "question": "How does React Hook Form's handleSubmit work with Server Actions?",
+        "options": [
+            "Validates then calls Server Action",
+            "Skips validation completely for speed",
+            "Only works with API endpoints",
+            "Prevents Server Action execution always"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1139,
+        "question": "Can useFormStatus track multiple form submissions?",
+        "options": [
+            "Yes, tracks all nested forms",
+            "No, only tracks parent form",
+            "Only with special configuration setup",
+            "Only in development mode usage"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1140,
+        "question": "What is the method property in useFormStatus?",
+        "options": [
+            "Post method for form fields",
+            "HTTP method of form submission",
+            "Component rendering method reference object",
+            "Database query method for data"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1141,
+        "question": "How do you handle errors from Server Actions in forms?",
+        "options": [
+            "With try-catch in Client component",
+            "Errors automatically appear in console",
+            "Return error from Server Action",
+            "Cannot handle errors from actions",
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1142,
+        "question": "Can React Hook Form reset after Server Action success?",
+        "options": [
+            "No cannot reset with Server Actions",
+            "Automatically resets always by default",
+            "Yes, call reset method manually",
+            "Only resets on page refresh"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1143,
+        "question": "What is optimistic UI update with Server Actions?",
+        "options": [
+            "Update UI before server confirms",
+            "Update UI after server confirms",
+            "Only for read operations usage",
+            "Automatic feature requiring no code"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1144,
+        "question": "How do you pass additional data to Server Action with React Hook Form?",
+        "options": [
+            "Through global state storage",
+            "Through URL parameters route",
+            "Use bind method or hidden fields",
+            "Cannot pass additional data ever",
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1145,
+        "question": "Can useFormStatus access form validation errors?",
+        "options": [
+            "Yes, through errors property always",
+            "No, only pending and data",
+            "Only with React Hook Form",
+            "Only in Server Components specifically"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1146,
+        "question": "What is the action property in useFormStatus?",
+        "options": [
+            "Validation action for form fields",
+            "Array of all form actions",
+            "Reference to current form action",
+            "CSS action for form styling"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1147,
+        "question": "How does Server Action affect form submission flow?",
+        "options": [
+            "Submits without page refresh automatically",
+            "Always causes full page reload",
+            "Prevents form submission completely always",
+            "Only works with page navigation"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1148,
+        "question": "Can you use useFormState with Server Actions?",
+        "options": [
+            "Yes, for form state management",
+            "No, useFormStatus only for actions",
+            "Only with API endpoints route",
+            "Only in Server Components specifically"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1149,
+        "question": "What is the relationship between useTransition and form submission?",
+        "options": [
+            "useTransition prevents form submission",
+            "No relationship between them ever",
+            "useTransition shows pending UI state",
+            "Only works with API endpoints"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1150,
+        "question": "How do you validate Server Action response in React Hook Form?",
+        "options": [
+            "Validation always happens automatically",
+            "Check returned data and setError",
+            "Cannot validate server responses ever",
+            "Only through middleware validation layer"
+        ],
+        "correctOption": 1,
+        "points": 30
+    }
 ]
