@@ -13004,12 +13004,12 @@ export const mockQuestions: Question[] = [
         "id": 1106,
         "question": "Do Server Actions work without JavaScript enabled?",
         "options": [
-            "Yes, with progressive enhancement support",
             "No, JavaScript is required always",
+            "Yes, with progressive enhancement support",
             "Only on modern browsers specifically",
             "Only with external libraries installed"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 30
     },
     {
@@ -13017,7 +13017,7 @@ export const mockQuestions: Question[] = [
         "question": "How do you pass data to Server Actions?",
         "options": [
             "Through function parameters or FormData",
-            "Only through global variables storage",
+            "Through global variables storage",
             "Through URL query strings only",
             "Through localStorage in browser only"
         ],
@@ -13028,24 +13028,24 @@ export const mockQuestions: Question[] = [
         "id": 1108,
         "question": "What is the security benefit of Server Actions?",
         "options": [
-            "Code never sent to client",
             "Faster than API endpoints always",
             "Automatically encrypts all data fully",
-            "Prevents all SQL injection attacks"
+            "Prevents all SQL injection attacks",
+            "Code never sent to client",
         ],
-        "correctOption": 0,
+        "correctOption": 3,
         "points": 30
     },
     {
         "id": 1109,
         "question": "Can you return JSX from Server Actions?",
         "options": [
-            "Yes, for optimistic updates support",
             "No, only JSON data",
+            "Yes, for optimistic updates support",
             "Only in client components specifically",
             "Only with special configuration setup"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 30
     },
     {
@@ -13064,12 +13064,12 @@ export const mockQuestions: Question[] = [
         "id": 1111,
         "question": "What is the execution context of Server Actions?",
         "options": [
-            "Always runs on server environment",
-            "Runs on client browser side",
             "Runs on both simultaneously always",
+            "Runs on client browser side",
+            "Always runs on server environment",
             "Runs only during build process"
         ],
-        "correctOption": 0,
+        "correctOption": 2,
         "points": 10
     },
     {
@@ -13088,12 +13088,12 @@ export const mockQuestions: Question[] = [
         "id": 1113,
         "question": "What happens when Server Action throws an error?",
         "options": [
-            "Caught by error boundaries properly",
             "Application crashes completely immediately always",
+            "Caught by error boundaries properly",
             "Error is silently ignored always",
             "Automatically retries three times always"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 30
     },
     {
@@ -13112,36 +13112,36 @@ export const mockQuestions: Question[] = [
         "id": 1115,
         "question": "Can Server Actions access cookies and headers?",
         "options": [
-            "Yes, using Next.js helper functions",
             "No, security prevents this access",
+            "Yes, using Next.js helper functions",
             "Only cookies, not headers ever",
             "Only in production environment mode"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 30
     },
     {
         "id": 1116,
         "question": "What is closure in Server Actions context?",
         "options": [
-            "Actions can access outer scope",
+            "Closure is not supported here",
             "Actions are always isolated completely",
+            "Actions can access outer scope",
             "Only global variables are accessible",
-            "Closure is not supported here"
         ],
-        "correctOption": 0,
+        "correctOption": 2,
         "points": 30
     },
     {
         "id": 1117,
         "question": "How do you handle validation in Server Actions?",
         "options": [
-            "Validate data before processing logic",
             "Validation happens automatically always on client",
+            "Validate data before processing logic",
             "Server Actions skip validation entirely",
             "Only client-side validation is possible"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 20
     },
     {
@@ -13160,24 +13160,204 @@ export const mockQuestions: Question[] = [
         "id": 1119,
         "question": "What is binding in Server Actions?",
         "options": [
-            "Passing arguments with bind method",
             "Connecting to database systems only",
             "Creating event listeners for forms",
+            "Passing arguments with bind method",
             "Styling components with CSS rules"
         ],
-        "correctOption": 0,
+        "correctOption": 2,
         "points": 30
     },
     {
         "id": 1120,
-        "question": "How do Server Actions integrate with React's Suspense?",
+        "question": "How do Server Actions integrate with React&apos;s Suspense?",
         "options": [
+            "Requires special Suspense configuration always",
             "Actions work with Suspense boundaries",
             "Suspense is incompatible with actions",
             "Only client actions support Suspense",
-            "Requires special Suspense configuration always"
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 30
-    }
+    },
+        {
+            "id": 1121,
+            "question": "What is useFormStatus hook in React?",
+            "options": [
+                "Hook for form validation rules",
+                "Hook for form pending state",
+                "Hook for form styling options",
+                "Hook for form data storage"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 1122,
+            "question": "Where must useFormStatus be called from?",
+            "options": [
+                "From parent form component directly",
+                "From child component of form",
+                "From any component in app",
+                "From Server Action function only"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 1123,
+            "question": "Can React Hook Form work with Server Actions?",
+            "options": [
+                "Yes, using action prop integration",
+                "No, they are incompatible together",
+                "Only with additional middleware setup",
+                "Only in production mode only"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1124,
+            "question": "What does useFormStatus return?",
+            "options": [
+                "Only boolean pending state value",
+                "Object with pending and data",
+                "Array with state and setter",
+                "String with form status message"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 1125,
+            "question": "How do you integrate React Hook Form with Server Actions?",
+            "options": [
+                "Requires external library for integration",
+                "Cannot integrate them together ever",
+                "Pass Server Action to handleSubmit",
+                "Only through API endpoints route",
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 1126,
+            "question": "What is the main benefit of useFormStatus?",
+            "options": [
+                "Automatic form validation handling logic",
+                "Prevents form submission errors always",
+                "Automatically saves form data locally",
+                "Shows loading state during submission",
+            ],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 1127,
+            "question": "Can you use useFormStatus outside a form context?",
+            "options": [
+                "Yes, anywhere in application code",
+                "Only in Server Components specifically",
+                "No, must be form child",
+                "Only with special configuration setup"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 1128,
+            "question": "How does React Hook Form handle validation with Server Actions?",
+            "options": [
+                "Client validates, then Server Action",
+                "Only server-side validation happens always",
+                "No validation is possible ever",
+                "Validation only during build time"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1129,
+            "question": "What is the pending property in useFormStatus?",
+            "options": [
+                "Boolean indicating form submission state",
+                "Number of pending form fields",
+                "Array of validation errors found",
+                "String with current form status"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 1130,
+            "question": "Can you disable submit button using useFormStatus?",
+            "options": [
+                "No, requires custom state logic",
+                "Yes, using pending property value",
+                "Only with React Hook Form",
+                "Only in Client Components specifically"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 1131,
+            "question": "How do you get form data in Server Action with React Hook Form?",
+            "options": [
+                "Through function parameters or FormData",
+                "Only through global state storage",
+                "Through localStorage in browser only",
+                "Server Actions cannot access data"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1132,
+            "question": "What is the data property in useFormStatus?",
+            "options": [
+                "Contains submitted FormData object values",
+                "Contains validation error messages only",
+                "Contains form component reference object",
+                "Contains user authentication token data"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1133,
+            "question": "Can React Hook Form trigger Server Action revalidation?",
+            "options": [
+                "Yes, Server Action handles it",
+                "No, revalidation is impossible here",
+                "Only with special hook configuration",
+                "Only during page navigation events"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1134,
+            "question": "What happens when Server Action is executing?",
+            "options": [
+                "useFormStatus pending becomes true immediately",
+                "Form automatically resets all fields",
+                "Page refreshes completely automatically always",
+                "Nothing changes in UI state"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+    {
+        "id": 1135,
+        "question": "How do you show loading spinner with useFormStatus?",
+        "options": [
+            "useFormStatus provides built-in spinner component",
+            "Check pending and render conditionally",
+            "Cannot show loading state ever",
+            "Only with external library support"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
 ]
