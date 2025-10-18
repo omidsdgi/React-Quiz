@@ -13539,5 +13539,149 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30
+    },
+    {
+        "id": 1151,
+        "question": "What is Optimistic UI in web development?",
+        "options": [
+            "Wait for server response always",
+            "Update UI before server confirms",
+            "Only update UI after validation",
+            "Automatically cache all UI changes"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1152,
+        "question": "What is the main benefit of Optimistic UI?",
+        "options": [
+            "Reduces server load significantly always",
+            "Improves perceived app performance speed",
+            "Eliminates all network requests completely",
+            "Prevents all error scenarios entirely"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1153,
+        "question": "When should you use Optimistic UI updates?",
+        "options": [
+            "For actions likely to succeed",
+            "For all server requests always",
+            "Only for read operations usage",
+            "Never with Server Actions usage"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1154,
+        "question": "What happens if an Optimistic update fails?",
+        "options": [
+            "Application crashes completely immediately always",
+            "Keep optimistic changes showing forever",
+            "Nothing, ignore the error silently",
+            "Revert UI to previous state",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 1155,
+        "question": "Which React hook is commonly used for Optimistic UI?",
+        "options": [
+            "useEffect for side effects only",
+            "useOptimistic for optimistic updates directly",
+            "useState for state management only",
+            "useRef for DOM references only"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1156,
+        "question": "What does useOptimistic hook return?",
+        "options": [
+            "Array with optimistic state, update function",
+            "Only the optimistic state value",
+            "Object with state and methods",
+            "Promise resolving to state value"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1157,
+        "question": "Can you use Optimistic UI with Server Actions?",
+        "options": [
+            "No, incompatible with Server Actions",
+            "Yes, perfect combination for UX",
+            "Only with API endpoints route",
+            "Only in Client Components specifically"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1158,
+        "question": "What is rollback in Optimistic UI context?",
+        "options": [
+            "Refreshing entire page completely always",
+            "Moving forward with new state",
+            "Reverting to previous UI state",
+            "Deleting all cached data entirely"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1159,
+        "question": "How do you handle errors in Optimistic updates?",
+        "options": [
+            "Show error and revert state",
+            "Ignore errors and continue forward",
+            "Errors cannot occur with optimistic",
+            "Automatically retry infinite times always"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1160,
+        "question": "What is the trade-off of using Optimistic UI?",
+        "options": [
+            "Complexity vs perceived performance gain",
+            "No trade-offs, always better approach",
+            "Slower performance in all cases",
+            "Cannot use with modern frameworks"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1161,
+        "question": "How does useOptimistic work with Server Actions?",
+        "options": [
+            "Prevents Server Action execution completely",
+            "Waits for action then updates",
+            "Only updates after successful action",
+            "Updates UI, action runs, confirms/reverts",
+        ],
+        "correctOption":3,
+        "points": 30
+    },
+    {
+        "id": 1162,
+        "question": "What should you consider before implementing Optimistic UI?",
+        "options": [
+            "Action success rate and rollback complexity",
+            "Only the UI design aesthetics",
+            "Server performance and speed only",
+            "Browser compatibility with CSS only"
+        ],
+        "correctOption": 0,
+        "points": 30
     }
 ]
