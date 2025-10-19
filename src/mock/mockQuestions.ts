@@ -13683,5 +13683,185 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30
-    }
+    },
+        {
+            "id": 1163,
+            "question": "What is the App Router in Next.js?",
+            "options": [
+                "New routing system using app directory",
+                "Old routing system with pages folder",
+                "External routing library for React",
+                "Database routing configuration system"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 1164,
+            "question": "What is the Pages Router in Next.js?",
+            "options": [
+                "New routing system introduced recently",
+                "API routing system only specifically",
+                "Legacy routing using pages directory",
+                "Third-party routing solution for apps",
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 1165,
+            "question": "Which router supports React Server Components?",
+            "options": [
+                "Both support them equally well",
+                "Pages Router supports them natively",
+                "App Router supports them natively",
+                "Neither router supports them ever"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 1166,
+            "question": "What is the file convention in App Router?",
+            "options": [
+                "route.js for all pages rendering",
+                "index.js for all routes always",
+                "page.js for routes and pages",
+                "app.js for routing configuration only"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 1167,
+            "question": "What is the file convention in Pages Router?",
+            "options": [
+                "page.js defines all routes always",
+                "Files in pages directory routes",
+                "route.js creates all pages rendering",
+                "Only index.js works for routing"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 1168,
+            "question": "Which router introduced layouts feature?",
+            "options": [
+                "Pages Router with _app.js only",
+                "App Router with layout.js natively",
+                "Both have identical layout support",
+                "Neither supports layouts at all"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 1169,
+            "question": "How does App Router handle loading states?",
+            "options": [
+                "Using loading.js file convention specifically",
+                "Only with custom React components",
+                "No built-in loading support available",
+                "Only through external libraries usage"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 1170,
+            "question": "How does Pages Router handle loading states?",
+            "options": [
+                "Not possible in Pages Router",
+                "Using loading.js file automatically always",
+                "Automatic loading states built-in always",
+                "Manual implementation with custom code",
+            ],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 1171,
+            "question": "Which router supports streaming by default?",
+            "options": [
+                "Pages Router streams automatically always",
+                "App Router supports streaming natively",
+                "Both support streaming equally well",
+                "Neither supports streaming at all"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 1172,
+            "question": "What is the error handling file in App Router?",
+            "options": [
+                "error.js handles all errors always",
+                "errors.js for global error handling",
+                "error.js creates error boundaries automatically",
+                "No error handling files available",
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 1173,
+            "question": "What is the error handling file in Pages Router?",
+            "options": [
+                "error.js handles all errors automatically",
+                "No error handling available ever",
+                "errors.js for error boundary creation",
+                "error.js for custom error pages",
+            ],
+            "correctOption": 3,
+            "points": 10
+        },
+        {
+            "id": 1174,
+            "question": "How does App Router define API routes?",
+            "options": [
+                "route.js file in app directory",
+                "api folder inside pages directory",
+                "Cannot create API routes ever",
+                "Only with external server setup"
+            ],
+            "correctOption": 0,
+            "points": 10
+        },
+        {
+            "id": 1175,
+            "question": "How does Pages Router define API routes?",
+            "options": [
+                "route.js in pages directory structure",
+                "with middleware configuration setup",
+                "Files in pages/api directory structure",
+                "Cannot create API routes ever",
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 1176,
+            "question": "Which router supports nested layouts natively?",
+            "options": [
+                "Pages Router with custom implementation",
+                "App Router with native support",
+                "Both support nested layouts equally",
+                "Neither supports nested layouts ever"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 1177,
+            "question": "What is the default rendering in App Router?",
+            "options": [
+                "Static generation by default always",
+                "Incremental static regeneration by default",
+                "Client-side rendering by default always",
+                "Server-side rendering by default always",
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
 ]
