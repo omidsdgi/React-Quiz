@@ -14044,4 +14044,184 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 10
     },
+    {
+        "id": 1193,
+        "question": "How does Pages Router handle dynamic routes?",
+        "options": [
+            "Using folder naming convention only",
+            "[param].js file naming convention exactly",
+            "No dynamic routes supported ever",
+            "Only with external libraries usage"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1194,
+        "question": "Which router supports route groups?",
+        "options": [
+            "Both support route groups equally",
+            "Neither supports route groups ever",
+            "Pages Router with folders only",
+            "App Router with (group) convention",
+        ],
+        "correctOption": 3,
+        "points": 20
+    },
+    {
+        "id": 1195,
+        "question": "What is the purpose of route groups in App Router?",
+        "options": [
+            "Organization without affecting URL path",
+            "Grouping API endpoints together",
+            "Creating protected routes automatically always",
+            "No practical purpose at all"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1196,
+        "question": "Can you use both routers in same project?",
+        "options": [
+            "No, must choose one only",
+            "Yes, during incremental migration phase",
+            "Only in development mode usage",
+            "Only with special Next.js version"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1197,
+        "question": "Which router is recommended for new projects?",
+        "options": [
+            "Pages Router for stability always",
+            "App Router for modern features",
+            "Both are equally recommended always",
+            "Neither, use external router instead"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1198,
+        "question": "What is not-found.js in App Router?",
+        "options": [
+            "Custom 404 page for routes",
+            "Error boundary for all errors",
+            "Loading state component for pages",
+            "API route for missing data"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1199,
+        "question": "What is 404.js in Pages Router?",
+        "options": [
+            "not-found.js alternative file naming convention",
+            "No 404 pages supported ever",
+            "Custom 404 error page exactly",
+            "Only works with middleware setup"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1200,
+        "question": "Which router supports Suspense boundaries better?",
+        "options": [
+            "Pages Router with custom boundaries",
+            "App Router with native integration",
+            "Both support Suspense equally well",
+            "Neither supports Suspense at all"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1201,
+        "question": "How does App Router handle client components?",
+        "options": [
+            "'use client' directive at top",
+            "All components client by default",
+            "Cannot use client components ever",
+            "Only with special configuration setup"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1202,
+        "question": "How does Pages Router handle client components?",
+        "options": [
+            "All components client by default",
+            "Using 'use client' directive always",
+            "Cannot use client components ever",
+            "Only Server Components are supported"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1203,
+        "question": "Which router supports middleware better?",
+        "options": [
+            "Pages Router with middleware.js only",
+            "Both support middleware equally well",
+            "App Router with enhanced features",
+            "Neither supports middleware at all"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1204,
+        "question": "What is the caching behavior in App Router?",
+        "options": [
+            "Aggressive caching by default automatically",
+            "No caching by default ever",
+            "Only manual caching is possible",
+            "Caching only for static pages"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1205,
+        "question": "What is the caching behavior in Pages Router?",
+        "options": [
+            "Aggressive caching like App Router",
+            "Depends on rendering method chosen",
+            "No caching supported at all",
+            "Only for API routes caching"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1206,
+        "question": "How does App Router handle catch-all routes?",
+        "options": [
+            "[...slug] folder naming convention exactly",
+            "[...slug].js file naming convention exactly",
+            "No catch-all routes supported ever",
+            "Only with middleware configuration setup"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1207,
+        "question": "How does Pages Router handle catch-all routes?",
+        "options": [
+            "[...slug] folder naming convention exactly",
+            "[...slug].js file naming convention exactly",
+            "No catch-all routes supported ever",
+            "Only with custom implementation code"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
 ]
