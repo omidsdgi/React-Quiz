@@ -13864,4 +13864,184 @@ export const mockQuestions: Question[] = [
             "correctOption": 3,
             "points": 20
         },
+    {
+        "id": 1178,
+        "question": "What is the default rendering in Pages Router?",
+        "options": [
+            "Server Components by default always",
+            "Depends on data fetching method",
+            "Always client-side rendering only mode",
+            "Only static generation supported ever"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1179,
+        "question": "How does App Router handle data fetching?",
+        "options": [
+            "Only with getServerSideProps function always",
+            "Only with getStaticProps function always",
+            "Using fetch with caching automatically",
+            "Cannot fetch data in components"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1180,
+        "question": "How does Pages Router handle data fetching?",
+        "options": [
+            "Using fetch API directly only",
+            "getServerSideProps, getStaticProps, and getInitialProps",
+            "Only with external libraries support",
+            "Cannot fetch data in pages"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1181,
+        "question": "Which router supports Server Actions?",
+        "options": [
+            "Pages Router with special config",
+            "App Router supports them natively",
+            "Both support Server Actions equally",
+            "Neither supports Server Actions ever"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1182,
+        "question": "What is template.js in App Router?",
+        "options": [
+            "Similar to layout but remounts",
+            "Identical to layout.js functionality exactly",
+            "Only for styling templates configuration",
+            "Not a valid file convention"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1183,
+        "question": "Does Pages Router have template.js?",
+        "options": [
+            "Yes, identical to App Router",
+            "No, not available in Pages",
+            "Only with custom configuration setup",
+            "Only in production mode available"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1184,
+        "question": "How does App Router handle metadata?",
+        "options": [
+            "Using Head component from next/head",
+            "Using metadata export or generateMetadata",
+            "Only with external SEO libraries",
+            "Cannot add metadata in routes"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1185,
+        "question": "How does Pages Router handle metadata?",
+        "options": [
+            "Using metadata export from file",
+            "Using Head component from next/head",
+            "Automatic metadata generation always available",
+            "Cannot add metadata in pages"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1186,
+        "question": "Which router supports parallel routes?",
+        "options": [
+            "Pages Router with custom setup",
+            "App Router with @ convention",
+            "Both support parallel routes equally",
+            "Neither supports parallel routes ever"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1187,
+        "question": "Which router supports intercepting routes?",
+        "options": [
+            "Both support intercepting routes equally",
+            "Pages Router with middleware only",
+            "App Router with (..) convention",
+            "Neither supports intercepting routes ever"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1188,
+        "question": "What is the _app.js file in Pages Router?",
+        "options": [
+            "Configuration file for Next.js",
+            "API route for authentication only",
+            "Error handling component for pages",
+            "Custom App component wrapper globally",
+        ],
+        "correctOption": 3,
+        "points": 10
+    },
+    {
+        "id": 1189,
+        "question": "What replaces _app.js in App Router?",
+        "options": [
+            "app.js in app directory structure",
+            "Root layout.js in app directory",
+            "_app.js still used in App",
+            "No replacement exists at all"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1190,
+        "question": "What is _document.js in Pages Router?",
+        "options": [
+            "Custom HTML document structure wrapper",
+            "Page component for documentation routes",
+            "API route for documents only",
+            "Styling configuration file for CSS"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1191,
+        "question": "Does App Router have _document.js?",
+        "options": [
+            "Yes, identical to Pages Router",
+            "No, uses layout.js instead mainly",
+            "Only with special configuration enabled",
+            "Only in production build mode"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1192,
+        "question": "How does App Router handle dynamic routes?",
+        "options": [
+            "[...param] for all routes always",
+            "[param] folder naming convention exactly",
+            "No dynamic routes supported ever",
+            "With middleware configuration setup"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
 ]
