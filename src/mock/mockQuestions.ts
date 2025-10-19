@@ -14404,4 +14404,162 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 10
     },
+    {
+        "id": 1223,
+        "question": "Which router supports static exports better?",
+        "options": [
+            "Pages Router with easier setup",
+            "Both support static exports equally",
+            "App Router with limitations noted",
+            "Neither supports static exports ever"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1224,
+        "question": "What is the performance difference between routers?",
+        "options": [
+            "App Router significantly always fast ",
+            "App Router generally faster with RSC",
+            "Pages Router always faster overall",
+            "No performance difference between them",
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1225,
+        "question": "How does App Router handle redirects?",
+        "options": [
+            "Using redirect() function from next/navigation",
+            "Only with middleware configuration setup",
+            "Using useRouter hook push method",
+            "Redirects not supported in App"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1226,
+        "question": "How does Pages Router handle redirects?",
+        "options": [
+            "Using redirect() function from navigation",
+            "Using router.push or getServerSideProps redirect",
+            "Only with middleware configuration setup",
+            "Redirects not supported in Pages"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1227,
+        "question": "Which router supports granular caching control?",
+        "options": [
+            "Both have identical caching control",
+            "Pages Router with cache control",
+            "App Router with segment config",
+            "Neither supports caching control ever"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1228,
+        "question": "Can you mix Server and Client Components in App Router?",
+        "options": [
+            "No, must choose one type",
+            "Yes, with 'use client' directive",
+            "Only with middleware configuration setup",
+            "Only in development mode usage"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1229,
+        "question": "Which router supports partial pre-rendering better?",
+        "options": [
+            "Pages Router with manual implementation",
+            "App Router with experimental PPR",
+            "Both support PPR equally well",
+            "Neither supports PPR at all"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1230,
+        "question": "How does App Router handle navigation?",
+        "options": [
+            "Using useRouter from next/navigation exactly",
+            "Using useRouter from next/router exactly",
+            "No programmatic navigation supported ever",
+            "Only with Link component usage"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1231,
+        "question": "How does Pages Router handle navigation?",
+        "options": [
+            "Using useRouter from next/navigation exactly",
+            "Using useRouter from next/router exactly",
+            "No programmatic navigation supported ever",
+            "Only with Link component usage"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1232,
+        "question": "Which router supports automatic code splitting better?",
+        "options": [
+            "Pages Router with better splitting",
+            "Both have automatic code splitting",
+            "App Router with improved splitting",
+            "Neither has code splitting support"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1233,
+        "question": "What is the bundle size difference?",
+        "options": [
+            "Pages Router always smaller bundles",
+            "No bundle size difference ever",
+            "App Router significantly larger always",
+            "App Router typically smaller bundles",
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1234,
+        "question": "Which router is better for SEO?",
+        "options": [
+            "Pages Router with better SEO",
+            "Both equal for SEO optimization",
+            "App Router with metadata API",
+            "Neither is good for SEO"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1235,
+        "question": "Can you mix Server and Client Components in Pages Router?",
+        "options": [
+            "Yes, with 'use client' directive",
+            "No, all are client components",
+            "Only with special configuration setup",
+            "Only in production mode available"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+
+
 ]
