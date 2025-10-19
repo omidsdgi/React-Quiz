@@ -14224,4 +14224,184 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 10
     },
+    {
+        "id": 1208,
+        "question": "Which router supports route handlers?",
+        "options": [
+            "Pages Router with route.js files",
+            "App Router with route.js files",
+            "Both support route handlers equally",
+            "Neither supports route handlers ever"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1209,
+        "question": "What is getServerSideProps in Pages Router?",
+        "options": [
+            "API route handler function only",
+            "Static generation function for builds",
+            "Client-side data fetching function only",
+            "Function for server-side rendering data",
+        ],
+        "correctOption": 3,
+        "points": 10
+    },
+    {
+        "id": 1210,
+        "question": "Does App Router have getServerSideProps?",
+        "options": [
+            "Yes, identical to Pages Router",
+            "No, uses async components instead",
+            "Only with special configuration enabled",
+            "Only in production mode available"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1211,
+        "question": "What is getStaticProps in Pages Router?",
+        "options": [
+            "Server-side rendering function for data",
+            "Client-side data fetching function only",
+            "Function for static generation data",
+            "API route handler function only"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1212,
+        "question": "Does App Router have getStaticProps?",
+        "options": [
+            "Yes, identical to Pages Router",
+            "Only with ISR enabled specifically",
+            "No, uses fetch with cache",
+            "Only in development mode usage"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1213,
+        "question": "Which router supports ISR (Incremental Static Regeneration)?",
+        "options": [
+            "Only Pages Router supports ISR",
+            "Both support ISR with revalidate",
+            "Only App Router supports ISR",
+            "Neither supports ISR at all"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1214,
+        "question": "How does App Router implement ISR?",
+        "options": [
+            "Using revalidate in fetch options",
+            "Using getStaticProps with revalidate property",
+            "ISR not supported in App",
+            "Only manual revalidation is possible"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1215,
+        "question": "How does Pages Router implement ISR?",
+        "options": [
+            "Using fetch with revalidate option",
+            "Using revalidate in getStaticProps return",
+            "ISR not supported in Pages",
+            "Only with middleware configuration setup"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1216,
+        "question": "Which router has better TypeScript support?",
+        "options": [
+            "Both have identical TypeScript support",
+            "Pages Router with better types",
+            "App Router with enhanced types",
+            "Neither has TypeScript support ever"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1217,
+        "question": "What is the main advantage of App Router?",
+        "options": [
+            "Server Components and modern features",
+            "Simpler learning curve for beginners",
+            "Better backwards compatibility always guaranteed",
+            "Faster build times in production"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1218,
+        "question": "What is the main advantage of Pages Router?",
+        "options": [
+            "Server Components support built-in always",
+            "Maturity and ecosystem stability established",
+            "Better performance in all cases",
+            "More modern features than App"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1219,
+        "question": "Can App Router use getInitialProps?",
+        "options": [
+            "Yes, fully supported function always",
+            "No, not recommended in App",
+            "Only in Client Components specifically",
+            "Only with special configuration setup"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1220,
+        "question": "Which router supports font optimization better?",
+        "options": [
+            "Pages Router with next/font only",
+            "App Router with next/font integration",
+            "Both optimize fonts equally well",
+            "Neither optimizes fonts at all"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1221,
+        "question": "How does App Router handle image optimization?",
+        "options": [
+            "Using next/image component with features",
+            "No image optimization supported ever",
+            "Only with external CDN services",
+            "Manual optimization required always for images"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1222,
+        "question": "How does Pages Router handle image optimization?",
+        "options": [
+            "No image optimization available ever",
+            "Using next/image component with features",
+            "Only with external libraries support",
+            "Automatic optimization without configuration always"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
 ]
