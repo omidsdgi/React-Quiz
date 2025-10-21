@@ -732,7 +732,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 67,
+        "id": 65,
         question: "What are the main targets of React performance optimization?",
         options: [
             "Writing shorter code and fewer files",
@@ -744,19 +744,19 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 68,
+        "id": 66,
         "question":"When is React.memo not effective for optimization?",
         options: [
             "When props remain stable across renders",
             "When the component has no props",
-            "When new object references are passed as props each render",
+            "When new object or references are passed as props",
             "When state is managed internally"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 69,
+        "id": 67,
         "question": "Which hook prevents recalculation of expensive values?",
         options: [
             "useRef",
@@ -768,19 +768,19 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 70,
+        "id": 68,
         "question": "What does React.StrictMode primarily help developers identify?",
         options: [
-            "Application performance bugs",
+            "Application performance bugs and issues",
             "Side effects and component lifecycle issues",
-            "Code style violations",
-            "Memory leaks exclusively"
+            "Code style violations and patterns",
+            "Memory leaks exclusively in components"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
-        "id": 71,
+        "id": 69,
         "question": "What is useCallback's primary function?",
         options: [
             "Memoizing function references between renders",
@@ -792,7 +792,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 72,
+        "id": 70,
         "question": "What is the recommended technique for rendering thousands of list items?",
         options: [
             "Wrapping everything in Context providers",
@@ -804,22 +804,22 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 73,
+        "id": 71,
         "question": "What does the React Profiler help you analyze?",
         options: [
-            "Node.js memory leaks",
+            "Node.js memory leaks in server",
             "Component render times and re-render patterns",
-            "Network usage and bundle size",
+            "Network usage and bundle size metrics",
             "Code style and formatting errors"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
-        "id": 74,
+        "id": 72,
         "question":  "What can happen if you overuse useMemo?",
         options: [
-            "It adds memoization overhead that may decrease performance",
+            "It adds memoization overhead so decrease performance",
             "It significantly improves SEO rankings",
             "It makes all components pure by default",
             "It eliminates the need for useState"
@@ -828,7 +828,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 75,
+        "id": 73,
         "question": "Which hook maintains a mutable value without triggering re-renders?",
         options: [
             "useState",
@@ -840,7 +840,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 76,
+        "id": 74,
         "question": "Why can't you directly use fetch API calls inside Redux reducers?",
         options: [
             "Reducers cannot access browser APIs like fetch",
@@ -852,7 +852,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 77,
+        "id": 75,
         "question":  "Why do some effects execute twice in React.StrictMode during development?",
         options: [
             "Because React has an internal bug",
@@ -864,19 +864,19 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 78,
+        "id": 76,
         "question": "What are the primary areas of focus for React performance optimization?",
         options: [
             "Using more hooks and creating additional components",
             "Focusing only on CSS and backend optimizations",
-            "Increasing component nesting depth",
+            "Increasing component nesting dept significantly",
             "Preventing wasted renders and reducing bundle size"
         ],
         "correctOption": 3,
         "points": 10
     },
     {
-        "id": 79,
+        "id": 77,
         "question":"Which technique most directly reduces wasted re-renders?",
         options: [
             "Code splitting with React.lazy",
@@ -888,19 +888,19 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 80,
+        "id": 78,
         "question":  "How does React.lazy() help reduce bundle size?",
         options: [
             "It prevents unnecessary component re-renders",
             "It automatically compresses component code",
-            "It loads components only when they are needed",
+            "It loads components only when needed",
             "It removes unused CSS rules automatically"
         ],
         "correctOption": 2,
         "points": 20
     },
     {
-        "id": 81,
+        "id": 79,
         "question":  "What technique improves performance when rendering large lists in React?",
         "options": [
             "Adding more event listeners to list items",
@@ -911,9 +911,8 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20
     },
-
     {
-        "id": 83,
+        "id": 80,
         "question": "Which combination addresses the three main React optimization areas?",
         "options": [
             "React.memo, React.lazy, and useMemo hooks",
