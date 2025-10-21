@@ -171,9 +171,9 @@ export const mockQuestions: Question[] = [
         "question": "In React Router, what does a route typically represent?",
         "options": [
             "A function for fetching remote data",
-            "A connection between a URL and a component",
-            "A global state object",
-            "A reference to a DOM element"
+            "A connection between URL and component",
+            "A global state object for context",
+            "A reference to specific DOM element"
         ],
         "correctOption": 1,
         "points": 10
@@ -183,9 +183,9 @@ export const mockQuestions: Question[] = [
         "question": "What capability does routing provide to users in React applications?",
         "options": [
             "Navigation between screens using URLs",
-            "Automatic global styling",
-            "Built-in API response caching",
-            "Persistent component state"
+            "Automatic global styling for components",
+            "Built-in API response caching system",
+            "Persistent component state across sessions"
         ],
         "correctOption": 0,
         "points": 10
@@ -194,10 +194,10 @@ export const mockQuestions: Question[] = [
         "id": 19,
         "question": "What is React Router's main responsibility?",
         "options": [
-            "Managing global application state",
+            "Managing global application state efficiently",
             "Handling navigation and component rendering",
-            "Providing CSS-in-JS utilities",
-            "Coordinating API data fetching"
+            "Providing CSS-in-JS utilities for styling",
+            "Coordinating API data fetching operations"
         ],
         "correctOption": 1,
         "points": 10
@@ -206,9 +206,9 @@ export const mockQuestions: Question[] = [
         "id": 20,
         "question": "What defines a Single Page Application (SPA)?",
         "options": [
-            "An app that works on only one device",
-            "A web app that loads once and updates content dynamically",
-            "A website that reloads on each navigation",
+            "An app that works only one device",
+            "A web app loading once, updating dynamically",
+            "A website reloading on each navigation",
             "An app with exactly one route"
         ],
         "correctOption": 1,
@@ -218,8 +218,8 @@ export const mockQuestions: Question[] = [
         "id": 21,
         "question":"What is a primary benefit of Single Page Applications?",
         "options": [
-            "Faster page reloads on navigation",
-            "Reduced server computational load",
+            "Faster page reloads on every navigation",
+            "Reduced server computational load significantly",
             "Smoother and more responsive navigation",
             "No JavaScript required for functionality"
         ],
@@ -230,8 +230,8 @@ export const mockQuestions: Question[] = [
         "id": 22,
         "question":"How do SPAs handle URL changes during navigation?",
         "options": [
-            "Each navigation triggers a full server request",
-            "They update URLs using the History API without page reloads",
+            "Each navigation triggers full server request",
+            "Update URLs using History API without reload",
             "They completely hide URLs from users",
             "They always use server-side redirects"
         ],
@@ -242,8 +242,8 @@ export const mockQuestions: Question[] = [
         "id": 23,
         "question": "Where does rendering primarily occur in Single Page Applications?",
         "options": [
-            "Exclusively on the server before sending HTML",
-            "Primarily on the client using JavaScript",
+            "Exclusively on server before sending HTML",
+            "Primarily on client using JavaScript",
             "Equally distributed between client and server",
             "On external CDN servers only"
         ],
@@ -254,10 +254,10 @@ export const mockQuestions: Question[] = [
         "id": 24,
         "question": "What happens when routing changes the URL in a React SPA?",
         "options": [
-            "The browser performs a full page reload",
+            "The browser performs full page reload",
             "The URL change is ignored completely",
-            "React updates the UI to match the new URL",
-            "The application restarts execution"
+            "React updates UI to match new URL",
+            "The application restarts execution completely"
         ],
         "correctOption": 2,
         "points": 10
@@ -266,10 +266,10 @@ export const mockQuestions: Question[] = [
         "id": 25,
         "question": "What primarily drives content updates in Single Page Applications?",
         "options": [
-            "JavaScript manipulating the DOM",
+            "JavaScript manipulating the DOM directly",
             "Server sending new HTML pages",
-            "Full browser reloads",
-            "CSS-only layout changes"
+            "Full browser reloads after each action",
+            "CSS-only layout changes without scripts"
         ],
         "correctOption": 0,
         "points": 10
@@ -279,7 +279,7 @@ export const mockQuestions: Question[] = [
         "question":  "What is a significant SEO challenge for Single Page Applications?",
         "options": [
             "They cannot use secure HTTPS connections",
-            "Search engines may struggle with dynamic content indexing",
+            "Search engines struggle with dynamic content",
             "They don't support inter-page linking",
             "They're incompatible with modern web standards"
         ],
@@ -291,9 +291,9 @@ export const mockQuestions: Question[] = [
         "question": "How do client-side and server-side routing differ?",
         "options": [
             "Client-side routing always triggers page reloads",
-            "Server-side routing never performs full page loads",
+            "Server-side routing never performs full loads",
             "They function identically in modern browsers",
-            "Client-side updates views without reloading; server-side triggers full page loads"
+            "Client updates without reload, server triggers reload"
         ],
         "correctOption": 3,
         "points": 20
@@ -302,10 +302,10 @@ export const mockQuestions: Question[] = [
         "id": 28,
         "question":"What approach can improve SEO for Single Page Applications?",
         "options": [
-            "Converting to multiple static HTML pages only",
-            "Completely avoiding routing libraries",
+            "Converting to multiple static HTML pages",
+            "Completely avoiding routing libraries entirely",
             "Implementing server-side rendering (SSR)",
-            "Disabling JavaScript entirely"
+            "Disabling JavaScript entirely for crawlers"
         ],
         "correctOption": 2,
         "points": 30
@@ -314,10 +314,10 @@ export const mockQuestions: Question[] = [
         "id": 29,
         "question":  "What is ESLint's primary function in JavaScript projects?",
         "options": [
-            "Managing application state",
-            "Analyzing code for potential issues and style problems",
-            "Rendering user interface components",
-            "Executing automated unit tests"
+            "Managing application state across components",
+            "Analyzing code for issues and style problems",
+            "Rendering user interface components dynamically",
+            "Executing automated unit tests automatically"
         ],
         "correctOption": 1,
         "points": 10
@@ -326,7 +326,7 @@ export const mockQuestions: Question[] = [
         "id": 30,
         "question": "When is ESLint typically run during development?",
         "options": [
-            "Only during production deployment",
+            "Only during production deployment phase",
             "During the build process with bundlers",
             "During development and before code commits",
             "Only after creating production builds"
@@ -339,7 +339,7 @@ export const mockQuestions: Question[] = [
         "question":  "Does ESLint only check for syntax errors?",
         "options": [
             "Yes, it only validates syntax",
-            "No, it also enforces code style and finds logic issues",
+            "No, it also enforces style and finds logic issues",
             "Yes, it replaces the JavaScript compiler",
             "No, it only builds production bundles"
         ],
@@ -350,10 +350,10 @@ export const mockQuestions: Question[] = [
         "id": 32,
         "question": "Which file is commonly used to configure ESLint rules?",
         "options": [
-            ".eslint.config.js",
-            ".eslint",
-            ".eslintrc.json",
-            ".linterrc.js"
+            ".eslint.config.js for configuration",
+            ".eslint for all settings",
+            ".eslintrc.json for rules",
+            ".linterrc.js for configuration"
         ],
         "correctOption": 2,
         "points": 20
@@ -374,10 +374,10 @@ export const mockQuestions: Question[] = [
         "id": 34,
         "question": "Which command runs ESLint from the command line?",
         "options": [
-            "eslint-check",
-            "lint-start",
-            "eslint .",
-            "node run eslint"
+            "eslint-check for running checks",
+            "lint-start to begin linting",
+            "eslint . for current directory",
+            "node run eslint for execution"
         ],
         "correctOption": 2,
         "points": 20
@@ -386,10 +386,10 @@ export const mockQuestions: Question[] = [
         "id": 35,
         "question": "How can you exclude files from ESLint analysis?",
         "options": [
-            "Add them to .eslintignore",
+            "Add them to .eslint ignore file",
             "Remove them from package.json",
             "Comment them in index.html",
-            "Rename the files with .skip extension"
+            "Rename files with .skip extension"
         ],
         "correctOption": 0,
         "points": 20
@@ -13088,7 +13088,7 @@ export const mockQuestions: Question[] = [
         "id": 1113,
         "question": "What happens when Server Action throws an error?",
         "options": [
-            "Application crashes completely immediately always",
+            "Application immediately crashes completely ",
             "Caught by error boundaries properly",
             "Error is silently ignored always",
             "Automatically retries three times always"
