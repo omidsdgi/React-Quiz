@@ -578,7 +578,7 @@ export const mockQuestions: Question[] = [
         "id": 51,
         "question": "What is the key difference between useCallback and useMemo?",
         "options": [
-            "useCallback memoizes functions, useMemo memoizes computed values",
+            "useCallback memoizes functions, useMemo memoizes values",
             "useCallback stores values, useMemo stores functions",
             "useMemo is for effects, useCallback is for state",
             "They perform identical functions"
@@ -590,9 +590,9 @@ export const mockQuestions: Question[] = [
         "id": 52,
         "question": "Which practice commonly causes unnecessary re-renders in React?",
         "options": [
-            "Using keys properly in lists",
-            "Creating new objects or functions inside render methods",
-            "Applying React.memo correctly",
+            "Using keys properly in list rendering",
+            "Creating new objects or functions during render",
+            "Applying React.memo correctly to components",
             "Splitting components into smaller pieces"
         ],
         "correctOption": 1,
@@ -603,7 +603,7 @@ export const mockQuestions: Question[] = [
         "question": "What is the purpose of the 'key' prop in React lists?",
         "options": [
             "To apply CSS styling to list items",
-            "To help React identify and track list item changes",
+            "To help React identify and track item changes",
             "To improve component visual design",
             "To pass data between list components"
         ],
@@ -639,10 +639,10 @@ export const mockQuestions: Question[] = [
         "id": 57,
         "question": "What is the main benefit of React.lazy with Suspense?",
         "options": [
-            "It accelerates rendering performance",
-            "It enables code splitting and smaller bundle size",
-            "It improves SEO ranking",
-            "It prevents memory issues"
+            "It accelerates rendering performance significantly",
+            "It enables code splitting and smaller bundles",
+            "It improves SEO ranking automatically",
+            "It prevents memory issues in applications"
         ],
         "correctOption": 1,
         "points": 10
@@ -652,7 +652,7 @@ export const mockQuestions: Question[] = [
         "question": "When does React.memo fail to prevent re-renders?",
         options: [
             "When props remain unchanged between renders",
-            "When new object or function references are created each render",
+            "When new object or references are created",
             "When the component has no props",
             "When the component uses internal state"
         ],
@@ -676,8 +676,8 @@ export const mockQuestions: Question[] = [
         "question": "Which strategy reduces unnecessary Context re-renders?",
         options: [
             "Using multiple Context providers for everything",
-            "Adding more consumer components",
-            "Placing useEffect hooks in the Context",
+            "Adding more consumer components everywhere",
+            "Placing useEffect hooks in Context",
             "Splitting Context by logical data boundaries"
         ],
         "correctOption": 3,
@@ -687,7 +687,7 @@ export const mockQuestions: Question[] = [
         "id": 61,
         "question": "In React Profiler, what does the 'Commit' phase measure?",
         options: [
-            "Time spent applying updates to the DOM",
+            "Time spent applying updates to DOM",
             "Time spent calculating what changed",
             "Time spent running useEffect hooks",
             "Total render plus lifecycle time"
@@ -700,7 +700,7 @@ export const mockQuestions: Question[] = [
         "question":  "Why can overusing useCallback potentially hurt performance?",
         options: [
             "It always improves performance significantly",
-            "Memoization overhead may overstep benefits for simple functions",
+            "For simple functions memoization overhead may overstep benefits",
             "It causes memory leaks in certain cases",
             "It only works with class components"
         ],
