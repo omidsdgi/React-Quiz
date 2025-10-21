@@ -398,8 +398,8 @@ export const mockQuestions: Question[] = [
         "id": 36,
         "question": "What is true about creating custom ESLint rules?",
         "options": [
-            "Rules can be written as functions that analyze the Abstract Syntax Tree",
-            "Rules can only be configured from command line",
+            "Rules analyze Abstract Syntax Tree structure",
+            "Rules can only configure from command line",
             "Rules must be embedded in HTML files",
             "Custom rules only work with Angular projects"
         ],
@@ -410,8 +410,8 @@ export const mockQuestions: Question[] = [
         "id": 37,
         "question": "How do you properly configure ESLint for a React project?",
         "options": [
-            "Install React plugin and extend recommended React rules",
-            "Install Redux alongside ESLint",
+            "Install React plugin and extend recommended rules",
+            "Install Redux alongside ESLint configuration",
             "Use Vite instead of ESLint configuration",
             "Install ESLint only without additional plugins"
         ],
@@ -420,12 +420,12 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 38,
-        "question": "How do 'rules', 'extends', and 'plugins' differ in ESLint configuration?",
+        "question": "How do 'rules', 'extends', and 'plugins' differ in ESLint?",
         "options": [
-            "'rules' configure plugins, 'extends' sets environments, 'plugins' add globals",
-            "'rules' define specific configurations, 'extends' inherit preset configurations, 'plugins' add new rule definitions",
-            "All three properties are interchangeable",
-            "Only 'rules' matter; others are just documentation"
+            "Rules configure plugins, extends sets environments",
+            "Rules define configs, extends inherits, plugins add",
+            "All three properties are completely interchangeable",
+            "Only rules matter, others are documentation"
         ],
         "correctOption": 1,
         "points": 30
@@ -435,8 +435,8 @@ export const mockQuestions: Question[] = [
         "question":"Why are there multiple approaches to styling React components?",
         "options": [
             "Because React enforces one specific method",
-            "Because CSS is not supported by default in React",
-            "Because React is unopinionated about styling approaches",
+            "Because CSS is not supported by default",
+            "Because React is unopinionated about styling",
             "Because JSX only supports inline styles"
         ],
         "correctOption": 2,
@@ -446,7 +446,7 @@ export const mockQuestions: Question[] = [
         "id": 40,
         "question": "What is the main advantage of CSS Modules?",
         "options": [
-            "They enable CSS-in-JS syntax",
+            "They enable CSS-in-JS syntax automatically",
             "They apply styles globally by default",
             "They compile CSS to JavaScript at runtime",
             "They provide locally scoped class names"
@@ -472,7 +472,7 @@ export const mockQuestions: Question[] = [
         "options": [
             "They cannot be used with server-side rendering",
             "They are not supported by modern browsers",
-            "They may cause unintended style conflicts between components",
+            "They may cause unintended style conflicts",
             "They require special JSX syntax"
         ],
         "correctOption": 2,
@@ -482,9 +482,9 @@ export const mockQuestions: Question[] = [
         "id": 43,
         "question":"Why is storing UI state in the URL beneficial?",
         "options": [
-            "To reduce JavaScript bundle size",
-            "To improve visual aesthetics",
-            "To enable sharing and bookmarking of application states",
+            "To reduce JavaScript bundle size significantly",
+            "To improve visual aesthetics of application",
+            "To enable sharing and bookmarking states",
             "To prevent unnecessary component re-renders"
         ],
         "correctOption": 2,
@@ -496,7 +496,7 @@ export const mockQuestions: Question[] = [
         "options": [
             "Using query parameters like ?search=react",
             "Saving theme preferences in localStorage",
-            "Managing form input with useState",
+            "Managing form input with useState hook",
             "Passing data through component props"
         ],
         "correctOption": 0,
@@ -518,9 +518,9 @@ export const mockQuestions: Question[] = [
         "id": 46,
         "question": "Which approach maintains UI state after a browser refresh?",
         "options": [
-            "Storing state in localStorage or URL parameters",
-            "Using useState exclusively",
-            "Using React Context only",
+            "Storing state in localStorage or URL",
+            "Using useState exclusively for state",
+            "Using React Context only for sharing",
             "Keeping state in local variables"
         ],
         "correctOption": 0,
@@ -542,10 +542,10 @@ export const mockQuestions: Question[] = [
         "id": 48,
         "question": "What does React.memo() do?",
         "options": [
-            "Caches expensive calculations",
-            "Prevents component re-render when props haven't changed",
+            "Caches expensive calculations for performance",
+            "Prevents re-render when props haven't changed",
             "Stores component state in memory",
-            "Creates new component instances"
+            "Creates new component instances automatically"
         ],
         "correctOption": 1,
         "points": 10
@@ -555,8 +555,8 @@ export const mockQuestions: Question[] = [
         "question": "When should you use useMemo?",
         "options": [
             "For expensive calculations or object creation",
-            "To replace all useState hooks",
-            "For simple string concatenations",
+            "To replace all useState hooks completely",
+            "For simple string concatenations only",
             "For every variable in components"
         ],
         "correctOption": 0,
@@ -566,10 +566,10 @@ export const mockQuestions: Question[] = [
         "id": 50,
         "question":  "Which technique helps avoid prop drilling?",
         "options": [
-            "Using more useState hooks",
+            "Using more useState hooks throughout",
             "Creating additional wrapper components",
-            "Using React Context API",
-            "Passing more props through intermediary components"
+            "Using React Context API effectively",
+            "Passing more props through components"
         ],
         "correctOption": 2,
         "points": 10
