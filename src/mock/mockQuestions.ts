@@ -14559,6 +14559,364 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20
     },
-
-
-]
+        {
+            "id": 1236,
+            "question": "What does 'UI as a function of state' mean in React?",
+            "options": [
+                "UI components are JavaScript functions only",
+                "UI automatically reflects current state values",
+                "UI requires manual updates after state changes",
+                "UI stores all state in function scope"
+            ],
+            "correctOption": 1,
+            "points": 10
+        },
+        {
+            "id": 1237,
+            "question": "In the equation UI = f(state), what does 'f' represent?",
+            "options": [
+                "The fetch function for getting data",
+                "The filter function for arrays of data",
+                "The rendering logic for transforming state to UI",
+                "The function component definition"
+            ],
+            "correctOption": 2,
+            "points": 20
+        },
+        {
+            "id": 1238,
+            "question": "What is the main benefit of treating UI as a function of state?",
+            "options": [
+                "UI updates are predictable and deterministic",
+                "Functions run faster than class components",
+                "State becomes optional in all components",
+                "Manual DOM manipulation becomes easier"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1239,
+            "question": "How does React implement the concept of 'UI as a function of state'?",
+            "options": [
+                "By storing UI templates in database",
+                "By converting state to HTML strings",
+                "By manually updating DOM when state changes",
+                "By re-rendering components when state changes",
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 1240,
+            "question": "What happens when state changes in 'UI as function of state' model?",
+            "options": [
+                "UI remains unchanged until manual refresh",
+                "State reverts to previous value automatically",
+                "UI automatically recomputes and re-renders",
+                "UI requires explicit update function call"
+            ],
+            "correctOption": 2,
+            "points": 10
+        },
+        {
+            "id": 1241,
+            "question": "Why is 'UI as a function of state' considered declarative?",
+            "options": [
+                "You write how to update each element",
+                "You manually describe DOM manipulation steps",
+                "You declare functions before using them",
+                "You declare what UI should be for state",
+            ],
+            "correctOption": 3,
+            "points": 20
+        },
+        {
+            "id": 1242,
+            "question": "In vanilla JavaScript, why is 'UI as function of state' harder to achieve?",
+            "options": [
+                "You must manually sync state with DOM",
+                "JavaScript cannot handle state changes",
+                "Functions cannot return HTML in JavaScript",
+                "JavaScript doesn't support functions at all",
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1243,
+            "question": "What does deterministic rendering mean in 'UI as function of state'?",
+            "options": [
+                "Same state always produces same UI output",
+                "UI renders at predetermined time intervals",
+                "Rendering happens in determined order always",
+                "State determines component lifecycle only"
+            ],
+            "correctOption": 0,
+            "points": 30
+        },
+        {
+            "id": 1244,
+            "question": "How does component re-rendering relate to 'UI as function of state'?",
+            "options": [
+                "Re-rendering is separate from state changes",
+                "Re-rendering only happens on manual trigger",
+                "Re-rendering is the function call with state",
+                "Re-rendering prevents state from changing"
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+        {
+            "id": 1245,
+            "question": "What would violate the 'UI as function of state' principle?",
+            "options": [
+                "Using useState to manage component state",
+                "Directly manipulating DOM without updating state",
+                "Passing props from parent to child",
+                "Using useEffect for side effects"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 1246,
+            "question": "Why is 'UI as a function of state' easier to debug?",
+            "options": [
+                "It separates data and presentation clearly",
+                "State and UI relationship is predictable",
+                "It prevents side effects in rendering",
+                "It ensures UI updates automatically with state changes"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 1247,
+            "question": "In 'UI = f(state)', what happens if function is impure?",
+            "options": [
+                "State management becomes easier overall",
+                "React automatically makes function pure",
+                "Performance improves significantly for app",
+                "UI becomes unpredictable and harder to debug",
+            ],
+            "correctOption": 3,
+            "points": 30
+        },
+        {
+            "id": 1248,
+            "question": "How does React's Virtual DOM support 'UI as function of state'?",
+            "options": [
+                "It stores all state in virtual memory",
+                "It compares new and old UI efficiently",
+                "It prevents state from changing",
+                "It converts state to virtual objects"
+            ],
+            "correctOption": 1,
+            "points": 20
+        },
+        {
+            "id": 1249,
+            "question": "What does 'single source of truth' mean in 'UI as function of state'?",
+            "options": [
+                "State is the authoritative source for UI",
+                "Only one component can have state",
+                "UI can only display one piece data",
+                "Truth values can only be boolean"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1250,
+            "question": "Why does React prevent direct state mutation in 'UI as function' model?",
+            "options": [
+                "Mutations are too slow for performance",
+                "Direct mutations don't trigger re-renders",
+                "React cannot detect primitive type mutations",
+                "State must always be string type"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 1251,
+            "question": "How does 'UI as function of state' simplify state management?",
+            "options": [
+                "You only update state, UI updates automatically",
+                "State management is completely eliminated",
+                "UI and state are stored together",
+                "Functions manage state without components"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1252,
+            "question": "What is the relationship between props and 'UI as function of state'?",
+            "options": [
+                "Props are part of input to function",
+                "Props replace state completely in function",
+                "Props and state are unrelated concepts",
+                "Props prevent function from rendering UI"
+            ],
+            "correctOption": 0,
+            "points": 20
+        },
+        {
+            "id": 1253,
+            "question": "How does immutability relate to 'UI as function of state'?",
+            "options": [
+                "Immutability makes state updates unpredictable",
+                "Immutability ensures function remains pure and predictable",
+                "Immutability is unrelated to function model",
+                "Immutability prevents UI from updating"
+            ],
+            "correctOption": 1,
+            "points": 30
+        },
+        {
+            "id": 1254,
+            "question": "Why is testing easier with 'UI as function of state' model?",
+            "options": [
+                "Tests run faster with function components",
+                "Testing frameworks only support this model",
+                "You can test input state and output",
+                "State cannot be tested in model"
+            ],
+            "correctOption": 2,
+            "points": 30
+        },
+    {
+        "id": 1255,
+        "question": "What does 'unidirectional data flow' mean in 'UI as function of state'?",
+        "options": [
+            "Data flows only from child to parent",
+            "Data can flow in any direction freely",
+            "Data flows from state to UI in direction",
+            "Data flow is circular between components"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+                "id": 1256,
+                "question": "What does 'UI as a function of data' mean in modern web applications?",
+                "options": [
+                    "UI components store all application data",
+                    "UI automatically reflects the current data values",
+                    "UI requires manual refresh after data changes",
+                    "UI functions fetch data from servers"
+                ],
+                "correctOption": 1,
+                "points": 10
+            },
+                {
+                    "id": 1257,
+                    "question": "How does 'UI = f(data)' differ from 'UI = f(state)'?",
+                    "options": [
+                        "Data typically comes from external sources",
+                        "Data and state are completely identical",
+                        "Data cannot trigger UI updates",
+                        "Data is always stored locally only"
+                    ],
+                    "correctOption": 0,
+                    "points": 20
+                },
+                {
+                    "id": 1258,
+                    "question": "In 'UI as function of data', what happens when server data changes?",
+                    "options": [
+                        "UI remains unchanged until page reload",
+                        "UI automatically updates to reflect new data",
+                        "Data reverts to cached version automatically",
+                        "UI requires manual DOM manipulation"
+                    ],
+                    "correctOption": 1,
+                    "points": 10
+                },
+                {
+                    "id": 1259,
+                    "question": "Why is 'UI as function of data' crucial for real-time applications?",
+                    "options": [
+                        "Real-time apps don't need state management",
+                        "UI automatically syncs with changing server data",
+                        "Data updates are slower than state",
+                        "Functions run faster with external data"
+                    ],
+                    "correctOption": 1,
+                    "points": 20
+                },
+                {
+                    "id": 1260,
+                    "question": "How does React Query implement 'UI as function of data'?",
+                    "options": [
+                        "It syncs server data with UI automatically",
+                        "It stores data permanently in state",
+                        "It converts data to local storage",
+                        "It prevents data from changing",
+                    ],
+                    "correctOption": 0,
+                    "points": 20
+                },
+                {
+                    "id": 1261,
+                    "question": "What is the main challenge in 'UI as function of data' model?",
+                    "options": [
+                        "Data is too fast to process",
+                        "Keeping UI synchronized with remote data changes",
+                        "Data cannot be converted to UI",
+                        "Functions cannot accept external data"
+                    ],
+                    "correctOption": 1,
+                    "points": 20
+                },
+                {
+                    "id": 1262,
+                    "question": "How does 'UI as function of data' relate to Server Components in Next.js?",
+                    "options": [
+                        "Server Components fetch and render data directly",
+                        "Server Components cannot access any data",
+                        "Server Components only handle local state",
+                        "Server Components prevent data fetching"
+                    ],
+                    "correctOption": 0,
+                    "points": 30
+                },
+                {
+                    "id": 1263,
+                    "question": "What problem does 'UI as function of data' solve in collaborative apps?",
+                    "options": [
+                        "Users cannot share data with others",
+                        "Collaboration requires manual data sync",
+                        "Data conflicts are impossible to resolve",
+                        "Multiple users see consistent data-driven UI",
+                    ],
+                    "correctOption": 3,
+                    "points": 30
+                },
+                {
+                    "id": 1264,
+                    "question": "Why is caching important in 'UI as function of data' model?",
+                    "options": [
+                        "Caching prevents data from being used",
+                        "Caching improves performance while maintaining sync",
+                        "Caching replaces the need for functions",
+                        "Caching stores UI instead of data"
+                    ],
+                    "correctOption": 1,
+                    "points": 20
+                },
+                {
+                    "id": 1265,
+                    "question": "How does optimistic UI relate to 'UI as function of data'?",
+                    "options": [
+                        "UI updates before server confirms data change",
+                        "Optimistic UI prevents data from changing",
+                        "Data optimism improves function performance",
+                        "UI waits for server data always",
+                    ],
+                    "correctOption": 0,
+                    "points": 30
+                }
+                ]
