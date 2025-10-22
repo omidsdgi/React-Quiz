@@ -924,19 +924,19 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 84,
+        "id": 81,
         "question": "What defines a wasted render in React?",
         "options": [
-            "Any render that takes longer than 16 milliseconds to execute",
+            "Any render that takes longer than 16 ms to execute",
             "The initial render when a component first mounts in the tree",
-            "A render where the component output is identical to previous render",
+            "A render where output is identical to previous render",
             "A render triggered by legitimate state or prop changes"
         ],
         "correctOption": 2,
         "points": 10
     },
     {
-        "id": 85,
+        "id": 82,
         "question": "When does a React component re-render?",
         "options": [
             "Only when its internal state changes through setState calls",
@@ -948,20 +948,19 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 86,
+        "id": 83,
         "question": "What happens when a React Context value changes?",
         "options": [
             "Only the Provider component re-renders after the value change",
-            "All consumer components re-render regardless of which data changed",
             "Only consumers reading the specific changed property will re-render",
+            "All consumer components re-render regardless of which data changed",
             "No consumer re-renders unless explicitly triggered by developer"
         ],
-        "correctOption": 1,
+        "correctOption": 2,
         "points": 20
     },
-
     {
-        "id": 88,
+        "id": 84,
         "question":"How can you prevent Context consumers from re-rendering when unrelated data changes?",
         "options": [
             "Apply React.memo to all context consumers in the application",
@@ -972,9 +971,8 @@ export const mockQuestions: Question[] = [
         "correctOption": 2,
         "points": 30
     },
-
     {
-        "id": 90,
+        "id": 85,
         "question": "Which approach prevents creating new context value objects on every render?",
         "options": [
             "const value = useMemo(() => ({ user, setUser }), [user]);",
