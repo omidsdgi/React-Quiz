@@ -634,9 +634,8 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 10
     },
-
     {
-        "id": 57,
+        "id": 56,
         "question": "What is the main benefit of React.lazy with Suspense?",
         "options": [
             "It accelerates rendering performance significantly",
@@ -648,7 +647,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 58,
+        "id": 57,
         "question": "When does React.memo fail to prevent re-renders?",
         options: [
             "When props remain unchanged between renders",
@@ -660,7 +659,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 59,
+        "id": 58,
         "question":  "What happens when useMemo depends on a value that changes every render?",
         options: [
             "It recalculates every render, losing optimization benefits",
@@ -672,7 +671,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 60,
+        "id": 59,
         "question": "Which strategy reduces unnecessary Context re-renders?",
         options: [
             "Using multiple Context providers for everything",
@@ -684,7 +683,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 61,
+        "id": 60,
         "question": "In React Profiler, what does the 'Commit' phase measure?",
         options: [
             "Time spent applying updates to DOM",
@@ -696,7 +695,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 62,
+        "id": 61,
         "question":  "Why can overusing useCallback potentially hurt performance?",
         options: [
             "It always improves performance significantly",
@@ -708,7 +707,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 63,
+        "id": 62,
         "question": "What is the recommended approach for handling very large lists in React?",
         options: [
             "Wrapping each list item in React.memo",
@@ -720,7 +719,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 64,
+        "id": 63,
         "question": "Which React hook memoizes computed values between renders?",
         options: [
             "useRef",
@@ -732,7 +731,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 65,
+        "id": 64,
         question: "What are the main targets of React performance optimization?",
         options: [
             "Writing shorter code and fewer files",
@@ -744,7 +743,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 66,
+        "id": 65,
         "question":"When is React.memo not effective for optimization?",
         options: [
             "When props remain stable across renders",
@@ -756,7 +755,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 67,
+        "id": 66,
         "question": "Which hook prevents recalculation of expensive values?",
         options: [
             "useRef",
@@ -768,7 +767,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 68,
+        "id": 67,
         "question": "What does React.StrictMode primarily help developers identify?",
         options: [
             "Application performance bugs and issues",
@@ -780,7 +779,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 69,
+        "id": 68,
         "question": "What is useCallback's primary function?",
         options: [
             "Memoizing function references between renders",
@@ -792,7 +791,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 70,
+        "id": 69,
         "question": "What is the recommended technique for rendering thousands of list items?",
         options: [
             "Wrapping everything in Context providers",
@@ -804,7 +803,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 71,
+        "id": 70,
         "question": "What does the React Profiler help you analyze?",
         options: [
             "Node.js memory leaks in server",
@@ -816,7 +815,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 72,
+        "id": 71,
         "question":  "What can happen if you overuse useMemo?",
         options: [
             "It adds memoization overhead so decrease performance",
@@ -828,7 +827,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 73,
+        "id": 72,
         "question": "Which hook maintains a mutable value without triggering re-renders?",
         options: [
             "useState",
@@ -840,7 +839,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 74,
+        "id": 73,
         "question": "Why can't you directly use fetch API calls inside Redux reducers?",
         options: [
             "Reducers cannot access browser APIs like fetch",
@@ -852,7 +851,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 75,
+        "id": 74,
         "question":  "Why do some effects execute twice in React.StrictMode during development?",
         options: [
             "Because React has an internal bug",
@@ -864,7 +863,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 76,
+        "id": 75,
         "question": "What are the primary areas of focus for React performance optimization?",
         options: [
             "Using more hooks and creating additional components",
@@ -876,7 +875,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 77,
+        "id": 76,
         "question":"Which technique most directly reduces wasted re-renders?",
         options: [
             "Code splitting with React.lazy",
@@ -888,7 +887,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 78,
+        "id": 77,
         "question":  "How does React.lazy() help reduce bundle size?",
         options: [
             "It prevents unnecessary component re-renders",
@@ -900,7 +899,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 79,
+        "id": 78,
         "question":  "What technique improves performance when rendering large lists in React?",
         "options": [
             "Adding more event listeners to list items",
@@ -912,7 +911,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 80,
+        "id": 79,
         "question": "Which combination addresses the three main React optimization areas?",
         "options": [
             "React.memo, React.lazy, and useMemo hooks",
@@ -924,7 +923,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 81,
+        "id": 80,
         "question": "What defines a wasted render in React?",
         "options": [
             "Any render that takes longer than 16 ms to execute",
@@ -936,7 +935,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 82,
+        "id": 81,
         "question": "When does a React component re-render?",
         "options": [
             "Only when its internal state changes through setState calls",
@@ -948,7 +947,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 83,
+        "id": 82,
         "question": "What happens when a React Context value changes?",
         "options": [
             "Only the Provider component re-renders after the value change",
@@ -960,7 +959,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 84,
+        "id": 83,
         "question":"How can you prevent Context consumers from re-rendering when unrelated data changes?",
         "options": [
             "Apply React.memo to all context consumers in the application",
@@ -972,7 +971,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 85,
+        "id": 84,
         "question": "Which approach prevents creating new context value objects on every render?",
         "options": [
             "const value = useMemo(() => ({ user, setUser }), [user]);",
@@ -984,7 +983,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 91,
+        "id": 85,
         "question": "Do prop changes directly cause React components to re-render?",
         "options": [
             "Yes, React monitors all props and triggers re-renders automatically",
@@ -996,7 +995,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 92,
+        "id": 86,
         "question": "What does 'render' mean in React terminology?",
         "options": [
             "Updating the actual DOM elements on the page",
@@ -1008,7 +1007,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 93,
+        "id": 87,
         "question":  "Does every React render update the actual DOM?",
         "options": [
             "Yes, every render immediately updates the DOM elements",
@@ -1020,32 +1019,32 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 94,
+        "id": 88,
         "question": "What defines a wasted render in React performance terms?",
         "options": [
-            "A render producing the same Virtual DOM as before",
-            "A render taking longer than 16 milliseconds to finish",
-            "A render that updates the DOM unnecessarily",
-            "Any render triggered by parent component updates"
+            "A render producing same Virtual DOM",
+            "A render taking longer than 16ms",
+            "A render updating DOM unnecessarily",
+            "Any render triggered by parent updates"
         ],
         "correctOption": 2,
         "points": 10
     },
     {
-        "id": 95,
+        "id": 89,
         "question": "When do wasted renders become a significant performance problem?",
         "options": [
             "They are always problematic and must be eliminated immediately",
             "Only when they cause unnecessary DOM updates to occur",
             "Never, because React optimizes them automatically in all cases",
-            "When they occur frequently in components with expensive operations"
+            "When they occur frequently with expensive operations"
         ],
         "correctOption": 3,
         "points": 30
     },
     {
-        "id": 96,
-        "question":  "Why is passing heavy components as children often more efficient than rendering them directly in a stateful parent?",
+        "id": 90,
+        "question":  "Why is passing heavy components as children often more efficient?",
         "options": [
             "Children are cached permanently and never re-render again",
             "React treats children as stable prop references when unchanged",
@@ -1056,8 +1055,8 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 97,
-        "question": "What happens when an expensive component is rendered directly inside a parent with frequent state updates?",
+        "id": 91,
+        "question": "What happens when an expensive component is passing directly inside a parent with frequent state updates?",
         "options": [
             "The expensive component re-renders with each parent re-render",
             "The component renders once and never re-renders again",
@@ -1068,7 +1067,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 98,
+        "id": 92,
         "question":"How does React decide whether to re-render child components passed as props?",
         "options": [
             "Always re-renders all children when parent state changes",
@@ -1080,7 +1079,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 99,
+        "id": 93,
         "question": "What is the best practice for expensive child components in frequently updating parents?",
         "options": [
             "Wrap with React.memo or pass as children/props",
@@ -1092,7 +1091,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 100,
+        "id": 94,
         "question":  "Why doesn't passing children always guarantee better performance?",
         "options": [
             "Children always re-render regardless of prop changes",
@@ -1104,19 +1103,19 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 101,
+        "id": 95,
         "question": "What is the purpose of memoization in React?",
         "options": [
-            "To permanently store components in memory for all future renders",
-            "To parallelize all component renders automatically across threads",
-            "To reuse previous results if inputs haven't changed between renders",
-            "To prevent all future component renders from happening again"
+            "To permanently store components in memory",
+            "To parallelize all component renders automatically",
+            "To reuse previous results if inputs unchanged",
+            "To prevent all future component renders"
         ],
         "correctOption": 2,
         "points": 30
     },
     {
-        "id": 102,
+        "id": 96,
         "question": "What does memoizing a React component primarily affect?",
         "options": [
             "Internal state update mechanisms within the component",
@@ -1128,7 +1127,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 103,
+        "id": 97,
         "question": "When will a memoized component re-render?",
         "options": [
             "Only when its props change from the previous render",
@@ -1140,19 +1139,19 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 104,
-        "question": "When should you use React.memo?",
+        "id": 98,
+        "question": "When should use React.memo?",
         "options": [
             "Only for components that manage local state internally",
             "Only when components have no children components",
-            "For components with expensive renders that receive stable props",
+            "For components with expensive renders and stable props",
             "For every component in the application to maximize performance"
         ],
         "correctOption": 2,
         "points": 30
     },
     {
-        "id": 105,
+        "id": 99,
         "question": "When is React.memo ineffective?",
         "options": [
             "When components always receive new props or object references",
@@ -1164,7 +1163,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 106,
+        "id": 100,
         "question": "What is the main difference between React.memo and useMemo?",
         "options": [
             "React.memo is for class components, useMemo is for functions",
