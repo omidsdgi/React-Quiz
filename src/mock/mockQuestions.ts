@@ -1286,10 +1286,10 @@ export const mockQuestions: Question[] = [
         "id": 116,
         "question":"What happens when useMemo's dependency array doesn't change between renders?",
         "options": [
-            "A new value is always recalculated regardless of dependencies",
-            "The previously cached value is returned instead of recalculating",
-            "React removes the memoized value to save memory automatically",
-            "The component will never re-render again in the future"
+            "A new value is always recalculated",
+            "The previously cached value is returned",
+            "React removes memoized value to save memory",
+            "The component will never re-render again"
         ],
         "correctOption": 1,
         "points": 10
@@ -1344,7 +1344,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 121,
-        "question": "What's the best approach for avoiding expensive recalculations that depend on multiple variables?",
+        "question": "What's the best approach for avoiding expensive recalculations depending on multiple variables?",
         "options": [
             "useMemo with proper dependency array containing all variables",
             "useCallback wrapping the computation function for stability",
@@ -1360,8 +1360,8 @@ export const mockQuestions: Question[] = [
         "options": [
             "useCallback for stabilizing the computed value reference",
             "React.memo wrapping the component that contains the value",
-            "useRef to persist the value across component renders",
-            "useMemo to memoize the value with proper dependencies"
+            "useRef to persist the value across renders",
+            "useMemo to memoize the value with dependencies"
         ],
         "correctOption": 3,
         "points": 30
@@ -1442,7 +1442,7 @@ export const mockQuestions: Question[] = [
         "id": 129,
         "question":"Where are Hooks allowed to be called?",
         "options": [
-            "Inside React function components or custom Hook functions",
+            "Inside React function components or custom Hooks",
             "Inside class component methods only",
             "Inside any regular JavaScript function",
             "Inside event handler functions only"
@@ -1610,10 +1610,10 @@ export const mockQuestions: Question[] = [
         "id": 143,
         "question":"How does passing children help optimize Context performance?",
         options: [
-            "Makes entire component subtree always re-render together",
-            "Automatically freezes all context values for performance",
-            "Allows only necessary parts to re-render on context value changes",
-            "Converts all consumers to use useMemo internally"
+            "Makes entire subtree always re-render together",
+            "Automatically freezes all context values",
+            "Allows only necessary parts to re-render",
+            "Converts all consumers to use useMemo"
         ],
         "correctOption": 2,
         "points": 30
@@ -1622,10 +1622,10 @@ export const mockQuestions: Question[] = [
         "id": 144,
         "question": "Why wrap Context values containing objects in useMemo?",
         options: [
-            "Forces all consumers to re-render on every change",
-            "Keeps object references stable between component renders",
+            "Forces all consumers to re-render",
+            "Keeps object references stable between renders",
             "Automatically freezes object values for immutability",
-            "Converts complex objects to primitive types automatically"
+            "Converts complex objects to primitive types"
         ],
         "correctOption": 1,
         "points": 20
@@ -1660,8 +1660,8 @@ export const mockQuestions: Question[] = [
         options: [
             "React deeply compares all object contents every render",
             "New object references are created on every render",
-            "Context always re-renders all consumers regardless of values",
-            "Objects are automatically converted to primitives in Context"
+            "Context always re-renders all consumers",
+            "Objects are automatically converted to primitives "
         ],
         "correctOption": 1,
         "points": 30
