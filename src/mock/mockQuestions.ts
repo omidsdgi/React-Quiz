@@ -455,6 +455,906 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
+        "id": 1266,
+        "question": "What is a Component Instance in React?",
+        "options": [
+            "A physical occurrence of a component in the component tree",
+            "A blueprint or template defining component behavior and structure",
+            "The actual DOM node rendered by React in browser",
+            "A virtual representation stored only in memory cache"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1267,
+        "question": "What is a React Element in React's rendering process?",
+        "options": [
+            "The actual DOM node visible in browser DevTools",
+            "A component instance with state and lifecycle methods",
+            "The result of calling React.createElement or using JSX",
+            "A fiber node in React's internal reconciliation tree"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1268,
+        "question": "What is a DOM Element in React's context?",
+        "options": [
+            "A React component rendered to the virtual DOM",
+            "A JavaScript object representing component structure",
+            "An actual HTML element in the browser DOM",
+            "A fiber node tracking component state changes"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1269,
+        "question": "What is the relationship between Component Instance and React Element?",
+        "options": [
+            "Component instances create React elements when rendered",
+            "React elements create component instances automatically",
+            "Both are identical and interchangeable in React",
+            "Component instances replace React elements during rendering"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1270,
+        "question": "When is a render triggered in React applications?",
+        "options": [
+            "When state updates, props change, or parent re-renders",
+            "Only when user interacts with UI elements",
+            "Only during initial component mount phase",
+            "When DOM elements are clicked by users"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1271,
+        "question": "What happens during the Render Phase in React?",
+        "options": [
+            "React updates the actual browser DOM immediately",
+            "React paints pixels to the screen for users",
+            "React calls component functions and builds virtual DOM",
+            "React commits changes to DOM and executes effects"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1272,
+        "question": "What happens during the Commit Phase in React?",
+        "options": [
+            "React calls component functions to create elements",
+            "React compares new virtual DOM with previous one",
+            "React writes changes to the actual browser DOM",
+            "React pauses to prioritize more urgent updates"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1273,
+        "question": "What is Browser Paint in React's rendering process?",
+        "options": [
+            "The phase where React builds virtual DOM tree",
+            "The phase where React commits changes to DOM",
+            "The browser rendering pixels to screen after DOM updates",
+            "The phase where React reconciles component differences"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1274,
+        "question": "Does rendering always mean updating the DOM in React?",
+        "options": [
+            "Yes, every render always updates DOM elements",
+            "No, rendering is calling functions, DOM updates separately",
+            "Yes, render and DOM update happen simultaneously",
+            "No, rendering only happens during initial mount"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1275,
+        "question": "Why doesn't React completely discard the old view on re-render?",
+        "options": [
+            "React compares and reuses unchanged parts efficiently",
+            "Discarding old view would cause memory leaks",
+            "React cannot access the previous view tree",
+            "Complete discard would prevent state from persisting"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1276,
+        "question": "What is the Fiber Tree in React's architecture?",
+        "options": [
+            "A tree of actual DOM elements in browser",
+            "A tree of component class definitions only",
+            "React's internal data structure tracking component instances",
+            "A visualization tool for React DevTools only"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1277,
+        "question": "What is Reconciliation in React's rendering process?",
+        "options": [
+            "The process of comparing old and new virtual DOM",
+            "The process of painting pixels to screen",
+            "The process of triggering component state updates",
+            "The process of mounting components initially"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1278,
+        "question": "How does React split rendering work into chunks?",
+        "options": [
+            "React cannot split rendering into smaller pieces",
+            "React divides rendering into 'units of work' that can pause",
+            "React renders all components simultaneously in parallel",
+            "React splits rendering based on component file size"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1279,
+        "question": "Can React prioritize certain rendering tasks over others?",
+        "options": [
+            "No, all renders have equal priority always",
+            "Yes, React can prioritize urgent updates over others",
+            "Only if developer explicitly sets priority values",
+            "Only during initial application mount phase"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1280,
+        "question": "Can React pause, reuse, or throw away work during rendering?",
+        "options": [
+            "No, once started, rendering must complete entirely",
+            "Yes, React's fiber architecture enables work interruption",
+            "Only work can be paused but never reused",
+            "Only work can be reused but never paused"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1281,
+        "question": "Why does React write to DOM during Commit Phase?",
+        "options": [
+            "To test if changes work before displaying them",
+            "To apply the calculated changes to browser DOM",
+            "To create backup of previous DOM state",
+            "To validate virtual DOM against actual DOM"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1282,
+        "question": "Is the Commit Phase synchronous or asynchronous in React?",
+        "options": [
+            "Asynchronous to prevent blocking user interactions",
+            "Synchronous to ensure consistent DOM updates",
+            "Sometimes synchronous, sometimes asynchronous depending on priority",
+            "Always asynchronous in production mode only"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1283,
+        "question": "What is Render Logic in React components?",
+        "options": [
+            "Code that runs when user clicks buttons",
+            "Code in component body that calculates JSX output",
+            "Code that directly manipulates DOM elements",
+            "Code that fetches data from external APIs"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1284,
+        "question": "What are Event Handler Functions in React?",
+        "options": [
+            "Functions that run during component render phase",
+            "Functions that respond to user interactions like clicks",
+            "Functions that calculate component state automatically",
+            "Functions that build virtual DOM tree structure"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1285,
+        "question": "Should Render Logic contain side effects in React?",
+        "options": [
+            "Yes, side effects make components more powerful",
+            "Yes, but only for data fetching operations",
+            "No, render logic must be pure without side effects",
+            "No, unless wrapped in try-catch blocks"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1286,
+        "question": "Are side effects inherently bad in React applications?",
+        "options": [
+            "No, side effects are necessary but must be handled properly",
+            "Yes, side effects always cause bugs and errors",
+            "Yes, React prevents all side effects automatically",
+            "No, side effects can be placed anywhere freely"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1287,
+        "question": "Which hook is specifically designed to register side effects in React?",
+        "options": [
+            "useState for managing side effect state",
+            "useReducer for complex side effect logic",
+            "useEffect for registering side effects safely",
+            "useMemo for memoizing side effect results"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1288,
+        "question": "How are state updates batched in React?",
+        "options": [
+            "React groups multiple setState calls into single re-render",
+            "Each setState always causes immediate separate re-render",
+            "State updates are never batched in React",
+            "Only setState calls in loops are batched"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1289,
+        "question": "Why does React batch state updates together?",
+        "options": [
+            "To make code easier to read and maintain",
+            "To improve performance by reducing re-renders",
+            "To prevent state from changing too quickly",
+            "To ensure state updates happen in order"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1290,
+        "question": "When does React flush batched state updates?",
+        "options": [
+            "After event handler completes execution fully",
+            "Immediately when setState is called",
+            "Only when component unmounts from tree",
+            "Only when user stops interacting with UI"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1291,
+        "question": "What is the difference between Render Phase and Commit Phase?",
+        "options": [
+            "Render calls functions, Commit updates DOM",
+            "Render updates DOM, Commit calls functions",
+            "Both phases update DOM simultaneously",
+            "Render is synchronous, Commit is asynchronous"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1292,
+        "question": "Can the Render Phase be interrupted in React?",
+        "options": [
+            "Yes, React can pause and resume rendering",
+            "No, rendering must complete once started",
+            "Only during initial mount can render pause",
+            "Only in development mode can render pause"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1293,
+        "question": "Can the Commit Phase be interrupted in React?",
+        "options": [
+            "Yes, commits can be paused mid-execution",
+            "Yes, but only for low-priority updates",
+            "No, commits must complete synchronously",
+            "No, unless user navigates away from page"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1294,
+        "question": "What creates a new Component Instance in React?",
+        "options": [
+            "Using a component in JSX creates new instance",
+            "Importing component file creates instance automatically",
+            "Defining component function creates instance",
+            "Mounting app to DOM creates all instances"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1295,
+        "question": "How many Component Instances exist for multiple uses of same component?",
+        "options": [
+            "Only one instance shared across all uses",
+            "One instance per component definition file",
+            "Separate instance for each use in tree",
+            "Two instances: one for logic, one for UI"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1296,
+        "question": "Do Component Instances have their own state and props?",
+        "options": [
+            "Yes, each instance has independent state and props",
+            "No, all instances share same state and props",
+            "Only state is independent, props are shared",
+            "Only props are independent, state is shared"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1297,
+        "question": "What happens to Component Instance when it unmounts?",
+        "options": [
+            "Instance moves to different position in tree",
+            "Instance is destroyed and state is lost",
+            "Instance remains in memory for potential reuse",
+            "Instance converts to DOM element permanently"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1298,
+        "question": "How does React Element differ from Component Instance?",
+        "options": [
+            "Element is object describing what to render",
+            "Element has state and lifecycle methods",
+            "Element is actual DOM node in browser",
+            "Element and instance are exactly identical"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1299,
+        "question": "Are React Elements mutable or immutable?",
+        "options": [
+            "Mutable, can be changed after creation",
+            "Immutable, cannot be changed once created",
+            "Sometimes mutable depending on component type",
+            "Mutable in development, immutable in production"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1300,
+        "question": "What creates React Elements in applications?",
+        "options": [
+            "JSX syntax or React.createElement function calls",
+            "Importing component files automatically creates elements",
+            "Browser converts HTML to React elements",
+            "React DevTools generate elements during debugging"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1301,
+        "question": "How do React Elements become DOM Elements?",
+        "options": [
+            "React elements directly convert to DOM automatically",
+            "During Commit Phase, React creates actual DOM nodes",
+            "Browser converts React elements to DOM automatically",
+            "React elements are DOM elements with different names"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1302,
+        "question": "What information does a React Element contain?",
+        "options": [
+            "Type, props, and children information only",
+            "Complete state and lifecycle method implementations",
+            "Direct references to actual DOM nodes",
+            "Event handlers and browser event objects"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1303,
+        "question": "Can React Elements be reused across renders?",
+        "options": [
+            "No, new elements created on every render",
+            "Yes, React caches and reuses all elements",
+            "Only functional component elements can reuse",
+            "Only class component elements can reuse"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1304,
+        "question": "What triggers a render in React besides state changes?",
+        "options": [
+            "Parent re-rendering or context value changes",
+            "Only explicit render() method calls",
+            "Only when developer refreshes browser",
+            "Only when component mounts initially"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1305,
+        "question": "Does changing props directly trigger a render?",
+        "options": [
+            "Yes, prop changes always trigger re-renders",
+            "No, prop changes occur because parent re-rendered",
+            "Only primitive prop changes trigger renders",
+            "Only object prop changes trigger renders"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1306,
+        "question": "What happens between Render Phase and Commit Phase?",
+        "options": [
+            "React paints pixels to the screen",
+            "React compares new virtual DOM with previous",
+            "React executes all useEffect cleanup functions",
+            "React updates component state automatically"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1307,
+        "question": "What happens after the Commit Phase completes?",
+        "options": [
+            "Browser Paint occurs, rendering pixels to screen",
+            "React immediately starts next render cycle",
+            "Component unmounts and state is destroyed",
+            "Virtual DOM is discarded from memory"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1308,
+        "question": "Why is Render Phase potentially asynchronous in React?",
+        "options": [
+            "To prevent blocking user interactions with UI",
+            "To fetch data from server during rendering",
+            "To wait for all images to load",
+            "To allow time for state updates"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1309,
+        "question": "What is a Fiber in React's Fiber Tree?",
+        "options": [
+            "A JavaScript object tracking component instance",
+            "A visual representation for React DevTools",
+            "A thread running component code in parallel",
+            "A DOM node reference stored by React"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1310,
+        "question": "What information does a Fiber node contain?",
+        "options": [
+            "Component type, props, state, and DOM references",
+            "Only the component function or class definition",
+            "Only the rendered JSX output structure",
+            "Only references to child components"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1311,
+        "question": "How does Fiber Tree differ from Virtual DOM?",
+        "options": [
+            "Fiber is React's internal structure, Virtual DOM is concept",
+            "Fiber and Virtual DOM are identical terms",
+            "Fiber is for class components, Virtual DOM for functions",
+            "Fiber is deprecated, Virtual DOM is modern approach"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1312,
+        "question": "Does React create new Fiber Tree on every render?",
+        "options": [
+            "Yes, completely new tree on every render",
+            "No, React updates existing Fiber Tree in place",
+            "Only on initial mount is Fiber Tree created",
+            "Only when state changes is new tree created"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1313,
+        "question": "What is the purpose of Reconciliation in React?",
+        "options": [
+            "To determine minimal DOM updates needed efficiently",
+            "To resolve conflicts in concurrent state updates",
+            "To reconcile differences between props and state",
+            "To fix bugs in component render logic"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1314,
+        "question": "What algorithm does React use for Reconciliation?",
+        "options": [
+            "Depth-first search through entire component tree",
+            "Breadth-first search comparing sibling components",
+            "Diffing algorithm comparing old and new trees",
+            "Sorting algorithm prioritizing component updates"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1315,
+        "question": "How does React optimize Reconciliation performance?",
+        "options": [
+            "React compares all components on every render",
+            "React uses keys and component types for optimization",
+            "React skips reconciliation in production mode",
+            "React only reconciles components with state"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1316,
+        "question": "What happens if Reconciliation finds no differences?",
+        "options": [
+            "React skips Commit Phase entirely for component",
+            "React still commits changes to ensure consistency",
+            "React discards both old and new trees",
+            "React forces re-render to verify correctness"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1317,
+        "question": "Can React reuse DOM nodes during Reconciliation?",
+        "options": [
+            "No, React always creates new DOM nodes",
+            "Yes, React updates existing DOM nodes when possible",
+            "Only for text nodes, not element nodes",
+            "Only during initial mount phase rendering"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1318,
+        "question": "Why does React split rendering into units of work?",
+        "options": [
+            "To enable pausing, prioritizing, and resuming rendering",
+            "To split work across multiple CPU cores",
+            "To reduce memory usage during rendering",
+            "To improve compatibility with older browsers"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1319,
+        "question": "What is a unit of work in React's rendering?",
+        "options": [
+            "Processing one component or fiber node",
+            "Rendering entire component tree at once",
+            "Executing all event handlers in queue",
+            "Updating all DOM nodes simultaneously"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1320,
+        "question": "Can React throw away work during rendering?",
+        "options": [
+            "No, all started work must complete eventually",
+            "Yes, if higher priority work arrives",
+            "Only if errors occur during rendering",
+            "Only during initial mount can work discard"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1321,
+        "question": "How does React prioritize rendering work?",
+        "options": [
+            "All renders have equal priority always",
+            "User interactions have higher priority than background",
+            "Components higher in tree have higher priority",
+            "Smaller components always render first"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1322,
+        "question": "What determines whether DOM updates are necessary?",
+        "options": [
+            "React always updates DOM on every render",
+            "Reconciliation determines if DOM updates needed",
+            "Developer must specify when to update DOM",
+            "Browser decides when DOM updates occur"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1323,
+        "question": "Why is Commit Phase synchronous in React?",
+        "options": [
+            "To prevent visual inconsistencies in UI updates",
+            "To improve performance by batching commits",
+            "To allow interrupting commits for urgent work",
+            "To enable concurrent DOM updates across components"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1324,
+        "question": "What is Render Logic NOT allowed to do?",
+        "options": [
+            "Calculate values and return JSX structure",
+            "Read props and state for rendering",
+            "Mutate objects or update state directly",
+            "Call pure functions for computations"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1325,
+        "question": "Why must Render Logic be pure in React?",
+        "options": [
+            "Pure functions are faster than impure functions",
+            "React may call render logic multiple times",
+            "Impure logic prevents components from mounting",
+            "Pure logic reduces component file size"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1326,
+        "question": "Where should side effects be placed in React components?",
+        "options": [
+            "In render logic for immediate execution",
+            "In event handlers or useEffect hook",
+            "Directly in component function body",
+            "In component constructor or initialization"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1327,
+        "question": "What makes Event Handler Functions different from Render Logic?",
+        "options": [
+            "Handlers can contain side effects and mutations",
+            "Handlers are pure and cannot have effects",
+            "Handlers run during render phase only",
+            "Handlers cannot access component state"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1328,
+        "question": "When do Event Handler Functions execute?",
+        "options": [
+            "During component render phase automatically",
+            "In response to user interactions with UI",
+            "Before component mounts to DOM tree",
+            "After component unmounts from tree"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1329,
+        "question": "Why does React need a special hook for side effects?",
+        "options": [
+            "Side effects in render logic cause unpredictable behavior",
+            "Hooks make side effects run faster than normal",
+            "Side effects cannot be written in JavaScript",
+            "Hooks prevent all bugs in side effects"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1330,
+        "question": "What is useEffect's primary purpose in React?",
+        "options": [
+            "To memoize expensive calculation results efficiently",
+            "To register side effects that run after render",
+            "To update component state on every render",
+            "To prevent component from re-rendering unnecessarily"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1331,
+        "question": "How does state update batching improve performance?",
+        "options": [
+            "By reducing number of re-renders significantly",
+            "By making state updates happen faster",
+            "By preventing state from changing at all",
+            "By storing state in more efficient format"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1332,
+        "question": "Are state updates always batched in React?",
+        "options": [
+            "Yes, always in all scenarios automatically",
+            "No, only in event handlers are batched",
+            "Yes, in React 18+ for all updates",
+            "No, batching is deprecated in modern React"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1333,
+        "question": "What happens if you call setState multiple times synchronously?",
+        "options": [
+            "Each call causes immediate separate re-render",
+            "Only the last setState call takes effect",
+            "React batches them into single re-render",
+            "React throws error for multiple calls"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1334,
+        "question": "Can you force React to flush batched updates immediately?",
+        "options": [
+            "No, flushing is automatic and uncontrollable",
+            "Yes, using flushSync from react-dom",
+            "Yes, using forceUpdate on component",
+            "No, batching cannot be interrupted ever"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1335,
+        "question": "What is the order of phases in React's rendering?",
+        "options": [
+            "Commit Phase, Render Phase, Browser Paint",
+            "Browser Paint, Render Phase, Commit Phase",
+            "Render Phase, Commit Phase, Browser Paint",
+            "Commit Phase, Browser Paint, Render Phase"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1336,
+        "question": "Which phase is responsible for calling component functions?",
+        "options": [
+            "Commit Phase calls all component functions",
+            "Browser Paint phase renders component functions",
+            "Render Phase calls component functions to build tree",
+            "None, components are called before phases start"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1337,
+        "question": "Which phase is responsible for applying DOM changes?",
+        "options": [
+            "Render Phase applies all DOM changes",
+            "Commit Phase applies calculated DOM changes",
+            "Browser Paint applies DOM changes automatically",
+            "None, DOM changes happen outside phases"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1338,
+        "question": "Can components render without committing changes to DOM?",
+        "options": [
+            "Yes, if Reconciliation finds no differences",
+            "No, render always causes DOM updates",
+            "Only during initial mount can this happen",
+            "Only in production mode is this possible"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1339,
+        "question": "What information flows from Component Instance to React Element?",
+        "options": [
+            "Element provides props and children to instance",
+            "Instance returns element describing what to render",
+            "Both contain identical information always",
+            "No information flows between them ever"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1340,
+        "question": "What information flows from React Element to DOM Element?",
+        "options": [
+            "Element type, props, and children structure information",
+            "DOM element sends events to React element",
+            "State and lifecycle methods from React element",
+            "No information flows between them ever"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
         "id": 41,
         "question": "What does it mean when CSS is scoped to a component?",
         "options": [
