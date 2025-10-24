@@ -1719,9 +1719,9 @@ export const mockQuestions: Question[] = [
         "question": "How does larger bundle size affect application performance?",
         options: [
             "Makes web pages load much faster than before",
-            "Reduces network bandwidth usage significantly overall",
-            "Improves SEO ranking automatically for search engines",
-            "Makes applications load slower for end users"
+            "Reduces network bandwidth usage significantly",
+            "Improves SEO ranking for search engines",
+            "Makes applications load slower for users"
         ],
         "correctOption":3,
         "points": 10
@@ -1731,7 +1731,7 @@ export const mockQuestions: Question[] = [
         "question":  "What is the main goal of code splitting?",
         options: [
             "Combine all files into one single large bundle",
-            "Rewrite components into smaller atomic functions only",
+            "Rewrite components into smaller atomic functions",
             "Split code into smaller chunks loaded on demand",
             "Reduce total number of React hooks used throughout"
         ],
@@ -1755,9 +1755,9 @@ export const mockQuestions: Question[] = [
         "question": "What happens with page-based bundle splitting in Next.js?",
         options: [
             "All pages are still combined into one large bundle",
-            "Only components with useEffect hooks get separated automatically",
-            "Pages are split but still downloaded together initially",
-            "Each page loads as a separate bundle when visited"
+            "Only components with useEffect hooks get separated",
+            "Pages are split but still downloaded together",
+            "Each page loads as a separate bundle"
         ],
         "correctOption": 3,
         "points": 30
@@ -1766,8 +1766,8 @@ export const mockQuestions: Question[] = [
         "id": 157,
         "question":"What role does React.Suspense play with lazy components?",
         options: [
-            "Shows fallback UI until lazy component finishes loading",
-            "Prevents unnecessary component re-renders during loading process",
+            "Shows fallback UI until lazy component loading",
+            "Prevents unnecessary component re-renders during loading",
             "Creates separate bundles automatically for each component",
             "Optimizes performance without requiring additional configuration"
         ],
@@ -1778,9 +1778,9 @@ export const mockQuestions: Question[] = [
         "id": 158,
         question: "What is the main purpose of tree-shaking?",
         options: [
-            "Split JavaScript code into multiple smaller chunks",
-            "Remove unused code from final production bundles",
-            "Improve CSS loading performance significantly for users",
+            "Split JavaScript code into multiple chunks",
+            "Remove unused code from final bundles",
+            "Improve CSS loading performance significantly",
             "Automatically lazy-load images when they become visible"
         ],
         correctOption: 1,
@@ -1826,10 +1826,10 @@ export const mockQuestions: Question[] = [
         "id": 162,
         question:"Why use Next.js Image component over regular img?",
         options: [
-            "Increases resolution of all images automatically to HD",
-            "Converts all image formats to WebP for compression",
-            "Automatically lazy-loads and optimizes images for performance",
-            "Completely avoids browser caching for fresh content"
+            "Increases resolution of all images to HD",
+            "Converts all image formats to WebP",
+            "Automatically lazy-loads and optimizes images",
+            "Completely avoids browser caching for freshness"
         ],
         correctOption: 2,
         points: 10
@@ -1838,7 +1838,7 @@ export const mockQuestions: Question[] = [
         "id": 163,
         question: "How does caching help with bundle optimization?",
         options: [
-            "Reduces React component re-renders throughout the application",
+            "Reduces React component re-renders",
             "Automatically inlines critical CSS for faster rendering",
             "Prevents downloading unchanged bundles on repeat visits",
             "Forces all JavaScript modules to preload for speed"
@@ -1865,7 +1865,7 @@ export const mockQuestions: Question[] = [
             "Library code will not be included in final bundle",
             "Library code will always remain in bundle regardless",
             "Library code throws runtime error during execution phase",
-            "Library code automatically preloads for future potential use"
+            "Library code preloads for future potential use"
         ],
         correctOption: 0,
         points: 30
@@ -1876,7 +1876,7 @@ export const mockQuestions: Question[] = [
         options: [
             "Increases JavaScript execution time throughout the application",
             "Completely disables CSS modules functionality across project",
-            "Bloats bundle size unnecessarily without providing value",
+            "increases the bundle size without offering meaningful functionality",
             "Forces application to use inline styles only"
         ],
         correctOption: 2,
@@ -1913,7 +1913,7 @@ export const mockQuestions: Question[] = [
             "Executes JavaScript code faster in browser runtime",
             "Automatically caches all images for offline usage",
             "Loads future page resources during browser idle time",
-            "Reduces React component re-renders significantly across application"
+            "Reduces React component re-renders significantly"
         ],
         correctOption: 2,
         points: 10
