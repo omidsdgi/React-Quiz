@@ -2055,18 +2055,18 @@ export const mockQuestions: Question[] = [
         "options": [
             "Prettier code formatter",
             "React DevTools browser extension",
+            "TypeScript compiler",
             "ESLint exhaustive-deps rule",
-            "TypeScript compiler"
         ],
-        correctOption: 2,
+        correctOption: 3,
         points: 10
     },
     {
         "id": 182,
         "question":  "Why must context values used in useEffect be included in dependency arrays?",
         "options": [
-            "React automatically tracks context changes without dependencies",
-            "Effects may read outdated context values causing bugs",
+            "React automatically tracks context changes",
+            "Effects may read outdated context values",
             "useEffect ignores context values unless explicitly listed",
             "React serializes context values for comparison"
         ],
@@ -2123,9 +2123,9 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 187,
-        "question": "What is a better approach than including entire objects as dependencies?",
+        "question": "Instead of adding entire objects as dependencies in React hooks, what is the better practice?",
         "options": [
-            "Include only the specific properties you actually use",
+            "Include only specific properties of the object that code actually uses.",
             "Use JSON.stringify on objects for value comparison",
             "Clone objects and memoize with useCallback",
             "Convert objects to primitive values at runtime"
@@ -2150,7 +2150,7 @@ export const mockQuestions: Question[] = [
         "question":  "What pattern works better when you have multiple related reactive values?",
         "options": [
             "Store them inside useRef to avoid re-renders",
-            "Combine them with useReducer for a single stable dependency",
+            "Combine them with useReducer for stability",
             "Merge them into one object and stringify for comparison",
             "Wrap them all in useMemo for shorter dependency arrays"
         ],
@@ -2218,14 +2218,13 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20
     },
-
     {
         "id": 197,
         "question":"What is the best way to prevent the stale closure problem?",
         "options": [
             "Always use global variables instead of state",
             "Freeze objects in state for consistency",
-            "Add current state or props as dependencies in hooks",
+            "Add current state or props as dependencies",
             "Avoid using closures in React components"
         ],
         "correctOption": 2,
@@ -2235,7 +2234,7 @@ export const mockQuestions: Question[] = [
         id: 198,
         question: "What is Redux?",
         options: [
-            "A predictable state management library for applications",
+            "A predictable state management library",
             "A library for styling React components",
             "A built-in React API for managing side effects",
             "A tool for minifying JavaScript bundles"
