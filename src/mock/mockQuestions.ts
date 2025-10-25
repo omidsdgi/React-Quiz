@@ -468,19 +468,19 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 1267,
-        "question": "What is a React Element in React's rendering process?",
+        "question": "What is a React Element in React&apos;s rendering process?",
         "options": [
             "The actual DOM node visible in browser DevTools",
             "A component instance with state and lifecycle methods",
             "The result of calling React.createElement or using JSX",
-            "A fiber node in React's internal reconciliation tree"
+            "A fiber node in React&apos;s internal reconciliation tree"
         ],
         "correctOption": 2,
         "points": 10
     },
     {
         "id": 1268,
-        "question": "What is a DOM Element in React's context?",
+        "question": "What is a DOM Element in React&apos;s context?",
         "options": [
             "A React component rendered to the virtual DOM",
             "A JavaScript object representing component structure",
@@ -532,15 +532,15 @@ export const mockQuestions: Question[] = [
         "options": [
             "React calls component functions to create elements",
             "React compares new virtual DOM with previous one",
+            "React pauses to prioritize more urgent updates",
             "React writes changes to the actual browser DOM",
-            "React pauses to prioritize more urgent updates"
         ],
-        "correctOption": 2,
+        "correctOption": 3,
         "points": 10
     },
     {
         "id": 1273,
-        "question": "What is Browser Paint in React's rendering process?",
+        "question": "What is Browser Paint in React&apos;s rendering process?",
         "options": [
             "The phase where React builds virtual DOM tree",
             "The phase where React commits changes to DOM",
@@ -555,7 +555,7 @@ export const mockQuestions: Question[] = [
         "question": "Does rendering always mean updating the DOM in React?",
         "options": [
             "Yes, every render always updates DOM elements",
-            "No, rendering is calling functions, DOM updates separately",
+            "No, rendering only is calling functions",
             "Yes, render and DOM update happen simultaneously",
             "No, rendering only happens during initial mount"
         ],
@@ -566,21 +566,21 @@ export const mockQuestions: Question[] = [
         "id": 1275,
         "question": "Why doesn't React completely discard the old view on re-render?",
         "options": [
-            "React compares and reuses unchanged parts efficiently",
+            "Complete discard would prevent state from persisting",
             "Discarding old view would cause memory leaks",
             "React cannot access the previous view tree",
-            "Complete discard would prevent state from persisting"
+            "React compares and reuses unchanged parts efficiently",
         ],
-        "correctOption": 0,
+        "correctOption": 3,
         "points": 20
     },
     {
         "id": 1276,
-        "question": "What is the Fiber Tree in React's architecture?",
+        "question": "What is the Fiber Tree in React&apos;s architecture?",
         "options": [
             "A tree of actual DOM elements in browser",
-            "A tree of component class definitions only",
-            "React's internal data structure tracking component instances",
+            "A tree of component class definitions component instances",
+            "React&apos;s internal data structure tracking component instances",
             "A visualization tool for React DevTools only"
         ],
         "correctOption": 2,
@@ -588,7 +588,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 1277,
-        "question": "What is Reconciliation in React's rendering process?",
+        "question": "What is Reconciliation in React&apos;s rendering process?",
         "options": [
             "The process of comparing old and new virtual DOM",
             "The process of painting pixels to screen",
@@ -615,19 +615,19 @@ export const mockQuestions: Question[] = [
         "question": "Can React prioritize certain rendering tasks over others?",
         "options": [
             "No, all renders have equal priority always",
-            "Yes, React can prioritize urgent updates over others",
             "Only if developer explicitly sets priority values",
+            "Yes, React can prioritize urgent updates over others",
             "Only during initial application mount phase"
         ],
-        "correctOption": 1,
+        "correctOption": 2,
         "points": 20
     },
     {
         "id": 1280,
-        "question": "Can React pause, reuse, or throw away work during rendering?",
+        "question": "Can React pause, reuse or throw away work during rendering?",
         "options": [
             "No, once started, rendering must complete entirely",
-            "Yes, React's fiber architecture enables work interruption",
+            "Yes, React&apos;s fiber architecture enables work interruption",
             "Only work can be paused but never reused",
             "Only work can be reused but never paused"
         ],
@@ -972,7 +972,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 1309,
-        "question": "What is a Fiber in React's Fiber Tree?",
+        "question": "What is a Fiber in React&apos;s Fiber Tree?",
         "options": [
             "A JavaScript object tracking component instance",
             "A visual representation for React DevTools",
@@ -998,7 +998,7 @@ export const mockQuestions: Question[] = [
         "id": 1311,
         "question": "How does Fiber Tree differ from Virtual DOM?",
         "options": [
-            "Fiber is React's internal structure, Virtual DOM is concept",
+            "Fiber is React&apos;s internal structure, Virtual DOM is concept",
             "Fiber and Virtual DOM are identical terms",
             "Fiber is for class components, Virtual DOM for functions",
             "Fiber is deprecated, Virtual DOM is modern approach"
@@ -1092,7 +1092,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 1319,
-        "question": "What is a unit of work in React's rendering?",
+        "question": "What is a unit of work in React&apos;s rendering?",
         "options": [
             "Processing one component or fiber node",
             "Rendering entire component tree at once",
@@ -1284,7 +1284,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 1335,
-        "question": "What is the order of phases in React's rendering?",
+        "question": "What is the order of phases in React&apos;s rendering?",
         "options": [
             "Commit Phase, Render Phase, Browser Paint",
             "Browser Paint, Render Phase, Commit Phase",
@@ -2032,7 +2032,7 @@ export const mockQuestions: Question[] = [
         "options": [
             "Only when its props change from the previous render",
             "Whenever its parent re-renders, regardless of props",
-            "Only when React's Virtual DOM decides to recycle it",
+            "Only when React&apos;s Virtual DOM decides to recycle it",
             "Never, once memoized it's permanently cached in memory"
         ],
         "correctOption": 0,
@@ -2992,7 +2992,7 @@ export const mockQuestions: Question[] = [
             "React deeply compares objects causing performance issues",
             "Objects cannot be serialized into dependency arrays",
             "Objects are compared by reference causing unnecessary re-runs",
-            "Objects cause memory leaks in React's fiber architecture"
+            "Objects cause memory leaks in React&apos;s fiber architecture"
         ],
         "correctOption":2,
         "points": 30
@@ -3064,7 +3064,7 @@ export const mockQuestions: Question[] = [
             "It allows side effects when props or state change",
             "It's the primary mechanism for all business logic",
             "It ensures synchronous rendering with immediate DOM updates",
-            "It bypasses React's reconciliation algorithm safely"
+            "It bypasses React&apos;s reconciliation algorithm safely"
         ],
         "correctOption": 0,
         "points": 30
@@ -3182,7 +3182,7 @@ export const mockQuestions: Question[] = [
         id: 202,
         question: "Why must Redux reducers avoid asynchronous operations?",
         options: [
-            "Async operations make reducers unpredictable and hard to test",
+            "Async operations make reducers unpredictable",
             "Reducers cannot return promises in JavaScript",
             "Async operations always cause memory leaks",
             "Reducers can only process primitive data types"
@@ -3195,7 +3195,7 @@ export const mockQuestions: Question[] = [
         question:  "What is the primary difference between Redux and useReducer?",
         options: [
             "Redux is synchronous, useReducer is asynchronous",
-            "Redux manages global state, useReducer manages local component state",
+            "Redux manages global state, useReducer manages local state",
             "Redux handles styling, useReducer manages state",
             "Redux stores strings, useReducer handles objects"
         ],
@@ -3219,11 +3219,11 @@ export const mockQuestions: Question[] = [
         question: "What is the primary role of dispatch in Redux?",
         options: [
             "It saves state permanently to local storage",
-            "It sends actions to reducers to update state",
+            "It automatically refreshes the UI components",
             "It merges multiple reducers into one",
-            "It automatically refreshes the UI components"
+            "It sends actions to reducers to update state",
         ],
-        correctOption: 1,
+        correctOption: 3,
         points: 10
     },
     {
@@ -3625,7 +3625,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 239,
-        "question":"Which capability is NOT provided by Redux Toolkit's createSlice?",
+        "question":"Which capability is NOT provided by Redux Toolkit&apos;s createSlice?",
         "options": [
             "Automatically generates action creators and types",
             "Allows writing mutable-looking code safely with Immer",
@@ -3685,7 +3685,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 244,
-        "question":  "How are action creators handled in Redux Toolkit's createSlice?",
+        "question":  "How are action creators handled in Redux Toolkit&apos;s createSlice?",
         "options": [
             "They must be written manually by the developer",
             "They are generated automatically and accept one payload",
@@ -5285,7 +5285,7 @@ export const mockQuestions: Question[] = [
         "question":  "Why is React Query valuable for managing server state?",
         "options": [
             "It automates fetching, caching, and synchronization of data",
-            "It only replaces React’s useState and useEffect for local state",
+            "It only replaces React&apos;s useState and useEffect for local state",
             "It automatically generates UI components",
             "It completely disables all network requests"
         ],
@@ -7217,7 +7217,7 @@ export const mockQuestions: Question[] = [
         "question": "Why does incorrect HTML nesting lead to hydration mismatches?",
         "options": [
             "Because React cannot attach events to deeply nested elements",
-            "Because the actual DOM differs structurally from React’s virtual DOM",
+            "Because the actual DOM differs structurally from React&apos;s virtual DOM",
             "Because the browser blocks nested element rendering",
             "Because React skips hydration for child nodes"
         ],
@@ -7278,8 +7278,8 @@ export const mockQuestions: Question[] = [
             "options": [
                 "It converts React into a server-only framework",
                 "It removes the need for React components entirely",
-                "it replaces React's component model with template files",
-                "It provides a higher-level structure built around React’s ecosystem",
+                "it replaces React&apos;s component model with template files",
+                "It provides a higher-level structure built around React&apos;s ecosystem",
             ],
             "correctOption": 3,
             "points": 20
@@ -15601,7 +15601,7 @@ export const mockQuestions: Question[] = [
         },
         {
             "id": 1248,
-            "question": "How does React's Virtual DOM support 'UI as function of state'?",
+            "question": "How does React&apos;s Virtual DOM support 'UI as function of state'?",
             "options": [
                 "It stores all state in virtual memory",
                 "It compares new and old UI efficiently",
