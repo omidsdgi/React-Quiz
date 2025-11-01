@@ -3396,12 +3396,12 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 220,
-        question: "How do UI and remote state differ?",
+        question: "What is the key difference between UI state and remote state?",
         options: [
-            "UI requires HTTP, remote state static",
-            "UI is component-local, remote from servers",
-            "UI needs Redux, remote uses Context",
-            "UI is permanent, remote is temporary"
+            "UI state requires HTTP requests, remote state is static",
+            "UI state is local to components, remote state comes from servers",
+            "UI state needs Redux, remote state needs Context API",
+            "UI state persists forever, remote state is temporary"
         ],
         correctOption: 1,
         points: 20
@@ -3409,22 +3409,22 @@ export const mockQuestions: Question[] = [
     {
 
         id: 221,
-        question: "When choose Redux over React Query/Context?",
+        question: "When should you choose Redux over Context API with useReducer?",
         options: [
-            "When dealing only with UI modals",
-            "When using localStorage for all persistence",
-            "Complex non-remote state updating frequently across components",
-            "When all state originates from endpoints"
+            "For complex state with frequent updates across many components",
+            "For small applications with minimal state needs",
+            "When all updates happen within single component tree",
+            "When avoiding external dependencies is priority"
         ],
-        correctOption: 2,
+        correctOption: 0,
         points: 30
     },
     {
         id: 222,
-        question: "What is a reducer function in Redux?",
+        question:"What is the primary responsibility of a reducer in Redux?",
         options: [
-            "Function for fetching data asynchronously from servers",
-            "Pure function taking state/action, returning new state",
+            "Function for fetching data asynchronously from API endpoints",
+            "Take current state and action, return new state immutably",
             "Function that renders UI components dynamically",
             "Function managing middleware operations and logging"
         ],
@@ -3433,59 +3433,59 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 223,
-        question: "How does Redux differ from useReducer?",
+        question: "What is the key difference between Redux and useReducer?",
         options: [
-            "useReducer provides middleware, Redux handles async",
-            "Redux is synchronous, useReducer handles async",
-            "Redux global with middleware/DevTools, useReducer local",
-            "Both manage state identically without differences"
+            "useReducer has middleware, Redux handles async",
+            "Redux is synchronous, useReducer is asynchronous",
+            "Redux is global with middleware, useReducer is local",
+            "They function identically with no differences"
         ],
         correctOption: 2,
         points: 30
     },
     {
         id: 224,
-        question: "Primary purpose of the Redux store?",
+        question: "What is the main responsibility of the Redux store?",
         options: [
-            "Render components directly to DOM elements",
-            "Fetch remote data automatically for components",
-            "Generate action creators for state changes",
-            "Hold state tree and coordinate reducers"
+            "Directly render UI components into the DOM",
+            "Automatically fetch and manage remote data for components",
+            "Generate and dispatch action creators for updating state",
+            "Hold state tree and manage updates via  reducers"
         ],
         correctOption: 3,
         points: 20
     },
     {
         id: 225,
-        question: "Why might Redux store contain multiple reducers?",
+        question: "Why use multiple reducers in a Redux store?",
         options: [
-            "Enable parallel dispatch execution for performance",
-            "Organize state logic into focused slices",
-            "Manage React components within store structure",
-            "Handle styling and rendering operations separately"
+            "Enable parallel execution of actions",
+            "Organize state into focused, manageable slices",
+            "Manage React component lifecycle",
+            "Handle styling and rendering separately"
         ],
         correctOption: 1,
         points: 20
     },
     {
         id: 226,
-        question: "What is an action creator function in Redux?",
-        "options": [
-            "A function that directly modifies state in the store",
-            "A function that returns an action object describing a state change",
-            "A function that renders UI components based on actions",
-            "A function that combines multiple reducers into one"
+        question: "What is the purpose of an action creator in Redux?",
+        options: [
+            "Directly modify state in the store",
+            "Return an action object describing state change",
+            "Render UI based on dispatched actions",
+            "Combine multiple reducers into one"
         ],
         "correctOption": 1,
         "points": 10
     },
     {
         id: 227,
-        question:"Why do we separate state update logic from components in Redux?",
+        question: "Why separate state logic from components in Redux?",
         "options": [
             "To prevent Redux DevTools from being triggered",
             "To reduce the final bundle size of the application",
-            "To make code predictable, maintainable, and easier to debug",
+            "To make code predictable, maintainable, and debuggable",
             "To avoid using React components for state updates"
         ],
         "correctOption": 2,
@@ -3493,7 +3493,7 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 228,
-        question: "Which solution is best suited for handling server state in modern React apps?",
+        question: "Which tool best handles server state in modern React apps?",
         "options": [
             "Redux with a single global store for all state types",
             "Context API for passing remote data through component tree",
@@ -3505,10 +3505,10 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 229,
-        question:"What performance issue can arise when using Context API for frequently changing state?",
+        question: "What performance issue arises with Context for frequently changing state?",
         "options": [
             "Context API cannot pass data to deeply nested components",
-            "Frequent updates cause unnecessary re-renders across all consumers",
+            "Frequent updates cause unnecessary re-renders in all consumers",
             "Context API is only designed for styling and theming",
             "Context API requires Redux to handle any state properly"
         ],
@@ -3517,7 +3517,7 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 230,
-        question: "Why do many modern React apps no longer need Redux for remote state?",
+        question: "Why do modern React apps often not need Redux for remote state?",
         "options": [
             "Redux has been deprecated and is no longer supported",
             "Context API fully replaces Redux for all state management",
