@@ -3529,23 +3529,23 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 231,
-        question: "Which type of state is best managed locally within a React component?",
+        question: "Which state is best managed locally in a component?",
         "options": [
-            "UI state like modal visibility or active tabs",
-            "Remote state fetched from an API",
             "Global state shared between multiple applications",
+            "Remote state fetched from an API",
+            "UI state like modal visibility or active tabs",
             "Server-side state stored in a database"
         ],
-        correctOption: 0,
+        correctOption: 2,
         points: 10
     },
     {
         id: 232,
-        question:"Which type of state typically requires global management tools?",
+        question: "Which state typically requires global management?",
         "options": [
             "UI state like which tab is currently active",
             "Temporary variables inside a function scope",
-            "Remote state like user data from an API",
+            "Remote state like user data from API",
             "CSS class toggles for styling components"
         ],
         correctOption: 2,
@@ -3553,7 +3553,7 @@ export const mockQuestions: Question[] = [
     },
     {
         id: 233,
-        question: "What is the main reason Redux adoption has decreased in recent years?",
+        question: "Why has Redux adoption decreased recently?",
         "options": [
             "React automatically handles all state management internally",
             "Most global state is remote and better handled by specialized libraries",
@@ -3568,7 +3568,7 @@ export const mockQuestions: Question[] = [
         "question": "What is the primary role of middleware in Redux?",
         "options": [
             "To let components update state directly without reducers",
-            "To intercept actions and run additional logic like async calls",
+            "To intercept actions and run additional logic",
             "To replace reducers with custom asynchronous handlers",
             "To make the store update automatically without dispatch"
         ],
@@ -3580,7 +3580,7 @@ export const mockQuestions: Question[] = [
         "question":"Where should side effects like API calls be handled in Redux?",
         "options": [
             "Inside reducer functions",
-            "Inside middleware functions",
+            "Inside middleware or thunks",
             "Directly in React components only",
             "Inside the store configuration"
         ],
@@ -3591,10 +3591,10 @@ export const mockQuestions: Question[] = [
         "id": 236,
         "question": "What is the main purpose of Redux Thunk?",
         "options": [
-            "To defer rendering components until data is ready",
-            "To optimize reducers by memoizing state updates",
-            "To prevent unnecessary re-renders in functional components",
-            "To handle asynchronous logic before dispatching actions"
+            "Defer rendering until data is ready",
+            "Optimize reducers by memoizing updates",
+            "Prevent unnecessary component re-renders",
+            "Handle async logic before dispatching actions"
         ],
         "correctOption": 3,
         "points": 20
@@ -3625,7 +3625,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 239,
-        "question":"Which capability is NOT provided by Redux Toolkit&apos;s createSlice?",
+        "question":"Which capability is NOT provided by createSlice?",
         "options": [
             "Automatically generates action creators and types",
             "Allows writing mutable-looking code safely with Immer",
@@ -3637,12 +3637,12 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 240,
-        "question": "Which library in Redux Toolkit allows writing code that appears to mutate state while maintaining immutability?",
+        "question":"Which library lets you write mutable-looking code in Redux Toolkit?",
         "options": [
-            "Thunk",
-            "Saga",
-            "Selector",
-            "Immer",
+            "Thunk for async operations",
+            "Saga for side effects",
+            "Selector for derived state",
+            "Immer for state updates"
         ],
         "correctOption": 3,
         "points": 10
