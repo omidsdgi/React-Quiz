@@ -3649,7 +3649,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 241,
-        "question": "Which Redux Toolkit API combines reducers and action creators into a single structure?",
+        "question": "Which Redux Toolkit API combines reducers and action creators?",
         "options": [
             "createSlice",
             "configureStore",
@@ -3661,7 +3661,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 242,
-        "question": "Which Redux Toolkit function sets up the store with built-in middleware and DevTools?",
+        "question": "Which function sets up the store with built-in middleware and DevTools?",
         "options": [
             "createReducer",
             "createStore",
@@ -3685,24 +3685,24 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 244,
-        "question":  "How are action creators handled in Redux Toolkit&apos;s createSlice?",
+        "question":  "How are action creators handled in createSlice?",
         "options": [
-            "They must be written manually by the developer",
-            "They are generated automatically and accept one payload",
-            "They require multiple arguments for each action call",
-            "They cannot be accessed outside of the slice logic"
+            "Must be written manually by the developer",
+            "Auto-generated, accept one payload argument",
+            "Require multiple arguments for each action call",
+            "Cannot be accessed outside of the slice logic"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 245,
-        "question": "What is the primary purpose of createSlice in Redux Toolkit?",
+        "question": "What is the primary purpose of createSlice?",
         "options": [
-            "It installs external libraries for async handling",
-            "It manages routing and navigation inside React apps",
-            "It defines reducers and generates actions creators together",
-            "It creates global styles for components in the project"
+            "Installs external libraries for async handling",
+            "Manages routing and navigation inside React apps",
+            "Defines reducers and generates actions creators together",
+            "Creates global styles for components in the project"
         ],
         "correctOption": 2,
         "points": 20
@@ -3711,22 +3711,22 @@ export const mockQuestions: Question[] = [
         "id": 246,
         "question": "What is true about reducers inside createSlice?",
         "options": [
-            "They always return a completely new object",
-            "They can write code that appears to mutate state due to Immer",
-            "They cannot use payload values from dispatched actions",
-            "They only work if written as pure asynchronous functions component"
+            "Always return a completely new object",
+            "Can write code that appears to mutate state due to Immer",
+            "Cannot use payload values from dispatched actions",
+            "Only work if written as pure asynchronous functions component"
         ],
         "correctOption": 1,
         "points": 20
     },
     {
         "id": 247,
-        "question": "How are action creators provided when using createSlice?",
+        "question": "How are action creators provided in createSlice?",
         "options": [
-            "They are created manually in a separate actions file",
-            "They are only available if connected with middleware",
-            "They are generated automatically based on reducer names",
-            "They must be imported directly from the Redux package",
+            "Created manually in separate file",
+            "Only available with middleware",
+            "Auto-generated based on reducer names",
+            "Must be imported from Redux"
         ],
         "correctOption": 2,
         "points": 20
@@ -3735,29 +3735,29 @@ export const mockQuestions: Question[] = [
         "id": 248,
         "question": "What is a key advantage of createSlice over traditional Redux?",
         "options": [
-            "It reduces boilerplate by combining related logic",
-            "It prevents React components from re-rendering",
-            "It adds built-in routing and query string support",
-            "It eliminates the need for any store or middleware"
+            "Reduces boilerplate by combining related logic",
+            "Prevents React components from re-rendering",
+            "Adds built-in routing and query string support",
+            "Eliminates the need for any store or middleware"
         ],
         "correctOption": 0,
         "points": 20
     },
     {
         "id": 249,
-        "question": "What does createSlice return after definition?",
+        "question": "What does createSlice return?",
         "options": [
-            "A collection of selectors for reading global state",
-            "A middleware that listens for dispatched actions",
-            "A reducer function and auto-generated actions creators",
-            "A hook that manages asynchronous API requests"
+            "collection of selectors for reading global state",
+            "Middleware that listens for dispatched actions",
+            "Reducer function and auto-generated actions creators",
+            "Hook that manages asynchronous API requests"
         ],
         "correctOption":2,
         "points": 20
     },
     {
         "id": 250,
-        "question": "How are reducers inside createSlice typically written?",
+        "question":  "How are reducers typically written inside createSlice?",
         "options": [
             "As JSX components that render data from the store",
             "As lifecycle hooks that are triggered by React updates",
