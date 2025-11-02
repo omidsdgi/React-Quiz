@@ -4009,21 +4009,21 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 271,
-        "question": "Which approach is more efficient for local component subtree state?",
+        "question": "Which approach is more efficient for local component state?",
         "options": [
-            "Redux Toolkit",
+            "Redux Toolkit with createSlice",
             "Redux with middleware",
-            "React Context",
-            "React DevTools"
+            "React Context API",
+            "React DevTools management"
         ],
         "correctOption":2,
         "points": 10
     },
     {
         "id": 272,
-        "question": "Which tool is most appropriate for rarely changing global values like theme?",
-        "options": [
-            "React Context",
+        question: "Which tool is best for rarely changing global values like theme?",
+        options: [
+            "React Context API",
             "Redux Toolkit",
             "Redux with middleware",
             "Global store libraries"
@@ -4033,7 +4033,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 273,
-        "question": "Which of the following demonstrates DOM traversal?",
+        "question": "Which example demonstrates DOM traversal?",
         "options": [
             "document.createElement('div')",
             "element.parentNode.nextSibling",
@@ -4045,7 +4045,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 274,
-        "question": "What is the main difference between imperative and declarative programming?",
+        "question":"What distinguishes imperative from declarative programming?",
         "options": [
             "Imperative focuses on what should happen, declarative on how",
             "Declarative focuses on what should happen, imperative on how",
@@ -4071,10 +4071,10 @@ export const mockQuestions: Question[] = [
         "id": 276,
         "question": "What is the primary benefit of declarative programming in React?",
         "options": [
-            "You write step-by-step DOM manipulation instructions",
-            "You describe what the UI should look like",
-            "You manually track all state and DOM changes",
-            "You directly use querySelector for DOM updates"
+            "Write step-by-step DOM manipulation instructions",
+            "Describe what UI should be, not how to build it",
+            "Manually track all state and DOM changes",
+            "Directly use querySelector for updates"
         ],
         "correctOption": 1,
         "points": 20
@@ -4083,7 +4083,7 @@ export const mockQuestions: Question[] = [
         "id": 277,
         "question": "Why is DOM traversing important in front-end development?",
         "options": [
-            "Allow to navigate, read, and manipulate of HTML structure",
+            "Allows navigation and manipulation of HTML structure",
             "CSS styling replacement with JavaScript calculations",
             "Automatic JavaScript performance optimization",
             "Server-side HTML content generation"
