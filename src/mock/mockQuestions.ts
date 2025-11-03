@@ -4129,9 +4129,9 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 281,
-        "question":"What does 'data loading waterfall' mean in React applications?",
+        "question":"What does 'data loading waterfall' mean in React?",
         "options": [
-            "Using advanced caching strategies to completely eliminate the need for repeated network calls",
+            "Advanced caching strategies to completely eliminate the need for repeated network calls",
             "Multiple requests executed sequentially, causing slower loading times",
             "Executing all API requests in parallel regardless of dependencies",
             "Fetching data only for the components currently visible in the viewport",
@@ -4189,7 +4189,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 286,
-        "question":  "If a user updates only delivery address of existing order, which HTTP method should be used?",
+        question: "To update only delivery address of existing order, which HTTP method should be used?",
         "options": [
             "GET",
             "POST",
@@ -4201,7 +4201,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 287,
-        "question": "if system needs to create brand new pizza order, which HTTP method should be used?",
+        question: "To create a brand new pizza order, which HTTP method should be used?",
         "options": [
             "GET",
             "POST",
@@ -4213,7 +4213,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 288,
-        "question":"if a admin replaces entire pizza menu with new list, which HTTP method should be used?",
+        question: "To replace entire pizza menu with new list, which HTTP method should be used?",
         "options": [
             "GET",
             "POST",
@@ -4225,7 +4225,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 289,
-        "question":  "If a customer views specific order details by ID, which HTTP method should be used?",
+        "question":  "To view specific order details by ID, which HTTP method should be used?",
         "options": [
             "GET",
             "POST",
@@ -4237,7 +4237,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 290,
-        "question": "If a customer cancels and removes order completely, which HTTP method should be used?",
+        "question": "To cancel and remove order completely, which HTTP method should be used?",
         "options": [
             "GET",
             "POST",
