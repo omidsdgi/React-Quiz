@@ -4297,11 +4297,11 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 295,
-        "question": "What is the best practice when modeling state in Redux?",
+        "question": "What is the best practice when modeling Redux state?",
         "options": [
             "Store the entire UI tree directly inside the state",
             "Duplicate entities in multiple parts of the state for faster access",
-            "Normalize data and avoid deeply nested structures",
+            "Normalize data and avoid deep nesting structures",
             "Keep derived values permanently stored in state"
         ],
         "correctOption": 2,
@@ -4309,12 +4309,12 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 296,
-        "question": "Why is normalization recommended in Redux state?",
+        "question": "Why is normalization recommended in Redux?",
         "options": [
-            "It makes state harder to update consistently",
-            "It ensures all data is stored in nested objects",
-            "It makes selectors unnecessary in the application",
-            "It allows easy updates and avoids data duplication",
+            "Makes state harder to update consistently",
+            "Ensures all data is stored in nested objects",
+            "Makes selectors unnecessary in the application",
+            "Allows easy updates and avoids data duplication",
         ],
         "correctOption": 3,
         "points": 20
@@ -4324,7 +4324,7 @@ export const mockQuestions: Question[] = [
         "question": "Why prefer React Query over fetch with useEffect?",
         "options": [
             "eliminates the need for backend APIs",
-            "automatically handles caching, refetching, and background updates",
+            "Handles caching, refetching, and background updates",
             "replaces Redux for all state management including local state",
             "converts all API responses into static HTML automatically"
         ],
@@ -4345,7 +4345,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 299,
-        "question": "ٌWhat's a key advantage of React over vanilla JavaScript?",
+        "question": "What's a key advantage of React over vanilla JavaScript?",
         "options": [
             "React directly modifies DOM for speed",
             "React removes need for event handling",
