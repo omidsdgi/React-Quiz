@@ -5946,6 +5946,78 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
+        "id": 1385,
+        "question": "What problem do React Portals solve?",
+        "options": [
+            "Slow component rendering performance",
+            "Rendering children outside parent DOM hierarchy",
+            "Managing global application state",
+            "Handling asynchronous operations"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1386,
+        "question": "How do you create a Portal in React?",
+        "options": [
+            "Using ReactDOM.createPortal(child, container)",
+            "Using new Portal(child, container)",
+            "Using usePortal hook from React",
+            "Portals are created automatically"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1387,
+        "question": "Do events bubble through Portals?",
+        "options": [
+            "No, events are trapped in portal",
+            "Yes, events bubble through React tree despite DOM location",
+            "Only synthetic events bubble",
+            "Events must be manually forwarded"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1388,
+        "question": "What is a common use case for Portals?",
+        "options": [
+            "Optimizing component performance",
+            "Modals, tooltips, and overlays",
+            "Managing form validation state",
+            "Implementing dark mode themes"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1389,
+        "question": "Can context work through Portals?",
+        "options": [
+            "No, context is broken by portals",
+            "Yes, context works based on React tree",
+            "Only with special portal context",
+            "Context must be manually passed"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1390,
+        "question": "What happens when a Portal's target container doesn't exist?",
+        "options": [
+            "React creates it automatically",
+            "Error is thrown during render",
+            "Portal is rendered in parent instead",
+            "Component doesn't render anything"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
         "id": 476,
         "question": "Where is modal typically rendered using React Portal?",
         "options": [
