@@ -1112,7 +1112,7 @@ export const mockQuestions: Question[] = [
         "question": "What is the key difference between useCallback and useMemo?",
         "options": [
             "useCallback memoizes functions, useMemo memoizes values",
-            "useCallback stores values, useMemo stores functions",
+            "useCallback stores values, useMemo stores functio1ns",
             "useMemo is for effects, useCallback is for state",
             "They perform identical functions"
         ],
@@ -8918,6 +8918,102 @@ export const mockQuestions: Question[] = [
             "Shows content immediately reducing wait time",
         ],
         "correctOption": 3,
+        "points": 30
+    },
+    {
+        "id": 1361,
+        "question": "What is an Error Boundary in React?",
+        "options": [
+            "A component that catches JavaScript errors in child tree",
+            "A validation library for forms",
+            "A debugging tool in DevTools",
+            "A type of React Router guard"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1362,
+        "question": "Which lifecycle method is used to catch errors in Error Boundaries?",
+        "options": [
+            "componentDidCatch and getDerivedStateFromError",
+            "componentWillCatch and handleError",
+            "onError and catchError",
+            "useErrorBoundary hook"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 1363,
+        "question": "Can functional components be Error Boundaries?",
+        "options": [
+            "Yes, using useErrorBoundary hook",
+            "No, only class components currently",
+            "Yes, with special wrapper function",
+            "No, Error Boundaries are deprecated"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1364,
+        "question": "What errors do Error Boundaries NOT catch?",
+        "options": [
+            "Errors in child component render",
+            "Event handlers, async code, and SSR errors",
+            "Errors in lifecycle methods",
+            "Errors in constructor functions"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1365,
+        "question": "How do you handle errors in event handlers?",
+        "options": [
+            "Error Boundaries catch them automatically",
+            "Use try-catch blocks in handlers",
+            "Event errors cannot be caught",
+            "Use global error handler only"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1366,
+        "question": "Where should Error Boundaries be placed?",
+        "options": [
+            "Only at root level of application",
+            "Around every single component",
+            "Strategically around key sections for granular handling",
+            "Error Boundaries are automatic"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1367,
+        "question": "What should an Error Boundary render on error?",
+        "options": [
+            "Nothing, just log the error",
+            "Fallback UI with error message",
+            "Redirect to home page automatically",
+            "The original component again"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1368,
+        "question": "Can you reset an Error Boundary after an error?",
+        "options": [
+            "No, page must be refreshed manually",
+            "Yes, by updating state to reset boundary",
+            "Automatic reset after 5 seconds",
+            "Error Boundaries cannot be reset"
+        ],
+        "correctOption": 1,
         "points": 30
     },
     {
