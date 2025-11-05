@@ -3353,6 +3353,102 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
+        "id": 1369,
+        "question": "What is the main purpose of React Context?",
+        "options": [
+            "Replace all state management libraries",
+            "Share data without prop drilling",
+            "Improve component render performance",
+            "Handle all API requests centrally"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1370,
+        "question": "How do you create a Context in React?",
+        "options": [
+            "Using createContext() function from React",
+            "Using new Context() constructor",
+            "Using useContext hook directly",
+            "Context is created automatically"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1371,
+        "question": "What is the purpose of Context Provider?",
+        "options": [
+            "To consume context values only",
+            "To supply context value to descendant components",
+            "To create multiple contexts simultaneously",
+            "To validate context data types"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1372,
+        "question": "Can you have nested Context Providers of the same Context?",
+        "options": [
+            "No, causes infinite loops",
+            "Yes, inner Provider overrides outer value",
+            "Only with different context names",
+            "Only in production mode"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1373,
+        "question": "What happens when Context value changes?",
+        "options": [
+            "Only Provider re-renders",
+            "All consumers re-render automatically",
+            "No components re-render",
+            "Only direct children re-render"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1374,
+        "question": "How do you prevent unnecessary re-renders with Context?",
+        "options": [
+            "Split contexts and memoize values",
+            "Use global variables instead",
+            "Disable Context updates",
+            "Use only primitive values"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1375,
+        "question": "Can you use multiple Contexts in one component?",
+        "options": [
+            "No, only one context per component",
+            "Yes, using multiple useContext calls",
+            "Only with Context composition pattern",
+            "Only in Class Components"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1376,
+        "question": "What is the default value in createContext used for?",
+        "options": [
+            "When no Provider is found in tree",
+            "As initial value for all consumers",
+            "For TypeScript type inference only",
+            "To reset context to defaults"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
         "id": 273,
         "question": "Which example demonstrates DOM traversal?",
         "options": [
