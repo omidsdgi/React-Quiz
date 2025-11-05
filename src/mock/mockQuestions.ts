@@ -27,30 +27,6 @@ export const mockQuestions: Question[] = [
         points: 20,
     },
     {
-        id: 10,
-        question: "When should you use a callback function to update state in React?",
-        options: [
-            "When the update will be computationally expensive",
-            "When the new state contains large amounts of data",
-            "When you want the update to happen faster",
-            "When the new state depends on the previous state"
-        ],
-        correctOption: 3,
-        points: 30,
-    },
-    {
-        id: 11,
-        question:  "When is the initializer function passed to useState executed?",
-        options: [
-            "On every component re-render",
-            "Every time state is updated",
-            "Only during the initial render",
-            "Only the first time state is updated"
-        ],
-        correctOption: 2,
-        points: 30,
-    },
-    {
         id: 14,
         question:  "Does a useEffect hook always run on the component's initial render?",
         options: [
@@ -75,30 +51,6 @@ export const mockQuestions: Question[] = [
         points: 20,
     },
     {
-        "id": 26,
-        "question":  "What is a significant SEO challenge for Single Page Applications?",
-        "options": [
-            "They cannot use secure HTTPS connections",
-            "Search engines struggle with dynamic content",
-            "They don't support inter-page linking",
-            "They're incompatible with modern web standards"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 28,
-        "question":"What approach can improve SEO for Single Page Applications?",
-        "options": [
-            "Converting to multiple static HTML pages",
-            "Completely avoiding routing libraries entirely",
-            "Implementing server-side rendering (SSR)",
-            "Disabling JavaScript entirely for crawlers"
-        ],
-        "correctOption": 2,
-        "points": 30
-    },
-    {
         "id": 31,
         "question":  "Does ESLint only check for syntax errors?",
         "options": [
@@ -109,42 +61,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10
-    },
-    {
-        "id": 36,
-        "question": "What is true about creating custom ESLint rules?",
-        "options": [
-            "Rules analyze Abstract Syntax Tree structure",
-            "Rules can only configure from command line",
-            "Rules must be embedded in HTML files",
-            "Custom rules only work with Angular projects"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 37,
-        "question": "How do you properly configure ESLint for a React project?",
-        "options": [
-            "Install React plugin and extend recommended rules",
-            "Install Redux alongside ESLint configuration",
-            "Use Vite instead of ESLint configuration",
-            "Install ESLint only without additional plugins"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 38,
-        "question": "How do 'rules', 'extends', and 'plugins' differ in ESLint?",
-        "options": [
-            "Rules configure plugins, extends sets environments",
-            "Rules define configs, extends inherits, plugins add",
-            "All three properties are completely interchangeable",
-            "Only rules matter, others are documentation"
-        ],
-        "correctOption": 1,
-        "points": 30
     },
     {
         "id": 40,
@@ -625,18 +541,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10
-    },
-    {
-        "id": 1308,
-        "question": "Why is Render Phase potentially asynchronous in React?",
-        "options": [
-            "To prevent blocking user interactions with UI",
-            "To fetch data from server during rendering",
-            "To wait for all images to load",
-            "To allow time for state updates"
-        ],
-        "correctOption": 0,
-        "points": 30
     },
     {
         "id": 1309,
@@ -1167,18 +1071,6 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 58,
-        "question":  "What happens when useMemo depends on a value that changes every render?",
-        options: [
-            "It recalculates every render, losing optimization benefits",
-            "React throws an error immediately",
-            "It works normally and caches correctly",
-            "The value is automatically memoized by React"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
         "id": 60,
         "question": "In React Profiler, what does the 'Commit' phase measure?",
         options: [
@@ -1189,18 +1081,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10
-    },
-    {
-        "id": 61,
-        "question":  "Why can overusing useCallback potentially hurt performance?",
-        options: [
-            "It always improves performance significantly",
-            "For simple functions memoization overhead may overstep benefits",
-            "It causes memory leaks in certain cases",
-            "It only works with class components"
-        ],
-        "correctOption": 1,
-        "points": 30
     },
     {
         "id": 62,
@@ -1311,18 +1191,6 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 71,
-        "question":  "What can happen if you overuse useMemo?",
-        options: [
-            "It adds memoization overhead so decrease performance",
-            "It significantly improves SEO rankings",
-            "It makes all components pure by default",
-            "It eliminates the need for useState"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
         "id": 72,
         "question": "Which hook maintains a mutable value without triggering re-renders?",
         options: [
@@ -1333,30 +1201,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10
-    },
-    {
-        "id": 73,
-        "question": "Why can't you directly use fetch API calls inside Redux reducers?",
-        options: [
-            "Reducers cannot access browser APIs like fetch",
-            "Reducers must be pure functions without side effects",
-            "Fetch can only be called from React components",
-            "Reducers automatically prevent async operations"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 74,
-        "question":  "Why do some effects execute twice in React.StrictMode during development?",
-        options: [
-            "Because React has an internal bug",
-            "To help developers detect side effects and verify cleanup logic",
-            "To increase rendering performance in development",
-            "To make development identical to production"
-        ],
-        "correctOption": 1,
-        "points": 20
     },
     {
         "id": 75,
@@ -1381,18 +1225,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10
-    },
-    {
-        "id": 79,
-        "question": "Which combination addresses the three main React optimization areas?",
-        "options": [
-            "React.memo, React.lazy, and useMemo hooks",
-            "useCallback, React.memo, and useMemo hooks",
-            "React.Suspense, useRef, and useReducer hooks",
-            "React.Fragment, useContext, and useLayoutEffect hooks"
-        ],
-        "correctOption": 0,
-        "points": 30
     },
     {
         "id": 80,
@@ -1429,18 +1261,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20
-    },
-    {
-        "id": 83,
-        "question":"How can you prevent Context consumers from re-rendering when unrelated data changes?",
-        "options": [
-            "Apply React.memo to all context consumers in the application",
-            "Wrap all context functions with useCallback for stable references",
-            "Split the context into multiple focused providers for different data",
-            "Move all shared data to component-level state instead of context"
-        ],
-        "correctOption": 2,
-        "points": 30
     },
     {
         "id": 84,
@@ -1503,78 +1323,6 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 89,
-        "question": "When do wasted renders become a significant performance problem?",
-        "options": [
-            "They are always problematic and must be eliminated immediately",
-            "Only when they cause unnecessary DOM updates to occur",
-            "Never, because React optimizes them automatically in all cases",
-            "When they occur frequently with expensive operations"
-        ],
-        "correctOption": 3,
-        "points": 30
-    },
-    {
-        "id": 90,
-        "question":  "Why is passing heavy components as children often more efficient?",
-        "options": [
-            "Children are cached permanently and never re-render again",
-            "React treats children as stable prop references when unchanged",
-            "Children execute in separate threads from parent components",
-            "Children bypass Virtual DOM diffing mechanism entirely"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 91,
-        "question": "What happens when an expensive component is passing directly inside a parent with frequent state updates?",
-        "options": [
-            "The expensive component re-renders with each parent re-render",
-            "The component renders once and never re-renders again",
-            "It re-renders only when parent state matches its props",
-            "It only re-renders when React runs in development mode"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 92,
-        "question":"How does React decide whether to re-render child components passed as props?",
-        "options": [
-            "Always re-renders all children when parent state changes",
-            "Applies automatic memoization to every child component",
-            "Only if their reference changes from the previous render",
-            "Ignores children props completely during reconciliation"
-        ],
-        "correctOption": 2,
-        "points": 30
-    },
-    {
-        "id": 93,
-        "question": "What is the best practice for expensive child components in frequently updating parents?",
-        "options": [
-            "Wrap with React.memo or pass as children/props",
-            "Recreate the child on each render for freshness",
-            "Avoid using state in the parent component entirely",
-            "Place the child outside the React rendering tree"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 94,
-        "question":  "Why doesn't passing children always guarantee better performance?",
-        "options": [
-            "Children always re-render regardless of prop changes",
-            "React doesn't support optimization for children props",
-            "Children skip Virtual DOM comparison process entirely",
-            "Performance benefit depends on whether children content remains unchanged"
-        ],
-        "correctOption": 3,
-        "points": 30
-    },
-    {
         "id": 95,
         "question": "What is the purpose of memoization in React?",
         "options": [
@@ -1608,66 +1356,6 @@ export const mockQuestions: Question[] = [
             "React.memo automatically deep-memoizes all props and state deeply"
         ],
         "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 107,
-        "question": "Why might React.memo fail with object or array props?",
-        "options": [
-            "React.memo doesn't support objects and arrays at all",
-            "React.memo converts them to strings for comparison purposes",
-            "React.memo requires custom hooks for complex prop types",
-            "React.memo only does shallow comparison of prop references"
-        ],
-        "correctOption":3,
-        "points": 30
-    },
-    {
-        "id": 108,
-        "question": "Which scenario is inappropriate for React.memo?",
-        "options": [
-            "Small, frequently updated components that render quickly",
-            "Heavy components that rarely change their props",
-            "Components with expensive recalculations and stable inputs",
-            "Components with complex child trees needing optimization"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
-    {
-        "id": 109,
-        "question": "How can you optimize memoization for object or array props?",
-        "options": [
-            "Convert props to strings before passing them to components",
-            "Use useMemo or useCallback to stabilize prop references",
-            "Avoid objects and arrays as props entirely in components",
-            "Wrap objects directly in React.memo for automatic optimization"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 110,
-        "question": "Why doesn't React.memo improve performance when objects are passed as props?",
-        "options": [
-            "React.memo ignores object props by default during comparison",
-            "Objects are compared by reference, so new objects appear changed",
-            "React.memo only works with primitive props like strings and numbers",
-            "React.memo clones objects internally, causing unnecessary re-renders"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
-        "id": 111,
-        "question": "Why is React.memo ineffective when functions are passed as props?",
-        "options": [
-            "React.memo ignores function props during component comparison",
-            "React.memo only optimizes state variables, not function references",
-            "React.memo inlines functions automatically, forcing component re-renders",
-            "Functions are recreated on every render unless properly stabilized"
-        ],
-        "correctOption": 3,
         "points": 30
     },
     {
@@ -1873,18 +1561,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10
-    },
-    {
-        "id": 130,
-        "question": "What happens when a dependency used in useEffect is missing from the dependency array?",
-        "options": [
-            "React automatically adds the missing dependency at runtime",
-            "React throws a runtime error immediately when detected",
-            "The effect may use stale values, causing unexpected bugs",
-            "The effect runs on every render regardless of dependencies"
-        ],
-        "correctOption": 2,
-        "points": 30
     },
     {
         "id": 131,
@@ -2751,18 +2427,6 @@ export const mockQuestions: Question[] = [
         points: 20
     },
     {
-        id: 211,
-        question: "When is Redux better than Context with useReducer?",
-        options: [
-            "For large apps needing global state tools",
-            "For small apps with minimal requirements",
-            "When React isn't part of stack",
-            "When avoiding JavaScript is the goal"
-        ],
-        correctOption: 0,
-        points: 30
-    },
-    {
         id: 212,
         question: "Why don't modern React apps need Redux?",
         options: [
@@ -2773,18 +2437,6 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 1,
         points: 20
-    },
-    {
-        id: 213,
-        question: "What scenario justifies using Redux in React?",
-        options: [
-            "Single counter with minimal state changes",
-            "Large frequently changing state across components",
-            "Styling components with CSS frameworks only",
-            "Replacing React with Angular for performance"
-        ],
-        correctOption: 1,
-        points: 30
     },
     {
         id: 214,
@@ -5849,18 +5501,6 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 474,
-        "question": "What problem does rendering Modal with Portal solve?",
-        "options": [
-            "Ensures modal always centered on screen",
-            "Avoids z-index and overflow issues",
-            "Allows modal to manage own state",
-            "Improves performance of large trees"
-        ],
-        "correctOption": 1,
-        "points": 30
-    },
-    {
         "id": 475,
         "question": "What is main purpose of React Portal for modals?",
         "options": [
@@ -6292,30 +5932,6 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 30
     },
-        {
-        "id": 512,
-        "question": "What is the main drawback of client-side rendering?",
-        "options": [
-            "It does not support CSS styling properly",
-            "It prevents dynamic interactivity with APIs",
-            "It reduces SEO effectiveness and delays first paint",
-            "It blocks user input during rendering"
-        ],
-        "correctOption": 2,
-        "points": 30
-    },
-    {
-        "id": 513,
-        "question": "Why is client-side rendering often slower than server-side rendering?",
-        "options": [
-            "Because JavaScript must be downloaded and executed before rendering",
-            "Because HTML is pre-rendered before being sent to the browser",
-            "Because all resources are cached locally before first paint",
-            "Because server responses arrive faster than assets"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
     {
         "id": 514,
         "question": "What is a 'request waterfall' in client-side rendering?",
@@ -6329,18 +5945,6 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 515,
-        "question": "Why is server-side rendering generally faster than client-side rendering?",
-        "options": [
-            "Because it skips network requests entirely",
-            "Because the server sends ready-to-display HTML to the browser",
-            "Because it avoids sending JavaScript to the client",
-            "Because it caches static pages in the browser"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
         "id": 516,
         "question": "When does data fetching occur in SSR?",
         "options": [
@@ -6351,18 +5955,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20
-    },
-    {
-        "id": 517,
-        "question": "Why is SSR less interactive compared to CSR?",
-        "options": [
-            "Because it delays JavaScript execution until after HTML load",
-            "Because it doesn’t send CSS files with HTML",
-            "Because it blocks user input entirely",
-            "Because it doesn’t support routing between pages"
-        ],
-        "correctOption": 0,
-        "points": 30
     },
     {
         "id": 518,
@@ -6471,30 +6063,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20
-    },
-    {
-        "id": 527,
-        "question": "What does the First Paint metric represent?",
-        "options": [
-            "The time when the main content becomes visible",
-            "The time until all images and fonts are loaded",
-            "The time when the browser first renders any content to the screen",
-            "The time when interactivity becomes available",
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 528,
-        "question": "In SSR, how are data fetching and rendering performed?",
-        "options": [
-            "Data is fetched on the client after HTML is rendered",
-            "Data is fetched on the server and rendered before sending HTML",
-            "Data is embedded as JSON for client rendering only",
-            "No data fetching occurs during SSR"
-        ],
-        "correctOption": 1,
-        "points": 30
     },
     {
         "id": 529,
