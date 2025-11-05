@@ -4494,6 +4494,102 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
+        "id": 1377,
+        "question": "What is the difference between useRef and createRef?",
+        "options": [
+            "No difference, they are identical",
+            "useRef persists across renders, createRef creates new each time",
+            "createRef is for functional components only",
+            "useRef is deprecated, use createRef"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1378,
+        "question": "Can you pass refs between components?",
+        "options": [
+            "Yes, refs can be passed like props",
+            "No, refs are component-private only",
+            "Yes, using forwardRef wrapper",
+            "Only in Class Components"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1379,
+        "question": "What is the useImperativeHandle hook used for?",
+        "options": [
+            "To expose custom instance methods to parent via ref",
+            "To handle imperative animations",
+            "To manage component lifecycle imperatively",
+            "To replace useEffect with imperative code"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1380,
+        "question": "When should you use refs instead of state?",
+        "options": [
+            "Always use refs for better performance",
+            "When value doesn't affect render output",
+            "Never, state is always better",
+            "Only for DOM manipulation"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1381,
+        "question": "Can you store interval or timeout IDs in refs?",
+        "options": [
+            "No, use state instead",
+            "Yes, refs are perfect for this",
+            "Only with special configuration",
+            "Intervals don't work with React"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1382,
+        "question": "What happens if you update ref.current during render?",
+        "options": [
+            "It's fine, no side effects",
+            "Causes component to re-render immediately",
+            "Should be avoided, may cause issues",
+            "Ref updates are ignored during render"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 1383,
+        "question": "Can refs be used in Server Components?",
+        "options": [
+            "Yes, refs work everywhere",
+            "No, refs require client-side interactivity",
+            "Only with special server-refs",
+            "Only for reading, not writing"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1384,
+        "question": "How do you access child component methods from parent?",
+        "options": [
+            "Direct access through props",
+            "Using forwardRef and useImperativeHandle",
+            "Child methods are always accessible",
+            "Use global event emitters"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
         "id": 361,
         "question":"What is a common use case for using useRef with timers?",
         "options": [
