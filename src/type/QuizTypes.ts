@@ -6,6 +6,14 @@ export interface Question {
     options: string[];
     correctOption: number;
     points: number;
+    explanation: string;
+}
+
+export interface ExplanationModalProps {
+    isOpen: boolean;
+    isCorrect: boolean;
+    explanation: string;
+    onClose: () => void;
 }
 
 export type QuizStatus= "loading" | "error" | "ready" | "active" | "finished"
@@ -44,6 +52,7 @@ export interface OptionsProps {
     answer: number | null;
     points: number;
     dispatch: React.Dispatch<Action>;
+    onShowExplanation: (isCorrect: boolean) => void;
 }
 
 export interface NextButtonProps {
