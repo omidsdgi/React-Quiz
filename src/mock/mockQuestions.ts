@@ -15,30 +15,6 @@ export const mockQuestions: Question[] = [
         points: 10,
     },
     {
-        id: 7,
-        question: "When should you derive state from existing state variables?",
-        options: [
-            "When state updates should not trigger re-renders",
-            "When state needs to be synchronized with useEffect",
-            "When state should be accessible globally",
-            "When one state can be calculated from another"
-        ],
-        correctOption: 3,
-        points: 30,
-    },
-    {
-        id: 8,
-        question: "What causes a React component to re-render?",
-        options: [
-            "Running a useEffect hook",
-            "Receiving new props",
-            "Updating component state",
-            "Adding event listeners"
-        ],
-        correctOption: 2,
-        points: 20,
-    },
-    {
         id: 9,
         question:"In React applications, when should you directly manipulate the DOM?",
         options: [
@@ -75,18 +51,6 @@ export const mockQuestions: Question[] = [
         points: 30,
     },
     {
-        id: 13,
-        question:  "What should be included in a useEffect dependency array?",
-        options: [
-            "No dependencies are typically needed",
-            "All state variables in the component",
-            "All reactive values used inside the effect",
-            "Only variables needed for cleanup"
-        ],
-        correctOption: 2,
-        points: 30,
-    },
-    {
         id: 14,
         question:  "Does a useEffect hook always run on the component's initial render?",
         options: [
@@ -111,30 +75,6 @@ export const mockQuestions: Question[] = [
         points: 20,
     },
     {
-        "id": 22,
-        "question":"How do SPAs handle URL changes during navigation?",
-        "options": [
-            "Each navigation triggers full server request",
-            "Update URLs using History API without reload",
-            "They completely hide URLs from users",
-            "They always use server-side redirects"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 23,
-        "question": "Where does rendering primarily occur in Single Page Applications?",
-        "options": [
-            "Exclusively on server before sending HTML",
-            "Primarily on client using JavaScript",
-            "Equally distributed between client and server",
-            "On external CDN servers only"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
         "id": 26,
         "question":  "What is a significant SEO challenge for Single Page Applications?",
         "options": [
@@ -145,18 +85,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30
-    },
-    {
-        "id": 27,
-        "question": "How do client-side and server-side routing differ?",
-        "options": [
-            "Client-side routing always triggers page reloads",
-            "Server-side routing never performs full loads",
-            "They function identically in modern browsers",
-            "Client updates without reload, server triggers reload"
-        ],
-        "correctOption": 3,
-        "points": 20
     },
     {
         "id": 28,
@@ -181,54 +109,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10
-    },
-    {
-        "id": 32,
-        "question": "Which file is commonly used to configure ESLint rules?",
-        "options": [
-            ".eslint.config.js for configuration",
-            ".eslint for all settings",
-            ".eslintrc.json for rules",
-            ".linterrc.js for configuration"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 33,
-        "question": "What is the purpose of ESLint plugins?",
-        "options": [
-            "To improve JavaScript runtime performance",
-            "To add TypeScript compilation support",
-            "To extend ESLint with additional rules",
-            "To convert JavaScript to HTML"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 34,
-        "question": "Which command runs ESLint from the command line?",
-        "options": [
-            "eslint-check for running checks",
-            "lint-start to begin linting",
-            "eslint . for current directory",
-            "node run eslint for execution"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 35,
-        "question": "How can you exclude files from ESLint analysis?",
-        "options": [
-            "Add them to .eslint ignore file",
-            "Remove them from package.json",
-            "Comment them in index.html",
-            "Rename files with .skip extension"
-        ],
-        "correctOption": 0,
-        "points": 20
     },
     {
         "id": 36,
@@ -445,18 +325,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10
-    },
-    {
-        "id": 1282,
-        "question": "Is the Commit Phase synchronous or asynchronous in React?",
-        "options": [
-            "Asynchronous to prevent blocking user interactions",
-            "Synchronous to ensure consistent DOM updates",
-            "Sometimes synchronous, sometimes asynchronous depending on priority",
-            "Always asynchronous in production mode only"
-        ],
-        "correctOption": 1,
-        "points": 20
     },
     {
         "id": 1283,
@@ -1191,18 +1059,6 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 47,
-        "question":  "Which hook prevents unnecessary function recreation on re-renders?",
-        "options": [
-            "useEffect",
-            "useMemo",
-            "useCallback",
-            "useState"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
         "id": 48,
         "question": "What does React.memo() do?",
         "options": [
@@ -1212,18 +1068,6 @@ export const mockQuestions: Question[] = [
             "Creates new component instances automatically"
         ],
         "correctOption": 1,
-        "points": 10
-    },
-    {
-        "id": 49,
-        "question": "When should you use useMemo?",
-        "options": [
-            "For expensive calculations or object creation",
-            "To replace all useState hooks completely",
-            "For simple string concatenations only",
-            "For every variable in components"
-        ],
-        "correctOption": 0,
         "points": 10
     },
     {
@@ -1333,18 +1177,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30
-    },
-    {
-        "id": 59,
-        "question": "Which strategy reduces unnecessary Context re-renders?",
-        options: [
-            "Using multiple Context providers for everything",
-            "Adding more consumer components everywhere",
-            "Placing useEffect hooks in Context",
-            "Splitting Context by logical data boundaries"
-        ],
-        "correctOption": 3,
-        "points": 20
     },
     {
         "id": 60,
@@ -1549,30 +1381,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10
-    },
-    {
-        "id": 77,
-        "question":  "How does React.lazy() help reduce bundle size?",
-        options: [
-            "It prevents unnecessary component re-renders",
-            "It automatically compresses component code",
-            "It loads components only when needed",
-            "It removes unused CSS rules automatically"
-        ],
-        "correctOption": 2,
-        "points": 20
-    },
-    {
-        "id": 78,
-        "question":  "What technique improves performance when rendering large lists in React?",
-        "options": [
-            "Adding more event listeners to list items",
-            "List virtualization (windowing) technique",
-            "Inline styling for each individual list item",
-            "Using class components instead of functional components"
-        ],
-        "correctOption": 1,
-        "points": 20
     },
     {
         "id": 79,
@@ -2053,18 +1861,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30
-    },
-    {
-        "id": 128,
-        "question": "Why can't Hooks be called inside conditional statements?",
-        "options": [
-            "Hooks break automatically when used in loops or conditions",
-            "React cannot guarantee consistent Hook order across renders",
-            "Hooks can only be used once per component function",
-            "Conditionals prevent Hooks from receiving props correctly"
-        ],
-        "correctOption": 1,
-        "points": 20
     },
     {
         "id": 129,
@@ -2883,30 +2679,6 @@ export const mockQuestions: Question[] = [
         points: 20
     },
     {
-        id: 200,
-        question:  "Which rule must Redux reducers always follow?",
-        "options": [
-            "They can directly mutate the current state",
-            "They can include API calls inside the reducer",
-            "They can update state asynchronously with async/await",
-            "They must be pure functions without side effects"
-        ],
-        correctOption: 3,
-        points: 20
-    },
-    {
-        id: 201,
-        question: "What should a Redux reducer return when it receives an unknown action type?",
-        options: [
-            "It should throw an error to indicate invalid action",
-            "It should return the current state unchanged",
-            "It should return null to reset the state",
-            "It should return the initial state value"
-        ],
-        correctOption: 1,
-        points: 20
-    },
-    {
         id: 202,
         question: "Why must Redux reducers avoid asynchronous operations?",
         options: [
@@ -3110,18 +2882,6 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 0,
         points: 30
-    },
-    {
-        id: 222,
-        question:"What is the primary responsibility of a reducer in Redux?",
-        options: [
-            "Function for fetching data asynchronously from API endpoints",
-            "Take current state and action, return new state immutably",
-            "Function that renders UI components dynamically",
-            "Function managing middleware operations and logging"
-        ],
-        correctOption: 1,
-        points: 20
     },
     {
         id: 223,
