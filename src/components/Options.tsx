@@ -3,28 +3,38 @@ import {OptionsProps} from "../type/QuizTypes";
 export  function Options({
                              question,
                              answer,
-                             dispatch
+                             dispatch,
+                             onShowExplanation
                          }:OptionsProps) {
 
-    const hasAnswered= answer !==null;
+    const hasAnswered = answer !== null;
+
+    const handleClick = (index: number) => {
+        // ثبت پاسخ
+        dispatch({ type: "newAnswer", payload: index });
+
+        // نمایش Modal با توضیحات
+        const isCorrect = index === question.correctOption;
+        onShowExplanation?.(isCorrect);
+    };
     return (
         <div className="options">
-            {question.options.map((option:string,index:number) =>
-                (<button
-                        className={`btn btn-option ${index === answer ? "answer" :""} ${
-                            hasAnswered
-                                ? index===question.correctOption
-                                    ? "correct"
-                                    : "wrong"
-                                    :""
-                        }`}
-                        key={option}
-                        disabled={hasAnswered}
-                        onClick={()=>dispatch({type:"newAnswer",payload:index})}
-                    >
-                        {option}
-                    </button>
-                ))}
+            {question.options.map((option: string, index: number) => (
+                <button
+                    className={`btn btn-option ${index === answer ? "answer" : ""} ${
+                        hasAnswered
+                            ? index === question.correctOption
+                                ? "correct"
+                                : "wrong"
+                            : ""
+                    }`}
+                    key={option}
+                    disabled={hasAnswered}
+                    onClick={() => handleClick(index)}
+                >
+                    {option}
+                </button>
+            ))}
         </div>
     );
 }
