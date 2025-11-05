@@ -15,7 +15,7 @@ export const mockQuestions: Question[] = [
         points: 10,
     },
     {
-        id: 9,
+        id: 2,
         question:"In React applications, when should you directly manipulate the DOM?",
         options: [
             "When adding event listeners",
@@ -27,7 +27,128 @@ export const mockQuestions: Question[] = [
         points: 20,
     },
     {
-        id: 14,
+        "id": 3,
+        "question": "What is the Virtual DOM in React?",
+        "options": [
+            "A copy of actual DOM kept in memory",
+            "A database for storing component data",
+            "A styling system for React components",
+            "A routing mechanism for navigation"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 4,
+        "question": "What is the main difference between Controlled and Uncontrolled Components?",
+        "options": [
+            "Controlled components are faster than uncontrolled",
+            "Controlled components manage form state through React state",
+            "Uncontrolled components cannot have event handlers",
+            "Uncontrolled components require special imports"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 5,
+        "question": "What is the fundamental difference between props and state?",
+        "options": [
+            "Props are mutable, state is immutable",
+            "Props are passed from parent, state is managed internally",
+            "Props are for styling, state is for data",
+            "Props cannot be objects, state can be"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 6,
+        "question": "What happens during the Mounting phase of component lifecycle?",
+        "options": [
+            "Component is created and inserted into DOM",
+            "Component updates its state values",
+            "Component is removed from the DOM",
+            "Component re-renders with new props"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 7,
+        "question": "What is prop drilling in React?",
+        "options": [
+            "Validating props before using them",
+            "Passing props through multiple component layers",
+            "Creating dynamic props at runtime",
+            "Optimizing prop performance with memoization"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 8,
+        "question": "Why are keys important when rendering lists in React?",
+        "options": [
+            "Keys help React identify which items changed",
+            "Keys are required for CSS styling",
+            "Keys improve API response time",
+            "Keys enable component lazy loading"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 9,
+        "question": "How does React's Reconciliation Algorithm optimize rendering?",
+        "options": [
+            "By always re-rendering entire component tree",
+            "By comparing Virtual DOM trees and updating only differences",
+            "By caching all components permanently",
+            "By disabling re-renders for unchanged components"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 10,
+        "question": "What changed about batching in React 18?",
+        "options": [
+            "Batching was removed completely",
+            "Batching only works in event handlers",
+            "Batching now works in async functions and promises",
+            "Batching requires manual configuration"
+        ],
+        "correctOption": 2,
+        "points": 30
+    },
+    {
+        "id": 11,
+        "question": "What is the purpose of React.StrictMode?",
+        "options": [
+            "To enforce TypeScript in all components",
+            "To highlight potential problems in application",
+            "To prevent all runtime errors",
+            "To optimize production bundle size"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 12,
+        "question": "What happens during the Unmounting phase?",
+        "options": [
+            "Component state is saved to localStorage",
+            "Component is removed from DOM and cleanup runs",
+            "Component re-renders one final time",
+            "Component props are reset to defaults"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+
+    {
+        id: 13,
         question:  "Does a useEffect hook always run on the component's initial render?",
         options: [
             "Yes, regardless of the dependency array",
@@ -39,7 +160,7 @@ export const mockQuestions: Question[] = [
         points: 30,
     },
     {
-        id: 15,
+        id: 14,
         question: "How often will a useEffect run if no dependency array is provided?",
         options: [
             "Only when the component mounts",
@@ -51,7 +172,7 @@ export const mockQuestions: Question[] = [
         points: 20,
     },
     {
-        "id": 31,
+        "id": 15,
         "question":  "Does ESLint only check for syntax errors?",
         "options": [
             "Yes, it only validates syntax",
@@ -63,7 +184,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 40,
+        "id": 16,
         "question": "What is the main advantage of CSS Modules?",
         "options": [
             "They enable CSS-in-JS syntax automatically",
@@ -75,7 +196,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1268,
+        "id": 17,
         "question": "What is a DOM Element in React&apos;s context?",
         "options": [
             "A React component rendered to the virtual DOM",
@@ -87,7 +208,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1269,
+        "id": 18,
         "question": "What is the relationship between Component Instance and React Element?",
         "options": [
             "Component instances create React elements when rendered",
@@ -99,7 +220,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1270,
+        "id": 19,
         "question": "When is a render triggered in React applications?",
         "options": [
             "When state updates, props change, or parent re-renders",
@@ -111,7 +232,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1271,
+        "id": 20,
         "question": "What happens during the Render Phase in React?",
         "options": [
             "React updates the actual browser DOM immediately",
@@ -123,7 +244,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1272,
+        "id": 21,
         "question": "What happens during the Commit Phase in React?",
         "options": [
             "React calls component functions to create elements",
@@ -135,7 +256,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1273,
+        "id": 22,
         "question": "What is Browser Paint in React&apos;s rendering process?",
         "options": [
             "The phase where React builds virtual DOM tree",
@@ -147,7 +268,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1274,
+        "id": 23,
         "question": "Does rendering always mean updating the DOM in React?",
         "options": [
             "Yes, every render always updates DOM elements",
@@ -159,7 +280,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1275,
+        "id": 24,
         "question": "Why doesn't React completely discard the old view on re-render?",
         "options": [
             "Complete discard would prevent state from persisting",
@@ -171,7 +292,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1276,
+        "id": 25,
         "question": "What is the Fiber Tree in React&apos;s architecture?",
         "options": [
             "A tree of actual DOM elements in browser",
@@ -183,7 +304,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1277,
+        "id": 26,
         "question": "What is Reconciliation in React&apos;s rendering process?",
         "options": [
             "The process of comparing old and new virtual DOM",
@@ -195,7 +316,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1278,
+        "id": 27,
         "question": "How does React split rendering work into chunks?",
         "options": [
             "React cannot split rendering into smaller pieces",
@@ -207,7 +328,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1279,
+        "id": 28,
         "question": "Can React prioritize certain rendering tasks over others?",
         "options": [
             "No, all renders have equal priority always",
@@ -219,7 +340,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1280,
+        "id": 29,
         "question": "Can React pause, reuse or throw away work during rendering?",
         "options": [
             "No, once started, rendering must complete entirely",
@@ -231,7 +352,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1281,
+        "id": 30,
         "question": "Why does React write to DOM during Commit Phase?",
         "options": [
             "To test if changes work before displaying them",
@@ -243,7 +364,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1283,
+        "id": 31,
         "question": "What is Render Logic in React components?",
         "options": [
             "Code that runs when user clicks buttons",
@@ -255,7 +376,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1284,
+        "id": 32,
         "question": "What are Event Handler Functions in React?",
         "options": [
             "Functions that run during component render phase",
@@ -267,7 +388,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1285,
+        "id": 33,
         "question": "Should Render Logic contain side effects in React?",
         "options": [
             "Yes, side effects make components more powerful",
@@ -279,7 +400,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1286,
+        "id": 34,
         "question": "Are side effects inherently bad in React applications?",
         "options": [
             "No, side effects are necessary but must be handled properly",
@@ -291,7 +412,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1287,
+        "id": 35,
         "question": "Which hook is specifically designed to register side effects in React?",
         "options": [
             "useState for managing side effect state",
@@ -303,7 +424,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1288,
+        "id": 36,
         "question": "How are state updates batched in React?",
         "options": [
             "React groups multiple setState calls into single re-render",
@@ -315,7 +436,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1289,
+        "id": 37,
         "question": "Why does React batch state updates together?",
         "options": [
             "To make code easier to read and maintain",
@@ -327,7 +448,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1290,
+        "id": 38,
         "question": "When does React flush batched state updates?",
         "options": [
             "After event handler completes execution fully",
@@ -339,7 +460,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1291,
+        "id": 39,
         "question": "What is the difference between Render Phase and Commit Phase?",
         "options": [
             "Render calls functions, Commit updates DOM",
@@ -351,7 +472,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1292,
+        "id": 40,
         "question": "Can the Render Phase be interrupted in React?",
         "options": [
             "Yes, React can pause and resume rendering",
@@ -363,7 +484,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1293,
+        "id": 41,
         "question": "Can the Commit Phase be interrupted in React?",
         "options": [
             "Yes, commits can be paused mid-execution",
@@ -375,7 +496,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1294,
+        "id": 42,
         "question": "What creates a new Component Instance in React?",
         "options": [
             "Using a component in JSX creates new instance",
@@ -387,7 +508,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1295,
+        "id": 43,
         "question": "How many Component Instances exist for multiple uses of same component?",
         "options": [
             "Only one instance shared across all uses",
@@ -399,7 +520,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1296,
+        "id": 44,
         "question": "Do Component Instances have their own state and props?",
         "options": [
             "Yes, each instance has independent state and props",
@@ -411,7 +532,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1297,
+        "id": 45,
         "question": "What happens to Component Instance when it unmounts?",
         "options": [
             "Instance moves to different position in tree",
@@ -423,7 +544,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1298,
+        "id": 46,
         "question": "How does React Element differ from Component Instance?",
         "options": [
             "Element is object describing what to render",
@@ -435,7 +556,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1299,
+        "id": 47,
         "question": "Are React Elements mutable or immutable?",
         "options": [
             "Mutable, can be changed after creation",
@@ -447,7 +568,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1300,
+        "id": 48,
         "question": "What creates React Elements in applications?",
         "options": [
             "JSX syntax or React.createElement function calls",
@@ -459,7 +580,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1301,
+        "id": 49,
         "question": "How do React Elements become DOM Elements?",
         "options": [
             "React elements directly convert to DOM automatically",
@@ -471,7 +592,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1302,
+        "id": 50,
         "question": "What information does a React Element contain?",
         "options": [
             "Type, props, and children information only",
@@ -483,7 +604,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1303,
+        "id": 51,
         "question": "Can React Elements be reused across renders?",
         "options": [
             "No, new elements created on every render",
@@ -495,7 +616,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1304,
+        "id": 52,
         "question": "What triggers a render in React besides state changes?",
         "options": [
             "Parent re-rendering or context value changes",
@@ -507,7 +628,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1305,
+        "id": 53,
         "question": "Does changing props directly trigger a render?",
         "options": [
             "Yes, prop changes always trigger re-renders",
@@ -519,7 +640,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1306,
+        "id": 54,
         "question": "What happens between Render Phase and Commit Phase?",
         "options": [
             "React paints pixels to the screen",
@@ -531,7 +652,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1307,
+        "id": 55,
         "question": "What happens after the Commit Phase completes?",
         "options": [
             "Browser Paint occurs, rendering pixels to screen",
@@ -543,7 +664,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1309,
+        "id": 56,
         "question": "What is a Fiber in React&apos;s Fiber Tree?",
         "options": [
             "A JavaScript object tracking component instance",
@@ -555,7 +676,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1310,
+        "id": 57,
         "question": "What information does a Fiber node contain?",
         "options": [
             "Component type, props, state, and DOM references",
@@ -567,7 +688,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1311,
+        "id": 58,
         "question": "How does Fiber Tree differ from Virtual DOM?",
         "options": [
             "Fiber is React&apos;s internal structure, Virtual DOM is concept",
@@ -579,7 +700,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1312,
+        "id": 59,
         "question": "Does React create new Fiber Tree on every render?",
         "options": [
             "Yes, completely new tree on every render",
@@ -591,7 +712,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1313,
+        "id": 60,
         "question": "What is the purpose of Reconciliation in React?",
         "options": [
             "To determine minimal DOM updates needed efficiently",
@@ -603,7 +724,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1314,
+        "id": 61,
         "question": "What algorithm does React use for Reconciliation?",
         "options": [
             "Depth-first search through entire component tree",
@@ -615,7 +736,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1315,
+        "id": 62,
         "question": "How does React optimize Reconciliation performance?",
         "options": [
             "React compares all components on every render",
@@ -627,7 +748,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1316,
+        "id": 63,
         "question": "What happens if Reconciliation finds no differences?",
         "options": [
             "React skips Commit Phase entirely for component",
@@ -639,7 +760,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1317,
+        "id": 64,
         "question": "Can React reuse DOM nodes during Reconciliation?",
         "options": [
             "No, React always creates new DOM nodes",
@@ -651,7 +772,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1318,
+        "id": 65,
         "question": "Why does React split rendering into units of work?",
         "options": [
             "To enable pausing, prioritizing, and resuming rendering",
@@ -663,7 +784,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1319,
+        "id": 66,
         "question": "What is a unit of work in React&apos;s rendering?",
         "options": [
             "Processing one component or fiber node",
@@ -675,7 +796,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1320,
+        "id": 67,
         "question": "Can React throw away work during rendering?",
         "options": [
             "No, all started work must complete eventually",
@@ -687,7 +808,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1321,
+        "id": 68,
         "question": "How does React prioritize rendering work?",
         "options": [
             "All renders have equal priority always",
@@ -699,7 +820,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1322,
+        "id": 69,
         "question": "What determines whether DOM updates are necessary?",
         "options": [
             "React always updates DOM on every render",
@@ -711,7 +832,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1323,
+        "id": 70,
         "question": "Why is Commit Phase synchronous in React?",
         "options": [
             "To prevent visual inconsistencies in UI updates",
@@ -723,7 +844,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1324,
+        "id": 71,
         "question": "What is Render Logic NOT allowed to do?",
         "options": [
             "Calculate values and return JSX structure",
@@ -735,7 +856,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1325,
+        "id": 72,
         "question": "Why must Render Logic be pure in React?",
         "options": [
             "Pure functions are faster than impure functions",
@@ -747,7 +868,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1326,
+        "id": 73,
         "question": "Where should side effects be placed in React components?",
         "options": [
             "In render logic for immediate execution",
@@ -759,7 +880,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1327,
+        "id": 74,
         "question": "What makes Event Handler Functions different from Render Logic?",
         "options": [
             "Handlers can contain side effects and mutations",
@@ -771,7 +892,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1328,
+        "id": 75,
         "question": "When do Event Handler Functions execute?",
         "options": [
             "During component render phase automatically",
@@ -783,7 +904,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1329,
+        "id": 76,
         "question": "Why does React need a special hook for side effects?",
         "options": [
             "Side effects in render logic cause unpredictable behavior",
@@ -795,7 +916,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1330,
+        "id": 77,
         "question": "What is useEffect's primary purpose in React?",
         "options": [
             "To memoize expensive calculation results efficiently",
@@ -807,7 +928,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1331,
+        "id": 78,
         "question": "How does state update batching improve performance?",
         "options": [
             "By reducing number of re-renders significantly",
@@ -819,7 +940,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1332,
+        "id": 79,
         "question": "Are state updates always batched in React?",
         "options": [
             "Yes, always in all scenarios automatically",
@@ -831,7 +952,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1333,
+        "id": 80,
         "question": "What happens if you call setState multiple times synchronously?",
         "options": [
             "Each call causes immediate separate re-render",
@@ -843,7 +964,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1334,
+        "id": 81,
         "question": "Can you force React to flush batched updates immediately?",
         "options": [
             "No, flushing is automatic and uncontrollable",
@@ -855,7 +976,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1335,
+        "id": 82,
         "question": "What is the order of phases in React&apos;s rendering?",
         "options": [
             "Commit Phase, Render Phase, Browser Paint",
@@ -867,7 +988,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1336,
+        "id": 83,
         "question": "Which phase is responsible for calling component functions?",
         "options": [
             "Commit Phase calls all component functions",
@@ -879,7 +1000,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 1337,
+        "id": 84,
         "question": "Which phase is responsible for applying DOM changes?",
         "options": [
             "Render Phase applies all DOM changes",
@@ -891,7 +1012,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 1338,
+        "id": 85,
         "question": "Can components render without committing changes to DOM?",
         "options": [
             "Yes, if Reconciliation finds no differences",
@@ -903,7 +1024,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1339,
+        "id": 86,
         "question": "What information flows from Component Instance to React Element?",
         "options": [
             "Element provides props and children to instance",
@@ -915,7 +1036,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 1340,
+        "id": 87,
         "question": "What information flows from React Element to DOM Element?",
         "options": [
             "Element type, props, and children structure information",
@@ -1191,7 +1312,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 72,
+        "id": 71,
         "question": "Which hook maintains a mutable value without triggering re-renders?",
         options: [
             "useState",
@@ -1203,7 +1324,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 75,
+        "id": 72,
         "question": "What are the primary areas of focus for React performance optimization?",
         options: [
             "Using more hooks and creating additional components",
@@ -1215,7 +1336,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 76,
+        "id": 73,
         "question":"Which technique most directly reduces wasted re-renders?",
         options: [
             "Code splitting with React.lazy",
@@ -1227,7 +1348,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 80,
+        "id": 74,
         "question": "What defines a wasted render in React?",
         "options": [
             "Any render that takes longer than 16 ms to execute",
@@ -1239,7 +1360,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 81,
+        "id": 75,
         "question": "When does a React component re-render?",
         "options": [
             "Only when its internal state changes through setState calls",
@@ -1251,7 +1372,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 82,
+        "id": 76,
         "question": "What happens when a React Context value changes?",
         "options": [
             "Only the Provider component re-renders after the value change",
@@ -1263,7 +1384,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 84,
+        "id": 77,
         "question": "Which approach prevents creating new context value objects on every render?",
         "options": [
             "const value = useMemo(() => ({ user, setUser }), [user]);",
@@ -1275,7 +1396,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 85,
+        "id": 78,
         "question": "Do prop changes directly cause React components to re-render?",
         "options": [
             "Yes, React monitors all props and triggers re-renders automatically",
@@ -1287,7 +1408,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 86,
+        "id": 79,
         "question": "What does 'render' mean in React terminology?",
         "options": [
             "Updating the actual DOM elements on the page",
@@ -1299,7 +1420,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 87,
+        "id": 80,
         "question":  "Does every React render update the actual DOM?",
         "options": [
             "Yes, every render immediately updates the DOM elements",
@@ -1311,7 +1432,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 88,
+        "id": 81,
         "question": "What defines a wasted render in React performance terms?",
         "options": [
             "A render producing same Virtual DOM",
@@ -1323,7 +1444,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 95,
+        "id": 82,
         "question": "What is the purpose of memoization in React?",
         "options": [
             "To permanently store components in memory",
@@ -1335,7 +1456,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 99,
+        "id": 83,
         "question": "When is React.memo ineffective?",
         "options": [
             "When components always receive new props or object references",
@@ -1347,7 +1468,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 100,
+        "id": 84,
         "question": "What is the main difference between React.memo and useMemo?",
         "options": [
             "React.memo is for class components, useMemo is for functions",
@@ -1359,7 +1480,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 112,
+        "id": 85,
         "question": "What is the main difference between useMemo and useCallback?",
         "options": [
             "useMemo prevents re-renders, useCallback prevents effect re-execution",
@@ -1371,7 +1492,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 113,
+        "id": 86,
         "question": "How do React.memo and useMemo/useCallback differ in scope?",
         "options": [
             "React.memo memoizes components, useMemo/useCallback memoize values inside",
@@ -1383,7 +1504,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 114,
+        "id": 87,
         "question": "What role does the dependency array play in useMemo?",
         "options": [
             "It prevents the function from ever running again",
@@ -1395,7 +1516,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 115,
+        "id": 88,
         "question": "What similarity exists between useMemo dependency arrays and React.memo?",
         "options": [
             "Both automatically stabilize function references without developer effort",
@@ -1407,7 +1528,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 116,
+        "id": 89,
         "question":"What happens when useMemo's dependency array doesn't change between renders?",
         "options": [
             "A new value is always recalculated",
@@ -1419,7 +1540,7 @@ export const mockQuestions: Question[] = [
         "points": 10
     },
     {
-        "id": 117,
+        "id": 90,
         "question": "Which tool is primarily used for preventing unnecessary component re-renders?",
         "options": [
             "useState hook for managing component state",
@@ -1431,7 +1552,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 118,
+        "id": 91,
         "question": "Which hook prevents expensive recalculations inside components?",
         "options": [
             "useCallback hook for memoizing function references",
@@ -1443,7 +1564,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 119,
+        "id": 92,
         "question": "Which hook is useful for memoizing values used in dependency arrays of other hooks?",
         "options": [
             "useMemo hook for memoizing computed values",
@@ -1455,7 +1576,7 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 120,
+        "id": 93,
         "question": "What's the best approach to prevent child component re-renders when props haven't changed?",
         "options": [
             "useMemo in the parent component to memoize props",
@@ -1467,7 +1588,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 121,
+        "id": 94,
         "question": "What's the best approach for avoiding expensive recalculations depending on multiple variables?",
         "options": [
             "useMemo with proper dependency array containing all variables",
@@ -1479,7 +1600,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 122,
+        "id": 95,
         "question": "How should you stabilize expensive values used in other hook dependency arrays?",
         "options": [
             "useCallback for stabilizing the computed value reference",
@@ -1491,7 +1612,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 123,
+        "id": 96,
         "question": "Why does passing arrow functions as props prevent React.memo from working effectively?",
         "options": [
             "Arrow functions cannot access props or state from parent components",
@@ -1503,7 +1624,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 124,
+        "id": 97,
         "question": "When do useMemo and useEffect callbacks execute in the component lifecycle?",
         "options": [
             "useMemo runs after commit, useEffect runs during render phase",
@@ -1515,7 +1636,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 125,
+        "id": 98,
         "question": "What is the primary difference in purpose between useMemo and useEffect?",
         "options": [
             "Both are used for memoizing values inside component functions",
@@ -1527,7 +1648,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 126,
+        "id": 99,
         "question": "What do useMemo and useEffect return?",
         "options": [
             "useMemo returns functions, useEffect returns computed values",
@@ -1539,7 +1660,7 @@ export const mockQuestions: Question[] = [
         "points": 30
     },
     {
-        "id": 127,
+        "id": 100,
         "question": "Why is calling Hooks indirectly through call/apply invalid?",
         "options": [
             "Hooks must be called directly for React to track them properly",
@@ -1573,6 +1694,126 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20
+    },
+    {
+        "id": 1351,
+        "question": "What defines a Custom Hook in React?",
+        "options": [
+            "Any function that starts with 'use' prefix",
+            "A function using other React hooks",
+            "Both: starts with 'use' and uses React hooks",
+            "A function exported from a hooks file"
+        ],
+        "correctOption": 2,
+        "points": 10
+    },
+    {
+        "id": 1352,
+        "question": "When should you create a Custom Hook?",
+        "options": [
+            "For every component you create",
+            "When logic is reused across components",
+            "Only for API calls and data fetching",
+            "Never, use built-in hooks only"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1353,
+        "question": "What is the naming convention for Custom Hooks?",
+        "options": [
+            "Must start with 'use' followed by descriptive name",
+            "Must end with 'Hook' suffix",
+            "Must be in camelCase only",
+            "No specific naming convention required"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 1354,
+        "question": "Can Custom Hooks use other React hooks like useState?",
+        "options": [
+            "No, Custom Hooks cannot use other hooks",
+            "Yes, that's the main purpose of Custom Hooks",
+            "Only useState, not other hooks",
+            "Only in Class Components"
+        ],
+        "correctOption": 1,
+        "points": 10
+    },
+    {
+        "id": 1355,
+        "question": "How do you handle errors in a Custom Hook for API fetching?",
+        "options": [
+            "Errors cannot be handled in Custom Hooks",
+            "Use try-catch and return error state",
+            "Let errors bubble to parent component always",
+            "Use error boundaries inside the hook"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1356,
+        "question": "What should a Custom Hook for form handling return?",
+        "options": [
+            "Only the form values object",
+            "JSX for the entire form",
+            "Values, handlers, and validation state",
+            "Nothing, it should mutate props directly"
+        ],
+        "correctOption": 2,
+        "points": 20
+    },
+    {
+        "id": 1357,
+        "question": "Can Custom Hooks call other Custom Hooks?",
+        "options": [
+            "No, only built-in hooks allowed",
+            "Yes, Custom Hooks can compose other hooks",
+            "Only if they're in the same file",
+            "Only with special configuration"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 1358,
+        "question": "How do you type a Custom Hook in TypeScript?",
+        "options": [
+            "Custom Hooks cannot use TypeScript",
+            "Define return type and parameter types",
+            "TypeScript infers everything automatically",
+            "Use 'any' type for all hooks"
+        ],
+        "correctOption": 1,
+        "points": 30
+    },
+    {
+        "id": 1359,
+        "question": "What is a common pattern for Custom Hooks with cleanup?",
+        "options": [
+            "Return cleanup function from useEffect inside hook",
+            "Cleanup is automatic, no code needed",
+            "Use try-finally block for cleanup",
+            "Call cleanup manually from component"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
+    {
+        "id": 1360,
+        "question": "Can Custom Hooks have parameters?",
+        "options": [
+            "No, Custom Hooks cannot accept parameters",
+            "Yes, like any JavaScript function",
+            "Only primitive types as parameters",
+            "Only with TypeScript enabled"
+        ],
+        "correctOption": 1,
+        "points": 10
     },
     {
         "id": 132,
@@ -7830,7 +8071,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 690,
-        "question": "What happens when you omit width and height?",
+        "question": "What should you use instead of width and height attribute when using the<image> in Next.js?",
         "options": [
             "Next.js calculates them from file",
             "Image loads without optimization",
