@@ -2,37 +2,8 @@
 import { Question } from "@/type/QuizTypes";
 
 export const mockQuestions: Question[] = [
-    {
+       {
         id: 1,
-        question: "Which JavaScript framework has the largest developer community as of 2024?",
-        options: ["Angular", "React", "Svelte", "Vue"],
-        correctOption: 1,
-        points: 10,
-    },
-    {
-        id: 2,
-        question:  "Which company originally created React?",
-        options: ["Google", "Apple", "Netflix", "Facebook"],
-        correctOption: 3,
-        points: 10,
-    },
-    {
-        id: 3,
-        question:  "What are the primary building blocks of React applications?",
-        options: ["Components", "Blocks", "Elements", "Effects"],
-        correctOption: 0,
-        points: 10,
-    },
-    {
-        id: 4,
-        question:
-            "What syntax extension allows you to write HTML-like code in JavaScript?",
-        options: ["FBJ", "Babel", "JSX", "ES2015"],
-        correctOption: 2,
-        points: 10,
-    },
-    {
-        id: 5,
         question:"In React&360;s data flow model, how does data typically move between components?",
         options: [
             "From parents to children",
@@ -41,13 +12,6 @@ export const mockQuestions: Question[] = [
             "The developers decides",
         ],
         correctOption: 0,
-        points: 10,
-    },
-    {
-        id: 6,
-        question: "What mechanism is used to pass data from parent to child components?",
-        options: ["State", "Props", "PropTypes", "Parameters"],
-        correctOption: 1,
         points: 10,
     },
     {
@@ -111,14 +75,6 @@ export const mockQuestions: Question[] = [
         points: 30,
     },
     {
-        id: 12,
-        question:
-            "Which hook is primarily used for making API requests when a component mounts?",
-        options: ["useState", "useEffect", "useRef", "useReducer"],
-        correctOption: 1,
-        points: 10,
-    },
-    {
         id: 13,
         question:  "What should be included in a useEffect dependency array?",
         options: [
@@ -155,78 +111,6 @@ export const mockQuestions: Question[] = [
         points: 20,
     },
     {
-        "id": 16,
-        "question":  "What is the primary purpose of routing in web applications?",
-        "options": [
-            "Loading JavaScript modules on demand",
-            "Connecting frontend with backend APIs",
-            "Mapping URLs to corresponding views",
-            "Validating form inputs on the client"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 17,
-        "question": "In React Router, what does a route typically represent?",
-        "options": [
-            "A function for fetching remote data",
-            "A connection between URL and component",
-            "A global state object for context",
-            "A reference to specific DOM element"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        "id": 18,
-        "question": "What capability does routing provide to users in React applications?",
-        "options": [
-            "Navigation between screens using URLs",
-            "Automatic global styling for components",
-            "Built-in API response caching system",
-            "Persistent component state across sessions"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 19,
-        "question": "What is React Router's main responsibility?",
-        "options": [
-            "Managing global application state efficiently",
-            "Handling navigation and component rendering",
-            "Providing CSS-in-JS utilities for styling",
-            "Coordinating API data fetching operations"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        "id": 20,
-        "question": "What defines a Single Page Application (SPA)?",
-        "options": [
-            "An app that works only one device",
-            "A web app loading once, updating dynamically",
-            "A website reloading on each navigation",
-            "An app with exactly one route"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        "id": 21,
-        "question":"What is a primary benefit of Single Page Applications?",
-        "options": [
-            "Faster page reloads on every navigation",
-            "Reduced server computational load significantly",
-            "Smoother and more responsive navigation",
-            "No JavaScript required for functionality"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
         "id": 22,
         "question":"How do SPAs handle URL changes during navigation?",
         "options": [
@@ -249,30 +133,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20
-    },
-    {
-        "id": 24,
-        "question": "What happens when routing changes the URL in a React SPA?",
-        "options": [
-            "The browser performs full page reload",
-            "The URL change is ignored completely",
-            "React updates UI to match new URL",
-            "The application restarts execution completely"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 25,
-        "question": "What primarily drives content updates in Single Page Applications?",
-        "options": [
-            "JavaScript manipulating the DOM directly",
-            "Server sending new HTML pages",
-            "Full browser reloads after each action",
-            "CSS-only layout changes without scripts"
-        ],
-        "correctOption": 0,
-        "points": 10
     },
     {
         "id": 26,
@@ -309,30 +169,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30
-    },
-    {
-        "id": 29,
-        "question":  "What is ESLint's primary function in JavaScript projects?",
-        "options": [
-            "Managing application state across components",
-            "Analyzing code for issues and style problems",
-            "Rendering user interface components dynamically",
-            "Executing automated unit tests automatically"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        "id": 30,
-        "question": "When is ESLint typically run during development?",
-        "options": [
-            "Only during production deployment phase",
-            "During the build process with bundlers",
-            "During development and before code commits",
-            "Only after creating production builds"
-        ],
-        "correctOption": 2,
-        "points": 10
     },
     {
         "id": 31,
@@ -429,18 +265,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30
-    },
-    {
-        "id": 39,
-        "question":"Why are there multiple approaches to styling React components?",
-        "options": [
-            "Because React enforces one specific method",
-            "Because CSS is not supported by default",
-            "Because React is unopinionated about styling",
-            "Because JSX only supports inline styles"
-        ],
-        "correctOption": 2,
-        "points": 10
     },
     {
         "id": 40,
@@ -1331,18 +1155,6 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 41,
-        "question": "What does it mean when CSS is scoped to a component?",
-        "options": [
-            "The styles apply to the entire page",
-            "The styles are reusable across components",
-            "The styles only exist in global.css",
-            "The styles only affect that specific component"
-        ],
-        "correctOption": 3,
-        "points": 10
-    },
-    {
         "id": 42,
         "question": "What is a common problem with global CSS in large applications?",
         "options": [
@@ -1352,30 +1164,6 @@ export const mockQuestions: Question[] = [
             "They require special JSX syntax"
         ],
         "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 43,
-        "question":"Why is storing UI state in the URL beneficial?",
-        "options": [
-            "To reduce JavaScript bundle size significantly",
-            "To improve visual aesthetics of application",
-            "To enable sharing and bookmarking states",
-            "To prevent unnecessary component re-renders"
-        ],
-        "correctOption": 2,
-        "points": 10
-    },
-    {
-        "id": 44,
-        "question": "Which example demonstrates storing state in the URL?",
-        "options": [
-            "Using query parameters like ?search=react",
-            "Saving theme preferences in localStorage",
-            "Managing form input with useState hook",
-            "Passing data through component props"
-        ],
-        "correctOption": 0,
         "points": 10
     },
     {
@@ -3143,42 +2931,6 @@ export const mockQuestions: Question[] = [
         points: 20
     },
     {
-        id: 204,
-        question: "What essential elements must every Redux action contain?",
-        options: [
-            "A reducer function and current state",
-            "An array of middleware functions",
-            "A type field and optionally a payload",
-            "Only a unique ID number",
-        ],
-        correctOption: 2,
-        points: 10
-    },
-    {
-        id: 205,
-        question: "What is the primary role of dispatch in Redux?",
-        options: [
-            "It saves state permanently to local storage",
-            "It automatically refreshes the UI components",
-            "It merges multiple reducers into one",
-            "It sends actions to reducers to update state",
-        ],
-        correctOption: 3,
-        points: 10
-    },
-    {
-        id: 206,
-        question: "What is the main function of the Redux store?",
-        options: [
-            "Store CSS styles for application components",
-            "Execute side effects like API calls",
-            "Generate reducers for state management automatically",
-            "Hold application state and provide access"
-        ],
-        correctOption:3,
-        points: 10
-    },
-    {
         id: 207,
         question: "Why use multiple reducers in a Redux application?",
         options: [
@@ -3466,30 +3218,6 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 3,
         points: 20
-    },
-    {
-        id: 231,
-        question: "Which state is best managed locally in a component?",
-        "options": [
-            "Global state shared between multiple applications",
-            "Remote state fetched from an API",
-            "UI state like modal visibility or active tabs",
-            "Server-side state stored in a database"
-        ],
-        correctOption: 2,
-        points: 10
-    },
-    {
-        id: 232,
-        question: "Which state typically requires global management?",
-        "options": [
-            "UI state like which tab is currently active",
-            "Temporary variables inside a function scope",
-            "Remote state like user data from API",
-            "CSS class toggles for styling components"
-        ],
-        correctOption: 2,
-        points: 10
     },
     {
         id: 233,
@@ -4955,18 +4683,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20
-    },
-    {
-        "id": 355,
-        "question": "What is the primary purpose of the useRef hook?",
-        "options": [
-            "Managing component state that triggers re-renders",
-            "Storing mutable values that persist across renders",
-            "Creating side effects after component renders",
-            "Memoizing expensive calculations between renders"
-        ],
-        "correctOption": 1,
-        "points": 10
     },
     {
         "id": 356,
@@ -8341,42 +8057,6 @@ export const mockQuestions: Question[] = [
         "points": 20
     },
     {
-        "id": 649,
-        "question": "What is the purpose of next/font in Next.js?",
-        "options": [
-            "To automatically optimize and load fonts efficiently",
-            "To convert all fonts to web-safe formats",
-            "To generate custom fonts from templates",
-            "To compress images alongside font files"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 650,
-        "question": "Which module is used to load Google Fonts in Next.js?",
-        "options": [
-            "next/font/adobe",
-            "next/font/google",
-            "next/font/cdn",
-            "next/font/remote"
-        ],
-        "correctOption": 1,
-        "points": 10
-    },
-    {
-        "id": 651,
-        "question": "What happens when you use next/font/google?",
-        "options": [
-            "Fonts are loaded from Google CDN at runtime",
-            "Fonts are self-hosted and bundled at build time",
-            "Fonts require manual CDN link in HTML",
-            "Fonts are downloaded only when user scrolls",
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
         "id": 652,
         "question": "Why does Next.js self-host Google Fonts?",
         "options": [
@@ -8579,18 +8259,6 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30
-    },
-    {
-        "id": 669,
-        "question": "What is the primary purpose of Next.js Image component?",
-        "options": [
-            "To automatically optimize and lazy-load images",
-            "To convert all images to SVG format",
-            "To generate images from text descriptions",
-            "To compress videos alongside image files"
-        ],
-        "correctOption": 0,
-        "points": 10
     },
     {
         "id": 670,
