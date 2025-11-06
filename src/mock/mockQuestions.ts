@@ -15850,5 +15850,102 @@ export const mockQuestions: Question[] = [
 //         ],
 //         "correctOption": 1,
 //         "points": 30
+//   },
+//         {
+//         "id": 1461,
+//         "question": "What is i18n in web development?",
+//         "options": [
+//             "Internet Infrastructure Initiative",
+//             "Internationalization for multi-language support",
+//             "Image optimization technique",
+//             "Interactive interface design"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
 //     },
-                ]
+//     {
+//         "id": 1462,
+//         "question": "How does Next.js handle locale detection?",
+//         "options": [
+//             "Manual locale setting required always",
+//             "From URL, cookies, and Accept-Language header",
+//             "Only from browser localStorage",
+//             "Locale detection is not supported"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1463,
+//         "question": "What is the recommended structure for locale routes in App Router?",
+//         "options": [
+//             "[locale]/page.js pattern for dynamic locale",
+//             "Separate app directories per locale",
+//             "locale-en/page.js for each language",
+//             "Locales are handled automatically"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 1464,
+//         "question": "How do you access current locale in Server Component?",
+//         "options": [
+//             "Using useLocale hook from next/navigation",
+//             "From params.locale in page props",
+//             "Using getLocale() function",
+//             "Locale is not available in Server Components"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1465,
+//         "question": "What is locale negotiation in i18n?",
+//         "options": [
+//             "User selecting language from dropdown",
+//             "Determining best locale based on preferences",
+//             "Translating content between languages",
+//             "Negotiating API response formats"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+//     {
+//         "id": 1466,
+//         "question": "How do you create locale-specific metadata in Next.js?",
+//         "options": [
+//             "Using metadata export or generateMetadata with locale",
+//             "Separate metadata files per language",
+//             "Metadata cannot be localized",
+//             "Only through external i18n library"
+//         ],
+//         "correctOption": 0,
+//         "points": 30
+//     },
+//     {
+//         "id": 1467,
+//         "question": "What is the purpose of middleware in i18n routing?",
+//         "options": [
+//             "To translate content automatically",
+//             "To detect and redirect to appropriate locale",
+//             "To validate translation files",
+//             "Middleware is not used for i18n"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1468,
+//         "question": "How do you handle locale in URL for SEO?",
+//         "options": [
+//             "Hide locale in URL for cleaner links",
+//             "Include locale prefix in URL path",
+//             "Use query parameters for locale",
+//             "Store locale only in cookies"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+
+  ]
