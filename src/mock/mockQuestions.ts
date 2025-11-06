@@ -15947,5 +15947,100 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 1,
 //         "points": 20
 //     },
-
+//     {
+//         "id": 1469,
+//         "question": "What is XSS (Cross-Site Scripting) vulnerability?",
+//         "options": [
+//             "Server overload attack",
+//             "Injecting malicious scripts into web pages",
+//             "Stealing SSL certificates",
+//             "Cross-domain resource sharing"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1470,
+//         "question": "How does React help prevent XSS attacks?",
+//         "options": [
+//             "By automatically escaping rendered content",
+//             "By blocking all JavaScript execution",
+//             "By encrypting all user input",
+//             "React doesn't prevent XSS"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 1471,
+//         "question": "What is CSRF (Cross-Site Request Forgery)?",
+//         "options": [
+//             "Forcing users to make unwanted requests",
+//             "Forging SSL certificates",
+//             "Cross-site resource sharing",
+//             "Client-side request filtering"
+//         ],
+//         "correctOption": 0,
+//         "points": 10
+//     },
+//     {
+//         "id": 1472,
+//         "question": "How can you prevent CSRF attacks?",
+//         "options": [
+//             "Using HTTPS only for all requests",
+//             "CSRF tokens and SameSite cookies",
+//             "Disabling all POST requests",
+//             "CSRF cannot be prevented"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1473,
+//         "question": "Why is dangerouslySetInnerHTML dangerous?",
+//         "options": [
+//             "It causes performance issues",
+//             "It can execute malicious scripts from untrusted content",
+//             "It breaks React rendering lifecycle",
+//             "It's not actually dangerous"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1474,
+//         "question": "What is the principle of least privilege in security?",
+//         "options": [
+//             "Give users minimum access needed for task",
+//             "Restrict all user actions by default",
+//             "Privilege only for administrators",
+//             "Least important security principle"
+//         ],
+//         "correctOption": 0,
+//         "points": 30
+//     },
+//     {
+//         "id": 1475,
+//         "question": "How should you handle sensitive data in environment variables?",
+//         "options": [
+//             "Commit .env files to repository",
+//             "Never expose server-only vars to client",
+//             "Use NEXT_PUBLIC_ for all variables",
+//             "Store in localStorage for speed"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+//     {
+//         "id": 1476,
+//         "question": "What is Content Security Policy (CSP)?",
+//         "options": [
+//             "Policy for caching static content",
+//             "Header restricting resource loading sources",
+//             "Copyright protection for website content",
+//             "Security policy for CSS stylesheets"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     }
   ]
