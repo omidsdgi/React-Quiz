@@ -2551,7 +2551,102 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 0,
 //         "points": 30
 //     },
-//
+//{
+//     "id": 1435,
+//     "question": "What is lifting state up in React?",
+//     "options": [
+//         "Moving state to higher component in tree",
+//         "Optimizing state for performance",
+//         "Converting state to props",
+//         "Removing state from components"
+//     ],
+//     "correctOption": 0,
+//     "points": 10
+// },
+// {
+//     "id": 1436,
+//     "question": "When should you lift state up?",
+//     "options": [
+//         "Always lift all state to root",
+//         "When multiple components need same state",
+//         "Never lift state, use Context instead",
+//         "Only for performance optimization"
+//     ],
+//     "correctOption": 1,
+//     "points": 20
+// },
+// {
+//     "id": 1437,
+//     "question": "What is derived state in React?",
+//     "options": [
+//         "State inherited from parent component",
+//         "State calculated from existing state or props",
+//         "State fetched from external API",
+//         "State stored in localStorage"
+//     ],
+//     "correctOption": 1,
+//     "points": 20
+// },
+// {
+//     "id": 1438,
+//     "question": "Why should you avoid storing derived state?",
+//     "options": [
+//         "Derived state is slower to access",
+//         "It can become out of sync with source",
+//         "React doesn't support derived state",
+//         "It increases bundle size significantly"
+//     ],
+//     "correctOption": 1,
+//     "points": 30
+// },
+// {
+//     "id": 1439,
+//     "question": "What is the single source of truth principle?",
+//     "options": [
+//         "Using only one state management library",
+//         "One component controls all application state",
+//         "Each piece of state has one authoritative source",
+//         "Truth values must be boolean type"
+//     ],
+//     "correctOption": 2,
+//     "points": 20
+// },
+// {
+//     "id": 1440,
+//     "question": "What is state colocation in React?",
+//     "options": [
+//         "Placing all state in root component",
+//         "Keeping state close to where it's used",
+//         "Storing state in external database",
+//         "Combining multiple states into one"
+//     ],
+//     "correctOption": 1,
+//     "points": 20
+// },
+// {
+//     "id": 1441,
+//     "question": "When should you use useReducer instead of useState?",
+//     "options": [
+//         "Always use useReducer for better performance",
+//         "For complex state logic with multiple sub-values",
+//         "Never, useState is always sufficient",
+//         "Only in Class Components"
+//     ],
+//     "correctOption": 1,
+//     "points": 30
+// },
+// {
+//     "id": 1442,
+//     "question": "What is state normalization in React?",
+//     "options": [
+//         "Converting state to normal distribution",
+//         "Flattening nested state structure with IDs",
+//         "Validating state before updates",
+//         "Synchronizing state with server"
+//     ],
+//     "correctOption": 1,
+//     "points": 30
+// },
 //     {
 //         "id": 195,
 //         "question":  "What causes the stale closure problem in effects or callbacks?",
