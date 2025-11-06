@@ -15323,4 +15323,125 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 0,
 //         "points": 30
 //     },
+//         {
+//         "id": 1417,
+//         "question": "How do you type props in TypeScript React component?",
+//         "options": [
+//             "Using interface or type for props object",
+//             "Props are automatically typed always",
+//             "TypeScript doesn't support React props",
+//             "Use PropTypes from prop-types package"
+//         ],
+//         "correctOption": 0,
+//         "points": 10
+//     },
+//     {
+//         "id": 1418,
+//         "question": "What is React.FC (FunctionComponent) used for?",
+//         "options": [
+//             "To type functional components with props",
+//             "To create class components in TypeScript",
+//             "To define API fetch functions",
+//             "To type CSS-in-JS styles"
+//         ],
+//         "correctOption": 0,
+//         "points": 10
+//     },
+//     {
+//         "id": 1419,
+//         "question": "How do you type useState in TypeScript?",
+//         "options": [
+//             "useState<Type>(initialValue) with generic",
+//             "useState(initialValue: Type) with annotation",
+//             "TypeScript infers type automatically always",
+//             "Cannot type useState in TypeScript"
+//         ],
+//         "correctOption": 0,
+//         "points": 10
+//     },
+//     {
+//         "id": 1420,
+//         "question": "How do you type event handlers in TypeScript React?",
+//         "options": [
+//             "Using React.MouseEvent<HTMLElement> type",
+//             "Using native Event type only",
+//             "Event handlers cannot be typed",
+//             "Using any type for flexibility"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 1421,
+//         "question": "What is the type for children prop in TypeScript?",
+//         "options": [
+//             "React.Children type from React",
+//             "React.ReactNode or React.ReactElement",
+//             "string | number | JSX.Element",
+//             "any type for flexibility"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1422,
+//         "question": "How do you type useRef for DOM elements?",
+//         "options": [
+//             "useRef<HTMLDivElement>(null) with element type",
+//             "useRef(null: HTMLElement) with annotation",
+//             "useRef cannot be typed in TypeScript",
+//             "useRef<DOMElement>(nullRetryOContinue2 / 2javascript) with generic DOM"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 1423,
+//         "question": "How do you type Context value in TypeScript?",
+//         "options": [
+//             "createContext<Type>(defaultValue) with generic",
+//             "Context values cannot be typed",
+//             "Use any type for Context values",
+//             "TypeScript infers context type automatically"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 1424,
+//         "question": "What is the correct way to type optional props?",
+//         "options": [
+//             "Use ? operator: name?: string",
+//             "Use | undefined: name: string | undefined",
+//             "Both approaches are valid in TypeScript",
+//             "Optional props cannot be typed"
+//         ],
+//         "correctOption": 2,
+//         "points": 30
+//     },
+//     {
+//         "id": 1425,
+//         "question": "How do you type Custom Hooks in TypeScript?",
+//         "options": [
+//             "Define return type and parameter types",
+//             "Custom Hooks are automatically typed",
+//             "Use 'any' type for all hooks",
+//             "Custom Hooks cannot use TypeScript"
+//         ],
+//         "correctOption": 0,
+//         "points": 30
+//     },
+//     {
+//         "id": 1426,
+//         "question": "What is the type for style prop in React?",
+//         "options": [
+//             "React.CSSProperties for inline styles",
+//             "Object type for all styles",
+//             "string type for CSS strings",
+//             "Style props cannot be typed"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+
                 ]
