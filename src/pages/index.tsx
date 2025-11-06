@@ -9,23 +9,42 @@ import {
     QuizReducer,
     StartScreen
 } from "@/components";
-import {useEffect, useReducer} from "react";
+import {useEffect, useReducer, useState} from "react";
 import {Main} from "@/components";
 import Footer from "@/components/Footer";
 import Timer from "@/components/Timer";
 import {mockQuestions} from "@/mock/mockQuestions";
+import {ExplanationModal} from "@/components/ExplanationModal";
 
 export default function Home() {
     const [state, dispatch] = useReducer(QuizReducer, initialState);
 
+    const [modalState, setModalState] = useState({
+        isOpen: false,
+        isCorrect: false,
+        explanation: ""
+    });
     const {questions, status, index, answer, points, highScore, secondsRemaining} = state;
-
 
     const numQuestions=questions.length;
     const maxPossiblePoints=questions.reduce((prev,cur)=>prev +cur.points,0)
     useEffect(()=>{
         dispatch({type:"dataReceived",payload:mockQuestions});
     },[])
+
+    const handleShowExplanation = (isCorrect: boolean) => {
+        const currentQuestion = questions[index];
+        setModalState({
+            isOpen: true,
+            isCorrect,
+            explanation: currentQuestion.explanation
+        });
+    };
+
+    const handleCloseModal = () => {
+        setModalState(prev => ({ ...prev, isOpen: false }));
+    };
+
     return (
         <div className="app">
             <Header/>
@@ -52,6 +71,7 @@ export default function Home() {
                             answer={answer}
                             dispatch={dispatch}
                             points={points}
+                            onShowExplanation={handleShowExplanation}
                         />
                         <Footer>
                             <Timer secondsRemaining={secondsRemaining} dispatch={dispatch}/>
@@ -62,7 +82,14 @@ export default function Home() {
                                 numQuestions={numQuestions}
                             />
                         </Footer>
-                    </>)}
+                        <ExplanationModal
+                            isOpen={modalState.isOpen}
+                            isCorrect={modalState.isCorrect}
+                            explanation={modalState.explanation}
+                            onClose={handleCloseModal}
+                        />
+                    </>
+                )}
                 {status === "finished" &&
                     <FinishScreen
                         points={points}
