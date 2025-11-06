@@ -36,7 +36,7 @@ export function ExplanationModal({
                 alignItems: 'center',
                 justifyContent: 'center',
                 zIndex: 1000,
-                animation: 'fadeIn 0.3s ease'
+                animation: 'fadeIn 0.5s ease'
             }}
         >
             <div
@@ -65,7 +65,7 @@ export function ExplanationModal({
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '2rem',
+                        fontSize: '3rem',
                         backgroundColor: isCorrect ? 'rgba(26, 230, 181, 0.1)' : 'rgba(238, 90, 82, 0.1)',
                         color: isCorrect ? 'var(--color-theme)' : '#ee5a52'
                     }}>
@@ -89,9 +89,9 @@ export function ExplanationModal({
                     borderRadius: '8px',
                     marginBottom: '2rem',
                     lineHeight: '1.8',
-                    fontSize: '1.4rem',
+                    fontSize: '2rem',
                     color: 'var(--color-light)',
-                    textAlign: 'right',
+                    textAlign: 'justify',
                     direction: 'rtl'
                 }}>
                     {explanation}
