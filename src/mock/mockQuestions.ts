@@ -15755,5 +15755,100 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 1,
 //         "points": 30
 //     },
-
+//     {
+//         "id": 1453,
+//         "question": "What is the execution order of middleware in Next.js?",
+//         "options": [
+//             "After route handler execution",
+//             "Before any route handler or page render",
+//             "Simultaneously with page rendering",
+//             "Only after authentication check"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1454,
+//         "question": "Can middleware modify request headers?",
+//         "options": [
+//             "No, headers are read-only",
+//             "Yes, using request.headers.set()",
+//             "Only response headers can be modified",
+//             "Only in production mode"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1455,
+//         "question": "What is the matcher config in middleware?",
+//         "options": [
+//             "Matches user authentication credentials",
+//             "Specifies which routes middleware applies to",
+//             "Matches request and response pairs",
+//             "Pattern for URL parameter matching"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1456,
+//         "question": "Can middleware set cookies?",
+//         "options": [
+//             "No, cookies are read-only in middleware",
+//             "Yes, using response.cookies.set()",
+//             "Only through Server Actions",
+//             "Only in API routes"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1457,
+//         "question": "What happens if middleware throws an error?",
+//         "options": [
+//             "Request continues to route handler",
+//             "Error boundary catches it automatically",
+//             "Returns 500 error to client",
+//             "Middleware silently fails and continues"
+//         ],
+//         "correctOption": 2,
+//         "points": 30
+//     },
+//     {
+//         "id": 1458,
+//         "question": "Can middleware access environment variables?",
+//         "options": [
+//             "No, env variables unavailable in middleware",
+//             "Yes, using process.env as usual",
+//             "Only NEXT_PUBLIC_ variables",
+//             "Only in development mode"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1459,
+//         "question": "What is the Edge Runtime limitation for middleware?",
+//         "options": [
+//             "No limitations at all",
+//             "Cannot use Node.js APIs like fs",
+//             "Cannot access request headers",
+//             "Cannot perform redirects"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+//     {
+//         "id": 1460,
+//         "question": "Can middleware be used for A/B testing?",
+//         "options": [
+//             "No, middleware is only for authentication",
+//             "Yes, by rewriting based on user segments",
+//             "A/B testing requires external service",
+//             "Only with paid Next.js plans"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
                 ]
