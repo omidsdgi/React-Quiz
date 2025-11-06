@@ -2,7 +2,7 @@ import {QuizState, Question, Action,} from "../type/QuizTypes";
 import {mockQuestions} from "../mock/mockQuestions";
 
 
-export const SEC_PER_QUESTION=30
+export const SEC_PER_QUESTION=60
 
 export const initialState :QuizState= {
     questions:[],
