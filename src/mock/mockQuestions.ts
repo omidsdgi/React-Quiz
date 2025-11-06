@@ -14651,6 +14651,127 @@ export const mockQuestions: Question[] = [
 //         "points": 30
 //     },
 //     {
+//         "id": 1443,
+//         "question": "What is the main difference between Server and Client data fetching?",
+//         "options": [
+//             "Server fetching is always faster",
+//             "Server fetching happens before render, client after",
+//             "Client fetching is more secure",
+//             "They are identical in functionality"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1444,
+//         "question": "How do you fetch data in Server Components?",
+//         "options": [
+//             "Using useEffect with fetch API",
+//             "Using async/await directly in component",
+//             "Using getServerSideProps function",
+//             "Server Components cannot fetch data"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1445,
+//         "question": "What is parallel data fetching in Next.js?",
+//         "options": [
+//             "Fetching data on multiple servers",
+//             "Initiating multiple requests simultaneously",
+//             "Using parallel routes for data",
+//             "Parallel processing of single request"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1446,
+//         "question": "What is sequential data fetching?",
+//         "options": [
+//             "Fetching data in order, waiting for each",
+//             "Organizing data in sequences",
+//             "Fetching from multiple databases",
+//             "Sequential numbering of requests"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 1447,
+//         "question": "How does Next.js deduplicate fetch requests?",
+//         "options": [
+//             "By caching identical requests automatically",
+//             "Manual deduplication required always",
+//             "Deduplication is not supported",
+//             "Only for GET requests deduplication"
+//         ],
+//         "correctOption": 0,
+//         "points": 30
+//     },
+//     {
+//         "id": 1448,
+//         "question": "What is the data cache in Next.js fetch?",
+//         "options": [
+//             "Browser localStorage for data",
+//             "Server-side persistent HTTP cache",
+//             "Client-side temporary memory cache",
+//             "Database query result cache"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1449,
+//         "question": "How do you opt out of fetch caching per request?",
+//         "options": [
+//             "Using cache: 'no-store' option",
+//             "Using noCache: true option",
+//             "Caching cannot be disabled",
+//             "Use different fetch library"
+//         ],
+//         "correctOption": 0,
+//         "points": 10
+//     },
+//     {
+//         "id": 1450,
+//         "question": "What happens when fetch request fails in Server Component?",
+//         "options": [
+//             "Returns null and continues rendering",
+//             "Error boundary catches and shows fallback",
+//             "Automatically retries 3 times",
+//             "Switches to client-side fetching"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+//     {
+//         "id": 1451,
+//         "question": "Can you fetch data in parallel from multiple Server Components?",
+//         "options": [
+//             "No, Server Components fetch sequentially",
+//             "Yes, each component's fetch runs independently",
+//             "Only with special configuration",
+//             "Only in production mode"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1452,
+//         "question": "How does streaming affect data fetching in Server Components?",
+//         "options": [
+//             "All data must load before streaming",
+//             "Components stream as their data resolves",
+//             "Streaming is disabled during fetching",
+//             "Data fetching prevents streaming"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+
+//     {
 //         "id": 1228,
 //         "question": "Can you mix Server and Client Components in App Router?",
 //         "options": [
