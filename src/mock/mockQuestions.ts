@@ -15010,5 +15010,102 @@ export const mockQuestions: Question[] = [
 //                     ],
 //                     "correctOption": 0,
 //                     "points": 30
-//                 }
+//                 },
+//         {
+//         "id": 1391,
+//         "question": "What is the purpose of React.lazy()?",
+//         "options": [
+//             "To delay component rendering by time",
+//             "To dynamically import components for code splitting",
+//             "To make components render faster",
+//             "To lazy load images and assets"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1392,
+//         "question": "What must wrap a lazy-loaded component?",
+//         "options": [
+//             "ErrorBoundary component",
+//             "React.Suspense boundary",
+//             "Loading wrapper component",
+//             "No wrapper needed"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1393,
+//         "question": "What does React.lazy() return?",
+//         "options": [
+//             "A promise that resolves to component",
+//             "Regular component immediately",
+//             "Dynamic component that lazy loads",
+//             "Configuration object for lazy loading"
+//         ],
+//         "correctOption": 2,
+//         "points": 20
+//     },
+//     {
+//         "id": 1394,
+//         "question": "Can you use React.lazy() for named exports?",
+//         "options": [
+//             "Yes, directly with named imports",
+//             "No, only default exports are supported",
+//             "Yes, with re-export wrapper module",
+//             "Named exports work automatically"
+//         ],
+//         "correctOption": 2,
+//         "points": 30
+//     },
+//     {
+//         "id": 1395,
+//         "question": "What happens when lazy component fails to load?",
+//         "options": [
+//             "App crashes completely",
+//             "Error boundary can catch and handle it",
+//             "Silently fails with no render",
+//             "Infinite retry automatically"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1396,
+//         "question": "Can React.lazy() be used in Server Components?",
+//         "options": [
+//             "Yes, works everywhere",
+//             "No, only in Client Components with Suspense",
+//             "Only with special configuration",
+//             "SSR doesn't support lazy loading"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+//     {
+//         "id": 1397,
+//         "question": "How does code splitting improve performance?",
+//         "options": [
+//             "Makes code execute faster",
+//             "Reduces initial JavaScript bundle size",
+//             "Increases caching efficiency only",
+//             "Optimizes server response time"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1398,
+//         "question": "What is route-based code splitting?",
+//         "options": [
+//             "Splitting code by file size limits",
+//             "Lazy loading components for each route",
+//             "Separating API and UI code",
+//             "Splitting CSS from JavaScript"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+
                 ]
