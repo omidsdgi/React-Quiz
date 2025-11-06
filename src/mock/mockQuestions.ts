@@ -15107,5 +15107,124 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 1,
 //         "points": 20
 //     },
-
+//     {
+//         "id": 1399,
+//         "question": "What is React Testing Library's guiding principle?",
+//         "options": [
+//             "Test implementation details thoroughly",
+//             "Test how users interact with app",
+//             "Test only class components",
+//             "Test all internal state changes"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1400,
+//         "question": "Which method renders a component for testing?",
+//         "options": [
+//             "mount() from enzyme library",
+//             "render() from React Testing Library",
+//             "create() from test renderer",
+//             "display() from jest-dom"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1401,
+//         "question": "What is the purpose of screen.getByRole()?",
+//         "options": [
+//             "Query elements by ARIA role",
+//             "Get component by class name",
+//             "Query by data-testid attribute",
+//             "Get element by internal state"
+//         ],
+//         "correctOption": 0,
+//         "points": 10
+//     },
+//     {
+//         "id": 1402,
+//         "question": "How do you test async behavior in React Testing Library?",
+//         "options": [
+//             "Use setTimeout and wait manually",
+//             "Use waitFor() or findBy queries",
+//             "Async testing is not supported",
+//             "Use delay() helper function"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1403,
+//         "question": "What is the difference between getBy and queryBy?",
+//         "options": [
+//             "No difference, they're aliases",
+//             "getBy throws if not found, queryBy returns null",
+//             "queryBy is faster than getBy",
+//             "getBy is for async, queryBy for sync"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1404,
+//         "question": "How do you test user events in React Testing Library?",
+//         "options": [
+//             "Using userEvent library for realistic interactions",
+//             "Calling component methods directly",
+//             "Manipulating state manually in tests",
+//             "Using enzyme's simulate method"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 1405,
+//         "question": "What should you avoid testing in React components?",
+//         "options": [
+//             "User interactions and behavior",
+//             "Implementation details like state",
+//             "Rendered output and accessibility",
+//             "Integration with other components"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+//     {
+//         "id": 1406,
+//         "question": "How do you mock API calls in tests?",
+//         "options": [
+//             "Never mock, always use real APIs",
+//             "Use MSW (Mock Service Worker) or jest.mock()",
+//             "Mocking is automatic in tests",
+//             "Use setTimeout to fake responses"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+//     {
+//         "id": 1407,
+//         "question": "What is snapshot testing in React?",
+//         "options": [
+//             "Taking screenshots of components",
+//             "Capturing rendered output for regression testing",
+//             "Testing component performance metrics",
+//             "Debugging state at specific moments"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1408,
+//         "question": "How do you test components that use Context?",
+//         "options": [
+//             "Context cannot be tested",
+//             "Wrap component with context providers in test",
+//             "Mock all context values globally",
+//             "Context works automatically in tests"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
                 ]
