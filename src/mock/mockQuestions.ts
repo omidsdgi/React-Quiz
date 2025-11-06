@@ -15227,4 +15227,100 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 1,
 //         "points": 30
 //     },
+//         {
+//         "id": 1409,
+//         "question": "What is the windowing/virtualization technique?",
+//         "options": [
+//             "Opening multiple browser windows",
+//             "Rendering only visible items in long lists",
+//             "Creating virtual DOM copies",
+//             "Simulating window resize events"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1410,
+//         "question": "Which library is commonly used for virtualization in React?",
+//         "options": [
+//             "react-window or react-virtualized",
+//             "react-dom and react-router",
+//             "redux and react-redux",
+//             "axios and fetch"
+//         ],
+//         "correctOption": 0,
+//         "points": 10
+//     },
+//     {
+//         "id": 1411,
+//         "question": "What is debouncing in React applications?",
+//         "options": [
+//             "Removing bounce effects from buttons",
+//             "Delaying function execution until input pause",
+//             "Validating input immediately on change",
+//             "Preventing all event handlers from firing"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1412,
+//         "question": "What is throttling in event handlers?",
+//         "options": [
+//             "Limiting function calls to once per time period",
+//             "Stopping all events from propagating",
+//             "Slowing down component rendering",
+//             "Compressing event data size"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 1413,
+//         "question": "When should you use Web Workers in React?",
+//         "options": [
+//             "For all state updates always",
+//             "For heavy computations blocking UI",
+//             "For rendering components faster",
+//             "For managing application routing"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+//     {
+//         "id": 1414,
+//         "question": "What is the purpose of React.memo's second argument?",
+//         "options": [
+//             "To specify component display name",
+//             "Custom comparison function for props",
+//             "To set memoization cache size",
+//             "To define component lifecycle"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+//     {
+//         "id": 1415,
+//         "question": "How does useDeferredValue help performance?",
+//         "options": [
+//             "Delays non-urgent updates during typing",
+//             "Prevents all re-renders completely",
+//             "Caches component output permanently",
+//             "Disables React DevTools overhead"
+//         ],
+//         "correctOption": 0,
+//         "points": 30
+//     },
+//     {
+//         "id": 1416,
+//         "question": "What is the purpose of useTransition hook?",
+//         "options": [
+//             "To mark state updates as non-urgent",
+//             "To add CSS transitions automatically",
+//             "To transition between routes smoothly",
+//             "To manage component lifecycle transitions"
+//         ],
+//         "correctOption": 0,
+//         "points": 30
+//     },
                 ]
