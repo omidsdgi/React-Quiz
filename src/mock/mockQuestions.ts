@@ -15443,5 +15443,101 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 0,
 //         "points": 20
 //     },
+//     {
+//         "id": 1427,
+//         "question": "What is semantic HTML in context of accessibility?",
+//         "options": [
+//             "Using HTML5 tags like header, nav, main",
+//             "Adding semantic comments in code",
+//             "Using className for semantics",
+//             "Semantic HTML is not related to a11y"
+//         ],
+//         "correctOption": 0,
+//         "points": 10
+//     },
+//     {
+//         "id": 1428,
+//         "question": "What is the purpose of ARIA labels?",
+//         "options": [
+//             "To style elements with CSS",
+//             "To provide accessible names for screen readers",
+//             "To improve SEO ranking",
+//             "To validate HTML structure"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1429,
+//         "question": "Why is keyboard navigation important?",
+//         "options": [
+//             "Makes typing faster in forms",
+//             "Users with disabilities rely on keyboard",
+//             "Improves website loading speed",
+//             "Reduces mouse hardware costs"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1430,
+//         "question": "What is focus management in React applications?",
+//         "options": [
+//             "Controlling which element has keyboard focus",
+//             "Managing component rendering focus",
+//             "Optimizing performance bottlenecks",
+//             "Focusing on important features only"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 1431,
+//         "question": "What is the purpose of aria-live regions?",
+//         "options": [
+//             "To create live video streams",
+//             "To announce dynamic content changes to screen readers",
+//             "To enable real-time collaboration",
+//             "To improve animation performance"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 1432,
+//         "question": "Why should interactive elements be keyboard accessible?",
+//         "options": [
+//             "Keyboard is faster than mouse",
+//             "Many users cannot use mouse devices",
+//             "Keyboards are more reliable hardware",
+//             "It's only for developer convenience"
+//         ],
+//         "correctOption": 1,
+//         "points": 10
+//     },
+//     {
+//         "id": 1433,
+//         "question": "What is color contrast ratio in accessibility?",
+//         "options": [
+//             "Difference between text and background colors",
+//             "Number of colors used in design",
+//             "Brightness level of screen display",
+//             "Contrast between light and dark themes"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 1434,
+//         "question": "How do you make a custom button accessible?",
+//         "options": [
+//             "Use div with onClick handler only",
+//             "Use button element or role='button' with keyboard support",
+//             "Add aria-label='button' to div",
+//             "Custom buttons cannot be accessible"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
 
                 ]
