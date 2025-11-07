@@ -324,126 +324,166 @@ export const mockQuestions: Question[] = [
             "- React می‌تواند بین units کار را متوقف و ادامه دهد\n" +
             "- این امکان prioritization را فراهم می‌کند"
     },
-//     {
-//         "id": 28,
-//         "question": "Can React prioritize certain rendering tasks over others?",
-//         "options": [
-//             "No, all renders have equal priority always",
-//             "Only if developer explicitly sets priority values",
-//             "Yes, React can prioritize urgent updates over others",
-//             "Only during initial application mount phase"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 29,
-//         "question": "Can React pause, reuse or throw away work during rendering?",
-//         "options": [
-//             "No, once started, rendering must complete entirely",
-//             "Yes, React&apos;s fiber architecture enables work interruption",
-//             "Only work can be paused but never reused",
-//             "Only work can be reused but never paused"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 30,
-//         "question": "Why does React write to DOM during Commit Phase?",
-//         "options": [
-//             "To test if changes work before displaying them",
-//             "To apply the calculated changes to browser DOM",
-//             "To create backup of previous DOM state",
-//             "To validate virtual DOM against actual DOM"
-//         ],
-//         "correctOption": 1,
-//         "points": 10
-//     },
-//     {
-//         "id": 31,
-//         "question": "What is Render Logic in React components?",
-//         "options": [
-//             "Code that runs when user clicks buttons",
-//             "Code in component body that calculates JSX output",
-//             "Code that directly manipulates DOM elements",
-//             "Code that fetches data from external APIs"
-//         ],
-//         "correctOption": 1,
-//         "points": 10
-//     },
-//     {
-//         "id": 32,
-//         "question": "What are Event Handler Functions in React?",
-//         "options": [
-//             "Functions that run during component render phase",
-//             "Functions that respond to user interactions like clicks",
-//             "Functions that calculate component state automatically",
-//             "Functions that build virtual DOM tree structure"
-//         ],
-//         "correctOption": 1,
-//         "points": 10
-//     },
-//     {
-//         "id": 33,
-//         "question": "Should Render Logic contain side effects in React?",
-//         "options": [
-//             "Yes, side effects make components more powerful",
-//             "Yes, but only for data fetching operations",
-//             "No, render logic must be pure without side effects",
-//             "No, unless wrapped in try-catch blocks"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 34,
-//         "question": "Are side effects inherently bad in React applications?",
-//         "options": [
-//             "No, side effects are necessary but must be handled properly",
-//             "Yes, side effects always cause bugs and errors",
-//             "Yes, React prevents all side effects automatically",
-//             "No, side effects can be placed anywhere freely"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 35,
-//         "question": "Which hook is specifically designed to register side effects in React?",
-//         "options": [
-//             "useState for managing side effect state",
-//             "useReducer for complex side effect logic",
-//             "useEffect for registering side effects safely",
-//             "useMemo for memoizing side effect results"
-//         ],
-//         "correctOption": 2,
-//         "points": 10
-//     },
-//     {
-//         "id": 36,
-//         "question": "How are state updates batched in React?",
-//         "options": [
-//             "React groups multiple setState calls into single re-render",
-//             "Each setState always causes immediate separate re-render",
-//             "State updates are never batched in React",
-//             "Only setState calls in loops are batched"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 37,
-//         "question": "Why does React batch state updates together?",
-//         "options": [
-//             "To make code easier to read and maintain",
-//             "To improve performance by reducing re-renders",
-//             "To prevent state from changing too quickly",
-//             "To ensure state updates happen in order"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
+    {
+        "id": 28,
+        "question": "Can React prioritize certain rendering tasks over others?",
+        "options": [
+            "No, all renders have equal priority always",
+            "Only if developer explicitly sets priority values",
+            "Yes, React can prioritize urgent updates over others",
+            "Only during initial application mount phase"
+        ],
+        "correctOption": 2,
+        "points": 2,
+        "explanation": "• React می‌تواند updates را بر اساس urgency اولویت‌بندی کند\n" +
+            "- user interactions معمولا priority بالاتری دارند\n" +
+            "- می‌توانید با useTransition updates را non-urgent علامت بزنید\n" +
+            "- این ویژگی Concurrent React است"
+    },
+    {
+        "id": 29,
+        "question": "Can React pause, reuse or throw away work during rendering?",
+        "options": [
+            "No, once started, rendering must complete entirely",
+            "Yes, React&apos;s fiber architecture enables work interruption",
+            "Only work can be paused but never reused",
+            "Only work can be reused but never paused"
+        ],
+        "correctOption": 1,
+        "points": 30,
+            "explanation": "• Fiber architecture امکان pause، reuse و throw away work را می‌دهد\n" +
+                "- اگر update با priority بالاتر بیاید، کار فعلی متوقف می‌شود\n" +
+                "- React می‌تواند بخش‌های unchanged را reuse کند\n" +
+                "- اگر نتیجه دیگر valid نباشد، کار discard می‌شود"
+    },
+    {
+        "id": 30,
+        "question": "Why does React write to DOM during Commit Phase?",
+        "options": [
+            "To test if changes work before displaying them",
+            "To apply the calculated changes to browser DOM",
+            "To create backup of previous DOM state",
+            "To validate virtual DOM against actual DOM"
+        ],
+        "correctOption": 1,
+        "points": 10,
+            "explanation": "• Commit Phase مرحله اعمال تغییرات به DOM واقعی است\n" +
+                "- تمام تغییرات محاسبه شده در Render Phase اعمال می‌شوند\n" +
+                "- این مرحله باید سریع و synchronous باشد\n" +
+                "- بعد از آن Browser Paint اتفاق می‌افتد"
+    },
+    {
+        "id": 31,
+        "question": "What is Render Logic in React components?",
+        "options": [
+            "Code that runs when user clicks buttons",
+            "Code in component body that calculates JSX output",
+            "Code that directly manipulates DOM elements",
+            "Code that fetches data from external APIs"
+        ],
+        "correctOption": 1,
+        "points": 10,
+            "explanation": "• Render Logic کدی است که JSX را محاسبه می‌کند\n" +
+                "- باید pure باشد و side effect نداشته باشد\n" +
+                "- در بدنه component function نوشته می‌شود\n" +
+                "- فقط بر اساس props و state تصمیم می‌گیرد"
+    },
+    {
+        "id": 32,
+        "question": "What are Event Handler Functions in React?",
+        "options": [
+            "Functions that run during component render phase",
+            "Functions that calculate component state automatically",
+            "Functions that respond to user interactions like clicks",
+            "Functions that build virtual DOM tree structure"
+        ],
+        "correctOption": 2,
+        "points": 10,
+            "explanation": "• Event Handlers به تعاملات کاربر پاسخ می‌دهند\n" +
+                "- می‌توانند side effects داشته باشند\n" +
+                "- معمولا با onClick، onChange و ... به elements متصل می‌شوند\n" +
+                "- در آن‌ها می‌توانید state update و API call داشته باشید"
+    },
+    {
+        "id": 33,
+        "question": "Should Render Logic contain side effects in React?",
+        "options": [
+            "Yes, side effects make components more powerful",
+            "Yes, but only for data fetching operations",
+            "No, render logic must be pure without side effects",
+            "No, unless wrapped in try-catch blocks"
+        ],
+        "correctOption": 2,
+        "points": 20,
+            "explanation": "• Render Logic باید pure باشد و side effect نداشته باشد\n" +
+                "- React ممکن است component را چندین بار render کند\n" +
+                "- side effects باید در useEffect یا event handlers باشند\n" +
+                "- pure functions نتایج قابل پیش‌بینی دارند"
+    },
+    {
+        "id": 34,
+        "question": "Are side effects inherently bad in React applications?",
+        "options": [
+            "No, side effects are necessary but must be handled properly",
+            "Yes, side effects always cause bugs and errors",
+            "Yes, React prevents all side effects automatically",
+            "No, side effects can be placed anywhere freely"
+        ],
+        "correctOption": 0,
+        "points": 10,
+            "explanation": "• side effects ضروری هستند (مثل API calls، subscriptions)\n" +
+                "- باید در جای مناسب (useEffect، event handlers) قرار گیرند\n" +
+                "- نباید در render logic باشند\n" +
+                "- React ابزارهایی برای مدیریت ایمن side effects دارد"
+    },
+    {
+        "id": 35,
+        "question": "Which hook is specifically designed to register side effects in React?",
+        "options": [
+            "useState for managing side effect state",
+            "useReducer for complex side effect logic",
+            "useEffect for registering side effects safely",
+            "useMemo for memoizing side effect results"
+        ],
+        "correctOption": 2,
+        "points": 10,
+            "explanation": "• useEffect مخصوص side effects طراحی شده است\n" +
+                "- بعد از render اجرا می‌شود\n" +
+                "- می‌تواند cleanup function برگرداند\n" +
+                "- dependency array رفتار اجرا را کنترل می‌کند"
+    },
+    {
+        "id": 36,
+        "question": "How are state updates batched in React?",
+        "options": [
+            "React groups multiple setState calls into single re-render",
+            "Each setState always causes immediate separate re-render",
+            "State updates are never batched in React",
+            "Only setState calls in loops are batched"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation": "• React چندین setState را در یک re-render گروه‌بندی می‌کند\n" +
+                "- در React 18 این batching برای همه جا فعال است\n" +
+                "- performance را بهبود می‌بخشد\n" +
+                "- می‌توانید با flushSync batching را غیرفعال کنید"
+    },
+    {
+        "id": 37,
+        "question": "Why does React batch state updates together?",
+        "options": [
+            "To make code easier to read and maintain",
+            "To improve performance by reducing re-renders",
+            "To prevent state from changing too quickly",
+            "To ensure state updates happen in order"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation": "• کاهش تعداد re-renders باعث بهبود performance می‌شود\n" +
+                "- چندین update به یک update ترکیب می‌شوند\n" +
+                "- UI فقط یک بار به‌روز می‌شود\n" +
+                "- از renders غیرضروری جلوگیری می‌کند"
+    },
 //     {
 //         "id": 38,
 //         "question": "When does React flush batched state updates?",
@@ -454,7 +494,8 @@ export const mockQuestions: Question[] = [
 //             "Only when user stops interacting with UI"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 39,
@@ -466,7 +507,8 @@ export const mockQuestions: Question[] = [
 //             "Render is synchronous, Commit is asynchronous"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 40,
@@ -478,7 +520,8 @@ export const mockQuestions: Question[] = [
 //             "Only in development mode can render pause"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 41,
@@ -490,7 +533,8 @@ export const mockQuestions: Question[] = [
 //             "No, unless user navigates away from page"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 42,
@@ -502,7 +546,8 @@ export const mockQuestions: Question[] = [
 //             "Mounting app to DOM creates all instances"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 43,
@@ -514,7 +559,8 @@ export const mockQuestions: Question[] = [
 //             "Two instances: one for logic, one for UI"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 44,
@@ -526,7 +572,8 @@ export const mockQuestions: Question[] = [
 //             "Only props are independent, state is shared"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 45,
@@ -538,7 +585,8 @@ export const mockQuestions: Question[] = [
 //             "Instance converts to DOM element permanently"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 46,
@@ -550,7 +598,8 @@ export const mockQuestions: Question[] = [
 //             "Element and instance are exactly identical"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 47,
@@ -562,7 +611,8 @@ export const mockQuestions: Question[] = [
 //             "Mutable in development, immutable in production"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 48,
@@ -574,7 +624,8 @@ export const mockQuestions: Question[] = [
 //             "React DevTools generate elements during debugging"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 49,
@@ -586,7 +637,8 @@ export const mockQuestions: Question[] = [
 //             "React elements are DOM elements with different names"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 6,
@@ -598,7 +650,8 @@ export const mockQuestions: Question[] = [
 //             "Component re-renders with new props"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 7,
@@ -610,7 +663,8 @@ export const mockQuestions: Question[] = [
 //             "Optimizing prop performance with memoization"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 8,
@@ -622,7 +676,8 @@ export const mockQuestions: Question[] = [
 //             "Keys enable component lazy loading"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 9,
@@ -634,7 +689,8 @@ export const mockQuestions: Question[] = [
 //             "By disabling re-renders for unchanged components"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 10,
@@ -646,7 +702,8 @@ export const mockQuestions: Question[] = [
 //             "Batching requires manual configuration"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 11,
@@ -658,7 +715,8 @@ export const mockQuestions: Question[] = [
 //             "To optimize production bundle size"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 12,
@@ -670,7 +728,8 @@ export const mockQuestions: Question[] = [
 //             "Component props are reset to defaults"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 50,
@@ -682,7 +741,8 @@ export const mockQuestions: Question[] = [
 //             "Event handlers and browser event objects"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 51,
@@ -694,7 +754,8 @@ export const mockQuestions: Question[] = [
 //             "Only class component elements can reuse"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 52,
@@ -706,7 +767,8 @@ export const mockQuestions: Question[] = [
 //             "Only when component mounts initially"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 53,
@@ -718,7 +780,8 @@ export const mockQuestions: Question[] = [
 //             "Only object prop changes trigger renders"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 54,
