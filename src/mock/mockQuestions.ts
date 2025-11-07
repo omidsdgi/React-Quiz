@@ -484,123 +484,150 @@ export const mockQuestions: Question[] = [
                 "- UI فقط یک بار به‌روز می‌شود\n" +
                 "- از renders غیرضروری جلوگیری می‌کند"
     },
-//     {
-//         "id": 38,
-//         "question": "When does React flush batched state updates?",
-//         "options": [
-//             "After event handler completes execution fully",
-//             "Immediately when setState is called",
-//             "Only when component unmounts from tree",
-//             "Only when user stops interacting with UI"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 39,
-//         "question": "What is the difference between Render Phase and Commit Phase?",
-//         "options": [
-//             "Render calls functions, Commit updates DOM",
-//             "Render updates DOM, Commit calls functions",
-//             "Both phases update DOM simultaneously",
-//             "Render is synchronous, Commit is asynchronous"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 40,
-//         "question": "Can the Render Phase be interrupted in React?",
-//         "options": [
-//             "Yes, React can pause and resume rendering",
-//             "No, rendering must complete once started",
-//             "Only during initial mount can render pause",
-//             "Only in development mode can render pause"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 41,
-//         "question": "Can the Commit Phase be interrupted in React?",
-//         "options": [
-//             "Yes, commits can be paused mid-execution",
-//             "Yes, but only for low-priority updates",
-//             "No, commits must complete synchronously",
-//             "No, unless user navigates away from page"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 42,
-//         "question": "What creates a new Component Instance in React?",
-//         "options": [
-//             "Using a component in JSX creates new instance",
-//             "Importing component file creates instance automatically",
-//             "Defining component function creates instance",
-//             "Mounting app to DOM creates all instances"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 43,
-//         "question": "How many Component Instances exist for multiple uses of same component?",
-//         "options": [
-//             "Only one instance shared across all uses",
-//             "One instance per component definition file",
-//             "Separate instance for each use in tree",
-//             "Two instances: one for logic, one for UI"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 44,
-//         "question": "Do Component Instances have their own state and props?",
-//         "options": [
-//             "Yes, each instance has independent state and props",
-//             "No, all instances share same state and props",
-//             "Only state is independent, props are shared",
-//             "Only props are independent, state is shared"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 45,
-//         "question": "What happens to Component Instance when it unmounts?",
-//         "options": [
-//             "Instance moves to different position in tree",
-//             "Instance is destroyed and state is lost",
-//             "Instance remains in memory for potential reuse",
-//             "Instance converts to DOM element permanently"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 46,
-//         "question": "How does React Element differ from Component Instance?",
-//         "options": [
-//             "Element is object describing what to render",
-//             "Element has state and lifecycle methods",
-//             "Element is actual DOM node in browser",
-//             "Element and instance are exactly identical"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation": ""
-//     },
+    {
+        "id": 38,
+        "question": "When does React flush batched state updates?",
+        "options": [
+            "After event handler completes execution fully",
+            "Immediately when setState is called",
+            "Only when component unmounts from tree",
+            "Only when user stops interacting with UI"
+        ],
+        "correctOption": 0,
+        "points": 30,
+            "explanation": "• React بعد از اتمام event handler، updates را flush می‌کند\n" +
+                "- در React 18، حتی در promises و timeouts هم batch می‌شود\n" +
+                "- این به معنی تاخیر نیست، بلکه optimization است\n" +
+                "- می‌توانید با flushSync آن را synchronous کنید"
+    },
+    {
+        "id": 39,
+        "question": "What is the difference between Render Phase and Commit Phase?",
+        "options": [
+            "Render calls functions, Commit updates DOM",
+            "Render updates DOM, Commit calls functions",
+            "Both phases update DOM simultaneously",
+            "Render is synchronous, Commit is asynchronous"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation": "• Render Phase: فراخوانی component functions و ساخت Virtual DOM\n" +
+                "- Commit Phase: اعمال تغییرات به DOM واقعی\n" +
+                "- Render می‌تواند متوقف شود، اما Commit باید synchronous باشد\n" +
+                "- هر دو توسط React مدیریت می‌شوند"
+    },
+    {
+        "id": 40,
+        "question": "Can the Render Phase be interrupted in React?",
+        "options": [
+            "Yes, React can pause and resume rendering",
+            "No, rendering must complete once started",
+            "Only during initial mount can render pause",
+            "Only in development mode can render pause"
+        ],
+        "correctOption": 0,
+        "points": 30,
+            "explanation": "• Render Phase می‌تواند pause و resume شود\n" +
+                "- اگر update با priority بالاتر بیاید، کار فعلی pause می‌شود\n" +
+                "- Fiber architecture این امکان را فراهم می‌کند\n" +
+                "- این ویژگی Concurrent React است"
+    },
+    {
+        "id": 41,
+        "question": "Can the Commit Phase be interrupted in React?",
+        "options": [
+            "Yes, commits can be paused mid-execution",
+            "Yes, but only for low-priority updates",
+            "No, commits must complete synchronously",
+            "No, unless user navigates away from page"
+        ],
+        "correctOption": 2,
+        "points": 30,
+            "explanation": "• Commit Phase باید به صورت synchronous کامل شود\n" +
+                "- وقفه در این مرحله باعث inconsistency در UI می‌شود\n" +
+                "- تمام DOM updates در یک باره اعمال می‌شوند\n" +
+                "- بعد از آن Browser Paint اتفاق می‌افتد"
+    },
+    {
+        "id": 42,
+        "question": "What creates a new Component Instance in React?",
+        "options": [
+            "Using a component in JSX creates new instance",
+            "Importing component file creates instance automatically",
+            "Defining component function creates instance",
+            "Mounting app to DOM creates all instances"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation": "• استفاده از کامپوننت در JSX باعث ایجاد instance می‌شود\n" +
+                "- هر بار که <Component /> می‌نویسید، instance جدید ساخته می‌شود\n" +
+                "- import کردن فقط تعریف component را می‌آورد\n" +
+                "- instance زمانی ایجاد می‌شود که کامپوننت render شود"
+    },
+    {
+        "id": 43,
+        "question": "How many Component Instances exist for multiple uses of same component?",
+        "options": [
+            "Only one instance shared across all uses",
+            "One instance per component definition file",
+            "Separate instance for each use in tree",
+            "Two instances: one for logic, one for UI"
+        ],
+        "correctOption": 2,
+        "points": 20,
+            "explanation": "• هر استفاده از کامپوننت یک instance مجزا ایجاد می‌کند\n" +
+                "- هر instance state و props مستقل دارد\n" +
+                "- تغییر یک instance روی دیگری تاثیر ندارد\n" +
+                "- این امکان reusability را فراهم می‌کند"
+    },
+    {
+        "id": 44,
+        "question": "Do Component Instances have their own state and props?",
+        "options": [
+            "Yes, each instance has independent state and props",
+            "No, all instances share same state and props",
+            "Only state is independent, props are shared",
+            "Only props are independent, state is shared"
+        ],
+        "correctOption": 0,
+        "points": 10,
+            "explanation": "• هر instance state و props مستقل دارد\n" +
+                "- تغییر state یک instance روی دیگری تاثیر ندارد\n" +
+                "- props از والد به هر instance جداگانه پاس داده می‌شود\n" +
+                "- این یکی از اصول component-based architecture است"
+    },
+    {
+        "id": 45,
+        "question": "What happens to Component Instance when it unmounts?",
+        "options": [
+            "Instance moves to different position in tree",
+            "Instance is destroyed and state is lost",
+            "Instance remains in memory for potential reuse",
+            "Instance converts to DOM element permanently"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation": "• unmount شدن باعث destroy شدن instance می‌شود\n" +
+                "- تمام state از بین می‌رود\n" +
+                "- cleanup functions در useEffect اجرا می‌شوند\n" +
+                "- DOM elements مرتبط هم حذف می‌شوند"
+    },
+    {
+        "id": 46,
+        "question": "How does React Element differ from Component Instance?",
+        "options": [
+            "Element is object describing what to render",
+            "Element has state and lifecycle methods",
+            "Element is actual DOM node in browser",
+            "Element and instance are exactly identical"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation": "• React Element یک object توضیح‌دهنده است\n" +
+                "- Component Instance نمونه واقعی component با state و lifecycle است\n" +
+                "- Element ساده‌تر است و فقط اطلاعات ساختاری دارد\n" +
+                "- Instance از Element ساخته می‌شود"
+    },
 //     {
 //         "id": 47,
 //         "question": "Are React Elements mutable or immutable?",
