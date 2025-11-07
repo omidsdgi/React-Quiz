@@ -2,7 +2,7 @@
 import { Question } from "@/type/QuizTypes";
 
 export const mockQuestions: Question[] = [
-       {
+    {
         id: 1,
         question:"In React's data flow model, how does data typically move between components?",
         options: [
@@ -13,8 +13,11 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 0,
         points: 10,
-        explanation: "در React جریان داده به صورت یک‌طرفه است و از کامپوننت والد به فرزند منتقل می‌شود. این الگو به نام Unidirectional Data Flow شناخته می‌شود. والد داده‌ها را از طریق props به فرزندان ارسال می‌کند و این باعث می‌شود"
-       },
+        explanation: "• React از الگوی Unidirectional Data Flow استفاده می‌کند\n" +
+            "- داده‌ها از طریق props از والد به فرزند منتقل می‌شوند\n" +
+            "- این الگو قابلیت پیش‌بینی و دیباگ کردن را افزایش می‌دهد\n" +
+            "- برای انتقال داده از فرزند به والد از callback functions استفاده می‌شود"
+    },
     {
         id: 2,
         question:"In React applications, when should you directly manipulate the DOM?",
@@ -26,7 +29,10 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 3,
         points: 20,
-        explanation: "React از Virtual DOM استفاده می‌کند و خودش مسئول مدیریت DOM واقعی است. دستکاری مستقیم DOM می‌تواند با سیستم React تداخل داشته باشد و مشکلاتی مثل از دست رفتن state یا رفتار غیرمنتظره ایجاد کند. فقط در موارد خاص مثل focus، scroll یا اندازه‌گیری المان‌ها ممکن است نیاز به استفاده از ref برای دسترسی مستقیم داشته باشیم."
+        explanation: "• React از Virtual DOM برای مدیریت DOM واقعی استفاده می‌کند\n" +
+            "- دستکاری مستقیم DOM می‌تواند با سیستم React تداخل داشته باشد\n" +
+            "- فقط در موارد خاص مثل focus، scroll یا اندازه‌گیری المان‌ها از ref استفاده کنید\n" +
+            "- React بهترین راه برای به‌روزرسانی UI را خودکار مدیریت می‌کند"
     },
     {
         "id": 3,
@@ -39,7 +45,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-        explanation: "Virtual DOM یک نسخه سبک و در حافظه از DOM واقعی است که React برای بهینه‌سازی استفاده می‌کند. وقتی state تغییر می‌کند، React ابتدا Virtual DOM را به‌روزرسانی می‌کند، سپس آن را با DOM واقعی مقایسه کرده و فقط تفاوت‌ها را به DOM واقعی اعمال می‌کند. این روش به جای به‌روزرسانی کل صفحه، عملکرد را بهبود می‌بخشد."
+        "explanation": "• Virtual DOM یک نسخه سبک و در حافظه از DOM واقعی است\n" +
+            "- React ابتدا Virtual DOM را به‌روزرسانی می‌کند، سپس آن را با DOM واقعی مقایسه می‌کند\n" +
+            "- فقط تفاوت‌ها به DOM واقعی اعمال می‌شود (Reconciliation)\n" +
+            "- این روش عملکرد را به‌طور قابل توجهی بهبود می‌بخشد"
     },
     {
         "id": 4,
@@ -52,7 +61,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-        explanation: "در Controlled Components مقدار input از طریق state مدیریت می‌شود و React کنترل کامل دارد. هر تغییری در input باید از طریق setState انجام شود. در Uncontrolled Components مقدار input توسط خود DOM مدیریت می‌شود و ما با ref به آن دسترسی داریم. Controlled روش توصیه شده React است چون کنترل بیشتری به ما می‌دهد."
+        "explanation": "• در Controlled Components مقدار input از طریق state مدیریت می‌شود\n" +
+            "- هر تغییری در input باید از طریق setState انجام شود\n" +
+            "- در Uncontrolled Components مقدار input توسط خود DOM نگهداری می‌شود\n" +
+            "- Controlled روش توصیه شده React است چون کنترل بیشتری به ما می‌دهد"
     },
     {
         "id": 5,
@@ -65,117 +77,44 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-        explanation: "Props داده‌هایی هستند که از کامپوننت والد به فرزند ارسال می‌شوند و از نظر کامپوننت فرزند فقط خواندنی (read-only) هستند. State داده‌ای است که داخل خود کامپوننت مدیریت می‌شود و می‌تواند تغییر کند. تغییر state باعث رندر مجدد کامپوننت می‌شود در حالی که تغییر props از طرف والد صورت می‌گیرد."
+        "explanation": "• Props از کامپوننت والد به فرزند ارسال می‌شوند و read-only هستند\n" +
+            "- State داده‌ای است که داخل خود کامپوننت مدیریت می‌شود و می‌تواند تغییر کند\n" +
+            "- تغییر state باعث رندر مجدد کامپوننت می‌شود\n" +
+            "- تغییر props فقط از طرف والد صورت می‌گیرد"
     },
-//     {
-//         "id": 6,
-//         "question": "What happens during the Mounting phase of component lifecycle?",
-//         "options": [
-//             "Component is created and inserted into DOM",
-//             "Component updates its state values",
-//             "Component is removed from the DOM",
-//             "Component re-renders with new props"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 7,
-//         "question": "What is prop drilling in React?",
-//         "options": [
-//             "Validating props before using them",
-//             "Passing props through multiple component layers",
-//             "Creating dynamic props at runtime",
-//             "Optimizing prop performance with memoization"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 8,
-//         "question": "Why are keys important when rendering lists in React?",
-//         "options": [
-//             "Keys help React identify which items changed",
-//             "Keys are required for CSS styling",
-//             "Keys improve API response time",
-//             "Keys enable component lazy loading"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 9,
-//         "question": "How does React's Reconciliation Algorithm optimize rendering?",
-//         "options": [
-//             "By always re-rendering entire component tree",
-//             "By comparing Virtual DOM trees and updating only differences",
-//             "By caching all components permanently",
-//             "By disabling re-renders for unchanged components"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 10,
-//         "question": "What changed about batching in React 18?",
-//         "options": [
-//             "Batching was removed completely",
-//             "Batching only works in event handlers",
-//             "Batching now works in async functions and promises",
-//             "Batching requires manual configuration"
-//         ],
-//         "correctOption": 2,
-//         "points": 30
-//     },
-//     {
-//         "id": 11,
-//         "question": "What is the purpose of React.StrictMode?",
-//         "options": [
-//             "To enforce TypeScript in all components",
-//             "To highlight potential problems in application",
-//             "To prevent all runtime errors",
-//             "To optimize production bundle size"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 12,
-//         "question": "What happens during the Unmounting phase?",
-//         "options": [
-//             "Component state is saved to localStorage",
-//             "Component is removed from DOM and cleanup runs",
-//             "Component re-renders one final time",
-//             "Component props are reset to defaults"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//
-//     {
-//         id: 13,
-//         question:  "Does a useEffect hook always run on the component's initial render?",
-//         options: [
-//             "Yes, regardless of the dependency array",
-//             "It depends on the dependency array contents",
-//             "No, it only runs on subsequent renders",
-//             "It depends on the effect's cleanup function"
-//         ],
-//         correctOption: 0,
-//         points: 30,
-//     },
-//     {
-//         id: 14,
-//         question: "How often will a useEffect run if no dependency array is provided?",
-//         options: [
-//             "Only when the component mounts",
-//             "Only when the component unmounts",
-//             "Only on the first re-render",
-//             "On every render of the component"
-//         ],
-//         correctOption: 3,
-//         points: 20,
-//     },
+    {
+        "id": 6,
+        "question":  "Does a useEffect hook always run on the component's initial render?",
+        "options": [
+            "Yes, regardless of the dependency array",
+            "It depends on the dependency array contents",
+            "No, it only runs on subsequent renders",
+            "It depends on the effect's cleanup function"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• useEffect همیشه در رندر اولیه کامپوننت اجرا می‌شود\n" +
+            "- dependency array فقط رفتار اجراهای بعدی را کنترل می‌کند\n" +
+            "- برای جلوگیری از اجرا در mount می‌توانید از ref برای track کردن استفاده کنید\n" +
+            "- این رفتار مستقل از محتوای dependency array است"
+    },
+
+    {
+        id: 7,
+        question: "How often will a useEffect run if no dependency array is provided?",
+        options: [
+            "Only when the component mounts",
+            "Only when the component unmounts",
+            "Only on the first re-render",
+            "On every render of the component"
+        ],
+        correctOption: 3,
+        points: 20,
+        "explanation":" • بدون dependency array، effect در هر رندر کامپوننت اجرا می‌شود\n" +
+            "- این می‌تواند مشکلات performance ایجاد کند\n" +
+            "- همیشه dependency array مناسب را مشخص کنید\n" +
+            "- برای اجرای یک‌بار از آرایه خالی [] استفاده کنید"
+    },
 //     {
 //         "id": 15,
 //         "question":  "Does ESLint only check for syntax errors?",
@@ -188,30 +127,39 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 1,
 //         "points": 10
 //     },
-//     {
-//         "id": 16,
-//         "question": "What is the main advantage of CSS Modules?",
-//         "options": [
-//             "They enable CSS-in-JS syntax automatically",
-//             "They apply styles globally by default",
-//             "They compile CSS to JavaScript at runtime",
-//             "They provide locally scoped class names"
-//         ],
-//         "correctOption": 3,
-//         "points": 10
-//     },
-//     {
-//         "id": 17,
-//         "question": "What is a DOM Element in React&apos;s context?",
-//         "options": [
-//             "A React component rendered to the virtual DOM",
-//             "A JavaScript object representing component structure",
-//             "An actual HTML element in the browser DOM",
-//             "A fiber node tracking component state changes"
-//         ],
-//         "correctOption": 2,
-//         "points": 10
-//     },
+    {
+        "id": 16,
+        "question": "What is the main advantage of CSS Modules?",
+        "options": [
+            "They enable CSS-in-JS syntax automatically",
+            "They apply styles globally by default",
+            "They compile CSS to JavaScript at runtime",
+            "They provide locally scoped class names"
+        ],
+        "correctOption": 3,
+        "points": 10,
+        "explanation": "• CSS Modules از name collision جلوگیری می‌کند\n" +
+            "- هر class name به صورت خودکار unique می‌شود\n" +
+            "- styles فقط به کامپوننتی که import کرده محدود می‌شوند\n" +
+            "- در Next.js به صورت پیش‌فرض پشتیبانی می‌شود"
+    },
+    {
+        "id": 17,
+        "question": "What is a DOM Element in React&apos;s context?",
+        "options": [
+            "A React component rendered to the virtual DOM",
+            "A JavaScript object representing component structure",
+            "An actual HTML element in the browser DOM",
+            "A fiber node tracking component state changes"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• DOM Element یک عنصر واقعی HTML در مرورگر است\n" +
+            "- React Element نمایش JavaScript از آن است\n" +
+            "- در Commit Phase، React Elements به DOM Elements تبدیل می‌شوند\n" +
+            "- می‌توانید با ref به DOM Element دسترسی مستقیم داشته باشید"
+
+    },
 //     {
 //         "id": 18,
 //         "question": "What is the relationship between Component Instance and React Element?",
@@ -592,6 +540,90 @@ export const mockQuestions: Question[] = [
 //             "During Commit Phase, React creates actual DOM nodes",
 //             "Browser converts React elements to DOM automatically",
 //             "React elements are DOM elements with different names"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 6,
+//         "question": "What happens during the Mounting phase of component lifecycle?",
+//         "options": [
+//             "Component is created and inserted into DOM",
+//             "Component updates its state values",
+//             "Component is removed from the DOM",
+//             "Component re-renders with new props"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 7,
+//         "question": "What is prop drilling in React?",
+//         "options": [
+//             "Validating props before using them",
+//             "Passing props through multiple component layers",
+//             "Creating dynamic props at runtime",
+//             "Optimizing prop performance with memoization"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 8,
+//         "question": "Why are keys important when rendering lists in React?",
+//         "options": [
+//             "Keys help React identify which items changed",
+//             "Keys are required for CSS styling",
+//             "Keys improve API response time",
+//             "Keys enable component lazy loading"
+//         ],
+//         "correctOption": 0,
+//         "points": 20
+//     },
+//     {
+//         "id": 9,
+//         "question": "How does React's Reconciliation Algorithm optimize rendering?",
+//         "options": [
+//             "By always re-rendering entire component tree",
+//             "By comparing Virtual DOM trees and updating only differences",
+//             "By caching all components permanently",
+//             "By disabling re-renders for unchanged components"
+//         ],
+//         "correctOption": 1,
+//         "points": 30
+//     },
+//     {
+//         "id": 10,
+//         "question": "What changed about batching in React 18?",
+//         "options": [
+//             "Batching was removed completely",
+//             "Batching only works in event handlers",
+//             "Batching now works in async functions and promises",
+//             "Batching requires manual configuration"
+//         ],
+//         "correctOption": 2,
+//         "points": 30
+//     },
+//     {
+//         "id": 11,
+//         "question": "What is the purpose of React.StrictMode?",
+//         "options": [
+//             "To enforce TypeScript in all components",
+//             "To highlight potential problems in application",
+//             "To prevent all runtime errors",
+//             "To optimize production bundle size"
+//         ],
+//         "correctOption": 1,
+//         "points": 20
+//     },
+//     {
+//         "id": 12,
+//         "question": "What happens during the Unmounting phase?",
+//         "options": [
+//             "Component state is saved to localStorage",
+//             "Component is removed from DOM and cleanup runs",
+//             "Component re-renders one final time",
+//             "Component props are reset to defaults"
 //         ],
 //         "correctOption": 1,
 //         "points": 20
@@ -16043,4 +16075,4 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 1,
 //         "points": 30
 //     }
-  ]
+]
