@@ -628,45 +628,54 @@ export const mockQuestions: Question[] = [
                 "- Element ساده‌تر است و فقط اطلاعات ساختاری دارد\n" +
                 "- Instance از Element ساخته می‌شود"
     },
-//     {
-//         "id": 47,
-//         "question": "Are React Elements mutable or immutable?",
-//         "options": [
-//             "Mutable, can be changed after creation",
-//             "Immutable, cannot be changed once created",
-//             "Sometimes mutable depending on component type",
-//             "Mutable in development, immutable in production"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 48,
-//         "question": "What creates React Elements in applications?",
-//         "options": [
-//             "JSX syntax or React.createElement function calls",
-//             "Importing component files automatically creates elements",
-//             "Browser converts HTML to React elements",
-//             "React DevTools generate elements during debugging"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 49,
-//         "question": "How do React Elements become DOM Elements?",
-//         "options": [
-//             "React elements directly convert to DOM automatically",
-//             "During Commit Phase, React creates actual DOM nodes",
-//             "Browser converts React elements to DOM automatically",
-//             "React elements are DOM elements with different names"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation": ""
-//     },
+    {
+        "id": 47,
+        "question": "Are React Elements mutable or immutable?",
+        "options": [
+            "Mutable, can be changed after creation",
+            "Immutable, cannot be changed once created",
+            "Sometimes mutable depending on component type",
+            "Mutable in development, immutable in production"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation": "• React Elements immutable هستند\n" +
+                "- بعد از ساخته شدن نمی‌توانید آن‌ها را تغییر دهید\n" +
+                "- برای تغییر باید element جدید بسازید\n" +
+                "- این رفتار به predictability کمک می‌کند"
+    },
+    {
+        "id": 48,
+        "question": "What creates React Elements in applications?",
+        "options": [
+            "JSX syntax or React.createElement function calls",
+            "Importing component files automatically creates elements",
+            "Browser converts HTML to React elements",
+            "React DevTools generate elements during debugging"
+        ],
+        "correctOption": 0,
+        "points": 10,
+            "explanation": "• JSX به React.createElement تبدیل می‌شود\n" +
+                "- می‌توانید مستقیما React.createElement صدا بزنید\n" +
+                "- JSX syntax sugar برای ساخت elements است\n" +
+                "- Babel یا TypeScript JSX را transpile می‌کنند"
+    },
+    {
+        "id": 49,
+        "question": "How do React Elements become DOM Elements?",
+        "options": [
+            "React elements directly convert to DOM automatically",
+            "During Commit Phase, React creates actual DOM nodes",
+            "Browser converts React elements to DOM automatically",
+            "React elements are DOM elements with different names"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation": "• در Commit Phase، React به DOM می‌نویسد\n" +
+                "- React Elements به DOM API calls تبدیل می‌شوند\n" +
+                "- مثلا document.createElement برای ساخت node استفاده می‌شود\n" +
+                "- این فرآیند توسط React DOM انجام می‌شود"
+    },
 //     {
 //         "id": 6,
 //         "question": "What happens during the Mounting phase of component lifecycle?",
@@ -758,32 +767,38 @@ export const mockQuestions: Question[] = [
 //         "points": 20,
 //             "explanation": ""
 //     },
-//     {
-//         "id": 50,
-//         "question": "What information does a React Element contain?",
-//         "options": [
-//             "Type, props, and children information only",
-//             "Complete state and lifecycle method implementations",
-//             "Direct references to actual DOM nodes",
-//             "Event handlers and browser event objects"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 51,
-//         "question": "Can React Elements be reused across renders?",
-//         "options": [
-//             "No, new elements created on every render",
-//             "Yes, React caches and reuses all elements",
-//             "Only functional component elements can reuse",
-//             "Only class component elements can reuse"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation": ""
-//     },
+    {
+        "id": 50,
+        "question": "What information does a React Element contain?",
+        "options": [
+            "Type, props, and children information only",
+            "Complete state and lifecycle method implementations",
+            "Direct references to actual DOM nodes",
+            "Event handlers and browser event objects"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation": "• React Element شامل type (نوع کامپوننت یا tag)، props و children است\n" +
+                "- هیچ state یا lifecycle method ندارد\n" +
+                "- فقط یک توضیح ساده از UI است\n" +
+                "- مثل یک نقشه برای ساخت UI عمل می‌کند"
+    },
+    {
+        "id": 51,
+        "question": "Can React Elements be reused across renders?",
+        "options": [
+            "No, new elements created on every render",
+            "Yes, React caches and reuses all elements",
+            "Only functional component elements can reuse",
+            "Only class component elements can reuse"
+        ],
+        "correctOption": 0,
+        "points": 30,
+            "explanation": "• در هر render، elements جدید ساخته می‌شوند\n" +
+                "- immutability این رفتار را الزامی می‌کند\n" +
+                "- اما React از Reconciliation برای optimize کردن استفاده می‌کند\n" +
+                "- component instances ممکن است reuse شوند"
+    },
 //     {
 //         "id": 52,
 //         "question": "What triggers a render in React besides state changes?",
