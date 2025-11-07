@@ -115,18 +115,22 @@ export const mockQuestions: Question[] = [
             "- همیشه dependency array مناسب را مشخص کنید\n" +
             "- برای اجرای یک‌بار از آرایه خالی [] استفاده کنید"
     },
-//     {
-//         "id": 15,
-//         "question":  "Does ESLint only check for syntax errors?",
-//         "options": [
-//             "Yes, it only validates syntax",
-//             "No, it also enforces style and finds logic issues",
-//             "Yes, it replaces the JavaScript compiler",
-//             "No, it only builds production bundles"
-//         ],
-//         "correctOption": 1,
-//         "points": 10
-//     },
+    {
+        "id": 15,
+        "question":  "Does ESLint only check for syntax errors?",
+        "options": [
+            "Yes, it only validates syntax",
+            "No, it also enforces style and finds logic issues",
+            "Yes, it replaces the JavaScript compiler",
+            "No, it only builds production bundles"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• ESLint علاوه بر syntax، style guide و logic issues را بررسی می‌کند\n" +
+            "- می‌تواند مشکلات احتمالی مثل متغیرهای استفاده نشده را شناسایی کند\n" +
+            "- rules قابل تنظیم هستند و می‌توانید custom rules بنویسید\n" +
+            "- در React پروژه‌ها، eslint-plugin-react-hooks مفید است"
+    },
     {
         "id": 16,
         "question": "What is the main advantage of CSS Modules?",
@@ -160,126 +164,166 @@ export const mockQuestions: Question[] = [
             "- می‌توانید با ref به DOM Element دسترسی مستقیم داشته باشید"
 
     },
-//     {
-//         "id": 18,
-//         "question": "What is the relationship between Component Instance and React Element?",
-//         "options": [
-//             "Component instances create React elements when rendered",
-//             "React elements create component instances automatically",
-//             "Both are identical and interchangeable in React",
-//             "Component instances replace React elements during rendering"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 19,
-//         "question": "When is a render triggered in React applications?",
-//         "options": [
-//             "When state updates, props change, or parent re-renders",
-//             "Only when user interacts with UI elements",
-//             "Only during initial component mount phase",
-//             "When DOM elements are clicked by users"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 20,
-//         "question": "What happens during the Render Phase in React?",
-//         "options": [
-//             "React updates the actual browser DOM immediately",
-//             "React paints pixels to the screen for users",
-//             "React calls component functions and builds virtual DOM",
-//             "React commits changes to DOM and executes effects"
-//         ],
-//         "correctOption": 2,
-//         "points": 10
-//     },
-//     {
-//         "id": 21,
-//         "question": "What happens during the Commit Phase in React?",
-//         "options": [
-//             "React calls component functions to create elements",
-//             "React compares new virtual DOM with previous one",
-//             "React pauses to prioritize more urgent updates",
-//             "React writes changes to the actual browser DOM",
-//         ],
-//         "correctOption": 3,
-//         "points": 10
-//     },
-//     {
-//         "id": 22,
-//         "question": "What is Browser Paint in React&apos;s rendering process?",
-//         "options": [
-//             "The phase where React builds virtual DOM tree",
-//             "The phase where React commits changes to DOM",
-//             "The browser rendering pixels to screen after DOM updates",
-//             "The phase where React reconciles component differences"
-//         ],
-//         "correctOption": 2,
-//         "points": 10
-//     },
-//     {
-//         "id": 23,
-//         "question": "Does rendering always mean updating the DOM in React?",
-//         "options": [
-//             "Yes, every render always updates DOM elements",
-//             "No, rendering only is calling functions",
-//             "Yes, render and DOM update happen simultaneously",
-//             "No, rendering only happens during initial mount"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 24,
-//         "question": "Why doesn't React completely discard the old view on re-render?",
-//         "options": [
-//             "Complete discard would prevent state from persisting",
-//             "Discarding old view would cause memory leaks",
-//             "React cannot access the previous view tree",
-//             "React compares and reuses unchanged parts efficiently",
-//         ],
-//         "correctOption": 3,
-//         "points": 20
-//     },
-//     {
-//         "id": 25,
-//         "question": "What is the Fiber Tree in React&apos;s architecture?",
-//         "options": [
-//             "A tree of actual DOM elements in browser",
-//             "A tree of component class definitions component instances",
-//             "React&apos;s internal data structure tracking component instances",
-//             "A visualization tool for React DevTools only"
-//         ],
-//         "correctOption": 2,
-//         "points": 10
-//     },
-//     {
-//         "id": 26,
-//         "question": "What is Reconciliation in React&apos;s rendering process?",
-//         "options": [
-//             "The process of comparing old and new virtual DOM",
-//             "The process of painting pixels to screen",
-//             "The process of triggering component state updates",
-//             "The process of mounting components initially"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 27,
-//         "question": "How does React split rendering work into chunks?",
-//         "options": [
-//             "React cannot split rendering into smaller pieces",
-//             "React divides rendering into 'units of work' that can pause",
-//             "React renders all components simultaneously in parallel",
-//             "React splits rendering based on component file size"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
+    {
+        "id": 18,
+        "question": "What is the relationship between Component Instance and React Element?",
+        "options": [
+            "Component instances create React elements when rendered",
+            "React elements create component instances automatically",
+            "Both are identical and interchangeable in React",
+            "Component instances replace React elements during rendering"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• Component Instance زمانی ایجاد می‌شود که کامپوننت در JSX استفاده شود\n" +
+            "- هر Instance می‌تواند React Elements بسازد\n" +
+            "- React Element توضیح‌دهنده آن چیزی است که باید رندر شود\n" +
+            "- یک کامپوننت می‌تواند چندین Instance داشته باشد"
+    },
+    {
+        "id": 19,
+        "question": "When is a render triggered in React applications?",
+        "options": [
+            "When state updates, props change, or parent re-renders",
+            "Only when user interacts with UI elements",
+            "Only during initial component mount phase",
+            "When DOM elements are clicked by users"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":"• تغییر state در کامپوننت باعث رندر می‌شود\n" +
+            "- رندر مجدد والد باعث رندر فرزندان می‌شود\n" +
+            "- تغییر context value تمام consumers را رندر می‌کند\n" +
+            "- رندر به معنی DOM update نیست، بلکه فراخوانی component function است"
+    },
+    {
+        "id": 20,
+        "question": "What happens during the Render Phase in React?",
+        "options": [
+            "React updates the actual browser DOM immediately",
+            "React paints pixels to the screen for users",
+            "React calls component functions and builds virtual DOM",
+            "React commits changes to DOM and executes effects"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• در Render Phase، React component functions را فراخوانی می‌کند\n" +
+            "- Virtual DOM tree جدید ساخته می‌شود\n" +
+            "- هیچ side effect یا DOM update در این مرحله انجام نمی‌شود\n" +
+            "- این مرحله می‌تواند وقفه داشته باشد (interruptible)"
+    },
+    {
+        "id": 21,
+        "question": "What happens during the Commit Phase in React?",
+        "options": [
+            "React calls component functions to create elements",
+            "React compares new virtual DOM with previous one",
+            "React pauses to prioritize more urgent updates",
+            "React writes changes to the actual browser DOM",
+        ],
+        "correctOption": 3,
+        "points": 10,
+        "explanation":"• در Commit Phase، React تغییرات را به DOM واقعی اعمال می‌کند\n" +
+            "- این مرحله synchronous و غیرقابل وقفه است\n" +
+            "- بعد از commit، layout effects و سپس useEffect اجرا می‌شوند\n" +
+            "- Browser Paint بعد از این مرحله اتفاق می‌افتد"
+    },
+    {
+        "id": 22,
+        "question": "What is Browser Paint in React&apos;s rendering process?",
+        "options": [
+            "The phase where React builds virtual DOM tree",
+            "The phase where React commits changes to DOM",
+            "The browser rendering pixels to screen after DOM updates",
+            "The phase where React reconciles component differences"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• Browser Paint توسط مرورگر انجام می‌شود، نه React\n" +
+            "- بعد از Commit Phase اتفاق می‌افتد\n" +
+            "- مرورگر DOM را به pixels روی صفحه تبدیل می‌کند\n" +
+            "- React هیچ کنترلی روی این مرحله ندارد"
+    },
+    {
+        "id": 23,
+        "question": "Does rendering always mean updating the DOM in React?",
+        "options": [
+            "Yes, every render always updates DOM elements",
+            "No, rendering only is calling functions",
+            "Yes, render and DOM update happen simultaneously",
+            "No, rendering only happens during initial mount"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• Render به معنی فراخوانی component function است\n" +
+            "- اگر Virtual DOM تغییری نداشته باشد، DOM update نمی‌شود\n" +
+            "- Reconciliation تعیین می‌کند کدام بخش‌ها نیاز به update دارند\n" +
+            "- می‌توانید با React.memo از render‌های غیرضروری جلوگیری کنید"
+    },
+    {
+        "id": 24,
+        "question": "Why doesn't React completely discard the old view on re-render?",
+        "options": [
+            "Complete discard would prevent state from persisting",
+            "Discarding old view would cause memory leaks",
+            "React cannot access the previous view tree",
+            "React compares and reuses unchanged parts efficiently",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• React از Reconciliation برای مقایسه استفاده می‌کند\n" +
+            "- بخش‌های تغییر نکرده دوباره استفاده می‌شوند\n" +
+            "- این کار performance را بهبود می‌بخشد\n" +
+            "- keys به React کمک می‌کنند المان‌ها را track کند"
+    },
+    {
+        "id": 25,
+        "question": "What is the Fiber Tree in React&apos;s architecture?",
+        "options": [
+            "A tree of actual DOM elements in browser",
+            "A tree of component class definitions component instances",
+            "React&apos;s internal data structure tracking component instances",
+            "A visualization tool for React DevTools only"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• Fiber Tree ساختار داده داخلی React برای track کردن کامپوننت‌هاست\n" +
+            "- هر Fiber نشان‌دهنده یک component instance یا DOM node است\n" +
+            "- Fiber امکان قطع و ادامه کار rendering را فراهم می‌کند\n" +
+            "- state، props و DOM reference در هر Fiber ذخیره می‌شود"
+    },
+    {
+        "id": 26,
+        "question": "What is Reconciliation in React&apos;s rendering process?",
+        "options": [
+            "The process of comparing old and new virtual DOM",
+            "The process of painting pixels to screen",
+            "The process of triggering component state updates",
+            "The process of mounting components initially"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":"• Reconciliation فرآیند مقایسه Virtual DOM قدیم و جدید است\n" +
+            "- React تعیین می‌کند چه تغییراتی لازم است\n" +
+            "- از diffing algorithm برای optimization استفاده می‌شود\n" +
+            "- نتیجه آن لیستی از تغییرات برای Commit Phase است"
+    },
+    {
+        "id": 27,
+        "question": "How does React split rendering work into chunks?",
+        "options": [
+            "React cannot split rendering into smaller pieces",
+            "React divides rendering into 'units of work' that can pause",
+            "React renders all components simultaneously in parallel",
+            "React splits rendering based on component file size"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• React کار را به units of work تقسیم می‌کند\n" +
+            "- هر unit معمولا یک component یا fiber node است\n" +
+            "- React می‌تواند بین units کار را متوقف و ادامه دهد\n" +
+            "- این امکان prioritization را فراهم می‌کند"
+    },
 //     {
 //         "id": 28,
 //         "question": "Can React prioritize certain rendering tasks over others?",
