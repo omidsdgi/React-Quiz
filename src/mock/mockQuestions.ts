@@ -1,4 +1,4 @@
-// data/mockQuestions.ts
+// data/mockQuestionsCopy.ts
 import { Question } from "@/type/QuizTypes";
 
 export const mockQuestions: Question[] = [
@@ -84,6 +84,125 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 6,
+        "question": "What happens during the Mounting phase of component lifecycle?",
+        "options": [
+            "Component is created and inserted into DOM",
+            "Component updates its state values",
+            "Component is removed from the DOM",
+            "Component re-renders with new props"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation": "• Mounting مرحله اولیه چرخه حیات کامپوننت است\n" +
+                "- کامپوننت برای اولین بار ساخته و به DOM اضافه می‌شود\n" +
+                "- constructor، render و componentDidMount اجرا می‌شوند\n" +
+                "- state و props اولیه تنظیم می‌شوند\n" +
+                "- useEffect با dependency array خالی در این مرحله اجرا می‌شود"
+    },
+    {
+        "id": 7,
+        "question": "What is prop drilling in React?",
+        "options": [
+            "Validating props before using them",
+            "Passing props through multiple component layers",
+            "Creating dynamic props at runtime",
+            "Optimizing prop performance with memoization"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation":"• Prop drilling انتقال props از چندین لایه کامپوننت است\n" +
+                "- props از والد به نوه‌ها و فراتر منتقل می‌شود\n" +
+                "- کامپوننت‌های میانی props را فقط برای انتقال دریافت می‌کنند\n" +
+                "- باعث پیچیدگی و سختی نگهداری کد می‌شود\n" +
+                "- Context API راه‌حل بهتری برای جلوگیری از آن است"
+    },
+    {
+        "id": 8,
+        "question": "Why are keys important when rendering lists in React?",
+        "options": [
+            "Keys help React identify which items changed",
+            "Keys are required for CSS styling",
+            "Keys improve API response time",
+            "Keys enable component lazy loading"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation": "• keys به React کمک می‌کنند تشخیص دهد کدام آیتم تغییر کرده\n" +
+                "- بدون key، React همه لیست را دوباره render می‌کند\n" +
+                "- key باید یکتا و پایدار باشد (نه index آرایه)\n" +
+                "- به بهبود performance و حفظ state کامپوننت‌ها کمک می‌کند\n" +
+                "- استفاده از index به عنوان key می‌تواند مشکل ایجاد کند"
+    },
+    {
+        "id": 9,
+        "question": "How does React's Reconciliation Algorithm optimize rendering?",
+        "options": [
+            "By always re-rendering entire component tree",
+            "By comparing Virtual DOM trees and updating only differences",
+            "By caching all components permanently",
+            "By disabling re-renders for unchanged components"
+        ],
+        "correctOption": 1,
+        "points": 30,
+            "explanation": "• Reconciliation الگوریتم مقایسه Virtual DOM قدیم و جدید است\n" +
+                "- React تفاوت‌ها را شناسایی و فقط آن‌ها را به DOM اعمال می‌کند\n" +
+                "- از diffing algorithm برای بهینه‌سازی استفاده می‌کند\n" +
+                "- keys به React کمک می‌کنند elements را track کنند\n" +
+                "- این فرآیند باعث افزایش کارایی rendering می‌شود"
+    },
+    {
+        "id": 10,
+        "question": "What changed about batching in React 18?",
+        "options": [
+            "Batching was removed completely",
+            "Batching only works in event handlers",
+            "Batching works in async functions and promises",
+            "Batching requires manual configuration"
+        ],
+        "correctOption": 2,
+        "points": 30,
+            "explanation": "• در React 18، automatic batching در همه جا فعال است\n" +
+                "- قبلاً batching فقط در event handlers کار می‌کرد\n" +
+                "- حالا در promises، setTimeout و async functions هم کار می‌کند\n" +
+                "- تعداد re-renders را کاهش می‌دهد\n" +
+                "- می‌توانید با flushSync از batching جلوگیری کنید"
+    },
+    {
+        "id": 11,
+        "question": "What is the purpose of React.StrictMode?",
+        "options": [
+            "To enforce TypeScript in all components",
+            "To highlight potential problems in application",
+            "To prevent all runtime errors",
+            "To optimize production bundle size"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation": "• StrictMode مشکلات احتمالی برنامه را برجسته می‌کند\n" +
+                "- فقط در development mode فعال است\n" +
+                "- کامپوننت‌ها را دو بار render می‌کند برای یافتن side effects\n" +
+                "- الگوهای deprecated و unsafe را شناسایی می‌کند\n" +
+                "- به نوشتن کد بهتر و پایدارتر کمک می‌کند"
+    },
+    {
+        "id": 12,
+        "question": "What happens during the Unmounting phase?",
+        "options": [
+            "Component state is saved to localStorage",
+            "Component is removed from DOM and cleanup runs",
+            "Component re-renders one final time",
+            "Component props are reset to defaults"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation": "• Unmounting مرحله حذف کامپوننت از DOM است\n" +
+                "- cleanup functions در useEffect اجرا می‌شوند\n" +
+                "- subscriptions لغو و timers پاک می‌شوند\n" +
+                "- state و refs از بین می‌روند\n" +
+                "- componentWillUnmount در class components اجرا می‌شود"
+    },
+        {
+        "id": 13,
         "question":  "Does a useEffect hook always run on the component's initial render?",
         "options": [
             "Yes, regardless of the dependency array",
@@ -98,9 +217,8 @@ export const mockQuestions: Question[] = [
             "- برای جلوگیری از اجرا در mount می‌توانید از ref برای track کردن استفاده کنید\n" +
             "- این رفتار مستقل از محتوای dependency array است"
     },
-
     {
-        id: 7,
+        id: 14,
         question: "How often will a useEffect run if no dependency array is provided?",
         options: [
             "Only when the component mounts",
@@ -162,7 +280,6 @@ export const mockQuestions: Question[] = [
             "- React Element نمایش JavaScript از آن است\n" +
             "- در Commit Phase، React Elements به DOM Elements تبدیل می‌شوند\n" +
             "- می‌توانید با ref به DOM Element دسترسی مستقیم داشته باشید"
-
     },
     {
         "id": 18,
@@ -676,97 +793,6 @@ export const mockQuestions: Question[] = [
                 "- مثلا document.createElement برای ساخت node استفاده می‌شود\n" +
                 "- این فرآیند توسط React DOM انجام می‌شود"
     },
-//     {
-//         "id": 6,
-//         "question": "What happens during the Mounting phase of component lifecycle?",
-//         "options": [
-//             "Component is created and inserted into DOM",
-//             "Component updates its state values",
-//             "Component is removed from the DOM",
-//             "Component re-renders with new props"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 7,
-//         "question": "What is prop drilling in React?",
-//         "options": [
-//             "Validating props before using them",
-//             "Passing props through multiple component layers",
-//             "Creating dynamic props at runtime",
-//             "Optimizing prop performance with memoization"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 8,
-//         "question": "Why are keys important when rendering lists in React?",
-//         "options": [
-//             "Keys help React identify which items changed",
-//             "Keys are required for CSS styling",
-//             "Keys improve API response time",
-//             "Keys enable component lazy loading"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 9,
-//         "question": "How does React's Reconciliation Algorithm optimize rendering?",
-//         "options": [
-//             "By always re-rendering entire component tree",
-//             "By comparing Virtual DOM trees and updating only differences",
-//             "By caching all components permanently",
-//             "By disabling re-renders for unchanged components"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 10,
-//         "question": "What changed about batching in React 18?",
-//         "options": [
-//             "Batching was removed completely",
-//             "Batching only works in event handlers",
-//             "Batching now works in async functions and promises",
-//             "Batching requires manual configuration"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 11,
-//         "question": "What is the purpose of React.StrictMode?",
-//         "options": [
-//             "To enforce TypeScript in all components",
-//             "To highlight potential problems in application",
-//             "To prevent all runtime errors",
-//             "To optimize production bundle size"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 12,
-//         "question": "What happens during the Unmounting phase?",
-//         "options": [
-//             "Component state is saved to localStorage",
-//             "Component is removed from DOM and cleanup runs",
-//             "Component re-renders one final time",
-//             "Component props are reset to defaults"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation": ""
-//     },
     {
         "id": 50,
         "question": "What information does a React Element contain?",
