@@ -1107,136 +1107,166 @@ export const mockQuestions: Question[] = [
             "- کاربر نباید UI نیمه‌کاره ببیند\n" +
             "- بعد از commit، Browser Paint یکباره اتفاق می‌افتد"
     },
-//     {
-//         "id": 71,
-//         "question": "What is Render Logic NOT allowed to do?",
-//         "options": [
-//             "Calculate values and return JSX structure",
-//             "Read props and state for rendering",
-//             "Mutate objects or update state directly",
-//             "Call pure functions for computations"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 72,
-//         "question": "Why must Render Logic be pure in React?",
-//         "options": [
-//             "Pure functions are faster than impure functions",
-//             "React may call render logic multiple times",
-//             "Impure logic prevents components from mounting",
-//             "Pure logic reduces component file size"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 73,
-//         "question": "Where should side effects be placed in React components?",
-//         "options": [
-//             "In render logic for immediate execution",
-//             "In event handlers or useEffect hook",
-//             "Directly in component function body",
-//             "In component constructor or initialization"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 74,
-//         "question": "What makes Event Handler Functions different from Render Logic?",
-//         "options": [
-//             "Handlers can contain side effects and mutations",
-//             "Handlers are pure and cannot have effects",
-//             "Handlers run during render phase only",
-//             "Handlers cannot access component state"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 75,
-//         "question": "When do Event Handler Functions execute?",
-//         "options": [
-//             "During component render phase automatically",
-//             "In response to user interactions with UI",
-//             "Before component mounts to DOM tree",
-//             "After component unmounts from tree"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 76,
-//         "question": "Why does React need a special hook for side effects?",
-//         "options": [
-//             "Side effects in render logic cause unpredictable behavior",
-//             "Hooks make side effects run faster than normal",
-//             "Side effects cannot be written in JavaScript",
-//             "Hooks prevent all bugs in side effects"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 77,
-//         "question": "What is useEffect's primary purpose in React?",
-//         "options": [
-//             "To memoize expensive calculation results efficiently",
-//             "To register side effects that run after render",
-//             "To update component state on every render",
-//             "To prevent component from re-rendering unnecessarily"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 78,
-//         "question": "How does state update batching improve performance?",
-//         "options": [
-//             "By reducing number of re-renders significantly",
-//             "By making state updates happen faster",
-//             "By preventing state from changing at all",
-//             "By storing state in more efficient format"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 79,
-//         "question": "Are state updates always batched in React?",
-//         "options": [
-//             "Yes, always in all scenarios automatically",
-//             "No, only in event handlers are batched",
-//             "Yes, in React 18+ for all updates",
-//             "No, batching is deprecated in modern React"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 80,
-//         "question": "What happens if you call setState multiple times synchronously?",
-//         "options": [
-//             "Each call causes immediate separate re-render",
-//             "Only the last setState call takes effect",
-//             "React batches them into single re-render",
-//             "React throws error for multiple calls"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
+    {
+        "id": 71,
+        "question": "What is Render Logic NOT allowed to do?",
+        "options": [
+            "Calculate values and return JSX structure",
+            "Read props and state for rendering",
+            "Mutate objects or update state directly",
+            "Call pure functions for computations"
+        ],
+        "correctOption": 2,
+        "points": 20,
+                "explanation":"• نباید objects را mutate کند\n" +
+                    "- نباید مستقیم state را update کند\n" +
+                    "- نباید side effects (API calls) داشته باشد\n" +
+                    "- باید pure function باشد"
+    },
+    {
+        "id": 72,
+        "question": "Why must Render Logic be pure in React?",
+        "options": [
+            "Pure functions are faster than impure functions",
+            "React may call render logic multiple times",
+            "Impure logic prevents components from mounting",
+            "Pure logic reduces component file size"
+        ],
+        "correctOption": 1,
+        "points": 20,
+                "explanation":"• React ممکن است چندین بار component را render کند\n" +
+                    "- pure functions نتایج قابل پیش‌بینی دارند\n" +
+                    "- امکان optimization و concurrent rendering را فراهم می‌کند\n" +
+                    "- debugging و testing راحت‌تر می‌شود"
+    },
+    {
+        "id": 73,
+        "question": "Where should side effects be placed in React components?",
+        "options": [
+            "In render logic for immediate execution",
+            "In event handlers or useEffect hook",
+            "Directly in component function body",
+            "In component constructor or initialization"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":"• در useEffect برای side effects بعد از render\n" +
+                    "- در event handlers برای user interactions\n" +
+                    "- نه در render logic که هر render اجرا می‌شود\n" +
+                    "- React lifecycle methods در class components"
+    },
+    {
+        "id": 74,
+        "question": "What makes Event Handler Functions different from Render Logic?",
+        "options": [
+            "Handlers can contain side effects and mutations",
+            "Handlers are pure and cannot have effects",
+            "Handlers run during render phase only",
+            "Handlers cannot access component state"
+        ],
+        "correctOption": 0,
+        "points": 20,
+                "explanation":"• handlers می‌توانند side effects داشته باشند\n" +
+                    "- handlers فقط در پاسخ به events اجرا می‌شوند\n" +
+                    "- render logic در هر render اجرا می‌شود و باید pure باشد\n" +
+                    "- handlers می‌توانند async باشند و API call کنند"
+    },
+    {
+        "id": 75,
+        "question": "When do Event Handler Functions execute?",
+        "options": [
+            "During component render phase automatically",
+            "In response to user interactions with UI",
+            "Before component mounts to DOM tree",
+            "After component unmounts from tree"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":"• فقط زمانی که event مربوطه رخ می‌دهد\n" +
+                    "- مثلا onClick وقتی کاربر کلیک می‌کند\n" +
+                    "- onChange وقتی input تغییر می‌کند\n" +
+                    "- نه در هنگام render شدن component"
+    },
+    {
+        "id": 76,
+        "question": "Why does React need a special hook for side effects?",
+        "options": [
+            "Side effects in render logic cause unpredictable behavior",
+            "Hooks make side effects run faster than normal",
+            "Side effects cannot be written in JavaScript",
+            "Hooks prevent all bugs in side effects"
+        ],
+        "correctOption": 0,
+        "points": 20,
+                "explanation":"• side effects در render logic مشکل ایجاد می‌کنند\n" +
+                    "- useEffect بعد از render و commit اجرا می‌شود\n" +
+                    "- امکان cleanup برای جلوگیری از memory leaks\n" +
+                    "- dependency array رفتار اجرا را کنترل می‌کند"
+    },
+    {
+        "id": 77,
+        "question": "What is useEffect's primary purpose in React?",
+        "options": [
+            "To memoize expensive calculation results efficiently",
+            "To register side effects that run after render",
+            "To update component state on every render",
+            "To prevent component from re-rendering unnecessarily"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":"• ثبت side effects که بعد از render اجرا شوند\n" +
+                    "- مثل data fetching، subscriptions، DOM manipulation\n" +
+                    "- جایگزین lifecycle methods در functional components\n" +
+                    "- با dependency array می‌توان رفتار را کنترل کرد"
+    },
+    {
+        "id": 78,
+        "question": "How does state update batching improve performance?",
+        "options": [
+            "By reducing number of re-renders significantly",
+            "By making state updates happen faster",
+            "By preventing state from changing at all",
+            "By storing state in more efficient format"
+        ],
+        "correctOption": 0,
+        "points": 10,
+                "explanation":"• چندین setState به یک re-render تبدیل می‌شود\n" +
+                    "- از renders غیرضروری جلوگیری می‌کند\n" +
+                    "- UI فقط یک بار به‌روز می‌شود\n" +
+                    "- CPU و browser resources کمتر مصرف می‌شود"
+    },
+    {
+        "id": 79,
+        "question": "Are state updates always batched in React?",
+        "options": [
+            "Yes, always in all scenarios automatically",
+            "No, only in event handlers are batched",
+            "Yes, in React 18+ for all updates",
+            "No, batching is deprecated in modern React"
+        ],
+        "correctOption": 2,
+        "points": 30,
+                "explanation":"• در React 18+ همه updates batch می‌شوند\n" +
+                    "- حتی در promises، setTimeout و async functions\n" +
+                    "- در React 17 فقط در event handlers batch بود\n" +
+                    "- می‌توان با flushSync batching را غیرفعال کرد"
+    },
+    {
+        "id": 80,
+        "question": "What happens if you call setState multiple times synchronously?",
+        "options": [
+            "Each call causes immediate separate re-render",
+            "Only the last setState call takes effect",
+            "React batches them into single re-render",
+            "React throws error for multiple calls"
+        ],
+        "correctOption": 2,
+        "points": 20,
+                "explanation":"• React آن‌ها را batch می‌کند\n" +
+                    "- فقط یک re-render اتفاق می‌افتد\n" +
+                    "- state نهایی بعد از اعمال همه updates محاسبه می‌شود\n" +
+                    "- می‌توان از functional updates برای اطمینان استفاده کرد"
+    },
 //     {
 //         "id": 81,
 //         "question": "Can you force React to flush batched updates immediately?",
