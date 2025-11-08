@@ -93,11 +93,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation": "• Mounting مرحله اولیه چرخه حیات کامپوننت است\n" +
-                "- کامپوننت برای اولین بار ساخته و به DOM اضافه می‌شود\n" +
-                "- constructor، render و componentDidMount اجرا می‌شوند\n" +
-                "- state و props اولیه تنظیم می‌شوند\n" +
-                "- useEffect با dependency array خالی در این مرحله اجرا می‌شود"
+        "explanation": "• Mounting مرحله اولیه چرخه حیات کامپوننت است\n" +
+            "- کامپوننت برای اولین بار ساخته و به DOM اضافه می‌شود\n" +
+            "- constructor، render و componentDidMount اجرا می‌شوند\n" +
+            "- state و props اولیه تنظیم می‌شوند\n" +
+            "- useEffect با dependency array خالی در این مرحله اجرا می‌شود"
     },
     {
         "id": 7,
@@ -110,11 +110,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation":"• Prop drilling انتقال props از چندین لایه کامپوننت است\n" +
-                "- props از والد به نوه‌ها و فراتر منتقل می‌شود\n" +
-                "- کامپوننت‌های میانی props را فقط برای انتقال دریافت می‌کنند\n" +
-                "- باعث پیچیدگی و سختی نگهداری کد می‌شود\n" +
-                "- Context API راه‌حل بهتری برای جلوگیری از آن است"
+        "explanation":"• Prop drilling انتقال props از چندین لایه کامپوننت است\n" +
+            "- props از والد به نوه‌ها و فراتر منتقل می‌شود\n" +
+            "- کامپوننت‌های میانی props را فقط برای انتقال دریافت می‌کنند\n" +
+            "- باعث پیچیدگی و سختی نگهداری کد می‌شود\n" +
+            "- Context API راه‌حل بهتری برای جلوگیری از آن است"
     },
     {
         "id": 8,
@@ -127,11 +127,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation": "• keys به React کمک می‌کنند تشخیص دهد کدام آیتم تغییر کرده\n" +
-                "- بدون key، React همه لیست را دوباره render می‌کند\n" +
-                "- key باید یکتا و پایدار باشد (نه index آرایه)\n" +
-                "- به بهبود performance و حفظ state کامپوننت‌ها کمک می‌کند\n" +
-                "- استفاده از index به عنوان key می‌تواند مشکل ایجاد کند"
+        "explanation": "• keys به React کمک می‌کنند تشخیص دهد کدام آیتم تغییر کرده\n" +
+            "- بدون key، React همه لیست را دوباره render می‌کند\n" +
+            "- key باید یکتا و پایدار باشد (نه index آرایه)\n" +
+            "- به بهبود performance و حفظ state کامپوننت‌ها کمک می‌کند\n" +
+            "- استفاده از index به عنوان key می‌تواند مشکل ایجاد کند"
     },
     {
         "id": 9,
@@ -144,11 +144,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-            "explanation": "• Reconciliation الگوریتم مقایسه Virtual DOM قدیم و جدید است\n" +
-                "- React تفاوت‌ها را شناسایی و فقط آن‌ها را به DOM اعمال می‌کند\n" +
-                "- از diffing algorithm برای بهینه‌سازی استفاده می‌کند\n" +
-                "- keys به React کمک می‌کنند elements را track کنند\n" +
-                "- این فرآیند باعث افزایش کارایی rendering می‌شود"
+        "explanation": "• Reconciliation الگوریتم مقایسه Virtual DOM قدیم و جدید است\n" +
+            "- React تفاوت‌ها را شناسایی و فقط آن‌ها را به DOM اعمال می‌کند\n" +
+            "- از diffing algorithm برای بهینه‌سازی استفاده می‌کند\n" +
+            "- keys به React کمک می‌کنند elements را track کنند\n" +
+            "- این فرآیند باعث افزایش کارایی rendering می‌شود"
     },
     {
         "id": 10,
@@ -161,11 +161,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-            "explanation": "• در React 18، automatic batching در همه جا فعال است\n" +
-                "- قبلاً batching فقط در event handlers کار می‌کرد\n" +
-                "- حالا در promises، setTimeout و async functions هم کار می‌کند\n" +
-                "- تعداد re-renders را کاهش می‌دهد\n" +
-                "- می‌توانید با flushSync از batching جلوگیری کنید"
+        "explanation": "• در React 18، automatic batching در همه جا فعال است\n" +
+            "- قبلاً batching فقط در event handlers کار می‌کرد\n" +
+            "- حالا در promises، setTimeout و async functions هم کار می‌کند\n" +
+            "- تعداد re-renders را کاهش می‌دهد\n" +
+            "- می‌توانید با flushSync از batching جلوگیری کنید"
     },
     {
         "id": 11,
@@ -178,11 +178,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation": "• StrictMode مشکلات احتمالی برنامه را برجسته می‌کند\n" +
-                "- فقط در development mode فعال است\n" +
-                "- کامپوننت‌ها را دو بار render می‌کند برای یافتن side effects\n" +
-                "- الگوهای deprecated و unsafe را شناسایی می‌کند\n" +
-                "- به نوشتن کد بهتر و پایدارتر کمک می‌کند"
+        "explanation": "• StrictMode مشکلات احتمالی برنامه را برجسته می‌کند\n" +
+            "- فقط در development mode فعال است\n" +
+            "- کامپوننت‌ها را دو بار render می‌کند برای یافتن side effects\n" +
+            "- الگوهای deprecated و unsafe را شناسایی می‌کند\n" +
+            "- به نوشتن کد بهتر و پایدارتر کمک می‌کند"
     },
     {
         "id": 12,
@@ -195,13 +195,13 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation": "• Unmounting مرحله حذف کامپوننت از DOM است\n" +
-                "- cleanup functions در useEffect اجرا می‌شوند\n" +
-                "- subscriptions لغو و timers پاک می‌شوند\n" +
-                "- state و refs از بین می‌روند\n" +
-                "- componentWillUnmount در class components اجرا می‌شود"
+        "explanation": "• Unmounting مرحله حذف کامپوننت از DOM است\n" +
+            "- cleanup functions در useEffect اجرا می‌شوند\n" +
+            "- subscriptions لغو و timers پاک می‌شوند\n" +
+            "- state و refs از بین می‌روند\n" +
+            "- componentWillUnmount در class components اجرا می‌شود"
     },
-        {
+    {
         "id": 13,
         "question":  "Does a useEffect hook always run on the component's initial render?",
         "options": [
@@ -468,10 +468,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-            "explanation": "• Fiber architecture امکان pause، reuse و throw away work را می‌دهد\n" +
-                "- اگر update با priority بالاتر بیاید، کار فعلی متوقف می‌شود\n" +
-                "- React می‌تواند بخش‌های unchanged را reuse کند\n" +
-                "- اگر نتیجه دیگر valid نباشد، کار discard می‌شود"
+        "explanation": "• Fiber architecture امکان pause، reuse و throw away work را می‌دهد\n" +
+            "- اگر update با priority بالاتر بیاید، کار فعلی متوقف می‌شود\n" +
+            "- React می‌تواند بخش‌های unchanged را reuse کند\n" +
+            "- اگر نتیجه دیگر valid نباشد، کار discard می‌شود"
     },
     {
         "id": 30,
@@ -484,10 +484,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-            "explanation": "• Commit Phase مرحله اعمال تغییرات به DOM واقعی است\n" +
-                "- تمام تغییرات محاسبه شده در Render Phase اعمال می‌شوند\n" +
-                "- این مرحله باید سریع و synchronous باشد\n" +
-                "- بعد از آن Browser Paint اتفاق می‌افتد"
+        "explanation": "• Commit Phase مرحله اعمال تغییرات به DOM واقعی است\n" +
+            "- تمام تغییرات محاسبه شده در Render Phase اعمال می‌شوند\n" +
+            "- این مرحله باید سریع و synchronous باشد\n" +
+            "- بعد از آن Browser Paint اتفاق می‌افتد"
     },
     {
         "id": 31,
@@ -500,10 +500,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-            "explanation": "• Render Logic کدی است که JSX را محاسبه می‌کند\n" +
-                "- باید pure باشد و side effect نداشته باشد\n" +
-                "- در بدنه component function نوشته می‌شود\n" +
-                "- فقط بر اساس props و state تصمیم می‌گیرد"
+        "explanation": "• Render Logic کدی است که JSX را محاسبه می‌کند\n" +
+            "- باید pure باشد و side effect نداشته باشد\n" +
+            "- در بدنه component function نوشته می‌شود\n" +
+            "- فقط بر اساس props و state تصمیم می‌گیرد"
     },
     {
         "id": 32,
@@ -516,10 +516,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-            "explanation": "• Event Handlers به تعاملات کاربر پاسخ می‌دهند\n" +
-                "- می‌توانند side effects داشته باشند\n" +
-                "- معمولا با onClick، onChange و ... به elements متصل می‌شوند\n" +
-                "- در آن‌ها می‌توانید state update و API call داشته باشید"
+        "explanation": "• Event Handlers به تعاملات کاربر پاسخ می‌دهند\n" +
+            "- می‌توانند side effects داشته باشند\n" +
+            "- معمولا با onClick، onChange و ... به elements متصل می‌شوند\n" +
+            "- در آن‌ها می‌توانید state update و API call داشته باشید"
     },
     {
         "id": 33,
@@ -532,10 +532,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-            "explanation": "• Render Logic باید pure باشد و side effect نداشته باشد\n" +
-                "- React ممکن است component را چندین بار render کند\n" +
-                "- side effects باید در useEffect یا event handlers باشند\n" +
-                "- pure functions نتایج قابل پیش‌بینی دارند"
+        "explanation": "• Render Logic باید pure باشد و side effect نداشته باشد\n" +
+            "- React ممکن است component را چندین بار render کند\n" +
+            "- side effects باید در useEffect یا event handlers باشند\n" +
+            "- pure functions نتایج قابل پیش‌بینی دارند"
     },
     {
         "id": 34,
@@ -548,10 +548,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-            "explanation": "• side effects ضروری هستند (مثل API calls، subscriptions)\n" +
-                "- باید در جای مناسب (useEffect، event handlers) قرار گیرند\n" +
-                "- نباید در render logic باشند\n" +
-                "- React ابزارهایی برای مدیریت ایمن side effects دارد"
+        "explanation": "• side effects ضروری هستند (مثل API calls، subscriptions)\n" +
+            "- باید در جای مناسب (useEffect، event handlers) قرار گیرند\n" +
+            "- نباید در render logic باشند\n" +
+            "- React ابزارهایی برای مدیریت ایمن side effects دارد"
     },
     {
         "id": 35,
@@ -564,10 +564,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-            "explanation": "• useEffect مخصوص side effects طراحی شده است\n" +
-                "- بعد از render اجرا می‌شود\n" +
-                "- می‌تواند cleanup function برگرداند\n" +
-                "- dependency array رفتار اجرا را کنترل می‌کند"
+        "explanation": "• useEffect مخصوص side effects طراحی شده است\n" +
+            "- بعد از render اجرا می‌شود\n" +
+            "- می‌تواند cleanup function برگرداند\n" +
+            "- dependency array رفتار اجرا را کنترل می‌کند"
     },
     {
         "id": 36,
@@ -580,10 +580,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation": "• React چندین setState را در یک re-render گروه‌بندی می‌کند\n" +
-                "- در React 18 این batching برای همه جا فعال است\n" +
-                "- performance را بهبود می‌بخشد\n" +
-                "- می‌توانید با flushSync batching را غیرفعال کنید"
+        "explanation": "• React چندین setState را در یک re-render گروه‌بندی می‌کند\n" +
+            "- در React 18 این batching برای همه جا فعال است\n" +
+            "- performance را بهبود می‌بخشد\n" +
+            "- می‌توانید با flushSync batching را غیرفعال کنید"
     },
     {
         "id": 37,
@@ -596,10 +596,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation": "• کاهش تعداد re-renders باعث بهبود performance می‌شود\n" +
-                "- چندین update به یک update ترکیب می‌شوند\n" +
-                "- UI فقط یک بار به‌روز می‌شود\n" +
-                "- از renders غیرضروری جلوگیری می‌کند"
+        "explanation": "• کاهش تعداد re-renders باعث بهبود performance می‌شود\n" +
+            "- چندین update به یک update ترکیب می‌شوند\n" +
+            "- UI فقط یک بار به‌روز می‌شود\n" +
+            "- از renders غیرضروری جلوگیری می‌کند"
     },
     {
         "id": 38,
@@ -612,10 +612,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-            "explanation": "• React بعد از اتمام event handler، updates را flush می‌کند\n" +
-                "- در React 18، حتی در promises و timeouts هم batch می‌شود\n" +
-                "- این به معنی تاخیر نیست، بلکه optimization است\n" +
-                "- می‌توانید با flushSync آن را synchronous کنید"
+        "explanation": "• React بعد از اتمام event handler، updates را flush می‌کند\n" +
+            "- در React 18، حتی در promises و timeouts هم batch می‌شود\n" +
+            "- این به معنی تاخیر نیست، بلکه optimization است\n" +
+            "- می‌توانید با flushSync آن را synchronous کنید"
     },
     {
         "id": 39,
@@ -628,10 +628,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation": "• Render Phase: فراخوانی component functions و ساخت Virtual DOM\n" +
-                "- Commit Phase: اعمال تغییرات به DOM واقعی\n" +
-                "- Render می‌تواند متوقف شود، اما Commit باید synchronous باشد\n" +
-                "- هر دو توسط React مدیریت می‌شوند"
+        "explanation": "• Render Phase: فراخوانی component functions و ساخت Virtual DOM\n" +
+            "- Commit Phase: اعمال تغییرات به DOM واقعی\n" +
+            "- Render می‌تواند متوقف شود، اما Commit باید synchronous باشد\n" +
+            "- هر دو توسط React مدیریت می‌شوند"
     },
     {
         "id": 40,
@@ -644,10 +644,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-            "explanation": "• Render Phase می‌تواند pause و resume شود\n" +
-                "- اگر update با priority بالاتر بیاید، کار فعلی pause می‌شود\n" +
-                "- Fiber architecture این امکان را فراهم می‌کند\n" +
-                "- این ویژگی Concurrent React است"
+        "explanation": "• Render Phase می‌تواند pause و resume شود\n" +
+            "- اگر update با priority بالاتر بیاید، کار فعلی pause می‌شود\n" +
+            "- Fiber architecture این امکان را فراهم می‌کند\n" +
+            "- این ویژگی Concurrent React است"
     },
     {
         "id": 41,
@@ -660,10 +660,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-            "explanation": "• Commit Phase باید به صورت synchronous کامل شود\n" +
-                "- وقفه در این مرحله باعث inconsistency در UI می‌شود\n" +
-                "- تمام DOM updates در یک باره اعمال می‌شوند\n" +
-                "- بعد از آن Browser Paint اتفاق می‌افتد"
+        "explanation": "• Commit Phase باید به صورت synchronous کامل شود\n" +
+            "- وقفه در این مرحله باعث inconsistency در UI می‌شود\n" +
+            "- تمام DOM updates در یک باره اعمال می‌شوند\n" +
+            "- بعد از آن Browser Paint اتفاق می‌افتد"
     },
     {
         "id": 42,
@@ -676,10 +676,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation": "• استفاده از کامپوننت در JSX باعث ایجاد instance می‌شود\n" +
-                "- هر بار که <Component /> می‌نویسید، instance جدید ساخته می‌شود\n" +
-                "- import کردن فقط تعریف component را می‌آورد\n" +
-                "- instance زمانی ایجاد می‌شود که کامپوننت render شود"
+        "explanation": "• استفاده از کامپوننت در JSX باعث ایجاد instance می‌شود\n" +
+            "- هر بار که <Component /> می‌نویسید، instance جدید ساخته می‌شود\n" +
+            "- import کردن فقط تعریف component را می‌آورد\n" +
+            "- instance زمانی ایجاد می‌شود که کامپوننت render شود"
     },
     {
         "id": 43,
@@ -692,10 +692,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-            "explanation": "• هر استفاده از کامپوننت یک instance مجزا ایجاد می‌کند\n" +
-                "- هر instance state و props مستقل دارد\n" +
-                "- تغییر یک instance روی دیگری تاثیر ندارد\n" +
-                "- این امکان reusability را فراهم می‌کند"
+        "explanation": "• هر استفاده از کامپوننت یک instance مجزا ایجاد می‌کند\n" +
+            "- هر instance state و props مستقل دارد\n" +
+            "- تغییر یک instance روی دیگری تاثیر ندارد\n" +
+            "- این امکان reusability را فراهم می‌کند"
     },
     {
         "id": 44,
@@ -708,10 +708,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-            "explanation": "• هر instance state و props مستقل دارد\n" +
-                "- تغییر state یک instance روی دیگری تاثیر ندارد\n" +
-                "- props از والد به هر instance جداگانه پاس داده می‌شود\n" +
-                "- این یکی از اصول component-based architecture است"
+        "explanation": "• هر instance state و props مستقل دارد\n" +
+            "- تغییر state یک instance روی دیگری تاثیر ندارد\n" +
+            "- props از والد به هر instance جداگانه پاس داده می‌شود\n" +
+            "- این یکی از اصول component-based architecture است"
     },
     {
         "id": 45,
@@ -724,10 +724,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation": "• unmount شدن باعث destroy شدن instance می‌شود\n" +
-                "- تمام state از بین می‌رود\n" +
-                "- cleanup functions در useEffect اجرا می‌شوند\n" +
-                "- DOM elements مرتبط هم حذف می‌شوند"
+        "explanation": "• unmount شدن باعث destroy شدن instance می‌شود\n" +
+            "- تمام state از بین می‌رود\n" +
+            "- cleanup functions در useEffect اجرا می‌شوند\n" +
+            "- DOM elements مرتبط هم حذف می‌شوند"
     },
     {
         "id": 46,
@@ -740,10 +740,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation": "• React Element یک object توضیح‌دهنده است\n" +
-                "- Component Instance نمونه واقعی component با state و lifecycle است\n" +
-                "- Element ساده‌تر است و فقط اطلاعات ساختاری دارد\n" +
-                "- Instance از Element ساخته می‌شود"
+        "explanation": "• React Element یک object توضیح‌دهنده است\n" +
+            "- Component Instance نمونه واقعی component با state و lifecycle است\n" +
+            "- Element ساده‌تر است و فقط اطلاعات ساختاری دارد\n" +
+            "- Instance از Element ساخته می‌شود"
     },
     {
         "id": 47,
@@ -756,10 +756,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation": "• React Elements immutable هستند\n" +
-                "- بعد از ساخته شدن نمی‌توانید آن‌ها را تغییر دهید\n" +
-                "- برای تغییر باید element جدید بسازید\n" +
-                "- این رفتار به predictability کمک می‌کند"
+        "explanation": "• React Elements immutable هستند\n" +
+            "- بعد از ساخته شدن نمی‌توانید آن‌ها را تغییر دهید\n" +
+            "- برای تغییر باید element جدید بسازید\n" +
+            "- این رفتار به predictability کمک می‌کند"
     },
     {
         "id": 48,
@@ -772,10 +772,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-            "explanation": "• JSX به React.createElement تبدیل می‌شود\n" +
-                "- می‌توانید مستقیما React.createElement صدا بزنید\n" +
-                "- JSX syntax sugar برای ساخت elements است\n" +
-                "- Babel یا TypeScript JSX را transpile می‌کنند"
+        "explanation": "• JSX به React.createElement تبدیل می‌شود\n" +
+            "- می‌توانید مستقیما React.createElement صدا بزنید\n" +
+            "- JSX syntax sugar برای ساخت elements است\n" +
+            "- Babel یا TypeScript JSX را transpile می‌کنند"
     },
     {
         "id": 49,
@@ -788,10 +788,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation": "• در Commit Phase، React به DOM می‌نویسد\n" +
-                "- React Elements به DOM API calls تبدیل می‌شوند\n" +
-                "- مثلا document.createElement برای ساخت node استفاده می‌شود\n" +
-                "- این فرآیند توسط React DOM انجام می‌شود"
+        "explanation": "• در Commit Phase، React به DOM می‌نویسد\n" +
+            "- React Elements به DOM API calls تبدیل می‌شوند\n" +
+            "- مثلا document.createElement برای ساخت node استفاده می‌شود\n" +
+            "- این فرآیند توسط React DOM انجام می‌شود"
     },
     {
         "id": 50,
@@ -804,10 +804,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation": "• React Element شامل type (نوع کامپوننت یا tag)، props و children است\n" +
-                "- هیچ state یا lifecycle method ندارد\n" +
-                "- فقط یک توضیح ساده از UI است\n" +
-                "- مثل یک نقشه برای ساخت UI عمل می‌کند"
+        "explanation": "• React Element شامل type (نوع کامپوننت یا tag)، props و children است\n" +
+            "- هیچ state یا lifecycle method ندارد\n" +
+            "- فقط یک توضیح ساده از UI است\n" +
+            "- مثل یک نقشه برای ساخت UI عمل می‌کند"
     },
     {
         "id": 51,
@@ -820,10 +820,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-            "explanation": "• در هر render، elements جدید ساخته می‌شوند\n" +
-                "- immutability این رفتار را الزامی می‌کند\n" +
-                "- اما React از Reconciliation برای optimize کردن استفاده می‌کند\n" +
-                "- component instances ممکن است reuse شوند"
+        "explanation": "• در هر render، elements جدید ساخته می‌شوند\n" +
+            "- immutability این رفتار را الزامی می‌کند\n" +
+            "- اما React از Reconciliation برای optimize کردن استفاده می‌کند\n" +
+            "- component instances ممکن است reuse شوند"
     },
 //     {
 //         "id": 52,
@@ -899,162 +899,214 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 0,
 //         "points": 20
 //     },
-//     {
-//         "id": 58,
-//         "question": "How does Fiber Tree differ from Virtual DOM?",
-//         "options": [
-//             "Fiber is React&apos;s internal structure, Virtual DOM is concept",
-//             "Fiber and Virtual DOM are identical terms",
-//             "Fiber is for class components, Virtual DOM for functions",
-//             "Fiber is deprecated, Virtual DOM is modern approach"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
-//     {
-//         "id": 59,
-//         "question": "Does React create new Fiber Tree on every render?",
-//         "options": [
-//             "Yes, completely new tree on every render",
-//             "No, React updates existing Fiber Tree in place",
-//             "Only on initial mount is Fiber Tree created",
-//             "Only when state changes is new tree created"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 60,
-//         "question": "What is the purpose of Reconciliation in React?",
-//         "options": [
-//             "To determine minimal DOM updates needed efficiently",
-//             "To resolve conflicts in concurrent state updates",
-//             "To reconcile differences between props and state",
-//             "To fix bugs in component render logic"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 61,
-//         "question": "What algorithm does React use for Reconciliation?",
-//         "options": [
-//             "Depth-first search through entire component tree",
-//             "Breadth-first search comparing sibling components",
-//             "Diffing algorithm comparing old and new trees",
-//             "Sorting algorithm prioritizing component updates"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 62,
-//         "question": "How does React optimize Reconciliation performance?",
-//         "options": [
-//             "React compares all components on every render",
-//             "React uses keys and component types for optimization",
-//             "React skips reconciliation in production mode",
-//             "React only reconciles components with state"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 63,
-//         "question": "What happens if Reconciliation finds no differences?",
-//         "options": [
-//             "React skips Commit Phase entirely for component",
-//             "React still commits changes to ensure consistency",
-//             "React discards both old and new trees",
-//             "React forces re-render to verify correctness"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
-//     {
-//         "id": 64,
-//         "question": "Can React reuse DOM nodes during Reconciliation?",
-//         "options": [
-//             "No, React always creates new DOM nodes",
-//             "Yes, React updates existing DOM nodes when possible",
-//             "Only for text nodes, not element nodes",
-//             "Only during initial mount phase rendering"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 65,
-//         "question": "Why does React split rendering into units of work?",
-//         "options": [
-//             "To enable pausing, prioritizing, and resuming rendering",
-//             "To split work across multiple CPU cores",
-//             "To reduce memory usage during rendering",
-//             "To improve compatibility with older browsers"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 66,
-//         "question": "What is a unit of work in React&apos;s rendering?",
-//         "options": [
-//             "Processing one component or fiber node",
-//             "Rendering entire component tree at once",
-//             "Executing all event handlers in queue",
-//             "Updating all DOM nodes simultaneously"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 67,
-//         "question": "Can React throw away work during rendering?",
-//         "options": [
-//             "No, all started work must complete eventually",
-//             "Yes, if higher priority work arrives",
-//             "Only if errors occur during rendering",
-//             "Only during initial mount can work discard"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 68,
-//         "question": "How does React prioritize rendering work?",
-//         "options": [
-//             "All renders have equal priority always",
-//             "User interactions have higher priority than background",
-//             "Components higher in tree have higher priority",
-//             "Smaller components always render first"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 69,
-//         "question": "What determines whether DOM updates are necessary?",
-//         "options": [
-//             "React always updates DOM on every render",
-//             "Reconciliation determines if DOM updates needed",
-//             "Developer must specify when to update DOM",
-//             "Browser decides when DOM updates occur"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 70,
-//         "question": "Why is Commit Phase synchronous in React?",
-//         "options": [
-//             "To prevent visual inconsistencies in UI updates",
-//             "To improve performance by batching commits",
-//             "To allow interrupting commits for urgent work",
-//             "To enable concurrent DOM updates across components"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
+    {
+        "id": 58,
+        "question": "How does Fiber Tree differ from Virtual DOM?",
+        "options": [
+            "Fiber is React&apos;s internal structure, Virtual DOM is concept",
+            "Fiber and Virtual DOM are identical terms",
+            "Fiber is for class components, Virtual DOM for functions",
+            "Fiber is deprecated, Virtual DOM is modern approach"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• Fiber Tree پیاده‌سازی واقعی Virtual DOM در React است\n" +
+            "- Virtual DOM یک مفهوم کلی است\n" +
+            "- Fiber امکانات بیشتری مثل prioritization دارد\n" +
+            "- Fiber از React 16 به بعد استفاده می‌شود"
+    },
+    {
+        "id": 59,
+        "question": "Does React create new Fiber Tree on every render?",
+        "options": [
+            "Yes, completely new tree on every render",
+            "No, React updates existing Fiber Tree in place",
+            "Only on initial mount is Fiber Tree created",
+            "Only when state changes is new tree created"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• React Fiber Tree موجود را update می‌کند\n" +
+            "- work-in-progress tree ساخته می‌شود و با current tree swap می‌شود\n" +
+            "- این کار memory efficient است\n" +
+            "- Fiber nodes می‌توانند reuse شوند"
+    },
+    {
+        "id": 60,
+        "question": "What is the purpose of Reconciliation in React?",
+        "options": [
+            "To determine minimal DOM updates needed efficiently",
+            "To resolve conflicts in concurrent state updates",
+            "To reconcile differences between props and state",
+            "To fix bugs in component render logic"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":"• Reconciliation کمترین تغییرات DOM را تعیین می‌کند\n" +
+            "- Virtual DOM قدیم و جدید را مقایسه می‌کند\n" +
+            "- از diffing algorithm استفاده می‌کند\n" +
+            "- performance را با کاهش DOM operations بهبود می‌دهد"
+    },
+    {
+        "id": 61,
+        "question": "What algorithm does React use for Reconciliation?",
+        "options": [
+            "Depth-first search through entire component tree",
+            "Breadth-first search comparing sibling components",
+            "Diffing algorithm comparing old and new trees",
+            "Sorting algorithm prioritizing component updates"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• React از diffing algorithm استفاده می‌کند\n" +
+            "- مقایسه level by level انجام می‌شود\n" +
+            "- از heuristics برای O(n) complexity استفاده می‌کند\n" +
+            "- keys به بهبود این الگوریتم کمک می‌کنند"
+    },
+    {
+        "id": 62,
+        "question": "How does React optimize Reconciliation performance?",
+        "options": [
+            "React compares all components on every render",
+            "React uses keys and component types for optimization",
+            "React skips reconciliation in production mode",
+            "React only reconciles components with state"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• keys به React کمک می‌کنند elements را track کنند\n" +
+            "- component type تغییر کند، subtree کامل replace می‌شود\n" +
+            "- React فرض می‌کند elements با type مختلف، UI متفاوت دارند\n" +
+            "- shouldComponentUpdate و React.memo برای optimization اضافی"
+    },
+    {
+        "id": 63,
+        "question": "What happens if Reconciliation finds no differences?",
+        "options": [
+            "React skips Commit Phase entirely for component",
+            "React still commits changes to ensure consistency",
+            "React discards both old and new trees",
+            "React forces re-render to verify correctness"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• اگر تفاوتی نباشد، Commit Phase skip می‌شود\n" +
+            "- هیچ DOM update انجام نمی‌شود\n" +
+            "- این optimization مهمی است\n" +
+            "- React.memo می‌تواند از render هم جلوگیری کند"
+    },
+    {
+        "id": 64,
+        "question": "Can React reuse DOM nodes during Reconciliation?",
+        "options": [
+            "No, React always creates new DOM nodes",
+            "Yes, React updates existing DOM nodes when possible",
+            "Only for text nodes, not element nodes",
+            "Only during initial mount phase rendering"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• React تا جای ممکن DOM nodes موجود را reuse می‌کند\n" +
+            "- فقط attributes و content update می‌شود\n" +
+            "- create و destroy کردن node هزینه‌بر است\n" +
+            "- این یکی از دلایل سرعت React است"
+    },
+    {
+        "id": 65,
+        "question": "Why does React split rendering into units of work?",
+        "options": [
+            "To enable pausing, prioritizing and resuming rendering",
+            "To reduce memory usage during rendering phase time",
+            "To improve compatibility with older browsers",
+            "To split work across multiple CPU cores",
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• unit of work امکان pause و resume را می‌دهد\n" +
+            "- React می‌تواند کارهای مهم‌تر را prioritize کند\n" +
+            "- از blocking main thread جلوگیری می‌کند\n" +
+            "- این ویژگی Concurrent React است"
+    },
+    {
+        "id": 66,
+        "question": "What is a unit of work in React&apos;s rendering?",
+        "options": [
+            "Processing one component or fiber node",
+            "Rendering entire component tree at once",
+            "Executing all event handlers in queue",
+            "Updating all DOM nodes simultaneously"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• هر unit معمولا یک component یا fiber node است\n" +
+            "- React می‌تواند بعد از هر unit کار را pause کند\n" +
+            "- این امکان interruptible rendering را فراهم می‌کند\n" +
+            "- scheduler تصمیم می‌گیرد چه زمانی کار ادامه یابد"
+    },
+    {
+        "id": 67,
+        "question": "Can React throw away work during rendering?",
+        "options": [
+            "No, all started work must complete eventually",
+            "Yes, if higher priority work arrives",
+            "Only if errors occur during rendering",
+            "Only during initial mount can work discard"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• اگر update با priority بالاتر بیاید، کار فعلی discard می‌شود\n" +
+            "- React کار جدید را با priority بالاتر شروع می‌کند\n" +
+            "- این از wasted work جلوگیری می‌کند\n" +
+            "- Concurrent React این قابلیت را دارد"
+    },
+    {
+        "id": 68,
+        "question": "How does React prioritize rendering work?",
+        "options": [
+            "All renders have equal priority always",
+            "User interactions have higher priority than background",
+            "Components higher in tree have higher priority",
+            "Smaller components always render first"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• user interactions (clicks, typing) priority بالاتر دارند\n" +
+            "- data fetching و animations priority پایین‌تر دارند\n" +
+            "- useTransition برای mark کردن low-priority updates\n" +
+            "- React خودکار بعضی priorities را تشخیص می‌دهد"
+    },
+    {
+        "id": 69,
+        "question": "What determines whether DOM updates are necessary?",
+        "options": [
+            "React always updates DOM on every render",
+            "Reconciliation determines if DOM updates needed",
+            "Developer must specify when to update DOM",
+            "Browser decides when DOM updates occur"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• Reconciliation تصمیم می‌گیرد\n" +
+            "- Virtual DOM قدیم و جدید مقایسه می‌شوند\n" +
+            "- اگر تفاوتی نباشد، DOM update نمی‌شود\n" +
+            "- این optimization باعث بهبود performance می‌شود"
+    },
+    {
+        "id": 70,
+        "question": "Why is Commit Phase synchronous in React?",
+        "options": [
+            "To prevent visual inconsistencies in UI updates",
+            "To improve performance by batching commits",
+            "To allow interrupting commits for urgent work",
+            "To enable concurrent DOM updates across components"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• باید تمام تغییرات یکجا اعمال شوند\n" +
+            "- وقفه باعث inconsistent UI می‌شود\n" +
+            "- کاربر نباید UI نیمه‌کاره ببیند\n" +
+            "- بعد از commit، Browser Paint یکباره اتفاق می‌افتد"
+    },
 //     {
 //         "id": 71,
 //         "question": "What is Render Logic NOT allowed to do?",
@@ -1065,7 +1117,8 @@ export const mockQuestions: Question[] = [
 //             "Call pure functions for computations"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 72,
@@ -1077,7 +1130,8 @@ export const mockQuestions: Question[] = [
 //             "Pure logic reduces component file size"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 73,
@@ -1089,7 +1143,8 @@ export const mockQuestions: Question[] = [
 //             "In component constructor or initialization"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 74,
@@ -1101,7 +1156,8 @@ export const mockQuestions: Question[] = [
 //             "Handlers cannot access component state"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 75,
@@ -1113,7 +1169,8 @@ export const mockQuestions: Question[] = [
 //             "After component unmounts from tree"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 76,
@@ -1125,7 +1182,8 @@ export const mockQuestions: Question[] = [
 //             "Hooks prevent all bugs in side effects"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 77,
@@ -1137,7 +1195,8 @@ export const mockQuestions: Question[] = [
 //             "To prevent component from re-rendering unnecessarily"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 78,
@@ -1149,7 +1208,8 @@ export const mockQuestions: Question[] = [
 //             "By storing state in more efficient format"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 79,
@@ -1161,7 +1221,8 @@ export const mockQuestions: Question[] = [
 //             "No, batching is deprecated in modern React"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 80,
@@ -1173,7 +1234,8 @@ export const mockQuestions: Question[] = [
 //             "React throws error for multiple calls"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 81,
@@ -1185,7 +1247,8 @@ export const mockQuestions: Question[] = [
 //             "No, batching cannot be interrupted ever"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 82,
@@ -1197,7 +1260,8 @@ export const mockQuestions: Question[] = [
 //             "Commit Phase, Browser Paint, Render Phase"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 83,
@@ -1209,7 +1273,8 @@ export const mockQuestions: Question[] = [
 //             "None, components are called before phases start"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 84,
@@ -1221,7 +1286,8 @@ export const mockQuestions: Question[] = [
 //             "None, DOM changes happen outside phases"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 85,
@@ -1233,7 +1299,8 @@ export const mockQuestions: Question[] = [
 //             "Only in production mode is this possible"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 86,
@@ -1245,7 +1312,8 @@ export const mockQuestions: Question[] = [
 //             "No information flows between them ever"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 87,
@@ -1257,7 +1325,8 @@ export const mockQuestions: Question[] = [
 //             "No information flows between them ever"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 42,
@@ -1269,7 +1338,8 @@ export const mockQuestions: Question[] = [
 //             "They require special JSX syntax"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 45,
@@ -1281,7 +1351,8 @@ export const mockQuestions: Question[] = [
 //             "useMemo"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 46,
@@ -1293,7 +1364,8 @@ export const mockQuestions: Question[] = [
 //             "Keeping state in local variables"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 48,
@@ -1305,7 +1377,8 @@ export const mockQuestions: Question[] = [
 //             "Creates new component instances automatically"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 50,
@@ -1317,7 +1390,8 @@ export const mockQuestions: Question[] = [
 //             "Passing more props through components"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 51,
@@ -1329,7 +1403,8 @@ export const mockQuestions: Question[] = [
 //             "They perform identical functions"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 52,
@@ -1341,7 +1416,8 @@ export const mockQuestions: Question[] = [
 //             "Splitting components into smaller pieces"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 53,
@@ -1353,7 +1429,8 @@ export const mockQuestions: Question[] = [
 //             "To pass data between list components"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 54,
@@ -1365,7 +1442,8 @@ export const mockQuestions: Question[] = [
 //             "useReducer"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 55,
@@ -1377,7 +1455,8 @@ export const mockQuestions: Question[] = [
 //             "Add additional props to the component"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 56,
@@ -1389,7 +1468,8 @@ export const mockQuestions: Question[] = [
 //             "It prevents memory issues in applications"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 57,
@@ -1401,7 +1481,8 @@ export const mockQuestions: Question[] = [
 //             "When the component uses internal state"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 60,
@@ -1413,7 +1494,8 @@ export const mockQuestions: Question[] = [
 //             "Total render plus lifecycle time"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 62,
@@ -1425,7 +1507,8 @@ export const mockQuestions: Question[] = [
 //             "Adding more useEffect hooks"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 63,
@@ -1437,7 +1520,8 @@ export const mockQuestions: Question[] = [
 //             "useMemo"
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 64,
@@ -1449,7 +1533,8 @@ export const mockQuestions: Question[] = [
 //             "Converting all functions to class components"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 65,
@@ -1461,7 +1546,8 @@ export const mockQuestions: Question[] = [
 //             "When state is managed internally"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 66,
@@ -1473,7 +1559,8 @@ export const mockQuestions: Question[] = [
 //             "useMemo"
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 67,
@@ -1485,7 +1572,8 @@ export const mockQuestions: Question[] = [
 //             "Memory leaks exclusively in components"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 68,
@@ -1497,7 +1585,8 @@ export const mockQuestions: Question[] = [
 //             "Completely replacing useMemo functionality"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 69,
@@ -1509,7 +1598,8 @@ export const mockQuestions: Question[] = [
 //             "Using additional useState hooks",
 //         ],
 //         "correctOption":1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 70,
@@ -1521,7 +1611,8 @@ export const mockQuestions: Question[] = [
 //             "Code style and formatting errors"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 71,
@@ -1533,7 +1624,8 @@ export const mockQuestions: Question[] = [
 //             "useMemo"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 72,
@@ -1545,7 +1637,8 @@ export const mockQuestions: Question[] = [
 //             "Preventing wasted renders and reducing bundle size"
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 73,
@@ -1557,7 +1650,8 @@ export const mockQuestions: Question[] = [
 //             "Minifying JavaScript bundles"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 74,
@@ -1569,7 +1663,8 @@ export const mockQuestions: Question[] = [
 //             "A render triggered by legitimate state or prop changes"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 75,
@@ -1581,7 +1676,8 @@ export const mockQuestions: Question[] = [
 //             "Only when useEffect dependencies are updated in the component"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 76,
@@ -1593,7 +1689,8 @@ export const mockQuestions: Question[] = [
 //             "No consumer re-renders unless explicitly triggered by developer"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 77,
@@ -1605,7 +1702,8 @@ export const mockQuestions: Question[] = [
 //             "const value = useState({ user, setUser }); // State approach"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 78,
@@ -1617,7 +1715,8 @@ export const mockQuestions: Question[] = [
 //             "No, prop changes occur because the parent component re-rendered"
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 79,
@@ -1629,7 +1728,8 @@ export const mockQuestions: Question[] = [
 //             "Running useEffect hooks inside the component function"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 80,
@@ -1641,7 +1741,8 @@ export const mockQuestions: Question[] = [
 //             "Only when state changes occur, not when prop changes"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 81,
@@ -1653,7 +1754,8 @@ export const mockQuestions: Question[] = [
 //             "Any render triggered by parent updates"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 82,
@@ -1665,7 +1767,8 @@ export const mockQuestions: Question[] = [
 //             "To prevent all future component renders"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 83,
@@ -1677,7 +1780,8 @@ export const mockQuestions: Question[] = [
 //             "When components are functions instead of class components"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 84,
@@ -1689,7 +1793,8 @@ export const mockQuestions: Question[] = [
 //             "React.memo automatically deep-memoizes all props and state deeply"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 85,
@@ -1701,7 +1806,8 @@ export const mockQuestions: Question[] = [
 //             "useMemo caches component props, useCallback caches state"
 //         ],
 //         "correctOption":2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 86,
@@ -1713,7 +1819,8 @@ export const mockQuestions: Question[] = [
 //             "React.memo works with primitives, useMemo/useCallback work with objects"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 87,
@@ -1725,7 +1832,8 @@ export const mockQuestions: Question[] = [
 //             "It determines when the memoized value should be recalculated"
 //         ],
 //         "correctOption":3,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 88,
@@ -1737,7 +1845,8 @@ export const mockQuestions: Question[] = [
 //             "Both only work with primitive values and ignore objects or arrays"
 //         ],
 //         "correctOption":1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 89,
@@ -1749,7 +1858,8 @@ export const mockQuestions: Question[] = [
 //             "The component will never re-render again"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 90,
@@ -1761,7 +1871,8 @@ export const mockQuestions: Question[] = [
 //             "React.memo higher-order component wrapper"
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 91,
@@ -1773,7 +1884,8 @@ export const mockQuestions: Question[] = [
 //             "React.memo higher-order component wrapper"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 92,
@@ -1785,7 +1897,8 @@ export const mockQuestions: Question[] = [
 //             "useCallback hook for memoizing function references"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 93,
@@ -1797,7 +1910,8 @@ export const mockQuestions: Question[] = [
 //             "useEffect to control prop updates in the parent"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 94,
@@ -1809,7 +1923,8 @@ export const mockQuestions: Question[] = [
 //             "useEffect storing computed value in state for persistence"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 95,
@@ -1821,7 +1936,8 @@ export const mockQuestions: Question[] = [
 //             "useMemo to memoize the value with dependencies"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 96,
@@ -1833,7 +1949,8 @@ export const mockQuestions: Question[] = [
 //             "useCallback recreates arrow functions every render automatically"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 97,
@@ -1845,7 +1962,8 @@ export const mockQuestions: Question[] = [
 //             "Both run after rendering, asynchronously in the next cycle"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 98,
@@ -1857,7 +1975,8 @@ export const mockQuestions: Question[] = [
 //             "useMemo memoizes computed values, useEffect handles side effects"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 99,
@@ -1869,7 +1988,8 @@ export const mockQuestions: Question[] = [
 //             "Both hooks return cleanup functions for memory management"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 100,
@@ -1881,7 +2001,8 @@ export const mockQuestions: Question[] = [
 //             "Indirect calls only work properly in class-based components"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 129,
@@ -1893,7 +2014,8 @@ export const mockQuestions: Question[] = [
 //             "Inside event handler functions only"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 131,
@@ -1905,7 +2027,8 @@ export const mockQuestions: Question[] = [
 //             "React compares Hooks by their return values"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 1351,
@@ -1917,7 +2040,8 @@ export const mockQuestions: Question[] = [
 //             "A function exported from a hooks file"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 1352,
@@ -1929,7 +2053,8 @@ export const mockQuestions: Question[] = [
 //             "Never, use built-in hooks only"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 1353,
@@ -1941,7 +2066,8 @@ export const mockQuestions: Question[] = [
 //             "No specific naming convention required"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 1354,
@@ -1953,7 +2079,8 @@ export const mockQuestions: Question[] = [
 //             "Only in Class Components"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 1355,
@@ -1965,7 +2092,8 @@ export const mockQuestions: Question[] = [
 //             "Use error boundaries inside the hook"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 1356,
@@ -1977,7 +2105,8 @@ export const mockQuestions: Question[] = [
 //             "Nothing, it should mutate props directly"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 1357,
@@ -1989,7 +2118,8 @@ export const mockQuestions: Question[] = [
 //             "Only with special configuration"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 1358,
@@ -2001,7 +2131,8 @@ export const mockQuestions: Question[] = [
 //             "Use 'any' type for all hooks"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 1359,
@@ -2013,7 +2144,8 @@ export const mockQuestions: Question[] = [
 //             "Call cleanup manually from component"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 1360,
@@ -2025,7 +2157,8 @@ export const mockQuestions: Question[] = [
 //             "Only with TypeScript enabled"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 132,
@@ -2037,7 +2170,8 @@ export const mockQuestions: Question[] = [
 //             "It performs deep comparison of objects"
 //         ],
 //         correctOption: 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 133,
@@ -2049,7 +2183,8 @@ export const mockQuestions: Question[] = [
 //             "useCallback works with props, useMemo works with state"
 //         ],
 //         correctOption: 0,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 134,
@@ -2061,7 +2196,8 @@ export const mockQuestions: Question[] = [
 //             "Setters only work with primitive values"
 //         ],
 //         correctOption: 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 135,
@@ -2073,7 +2209,8 @@ export const mockQuestions: Question[] = [
 //             "It works with any reducer function"
 //         ],
 //         correctOption: 0,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 136,
@@ -2085,7 +2222,8 @@ export const mockQuestions: Question[] = [
 //             "They only track primitive dependencies"
 //         ],
 //         correctOption: 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 137,
@@ -2097,7 +2235,8 @@ export const mockQuestions: Question[] = [
 //             "The effect runs on every render"
 //         ],
 //         correctOption: 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 138,
@@ -2109,7 +2248,8 @@ export const mockQuestions: Question[] = [
 //             "Props can change causing stale closures"
 //         ],
 //         correctOption: 3,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 139,
@@ -2121,7 +2261,8 @@ export const mockQuestions: Question[] = [
 //             "Dependency arrays only need to track function calls"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 140,
@@ -2133,7 +2274,8 @@ export const mockQuestions: Question[] = [
 //             "useMemo cannot be used properly with Context values"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 141,
@@ -2145,7 +2287,8 @@ export const mockQuestions: Question[] = [
 //             "Avoid using React.memo on any consumer components"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 142,
@@ -2157,7 +2300,8 @@ export const mockQuestions: Question[] = [
 //             "Split context into multiple focused smaller providers"
 //         ],
 //         "correctOption":3,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 143,
@@ -2169,7 +2313,8 @@ export const mockQuestions: Question[] = [
 //             "Converts all consumers to use useMemo"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 144,
@@ -2181,7 +2326,8 @@ export const mockQuestions: Question[] = [
 //             "Converts complex objects to primitive types"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 145,
@@ -2193,7 +2339,8 @@ export const mockQuestions: Question[] = [
 //             "Merges multiple context values together for efficiency"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 146,
@@ -2205,7 +2352,8 @@ export const mockQuestions: Question[] = [
 //             "Context values automatically become static primitive types"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 147,
@@ -2217,7 +2365,8 @@ export const mockQuestions: Question[] = [
 //             "Objects are automatically converted to primitives "
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 148,
@@ -2229,7 +2378,8 @@ export const mockQuestions: Question[] = [
 //             "Convert all objects to JSON strings before passing"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 149,
@@ -2241,7 +2391,8 @@ export const mockQuestions: Question[] = [
 //             "Uses shallow comparison for context updates instead"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 150,
@@ -2253,7 +2404,8 @@ export const mockQuestions: Question[] = [
 //             "useState for values, class consumers, single global contexts"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 151,
@@ -2265,7 +2417,8 @@ export const mockQuestions: Question[] = [
 //             "Total amount of network requests per page load"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 153,
@@ -2277,7 +2430,8 @@ export const mockQuestions: Question[] = [
 //             "Makes applications load slower for users"
 //         ],
 //         "correctOption":3,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 154,
@@ -2289,7 +2443,8 @@ export const mockQuestions: Question[] = [
 //             "Reduce total number of React hooks used throughout"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 155,
@@ -2301,7 +2456,8 @@ export const mockQuestions: Question[] = [
 //             "React.memo combined with stable props for consistency"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 156,
@@ -2313,7 +2469,8 @@ export const mockQuestions: Question[] = [
 //             "Each page loads as a separate bundle"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 157,
@@ -2325,7 +2482,8 @@ export const mockQuestions: Question[] = [
 //             "Optimizes performance without requiring additional configuration"
 //         ],
 //         "correctOption":0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 158,
@@ -2624,7 +2782,8 @@ export const mockQuestions: Question[] = [
 //             "React serializes context values for comparison"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 183,
@@ -2636,7 +2795,8 @@ export const mockQuestions: Question[] = [
 //             "A closure created when multiple effects overlap"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 184,
@@ -2648,7 +2808,8 @@ export const mockQuestions: Question[] = [
 //             "Objects cause memory leaks in React&apos;s fiber architecture"
 //         ],
 //         "correctOption":2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 185,
@@ -2660,7 +2821,8 @@ export const mockQuestions: Question[] = [
 //             "Call the function conditionally to avoid dependencies"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 186,
@@ -2672,7 +2834,8 @@ export const mockQuestions: Question[] = [
 //             "Convert them to static methods in React.memo"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 187,
@@ -2684,7 +2847,8 @@ export const mockQuestions: Question[] = [
 //             "Convert objects to primitive values at runtime"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 188,
@@ -2696,7 +2860,8 @@ export const mockQuestions: Question[] = [
 //             "Move or memoize objects to keep references stable"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 189,
@@ -2708,7 +2873,8 @@ export const mockQuestions: Question[] = [
 //             "Wrap them all in useMemo for shorter dependency arrays"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 190,
@@ -2720,7 +2886,8 @@ export const mockQuestions: Question[] = [
 //             "It bypasses React&apos;s reconciliation algorithm safely"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 191,
@@ -2732,7 +2899,8 @@ export const mockQuestions: Question[] = [
 //             "useEffect blocks rendering until completion"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 192,
@@ -2744,7 +2912,8 @@ export const mockQuestions: Question[] = [
 //             "Subscribing to global events with cleanup"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 193,
@@ -2756,7 +2925,8 @@ export const mockQuestions: Question[] = [
 //             "Use context providers to automatically sync states"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //{
 //     "id": 1435,
@@ -2768,7 +2938,8 @@ export const mockQuestions: Question[] = [
 //         "Removing state from components"
 //     ],
 //     "correctOption": 0,
-//     "points": 10
+//     "points": 10,
+//                 "explanation":""
 // },
 // {
 //     "id": 1436,
@@ -2780,7 +2951,8 @@ export const mockQuestions: Question[] = [
 //         "Only for performance optimization"
 //     ],
 //     "correctOption": 1,
-//     "points": 20
+//     "points": 20,
+//                 "explanation":""
 // },
 // {
 //     "id": 1437,
@@ -2792,7 +2964,8 @@ export const mockQuestions: Question[] = [
 //         "State stored in localStorage"
 //     ],
 //     "correctOption": 1,
-//     "points": 20
+//     "points": 20,
+//                 "explanation":""
 // },
 // {
 //     "id": 1438,
@@ -2804,7 +2977,8 @@ export const mockQuestions: Question[] = [
 //         "It increases bundle size significantly"
 //     ],
 //     "correctOption": 1,
-//     "points": 30
+//     "points": 30,
+//                 "explanation":""
 // },
 // {
 //     "id": 1439,
@@ -2816,7 +2990,8 @@ export const mockQuestions: Question[] = [
 //         "Truth values must be boolean type"
 //     ],
 //     "correctOption": 2,
-//     "points": 20
+//     "points": 20,
+//                 "explanation":""
 // },
 // {
 //     "id": 1440,
@@ -2828,7 +3003,8 @@ export const mockQuestions: Question[] = [
 //         "Combining multiple states into one"
 //     ],
 //     "correctOption": 1,
-//     "points": 20
+//     "points": 20,
+//                 "explanation":""
 // },
 // {
 //     "id": 1441,
@@ -2840,7 +3016,8 @@ export const mockQuestions: Question[] = [
 //         "Only in Class Components"
 //     ],
 //     "correctOption": 1,
-//     "points": 30
+//     "points": 30,
+//                 "explanation":""
 // },
 // {
 //     "id": 1442,
@@ -2852,7 +3029,8 @@ export const mockQuestions: Question[] = [
 //         "Synchronizing state with server"
 //     ],
 //     "correctOption": 1,
-//     "points": 30
+//     "points": 30,
+//                 "explanation":""
 // },
 //     {
 //         "id": 195,
@@ -2864,7 +3042,8 @@ export const mockQuestions: Question[] = [
 //             "Closures only work with primitive values in JavaScript"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 197,
@@ -2876,7 +3055,8 @@ export const mockQuestions: Question[] = [
 //             "Avoid using closures in React components"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         id: 198,
@@ -3129,7 +3309,8 @@ export const mockQuestions: Question[] = [
 //             "Combine multiple reducers into one"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         id: 227,
@@ -3141,7 +3322,8 @@ export const mockQuestions: Question[] = [
 //             "To avoid using React components for state updates"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         id: 228,
@@ -3201,7 +3383,8 @@ export const mockQuestions: Question[] = [
 //             "To make the store update automatically without dispatch"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 235,
@@ -3213,7 +3396,8 @@ export const mockQuestions: Question[] = [
 //             "Inside the store configuration"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 236,
@@ -3225,7 +3409,8 @@ export const mockQuestions: Question[] = [
 //             "Handle async logic before dispatching actions"
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 237,
@@ -3237,7 +3422,8 @@ export const mockQuestions: Question[] = [
 //             "Component lifecycle methods"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 238,
@@ -3249,7 +3435,8 @@ export const mockQuestions: Question[] = [
 //             "Class-based component lifecycle methods"
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 239,
@@ -3261,7 +3448,8 @@ export const mockQuestions: Question[] = [
 //             "Reduces boilerplate by combining state, reducers, and actions"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 240,
@@ -3273,7 +3461,8 @@ export const mockQuestions: Question[] = [
 //             "Immer for state updates"
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 241,
