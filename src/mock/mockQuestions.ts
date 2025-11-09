@@ -1267,149 +1267,179 @@ export const mockQuestions: Question[] = [
                     "- state نهایی بعد از اعمال همه updates محاسبه می‌شود\n" +
                     "- می‌توان از functional updates برای اطمینان استفاده کرد"
     },
-//     {
-//         "id": 81,
-//         "question": "Can you force React to flush batched updates immediately?",
-//         "options": [
-//             "No, flushing is automatic and uncontrollable",
-//             "Yes, using flushSync from react-dom",
-//             "Yes, using forceUpdate on component",
-//             "No, batching cannot be interrupted ever"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 82,
-//         "question": "What is the order of phases in React&apos;s rendering?",
-//         "options": [
-//             "Commit Phase, Render Phase, Browser Paint",
-//             "Browser Paint, Render Phase, Commit Phase",
-//             "Render Phase, Commit Phase, Browser Paint",
-//             "Commit Phase, Browser Paint, Render Phase"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 83,
-//         "question": "Which phase is responsible for calling component functions?",
-//         "options": [
-//             "Commit Phase calls all component functions",
-//             "Browser Paint phase renders component functions",
-//             "Render Phase calls component functions to build tree",
-//             "None, components are called before phases start"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 84,
-//         "question": "Which phase is responsible for applying DOM changes?",
-//         "options": [
-//             "Render Phase applies all DOM changes",
-//             "Commit Phase applies calculated DOM changes",
-//             "Browser Paint applies DOM changes automatically",
-//             "None, DOM changes happen outside phases"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 85,
-//         "question": "Can components render without committing changes to DOM?",
-//         "options": [
-//             "Yes, if Reconciliation finds no differences",
-//             "No, render always causes DOM updates",
-//             "Only during initial mount can this happen",
-//             "Only in production mode is this possible"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 86,
-//         "question": "What information flows from Component Instance to React Element?",
-//         "options": [
-//             "Element provides props and children to instance",
-//             "Instance returns element describing what to render",
-//             "Both contain identical information always",
-//             "No information flows between them ever"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 87,
-//         "question": "What information flows from React Element to DOM Element?",
-//         "options": [
-//             "Element type, props, and children structure information",
-//             "DOM element sends events to React element",
-//             "State and lifecycle methods from React element",
-//             "No information flows between them ever"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 42,
-//         "question": "What is a common problem with global CSS in large applications?",
-//         "options": [
-//             "They cannot be used with server-side rendering",
-//             "They are not supported by modern browsers",
-//             "They may cause unintended style conflicts",
-//             "They require special JSX syntax"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 45,
-//         "question": "Which React Router hook is used to read URL query parameters?",
-//         "options": [
-//             "useState",
-//             "useEffect",
-//             "useSearchParams",
-//             "useMemo"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 46,
-//         "question": "Which approach maintains UI state after a browser refresh?",
-//         "options": [
-//             "Storing state in localStorage or URL",
-//             "Using useState exclusively for state",
-//             "Using React Context only for sharing",
-//             "Keeping state in local variables"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 48,
-//         "question": "What does React.memo() do?",
-//         "options": [
-//             "Caches expensive calculations for performance",
-//             "Prevents re-render when props haven't changed",
-//             "Stores component state in memory",
-//             "Creates new component instances automatically"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
+    {
+        "id": 81,
+        "question": "Can you force React to flush batched updates immediately?",
+        "options": [
+            "No, flushing is automatic and uncontrollable",
+            "Yes, using flushSync from react-dom",
+            "Yes, using forceUpdate on component",
+            "No, batching cannot be interrupted ever"
+        ],
+        "correctOption": 1,
+        "points": 30,
+                "explanation":"• با استفاده از flushSync از react-dom\n" +
+                    "- updates را synchronously اعمال می‌کند\n" +
+                    "- معمولا نیازی نیست و باید با احتیاط استفاده شود\n" +
+                    "- ممکن است performance را کاهش دهد"
+    },
+    {
+        "id": 82,
+        "question": "What is the order of phases in React&apos;s rendering?",
+        "options": [
+            "Commit Phase, Render Phase, Browser Paint",
+            "Browser Paint, Render Phase, Commit Phase",
+            "Render Phase, Commit Phase, Browser Paint",
+            "Commit Phase, Browser Paint, Render Phase"
+        ],
+        "correctOption": 2,
+        "points": 20,
+                "explanation":"• Render Phase: محاسبه Virtual DOM جدید\n" +
+                    "- Commit Phase: اعمال تغییرات به DOM\n" +
+                    "- Browser Paint: رسم pixels توسط مرورگر\n" +
+                    "- این ترتیب همیشه رعایت می‌شود"
+    },
+    {
+        "id": 83,
+        "question": "Which phase is responsible for calling component functions?",
+        "options": [
+            "Commit Phase calls all component functions",
+            "Browser Paint phase renders component functions",
+            "Render Phase calls component functions to build tree",
+            "None, components are called before phases start"
+        ],
+        "correctOption": 2,
+        "points": 20,
+                "explanation":"• Render Phase component functions را صدا می‌زند\n" +
+                    "- Virtual DOM tree ساخته می‌شود\n" +
+                    "- هیچ DOM update در این مرحله نیست\n" +
+                    "- می‌تواند چندین بار برای یک component اجرا شود"
+    },
+    {
+        "id": 84,
+        "question": "Which phase is responsible for applying DOM changes?",
+        "options": [
+            "Render Phase applies all DOM changes",
+            "Commit Phase applies calculated DOM changes",
+            "Browser Paint applies DOM changes automatically",
+            "None, DOM changes happen outside phases"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":"• Commit Phase تغییرات را به DOM اعمال می‌کند\n" +
+                    "- React DOM API calls را اجرا می‌کند\n" +
+                    "- این مرحله synchronous و غیرقابل وقفه است\n" +
+                    "- بعد از آن useEffect و useLayoutEffect اجرا می‌شوند"
+    },
+    {
+        "id": 85,
+        "question": "Can components render without committing changes to DOM?",
+        "options": [
+            "Yes, if Reconciliation finds no differences",
+            "No, render always causes DOM updates",
+            "Only during initial mount can this happen",
+            "Only in production mode is this possible"
+        ],
+        "correctOption": 0,
+        "points": 30,
+                "explanation":"• بله، اگر Reconciliation تفاوتی پیدا نکند\n" +
+                    "- Commit Phase skip می‌شود\n" +
+                    "- component render شد اما DOM update نشد\n" +
+                    "- این optimization مهمی است"
+    },
+    {
+        "id": 86,
+        "question": "What information flows from Component Instance to React Element?",
+        "options": [
+            "Element provides props and children to instance",
+            "Instance returns element describing what to render",
+            "Both contain identical information always",
+            "No information flows between them ever"
+        ],
+        "correctOption": 1,
+        "points": 30,
+                "explanation":"• Instance با render شدن React Element برمی‌گرداند\n" +
+                    "- Element توضیح می‌دهد UI چگونه باید باشد\n" +
+                    "- شامل type، props و children است\n" +
+                    "- این Element بعدا به DOM تبدیل می‌شود"
+    },
+    {
+        "id": 87,
+        "question": "What information flows from React Element to DOM Element?",
+        "options": [
+            "Element type, props, and children structure information",
+            "DOM element sends events to React element",
+            "State and lifecycle methods from React element",
+            "No information flows between them ever"
+        ],
+        "correctOption": 0,
+        "points": 20,
+                "explanation":"• type مشخص می‌کند چه نوع DOM node ساخته شود\n" +
+                    "- props به attributes و properties تبدیل می‌شوند\n" +
+                    "- children به child nodes تبدیل می‌شوند\n" +
+                    "- React DOM این تبدیل را انجام می‌دهد"
+    },
+    {
+        "id": 88,
+        "question": "What is a common problem with global CSS in large applications?",
+        "options": [
+            "They cannot be used with server-side rendering",
+            "They are not supported by modern browsers",
+            "They may cause unintended style conflicts",
+            "They require special JSX syntax"
+        ],
+        "correctOption": 2,
+        "points": 10,
+                "explanation":"• class names می‌توانند با هم conflict داشته باشند\n" +
+                    "- تغییر یک style می‌تواند جاهای دیگر را خراب کند\n" +
+                    "- hard to maintain و debug است\n" +
+                    "- CSS Modules یا CSS-in-JS این مشکل را حل می‌کنند"
+    },
+    {
+        "id": 89,
+        "question": "Which React Router hook is used to read URL query parameters?",
+        "options": [
+            "useState",
+            "useEffect",
+            "useSearchParams",
+            "useMemo"
+        ],
+        "correctOption": 2,
+        "points": 10,
+                "explanation":"• useSearchParams برای خواندن و تنظیم query strings\n" +
+                    "- مثل useState کار می‌کند اما با URL sync است\n" +
+                    "- تغییرات URL را track می‌کند\n" +
+                    "- برای filters، pagination و search مفید است"
+    },
+    {
+        "id": 90,
+        "question": "Which approach maintains UI state after a browser refresh?",
+        "options": [
+            "Storing state in localStorage or URL",
+            "Using useState exclusively for state",
+            "Using React Context only for sharing",
+            "Keeping state in local variables"
+        ],
+        "correctOption": 0,
+        "points": 10,
+                "explanation":"• localStorage یا sessionStorage برای persist کردن\n" +
+                    "- URL searchParams برای state قابل share\n" +
+                    "- cookies برای server-side accessible state\n" +
+                    "- useState و Context بعد از refresh از بین می‌روند"
+    },
+    {
+        "id": 48,
+        "question": "What does React.memo() do?",
+        "options": [
+            "Caches expensive calculations for performance",
+            "Prevents re-render when props haven't changed",
+            "Stores component state in memory",
+            "Creates new component instances automatically"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":""
+    },
 //     {
 //         "id": 50,
 //         "question":  "Which technique helps avoid prop drilling?",

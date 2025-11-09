@@ -92,7 +92,8 @@ export function ExplanationModal({
                     fontSize: '2rem',
                     color: 'var(--color-light)',
                     textAlign: 'justify',
-                    direction: 'rtl'
+                    direction: 'rtl',
+                    whiteSpace: 'pre-line'
                 }}>
                     {explanation}
                 </div>
