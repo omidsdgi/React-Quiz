@@ -1428,7 +1428,7 @@ export const mockQuestions: Question[] = [
                     "- useState و Context بعد از refresh از بین می‌روند"
     },
     {
-        "id": 48,
+        "id": 91,
         "question": "What does React.memo() do?",
         "options": [
             "Caches expensive calculations for performance",
@@ -1438,125 +1438,155 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":""
+                "explanation":"• از re-render جلوگیری می‌کند اگر props تغییر نکرده باشند\n" +
+                    "- shallow comparison روی props انجام می‌دهد\n" +
+                    "- برای components پرهزینه مفید است\n" +
+                    "- می‌توان custom comparison function داد"
     },
-//     {
-//         "id": 50,
-//         "question":  "Which technique helps avoid prop drilling?",
-//         "options": [
-//             "Using more useState hooks throughout",
-//             "Creating additional wrapper components",
-//             "Using React Context API effectively",
-//             "Passing more props through components"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 51,
-//         "question": "What is the key difference between useCallback and useMemo?",
-//         "options": [
-//             "useCallback memoizes functions, useMemo memoizes values",
-//             "useCallback stores values, useMemo stores functio1ns",
-//             "useMemo is for effects, useCallback is for state",
-//             "They perform identical functions"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 52,
-//         "question": "Which practice commonly causes unnecessary re-renders in React?",
-//         "options": [
-//             "Using keys properly in list rendering",
-//             "Creating new objects or functions during render",
-//             "Applying React.memo correctly to components",
-//             "Splitting components into smaller pieces"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 53,
-//         "question": "What is the purpose of the 'key' prop in React lists?",
-//         "options": [
-//             "To apply CSS styling to list items",
-//             "To help React identify and track item changes",
-//             "To improve component visual design",
-//             "To pass data between list components"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 54,
-//         "question": "Which hook is most appropriate for optimizing expensive calculations?",
-//         "options": [
-//             "useState",
-//             "useEffect",
-//             "useMemo",
-//             "useReducer"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 55,
-//         "question": "How can you prevent a component from re-rendering when its parent re-renders?",
-//         "options": [
-//             "Wrap the component with React.memo",
-//             "Use useEffect with an empty dependency array",
-//             "Move state from props to local state",
-//             "Add additional props to the component"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 56,
-//         "question": "What is the main benefit of React.lazy with Suspense?",
-//         "options": [
-//             "It accelerates rendering performance significantly",
-//             "It enables code splitting and smaller bundles",
-//             "It improves SEO ranking automatically",
-//             "It prevents memory issues in applications"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 57,
-//         "question": "When does React.memo fail to prevent re-renders?",
-//         options: [
-//             "When props remain unchanged between renders",
-//             "When new object or references are created",
-//             "When the component has no props",
-//             "When the component uses internal state"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 60,
-//         "question": "In React Profiler, what does the 'Commit' phase measure?",
-//         options: [
-//             "Time spent applying updates to DOM",
-//             "Time spent calculating what changed",
-//             "Time spent running useEffect hooks",
-//             "Total render plus lifecycle time"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//                 "explanation":""
-//     },
+    {
+        "id": 92,
+        "question":  "Which technique helps avoid prop drilling?",
+        "options": [
+            "Using more useState hooks throughout",
+            "Creating additional wrapper components",
+            "Using React Context API effectively",
+            "Passing more props through components"
+        ],
+        "correctOption": 2,
+        "points": 10,
+                "explanation":"• Context API برای sharing state بدون prop drilling\n" +
+                    "- composition pattern با children\n" +
+                    "- state management libraries مثل Redux\n" +
+                    "- custom hooks برای logic reuse"
+    },
+    {
+        "id": 93,
+        "question": "What is the key difference between useCallback and useMemo?",
+        "options": [
+            "useCallback memoizes functions, useMemo memoizes values",
+            "useCallback stores values, useMemo stores functio1ns",
+            "useMemo is for effects, useCallback is for state",
+            "They perform identical functions"
+        ],
+        "correctOption": 0,
+        "points": 10,
+                "explanation":"• useCallback: memoize کردن functions\n" +
+                    "- useMemo: memoize کردن computed values\n" +
+                    "- هر دو از re-creation جلوگیری می‌کنند\n" +
+                    "- dependency array رفتار را کنترل می‌کند"
+    },
+    {
+        "id": 94,
+        "question": "Which practice commonly causes unnecessary re-renders in React?",
+        "options": [
+            "Using keys properly in list rendering",
+            "Creating new objects or functions during render",
+            "Applying React.memo correctly to components",
+            "Splitting components into smaller pieces"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":"• ساخت objects یا functions جدید در render\n" +
+                    "- reference جدید باعث re-render می‌شود\n" +
+                    "- باید از useMemo یا useCallback استفاده کرد\n" +
+                    "- یا objects را بیرون از component تعریف کرد"
+    },
+    {
+        "id": 95,
+        "question": "What is the purpose of the 'key' prop in React lists?",
+        "options": [
+            "To apply CSS styling to list items",
+            "To help React identify and track item changes",
+            "To improve component visual design",
+            "To pass data between list components"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":"• به React کمک می‌کند items را track کند\n" +
+                    "- در reconciliation برای identify کردن تغییرات\n" +
+                    "- باید stable و unique باشد\n" +
+                    "- از index به عنوان key اجتناب کنید"
+    },
+    {
+        "id": 96,
+        "question": "Which hook is most appropriate for optimizing expensive calculations?",
+        "options": [
+            "useState",
+            "useEffect",
+            "useMemo",
+            "useReducer"
+        ],
+        "correctOption": 2,
+        "points": 10,
+                "explanation":"• useMemo برای memoize کردن نتیجه محاسبات\n" +
+                    "- فقط وقتی dependencies تغییر کنند، دوباره محاسبه می‌شود\n" +
+                    "- برای محاسبات پرهزینه مفید است\n" +
+                    "- نباید برای همه چیز استفاده شود"
+    },
+    {
+        "id": 97,
+        "question": "How can you prevent a component from re-rendering when its parent re-renders?",
+        "options": [
+            "Wrap the component with React.memo",
+            "Use useEffect with an empty dependency array",
+            "Move state from props to local state",
+            "Add additional props to the component"
+        ],
+        "correctOption": 0,
+        "points": 10,
+                "explanation":"• با React.memo component را wrap کنید\n" +
+                    "- shallow comparison روی props انجام می‌دهد\n" +
+                    "- اگر props تغییر نکرده باشد، re-render نمی‌شود\n" +
+                    "- برای optimization استفاده می‌شود"
+    },
+    {
+        "id": 98,
+        "question": "What is the main benefit of React.lazy with Suspense?",
+        "options": [
+            "It accelerates rendering performance significantly",
+            "It enables code splitting and smaller bundles",
+            "It improves SEO ranking automatically",
+            "It prevents memory issues in applications"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":"• code splitting و lazy loading components\n" +
+                    "- bundle size کوچک‌تر برای initial load\n" +
+                    "- components فقط وقت نیاز load می‌شوند\n" +
+                    "- Suspense fallback در زمان loading نشان می‌دهد"
+    },
+    {
+        "id": 99,
+        "question": "When does React.memo fail to prevent re-renders?",
+        options: [
+            "When props remain unchanged between renders",
+            "When new object or references are created",
+            "When the component has no props",
+            "When the component uses internal state"
+        ],
+        "correctOption": 1,
+        "points": 20,
+                "explanation":"• وقتی props جدید objects یا functions هستند\n" +
+                    "- reference تغییر می‌کند حتی اگر محتوا یکسان باشد\n" +
+                    "- باید با useMemo یا useCallback ترکیب شود\n" +
+                    "- shallow comparison محدودیت دارد"
+    },
+    {
+        "id": 100,
+        "question": "In React Profiler, what does the 'Commit' phase measure?",
+        options: [
+            "Time spent applying updates to DOM",
+            "Time spent calculating what changed",
+            "Time spent running useEffect hooks",
+            "Total render plus lifecycle time"
+        ],
+        "correctOption": 0,
+        "points": 10,
+                "explanation":"• زمان صرف شده برای اعمال updates به DOM\n" +
+                    "- شامل lifecycle methods و effects است\n" +
+                    "- بعد از Render phase اتفاق می‌افتد\n" +
+                    "- برای identify کردن performance bottlenecks مفید است"
+    },
 //     {
 //         "id": 62,
 //         "question": "What is the recommended approach for handling very large lists in React?",
