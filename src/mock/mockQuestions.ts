@@ -1587,149 +1587,170 @@ export const mockQuestions: Question[] = [
                     "- بعد از Render phase اتفاق می‌افتد\n" +
                     "- برای identify کردن performance bottlenecks مفید است"
     },
-//     {
-//         "id": 62,
-//         "question": "What is the recommended approach for handling very large lists in React?",
-//         options: [
-//             "Wrapping each list item in React.memo",
-//             "Using useCallback for all event handlers",
-//             "Implementing list virtualization (windowing)",
-//             "Adding more useEffect hooks"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 63,
-//         "question": "Which React hook memoizes computed values between renders?",
-//         options: [
-//             "useRef",
-//             "useState",
-//             "useEffect",
-//             "useMemo"
-//         ],
-//         "correctOption": 3,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 64,
-//         question: "What are the main targets of React performance optimization?",
-//         options: [
-//             "Writing shorter code and fewer files",
-//             "Using only the latest React features",
-//             "Reducing unnecessary re-renders and bundle size",
-//             "Converting all functions to class components"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 65,
-//         "question":"When is React.memo not effective for optimization?",
-//         options: [
-//             "When props remain stable across renders",
-//             "When the component has no props",
-//             "When new object or references are passed as props",
-//             "When state is managed internally"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 66,
-//         "question": "Which hook prevents recalculation of expensive values?",
-//         options: [
-//             "useRef",
-//             "useState",
-//             "useEffect",
-//             "useMemo"
-//         ],
-//         "correctOption": 3,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 67,
-//         "question": "What does React.StrictMode primarily help developers identify?",
-//         options: [
-//             "Application performance bugs and issues",
-//             "Side effects and component lifecycle issues",
-//             "Code style violations and patterns",
-//             "Memory leaks exclusively in components"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 68,
-//         "question": "What is useCallback's primary function?",
-//         options: [
-//             "Memoizing function references between renders",
-//             "Storing state values across renders",
-//             "Triggering re-renders manually",
-//             "Completely replacing useMemo functionality"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 69,
-//         "question": "What is the recommended technique for rendering thousands of list items?",
-//         options: [
-//             "Wrapping everything in Context providers",
-//             "List virtualization or windowing",
-//             "Adding key props only",
-//             "Using additional useState hooks",
-//         ],
-//         "correctOption":1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 70,
-//         "question": "What does the React Profiler help you analyze?",
-//         options: [
-//             "Node.js memory leaks in server",
-//             "Component render times and re-render patterns",
-//             "Network usage and bundle size metrics",
-//             "Code style and formatting errors"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 71,
-//         "question": "Which hook maintains a mutable value without triggering re-renders?",
-//         options: [
-//             "useState",
-//             "useEffect",
-//             "useRef",
-//             "useMemo"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 72,
-//         "question": "What are the primary areas of focus for React performance optimization?",
-//         options: [
-//             "Using more hooks and creating additional components",
-//             "Focusing only on CSS and backend optimizations",
-//             "Increasing component nesting dept significantly",
-//             "Preventing wasted renders and reducing bundle size"
-//         ],
-//         "correctOption": 3,
-//         "points": 10,
-//                 "explanation":""
-//     },
+    {
+        "id": 101,
+        "question": "What is the recommended approach for handling very large lists in React?",
+        options: [
+            "Wrapping each list item in React.memo",
+            "Using useCallback for all event handlers",
+            "Implementing list virtualization (windowing)",
+            "Adding more useEffect hooks"
+        ],
+        "correctOption": 2,
+        "points": 20,
+                "explanation":"• virtualization یا windowing با react-window\n" +
+                    "- فقط items قابل مشاهده render می‌شوند\n" +
+                    "- performance را برای هزاران item بهبود می‌دهد\n" +
+                    "- از render کردن تمام items جلوگیری می‌کند"
+    },
+    {
+        "id": 102,
+        "question": "Which React hook memoizes computed values between renders?",
+        options: [
+            "useRef",
+            "useState",
+            "useEffect",
+            "useMemo"
+        ],
+        "correctOption": 3,
+        "points": 10,
+                "explanation":"• useMemo برای memoize کردن values\n" +
+                    "- محاسبه فقط وقتی dependencies تغییر کنند\n" +
+                    "- از محاسبات غیرضروری جلوگیری می‌کند\n" +
+                    "- برای expensive operations مفید است"
+    },
+    {
+        "id": 103,
+        question: "What are the main targets of React performance optimization?",
+        options: [
+            "Writing shorter code and fewer files",
+            "Using only the latest React features",
+            "Reducing unnecessary re-renders and bundle size",
+            "Converting all functions to class components"
+        ],
+        "correctOption": 2,
+        "points": 20,
+                "explanation":"• کاهش تعداد re-renders غیرضروری\n" +
+                    "- کاهش bundle size با code splitting\n" +
+                    "- optimize کردن reconciliation با keys\n" +
+                    "- memoization برای محاسبات گران"
+    },
+    {
+        "id": 104,
+        "question":"When is React.memo not effective for optimization?",
+        options: [
+            "When props remain stable across renders",
+            "When the component has no props",
+            "When new object or references are passed as props",
+            "When state is managed internally"
+        ],
+        "correctOption": 2,
+        "points": 20,
+                "explanation":"• وقتی props objects یا arrays با reference جدید هستند\n" +
+                    "- وقتی component state داخلی تغییر می‌کند\n" +
+                    "- وقتی context value تغییر می‌کند\n" +
+                    "- shallow comparison تغییر را detect می‌کند"
+    },
+    {
+        "id": 105,
+        "question": "Which hook prevents recalculation of expensive values?",
+        options: [
+            "useRef",
+            "useState",
+            "useEffect",
+            "useMemo"
+        ],
+        "correctOption": 3,
+        "points": 10,
+                "explanation":"• useMemo value را cache می‌کند\n" +
+                    "- فقط با تغییر dependencies دوباره محاسبه می‌شود\n" +
+                    "- برای filtering، sorting یا processing data مفید است\n" +
+                    "- باید فقط برای expensive operations استفاده شود"
+    },
+    {
+        "id": 106,
+        "question": "What does React.StrictMode primarily help developers identify?",
+        options: [
+            "Application performance bugs and issues",
+            "Side effects and component lifecycle issues",
+            "Code style violations and patterns",
+            "Memory leaks exclusively in components"
+        ],
+        "correctOption": 1,
+        "points": 20,
+                "explanation":"• unsafe lifecycle methods و side effects\n" +
+                    "- component render می‌شود دوبار در development\n" +
+                    "- warnings برای deprecated APIs\n" +
+                    "- به production build اثری ندارد"
+    },
+    {
+        "id": 107,
+        "question": "What is useCallback's primary function?",
+        options: [
+            "Memoizing function references between renders",
+            "Storing state values across renders",
+            "Triggering re-renders manually",
+            "Completely replacing useMemo functionality"
+        ],
+        "correctOption": 0,
+        "points": 10,
+                "explanation":"• memoize کردن function references\n" +
+                    "- از re-creation function در هر render جلوگیری می‌کند\n" +
+                    "- برای passing callbacks به memoized components\n" +
+                    "- dependency array تعیین می‌کند کی function جدید ساخته شود"
+    },
+    {
+        "id": 69,
+        "question": "What is the recommended technique for rendering thousands of list items?",
+        options: [
+            "Wrapping everything in Context providers",
+            "List virtualization or windowing",
+            "Adding key props only",
+            "Using additional useState hooks",
+        ],
+        "correctOption":1,
+        "points": 20,
+                "explanation":""
+    },
+    {
+        "id": 70,
+        "question": "What does the React Profiler help you analyze?",
+        options: [
+            "Node.js memory leaks in server",
+            "Component render times and re-render patterns",
+            "Network usage and bundle size metrics",
+            "Code style and formatting errors"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":""
+    },
+    {
+        "id": 71,
+        "question": "Which hook maintains a mutable value without triggering re-renders?",
+        options: [
+            "useState",
+            "useEffect",
+            "useRef",
+            "useMemo"
+        ],
+        "correctOption": 2,
+        "points": 10,
+                "explanation":""
+    },
+    {
+        "id": 72,
+        "question": "What are the primary areas of focus for React performance optimization?",
+        options: [
+            "Using more hooks and creating additional components",
+            "Focusing only on CSS and backend optimizations",
+            "Increasing component nesting dept significantly",
+            "Preventing wasted renders and reducing bundle size"
+        ],
+        "correctOption": 3,
+        "points": 10,
+                "explanation":""
+    },
 //     {
 //         "id": 73,
 //         "question":"Which technique most directly reduces wasted re-renders?",
