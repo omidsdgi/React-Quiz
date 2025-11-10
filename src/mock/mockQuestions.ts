@@ -1697,10 +1697,10 @@ export const mockQuestions: Question[] = [
                 "explanation":"• memoize کردن function references\n" +
                     "- از re-creation function در هر render جلوگیری می‌کند\n" +
                     "- برای passing callbacks به memoized components\n" +
-                    "- dependency array تعیین می‌کند کی function جدید ساخته شود"
+                    "- dependency array تعیین می‌کند کی function جدید ساخته شود "
     },
     {
-        "id": 69,
+        "id": 108,
         "question": "What is the recommended technique for rendering thousands of list items?",
         options: [
             "Wrapping everything in Context providers",
@@ -1713,7 +1713,7 @@ export const mockQuestions: Question[] = [
                 "explanation":""
     },
     {
-        "id": 70,
+        "id": 109,
         "question": "What does the React Profiler help you analyze?",
         options: [
             "Node.js memory leaks in server",
@@ -1726,7 +1726,7 @@ export const mockQuestions: Question[] = [
                 "explanation":""
     },
     {
-        "id": 71,
+        "id": 110,
         "question": "Which hook maintains a mutable value without triggering re-renders?",
         options: [
             "useState",
@@ -1739,7 +1739,7 @@ export const mockQuestions: Question[] = [
                 "explanation":""
     },
     {
-        "id": 72,
+        "id": 111,
         "question": "What are the primary areas of focus for React performance optimization?",
         options: [
             "Using more hooks and creating additional components",
@@ -1752,7 +1752,7 @@ export const mockQuestions: Question[] = [
                 "explanation":""
     },
 //     {
-//         "id": 73,
+//         "id": 112,
 //         "question":"Which technique most directly reduces wasted re-renders?",
 //         options: [
 //             "Code splitting with React.lazy",
@@ -1765,7 +1765,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 74,
+//         "id": 113,
 //         "question": "What defines a wasted render in React?",
 //         "options": [
 //             "Any render that takes longer than 16 ms to execute",
@@ -1778,7 +1778,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 75,
+//         "id": 114,
 //         "question": "When does a React component re-render?",
 //         "options": [
 //             "Only when its internal state changes through setState calls",
@@ -1791,7 +1791,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 76,
+//         "id": 115,
 //         "question": "What happens when a React Context value changes?",
 //         "options": [
 //             "Only the Provider component re-renders after the value change",
@@ -1804,7 +1804,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 77,
+//         "id": 116,
 //         "question": "Which approach prevents creating new context value objects on every render?",
 //         "options": [
 //             "const value = useMemo(() => ({ user, setUser }), [user]);",
@@ -1817,7 +1817,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 78,
+//         "id": 117,
 //         "question": "Do prop changes directly cause React components to re-render?",
 //         "options": [
 //             "Yes, React monitors all props and triggers re-renders automatically",
@@ -1830,7 +1830,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 79,
+//         "id": 118,
 //         "question": "What does 'render' mean in React terminology?",
 //         "options": [
 //             "Updating the actual DOM elements on the page",
@@ -1843,7 +1843,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 80,
+//         "id": 119,
 //         "question":  "Does every React render update the actual DOM?",
 //         "options": [
 //             "Yes, every render immediately updates the DOM elements",
@@ -1856,7 +1856,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 81,
+//         "id": 120,
 //         "question": "What defines a wasted render in React performance terms?",
 //         "options": [
 //             "A render producing same Virtual DOM",
@@ -1869,7 +1869,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 82,
+//         "id": 121,
 //         "question": "What is the purpose of memoization in React?",
 //         "options": [
 //             "To permanently store components in memory",
@@ -1882,7 +1882,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 83,
+//         "id": 122,
 //         "question": "When is React.memo ineffective?",
 //         "options": [
 //             "When components always receive new props or object references",
@@ -1895,7 +1895,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 84,
+//         "id": 123,
 //         "question": "What is the main difference between React.memo and useMemo?",
 //         "options": [
 //             "React.memo is for class components, useMemo is for functions",
@@ -1908,7 +1908,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 85,
+//         "id": 124,
 //         "question": "What is the main difference between useMemo and useCallback?",
 //         "options": [
 //             "useMemo prevents re-renders, useCallback prevents effect re-execution",
@@ -1921,7 +1921,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 86,
+//         "id": 125,
 //         "question": "How do React.memo and useMemo/useCallback differ in scope?",
 //         "options": [
 //             "React.memo memoizes components, useMemo/useCallback memoize values inside",
@@ -1934,7 +1934,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 87,
+//         "id": 126,
 //         "question": "What role does the dependency array play in useMemo?",
 //         "options": [
 //             "It prevents the function from ever running again",
@@ -1947,7 +1947,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 88,
+//         "id": 127,
 //         "question": "What similarity exists between useMemo dependency arrays and React.memo?",
 //         "options": [
 //             "Both automatically stabilize function references without developer effort",
@@ -1960,7 +1960,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 89,
+//         "id": 128,
 //         "question":"What happens when useMemo's dependency array doesn't change between renders?",
 //         "options": [
 //             "A new value is always recalculated",
@@ -1973,7 +1973,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 90,
+//         "id": 129,
 //         "question": "Which tool is primarily used for preventing unnecessary component re-renders?",
 //         "options": [
 //             "useState hook for managing component state",
@@ -1986,7 +1986,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 91,
+//         "id": 130,
 //         "question": "Which hook prevents expensive recalculations inside components?",
 //         "options": [
 //             "useCallback hook for memoizing function references",
@@ -1999,7 +1999,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 92,
+//         "id": 131,
 //         "question": "Which hook is useful for memoizing values used in dependency arrays of other hooks?",
 //         "options": [
 //             "useMemo hook for memoizing computed values",
@@ -2012,7 +2012,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 93,
+//         "id": 132,
 //         "question": "What's the best approach to prevent child component re-renders when props haven't changed?",
 //         "options": [
 //             "useMemo in the parent component to memoize props",
@@ -2025,7 +2025,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 94,
+//         "id": 133,
 //         "question": "What's the best approach for avoiding expensive recalculations depending on multiple variables?",
 //         "options": [
 //             "useMemo with proper dependency array containing all variables",
@@ -2038,7 +2038,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 95,
+//         "id": 134,
 //         "question": "How should you stabilize expensive values used in other hook dependency arrays?",
 //         "options": [
 //             "useCallback for stabilizing the computed value reference",
@@ -2051,7 +2051,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 96,
+//         "id": 135,
 //         "question": "Why does passing arrow functions as props prevent React.memo from working effectively?",
 //         "options": [
 //             "Arrow functions cannot access props or state from parent components",
@@ -2064,7 +2064,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 97,
+//         "id": 136,
 //         "question": "When do useMemo and useEffect callbacks execute in the component lifecycle?",
 //         "options": [
 //             "useMemo runs after commit, useEffect runs during render phase",
@@ -2077,7 +2077,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 98,
+//         "id": 137,
 //         "question": "What is the primary difference in purpose between useMemo and useEffect?",
 //         "options": [
 //             "Both are used for memoizing values inside component functions",
@@ -2090,7 +2090,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 99,
+//         "id": 138,
 //         "question": "What do useMemo and useEffect return?",
 //         "options": [
 //             "useMemo returns functions, useEffect returns computed values",
@@ -2102,125 +2102,137 @@ export const mockQuestions: Question[] = [
 //         "points": 30,
 //                 "explanation":""
 //     },
+    {
+        "id": 139,
+        "question": "Why is calling Hooks indirectly through call/apply invalid?",
+        "options": [
+            "Hooks must be called directly for React to track them properly",
+            "Hooks cannot be reused across different function components",
+            "call/apply methods break React state scope mechanisms",
+            "Indirect calls only work properly in class-based components"
+        ],
+        "correctOption": 0,
+        "points": 30,
+                "explanation":"• Hooks باید مستقیماً فراخوانی شوند تا React بتواند آن‌ها را track کند\n" +
+                    "- React به ترتیب فراخوانی Hooks برای شناسایی آن‌ها وابسته است\n" +
+                    "- استفاده از call/apply این ترتیب را مختل می‌کند\n" +
+                    "- Hooks باید در سطح بالای function component فراخوانی شوند\n" +
+                    "- این یکی از قوانین اساسی Hooks در React است"
+    },
+    {
+        "id": 140,
+        "question":"Where are Hooks allowed to be called?",
+        "options": [
+            "Inside React function components or custom Hooks",
+            "Inside class component methods only",
+            "Inside any regular JavaScript function",
+            "Inside event handler functions only"
+        ],
+        "correctOption": 0,
+        "points": 10,
+                "explanation":"• Hooks فقط در function components یا custom Hooks قابل استفاده هستند\n" +
+                    "- نمی‌توانید Hooks را در class components استفاده کنید\n" +
+                    "- Hooks را در توابع معمولی JavaScript فراخوانی نکنید\n" +
+                    "- custom Hooks باید با 'use' شروع شوند\n" +
+                    "- این محدودیت‌ها به React کمک می‌کنند state را صحیح مدیریت کند"
+    },
+    {
+        "id": 141,
+        "question": "Why must Hooks be called in the same order every render?",
+        options: [
+            "React only supports one Hook per component",
+            "React identifies Hooks by their call position",
+            "Hooks automatically reorder themselves internally",
+            "React compares Hooks by their return values"
+        ],
+        "correctOption": 1,
+        "points": 20,
+                "explanation":"• React از ترتیب فراخوانی Hooks برای شناسایی آن‌ها استفاده می‌کند\n" +
+                    "- اگر ترتیب تغییر کند، React نمی‌تواند state را به Hook صحیح متصل کند\n" +
+                    "- به همین دلیل نباید Hooks را در شرط یا حلقه قرار دهید\n" +
+                    "- ESLint با قانون rules-of-hooks این موارد را بررسی می‌کند\n" +
+                    "- حفظ ترتیب ثابت برای عملکرد صحیح React ضروری است"
+    },
+    {
+        "id": 142,
+        "question": "What defines a Custom Hook in React?",
+        "options": [
+            "Any function that starts with 'use' prefix",
+            "A function using other React hooks",
+            "Both: starts with 'use' and uses React hooks",
+            "A function exported from a hooks file"
+        ],
+        "correctOption": 2,
+        "points": 10,
+                "explanation":""
+    },
+    {
+        "id": 143,
+        "question": "When should you create a Custom Hook?",
+        "options": [
+            "For every component you create",
+            "When logic is reused across components",
+            "Only for API calls and data fetching",
+            "Never, use built-in hooks only"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":""
+    },
+    {
+        "id": 144,
+        "question": "What is the naming convention for Custom Hooks?",
+        "options": [
+            "Must start with 'use' followed by descriptive name",
+            "Must end with 'Hook' suffix",
+            "Must be in camelCase only",
+            "No specific naming convention required"
+        ],
+        "correctOption": 0,
+        "points": 10,
+                "explanation":""
+    },
+    {
+        "id": 145,
+        "question": "Can Custom Hooks use other React hooks like useState?",
+        "options": [
+            "No, Custom Hooks cannot use other hooks",
+            "Yes, that's the main purpose of Custom Hooks",
+            "Only useState, not other hooks",
+            "Only in Class Components"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":""
+    },
+    {
+        "id": 146,
+        "question": "How do you handle errors in a Custom Hook for API fetching?",
+        "options": [
+            "Errors cannot be handled in Custom Hooks",
+            "Use try-catch and return error state",
+            "Let errors bubble to parent component always",
+            "Use error boundaries inside the hook"
+        ],
+        "correctOption": 1,
+        "points": 20,
+                "explanation":""
+    },
+    {
+        "id": 147,
+        "question": "What should a Custom Hook for form handling return?",
+        "options": [
+            "Only the form values object",
+            "JSX for the entire form",
+            "Values, handlers, and validation state",
+            "Nothing, it should mutate props directly"
+        ],
+        "correctOption": 2,
+        "points": 20,
+                "explanation":""
+    },
 //     {
-//         "id": 100,
-//         "question": "Why is calling Hooks indirectly through call/apply invalid?",
-//         "options": [
-//             "Hooks must be called directly for React to track them properly",
-//             "Hooks cannot be reused across different function components",
-//             "call/apply methods break React state scope mechanisms",
-//             "Indirect calls only work properly in class-based components"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 129,
-//         "question":"Where are Hooks allowed to be called?",
-//         "options": [
-//             "Inside React function components or custom Hooks",
-//             "Inside class component methods only",
-//             "Inside any regular JavaScript function",
-//             "Inside event handler functions only"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 131,
-//         "question": "Why must Hooks be called in the same order every render?",
-//         options: [
-//             "React only supports one Hook per component",
-//             "React identifies Hooks by their call position",
-//             "Hooks automatically reorder themselves internally",
-//             "React compares Hooks by their return values"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 1351,
-//         "question": "What defines a Custom Hook in React?",
-//         "options": [
-//             "Any function that starts with 'use' prefix",
-//             "A function using other React hooks",
-//             "Both: starts with 'use' and uses React hooks",
-//             "A function exported from a hooks file"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 1352,
-//         "question": "When should you create a Custom Hook?",
-//         "options": [
-//             "For every component you create",
-//             "When logic is reused across components",
-//             "Only for API calls and data fetching",
-//             "Never, use built-in hooks only"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 1353,
-//         "question": "What is the naming convention for Custom Hooks?",
-//         "options": [
-//             "Must start with 'use' followed by descriptive name",
-//             "Must end with 'Hook' suffix",
-//             "Must be in camelCase only",
-//             "No specific naming convention required"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 1354,
-//         "question": "Can Custom Hooks use other React hooks like useState?",
-//         "options": [
-//             "No, Custom Hooks cannot use other hooks",
-//             "Yes, that's the main purpose of Custom Hooks",
-//             "Only useState, not other hooks",
-//             "Only in Class Components"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 1355,
-//         "question": "How do you handle errors in a Custom Hook for API fetching?",
-//         "options": [
-//             "Errors cannot be handled in Custom Hooks",
-//             "Use try-catch and return error state",
-//             "Let errors bubble to parent component always",
-//             "Use error boundaries inside the hook"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 1356,
-//         "question": "What should a Custom Hook for form handling return?",
-//         "options": [
-//             "Only the form values object",
-//             "JSX for the entire form",
-//             "Values, handlers, and validation state",
-//             "Nothing, it should mutate props directly"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 1357,
+//         "id": 148,
 //         "question": "Can Custom Hooks call other Custom Hooks?",
 //         "options": [
 //             "No, only built-in hooks allowed",
@@ -2233,7 +2245,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 1358,
+//         "id": 149,
 //         "question": "How do you type a Custom Hook in TypeScript?",
 //         "options": [
 //             "Custom Hooks cannot use TypeScript",
@@ -2246,7 +2258,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 1359,
+//         "id": 150,
 //         "question": "What is a common pattern for Custom Hooks with cleanup?",
 //         "options": [
 //             "Return cleanup function from useEffect inside hook",
@@ -2259,7 +2271,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 //     },
 //     {
-//         "id": 1360,
+//         "id": 151,
 //         "question": "Can Custom Hooks have parameters?",
 //         "options": [
 //             "No, Custom Hooks cannot accept parameters",
@@ -2271,123 +2283,159 @@ export const mockQuestions: Question[] = [
 //         "points": 10,
 //                 "explanation":""
 //     },
-//     {
-//         "id": 132,
-//         "question": "How does useMemo help with object props in memoized components?",
-//         options: [
-//             "It prevents garbage collection of objects",
-//             "It converts objects to primitive values",
-//             "It maintains stable object references",
-//             "It performs deep comparison of objects"
-//         ],
-//         correctOption: 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 133,
-//         "question":"What is the key difference between useCallback and useMemo?",
-//         options: [
-//             "useCallback memoizes functions, useMemo memoizes values",
-//             "useCallback prevents renders, useMemo prevents effects",
-//             "useCallback handles async, useMemo handles sync logic",
-//             "useCallback works with props, useMemo works with state"
-//         ],
-//         correctOption: 0,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 134,
-//         "question":  "Why do useState setters have stable identity across renders?",
-//         options: [
-//             "React automatically memoizes all functions",
-//             "Setters are recreated but hidden by React",
-//             "React guarantees stable references for setters",
-//             "Setters only work with primitive values"
-//         ],
-//         correctOption: 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 135,
-//         "question":"What does stable identity mean for useReducer dispatch?",
-//         options: [
-//             "The function reference never changes",
-//             "It produces consistent action results",
-//             "It handles all action types equally",
-//             "It works with any reducer function"
-//         ],
-//         correctOption: 0,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 136,
-//         "question": "Why can useState setters be omitted from dependency arrays?",
-//         options: [
-//             "React adds them automatically at runtime",
-//             "React guarantees their stable identity",
-//             "They're compared by value not reference",
-//             "They only track primitive dependencies"
-//         ],
-//         correctOption: 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 137,
-//         "question":  "What happens when state variables are missing from useEffect dependencies?",
-//         options: [
-//             "React adds the variables automatically",
-//             "The effect uses the latest values",
-//             "The effect captures stale values",
-//             "The effect runs on every render"
-//         ],
-//         correctOption: 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 138,
-//         "question":  "Why must props be included in useCallback dependency arrays?",
-//         options: [
-//             "React freezes props unless included",
-//             "Props have stable identity like setters",
-//             "useCallback only works with primitives",
-//             "Props can change causing stale closures"
-//         ],
-//         correctOption: 3,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 139,
-//         "question": "Why include component functions in useEffect dependency arrays?",
-//         options: [
-//             "Functions are recreated on every component render cycle",
-//             "React automatically memoizes all functions in components",
-//             "Functions have stable references like dispatch from useReducer",
-//             "Dependency arrays only need to track function calls"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 140,
-//         "question": "Why can frequently changing Context values cause performance issues?",
-//         options: [
-//             "React ignores all context updates for performance reasons",
-//             "All consumers re-render whenever any context value changes",
-//             "Context automatically freezes all values to prevent updates",
-//             "useMemo cannot be used properly with Context values"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
+    {
+        "id": 152,
+        "question": "How does useMemo help with object props in memoized components?",
+        options: [
+            "It prevents garbage collection of objects",
+            "It converts objects to primitive values",
+            "It maintains stable object references",
+            "It performs deep comparison of objects"
+        ],
+        correctOption: 2,
+        "points": 20,
+                "explanation":"• useMemo reference ثابتی از object ایجاد می‌کند\n" +
+                    "- بدون useMemo، object جدید در هر render ساخته می‌شود\n" +
+                    "- React.memo با reference جدید، component را دوباره render می‌کند\n" +
+                    "- useMemo فقط زمانی object جدید می‌سازد که dependencies تغییر کنند\n" +
+                    "- این به جلوگیری از re-renders غیرضروری کمک می‌کند"
+    },
+    {
+        "id": 153,
+        "question":"What is the key difference between useCallback and useMemo?",
+        options: [
+            "useCallback memoizes functions, useMemo memoizes values",
+            "useCallback prevents renders, useMemo prevents effects",
+            "useCallback handles async, useMemo handles sync logic",
+            "useCallback works with props, useMemo works with state"
+        ],
+        correctOption: 0,
+        "points": 20,
+                "explanation":"• useCallback برای memoize کردن functions استفاده می‌شود\n" +
+                    "- useMemo برای memoize کردن مقادیر محاسبه شده استفاده می‌شود\n" +
+                    "- useCallback معادل useMemo(() => fn, deps) است\n" +
+                    "- هر دو از re-creation غیرضروری جلوگیری می‌کنند\n" +
+                    "- برای استفاده صحیح، نوع داده را در نظر بگیرید"
+    },
+    {
+        "id": 154,
+        "question":  "Why do useState setters have stable identity across renders?",
+        options: [
+            "React automatically memoizes all functions",
+            "Setters are recreated but hidden by React",
+            "React guarantees stable references for setters",
+            "Setters only work with primitive values"
+        ],
+        correctOption: 2,
+        "points": 20,
+                "explanation":"• React تضمین می‌کند که setter functions همیشه reference ثابت دارند\n" +
+                    "- نیازی به اضافه کردن آن‌ها به dependency arrays نیست\n" +
+                    "- این رفتار برای useState و useReducer dispatch صادق است\n" +
+                    "- کمک به جلوگیری از re-runs غیرضروری effects می‌کند\n" +
+                    "- یکی از optimizations داخلی React است"
+    },
+    {
+        "id": 155,
+        "question":"What does stable identity mean for useReducer dispatch?",
+        options: [
+            "The function reference never changes",
+            "It produces consistent action results",
+            "It handles all action types equally",
+            "It works with any reducer function"
+        ],
+        correctOption: 0,
+        "points": 20,
+                "explanation":"• dispatch function همیشه reference یکسانی دارد\n" +
+                    "- مانند useState setters، نیازی به dependency array ندارد\n" +
+                    "- React این stability را تضمین می‌کند\n" +
+                    "- باعث سادگی در نوشتن effects و callbacks می‌شود\n" +
+                    "- می‌توانید با اطمینان از dispatch در useEffect استفاده کنید"
+    },
+    {
+        "id": 156,
+        "question": "Why can useState setters be omitted from dependency arrays?",
+        options: [
+            "React adds them automatically at runtime",
+            "React guarantees their stable identity",
+            "They're compared by value not reference",
+            "They only track primitive dependencies"
+        ],
+        correctOption: 1,
+        "points": 30,
+                "explanation":"• React تضمین می‌کند setter functions هرگز تغییر نمی‌کنند\n" +
+                    "- این یعنی اضافه کردن آن‌ها به deps تاثیری ندارد\n" +
+                    "- ESLint به طور خودکار این موضوع را می‌داند\n" +
+                    "- تنها برای useState و useReducer dispatch صادق است\n" +
+                    "- سایر functions باید در dependency array قرار گیرند"
+    },
+    {
+        "id": 157,
+        "question":  "What happens when state variables are missing from useEffect dependencies?",
+        options: [
+            "React adds the variables automatically",
+            "The effect uses the latest values",
+            "The effect captures stale values",
+            "The effect runs on every render"
+        ],
+        correctOption: 2,
+        "points": 30,
+                "explanation":"• وقتی state از dependencies حذف شود، effect مقدار قدیمی را می‌بیند\n" +
+                    "- این به stale closure معروف است\n" +
+                    "- effect فقط زمانی مقادیر capture می‌کند که ایجاد می‌شود\n" +
+                    "- همیشه تمام reactive values را در deps قرار دهید\n" +
+                    "- ESLint exhaustive-deps این مشکل را تشخیص می‌دهد"
+    },
+    {
+        "id": 158,
+        "question":  "Why must props be included in useCallback dependency arrays?",
+        options: [
+            "React freezes props unless included",
+            "Props have stable identity like setters",
+            "useCallback only works with primitives",
+            "Props can change causing stale closures"
+        ],
+        correctOption: 3,
+        "points": 20,
+                "explanation":"• props می‌توانند در هر render تغییر کنند\n" +
+                    "- بدون اضافه کردن به deps، function مقدار قدیمی prop را می‌بیند\n" +
+                    "- این باعث bugs پنهان و رفتار غیرمنتظره می‌شود\n" +
+                    "- همیشه props استفاده شده را در dependency array قرار دهید\n" +
+                    "- ESLint به شناسایی این موارد کمک می‌کند"
+    },
+    {
+        "id": 159,
+        "question": "Why include component functions in useEffect dependency arrays?",
+        options: [
+            "Functions are recreated on every component render cycle",
+            "React automatically memoizes all functions in components",
+            "Functions have stable references like dispatch from useReducer",
+            "Dependency arrays only need to track function calls"
+        ],
+        "correctOption": 0,
+        "points": 30,
+                "explanation":"• functions در هر render دوباره ساخته می‌شوند\n" +
+                    "- reference جدید باعث re-run شدن effect می‌شود\n" +
+                    "- باید function را با useCallback wrap کنید یا داخل effect بیاورید\n" +
+                    "- یا function را خارج از component تعریف کنید\n" +
+                    "- این یکی از دلایل اصلی re-renders غیرضروری است"
+    },
+    {
+        "id": 160,
+        "question": "Why can frequently changing Context values cause performance issues?",
+        options: [
+            "React ignores all context updates for performance reasons",
+            "All consumers re-render whenever any context value changes",
+            "Context automatically freezes all values to prevent updates",
+            "useMemo cannot be used properly with Context values"
+        ],
+        "correctOption": 1,
+        "points": 30,
+                "explanation":"• هر تغییر در Context باعث re-render همه consumers می‌شود\n" +
+                    "- حتی اگر consumer فقط بخشی از value را استفاده کند\n" +
+                    "- برای optimization، Context را به چند قسمت کوچک تقسیم کنید\n" +
+                    "- یا از useMemo برای wrap کردن value استفاده کنید\n" +
+                    "- pattern children به کاهش re-renders کمک می‌کند"
+    },
 //     {
 //         "id": 141,
 //         "question": "How can you optimize Context to prevent unnecessary re-renders?",
