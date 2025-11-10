@@ -2606,132 +2606,176 @@ export const mockQuestions: Question[] = [
                     "- children pattern فقط قسمت‌های لازم را re-render می‌کند\n" +
                     "- این سه تکنیک با هم، بهترین performance را می‌دهند"
     },
-//     {
-//         "id": 151,
-//         "question": "What does bundle size represent in React applications?",
-//         options: [
-//             "Total number of React components in the project",
-//             "Combined size of all JavaScript and CSS files",
-//             "Memory consumed by React in browser runtime",
-//             "Total amount of network requests per page load"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 153,
-//         "question": "How does larger bundle size affect application performance?",
-//         options: [
-//             "Makes web pages load much faster than before",
-//             "Reduces network bandwidth usage significantly",
-//             "Improves SEO ranking for search engines",
-//             "Makes applications load slower for users"
-//         ],
-//         "correctOption":3,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 154,
-//         "question":  "What is the main goal of code splitting?",
-//         options: [
-//             "Combine all files into one single large bundle",
-//             "Rewrite components into smaller atomic functions",
-//             "Split code into smaller chunks loaded on demand",
-//             "Reduce total number of React hooks used throughout"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 155,
-//         "question": "Which React feature enables lazy loading of components?",
-//         options: [
-//             "React.StrictMode combined with error boundary components",
-//             "React.Suspense combined with React.lazy function calls",
-//             "useMemo combined with useCallback hooks for optimization",
-//             "React.memo combined with stable props for consistency"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 156,
-//         "question": "What happens with page-based bundle splitting in Next.js?",
-//         options: [
-//             "All pages are still combined into one large bundle",
-//             "Only components with useEffect hooks get separated",
-//             "Pages are split but still downloaded together",
-//             "Each page loads as a separate bundle"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 157,
-//         "question":"What role does React.Suspense play with lazy components?",
-//         options: [
-//             "Shows fallback UI until lazy component loading",
-//             "Prevents unnecessary component re-renders during loading",
-//             "Creates separate bundles automatically for each component",
-//             "Optimizes performance without requiring additional configuration"
-//         ],
-//         "correctOption":0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 158,
-//         question: "What is the main purpose of tree-shaking?",
-//         options: [
-//             "Split JavaScript code into multiple chunks",
-//             "Remove unused code from final bundles",
-//             "Improve CSS loading performance significantly",
-//             "Automatically lazy-load images when they become visible"
-//         ],
-//         correctOption: 1,
-//         points: 10
-//     },
-//     {
-//         "id": 159,
-//         question: "Which feature enables component-based code splitting?",
-//         options: [
-//             "React.memo for component memoization and optimization",
-//             "useCallback for function reference memoization stability",
-//             "React.lazy with Suspense boundaries for loading states",
-//             "StrictMode for development debugging and error detection"
-//         ],
-//         correctOption: 2,
-//         points: 10
-//     },
-//     {
-//         "id": 160,
-//         question: "How does dynamic import() improve performance?",
-//         options: [
-//             "Loads JavaScript modules only when actually required",
-//             "Always reduces bundle size significantly for all applications",
-//             "Automatically compresses JavaScript files during build process",
-//             "Preloads all modules at application startup for speed"
-//         ],
-//         correctOption: 0,
-//         points: 10
-//     },
-//     {
-//         "id": 161,
-//         question: "Which plugin helps analyze Next.js bundle sizes?",
-//         options: [
-//             "webpack-bundle-analyzer for build process analysis",
-//             "eslint-plugin-next for code linting and quality",
-//             "@next/bundle-analyzer for bundle size visualization",
-//             "next-optimizer for performance optimization across board"
-//         ],
-//         correctOption: 2,
-//         points: 10
-//     },
+    {
+        "id": 171,
+        "question": "What does bundle size represent in React applications?",
+        options: [
+            "Total number of React components in the project",
+            "Combined size of all JavaScript and CSS files",
+            "Memory consumed by React in browser runtime",
+            "Total amount of network requests per page load"
+        ],
+        "correctOption": 1,
+        "points": 10,
+                "explanation":"• bundle size مجموع حجم تمام فایل‌های JavaScript و CSS است\n" +
+                    "- شامل کد خود برنامه، کتابخانه‌ها و dependencies می‌شود\n" +
+                    "- bundle بزرگ‌تر یعنی زمان بارگذاری بیشتر برای کاربر\n" +
+                    "- با tools مثل webpack-bundle-analyzer قابل بررسی است\n" +
+                    "- کاهش bundle size یکی از اهداف اصلی optimization است"
+    },
+    {
+        "id": 172,
+        "question": "How does larger bundle size affect application performance?",
+        options: [
+            "Makes web pages load much faster than before",
+            "Reduces network bandwidth usage significantly",
+            "Improves SEO ranking for search engines",
+            "Makes applications load slower for users"
+        ],
+        "correctOption":3,
+        "points": 10,
+                "explanation":"• bundle بزرگ‌تر زمان download و parse را افزایش می‌دهد\n" +
+                    "- کاربران با اینترنت کند تاثیر بیشتری می‌بینند\n" +
+                    "- زمان Time to Interactive (TTI) افزایش می‌یابد\n" +
+                    "- مصرف data موبایل بیشتری دارد\n" +
+                    "- تجربه کاربری ضعیف‌تر و نرخ bounce بالاتر می‌شود"
+    },
+    {
+        "id": 173,
+        "question":  "What is the main goal of code splitting?",
+        options: [
+            "Combine all files into one single large bundle",
+            "Rewrite components into smaller atomic functions",
+            "Split code into smaller chunks loaded on demand",
+            "Reduce total number of React hooks used throughout"
+        ],
+        "correctOption": 2,
+        "points": 20,
+                "explanation":"• code splitting کد را به چند بخش کوچک‌تر تقسیم می‌کند\n" +
+                    "- فقط کدی که الان نیاز است بارگذاری می‌شود\n" +
+                    "- بقیه کد زمانی که لازم شد load می‌شود (lazy loading)\n" +
+                    "- initial bundle size کاهش می‌یابد\n" +
+                    "- سرعت بارگذاری اولیه بهبود پیدا می‌کند"
+    },
+    {
+        "id": 174,
+        "question": "Which React feature enables lazy loading of components?",
+        options: [
+            "React.StrictMode combined with error boundary components",
+            "React.Suspense combined with React.lazy function calls",
+            "useMemo combined with useCallback hooks for optimization",
+            "React.memo combined with stable props for consistency"
+        ],
+        "correctOption": 1,
+        "points": 20,
+                "explanation":"• React.lazy برای lazy loading کامپوننت‌ها استفاده می‌شود\n" +
+                    "- باید با React.Suspense ترکیب شود\n" +
+                    "- Suspense fallback UI را تا load شدن نشان می‌دهد\n" +
+                    "- فقط با dynamic import() کار می‌کند\n" +
+                    "- مناسب برای route-based splitting است"
+    },
+    {
+        "id": 175,
+        "question": "What happens with page-based bundle splitting in Next.js?",
+        options: [
+            "All pages are still combined into one large bundle",
+            "Only components with useEffect hooks get separated",
+            "Pages are split but still downloaded together",
+            "Each page loads as a separate bundle"
+        ],
+        "correctOption": 3,
+        "points": 30,
+                "explanation":"• Next.js به صورت خودکار هر page را جدا می‌کند\n" +
+                    "- هر صفحه bundle مستقل خود را دارد\n" +
+                    "- فقط کد صفحه فعلی بارگذاری می‌شود\n" +
+                    "- navigation بین صفحات سریع‌تر می‌شود\n" +
+                    "- یکی از مزایای بزرگ Next.js نسبت به CRA است"
+    },
+    {
+        "id": 176,
+        "question":"What role does React.Suspense play with lazy components?",
+        options: [
+            "Shows fallback UI until lazy component loading",
+            "Prevents unnecessary component re-renders during loading",
+            "Creates separate bundles automatically for each component",
+            "Optimizes performance without requiring additional configuration"
+        ],
+        "correctOption":0,
+        "points": 30,
+                "explanation":"• Suspense یک wrapper برای lazy components است\n" +
+                    "- fallback prop محتوای loading را مشخص می‌کند\n" +
+                    "- تا component load شود، fallback نمایش داده می‌شود\n" +
+                    "- می‌تواند چند lazy component را wrap کند\n" +
+                    "- تجربه کاربری بهتری نسبت به loading خالی ایجاد می‌کند"
+    },
+    {
+        "id": 177,
+        question: "What is the main purpose of tree-shaking?",
+        options: [
+            "Split JavaScript code into multiple chunks",
+            "Remove unused code from final bundles",
+            "Improve CSS loading performance significantly",
+            "Automatically lazy-load images when they become visible"
+        ],
+        correctOption: 1,
+        points: 10,
+        "explanation": "• tree-shaking کد استفاده نشده را از bundle حذف می‌کند\n" +
+            "- در زمان build توسط bundler انجام می‌شود\n" +
+            "- فقط با ES modules (import/export) کار می‌کند\n" +
+            "- کتابخانه‌های بزرگ را کوچک‌تر می‌کند\n" +
+            "- webpack و Rollup به خوبی این کار را انجام می‌دهند"
+    },
+    {
+        "id": 178,
+        question: "Which feature enables component-based code splitting?",
+        options: [
+            "React.memo for component memoization and optimization",
+            "useCallback for function reference memoization stability",
+            "React.lazy with Suspense boundaries for loading states",
+            "StrictMode for development debugging and error detection"
+        ],
+        correctOption: 2,
+        points: 10,
+        "explanation": "• React.lazy امکان تقسیم کد بر اساس کامپوننت را می‌دهد\n" +
+            "- هر کامپوننت می‌تواند bundle جداگانه داشته باشد\n" +
+            "- با Suspense برای مدیریت loading state ترکیب می‌شود\n" +
+            "- مناسب برای کامپوننت‌های سنگین یا کم استفاده است\n" +
+            "- performance برنامه را بهبود می‌بخشد"
+    },
+    {
+        "id": 179,
+        question: "How does dynamic import() improve performance?",
+        options: [
+            "Loads JavaScript modules only when actually required",
+            "Always reduces bundle size significantly for all applications",
+            "Automatically compresses JavaScript files during build process",
+            "Preloads all modules at application startup for speed"
+        ],
+        correctOption: 0,
+        points: 10,
+        "explanation": "• import() ماژول‌ها را به صورت asynchronous بارگذاری می‌کند\n" +
+            "- فقط زمانی که واقعاً نیاز است اجرا می‌شود\n" +
+            "- bundle اولیه کوچک‌تر می‌شود\n" +
+            "- Promise برمی‌گرداند که resolve به module می‌شود\n" +
+            "- پایه React.lazy و code splitting است"
+    },
+    {
+        "id": 180,
+        question: "Which plugin helps analyze Next.js bundle sizes?",
+        options: [
+            "webpack-bundle-analyzer for build process analysis",
+            "eslint-plugin-next for code linting and quality",
+            "@next/bundle-analyzer for bundle size visualization",
+            "next-optimizer for performance optimization across board"
+        ],
+        correctOption: 2,
+        points: 10,
+        "explanation": "• Image component تصاویر را به صورت خودکار optimize می‌کند\n" +
+            "- lazy loading پیش‌فرض برای تصاویر\n" +
+            "- تبدیل خودکار به فرمت‌های مدرن مثل WebP\n" +
+            "- resize و optimization بر اساس device\n" +
+            "- جلوگیری از layout shift با تعیین ابعاد"
+    },
 //     {
 //         "id": 162,
 //         question:"Why use Next.js Image component over regular img?",
