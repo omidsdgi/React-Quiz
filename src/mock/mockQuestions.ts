@@ -2436,136 +2436,176 @@ export const mockQuestions: Question[] = [
                     "- یا از useMemo برای wrap کردن value استفاده کنید\n" +
                     "- pattern children به کاهش re-renders کمک می‌کند"
     },
-//     {
-//         "id": 141,
-//         "question": "How can you optimize Context to prevent unnecessary re-renders?",
-//         options: [
-//             "Wrap context values with useMemo for stable references",
-//             "Always pass new object literals as context values",
-//             "Use class components instead of functional components",
-//             "Avoid using React.memo on any consumer components"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 142,
-//         "question": "What strategy helps avoid wasted renders in Context with many consumers?",
-//         options: [
-//             "Convert all consumers to class-based components only",
-//             "Always update entire context on any state change",
-//             "Use single large context for all application state",
-//             "Split context into multiple focused smaller providers"
-//         ],
-//         "correctOption":3,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 143,
-//         "question":"How does passing children help optimize Context performance?",
-//         options: [
-//             "Makes entire subtree always re-render together",
-//             "Automatically freezes all context values",
-//             "Allows only necessary parts to re-render",
-//             "Converts all consumers to use useMemo"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 144,
-//         "question": "Why wrap Context values containing objects in useMemo?",
-//         options: [
-//             "Forces all consumers to re-render",
-//             "Keeps object references stable between renders",
-//             "Automatically freezes object values for immutability",
-//             "Converts complex objects to primitive types"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 145,
-//         "question": "How does React.memo help Context consumer performance?",
-//         options: [
-//             "Prevents re-render unless component props actually change",
-//             "Automatically memoizes all context values in consumers",
-//             "Ensures children components never update unnecessarily",
-//             "Merges multiple context values together for efficiency"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 146,
-//         "question": "What advantage does children pattern with React.memo provide?",
-//         options: [
-//             "Children receive new props without any re-rendering",
-//             "Only context-dependent components re-render when needed",
-//             "Entire component subtree renders once per change",
-//             "Context values automatically become static primitive types"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 147,
-//         "question":  "Why do inline objects as Context values trigger unnecessary re-renders?",
-//         options: [
-//             "React deeply compares all object contents every render",
-//             "New object references are created on every render",
-//             "Context always re-renders all consumers",
-//             "Objects are automatically converted to primitives "
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 148,
-//         "question": "What's the recommended way to avoid re-renders with Context objects?",
-//         options: [
-//             "Wrap Context.Provider component itself with React.memo",
-//             "Create new object literals each render for freshness",
-//             "Wrap object values in useMemo with proper dependencies",
-//             "Convert all objects to JSON strings before passing"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 149,
-//         "question": "How does React.memo reduce Context consumer re-renders?",
-//         options: [
-//             "Re-renders only when component props change, not context",
-//             "Forces all consumers to render together for consistency",
-//             "Automatically memoizes Context values in provider components",
-//             "Uses shallow comparison for context updates instead"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 150,
-//         "question": "What combination best reduces Context-related wasted renders?",
-//         options: [
-//             "useMemo for values, React.memo for consumers, children pattern",
-//             "useMemo for values, partial memoization, separate state contexts",
-//             "useCallback for values, React.memo for consumers, split contexts",
-//             "useState for values, class consumers, single global contexts"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//                 "explanation":""
-//     },
+    {
+        "id": 161,
+        "question": "How can you optimize Context to prevent unnecessary re-renders?",
+        options: [
+            "Wrap context values with useMemo for stable references",
+            "Always pass new object literals as context values",
+            "Use class components instead of functional components",
+            "Avoid using React.memo on any consumer components"
+        ],
+        "correctOption": 0,
+        "points": 30,
+                "explanation":"• useMemo reference ثابت برای Context value ایجاد می‌کند\n" +
+                    "- بدون useMemo، object جدید در هر render ساخته می‌شود\n" +
+                    "- این باعث re-render همه consumers حتی بدون تغییر واقعی می‌شود\n" +
+                    "- dependencies را دقیق مشخص کنید تا فقط زمان نیاز update شود\n" +
+                    "- ترکیب با React.memo در consumers بسیار موثر است"
+    },
+    {
+        "id": 162,
+        "question": "What strategy helps avoid wasted renders in Context with many consumers?",
+        options: [
+            "Convert all consumers to class-based components only",
+            "Always update entire context on any state change",
+            "Use single large context for all application state",
+            "Split context into multiple focused smaller providers"
+        ],
+        "correctOption":3,
+        "points": 30,
+                "explanation":"• تقسیم Context به چند Provider کوچک‌تر بسیار موثر است\n" +
+                    "- هر consumer فقط به Context مورد نیاز خود subscribe می‌شود\n" +
+                    "- تغییر در یک Context، consumers دیگر را تحت تاثیر قرار نمی‌دهد\n" +
+                    "- مثلاً User Context و Theme Context را جدا نگه دارید\n" +
+                    "- این pattern به scalability برنامه کمک می‌کند"
+    },
+    {
+        "id": 163,
+        "question":"How does passing children help optimize Context performance?",
+        options: [
+            "Makes entire subtree always re-render together",
+            "Automatically freezes all context values",
+            "Allows only necessary parts to re-render",
+            "Converts all consumers to use useMemo"
+        ],
+        "correctOption": 2,
+        "points": 30,
+                "explanation":"• با استفاده از children pattern، فقط Provider دوباره render می‌شود\n" +
+                    "- children که از بیرون pass شده‌اند، re-render نمی‌شوند\n" +
+                    "- این technique به نام 'children as props' معروف است\n" +
+                    "- باعث کاهش چشمگیر re-renders غیرضروری می‌شود\n" +
+                    "- یکی از بهترین روش‌های optimization در React است"
+    },
+    {
+        "id": 164,
+        "question": "Why wrap Context values containing objects in useMemo?",
+        options: [
+            "Forces all consumers to re-render",
+            "Keeps object references stable between renders",
+            "Automatically freezes object values for immutability",
+            "Converts complex objects to primitive types"
+        ],
+        "correctOption": 1,
+        "points": 20,
+                "explanation":"• objects در هر render reference جدید می‌گیرند\n" +
+                    "- React با === مقایسه می‌کند نه deep equality\n" +
+                    "- useMemo object را تا زمان تغییر dependencies حفظ می‌کند\n" +
+                    "- این از re-render غیرضروری تمام consumers جلوگیری می‌کند\n" +
+                    "- همیشه برای Context values از useMemo استفاده کنید"
+    },
+    {
+        "id": 165,
+        "question": "How does React.memo help Context consumer performance?",
+        options: [
+            "Prevents re-render unless component props actually change",
+            "Automatically memoizes all context values in consumers",
+            "Ensures children components never update unnecessarily",
+            "Merges multiple context values together for efficiency"
+        ],
+        "correctOption": 0,
+        "points": 30,
+                "explanation":"• React.memo component را wrap می‌کند و props را check می‌کند\n" +
+                    "- اگر props تغییر نکرده باشد، re-render نمی‌شود\n" +
+                    "- حتی اگر parent (Provider) re-render شود\n" +
+                    "- ترکیب React.memo با useMemo در value بسیار قدرتمند است\n" +
+                    "- برای consumers با UI سنگین توصیه می‌شود"
+    },
+    {
+        "id": 166,
+        "question": "What advantage does children pattern with React.memo provide?",
+        options: [
+            "Children receive new props without any re-rendering",
+            "Only context-dependent components re-render when needed",
+            "Entire component subtree renders once per change",
+            "Context values automatically become static primitive types"
+        ],
+        "correctOption": 1,
+        "points": 30,
+                "explanation":"• با ترکیب children و React.memo، کنترل دقیق روی re-renders دارید\n" +
+                    "- فقط کامپوننت‌هایی که واقعاً به Context نیاز دارند re-render می‌شوند\n" +
+                    "- بقیه tree بدون تغییر باقی می‌ماند\n" +
+                    "- این pattern برای برنامه‌های بزرگ بسیار مفید است\n" +
+                    "- performance را به طور قابل توجهی بهبود می‌بخشد"
+    },
+    {
+        "id": 147,
+        "question":  "Why do inline objects as Context values trigger unnecessary re-renders?",
+        options: [
+            "React deeply compares all object contents every render",
+            "New object references are created on every render",
+            "Context always re-renders all consumers",
+            "Objects are automatically converted to primitives "
+        ],
+        "correctOption": 1,
+        "points": 30,
+                "explanation":"• هر بار که component render می‌شود، object جدیدی ساخته می‌شود\n" +
+                    "- حتی اگر محتوای object یکسان باشد، reference متفاوت است\n" +
+                    "- React فقط reference را بررسی می‌کند نه محتوا\n" +
+                    "- همین باعث re-render همه consumers می‌شود\n" +
+                    "- همیشه از useMemo برای inline objects استفاده کنید"
+    },
+    {
+        "id": 168,
+        "question": "What's the recommended way to avoid re-renders with Context objects?",
+        options: [
+            "Wrap Context.Provider component itself with React.memo",
+            "Create new object literals each render for freshness",
+            "Wrap object values in useMemo with proper dependencies",
+            "Convert all objects to JSON strings before passing"
+        ],
+        "correctOption": 2,
+        "points": 30,
+                "explanation":"• useMemo object را memoize می‌کند و reference را ثابت نگه می‌دارد\n" +
+                    "- dependencies مشخص می‌کنند چه زمانی object باید update شود\n" +
+                    "- این بهترین و ساده‌ترین راه برای optimization است\n" +
+                    "- JSON.stringify یا memo کردن Provider کار نمی‌کند\n" +
+                    "- همیشه این pattern را برای Context values دنبال کنید"
+    },
+    {
+        "id": 169,
+        "question": "How does React.memo reduce Context consumer re-renders?",
+        options: [
+            "Re-renders only when component props change, not context",
+            "Forces all consumers to render together for consistency",
+            "Automatically memoizes Context values in provider components",
+            "Uses shallow comparison for context updates instead"
+        ],
+        "correctOption": 0,
+        "points": 20,
+                "explanation":"• React.memo props را check می‌کند نه Context\n" +
+                    "- اگر props تغییر نکرده باشد، component re-render نمی‌شود\n" +
+                    "- اما اگر Context تغییر کند، باز هم re-render می‌شود\n" +
+                    "- برای جلوگیری کامل، Context را نیز optimize کنید\n" +
+                    "- ترکیب هر دو technique بهترین نتیجه را می‌دهد"
+    },
+    {
+        "id": 170,
+        "question": "What combination best reduces Context-related wasted renders?",
+        options: [
+            "useMemo for values, React.memo for consumers, children pattern",
+            "useMemo for values, partial memoization, separate state contexts",
+            "useCallback for values, React.memo for consumers, split contexts",
+            "useState for values, class consumers, single global contexts"
+        ],
+        "correctOption": 0,
+        "points": 20,
+                "explanation":"• ترکیب useMemo (برای values) + React.memo (برای consumers) + children pattern بهترین است\n" +
+                    "- useMemo از re-creation غیرضروری value جلوگیری می‌کند\n" +
+                    "- React.memo از re-render غیرضروری consumers جلوگیری می‌کند\n" +
+                    "- children pattern فقط قسمت‌های لازم را re-render می‌کند\n" +
+                    "- این سه تکنیک با هم، بهترین performance را می‌دهند"
+    },
 //     {
 //         "id": 151,
 //         "question": "What does bundle size represent in React applications?",
