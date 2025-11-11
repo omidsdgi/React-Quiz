@@ -3344,7 +3344,7 @@ export const mockQuestions: Question[] = [
             "- از ایجاد infinite loops جلوگیری می‌کند"
     },
 //{
-//     "id": 1435,
+//     "id": 212,
 //     "question": "What is lifting state up in React?",
 //     "options": [
 //         "Moving state to higher component in tree",
@@ -3357,7 +3357,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 // },
 // {
-//     "id": 1436,
+//     "id": 213,
 //     "question": "When should you lift state up?",
 //     "options": [
 //         "Always lift all state to root",
@@ -3370,7 +3370,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 // },
 // {
-//     "id": 1437,
+//     "id": 214,
 //     "question": "What is derived state in React?",
 //     "options": [
 //         "State inherited from parent component",
@@ -3383,7 +3383,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 // },
 // {
-//     "id": 1438,
+//     "id": 215,
 //     "question": "Why should you avoid storing derived state?",
 //     "options": [
 //         "Derived state is slower to access",
@@ -3396,7 +3396,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 // },
 // {
-//     "id": 1439,
+//     "id": 216,
 //     "question": "What is the single source of truth principle?",
 //     "options": [
 //         "Using only one state management library",
@@ -3409,7 +3409,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 // },
 // {
-//     "id": 1440,
+//     "id": 217,
 //     "question": "What is state colocation in React?",
 //     "options": [
 //         "Placing all state in root component",
@@ -3422,7 +3422,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 // },
 // {
-//     "id": 1441,
+//     "id": 218,
 //     "question": "When should you use useReducer instead of useState?",
 //     "options": [
 //         "Always use useReducer for better performance",
@@ -3435,7 +3435,7 @@ export const mockQuestions: Question[] = [
 //                 "explanation":""
 // },
 // {
-//     "id": 1442,
+//     "id": 219,
 //     "question": "What is state normalization in React?",
 //     "options": [
 //         "Converting state to normal distribution",
@@ -3447,83 +3447,104 @@ export const mockQuestions: Question[] = [
 //     "points": 30,
 //                 "explanation":""
 // },
-//     {
-//         "id": 195,
-//         "question":  "What causes the stale closure problem in effects or callbacks?",
-//         "options": [
-//             "Functions automatically rebind to latest state and props",
-//             "Functions hold snapshots from when they were created",
-//             "React intentionally freezes state values after initial render",
-//             "Closures only work with primitive values in JavaScript"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 197,
-//         "question":"What is the best way to prevent the stale closure problem?",
-//         "options": [
-//             "Always use global variables instead of state",
-//             "Freeze objects in state for consistency",
-//             "Add current state or props as dependencies",
-//             "Avoid using closures in React components"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         id: 198,
-//         question: "What is Redux?",
-//         options: [
-//             "A predictable state management library",
-//             "A library for styling React components",
-//             "A built-in React API for managing side effects",
-//             "A tool for minifying JavaScript bundles"
-//         ],
-//         correctOption: 0,
-//         points: 10,
-//             "explanation": ""
-//     },
-//     {
-//         id: 199,
-//         question: "Is Redux specific to React applications?",
-//         "options": [
-//             "Yes, it only works with React",
-//             "No, it only works with Angular applications",
-//             "No, it can be used with any JavaScript application",
-//             "Yes, Redux is part of React core"
-//         ],
-//         correctOption: 2,
-//         points: 20,
-//             "explanation": ""
-//     },
-//     {
-//         id: 202,
-//         question: "Why must Redux reducers avoid asynchronous operations?",
-//         options: [
-//             "Async operations make reducers unpredictable",
-//             "Reducers cannot return promises in JavaScript",
-//             "Async operations always cause memory leaks",
-//             "Reducers can only process primitive data types"
-//         ],
-//         correctOption: 0,
-//         points: 20,
-//             "explanation": ""
-//     },
-//     {
-//         id: 203,
-//         question:  "What is the primary difference between Redux and useReducer?",
-//         options: [
-//             "Redux is synchronous, useReducer is asynchronous",
-//             "Redux manages global state, useReducer manages local state",
-//             "Redux handles styling, useReducer manages state",
-//             "Redux stores strings, useReducer handles objects"
-//         ],
-//         correctOption: 1,
-//         points: 20
-//     },
+    {
+        "id": 220,
+        "question":  "What causes the stale closure problem in effects or callbacks?",
+        "options": [
+            "Functions automatically rebind to latest state and props",
+            "Functions hold snapshots from when they were created",
+            "React intentionally freezes state values after initial render",
+            "Closures only work with primitive values in JavaScript"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• functions snapshot از مقادیر زمان ایجاد را نگه می‌دارند\n" +
+            "- اگر reactive values در deps نباشند، مقادیر قدیمی را می‌بینند\n" +
+            "- JavaScript closure چنین رفتار می‌کند\n" +
+            "- React این مشکل را با dependency arrays حل می‌کند\n" +
+            "- همیشه تمام reactive values را اضافه کنید"
+    },
+    {
+        "id": 221,
+        "question":"What is the best way to prevent the stale closure problem?",
+        "options": [
+            "Always use global variables instead of state",
+            "Freeze objects in state for consistency",
+            "Add current state or props as dependencies",
+            "Avoid using closures in React components"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• همه reactive values را در dependency array قرار دهید\n" +
+            "- ESLint warnings را جدی بگیرید و رفع کنید\n" +
+            "- از useCallback/useMemo برای stability استفاده کنید\n" +
+            "- یا functions را داخل effect بیاورید\n" +
+            "- testing به شناسایی این bugs کمک می‌کند"
+    },
+    {
+        id: 222,
+        question: "What is Redux?",
+        options: [
+            "A predictable state management library",
+            "A library for styling React components",
+            "A built-in React API for managing side effects",
+            "A tool for minifying JavaScript bundles"
+        ],
+        correctOption: 0,
+        points: 10,
+        "explanation": "• Redux یک کتابخانه state management پیش‌بینی‌پذیر است\n" +
+            "- state را در یک store مرکزی نگه می‌دارد\n" +
+            "- با actions و reducers state را update می‌کند\n" +
+            "- مستقل از React است اما با آن کار می‌کند\n" +
+            "- برای state management پیچیده مناسب است"
+    },
+    {
+        id: 223,
+        question: "Is Redux specific to React applications?",
+        "options": [
+            "Yes, it only works with React",
+            "No, it only works with Angular applications",
+            "No, it can be used with any JavaScript application",
+            "Yes, Redux is part of React core"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation": "• Redux مستقل از React است\n" +
+            "- می‌تواند با Angular، Vue یا vanilla JS استفاده شود\n" +
+            "- react-redux برای اتصال به React استفاده می‌شود\n" +
+            "- Redux یک الگوی architecture است نه React-specific\n" +
+            "- اما بیشتر در اکوسیستم React استفاده می‌شود"
+    },
+    {
+        id: 224,
+        question: "Why must Redux reducers avoid asynchronous operations?",
+        options: [
+            "Async operations make reducers unpredictable",
+            "Reducers cannot return promises in JavaScript",
+            "Async operations always cause memory leaks",
+            "Reducers can only process primitive data types"
+        ],
+        correctOption: 0,
+        points: 20,
+        "explanation": "• reducers باید pure functions باشند\n" +
+            "- async operations نتایج غیرقابل پیش‌بینی دارند\n" +
+            "- Redux به synchronous updates متکی است\n" +
+            "- برای async از middleware مثل Redux Thunk استفاده کنید\n" +
+            "- purity باعث قابلیت test و debug می‌شود"
+    },
+    {
+        id: 203,
+        question:  "What is the primary difference between Redux and useReducer?",
+        options: [
+            "Redux is synchronous, useReducer is asynchronous",
+            "Redux manages global state, useReducer manages local state",
+            "Redux handles styling, useReducer manages state",
+            "Redux stores strings, useReducer handles objects"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":""
+    },
 //     {
 //         id: 207,
 //         question: "Why use multiple reducers in a Redux application?",
