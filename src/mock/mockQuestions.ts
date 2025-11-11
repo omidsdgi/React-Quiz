@@ -3139,162 +3139,210 @@ export const mockQuestions: Question[] = [
             "- به جلوگیری از stale closure کمک می‌کند\n" +
             "- حتماً آن را در پروژه نصب و فعال کنید"
     },
-//     {
-//         "id": 182,
-//         "question":  "Why must context values used in useEffect be included in dependency arrays?",
-//         "options": [
-//             "React automatically tracks context changes",
-//             "Effects may read outdated context values",
-//             "useEffect ignores context values unless explicitly listed",
-//             "React serializes context values for comparison"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 183,
-//         "question": "What is a stale closure in React hooks?",
-//         "options": [
-//             "A closure that captures outdated values from previous renders",
-//             "A closure preserved in memory for deterministic updates",
-//             "A closure garbage collected after re-rendering",
-//             "A closure created when multiple effects overlap"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 184,
-//         "question": "Why should objects not be used directly as dependencies in hooks?",
-//         "options": [
-//             "React deeply compares objects causing performance issues",
-//             "Objects cannot be serialized into dependency arrays",
-//             "Objects are compared by reference causing unnecessary re-runs",
-//             "Objects cause memory leaks in React&apos;s fiber architecture"
-//         ],
-//         "correctOption":2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 185,
-//         "question": "How can you prevent unnecessary re-runs when a function causes dependency issues?",
-//         "options": [
-//             "Declare the function as a global variable",
-//             "Wrap the function in React.memo",
-//             "Move the function into the effect or memoize with useCallback",
-//             "Call the function conditionally to avoid dependencies"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 186,
-//         "question": "What is the best practice for functions that don't reference reactive values?",
-//         "options": [
-//             "Keep them inside components but wrap with useEffect",
-//             "Move them outside the component to avoid recreation",
-//             "Memoize them with useMemo for stability",
-//             "Convert them to static methods in React.memo"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 187,
-//         "question": "Instead of adding entire objects as dependencies in React hooks, what is the better practice?",
-//         "options": [
-//             "Include only specific properties of the object that code actually uses.",
-//             "Use JSON.stringify on objects for value comparison",
-//             "Clone objects and memoize with useCallback",
-//             "Convert objects to primitive values at runtime"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 188,
-//         "question": "How can you fix objects that don't work correctly as dependencies?",
-//         "options": [
-//             "Wrap objects in React.memo to prevent recreation",
-//             "Place objects inside state variables for deep comparison",
-//             "Convert objects into functions and call inside useEffect",
-//             "Move or memoize objects to keep references stable"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 189,
-//         "question":  "What pattern works better when you have multiple related reactive values?",
-//         "options": [
-//             "Store them inside useRef to avoid re-renders",
-//             "Combine them with useReducer for stability",
-//             "Merge them into one object and stringify for comparison",
-//             "Wrap them all in useMemo for shorter dependency arrays"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 190,
-//         "question": "Why is useEffect often described as an 'escape hatch' in React?",
-//         "options": [
-//             "It allows side effects when props or state change",
-//             "It's the primary mechanism for all business logic",
-//             "It ensures synchronous rendering with immediate DOM updates",
-//             "It bypasses React&apos;s reconciliation algorithm safely"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 191,
-//         "question":"Why should useEffect be considered a last resort?",
-//         "options": [
-//             "useEffect causes memory leaks by default",
-//             "React discourages side effects entirely",
-//             "Most effects can be avoided by deriving state or using event handlers",
-//             "useEffect blocks rendering until completion"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 192,
-//         "question": "Which is NOT a recommended use case for useEffect?",
-//         "options": [
-//             "Synchronizing external systems when props change",
-//             "Updating state in response to user button clicks",
-//             "Fetching data on component mount",
-//             "Subscribing to global events with cleanup"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 193,
-//         "question": "What is the recommended way to synchronize multiple state variables?",
-//         "options": [
-//             "Derive one state from another or use a single reducer",
-//             "Use multiple useEffect hooks for each state variable",
-//             "Store related states in a ref object and mutate directly",
-//             "Use context providers to automatically sync states"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
+    {
+        "id": 201,
+        "question":  "Why must context values used in useEffect be included in dependency arrays?",
+        "options": [
+            "React automatically tracks context changes",
+            "Effects may read outdated context values",
+            "useEffect ignores context values unless explicitly listed",
+            "React serializes context values for comparison"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• context values می‌توانند تغییر کنند\n" +
+            "- بدون اضافه کردن به deps، effect مقدار قدیمی را می‌بیند\n" +
+            "- مانند props و state، reactive هستند\n" +
+            "- ESLint آن‌ها را شناسایی می‌کند\n" +
+            "- همیشه context values استفاده شده را اضافه کنید"
+    },
+    {
+        "id": 202,
+        "question": "What is a stale closure in React hooks?",
+        "options": [
+            "A closure that captures outdated values from previous renders",
+            "A closure preserved in memory for deterministic updates",
+            "A closure garbage collected after re-rendering",
+            "A closure created when multiple effects overlap"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• closure ای که مقادیر قدیمی از renders قبلی را capture کرده\n" +
+            "- زمانی اتفاق می‌افتد که dependencies کامل نباشند\n" +
+            "- function مقدار فعلی reactive values را نمی‌بیند\n" +
+            "- باعث bugs پنهان و رفتار غیرمنتظره می‌شود\n" +
+            "- با اضافه کردن صحیح dependencies حل می‌شود"
+    },
+    {
+        "id": 203,
+        "question": "Why should objects not be used directly as dependencies in hooks?",
+        "options": [
+            "React deeply compares objects causing performance issues",
+            "Objects cannot be serialized into dependency arrays",
+            "Objects are compared by reference causing unnecessary re-runs",
+            "Objects cause memory leaks in React&apos;s fiber architecture"
+        ],
+        "correctOption":2,
+        "points": 30,
+        "explanation":"• objects در هر render reference جدید می‌گیرند\n" +
+            "- React با === مقایسه می‌کند نه deep equality\n" +
+            "- باعث re-run غیرضروری effect یا callback می‌شود\n" +
+            "- باید object را memoize کنید یا properties خاص را استفاده کنید\n" +
+            "- این یکی از مشکلات رایج در React است"
+    },
+    {
+        "id": 204,
+        "question": "How can you prevent unnecessary re-runs when a function causes dependency issues?",
+        "options": [
+            "Declare the function as a global variable",
+            "Wrap the function in React.memo",
+            "Move the function into the effect or memoize with useCallback",
+            "Call the function conditionally to avoid dependencies"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• function را با useCallback wrap کنید\n" +
+            "- یا function را داخل effect بیاورید\n" +
+            "- یا function را خارج از component تعریف کنید\n" +
+            "- functions در هر render دوباره ساخته می‌شوند\n" +
+            "- useCallback reference ثابت ایجاد می‌کند"
+    },
+    {
+        "id": 205,
+        "question": "What is the best practice for functions that don't reference reactive values?",
+        "options": [
+            "Keep them inside components but wrap with useEffect",
+            "Move them outside the component to avoid recreation",
+            "Memoize them with useMemo for stability",
+            "Convert them to static methods in React.memo"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• functions بدون reactive values را خارج از component ببرید\n" +
+            "- دیگر نیازی به dependency array یا useCallback نیست\n" +
+            "- performance بهتر و کد ساده‌تر می‌شود\n" +
+            "- فقط زمانی داخل component بمانند که به props/state نیاز دارند\n" +
+            "- این بهترین و ساده‌ترین راه است"
+    },
+    {
+        "id": 206,
+        "question": "Instead of adding entire objects as dependencies in React hooks, what is the better practice?",
+        "options": [
+            "Include only specific properties of the object that code actually uses.",
+            "Use JSON.stringify on objects for value comparison",
+            "Clone objects and memoize with useCallback",
+            "Convert objects to primitive values at runtime"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• فقط properties خاصی که استفاده می‌شود را اضافه کنید\n" +
+            "- مثلاً به جای user، فقط user.id اضافه کنید\n" +
+            "- از re-runs غیرضروری جلوگیری می‌کند\n" +
+            "- کد واضح‌تر و dependency list خواناتر می‌شود\n" +
+            "- یکی از بهترین practices در React است"
+    },
+    {
+        "id": 207,
+        "question": "How can you fix objects that don't work correctly as dependencies?",
+        "options": [
+            "Wrap objects in React.memo to prevent recreation",
+            "Place objects inside state variables for deep comparison",
+            "Convert objects into functions and call inside useEffect",
+            "Move or memoize objects to keep references stable"
+        ],
+        "correctOption": 3,
+        "points": 30,
+       "explanation":"• object را با useMemo wrap کنید تا reference ثابت شود\n" +
+           "- یا object را خارج از component ببرید\n" +
+           "- یا فقط properties لازم را در deps بگذارید\n" +
+           "- useMemo فقط زمان تغییر dependencies object جدید می‌سازد\n" +
+           "- مشکل reference equality حل می‌شود"
+    },
+    {
+        "id": 208,
+        "question":  "What pattern works better when you have multiple related reactive values?",
+        "options": [
+            "Store them inside useRef to avoid re-renders",
+            "Combine them with useReducer for stability",
+            "Merge them into one object and stringify for comparison",
+            "Wrap them all in useMemo for shorter dependency arrays"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• useReducer برای state مرتبط بهتر از useState جداگانه است\n" +
+            "- همه state در یک object می‌آید\n" +
+            "- dispatch function stable است و نیاز به deps ندارد\n" +
+            "- logic به reducer منتقل می‌شود\n" +
+            "- dependency arrays ساده‌تر و کوتاه‌تر می‌شوند"
+    },
+    {
+        "id": 209,
+        "question": "Why is useEffect often described as an 'escape hatch' in React?",
+        "options": [
+            "It allows side effects when props or state change",
+            "It's the primary mechanism for all business logic",
+            "It ensures synchronous rendering with immediate DOM updates",
+            "It bypasses React&apos;s reconciliation algorithm safely"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• useEffect برای synchronization با سیستم‌های خارج از React است\n" +
+            "- مثل APIs، DOM، subscriptions\n" +
+            "- نباید برای orchestration بین state ها استفاده شود\n" +
+            "- اکثر موارد با derived state یا event handlers حل می‌شود\n" +
+            "- فقط زمانی که واقعاً نیاز است استفاده کنید"
+    },
+    {
+        "id": 210,
+        "question":"Why should useEffect be considered a last resort?",
+        "options": [
+            "useEffect causes memory leaks by default",
+            "React discourages side effects entirely",
+            "Most effects can be avoided by deriving state or using event handlers",
+            "useEffect blocks rendering until completion"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• اغلب می‌توان از useEffect اجتناب کرد\n" +
+            "- derived state بهتر از effect برای محاسبات است\n" +
+            "- event handlers بهتر از effect برای user actions هستند\n" +
+            "- effects باعث پیچیدگی و bugs می‌شوند\n" +
+            "- ابتدا راه‌های دیگر را بررسی کنید"
+    },
+    {
+        "id": 211,
+        "question": "Which is NOT a recommended use case for useEffect?",
+        "options": [
+            "Synchronizing external systems when props change",
+            "Updating state in response to user button clicks",
+            "Fetching data on component mount",
+            "Subscribing to global events with cleanup"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• برای response به user interactions از event handlers استفاده کنید\n" +
+            "- useEffect برای side effects پس از render است\n" +
+            "- onClick بهتر از useEffect برای button clicks است\n" +
+            "- effect نباید جایگزین event handlers شود\n" +
+            "- هر کدام use case خاص خود را دارند"
+    },
+    {
+        "id": 211,
+        "question": "What is the recommended way to synchronize multiple state variables?",
+        "options": [
+            "Derive one state from another or use a single reducer",
+            "Use multiple useEffect hooks for each state variable",
+            "Store related states in a ref object and mutate directly",
+            "Use context providers to automatically sync states"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• یک state را از دیگری derive کنید\n" +
+            "- یا از useReducer برای state مرتبط استفاده کنید\n" +
+            "- نیازی به useEffect برای sync کردن نیست\n" +
+            "- این ساده‌تر و کم bug تر است\n" +
+            "- از ایجاد infinite loops جلوگیری می‌کند"
+    },
 //{
 //     "id": 1435,
 //     "question": "What is lifting state up in React?",
