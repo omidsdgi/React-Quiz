@@ -836,11 +836,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-       "explanation": "• تغییر state فقط یکی از دلایل render است\n" +
-           "- re-render شدن parent باعث render فرزندان می‌شود\n" +
-           "- تغییر Context value تمام consumers را render می‌کند\n" +
-           "- تغییر props نیز باعث render می‌شود (در واقع به خاطر parent re-render)\n" +
-           "- forceUpdate در class components نیز render را trigger می‌کند"
+        "explanation": "• تغییر state فقط یکی از دلایل render است\n" +
+            "- re-render شدن parent باعث render فرزندان می‌شود\n" +
+            "- تغییر Context value تمام consumers را render می‌کند\n" +
+            "- تغییر props نیز باعث render می‌شود (در واقع به خاطر parent re-render)\n" +
+            "- forceUpdate در class components نیز render را trigger می‌کند"
     },
     {
         "id": 53,
@@ -1146,10 +1146,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-                "explanation":"• نباید objects را mutate کند\n" +
-                    "- نباید مستقیم state را update کند\n" +
-                    "- نباید side effects (API calls) داشته باشد\n" +
-                    "- باید pure function باشد"
+        "explanation":"• نباید objects را mutate کند\n" +
+            "- نباید مستقیم state را update کند\n" +
+            "- نباید side effects (API calls) داشته باشد\n" +
+            "- باید pure function باشد"
     },
     {
         "id": 72,
@@ -1162,10 +1162,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-                "explanation":"• React ممکن است چندین بار component را render کند\n" +
-                    "- pure functions نتایج قابل پیش‌بینی دارند\n" +
-                    "- امکان optimization و concurrent rendering را فراهم می‌کند\n" +
-                    "- debugging و testing راحت‌تر می‌شود"
+        "explanation":"• React ممکن است چندین بار component را render کند\n" +
+            "- pure functions نتایج قابل پیش‌بینی دارند\n" +
+            "- امکان optimization و concurrent rendering را فراهم می‌کند\n" +
+            "- debugging و testing راحت‌تر می‌شود"
     },
     {
         "id": 73,
@@ -1178,10 +1178,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":"• در useEffect برای side effects بعد از render\n" +
-                    "- در event handlers برای user interactions\n" +
-                    "- نه در render logic که هر render اجرا می‌شود\n" +
-                    "- React lifecycle methods در class components"
+        "explanation":"• در useEffect برای side effects بعد از render\n" +
+            "- در event handlers برای user interactions\n" +
+            "- نه در render logic که هر render اجرا می‌شود\n" +
+            "- React lifecycle methods در class components"
     },
     {
         "id": 74,
@@ -1194,10 +1194,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-                "explanation":"• handlers می‌توانند side effects داشته باشند\n" +
-                    "- handlers فقط در پاسخ به events اجرا می‌شوند\n" +
-                    "- render logic در هر render اجرا می‌شود و باید pure باشد\n" +
-                    "- handlers می‌توانند async باشند و API call کنند"
+        "explanation":"• handlers می‌توانند side effects داشته باشند\n" +
+            "- handlers فقط در پاسخ به events اجرا می‌شوند\n" +
+            "- render logic در هر render اجرا می‌شود و باید pure باشد\n" +
+            "- handlers می‌توانند async باشند و API call کنند"
     },
     {
         "id": 75,
@@ -1210,10 +1210,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":"• فقط زمانی که event مربوطه رخ می‌دهد\n" +
-                    "- مثلا onClick وقتی کاربر کلیک می‌کند\n" +
-                    "- onChange وقتی input تغییر می‌کند\n" +
-                    "- نه در هنگام render شدن component"
+        "explanation":"• فقط زمانی که event مربوطه رخ می‌دهد\n" +
+            "- مثلا onClick وقتی کاربر کلیک می‌کند\n" +
+            "- onChange وقتی input تغییر می‌کند\n" +
+            "- نه در هنگام render شدن component"
     },
     {
         "id": 76,
@@ -1226,10 +1226,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-                "explanation":"• side effects در render logic مشکل ایجاد می‌کنند\n" +
-                    "- useEffect بعد از render و commit اجرا می‌شود\n" +
-                    "- امکان cleanup برای جلوگیری از memory leaks\n" +
-                    "- dependency array رفتار اجرا را کنترل می‌کند"
+        "explanation":"• side effects در render logic مشکل ایجاد می‌کنند\n" +
+            "- useEffect بعد از render و commit اجرا می‌شود\n" +
+            "- امکان cleanup برای جلوگیری از memory leaks\n" +
+            "- dependency array رفتار اجرا را کنترل می‌کند"
     },
     {
         "id": 77,
@@ -1242,10 +1242,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":"• ثبت side effects که بعد از render اجرا شوند\n" +
-                    "- مثل data fetching، subscriptions، DOM manipulation\n" +
-                    "- جایگزین lifecycle methods در functional components\n" +
-                    "- با dependency array می‌توان رفتار را کنترل کرد"
+        "explanation":"• ثبت side effects که بعد از render اجرا شوند\n" +
+            "- مثل data fetching، subscriptions، DOM manipulation\n" +
+            "- جایگزین lifecycle methods در functional components\n" +
+            "- با dependency array می‌توان رفتار را کنترل کرد"
     },
     {
         "id": 78,
@@ -1258,10 +1258,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-                "explanation":"• چندین setState به یک re-render تبدیل می‌شود\n" +
-                    "- از renders غیرضروری جلوگیری می‌کند\n" +
-                    "- UI فقط یک بار به‌روز می‌شود\n" +
-                    "- CPU و browser resources کمتر مصرف می‌شود"
+        "explanation":"• چندین setState به یک re-render تبدیل می‌شود\n" +
+            "- از renders غیرضروری جلوگیری می‌کند\n" +
+            "- UI فقط یک بار به‌روز می‌شود\n" +
+            "- CPU و browser resources کمتر مصرف می‌شود"
     },
     {
         "id": 79,
@@ -1274,10 +1274,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-                "explanation":"• در React 18+ همه updates batch می‌شوند\n" +
-                    "- حتی در promises، setTimeout و async functions\n" +
-                    "- در React 17 فقط در event handlers batch بود\n" +
-                    "- می‌توان با flushSync batching را غیرفعال کرد"
+        "explanation":"• در React 18+ همه updates batch می‌شوند\n" +
+            "- حتی در promises، setTimeout و async functions\n" +
+            "- در React 17 فقط در event handlers batch بود\n" +
+            "- می‌توان با flushSync batching را غیرفعال کرد"
     },
     {
         "id": 80,
@@ -1290,10 +1290,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-                "explanation":"• React آن‌ها را batch می‌کند\n" +
-                    "- فقط یک re-render اتفاق می‌افتد\n" +
-                    "- state نهایی بعد از اعمال همه updates محاسبه می‌شود\n" +
-                    "- می‌توان از functional updates برای اطمینان استفاده کرد"
+        "explanation":"• React آن‌ها را batch می‌کند\n" +
+            "- فقط یک re-render اتفاق می‌افتد\n" +
+            "- state نهایی بعد از اعمال همه updates محاسبه می‌شود\n" +
+            "- می‌توان از functional updates برای اطمینان استفاده کرد"
     },
     {
         "id": 81,
@@ -1306,10 +1306,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-                "explanation":"• با استفاده از flushSync از react-dom\n" +
-                    "- updates را synchronously اعمال می‌کند\n" +
-                    "- معمولا نیازی نیست و باید با احتیاط استفاده شود\n" +
-                    "- ممکن است performance را کاهش دهد"
+        "explanation":"• با استفاده از flushSync از react-dom\n" +
+            "- updates را synchronously اعمال می‌کند\n" +
+            "- معمولا نیازی نیست و باید با احتیاط استفاده شود\n" +
+            "- ممکن است performance را کاهش دهد"
     },
     {
         "id": 82,
@@ -1322,10 +1322,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-                "explanation":"• Render Phase: محاسبه Virtual DOM جدید\n" +
-                    "- Commit Phase: اعمال تغییرات به DOM\n" +
-                    "- Browser Paint: رسم pixels توسط مرورگر\n" +
-                    "- این ترتیب همیشه رعایت می‌شود"
+        "explanation":"• Render Phase: محاسبه Virtual DOM جدید\n" +
+            "- Commit Phase: اعمال تغییرات به DOM\n" +
+            "- Browser Paint: رسم pixels توسط مرورگر\n" +
+            "- این ترتیب همیشه رعایت می‌شود"
     },
     {
         "id": 83,
@@ -1338,10 +1338,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-                "explanation":"• Render Phase component functions را صدا می‌زند\n" +
-                    "- Virtual DOM tree ساخته می‌شود\n" +
-                    "- هیچ DOM update در این مرحله نیست\n" +
-                    "- می‌تواند چندین بار برای یک component اجرا شود"
+        "explanation":"• Render Phase component functions را صدا می‌زند\n" +
+            "- Virtual DOM tree ساخته می‌شود\n" +
+            "- هیچ DOM update در این مرحله نیست\n" +
+            "- می‌تواند چندین بار برای یک component اجرا شود"
     },
     {
         "id": 84,
@@ -1354,10 +1354,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":"• Commit Phase تغییرات را به DOM اعمال می‌کند\n" +
-                    "- React DOM API calls را اجرا می‌کند\n" +
-                    "- این مرحله synchronous و غیرقابل وقفه است\n" +
-                    "- بعد از آن useEffect و useLayoutEffect اجرا می‌شوند"
+        "explanation":"• Commit Phase تغییرات را به DOM اعمال می‌کند\n" +
+            "- React DOM API calls را اجرا می‌کند\n" +
+            "- این مرحله synchronous و غیرقابل وقفه است\n" +
+            "- بعد از آن useEffect و useLayoutEffect اجرا می‌شوند"
     },
     {
         "id": 85,
@@ -1370,10 +1370,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-                "explanation":"• بله، اگر Reconciliation تفاوتی پیدا نکند\n" +
-                    "- Commit Phase skip می‌شود\n" +
-                    "- component render شد اما DOM update نشد\n" +
-                    "- این optimization مهمی است"
+        "explanation":"• بله، اگر Reconciliation تفاوتی پیدا نکند\n" +
+            "- Commit Phase skip می‌شود\n" +
+            "- component render شد اما DOM update نشد\n" +
+            "- این optimization مهمی است"
     },
     {
         "id": 86,
@@ -1386,10 +1386,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-                "explanation":"• Instance با render شدن React Element برمی‌گرداند\n" +
-                    "- Element توضیح می‌دهد UI چگونه باید باشد\n" +
-                    "- شامل type، props و children است\n" +
-                    "- این Element بعدا به DOM تبدیل می‌شود"
+        "explanation":"• Instance با render شدن React Element برمی‌گرداند\n" +
+            "- Element توضیح می‌دهد UI چگونه باید باشد\n" +
+            "- شامل type، props و children است\n" +
+            "- این Element بعدا به DOM تبدیل می‌شود"
     },
     {
         "id": 87,
@@ -1402,10 +1402,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-                "explanation":"• type مشخص می‌کند چه نوع DOM node ساخته شود\n" +
-                    "- props به attributes و properties تبدیل می‌شوند\n" +
-                    "- children به child nodes تبدیل می‌شوند\n" +
-                    "- React DOM این تبدیل را انجام می‌دهد"
+        "explanation":"• type مشخص می‌کند چه نوع DOM node ساخته شود\n" +
+            "- props به attributes و properties تبدیل می‌شوند\n" +
+            "- children به child nodes تبدیل می‌شوند\n" +
+            "- React DOM این تبدیل را انجام می‌دهد"
     },
     {
         "id": 88,
@@ -1418,10 +1418,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-                "explanation":"• class names می‌توانند با هم conflict داشته باشند\n" +
-                    "- تغییر یک style می‌تواند جاهای دیگر را خراب کند\n" +
-                    "- hard to maintain و debug است\n" +
-                    "- CSS Modules یا CSS-in-JS این مشکل را حل می‌کنند"
+        "explanation":"• class names می‌توانند با هم conflict داشته باشند\n" +
+            "- تغییر یک style می‌تواند جاهای دیگر را خراب کند\n" +
+            "- hard to maintain و debug است\n" +
+            "- CSS Modules یا CSS-in-JS این مشکل را حل می‌کنند"
     },
     {
         "id": 89,
@@ -1434,10 +1434,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-                "explanation":"• useSearchParams برای خواندن و تنظیم query strings\n" +
-                    "- مثل useState کار می‌کند اما با URL sync است\n" +
-                    "- تغییرات URL را track می‌کند\n" +
-                    "- برای filters، pagination و search مفید است"
+        "explanation":"• useSearchParams برای خواندن و تنظیم query strings\n" +
+            "- مثل useState کار می‌کند اما با URL sync است\n" +
+            "- تغییرات URL را track می‌کند\n" +
+            "- برای filters، pagination و search مفید است"
     },
     {
         "id": 90,
@@ -1450,10 +1450,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-                "explanation":"• localStorage یا sessionStorage برای persist کردن\n" +
-                    "- URL searchParams برای state قابل share\n" +
-                    "- cookies برای server-side accessible state\n" +
-                    "- useState و Context بعد از refresh از بین می‌روند"
+        "explanation":"• localStorage یا sessionStorage برای persist کردن\n" +
+            "- URL searchParams برای state قابل share\n" +
+            "- cookies برای server-side accessible state\n" +
+            "- useState و Context بعد از refresh از بین می‌روند"
     },
     {
         "id": 91,
@@ -1466,10 +1466,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":"• از re-render جلوگیری می‌کند اگر props تغییر نکرده باشند\n" +
-                    "- shallow comparison روی props انجام می‌دهد\n" +
-                    "- برای components پرهزینه مفید است\n" +
-                    "- می‌توان custom comparison function داد"
+        "explanation":"• از re-render جلوگیری می‌کند اگر props تغییر نکرده باشند\n" +
+            "- shallow comparison روی props انجام می‌دهد\n" +
+            "- برای components پرهزینه مفید است\n" +
+            "- می‌توان custom comparison function داد"
     },
     {
         "id": 92,
@@ -1482,10 +1482,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-                "explanation":"• Context API برای sharing state بدون prop drilling\n" +
-                    "- composition pattern با children\n" +
-                    "- state management libraries مثل Redux\n" +
-                    "- custom hooks برای logic reuse"
+        "explanation":"• Context API برای sharing state بدون prop drilling\n" +
+            "- composition pattern با children\n" +
+            "- state management libraries مثل Redux\n" +
+            "- custom hooks برای logic reuse"
     },
     {
         "id": 93,
@@ -1498,10 +1498,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-                "explanation":"• useCallback: memoize کردن functions\n" +
-                    "- useMemo: memoize کردن computed values\n" +
-                    "- هر دو از re-creation جلوگیری می‌کنند\n" +
-                    "- dependency array رفتار را کنترل می‌کند"
+        "explanation":"• useCallback: memoize کردن functions\n" +
+            "- useMemo: memoize کردن computed values\n" +
+            "- هر دو از re-creation جلوگیری می‌کنند\n" +
+            "- dependency array رفتار را کنترل می‌کند"
     },
     {
         "id": 94,
@@ -1514,10 +1514,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":"• ساخت objects یا functions جدید در render\n" +
-                    "- reference جدید باعث re-render می‌شود\n" +
-                    "- باید از useMemo یا useCallback استفاده کرد\n" +
-                    "- یا objects را بیرون از component تعریف کرد"
+        "explanation":"• ساخت objects یا functions جدید در render\n" +
+            "- reference جدید باعث re-render می‌شود\n" +
+            "- باید از useMemo یا useCallback استفاده کرد\n" +
+            "- یا objects را بیرون از component تعریف کرد"
     },
     {
         "id": 95,
@@ -1530,10 +1530,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":"• به React کمک می‌کند items را track کند\n" +
-                    "- در reconciliation برای identify کردن تغییرات\n" +
-                    "- باید stable و unique باشد\n" +
-                    "- از index به عنوان key اجتناب کنید"
+        "explanation":"• به React کمک می‌کند items را track کند\n" +
+            "- در reconciliation برای identify کردن تغییرات\n" +
+            "- باید stable و unique باشد\n" +
+            "- از index به عنوان key اجتناب کنید"
     },
     {
         "id": 96,
@@ -1546,10 +1546,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-                "explanation":"• useMemo برای memoize کردن نتیجه محاسبات\n" +
-                    "- فقط وقتی dependencies تغییر کنند، دوباره محاسبه می‌شود\n" +
-                    "- برای محاسبات پرهزینه مفید است\n" +
-                    "- نباید برای همه چیز استفاده شود"
+        "explanation":"• useMemo برای memoize کردن نتیجه محاسبات\n" +
+            "- فقط وقتی dependencies تغییر کنند، دوباره محاسبه می‌شود\n" +
+            "- برای محاسبات پرهزینه مفید است\n" +
+            "- نباید برای همه چیز استفاده شود"
     },
     {
         "id": 97,
@@ -1562,10 +1562,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-                "explanation":"• با React.memo component را wrap کنید\n" +
-                    "- shallow comparison روی props انجام می‌دهد\n" +
-                    "- اگر props تغییر نکرده باشد، re-render نمی‌شود\n" +
-                    "- برای optimization استفاده می‌شود"
+        "explanation":"• با React.memo component را wrap کنید\n" +
+            "- shallow comparison روی props انجام می‌دهد\n" +
+            "- اگر props تغییر نکرده باشد، re-render نمی‌شود\n" +
+            "- برای optimization استفاده می‌شود"
     },
     {
         "id": 98,
@@ -1578,10 +1578,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":"• code splitting و lazy loading components\n" +
-                    "- bundle size کوچک‌تر برای initial load\n" +
-                    "- components فقط وقت نیاز load می‌شوند\n" +
-                    "- Suspense fallback در زمان loading نشان می‌دهد"
+        "explanation":"• code splitting و lazy loading components\n" +
+            "- bundle size کوچک‌تر برای initial load\n" +
+            "- components فقط وقت نیاز load می‌شوند\n" +
+            "- Suspense fallback در زمان loading نشان می‌دهد"
     },
     {
         "id": 99,
@@ -1594,10 +1594,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-                "explanation":"• وقتی props جدید objects یا functions هستند\n" +
-                    "- reference تغییر می‌کند حتی اگر محتوا یکسان باشد\n" +
-                    "- باید با useMemo یا useCallback ترکیب شود\n" +
-                    "- shallow comparison محدودیت دارد"
+        "explanation":"• وقتی props جدید objects یا functions هستند\n" +
+            "- reference تغییر می‌کند حتی اگر محتوا یکسان باشد\n" +
+            "- باید با useMemo یا useCallback ترکیب شود\n" +
+            "- shallow comparison محدودیت دارد"
     },
     {
         "id": 100,
@@ -1610,10 +1610,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-                "explanation":"• زمان صرف شده برای اعمال updates به DOM\n" +
-                    "- شامل lifecycle methods و effects است\n" +
-                    "- بعد از Render phase اتفاق می‌افتد\n" +
-                    "- برای identify کردن performance bottlenecks مفید است"
+        "explanation":"• زمان صرف شده برای اعمال updates به DOM\n" +
+            "- شامل lifecycle methods و effects است\n" +
+            "- بعد از Render phase اتفاق می‌افتد\n" +
+            "- برای identify کردن performance bottlenecks مفید است"
     },
     {
         "id": 101,
@@ -1626,10 +1626,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-                "explanation":"• virtualization یا windowing با react-window\n" +
-                    "- فقط items قابل مشاهده render می‌شوند\n" +
-                    "- performance را برای هزاران item بهبود می‌دهد\n" +
-                    "- از render کردن تمام items جلوگیری می‌کند"
+        "explanation":"• virtualization یا windowing با react-window\n" +
+            "- فقط items قابل مشاهده render می‌شوند\n" +
+            "- performance را برای هزاران item بهبود می‌دهد\n" +
+            "- از render کردن تمام items جلوگیری می‌کند"
     },
     {
         "id": 102,
@@ -1642,10 +1642,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 10,
-                "explanation":"• useMemo برای memoize کردن values\n" +
-                    "- محاسبه فقط وقتی dependencies تغییر کنند\n" +
-                    "- از محاسبات غیرضروری جلوگیری می‌کند\n" +
-                    "- برای expensive operations مفید است"
+        "explanation":"• useMemo برای memoize کردن values\n" +
+            "- محاسبه فقط وقتی dependencies تغییر کنند\n" +
+            "- از محاسبات غیرضروری جلوگیری می‌کند\n" +
+            "- برای expensive operations مفید است"
     },
     {
         "id": 103,
@@ -1658,10 +1658,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-                "explanation":"• کاهش تعداد re-renders غیرضروری\n" +
-                    "- کاهش bundle size با code splitting\n" +
-                    "- optimize کردن reconciliation با keys\n" +
-                    "- memoization برای محاسبات گران"
+        "explanation":"• کاهش تعداد re-renders غیرضروری\n" +
+            "- کاهش bundle size با code splitting\n" +
+            "- optimize کردن reconciliation با keys\n" +
+            "- memoization برای محاسبات گران"
     },
     {
         "id": 104,
@@ -1674,10 +1674,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-                "explanation":"• وقتی props objects یا arrays با reference جدید هستند\n" +
-                    "- وقتی component state داخلی تغییر می‌کند\n" +
-                    "- وقتی context value تغییر می‌کند\n" +
-                    "- shallow comparison تغییر را detect می‌کند"
+        "explanation":"• وقتی props objects یا arrays با reference جدید هستند\n" +
+            "- وقتی component state داخلی تغییر می‌کند\n" +
+            "- وقتی context value تغییر می‌کند\n" +
+            "- shallow comparison تغییر را detect می‌کند"
     },
     {
         "id": 105,
@@ -1690,10 +1690,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 10,
-                "explanation":"• useMemo value را cache می‌کند\n" +
-                    "- فقط با تغییر dependencies دوباره محاسبه می‌شود\n" +
-                    "- برای filtering، sorting یا processing data مفید است\n" +
-                    "- باید فقط برای expensive operations استفاده شود"
+        "explanation":"• useMemo value را cache می‌کند\n" +
+            "- فقط با تغییر dependencies دوباره محاسبه می‌شود\n" +
+            "- برای filtering، sorting یا processing data مفید است\n" +
+            "- باید فقط برای expensive operations استفاده شود"
     },
     {
         "id": 106,
@@ -1706,10 +1706,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-                "explanation":"• unsafe lifecycle methods و side effects\n" +
-                    "- component render می‌شود دوبار در development\n" +
-                    "- warnings برای deprecated APIs\n" +
-                    "- به production build اثری ندارد"
+        "explanation":"• unsafe lifecycle methods و side effects\n" +
+            "- component render می‌شود دوبار در development\n" +
+            "- warnings برای deprecated APIs\n" +
+            "- به production build اثری ندارد"
     },
     {
         "id": 107,
@@ -1722,10 +1722,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-                "explanation":"• memoize کردن function references\n" +
-                    "- از re-creation function در هر render جلوگیری می‌کند\n" +
-                    "- برای passing callbacks به memoized components\n" +
-                    "- dependency array تعیین می‌کند کی function جدید ساخته شود "
+        "explanation":"• memoize کردن function references\n" +
+            "- از re-creation function در هر render جلوگیری می‌کند\n" +
+            "- برای passing callbacks به memoized components\n" +
+            "- dependency array تعیین می‌کند کی function جدید ساخته شود "
     },
     {
         "id": 108,
@@ -1738,7 +1738,7 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption":1,
         "points": 20,
-                "explanation":""
+        "explanation":""
     },
     {
         "id": 109,
@@ -1751,7 +1751,7 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":""
+        "explanation":""
     },
     {
         "id": 110,
@@ -1764,7 +1764,7 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-                "explanation":""
+        "explanation":""
     },
     {
         "id": 111,
@@ -1777,7 +1777,7 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 10,
-                "explanation":""
+        "explanation":""
     },
 //     {
 //         "id": 112,
@@ -2141,11 +2141,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-                "explanation":"• Hooks باید مستقیماً فراخوانی شوند تا React بتواند آن‌ها را track کند\n" +
-                    "- React به ترتیب فراخوانی Hooks برای شناسایی آن‌ها وابسته است\n" +
-                    "- استفاده از call/apply این ترتیب را مختل می‌کند\n" +
-                    "- Hooks باید در سطح بالای function component فراخوانی شوند\n" +
-                    "- این یکی از قوانین اساسی Hooks در React است"
+        "explanation":"• Hooks باید مستقیماً فراخوانی شوند تا React بتواند آن‌ها را track کند\n" +
+            "- React به ترتیب فراخوانی Hooks برای شناسایی آن‌ها وابسته است\n" +
+            "- استفاده از call/apply این ترتیب را مختل می‌کند\n" +
+            "- Hooks باید در سطح بالای function component فراخوانی شوند\n" +
+            "- این یکی از قوانین اساسی Hooks در React است"
     },
     {
         "id": 140,
@@ -2158,11 +2158,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-                "explanation":"• Hooks فقط در function components یا custom Hooks قابل استفاده هستند\n" +
-                    "- نمی‌توانید Hooks را در class components استفاده کنید\n" +
-                    "- Hooks را در توابع معمولی JavaScript فراخوانی نکنید\n" +
-                    "- custom Hooks باید با 'use' شروع شوند\n" +
-                    "- این محدودیت‌ها به React کمک می‌کنند state را صحیح مدیریت کند"
+        "explanation":"• Hooks فقط در function components یا custom Hooks قابل استفاده هستند\n" +
+            "- نمی‌توانید Hooks را در class components استفاده کنید\n" +
+            "- Hooks را در توابع معمولی JavaScript فراخوانی نکنید\n" +
+            "- custom Hooks باید با 'use' شروع شوند\n" +
+            "- این محدودیت‌ها به React کمک می‌کنند state را صحیح مدیریت کند"
     },
     {
         "id": 141,
@@ -2175,11 +2175,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-                "explanation":"• React از ترتیب فراخوانی Hooks برای شناسایی آن‌ها استفاده می‌کند\n" +
-                    "- اگر ترتیب تغییر کند، React نمی‌تواند state را به Hook صحیح متصل کند\n" +
-                    "- به همین دلیل نباید Hooks را در شرط یا حلقه قرار دهید\n" +
-                    "- ESLint با قانون rules-of-hooks این موارد را بررسی می‌کند\n" +
-                    "- حفظ ترتیب ثابت برای عملکرد صحیح React ضروری است"
+        "explanation":"• React از ترتیب فراخوانی Hooks برای شناسایی آن‌ها استفاده می‌کند\n" +
+            "- اگر ترتیب تغییر کند، React نمی‌تواند state را به Hook صحیح متصل کند\n" +
+            "- به همین دلیل نباید Hooks را در شرط یا حلقه قرار دهید\n" +
+            "- ESLint با قانون rules-of-hooks این موارد را بررسی می‌کند\n" +
+            "- حفظ ترتیب ثابت برای عملکرد صحیح React ضروری است"
     },
     // {
     //     "id": 142,
@@ -2322,11 +2322,11 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 2,
         "points": 20,
-                "explanation":"• useMemo reference ثابتی از object ایجاد می‌کند\n" +
-                    "- بدون useMemo، object جدید در هر render ساخته می‌شود\n" +
-                    "- React.memo با reference جدید، component را دوباره render می‌کند\n" +
-                    "- useMemo فقط زمانی object جدید می‌سازد که dependencies تغییر کنند\n" +
-                    "- این به جلوگیری از re-renders غیرضروری کمک می‌کند"
+        "explanation":"• useMemo reference ثابتی از object ایجاد می‌کند\n" +
+            "- بدون useMemo، object جدید در هر render ساخته می‌شود\n" +
+            "- React.memo با reference جدید، component را دوباره render می‌کند\n" +
+            "- useMemo فقط زمانی object جدید می‌سازد که dependencies تغییر کنند\n" +
+            "- این به جلوگیری از re-renders غیرضروری کمک می‌کند"
     },
     {
         "id": 153,
@@ -2339,11 +2339,11 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 0,
         "points": 20,
-                "explanation":"• useCallback برای memoize کردن functions استفاده می‌شود\n" +
-                    "- useMemo برای memoize کردن مقادیر محاسبه شده استفاده می‌شود\n" +
-                    "- useCallback معادل useMemo(() => fn, deps) است\n" +
-                    "- هر دو از re-creation غیرضروری جلوگیری می‌کنند\n" +
-                    "- برای استفاده صحیح، نوع داده را در نظر بگیرید"
+        "explanation":"• useCallback برای memoize کردن functions استفاده می‌شود\n" +
+            "- useMemo برای memoize کردن مقادیر محاسبه شده استفاده می‌شود\n" +
+            "- useCallback معادل useMemo(() => fn, deps) است\n" +
+            "- هر دو از re-creation غیرضروری جلوگیری می‌کنند\n" +
+            "- برای استفاده صحیح، نوع داده را در نظر بگیرید"
     },
     {
         "id": 154,
@@ -2356,11 +2356,11 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 2,
         "points": 20,
-                "explanation":"• React تضمین می‌کند که setter functions همیشه reference ثابت دارند\n" +
-                    "- نیازی به اضافه کردن آن‌ها به dependency arrays نیست\n" +
-                    "- این رفتار برای useState و useReducer dispatch صادق است\n" +
-                    "- کمک به جلوگیری از re-runs غیرضروری effects می‌کند\n" +
-                    "- یکی از optimizations داخلی React است"
+        "explanation":"• React تضمین می‌کند که setter functions همیشه reference ثابت دارند\n" +
+            "- نیازی به اضافه کردن آن‌ها به dependency arrays نیست\n" +
+            "- این رفتار برای useState و useReducer dispatch صادق است\n" +
+            "- کمک به جلوگیری از re-runs غیرضروری effects می‌کند\n" +
+            "- یکی از optimizations داخلی React است"
     },
     {
         "id": 155,
@@ -2373,11 +2373,11 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 0,
         "points": 20,
-                "explanation":"• dispatch function همیشه reference یکسانی دارد\n" +
-                    "- مانند useState setters، نیازی به dependency array ندارد\n" +
-                    "- React این stability را تضمین می‌کند\n" +
-                    "- باعث سادگی در نوشتن effects و callbacks می‌شود\n" +
-                    "- می‌توانید با اطمینان از dispatch در useEffect استفاده کنید"
+        "explanation":"• dispatch function همیشه reference یکسانی دارد\n" +
+            "- مانند useState setters، نیازی به dependency array ندارد\n" +
+            "- React این stability را تضمین می‌کند\n" +
+            "- باعث سادگی در نوشتن effects و callbacks می‌شود\n" +
+            "- می‌توانید با اطمینان از dispatch در useEffect استفاده کنید"
     },
     {
         "id": 156,
@@ -2390,11 +2390,11 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 1,
         "points": 30,
-                "explanation":"• React تضمین می‌کند setter functions هرگز تغییر نمی‌کنند\n" +
-                    "- این یعنی اضافه کردن آن‌ها به deps تاثیری ندارد\n" +
-                    "- ESLint به طور خودکار این موضوع را می‌داند\n" +
-                    "- تنها برای useState و useReducer dispatch صادق است\n" +
-                    "- سایر functions باید در dependency array قرار گیرند"
+        "explanation":"• React تضمین می‌کند setter functions هرگز تغییر نمی‌کنند\n" +
+            "- این یعنی اضافه کردن آن‌ها به deps تاثیری ندارد\n" +
+            "- ESLint به طور خودکار این موضوع را می‌داند\n" +
+            "- تنها برای useState و useReducer dispatch صادق است\n" +
+            "- سایر functions باید در dependency array قرار گیرند"
     },
     {
         "id": 157,
@@ -2407,11 +2407,11 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 2,
         "points": 30,
-                "explanation":"• وقتی state از dependencies حذف شود، effect مقدار قدیمی را می‌بیند\n" +
-                    "- این به stale closure معروف است\n" +
-                    "- effect فقط زمانی مقادیر capture می‌کند که ایجاد می‌شود\n" +
-                    "- همیشه تمام reactive values را در deps قرار دهید\n" +
-                    "- ESLint exhaustive-deps این مشکل را تشخیص می‌دهد"
+        "explanation":"• وقتی state از dependencies حذف شود، effect مقدار قدیمی را می‌بیند\n" +
+            "- این به stale closure معروف است\n" +
+            "- effect فقط زمانی مقادیر capture می‌کند که ایجاد می‌شود\n" +
+            "- همیشه تمام reactive values را در deps قرار دهید\n" +
+            "- ESLint exhaustive-deps این مشکل را تشخیص می‌دهد"
     },
     {
         "id": 158,
@@ -2424,11 +2424,11 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 3,
         "points": 20,
-                "explanation":"• props می‌توانند در هر render تغییر کنند\n" +
-                    "- بدون اضافه کردن به deps، function مقدار قدیمی prop را می‌بیند\n" +
-                    "- این باعث bugs پنهان و رفتار غیرمنتظره می‌شود\n" +
-                    "- همیشه props استفاده شده را در dependency array قرار دهید\n" +
-                    "- ESLint به شناسایی این موارد کمک می‌کند"
+        "explanation":"• props می‌توانند در هر render تغییر کنند\n" +
+            "- بدون اضافه کردن به deps، function مقدار قدیمی prop را می‌بیند\n" +
+            "- این باعث bugs پنهان و رفتار غیرمنتظره می‌شود\n" +
+            "- همیشه props استفاده شده را در dependency array قرار دهید\n" +
+            "- ESLint به شناسایی این موارد کمک می‌کند"
     },
     {
         "id": 159,
@@ -2441,11 +2441,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-                "explanation":"• functions در هر render دوباره ساخته می‌شوند\n" +
-                    "- reference جدید باعث re-run شدن effect می‌شود\n" +
-                    "- باید function را با useCallback wrap کنید یا داخل effect بیاورید\n" +
-                    "- یا function را خارج از component تعریف کنید\n" +
-                    "- این یکی از دلایل اصلی re-renders غیرضروری است"
+        "explanation":"• functions در هر render دوباره ساخته می‌شوند\n" +
+            "- reference جدید باعث re-run شدن effect می‌شود\n" +
+            "- باید function را با useCallback wrap کنید یا داخل effect بیاورید\n" +
+            "- یا function را خارج از component تعریف کنید\n" +
+            "- این یکی از دلایل اصلی re-renders غیرضروری است"
     },
     {
         "id": 160,
@@ -2458,11 +2458,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-                "explanation":"• هر تغییر در Context باعث re-render همه consumers می‌شود\n" +
-                    "- حتی اگر consumer فقط بخشی از value را استفاده کند\n" +
-                    "- برای optimization، Context را به چند قسمت کوچک تقسیم کنید\n" +
-                    "- یا از useMemo برای wrap کردن value استفاده کنید\n" +
-                    "- pattern children به کاهش re-renders کمک می‌کند"
+        "explanation":"• هر تغییر در Context باعث re-render همه consumers می‌شود\n" +
+            "- حتی اگر consumer فقط بخشی از value را استفاده کند\n" +
+            "- برای optimization، Context را به چند قسمت کوچک تقسیم کنید\n" +
+            "- یا از useMemo برای wrap کردن value استفاده کنید\n" +
+            "- pattern children به کاهش re-renders کمک می‌کند"
     },
     {
         "id": 161,
@@ -2475,11 +2475,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-                "explanation":"• useMemo reference ثابت برای Context value ایجاد می‌کند\n" +
-                    "- بدون useMemo، object جدید در هر render ساخته می‌شود\n" +
-                    "- این باعث re-render همه consumers حتی بدون تغییر واقعی می‌شود\n" +
-                    "- dependencies را دقیق مشخص کنید تا فقط زمان نیاز update شود\n" +
-                    "- ترکیب با React.memo در consumers بسیار موثر است"
+        "explanation":"• useMemo reference ثابت برای Context value ایجاد می‌کند\n" +
+            "- بدون useMemo، object جدید در هر render ساخته می‌شود\n" +
+            "- این باعث re-render همه consumers حتی بدون تغییر واقعی می‌شود\n" +
+            "- dependencies را دقیق مشخص کنید تا فقط زمان نیاز update شود\n" +
+            "- ترکیب با React.memo در consumers بسیار موثر است"
     },
     {
         "id": 162,
@@ -2492,11 +2492,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption":3,
         "points": 30,
-                "explanation":"• تقسیم Context به چند Provider کوچک‌تر بسیار موثر است\n" +
-                    "- هر consumer فقط به Context مورد نیاز خود subscribe می‌شود\n" +
-                    "- تغییر در یک Context، consumers دیگر را تحت تاثیر قرار نمی‌دهد\n" +
-                    "- مثلاً User Context و Theme Context را جدا نگه دارید\n" +
-                    "- این pattern به scalability برنامه کمک می‌کند"
+        "explanation":"• تقسیم Context به چند Provider کوچک‌تر بسیار موثر است\n" +
+            "- هر consumer فقط به Context مورد نیاز خود subscribe می‌شود\n" +
+            "- تغییر در یک Context، consumers دیگر را تحت تاثیر قرار نمی‌دهد\n" +
+            "- مثلاً User Context و Theme Context را جدا نگه دارید\n" +
+            "- این pattern به scalability برنامه کمک می‌کند"
     },
     {
         "id": 163,
@@ -2509,11 +2509,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-                "explanation":"• با استفاده از children pattern، فقط Provider دوباره render می‌شود\n" +
-                    "- children که از بیرون pass شده‌اند، re-render نمی‌شوند\n" +
-                    "- این technique به نام 'children as props' معروف است\n" +
-                    "- باعث کاهش چشمگیر re-renders غیرضروری می‌شود\n" +
-                    "- یکی از بهترین روش‌های optimization در React است"
+        "explanation":"• با استفاده از children pattern، فقط Provider دوباره render می‌شود\n" +
+            "- children که از بیرون pass شده‌اند، re-render نمی‌شوند\n" +
+            "- این technique به نام 'children as props' معروف است\n" +
+            "- باعث کاهش چشمگیر re-renders غیرضروری می‌شود\n" +
+            "- یکی از بهترین روش‌های optimization در React است"
     },
     {
         "id": 164,
@@ -2526,11 +2526,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-                "explanation":"• objects در هر render reference جدید می‌گیرند\n" +
-                    "- React با === مقایسه می‌کند نه deep equality\n" +
-                    "- useMemo object را تا زمان تغییر dependencies حفظ می‌کند\n" +
-                    "- این از re-render غیرضروری تمام consumers جلوگیری می‌کند\n" +
-                    "- همیشه برای Context values از useMemo استفاده کنید"
+        "explanation":"• objects در هر render reference جدید می‌گیرند\n" +
+            "- React با === مقایسه می‌کند نه deep equality\n" +
+            "- useMemo object را تا زمان تغییر dependencies حفظ می‌کند\n" +
+            "- این از re-render غیرضروری تمام consumers جلوگیری می‌کند\n" +
+            "- همیشه برای Context values از useMemo استفاده کنید"
     },
     {
         "id": 165,
@@ -2543,11 +2543,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-                "explanation":"• React.memo component را wrap می‌کند و props را check می‌کند\n" +
-                    "- اگر props تغییر نکرده باشد، re-render نمی‌شود\n" +
-                    "- حتی اگر parent (Provider) re-render شود\n" +
-                    "- ترکیب React.memo با useMemo در value بسیار قدرتمند است\n" +
-                    "- برای consumers با UI سنگین توصیه می‌شود"
+        "explanation":"• React.memo component را wrap می‌کند و props را check می‌کند\n" +
+            "- اگر props تغییر نکرده باشد، re-render نمی‌شود\n" +
+            "- حتی اگر parent (Provider) re-render شود\n" +
+            "- ترکیب React.memo با useMemo در value بسیار قدرتمند است\n" +
+            "- برای consumers با UI سنگین توصیه می‌شود"
     },
     {
         "id": 166,
@@ -2560,11 +2560,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-                "explanation":"• با ترکیب children و React.memo، کنترل دقیق روی re-renders دارید\n" +
-                    "- فقط کامپوننت‌هایی که واقعاً به Context نیاز دارند re-render می‌شوند\n" +
-                    "- بقیه tree بدون تغییر باقی می‌ماند\n" +
-                    "- این pattern برای برنامه‌های بزرگ بسیار مفید است\n" +
-                    "- performance را به طور قابل توجهی بهبود می‌بخشد"
+        "explanation":"• با ترکیب children و React.memo، کنترل دقیق روی re-renders دارید\n" +
+            "- فقط کامپوننت‌هایی که واقعاً به Context نیاز دارند re-render می‌شوند\n" +
+            "- بقیه tree بدون تغییر باقی می‌ماند\n" +
+            "- این pattern برای برنامه‌های بزرگ بسیار مفید است\n" +
+            "- performance را به طور قابل توجهی بهبود می‌بخشد"
     },
     {
         "id": 147,
@@ -2577,11 +2577,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-                "explanation":"• هر بار که component render می‌شود، object جدیدی ساخته می‌شود\n" +
-                    "- حتی اگر محتوای object یکسان باشد، reference متفاوت است\n" +
-                    "- React فقط reference را بررسی می‌کند نه محتوا\n" +
-                    "- همین باعث re-render همه consumers می‌شود\n" +
-                    "- همیشه از useMemo برای inline objects استفاده کنید"
+        "explanation":"• هر بار که component render می‌شود، object جدیدی ساخته می‌شود\n" +
+            "- حتی اگر محتوای object یکسان باشد، reference متفاوت است\n" +
+            "- React فقط reference را بررسی می‌کند نه محتوا\n" +
+            "- همین باعث re-render همه consumers می‌شود\n" +
+            "- همیشه از useMemo برای inline objects استفاده کنید"
     },
     {
         "id": 168,
@@ -2594,11 +2594,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-                "explanation":"• useMemo object را memoize می‌کند و reference را ثابت نگه می‌دارد\n" +
-                    "- dependencies مشخص می‌کنند چه زمانی object باید update شود\n" +
-                    "- این بهترین و ساده‌ترین راه برای optimization است\n" +
-                    "- JSON.stringify یا memo کردن Provider کار نمی‌کند\n" +
-                    "- همیشه این pattern را برای Context values دنبال کنید"
+        "explanation":"• useMemo object را memoize می‌کند و reference را ثابت نگه می‌دارد\n" +
+            "- dependencies مشخص می‌کنند چه زمانی object باید update شود\n" +
+            "- این بهترین و ساده‌ترین راه برای optimization است\n" +
+            "- JSON.stringify یا memo کردن Provider کار نمی‌کند\n" +
+            "- همیشه این pattern را برای Context values دنبال کنید"
     },
     {
         "id": 169,
@@ -2611,11 +2611,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-                "explanation":"• React.memo props را check می‌کند نه Context\n" +
-                    "- اگر props تغییر نکرده باشد، component re-render نمی‌شود\n" +
-                    "- اما اگر Context تغییر کند، باز هم re-render می‌شود\n" +
-                    "- برای جلوگیری کامل، Context را نیز optimize کنید\n" +
-                    "- ترکیب هر دو technique بهترین نتیجه را می‌دهد"
+        "explanation":"• React.memo props را check می‌کند نه Context\n" +
+            "- اگر props تغییر نکرده باشد، component re-render نمی‌شود\n" +
+            "- اما اگر Context تغییر کند، باز هم re-render می‌شود\n" +
+            "- برای جلوگیری کامل، Context را نیز optimize کنید\n" +
+            "- ترکیب هر دو technique بهترین نتیجه را می‌دهد"
     },
     {
         "id": 170,
@@ -2628,11 +2628,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-                "explanation":"• ترکیب useMemo (برای values) + React.memo (برای consumers) + children pattern بهترین است\n" +
-                    "- useMemo از re-creation غیرضروری value جلوگیری می‌کند\n" +
-                    "- React.memo از re-render غیرضروری consumers جلوگیری می‌کند\n" +
-                    "- children pattern فقط قسمت‌های لازم را re-render می‌کند\n" +
-                    "- این سه تکنیک با هم، بهترین performance را می‌دهند"
+        "explanation":"• ترکیب useMemo (برای values) + React.memo (برای consumers) + children pattern بهترین است\n" +
+            "- useMemo از re-creation غیرضروری value جلوگیری می‌کند\n" +
+            "- React.memo از re-render غیرضروری consumers جلوگیری می‌کند\n" +
+            "- children pattern فقط قسمت‌های لازم را re-render می‌کند\n" +
+            "- این سه تکنیک با هم، بهترین performance را می‌دهند"
     },
     {
         "id": 171,
@@ -2645,11 +2645,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-                "explanation":"• bundle size مجموع حجم تمام فایل‌های JavaScript و CSS است\n" +
-                    "- شامل کد خود برنامه، کتابخانه‌ها و dependencies می‌شود\n" +
-                    "- bundle بزرگ‌تر یعنی زمان بارگذاری بیشتر برای کاربر\n" +
-                    "- با tools مثل webpack-bundle-analyzer قابل بررسی است\n" +
-                    "- کاهش bundle size یکی از اهداف اصلی optimization است"
+        "explanation":"• bundle size مجموع حجم تمام فایل‌های JavaScript و CSS است\n" +
+            "- شامل کد خود برنامه، کتابخانه‌ها و dependencies می‌شود\n" +
+            "- bundle بزرگ‌تر یعنی زمان بارگذاری بیشتر برای کاربر\n" +
+            "- با tools مثل webpack-bundle-analyzer قابل بررسی است\n" +
+            "- کاهش bundle size یکی از اهداف اصلی optimization است"
     },
     {
         "id": 172,
@@ -2662,11 +2662,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption":3,
         "points": 10,
-                "explanation":"• bundle بزرگ‌تر زمان download و parse را افزایش می‌دهد\n" +
-                    "- کاربران با اینترنت کند تاثیر بیشتری می‌بینند\n" +
-                    "- زمان Time to Interactive (TTI) افزایش می‌یابد\n" +
-                    "- مصرف data موبایل بیشتری دارد\n" +
-                    "- تجربه کاربری ضعیف‌تر و نرخ bounce بالاتر می‌شود"
+        "explanation":"• bundle بزرگ‌تر زمان download و parse را افزایش می‌دهد\n" +
+            "- کاربران با اینترنت کند تاثیر بیشتری می‌بینند\n" +
+            "- زمان Time to Interactive (TTI) افزایش می‌یابد\n" +
+            "- مصرف data موبایل بیشتری دارد\n" +
+            "- تجربه کاربری ضعیف‌تر و نرخ bounce بالاتر می‌شود"
     },
     {
         "id": 173,
@@ -2679,11 +2679,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-                "explanation":"• code splitting کد را به چند بخش کوچک‌تر تقسیم می‌کند\n" +
-                    "- فقط کدی که الان نیاز است بارگذاری می‌شود\n" +
-                    "- بقیه کد زمانی که لازم شد load می‌شود (lazy loading)\n" +
-                    "- initial bundle size کاهش می‌یابد\n" +
-                    "- سرعت بارگذاری اولیه بهبود پیدا می‌کند"
+        "explanation":"• code splitting کد را به چند بخش کوچک‌تر تقسیم می‌کند\n" +
+            "- فقط کدی که الان نیاز است بارگذاری می‌شود\n" +
+            "- بقیه کد زمانی که لازم شد load می‌شود (lazy loading)\n" +
+            "- initial bundle size کاهش می‌یابد\n" +
+            "- سرعت بارگذاری اولیه بهبود پیدا می‌کند"
     },
     {
         "id": 174,
@@ -2696,11 +2696,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-                "explanation":"• React.lazy برای lazy loading کامپوننت‌ها استفاده می‌شود\n" +
-                    "- باید با React.Suspense ترکیب شود\n" +
-                    "- Suspense fallback UI را تا load شدن نشان می‌دهد\n" +
-                    "- فقط با dynamic import() کار می‌کند\n" +
-                    "- مناسب برای route-based splitting است"
+        "explanation":"• React.lazy برای lazy loading کامپوننت‌ها استفاده می‌شود\n" +
+            "- باید با React.Suspense ترکیب شود\n" +
+            "- Suspense fallback UI را تا load شدن نشان می‌دهد\n" +
+            "- فقط با dynamic import() کار می‌کند\n" +
+            "- مناسب برای route-based splitting است"
     },
     {
         "id": 175,
@@ -2713,11 +2713,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
-                "explanation":"• Next.js به صورت خودکار هر page را جدا می‌کند\n" +
-                    "- هر صفحه bundle مستقل خود را دارد\n" +
-                    "- فقط کد صفحه فعلی بارگذاری می‌شود\n" +
-                    "- navigation بین صفحات سریع‌تر می‌شود\n" +
-                    "- یکی از مزایای بزرگ Next.js نسبت به CRA است"
+        "explanation":"• Next.js به صورت خودکار هر page را جدا می‌کند\n" +
+            "- هر صفحه bundle مستقل خود را دارد\n" +
+            "- فقط کد صفحه فعلی بارگذاری می‌شود\n" +
+            "- navigation بین صفحات سریع‌تر می‌شود\n" +
+            "- یکی از مزایای بزرگ Next.js نسبت به CRA است"
     },
     {
         "id": 176,
@@ -2730,11 +2730,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption":0,
         "points": 30,
-                "explanation":"• Suspense یک wrapper برای lazy components است\n" +
-                    "- fallback prop محتوای loading را مشخص می‌کند\n" +
-                    "- تا component load شود، fallback نمایش داده می‌شود\n" +
-                    "- می‌تواند چند lazy component را wrap کند\n" +
-                    "- تجربه کاربری بهتری نسبت به loading خالی ایجاد می‌کند"
+        "explanation":"• Suspense یک wrapper برای lazy components است\n" +
+            "- fallback prop محتوای loading را مشخص می‌کند\n" +
+            "- تا component load شود، fallback نمایش داده می‌شود\n" +
+            "- می‌تواند چند lazy component را wrap کند\n" +
+            "- تجربه کاربری بهتری نسبت به loading خالی ایجاد می‌کند"
     },
     {
         "id": 177,
@@ -2849,11 +2849,11 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 1,
         points: 20,
-                    "explanation": "• کتابخانه‌های بزرگ bundle size را قابل توجه افزایش می‌دهند\n" +
-                        "- زمان parsing و execution بیشتری نیاز است\n" +
-                        "- ممکن است بخش‌های زیادی استفاده نشود\n" +
-                        "- بهتر است از tree-shakable libraries استفاده کنید\n" +
-                        "- یا فقط بخش مورد نیاز را import کنید"
+        "explanation": "• کتابخانه‌های بزرگ bundle size را قابل توجه افزایش می‌دهند\n" +
+            "- زمان parsing و execution بیشتری نیاز است\n" +
+            "- ممکن است بخش‌های زیادی استفاده نشود\n" +
+            "- بهتر است از tree-shakable libraries استفاده کنید\n" +
+            "- یا فقط بخش مورد نیاز را import کنید"
     },
     {
         "id": 184,
@@ -2867,10 +2867,10 @@ export const mockQuestions: Question[] = [
         correctOption: 0,
         points: 30,
         "explanation": "• tree-shaking کد استفاده نشده را حذف می‌کند\n" +
-                "- اگر چیزی از library استفاده نشود، در bundle نمی‌آید\n" +
-                "- فقط با ES modules (import/export) کار می‌کند\n" +
-                "- CommonJS (require) قابل tree-shake نیست\n" +
-                "- کتابخانه‌ها باید side-effect free باشند"
+            "- اگر چیزی از library استفاده نشود، در bundle نمی‌آید\n" +
+            "- فقط با ES modules (import/export) کار می‌کند\n" +
+            "- CommonJS (require) قابل tree-shake نیست\n" +
+            "- کتابخانه‌ها باید side-effect free باشند"
     },
     {
         "id": 185,
@@ -3019,11 +3019,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         points: 10,
-            "explanation": "• useMemo برای ساخت مقادیر محاسبه شده reactive است\n" +
-                "- مقدار را فقط زمان تغییر dependencies دوباره محاسبه می‌کند\n" +
-                "- از محاسبات گران قیمت غیرضروری جلوگیری می‌کند\n" +
-                "- مقدار برگشتی reactive است\n" +
-                "- برای derived state مناسب است"
+        "explanation": "• useMemo برای ساخت مقادیر محاسبه شده reactive است\n" +
+            "- مقدار را فقط زمان تغییر dependencies دوباره محاسبه می‌کند\n" +
+            "- از محاسبات گران قیمت غیرضروری جلوگیری می‌کند\n" +
+            "- مقدار برگشتی reactive است\n" +
+            "- برای derived state مناسب است"
     },
     {
         id: 194,
@@ -3037,10 +3037,10 @@ export const mockQuestions: Question[] = [
         "correctOption": 2,
         points: 20,
         "explanation": "• متغیرهای معمولی هیچ ارتباطی با rendering system ندارند\n" +
-                "- React تغییرات آن‌ها را track نمی‌کند\n" +
-                "- تغییر آن‌ها باعث re-render نمی‌شود\n" +
-                "- در هر render مقدار اولیه می‌گیرند\n" +
-                "- برای reactive values از useState استفاده کنید"
+            "- React تغییرات آن‌ها را track نمی‌کند\n" +
+            "- تغییر آن‌ها باعث re-render نمی‌شود\n" +
+            "- در هر render مقدار اولیه می‌گیرند\n" +
+            "- برای reactive values از useState استفاده کنید"
     },
     {        id: 195,
         question:"What is true about reactive values in React?",
@@ -3052,7 +3052,7 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 0,
         points: 20,
-            "explanation": ""
+        "explanation": ""
     },
     {
         id: 196,
@@ -3099,11 +3099,11 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 2,
         points: 10,
-       "explanation": "• setter functions از useState reference ثابت دارند\n" +
-           "- React تضمین می‌کند هرگز تغییر نمی‌کنند\n" +
-           "- نیازی به اضافه کردن به deps نیست\n" +
-           "- dispatch از useReducer نیز همین رفتار را دارد\n" +
-           "- بقیه reactive values باید اضافه شوند"
+        "explanation": "• setter functions از useState reference ثابت دارند\n" +
+            "- React تضمین می‌کند هرگز تغییر نمی‌کنند\n" +
+            "- نیازی به اضافه کردن به deps نیست\n" +
+            "- dispatch از useReducer نیز همین رفتار را دارد\n" +
+            "- بقیه reactive values باید اضافه شوند"
     },
     {
         id: 199,
@@ -3252,11 +3252,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
-       "explanation":"• object را با useMemo wrap کنید تا reference ثابت شود\n" +
-           "- یا object را خارج از component ببرید\n" +
-           "- یا فقط properties لازم را در deps بگذارید\n" +
-           "- useMemo فقط زمان تغییر dependencies object جدید می‌سازد\n" +
-           "- مشکل reference equality حل می‌شود"
+        "explanation":"• object را با useMemo wrap کنید تا reference ثابت شود\n" +
+            "- یا object را خارج از component ببرید\n" +
+            "- یا فقط properties لازم را در deps بگذارید\n" +
+            "- useMemo فقط زمان تغییر dependencies object جدید می‌سازد\n" +
+            "- مشکل reference equality حل می‌شود"
     },
     {
         "id": 208,
@@ -3533,7 +3533,7 @@ export const mockQuestions: Question[] = [
             "- purity باعث قابلیت test و debug می‌شود"
     },
     {
-        id: 203,
+        id: 225,
         question:  "What is the primary difference between Redux and useReducer?",
         options: [
             "Redux is synchronous, useReducer is asynchronous",
@@ -3543,189 +3543,267 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 1,
         points: 20,
-        "explanation":""
+        "explanation":"• Redux برای global state در کل برنامه است\n" +
+            "- useReducer برای local state در یک کامپوننت است\n" +
+            "- Redux middleware، DevTools و ecosystem دارد\n" +
+            "- useReducer ساده‌تر و بدون dependency اضافی است\n" +
+            "- Redux برای state پیچیده shared بهتر است"
     },
-//     {
-//         id: 207,
-//         question: "Why use multiple reducers in a Redux application?",
-//         options: [
-//             "Manage different parts of state separately",
-//             "Create duplicate copies of state logic",
-//             "Reduce total application bundle size significantly",
-//             "Make all reducers asynchronous by default"
-//         ],
-//         correctOption: 0,
-//         points: 20
-//     },
-//     {
-//         id: 208,
-//         question:"What is an action creator in Redux?",
-//         options: [
-//             "A reducer that updates state directly",
-//             "A function returning action objects",
-//             "A function removing actions from memory",
-//             "Middleware that delays action execution timing"
-//         ],
-//         correctOption: 1,
-//         points: 10
-//     },
-//     {
-//         id: 209,
-//         question:  "What advantage does Redux offer over Context API?",
-//         options: [
-//             "Context generates reducers automatically for developers",
-//             "Redux is used only for styling",
-//             "Redux provides middleware and debugging tools",
-//             "Context works only with React frameworks"
-//         ],
-//         correctOption: 2,
-//         points: 20
-//     },
-//     {
-//         id: 210,
-//         question: "How does Redux differ from useState?",
-//         options: [
-//             "Redux handles only async API requests",
-//             "useState saves to localStorage automatically",
-//             "useState works only with class components",
-//             "Redux handles global, useState local state"
-//         ],
-//         correctOption: 3,
-//         points: 20
-//     },
-//     {
-//         id: 212,
-//         question: "Why don't modern React apps need Redux?",
-//         options: [
-//             "Redux cannot work with TypeScript projects",
-//             "React provides useState, useReducer, Context API",
-//             "Redux is deprecated and no longer supported",
-//             "React apps don't need state management"
-//         ],
-//         correctOption: 1,
-//         points: 20
-//     },
-//     {
-//         id: 214,
-//         question: "Which state is best managed locally?",
-//         options: [
-//             "Remote data from external APIs",
-//             "Global state shared between applications",
-//             "UI state like modals and inputs",
-//             "Server-side database state for users"
-//         ],
-//         correctOption: 2,
-//         points: 20
-//     },
-//     {
-//         id: 215,
-//         question: "Which state requires global management tools?",
-//         options: [
-//             "UI state like active tab selection",
-//             "Temporary variables in function scope",
-//             "CSS class toggles for styling",
-//             "Remote state like user API data"
-//         ],
-//         correctOption: 3,
-//         points: 20
-//     },
-//     {
-//         id: 216,
-//         question: "Best approach for combining UI and remote state?",
-//         options: [
-//             "Keep UI local, manage remote globally",
-//             "Store all state in APIs only",
-//             "Move everything to Redux without exceptions",
-//             "Store UI state on server always"
-//         ],
-//         correctOption: 0,
-//         points: 20
-//     },
-//     {
-//         id: 217,
-//         question: "Most effective tool for managing remote state?",
-//         options: [
-//             "useReducer hook only for state management",
-//             "Plain Redux without any middleware support",
-//             "Manual fetch with setInterval polling continuously",
-//             "React Query or similar data-fetching libraries"
-//         ],
-//         correctOption: 3,
-//         points: 20
-//     },
-//     {
-//         id: 218,
-//         question: "Why has Redux adoption decreased recently?",
-//         options: [
-//             "React removed Redux support in versions",
-//             "Redux only works with outdated React",
-//             "Remote state better handled by specialized libraries",
-//             "Redux cannot store complex data structures"
-//         ],
-//         correctOption: 2,
-//         points: 20
-//     },
-//     {
-//         id: 219,
-//         question: "What defines the ideal Redux use case?",
-//         options: [
-//             "Single component with local state only",
-//             "Styling multiple components with CSS frameworks",
-//             "Making asynchronous API calls exclusively for data",
-//             "Frequent state updates across many components"
-//         ],
-//         correctOption: 3,
-//         points: 20
-//     },
-//     {
-//         id: 220,
-//         question: "What is the key difference between UI state and remote state?",
-//         options: [
-//             "UI state requires HTTP requests, remote state is static",
-//             "UI state is local to components, remote state comes from servers",
-//             "UI state needs Redux, remote state needs Context API",
-//             "UI state persists forever, remote state is temporary"
-//         ],
-//         correctOption: 1,
-//         points: 20
-//     },
-//     {
-//
-//         id: 221,
-//         question: "When should you choose Redux over Context API with useReducer?",
-//         options: [
-//             "For complex state with frequent updates across many components",
-//             "For small applications with minimal state needs",
-//             "When all updates happen within single component tree",
-//             "When avoiding external dependencies is priority"
-//         ],
-//         correctOption: 0,
-//         points: 30
-//     },
-//     {
-//         id: 223,
-//         question: "What is the key difference between Redux and useReducer?",
-//         options: [
-//             "useReducer has middleware, Redux handles async",
-//             "Redux is synchronous, useReducer is asynchronous",
-//             "Redux is global with middleware, useReducer is local",
-//             "They function identically with no differences"
-//         ],
-//         correctOption: 2,
-//         points: 30
-//     },
-//     {
-//         id: 224,
-//         question: "What is the main responsibility of the Redux store?",
-//         options: [
-//             "Directly render UI components into the DOM",
-//             "Automatically fetch and manage remote data for components",
-//             "Generate and dispatch action creators for updating state",
-//             "Hold state tree and manage updates via  reducers"
-//         ],
-//         correctOption: 3,
-//         points: 20
-//     },
+    {
+        id: 226,
+        question: "Why use multiple reducers in a Redux application?",
+        options: [
+            "Manage different parts of state separately",
+            "Create duplicate copies of state logic",
+            "Reduce total application bundle size significantly",
+            "Make all reducers asynchronous by default"
+        ],
+        correctOption: 0,
+        points: 20,
+        "explanation": "• هر reducer بخش مشخصی از state را مدیریت می‌کند\n" +
+            "- کد سازمان‌یافته‌تر و قابل نگهداری‌تر می‌شود\n" +
+            "- combineReducers آن‌ها را به یک root reducer ترکیب می‌کند\n" +
+            "- هر تیم می‌تواند روی reducer خود کار کند\n" +
+            "- testing و debugging ساده‌تر می‌شود"
+    },
+    {
+        id: 227,
+        question:"What is an action creator in Redux?",
+        options: [
+            "A reducer that updates state directly",
+            "A function returning action objects",
+            "A function removing actions from memory",
+            "Middleware that delays action execution timing"
+        ],
+        correctOption: 1,
+        points: 10,
+        "explanation": "• action creator تابعی است که action object برمی‌گرداند\n" +
+            "- از hard-coding action types جلوگیری می‌کند\n" +
+            "- می‌تواند payload را به عنوان argument بگیرد\n" +
+            "- کد را خواناتر و قابل استفاده مجدد می‌کند\n" +
+            "- در Redux Toolkit به صورت خودکار ساخته می‌شوند"
+    },
+    {
+        id: 228,
+        question:  "What advantage does Redux offer over Context API?",
+        options: [
+            "Context generates reducers automatically for developers",
+            "Redux is used only for styling",
+            "Redux provides middleware and debugging tools",
+            "Context works only with React frameworks"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation": "• Redux middleware برای side effects و async logic دارد\n" +
+            "- DevTools قدرتمند برای debugging و time-travel\n" +
+            "- Performance بهتر برای updates مکرر\n" +
+            "- Ecosystem غنی از کتابخانه‌ها و tools\n" +
+            "- الگوهای استاندارد برای state management پیچیده"
+    },
+    {
+        id: 229,
+        question: "How does Redux differ from useState?",
+        options: [
+            "Redux handles only async API requests",
+            "useState saves to localStorage automatically",
+            "useState works only with class components",
+            "Redux handles global, useState local state"
+        ],
+        correctOption: 3,
+        points: 20,
+        "explanation" : "• Redux برای global state در سراسر برنامه است\n" +
+            "- useState برای local state در یک کامپوننت است\n" +
+            "- Redux state قابل اشتراک بین همه کامپوننت‌ها\n" +
+            "- useState ساده‌تر برای state ساده است\n" +
+            "- Redux برای state پیچیده و shared مناسب‌تر است"
+    },
+    {
+        id: 230,
+        question: "Why don't modern React apps need Redux?",
+        options: [
+            "Redux cannot work with TypeScript projects",
+            "React provides useState, useReducer, Context API",
+            "Redux is deprecated and no longer supported",
+            "React apps don't need state management"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation": "• React حالا useState، useReducer و Context API دارد\n" +
+            "- کتابخانه‌های مثل React Query برای server state بهترند\n" +
+            "- بیشتر برنامه‌ها state پیچیده global ندارند\n" +
+            "- Redux complexity اضافی برای پروژه‌های کوچک است\n" +
+            "- اما برای state management پیچیده هنوز مفید است"
+    },
+    {
+        id: 231,
+        question: "Which state is best managed locally?",
+        options: [
+            "Remote data from external APIs",
+            "Global state shared between applications",
+            "UI state like modals and inputs",
+            "Server-side database state for users"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation": "• UI state مثل modals، tabs، forms بهتر است local باشد\n" +
+            "- state که فقط یک کامپوننت نیاز دارد\n" +
+            "- temporary state مثل input values\n" +
+            "- loading و error states خاص یک feature\n" +
+            "- state که نیازی به sharing ندارد"
+    },
+    {
+        id: 232,
+        question: "Which state requires global management tools?",
+        options: [
+            "UI state like active tab selection",
+            "Temporary variables in function scope",
+            "CSS class toggles for styling",
+            "Remote state like user API data"
+        ],
+        correctOption: 3,
+        points: 20,
+        "explanation": "• remote state (server data) با React Query بهتر مدیریت می‌شود\n" +
+            "- authentication state که در همه جا نیاز است\n" +
+            "- theme، language و user preferences\n" +
+            "- shopping cart و checkout state\n" +
+            "- هر state که بین صفحات مختلف share می‌شود"
+    },
+    {
+        id: 233,
+        question: "Best approach for combining UI and remote state?",
+        options: [
+            "Keep UI local, manage remote globally",
+            "Store all state in APIs only",
+            "Move everything to Redux without exceptions",
+            "Store UI state on server always"
+        ],
+        correctOption: 0,
+        points: 20,
+        "explanation": "• UI state را local (useState/useReducer) نگه دارید\n" +
+            "- remote state را با React Query یا SWR مدیریت کنید\n" +
+            "- هر کدام ابزار مناسب خود را دارند\n" +
+            "- mixing آن‌ها باعث پیچیدگی می‌شود\n" +
+            "- separation of concerns را رعایت کنید"
+    },
+    {
+        id: 234,
+        question: "Most effective tool for managing remote state?",
+        options: [
+            "useReducer hook only for state management",
+            "Plain Redux without any middleware support",
+            "Manual fetch with setInterval polling continuously",
+            "React Query or similar data-fetching libraries"
+        ],
+        correctOption: 3,
+        points: 20,
+        "explanation": "• React Query یا SWR برای server state طراحی شده‌اند\n" +
+            "- caching، refetching و synchronization خودکار\n" +
+            "- loading و error states را مدیریت می‌کنند\n" +
+            "- optimistic updates و mutations\n" +
+            "- بهتر از Redux + manual fetch هستند"
+    },
+    {
+        id: 235,
+        question: "Why has Redux adoption decreased recently?",
+        options: [
+            "React removed Redux support in versions",
+            "Redux only works with outdated React",
+            "Remote state better handled by specialized libraries",
+            "Redux cannot store complex data structures"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation": "• کتابخانه‌های specialized مثل React Query بهترند\n" +
+            "- Context API برای state ساده کافی است\n" +
+            "- Redux boilerplate زیاد برای پروژه‌های کوچک\n" +
+            "- بیشتر state در برنامه‌ها server state است\n" +
+            "- tools مدرن‌تر و ساده‌تر وجود دارند"
+    },
+    {
+        id: 236,
+        question: "What defines the ideal Redux use case?",
+        options: [
+            "Single component with local state only",
+            "Styling multiple components with CSS frameworks",
+            "Making asynchronous API calls exclusively for data",
+            "Frequent state updates across many components"
+        ],
+        correctOption: 3,
+        points: 20,
+        "explanation": "• state پیچیده که در بسیاری از کامپوننت‌ها نیاز است\n" +
+            "- updates مکرر و frequent از جاهای مختلف\n" +
+            "- نیاز به middleware برای async logic\n" +
+            "- debugging پیشرفته با DevTools\n" +
+            "- برنامه‌های بزرگ با تیم‌های متعدد"
+    },
+    {
+        id: 237,
+        question: "What is the key difference between UI state and remote state?",
+        options: [
+            "UI state requires HTTP requests, remote state is static",
+            "UI state is local to components, remote state comes from servers",
+            "UI state needs Redux, remote state needs Context API",
+            "UI state persists forever, remote state is temporary"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation": "• UI state local به کامپوننت است (modals، forms)\n" +
+            "- remote state از server می‌آید و sync نیاز دارد\n" +
+            "- UI state با useState/useReducer خوب است\n" +
+            "- remote state با React Query بهتر مدیریت می‌شود\n" +
+            "- هر کدام challenges و solutions متفاوت دارند"
+    },
+    {
+
+        id: 238,
+        question: "When should you choose Redux over Context API with useReducer?",
+        options: [
+            "For complex state with frequent updates across many components",
+            "For small applications with minimal state needs",
+            "When all updates happen within single component tree",
+            "When avoiding external dependencies is priority"
+        ],
+        correctOption: 0,
+        points: 30,
+        "explanation": "• وقتی state پیچیده و در همه جا نیاز است\n" +
+            "- updates بسیار مکرر که performance مهم است\n" +
+            "- نیاز به middleware برای async logic\n" +
+            "- debugging پیشرفته و time-travel لازم است\n" +
+            "- تیم بزرگ و نیاز به structure استاندارد"
+    },
+    {
+        id: 239,
+        question: "What is the key difference between Redux and useReducer?",
+        options: [
+            "useReducer has middleware, Redux handles async",
+            "Redux is synchronous, useReducer is asynchronous",
+            "Redux is global with middleware, useReducer is local",
+            "They function identically with no differences"
+        ],
+        correctOption: 2,
+        points: 30,
+        "explanation": "• Redux global store با middleware support دارد\n" +
+            "- useReducer local state در یک کامپوننت است\n" +
+            "- Redux DevTools و ecosystem قدرتمند دارد\n" +
+            "- useReducer ساده‌تر و built-in React است\n" +
+            "- Redux برای sharing state بین کامپوننت‌ها بهتر است"
+    },
+    {   id: 224,
+        question: "What is the main responsibility of the Redux store?",
+        options: [
+            "Directly render UI components into the DOM",
+            "Automatically fetch and manage remote data for components",
+            "Generate and dispatch action creators for updating state",
+            "Hold state tree and manage updates via  reducers"
+        ],
+        correctOption: 3,
+        points: 20,
+        "explanation": "• store تمام state tree برنامه را نگه می‌دارد\n" +
+            "- actions را دریافت و به reducers ارسال می‌کند\n" +
+            "- state updates را از طریق reducers مدیریت می‌کند\n" +
+            "- به کامپوننت‌ها اجازه subscribe کردن می‌دهد\n" +
+            "- middleware pipeline را اجرا می‌کند"
+    },
 //     {
 //         id: 225,
 //         question: "Why use multiple reducers in a Redux store?",
