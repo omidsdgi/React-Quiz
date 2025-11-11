@@ -825,80 +825,108 @@ export const mockQuestions: Question[] = [
             "- اما React از Reconciliation برای optimize کردن استفاده می‌کند\n" +
             "- component instances ممکن است reuse شوند"
     },
-//     {
-//         "id": 52,
-//         "question": "What triggers a render in React besides state changes?",
-//         "options": [
-//             "Parent re-rendering or context value changes",
-//             "Only explicit render() method calls",
-//             "Only when developer refreshes browser",
-//             "Only when component mounts initially"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 53,
-//         "question": "Does changing props directly trigger a render?",
-//         "options": [
-//             "Yes, prop changes always trigger re-renders",
-//             "No, prop changes occur because parent re-rendered",
-//             "Only primitive prop changes trigger renders",
-//             "Only object prop changes trigger renders"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation": ""
-//     },
-//     {
-//         "id": 54,
-//         "question": "What happens between Render Phase and Commit Phase?",
-//         "options": [
-//             "React paints pixels to the screen",
-//             "React compares new virtual DOM with previous",
-//             "React executes all useEffect cleanup functions",
-//             "React updates component state automatically"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 55,
-//         "question": "What happens after the Commit Phase completes?",
-//         "options": [
-//             "Browser Paint occurs, rendering pixels to screen",
-//             "React immediately starts next render cycle",
-//             "Component unmounts and state is destroyed",
-//             "Virtual DOM is discarded from memory"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 56,
-//         "question": "What is a Fiber in React&apos;s Fiber Tree?",
-//         "options": [
-//             "A JavaScript object tracking component instance",
-//             "A visual representation for React DevTools",
-//             "A thread running component code in parallel",
-//             "A DOM node reference stored by React"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 57,
-//         "question": "What information does a Fiber node contain?",
-//         "options": [
-//             "Component type, props, state, and DOM references",
-//             "Only the component function or class definition",
-//             "Only the rendered JSX output structure",
-//             "Only references to child components"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
+    {
+        "id": 52,
+        "question": "What triggers a render in React besides state changes?",
+        "options": [
+            "Parent re-rendering or context value changes",
+            "Only explicit render() method calls",
+            "Only when developer refreshes browser",
+            "Only when component mounts initially"
+        ],
+        "correctOption": 0,
+        "points": 10,
+       "explanation": "• تغییر state فقط یکی از دلایل render است\n" +
+           "- re-render شدن parent باعث render فرزندان می‌شود\n" +
+           "- تغییر Context value تمام consumers را render می‌کند\n" +
+           "- تغییر props نیز باعث render می‌شود (در واقع به خاطر parent re-render)\n" +
+           "- forceUpdate در class components نیز render را trigger می‌کند"
+    },
+    {
+        "id": 53,
+        "question": "Does changing props directly trigger a render?",
+        "options": [
+            "Yes, prop changes always trigger re-renders",
+            "No, prop changes occur because parent re-rendered",
+            "Only primitive prop changes trigger renders",
+            "Only object prop changes trigger renders"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• props را نمی‌توان مستقیماً تغییر داد (read-only هستند)\n" +
+            "- تغییر props در واقع به معنای re-render شدن parent است\n" +
+            "- parent جدید props را به child می‌دهد\n" +
+            "- child به خاطر re-render parent دوباره render می‌شود\n" +
+            "- props خود trigger نیستند، بلکه نتیجه parent render هستند"
+    },
+    {
+        "id": 54,
+        "question": "What happens between Render Phase and Commit Phase?",
+        "options": [
+            "React paints pixels to the screen",
+            "React compares new virtual DOM with previous",
+            "React executes all useEffect cleanup functions",
+            "React updates component state automatically"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• بین Render و Commit، Reconciliation انجام می‌شود\n" +
+            "- React Virtual DOM جدید را با قدیمی مقایسه می‌کند\n" +
+            "- تفاوت‌ها (differences) شناسایی می‌شوند\n" +
+            "- لیستی از تغییرات لازم برای DOM ساخته می‌شود\n" +
+            "- این فرآیند به Diffing Algorithm معروف است"
+    },
+    {
+        "id": 55,
+        "question": "What happens after the Commit Phase completes?",
+        "options": [
+            "Browser Paint occurs, rendering pixels to screen",
+            "React immediately starts next render cycle",
+            "Component unmounts and state is destroyed",
+            "Virtual DOM is discarded from memory"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• بعد از Commit Phase، Browser Paint شروع می‌شود\n" +
+            "- مرورگر DOM را به pixels روی صفحه تبدیل می‌کند\n" +
+            "- این مرحله توسط browser engine انجام می‌شود نه React\n" +
+            "- layout effects (useLayoutEffect) قبل از paint اجرا می‌شوند\n" +
+            "- useEffect بعد از paint به صورت async اجرا می‌شود"
+    },
+    {
+        "id": 56,
+        "question": "What is a Fiber in React&apos;s Fiber Tree?",
+        "options": [
+            "A JavaScript object tracking component instance",
+            "A visual representation for React DevTools",
+            "A thread running component code in parallel",
+            "A DOM node reference stored by React"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• Fiber یک JavaScript object است که component instance را track می‌کند\n" +
+            "- هر component یک Fiber node در Fiber Tree دارد\n" +
+            "- اطلاعات state، props، effects و DOM reference را نگه می‌دارد\n" +
+            "- امکان pause، resume و prioritize کردن کار را می‌دهد\n" +
+            "- پایه معماری Concurrent React است"
+    },
+    {
+        "id": 57,
+        "question": "What information does a Fiber node contain?",
+        "options": [
+            "Component type, props, state, and DOM references",
+            "Only the component function or class definition",
+            "Only the rendered JSX output structure",
+            "Only references to child components"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• Fiber node شامل type (نوع کامپوننت یا element) است\n" +
+            "- props و state فعلی کامپوننت را نگه می‌دارد\n" +
+            "- reference به DOM node واقعی دارد\n" +
+            "- لیست effects (useEffect، useLayoutEffect) را دارد\n" +
+            "- اطلاعات child، sibling و parent fibers را نیز دارد"
+    },
     {
         "id": 58,
         "question": "How does Fiber Tree differ from Virtual DOM?",
