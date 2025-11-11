@@ -2770,144 +2770,196 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 2,
         points: 10,
+                    "explanation": "",
         "explanation": "• Image component تصاویر را به صورت خودکار optimize می‌کند\n" +
             "- lazy loading پیش‌فرض برای تصاویر\n" +
             "- تبدیل خودکار به فرمت‌های مدرن مثل WebP\n" +
             "- resize و optimization بر اساس device\n" +
             "- جلوگیری از layout shift با تعیین ابعاد"
     },
-//     {
-//         "id": 162,
-//         question:"Why use Next.js Image component over regular img?",
-//         options: [
-//             "Increases resolution of all images to HD",
-//             "Converts all image formats to WebP",
-//             "Automatically lazy-loads and optimizes images",
-//             "Completely avoids browser caching for freshness"
-//         ],
-//         correctOption: 2,
-//         points: 10
-//     },
-//     {
-//         "id": 163,
-//         question: "How does caching help with bundle optimization?",
-//         options: [
-//             "Reduces React component re-renders",
-//             "Automatically inlines critical CSS for faster rendering",
-//             "Prevents downloading unchanged bundles on repeat visits",
-//             "Forces all JavaScript modules to preload for speed"
-//         ],
-//         correctOption: 2,
-//         points: 20
-//     },
-//     {
-//         "id": 164,
-//         question: "What's the downside of importing large third-party libraries?",
-//         options: [
-//             "They completely disable React hooks throughout application",
-//             "They significantly increase initial JavaScript load time",
-//             "They prevent tree-shaking optimization from working properly",
-//             "They block Suspense fallback rendering during loading"
-//         ],
-//         correctOption: 1,
-//         points: 20
-//     },
-//     {
-//         "id": 165,
-//         question: "What happens to imported but unused libraries with tree-shaking?",
-//         options: [
-//             "Library code will not be included in final bundle",
-//             "Library code will always remain in bundle regardless",
-//             "Library code throws runtime error during execution phase",
-//             "Library code preloads for future potential use"
-//         ],
-//         correctOption: 0,
-//         points: 30
-//     },
-//     {
-//         "id": 166,
-//         question: "How can unused CSS affect bundle performance?",
-//         options: [
-//             "Increases JavaScript execution time throughout the application",
-//             "Completely disables CSS modules functionality across project",
-//             "increases the bundle size without offering meaningful functionality",
-//             "Forces application to use inline styles only"
-//         ],
-//         correctOption: 2,
-//         points: 20
-//     },
-//     {
-//         "id": 167,
-//         question:  "In Next.js, what differs preloading from prefetching?",
-//         options: [
-//             "Preloading waits for idle time, prefetching happens immediately",
-//             "Preloading fetches immediately, prefetching waits for idle time",
-//             "Both techniques have identical behavior in all situations",
-//             "Both techniques disable cache headers completely for requests"
-//         ],
-//         correctOption: 1,
-//         points:30
-//     },
-//     {
-//         id: 168,
-//         question:  "What is the main purpose of preload?",
-//         options: [
-//             "Download resources only when user clicks on links",
-//             "Download critical resources as early as possible",
-//             "Reduce size of JavaScript bundles automatically",
-//             "Block unused CSS files from loading unnecessarily"
-//         ],
-//         correctOption: 1,
-//         points: 10
-//     },
-//     {
-//         id: 169,
-//         question: "How does prefetch improve user experience?",
-//         options: [
-//             "Executes JavaScript code faster in browser runtime",
-//             "Automatically caches all images for offline usage",
-//             "Loads future page resources during browser idle time",
-//             "Reduces React component re-renders significantly"
-//         ],
-//         correctOption: 2,
-//         points: 10
-//     },
-//     {
-//         id: 170,
-//         question: "What's the biggest risk of incorrect preload usage?",
-//         options: [
-//             "Increasing bundle splitting unnecessarily throughout application",
-//             "Blocking lazy-loading of components during runtime",
-//             "Overloading network with too many high-priority requests",
-//             "Preventing prefetch functionality from working properly"
-//         ],
-//         correctOption: 2,
-//         points: 20
-//     },
-//     {
-//         id: 171,
-//         question:  "Why does Link with prefetch=true improve navigation performance?",
-//         "options": [
-//             "It reduces React rendering time for all components",
-//             "It preloads target page JavaScript during browser idle time",
-//             "It disables hydration errors throughout the application",
-//             "It inlines CSS for the target page improving render speed"
-//         ],
-//         correctOption: 1,
-//         points: 10
-//     },
-//     {
-//         id: 172,
-//         question: "Which strategy is most effective for optimizing initial page load time?",
-//         "options": [
-//             "Disable caching for all resources",
-//             "Prefetch all images on the page",
-//             "Prefetch non-critical JavaScript files",
-//             "Preload critical fonts and above-the-fold CSS"
-//         ],
-//         correctOption:3,
-//         points: 20
-//     },
+    {
+        "id": 181,
+        question:"Why use Next.js Image component over regular img?",
+        options: [
+            "Increases resolution of all images to HD",
+            "Converts all image formats to WebP",
+            "Automatically lazy-loads and optimizes images",
+            "Completely avoids browser caching for freshness"
+        ],
+        correctOption: 2,
+        points: 10,
+        "explanation": "• Image component تصاویر را به صورت خودکار optimize می‌کند\n" +
+            "- lazy loading پیش‌فرض برای تصاویر\n" +
+            "- تبدیل خودکار به فرمت‌های مدرن مثل WebP\n" +
+            "- resize و optimization بر اساس device\n" +
+            "- جلوگیری از layout shift با تعیین ابعاد"
+    },
+    {
+        "id": 182,
+        question: "How does caching help with bundle optimization?",
+        options: [
+            "Reduces React component re-renders",
+            "Automatically inlines critical CSS for faster rendering",
+            "Prevents downloading unchanged bundles on repeat visits",
+            "Forces all JavaScript modules to preload for speed"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation": "• caching از دانلود مجدد فایل‌های unchanged جلوگیری می‌کند\n" +
+            "- browser فایل‌ها را در cache ذخیره می‌کند\n" +
+            "- با content hashing فایل‌ها versioning می‌شوند\n" +
+            "- فقط فایل‌های تغییر یافته دوباره download می‌شوند\n" +
+            "- سرعت بارگذاری در بازدیدهای بعدی بسیار بهتر است"
+    },
+    {
+        "id": 183,
+        question: "What's the downside of importing large third-party libraries?",
+        options: [
+            "They completely disable React hooks throughout application",
+            "They significantly increase initial JavaScript load time",
+            "They prevent tree-shaking optimization from working properly",
+            "They block Suspense fallback rendering during loading"
+        ],
+        correctOption: 1,
+        points: 20,
+                    "explanation": "• کتابخانه‌های بزرگ bundle size را قابل توجه افزایش می‌دهند\n" +
+                        "- زمان parsing و execution بیشتری نیاز است\n" +
+                        "- ممکن است بخش‌های زیادی استفاده نشود\n" +
+                        "- بهتر است از tree-shakable libraries استفاده کنید\n" +
+                        "- یا فقط بخش مورد نیاز را import کنید"
+    },
+    {
+        "id": 184,
+        question: "What happens to imported but unused libraries with tree-shaking?",
+        options: [
+            "Library code will not be included in final bundle",
+            "Library code will always remain in bundle regardless",
+            "Library code throws runtime error during execution phase",
+            "Library code preloads for future potential use"
+        ],
+        correctOption: 0,
+        points: 30,
+        "explanation": "• tree-shaking کد استفاده نشده را حذف می‌کند\n" +
+                "- اگر چیزی از library استفاده نشود، در bundle نمی‌آید\n" +
+                "- فقط با ES modules (import/export) کار می‌کند\n" +
+                "- CommonJS (require) قابل tree-shake نیست\n" +
+                "- کتابخانه‌ها باید side-effect free باشند"
+    },
+    {
+        "id": 185,
+        question: "How can unused CSS affect bundle performance?",
+        options: [
+            "Increases JavaScript execution time throughout the application",
+            "Completely disables CSS modules functionality across project",
+            "increases the bundle size without offering meaningful functionality",
+            "Forces application to use inline styles only"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation": "• CSS استفاده نشده حجم bundle را بیهوده افزایش می‌دهد\n" +
+            "- browser باید همه CSS را parse و apply کند\n" +
+            "- زمان rendering را کند می‌کند\n" +
+            "- از tools مثل PurgeCSS برای حذف استفاده کنید\n" +
+            "- CSS Modules و Tailwind این مشکل را کاهش می‌دهند"
+    },
+    {
+        "id": 186,
+        question:  "In Next.js, what differs preloading from prefetching?",
+        options: [
+            "Preloading waits for idle time, prefetching happens immediately",
+            "Preloading fetches immediately, prefetching waits for idle time",
+            "Both techniques have identical behavior in all situations",
+            "Both techniques disable cache headers completely for requests"
+        ],
+        correctOption: 1,
+        points:30,
+        "explanation": "• preload منابع critical را فوراً بارگذاری می‌کند\n" +
+            "- prefetch منابع را در زمان idle بارگذاری می‌کند\n" +
+            "- preload برای fonts، critical CSS استفاده می‌شود\n" +
+            "- prefetch برای صفحات بعدی استفاده می‌شود\n" +
+            "- استفاده نادرست preload می‌تواند مضر باشد"
+    },
+    {
+        id: 187,
+        question:  "What is the main purpose of preload?",
+        options: [
+            "Download resources only when user clicks on links",
+            "Download critical resources as early as possible",
+            "Reduce size of JavaScript bundles automatically",
+            "Block unused CSS files from loading unnecessarily"
+        ],
+        correctOption: 1,
+        points: 10,
+        "explanation": "• preload به browser می‌گوید منابع مهم را زودتر دانلود کند\n" +
+            "- برای منابعی که حتماً نیاز است استفاده می‌شود\n" +
+            "- مثل fonts، critical CSS یا hero images\n" +
+            "- priority بالایی دارد و بلافاصله شروع می‌شود\n" +
+            "- باید با دقت استفاده شود تا bandwidth هدر نرود"
+    },
+    {
+        id: 188,
+        question: "How does prefetch improve user experience?",
+        options: [
+            "Executes JavaScript code faster in browser runtime",
+            "Automatically caches all images for offline usage",
+            "Loads future page resources during browser idle time",
+            "Reduces React component re-renders significantly"
+        ],
+        correctOption: 2,
+        points: 10,
+        "explanation": "• prefetch صفحات احتمالی بعدی را پیش‌بارگذاری می‌کند\n" +
+            "- در زمان idle browser انجام می‌شود\n" +
+            "- navigation فوری و بدون تاخیر می‌شود\n" +
+            "- Next.js به صورت خودکار links را prefetch می‌کند\n" +
+            "- تجربه کاربری نزدیک به native apps"
+    },
+    {
+        id: 189,
+        question: "What's the biggest risk of incorrect preload usage?",
+        options: [
+            "Increasing bundle splitting unnecessarily throughout application",
+            "Blocking lazy-loading of components during runtime",
+            "Overloading network with too many high-priority requests",
+            "Preventing prefetch functionality from working properly"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation": "• استفاده بیش از حد preload bandwidth را مصرف می‌کند\n" +
+            "- منابع واقعاً مهم دیرتر بارگذاری می‌شوند\n" +
+            "- بر روی کاربران با اینترنت کند تاثیر منفی دارد\n" +
+            "- فقط برای منابع critical استفاده کنید\n" +
+            "- معمولاً 2-3 preload کافی است"
+    },
+    {
+        id: 190,
+        question:  "Why does Link with prefetch=true improve navigation performance?",
+        "options": [
+            "It reduces React rendering time for all components",
+            "It preloads target page JavaScript during browser idle time",
+            "It disables hydration errors throughout the application",
+            "It inlines CSS for the target page improving render speed"
+        ],
+        correctOption: 1,
+        points: 10,
+        "explanation": "• Link صفحه هدف را قبل از کلیک بارگذاری می‌کند\n" +
+            "- در زمان idle browser این کار انجام می‌شود\n" +
+            "- وقتی کاربر کلیک می‌کند، صفحه آماده است\n" +
+            "- navigation فوری و بدون loading می‌شود\n" +
+            "- یکی از ویژگی‌های قدرتمند Next.js است"
+    },
+    {
+        id: 172,
+        question: "Which strategy is most effective for optimizing initial page load time?",
+        "options": [
+            "Disable caching for all resources",
+            "Prefetch all images on the page",
+            "Prefetch non-critical JavaScript files",
+            "Preload critical fonts and above-the-fold CSS"
+        ],
+        correctOption:3,
+        points: 20,
+                    "explanation": ""
+    },
 //     {
 //         id: 173,
 //         question: "What defines a reactive value in React?",
@@ -2918,7 +2970,8 @@ export const mockQuestions: Question[] = [
 //             "A function that executes only once during rendering"
 //         ],
 //         correctOption: 1,
-//         points: 10
+//         points: 10,
+//             "explanation": ""
 //     },
 //     {
 //         id: 174,
@@ -2930,7 +2983,8 @@ export const mockQuestions: Question[] = [
 //             "useCallback"
 //         ],
 //         "correctOption": 2,
-//         points: 10
+//         points: 10,
+//             "explanation": ""
 //     },
 //     {
 //         id: 175,
@@ -2942,7 +2996,8 @@ export const mockQuestions: Question[] = [
 //             "React only monitors Context values"
 //         ],
 //         "correctOption": 2,
-//         points: 20
+//         points: 20,
+//             "explanation": ""
 //     },
 //     {        id: 176,
 //         question:"What is true about reactive values in React?",
@@ -2953,7 +3008,8 @@ export const mockQuestions: Question[] = [
 //             "They cannot be used in functional components"
 //         ],
 //         correctOption: 0,
-//         points: 20
+//         points: 20,
+//             "explanation": ""
 //     },
 //     {
 //         id: 177,
@@ -2965,7 +3021,8 @@ export const mockQuestions: Question[] = [
 //             "To satisfy ESLint rules and best practices"
 //         ],
 //         correctOption: 0,
-//         points: 20
+//         points: 20,
+//             "explanation": ""
 //     },
 //     {
 //         id: 178,
@@ -2977,7 +3034,8 @@ export const mockQuestions: Question[] = [
 //             "A module-level constant"
 //         ],
 //         correctOption: 2,
-//         points: 10
+//         points: 10,
+//             "explanation": ""
 //     },
 //     {
 //         id: 179,
@@ -2989,7 +3047,8 @@ export const mockQuestions: Question[] = [
 //             "Props passed from parent components"
 //         ],
 //         correctOption: 2,
-//         points: 10
+//         points: 10,
+//             "explanation": ""
 //     },
 //     {
 //         id: 180,
@@ -3001,7 +3060,8 @@ export const mockQuestions: Question[] = [
 //             "Effects or memoized functions use stale values"
 //         ],
 //         correctOption: 3,
-//         points: 30
+//         points: 30,
+//             "explanation": ""
 //     },
 //     {
 //         id: 181,
@@ -3013,7 +3073,8 @@ export const mockQuestions: Question[] = [
 //             "ESLint exhaustive-deps rule",
 //         ],
 //         correctOption: 3,
-//         points: 10
+//         points: 10,
+//             "explanation": ""
 //     },
 //     {
 //         "id": 182,
@@ -3311,7 +3372,8 @@ export const mockQuestions: Question[] = [
 //             "A tool for minifying JavaScript bundles"
 //         ],
 //         correctOption: 0,
-//         points: 10
+//         points: 10,
+//             "explanation": ""
 //     },
 //     {
 //         id: 199,
@@ -3323,7 +3385,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, Redux is part of React core"
 //         ],
 //         correctOption: 2,
-//         points: 20
+//         points: 20,
+//             "explanation": ""
 //     },
 //     {
 //         id: 202,
@@ -3335,7 +3398,8 @@ export const mockQuestions: Question[] = [
 //             "Reducers can only process primitive data types"
 //         ],
 //         correctOption: 0,
-//         points: 20
+//         points: 20,
+//             "explanation": ""
 //     },
 //     {
 //         id: 203,
