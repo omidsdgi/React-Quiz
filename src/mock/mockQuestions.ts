@@ -2153,84 +2153,84 @@ export const mockQuestions: Question[] = [
                     "- ESLint با قانون rules-of-hooks این موارد را بررسی می‌کند\n" +
                     "- حفظ ترتیب ثابت برای عملکرد صحیح React ضروری است"
     },
-    {
-        "id": 142,
-        "question": "What defines a Custom Hook in React?",
-        "options": [
-            "Any function that starts with 'use' prefix",
-            "A function using other React hooks",
-            "Both: starts with 'use' and uses React hooks",
-            "A function exported from a hooks file"
-        ],
-        "correctOption": 2,
-        "points": 10,
-                "explanation":""
-    },
-    {
-        "id": 143,
-        "question": "When should you create a Custom Hook?",
-        "options": [
-            "For every component you create",
-            "When logic is reused across components",
-            "Only for API calls and data fetching",
-            "Never, use built-in hooks only"
-        ],
-        "correctOption": 1,
-        "points": 10,
-                "explanation":""
-    },
-    {
-        "id": 144,
-        "question": "What is the naming convention for Custom Hooks?",
-        "options": [
-            "Must start with 'use' followed by descriptive name",
-            "Must end with 'Hook' suffix",
-            "Must be in camelCase only",
-            "No specific naming convention required"
-        ],
-        "correctOption": 0,
-        "points": 10,
-                "explanation":""
-    },
-    {
-        "id": 145,
-        "question": "Can Custom Hooks use other React hooks like useState?",
-        "options": [
-            "No, Custom Hooks cannot use other hooks",
-            "Yes, that's the main purpose of Custom Hooks",
-            "Only useState, not other hooks",
-            "Only in Class Components"
-        ],
-        "correctOption": 1,
-        "points": 10,
-                "explanation":""
-    },
-    {
-        "id": 146,
-        "question": "How do you handle errors in a Custom Hook for API fetching?",
-        "options": [
-            "Errors cannot be handled in Custom Hooks",
-            "Use try-catch and return error state",
-            "Let errors bubble to parent component always",
-            "Use error boundaries inside the hook"
-        ],
-        "correctOption": 1,
-        "points": 20,
-                "explanation":""
-    },
-    {
-        "id": 147,
-        "question": "What should a Custom Hook for form handling return?",
-        "options": [
-            "Only the form values object",
-            "JSX for the entire form",
-            "Values, handlers, and validation state",
-            "Nothing, it should mutate props directly"
-        ],
-        "correctOption": 2,
-        "points": 20,
-                "explanation":""
-    },
+    // {
+    //     "id": 142,
+    //     "question": "What defines a Custom Hook in React?",
+    //     "options": [
+    //         "Any function that starts with 'use' prefix",
+    //         "A function using other React hooks",
+    //         "Both: starts with 'use' and uses React hooks",
+    //         "A function exported from a hooks file"
+    //     ],
+    //     "correctOption": 2,
+    //     "points": 10,
+    //             "explanation":""
+    // },
+    // {
+    //     "id": 143,
+    //     "question": "When should you create a Custom Hook?",
+    //     "options": [
+    //         "For every component you create",
+    //         "When logic is reused across components",
+    //         "Only for API calls and data fetching",
+    //         "Never, use built-in hooks only"
+    //     ],
+    //     "correctOption": 1,
+    //     "points": 10,
+    //             "explanation":""
+    // },
+    // {
+    //     "id": 144,
+    //     "question": "What is the naming convention for Custom Hooks?",
+    //     "options": [
+    //         "Must start with 'use' followed by descriptive name",
+    //         "Must end with 'Hook' suffix",
+    //         "Must be in camelCase only",
+    //         "No specific naming convention required"
+    //     ],
+    //     "correctOption": 0,
+    //     "points": 10,
+    //             "explanation":""
+    // },
+    // {
+    //     "id": 145,
+    //     "question": "Can Custom Hooks use other React hooks like useState?",
+    //     "options": [
+    //         "No, Custom Hooks cannot use other hooks",
+    //         "Yes, that's the main purpose of Custom Hooks",
+    //         "Only useState, not other hooks",
+    //         "Only in Class Components"
+    //     ],
+    //     "correctOption": 1,
+    //     "points": 10,
+    //             "explanation":""
+    // },
+    // {
+    //     "id": 146,
+    //     "question": "How do you handle errors in a Custom Hook for API fetching?",
+    //     "options": [
+    //         "Errors cannot be handled in Custom Hooks",
+    //         "Use try-catch and return error state",
+    //         "Let errors bubble to parent component always",
+    //         "Use error boundaries inside the hook"
+    //     ],
+    //     "correctOption": 1,
+    //     "points": 20,
+    //             "explanation":""
+    // },
+    // {
+    //     "id": 147,
+    //     "question": "What should a Custom Hook for form handling return?",
+    //     "options": [
+    //         "Only the form values object",
+    //         "JSX for the entire form",
+    //         "Values, handlers, and validation state",
+    //         "Nothing, it should mutate props directly"
+    //     ],
+    //     "correctOption": 2,
+    //     "points": 20,
+    //             "explanation":""
+    // },
 //     {
 //         "id": 148,
 //         "question": "Can Custom Hooks call other Custom Hooks?",
@@ -2770,7 +2770,6 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 2,
         points: 10,
-                    "explanation": "",
         "explanation": "• Image component تصاویر را به صورت خودکار optimize می‌کند\n" +
             "- lazy loading پیش‌فرض برای تصاویر\n" +
             "- تبدیل خودکار به فرمت‌های مدرن مثل WebP\n" +
@@ -2948,7 +2947,7 @@ export const mockQuestions: Question[] = [
             "- یکی از ویژگی‌های قدرتمند Next.js است"
     },
     {
-        id: 172,
+        id: 191,
         question: "Which strategy is most effective for optimizing initial page load time?",
         "options": [
             "Disable caching for all resources",
@@ -2958,124 +2957,160 @@ export const mockQuestions: Question[] = [
         ],
         correctOption:3,
         points: 20,
-                    "explanation": ""
+        "explanation": "• preload کردن منابع critical مثل fonts و CSS اولویت اول است\n" +
+            "- above-the-fold content باید سریع نمایش داده شود\n" +
+            "- lazy load کردن تصاویر و کامپوننت‌های غیرضروری\n" +
+            "- code splitting برای کاهش initial bundle\n" +
+            "- ترکیب این تکنیک‌ها بهترین نتیجه را می‌دهد"
     },
-//     {
-//         id: 173,
-//         question: "What defines a reactive value in React?",
-//         "options": [
-//             "A value that remains constant during component lifecycle",
-//             "A value that triggers component updates when it changes",
-//             "A value stored outside the component scope",
-//             "A function that executes only once during rendering"
-//         ],
-//         correctOption: 1,
-//         points: 10,
-//             "explanation": ""
-//     },
-//     {
-//         id: 174,
-//         question:  "Which hook is designed to create reactive computed values in React?",
-//         "options": [
-//             "useState",
-//             "useEffect",
-//             "useMemo",
-//             "useCallback"
-//         ],
-//         "correctOption": 2,
-//         points: 10,
-//             "explanation": ""
-//     },
-//     {
-//         id: 175,
-//         question:"Why are regular variables in React components not reactive?",
-//         "options": [
-//             "React ignores primitive data types",
-//             "JavaScript doesn't support reactive programming",
-//             "React doesn't track changes to regular variables",
-//             "React only monitors Context values"
-//         ],
-//         "correctOption": 2,
-//         points: 20,
-//             "explanation": ""
-//     },
-//     {        id: 176,
-//         question:"What is true about reactive values in React?",
-//         "options": [
-//             "They automatically trigger re-renders when changed",
-//             "They require manual DOM updates after changes",
-//             "They only work with primitive data types",
-//             "They cannot be used in functional components"
-//         ],
-//         correctOption: 0,
-//         points: 20,
-//             "explanation": ""
-//     },
-//     {
-//         id: 177,
-//         question: "Why must reactive values be included in useEffect dependency arrays?",
-//         "options": [
-//             "To prevent stale closures and ensure current values",
-//             "To reduce the final bundle size significantly",
-//             "To prevent unnecessary component re-renders",
-//             "To satisfy ESLint rules and best practices"
-//         ],
-//         correctOption: 0,
-//         points: 20,
-//             "explanation": ""
-//     },
-//     {
-//         id: 178,
-//         question:  "Which of these is considered a reactive value in React?",
-//         "options": [
-//             "A local variable declared inside render",
-//             "A literal number inside useEffect",
-//             "Props passed from a parent component",
-//             "A module-level constant"
-//         ],
-//         correctOption: 2,
-//         points: 10,
-//             "explanation": ""
-//     },
-//     {
-//         id: 179,
-//         question:  "Which value does NOT need to be included in dependency arrays?",
-//         "options": [
-//             "State values from useState",
-//             "Functions returned by useCallback",
-//             "Setter functions from useState",
-//             "Props passed from parent components"
-//         ],
-//         correctOption: 2,
-//         points: 10,
-//             "explanation": ""
-//     },
-//     {
-//         id: 180,
-//         question: "What happens when a reactive value is missing from a dependency array?",
-//         "options": [
-//             "React throws a runtime error immediately",
-//             "The component fails to mount properly",
-//             "The code works but may use stale values",
-//             "Effects or memoized functions use stale values"
-//         ],
-//         correctOption: 3,
-//         points: 30,
-//             "explanation": ""
-//     },
-//     {
-//         id: 181,
-//         question: "Which tool automatically detects missing dependencies in useEffect?",
-//         "options": [
-//             "Prettier code formatter",
-//             "React DevTools browser extension",
-//             "TypeScript compiler",
-//             "ESLint exhaustive-deps rule",
-//         ],
-//         correctOption: 3,
-//         points: 10,
-//             "explanation": ""
-//     },
+    {
+        id: 192,
+        question: "What defines a reactive value in React?",
+        "options": [
+            "A value that remains constant during component lifecycle",
+            "A value that triggers component updates when it changes",
+            "A value stored outside the component scope",
+            "A function that executes only once during rendering"
+        ],
+        correctOption: 1,
+        points: 10,
+        "explanation": "• reactive value مقداری است که تغییر آن باعث re-render می‌شود\n" +
+            "- مثل state، props، context values\n" +
+            "- React به صورت خودکار آن‌ها را track می‌کند\n" +
+            "- متغیرهای معمولی reactive نیستند\n" +
+            "- باید در dependency arrays قرار گیرند"
+    },
+    {
+        id: 193,
+        question:  "Which hook is designed to create reactive computed values in React?",
+        "options": [
+            "useState",
+            "useEffect",
+            "useMemo",
+            "useCallback"
+        ],
+        "correctOption": 2,
+        points: 10,
+            "explanation": "• useMemo برای ساخت مقادیر محاسبه شده reactive است\n" +
+                "- مقدار را فقط زمان تغییر dependencies دوباره محاسبه می‌کند\n" +
+                "- از محاسبات گران قیمت غیرضروری جلوگیری می‌کند\n" +
+                "- مقدار برگشتی reactive است\n" +
+                "- برای derived state مناسب است"
+    },
+    {
+        id: 194,
+        question:"Why are regular variables in React components not reactive?",
+        "options": [
+            "React ignores primitive data types",
+            "JavaScript doesn't support reactive programming",
+            "React doesn't track changes to regular variables",
+            "React only monitors Context values"
+        ],
+        "correctOption": 2,
+        points: 20,
+        "explanation": "• متغیرهای معمولی هیچ ارتباطی با rendering system ندارند\n" +
+                "- React تغییرات آن‌ها را track نمی‌کند\n" +
+                "- تغییر آن‌ها باعث re-render نمی‌شود\n" +
+                "- در هر render مقدار اولیه می‌گیرند\n" +
+                "- برای reactive values از useState استفاده کنید"
+    },
+    {        id: 195,
+        question:"What is true about reactive values in React?",
+        "options": [
+            "They automatically trigger re-renders when changed",
+            "They require manual DOM updates after changes",
+            "They only work with primitive data types",
+            "They cannot be used in functional components"
+        ],
+        correctOption: 0,
+        points: 20,
+            "explanation": ""
+    },
+    {
+        id: 196,
+        question: "Why must reactive values be included in useEffect dependency arrays?",
+        "options": [
+            "To prevent stale closures and ensure current values",
+            "To reduce the final bundle size significantly",
+            "To prevent unnecessary component re-renders",
+            "To satisfy ESLint rules and best practices"
+        ],
+        correctOption: 0,
+        points: 20,
+        "explanation": "• تغییر reactive values به صورت خودکار باعث re-render می‌شود\n" +
+            "- React آن‌ها را monitor می‌کند\n" +
+            "- شامل state، props، context می‌شوند\n" +
+            "- باید در useEffect dependencies قرار گیرند\n" +
+            "- پایه سیستم reactivity در React هستند"
+    },
+    {
+        id: 197,
+        question:  "Which of these is considered a reactive value in React?",
+        "options": [
+            "A local variable declared inside render",
+            "A literal number inside useEffect",
+            "Props passed from a parent component",
+            "A module-level constant"
+        ],
+        correctOption: 2,
+        points: 10,
+        "explanation": "• props از والد به فرزند pass می‌شوند و reactive هستند\n" +
+            "- تغییر props باعث re-render کامپوننت می‌شود\n" +
+            "- باید در dependency arrays قرار گیرند\n" +
+            "- متغیرهای local و constants reactive نیستند\n" +
+            "- state و context values نیز reactive هستند"
+    },
+    {
+        id: 198,
+        question:  "Which value does NOT need to be included in dependency arrays?",
+        "options": [
+            "State values from useState",
+            "Functions returned by useCallback",
+            "Setter functions from useState",
+            "Props passed from parent components"
+        ],
+        correctOption: 2,
+        points: 10,
+       "explanation": "• setter functions از useState reference ثابت دارند\n" +
+           "- React تضمین می‌کند هرگز تغییر نمی‌کنند\n" +
+           "- نیازی به اضافه کردن به deps نیست\n" +
+           "- dispatch از useReducer نیز همین رفتار را دارد\n" +
+           "- بقیه reactive values باید اضافه شوند"
+    },
+    {
+        id: 199,
+        question: "What happens when a reactive value is missing from a dependency array?",
+        "options": [
+            "React throws a runtime error immediately",
+            "The component fails to mount properly",
+            "The code works but may use stale values",
+            "Effects or memoized functions use stale values"
+        ],
+        correctOption: 3,
+        points: 30,
+        "explanation": "• effect یا callback مقدار قدیمی (stale) را می‌بیند\n" +
+            "- این به stale closure معروف است\n" +
+            "- باعث bugs پنهان و رفتار نادرست می‌شود\n" +
+            "- ESLint warnings را جدی بگیرید\n" +
+            "- همیشه تمام dependencies را اضافه کنید"
+    },
+    {
+        id: 200,
+        question: "Which tool automatically detects missing dependencies in useEffect?",
+        "options": [
+            "Prettier code formatter",
+            "React DevTools browser extension",
+            "TypeScript compiler",
+            "ESLint exhaustive-deps rule",
+        ],
+        correctOption: 3,
+        points: 10,
+        "explanation": "• ESLint با قانون exhaustive-deps این کار را انجام می‌دهد\n" +
+            "- بخشی از eslint-plugin-react-hooks است\n" +
+            "- warnings قرمز رنگ در editor نشان می‌دهد\n" +
+            "- به جلوگیری از stale closure کمک می‌کند\n" +
+            "- حتماً آن را در پروژه نصب و فعال کنید"
+    },
 //     {
 //         "id": 182,
 //         "question":  "Why must context values used in useEffect be included in dependency arrays?",
