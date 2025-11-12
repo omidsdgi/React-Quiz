@@ -3788,7 +3788,7 @@ export const mockQuestions: Question[] = [
             "- useReducer ساده‌تر و built-in React است\n" +
             "- Redux برای sharing state بین کامپوننت‌ها بهتر است"
     },
-    {   id: 224,
+    {   id: 240,
         question: "What is the main responsibility of the Redux store?",
         options: [
             "Directly render UI components into the DOM",
@@ -3804,131 +3804,180 @@ export const mockQuestions: Question[] = [
             "- به کامپوننت‌ها اجازه subscribe کردن می‌دهد\n" +
             "- middleware pipeline را اجرا می‌کند"
     },
-//     {
-//         id: 225,
-//         question: "Why use multiple reducers in a Redux store?",
-//         options: [
-//             "Enable parallel execution of actions",
-//             "Organize state into focused, manageable slices",
-//             "Manage React component lifecycle",
-//             "Handle styling and rendering separately"
-//         ],
-//         correctOption: 1,
-//         points: 20
-//     },
-//     {
-//         id: 226,
-//         question: "What is the purpose of an action creator in Redux?",
-//         options: [
-//             "Directly modify state in the store",
-//             "Return an action object describing state change",
-//             "Render UI based on dispatched actions",
-//             "Combine multiple reducers into one"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         id: 227,
-//         question: "Why separate state logic from components in Redux?",
-//         "options": [
-//             "To prevent Redux DevTools from being triggered",
-//             "To reduce the final bundle size of the application",
-//             "To make code predictable, maintainable, and debuggable",
-//             "To avoid using React components for state updates"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         id: 228,
-//         question: "Which tool best handles server state in modern React apps?",
-//         "options": [
-//             "Redux with a single global store for all state types",
-//             "Context API for passing remote data through component tree",
-//             "React Query for caching, fetching, and syncing server state",
-//             "useReducer hook for managing local component state"
-//         ],
-//         correctOption: 2,
-//         points: 20
-//     },
-//     {
-//         id: 229,
-//         question: "What performance issue arises with Context for frequently changing state?",
-//         "options": [
-//             "Context API cannot pass data to deeply nested components",
-//             "Frequent updates cause unnecessary re-renders in all consumers",
-//             "Context API is only designed for styling and theming",
-//             "Context API requires Redux to handle any state properly"
-//         ],
-//         correctOption: 1,
-//         points: 20
-//     },
-//     {
-//         id: 230,
-//         question: "Why do modern React apps often not need Redux for remote state?",
-//         "options": [
-//             "Redux has been deprecated and is no longer supported",
-//             "Context API fully replaces Redux for all state management",
-//             "Redux cannot manage remote data in React applications",
-//             "Libraries like React Query handle server state more effectively"
-//         ],
-//         correctOption: 3,
-//         points: 20
-//     },
-//     {
-//         id: 233,
-//         question: "Why has Redux adoption decreased recently?",
-//         "options": [
-//             "React automatically handles all state management internally",
-//             "Most global state is remote and better handled by specialized libraries",
-//             "Redux no longer works with current React versions",
-//             "UI state requirements have become too complex for Redux"
-//         ],
-//         correctOption: 1,
-//         points: 20
-//     },
-//     {
-//         "id": 234,
-//         "question": "What is the primary role of middleware in Redux?",
-//         "options": [
-//             "To let components update state directly without reducers",
-//             "To intercept actions and run additional logic",
-//             "To replace reducers with custom asynchronous handlers",
-//             "To make the store update automatically without dispatch"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 235,
-//         "question":"Where should side effects like API calls be handled in Redux?",
-//         "options": [
-//             "Inside reducer functions",
-//             "Inside middleware or thunks",
-//             "Directly in React components only",
-//             "Inside the store configuration"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 236,
-//         "question": "What is the main purpose of Redux Thunk?",
-//         "options": [
-//             "Defer rendering until data is ready",
-//             "Optimize reducers by memoizing updates",
-//             "Prevent unnecessary component re-renders",
-//             "Handle async logic before dispatching actions"
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//                 "explanation":""
-//     },
+    {
+        id: 241,
+        question: "Why use multiple reducers in a Redux store?",
+        options: [
+            "Enable parallel execution of actions",
+            "Organize state into focused, manageable slices",
+            "Manage React component lifecycle",
+            "Handle styling and rendering separately"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":"• state را به slices منطقی تقسیم می‌کند\n" +
+            "- هر reducer مسئولیت مشخصی دارد\n" +
+            "- کد سازمان‌یافته‌تر و قابل maintenance است\n" +
+            "- team members می‌توانند مستقل کار کنند\n" +
+            "- combineReducers آن‌ها را merge می‌کند"
+    },
+    {
+        id: 242,
+        question: "What is the purpose of an action creator in Redux?",
+        options: [
+            "Directly modify state in the store",
+            "Return an action object describing state change",
+            "Render UI based on dispatched actions",
+            "Combine multiple reducers into one"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• تابعی که action object می‌سازد و return می‌کند\n" +
+            "- از hard-coding action types جلوگیری می‌کند\n" +
+            "- payload را به صورت parameter می‌گیرد\n" +
+            "- consistency و reusability را تضمین می‌کند\n" +
+            "- در Redux Toolkit خودکار generate می‌شوند"
+    },
+    {
+        id: 243,
+        question: "Why separate state logic from components in Redux?",
+        "options": [
+            "To prevent Redux DevTools from being triggered",
+            "To reduce the final bundle size of the application",
+            "To make code predictable, maintainable, and debuggable",
+            "To avoid using React components for state updates"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• separation of concerns را رعایت می‌کند\n" +
+            "- logic قابل test بدون UI می‌شود\n" +
+            "- کامپوننت‌ها ساده‌تر و focused می‌شوند\n" +
+            "- state logic قابل reuse در جاهای مختلف است\n" +
+            "- debugging و maintenance آسان‌تر می‌شود"
+    },
+    {
+        id: 244,
+        question: "Which tool best handles server state in modern React apps?",
+        "options": [
+            "Redux with a single global store for all state types",
+            "Context API for passing remote data through component tree",
+            "React Query for caching, fetching, and syncing server state",
+            "useReducer hook for managing local component state"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation":"• React Query برای server state optimization شده\n" +
+            "- caching، refetching و synchronization خودکار\n" +
+            "- loading، error و success states\n" +
+            "- optimistic updates و mutations\n" +
+            "- بهتر از Redux برای این use case است"
+
+    },
+    {
+        id: 245,
+        question: "What performance issue arises with Context for frequently changing state?",
+        "options": [
+            "Context API cannot pass data to deeply nested components",
+            "Frequent updates cause unnecessary re-renders in all consumers",
+            "Context API is only designed for styling and theming",
+            "Context API requires Redux to handle any state properly"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":"• تغییر Context باعث re-render همه consumers می‌شود\n" +
+            "- حتی اگر consumer فقط بخشی از data را بخواهد\n" +
+            "- برای frequent updates performance problem ایجاد می‌کند\n" +
+            "- باید Context را split کنید یا از useMemo استفاده کنید\n" +
+            "- Redux برای این موارد بهتر optimize شده"
+
+    },
+    {
+        id: 246,
+        question: "Why do modern React apps often not need Redux for remote state?",
+        "options": [
+            "Redux has been deprecated and is no longer supported",
+            "Context API fully replaces Redux for all state management",
+            "Redux cannot manage remote data in React applications",
+            "Libraries like React Query handle server state more effectively"
+        ],
+        correctOption: 3,
+        points: 20,
+        "explanation":"• React Query و SWR برای server state بهتر هستند\n" +
+            "- caching، invalidation و refetching خودکار\n" +
+            "- code کمتر و ساده‌تر نسبت به Redux\n" +
+            "- focus روی server state challenges است\n" +
+            "- Redux برای UI state global هنوز مفید است"
+
+    },
+    {
+        id: 247,
+        question: "Why has Redux adoption decreased recently?",
+        "options": [
+            "React automatically handles all state management internally",
+            "Most global state is remote and better handled by specialized libraries",
+            "Redux no longer works with current React versions",
+            "UI state requirements have become too complex for Redux"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":"• اکثر global state در واقع remote state است\n" +
+            "- tools مثل React Query این کار را بهتر انجام می‌دهند\n" +
+            "- Context API برای UI state ساده کافی است\n" +
+            "- Redux Toolkit boilerplate را کاهش داد اما هنوز پیچیده است\n" +
+            "- ecosystem React به ابزارهای specialized رفته"
+
+    },
+    {
+        "id": 248,
+        "question": "What is the primary role of middleware in Redux?",
+        "options": [
+            "To let components update state directly without reducers",
+            "To intercept actions and run additional logic",
+            "To replace reducers with custom asynchronous handlers",
+            "To make the store update automatically without dispatch"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• middleware بین dispatch و reducer قرار می‌گیرد\n" +
+            "- actions را intercept و modify می‌کند\n" +
+            "- امکان async logic و side effects را می‌دهد\n" +
+            "- logging، error reporting و analytics\n" +
+            "- Redux Thunk و Saga examples از middleware هستند"
+    },
+    {
+        "id": 249,
+        "question":"Where should side effects like API calls be handled in Redux?",
+        "options": [
+            "Inside reducer functions",
+            "Inside middleware or thunks",
+            "Directly in React components only",
+            "Inside the store configuration"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• در middleware مثل Redux Thunk یا Saga\n" +
+            "- reducers باید pure و بدون side effects باشند\n" +
+            "- thunks به store و dispatch دسترسی دارند\n" +
+            "- می‌توانند async operations انجام دهند\n" +
+            "- بعد از completion، action dispatch می‌کنند"
+    },
+    {
+        "id": 250,
+        "question": "What is the main purpose of Redux Thunk?",
+        "options": [
+            "Defer rendering until data is ready",
+            "Optimize reducers by memoizing updates",
+            "Prevent unnecessary component re-renders",
+            "Handle async logic before dispatching actions"
+        ],
+        "correctOption": 3,
+        "points": 20,
+                "explanation":"• Thunk امکان dispatch کردن functions را می‌دهد\n" +
+                    "- functions می‌توانند async logic داشته باشند\n" +
+                    "- API calls و side effects در thunks انجام می‌شوند\n" +
+                    "- بعد از completion، actions dispatch می‌کنند\n" +
+                    "- ساده‌ترین middleware برای async است"
+    },
 //     {
 //         "id": 237,
 //         "question": "What enables Redux to handle asynchronous operations before updating state?",
@@ -4123,7 +4172,9 @@ export const mockQuestions: Question[] = [
 //             "Multiple - as many as defined in reducer"
 //         ],
 //         correctOption: 1,
-//         points: 10
+//         points: 10,
+// "explanation":""
+
 //     },
 //     {
 //         id: 253,
@@ -4135,7 +4186,9 @@ export const mockQuestions: Question[] = [
 //             "Generate TypeScript types automatically"
 //         ],
 //         correctOption: 2,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 254,
@@ -4147,7 +4200,9 @@ export const mockQuestions: Question[] = [
 //             "selectors field with state access functions"
 //         ],
 //         correctOption: 0,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 255,
@@ -4159,8 +4214,10 @@ export const mockQuestions: Question[] = [
 //             "Random UUID strings for uniqueness"
 //         ],
 //         correctOption: 1,
-//         points: 20
-//     },
+//         points: 20,
+// "explanation":""
+
+    //     },
 //     {
 //         id: 256,
 //         question: "How do you export the main reducer from createSlice?",
@@ -4171,7 +4228,9 @@ export const mockQuestions: Question[] = [
 //             "Export slice.store as complete reducer"
 //         ],
 //         correctOption: 0,
-//         points: 10
+//         points: 10,
+// "explanation":""
+
 //     },
 //     {
 //         id: 257,
@@ -4183,7 +4242,9 @@ export const mockQuestions: Question[] = [
 //             "Defining routing and navigation logic"
 //         ],
 //         correctOption: 0,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 258,
@@ -4195,7 +4256,9 @@ export const mockQuestions: Question[] = [
 //             "Configures development tools integration"
 //         ],
 //         correctOption: 2,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 259,
@@ -4207,7 +4270,9 @@ export const mockQuestions: Question[] = [
 //             "Configure Redux DevTools for debugging"
 //         ],
 //         correctOption: 0,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 260,
@@ -4219,7 +4284,9 @@ export const mockQuestions: Question[] = [
 //             "Integration with React DevTools"
 //         ],
 //         correctOption: 1,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 261,
@@ -4231,7 +4298,9 @@ export const mockQuestions: Question[] = [
 //             "Provider hell with deeply nested wrappers"
 //         ],
 //         correctOption: 3,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 262,
@@ -4243,7 +4312,9 @@ export const mockQuestions: Question[] = [
 //             "Providing translations to components"
 //         ],
 //         correctOption: 1,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 263,
@@ -4255,7 +4326,9 @@ export const mockQuestions: Question[] = [
 //             "Faster component rendering"
 //         ],
 //         correctOption: 2,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 264,
@@ -4267,7 +4340,9 @@ export const mockQuestions: Question[] = [
 //             "Only provides DevTools support"
 //         ],
 //         correctOption: 1,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 265,
@@ -4279,7 +4354,9 @@ export const mockQuestions: Question[] = [
 //             "Doesn't support memoization"
 //         ],
 //         correctOption: 0,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 266,
@@ -4291,7 +4368,9 @@ export const mockQuestions: Question[] = [
 //             "Local state with debugger"
 //         ],
 //         correctOption: 1,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 267,
@@ -4303,7 +4382,9 @@ export const mockQuestions: Question[] = [
 //             "For shopping cart with frequent updates"
 //         ],
 //         correctOption: 2,
-//         points: 10
+//         points: 10,
+// "explanation":""
+
 //     },
 //     {
 //         id: 268,
@@ -4315,7 +4396,9 @@ export const mockQuestions: Question[] = [
 //             "Creating time-travel debugging"
 //         ],
 //         correctOption: 1,
-//         points: 10
+//         points: 10,
+// "explanation":""
+
 //     },
 //     {
 //         id: 269,
@@ -4327,7 +4410,9 @@ export const mockQuestions: Question[] = [
 //             "For sharing user preferences"
 //         ],
 //         correctOption: 2,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         id: 270,
@@ -4339,7 +4424,9 @@ export const mockQuestions: Question[] = [
 //             "Eliminates need for component state"
 //         ],
 //         correctOption: 2,
-//         points: 20
+//         points: 20,
+// "explanation":""
+
 //     },
 //     {
 //         "id": 271,
@@ -4999,7 +5086,9 @@ export const mockQuestions: Question[] = [
 //             "Functional programming with pure function composition"
 //         ],
 //         correctOption: 1,
-//         points: 20,
+//         points: 20,,
+// "explanation":""
+
 //     },
 //     {
 //         id: 318,
@@ -5011,7 +5100,9 @@ export const mockQuestions: Question[] = [
 //             "Protected routes for authentication handling"
 //         ],
 //         correctOption: 0,
-//         points: 20,
+//         points: 20,,
+// "explanation":""
+
 //     },
 //     {
 //         id: 319,
@@ -5023,7 +5114,9 @@ export const mockQuestions: Question[] = [
 //             "Neither component is used for navigation"
 //         ],
 //         correctOption: 1,
-//         points: 20,
+//         points: 20,,
+// "explanation":""
+
 //     },
 //     {
 //         id: 320,
@@ -5035,7 +5128,9 @@ export const mockQuestions: Question[] = [
 //             "Route guards for access control management"
 //         ],
 //         correctOption: 1,
-//         points: 20,
+//         points: 20,,
+// "explanation":""
+
 //     },
 //     {
 //         "id": 321,
