@@ -3978,154 +3978,202 @@ export const mockQuestions: Question[] = [
                     "- بعد از completion، actions dispatch می‌کنند\n" +
                     "- ساده‌ترین middleware برای async است"
     },
-//     {
-//         "id": 237,
-//         "question": "What enables Redux to handle asynchronous operations before updating state?",
-//         "options": [
-//             "Reducer functions",
-//             "Store configuration",
-//             "Thunk middleware",
-//             "Component lifecycle methods"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 238,
-//         "question": "Which feature is NOT provided by Redux Toolkit?",
-//         "options": [
-//             "createSlice for reducing boilerplate code",
-//             "createAsyncThunk for handling async logic",
-//             "Built-in support for Immer library",
-//             "Class-based component lifecycle methods"
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 239,
-//         "question":"Which capability is NOT provided by createSlice?",
-//         "options": [
-//             "Automatically generates action creators and types",
-//             "Allows writing mutable-looking code safely with Immer",
-//             "Eliminates the need to configure a Redux store",
-//             "Reduces boilerplate by combining state, reducers, and actions"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 240,
-//         "question":"Which library lets you write mutable-looking code in Redux Toolkit?",
-//         "options": [
-//             "Thunk for async operations",
-//             "Saga for side effects",
-//             "Selector for derived state",
-//             "Immer for state updates"
-//         ],
-//         "correctOption": 3,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 241,
-//         "question": "Which Redux Toolkit API combines reducers and action creators?",
-//         "options": [
-//             "createSlice",
-//             "configureStore",
-//             "combineReducers",
-//             "applyMiddleware"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 242,
-//         "question": "Which function sets up the store with built-in middleware and DevTools?",
-//         "options": [
-//             "createReducer",
-//             "createStore",
-//             "configureStore",
-//             "setupStore"
-//         ],
-//         "correctOption": 2,
-//         "points": 10
-//     },
-//     {
-//         "id": 243,
-//         "question": "What is the recommended naming convention for Redux action types?",
-//         "options": [
-//             "Single word names only",
-//             "Event name only",
-//             "Random strings for uniqueness",
-//             "Domain/event pattern"
-//         ],
-//         "correctOption": 3,
-//         "points": 20
-//     },
-//     {
-//         "id": 244,
-//         "question":  "How are action creators handled in createSlice?",
-//         "options": [
-//             "Must be written manually by the developer",
-//             "Auto-generated, accept one payload argument",
-//             "Require multiple arguments for each action call",
-//             "Cannot be accessed outside of the slice logic"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 245,
-//         "question": "What is the primary purpose of createSlice?",
-//         "options": [
-//             "Installs external libraries for async handling",
-//             "Manages routing and navigation inside React apps",
-//             "Defines reducers and generates actions creators together",
-//             "Creates global styles for components in the project"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 246,
-//         "question": "What is true about reducers inside createSlice?",
-//         "options": [
-//             "Always return a completely new object",
-//             "Can write code that appears to mutate state due to Immer",
-//             "Cannot use payload values from dispatched actions",
-//             "Only work if written as pure asynchronous functions component"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 247,
-//         "question": "How are action creators provided in createSlice?",
-//         "options": [
-//             "Created manually in separate file",
-//             "Only available with middleware",
-//             "Auto-generated based on reducer names",
-//             "Must be imported from Redux"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 248,
-//         "question": "What is a key advantage of createSlice over traditional Redux?",
-//         "options": [
-//             "Reduces boilerplate by combining related logic",
-//             "Prevents React components from re-rendering",
-//             "Adds built-in routing and query string support",
-//             "Eliminates the need for any store or middleware"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
+    {
+        "id": 251,
+        "question": "What enables Redux to handle asynchronous operations before updating state?",
+        "options": [
+            "Reducer functions",
+            "Store configuration",
+            "Thunk middleware",
+            "Component lifecycle methods"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• middleware مثل Thunk این امکان را می‌دهد\n" +
+            "- action creators می‌توانند functions return کنند\n" +
+            "- functions می‌توانند async باشند\n" +
+            "- بعد از async work، action واقعی dispatch می‌شود\n" +
+            "- reducer سپس state را update می‌کند"
+    },
+    {
+        "id": 252,
+        "question": "Which feature is NOT provided by Redux Toolkit?",
+        "options": [
+            "createSlice for reducing boilerplate code",
+            "createAsyncThunk for handling async logic",
+            "Built-in support for Immer library",
+            "Class-based component lifecycle methods"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• Redux Toolkit برای simplifying Redux است\n" +
+            "- createSlice، configureStore و createAsyncThunk دارد\n" +
+            "- Immer برای immutable updates built-in است\n" +
+            "- اما lifecycle methods مربوط به class components است\n" +
+            "- Redux Toolkit با function components و hooks کار می‌کند"
+    },
+    {
+        "id": 253,
+        "question":"Which capability is NOT provided by createSlice?",
+        "options": [
+            "Automatically generates action creators and types",
+            "Allows writing mutable-looking code safely with Immer",
+            "Eliminates the need to configure a Redux store",
+            "Reduces boilerplate by combining state, reducers, and actions"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• createSlice reducer، actions و types می‌سازد\n" +
+            "- Immer برای mutable-looking code دارد\n" +
+            "- boilerplate را کاهش می‌دهد\n" +
+            "- اما store configuration را انجام نمی‌دهد\n" +
+            "- برای store از configureStore استفاده کنید"
+    },
+    {
+        "id": 254,
+        "question":"Which library lets you write mutable-looking code in Redux Toolkit?",
+        "options": [
+            "Thunk for async operations",
+            "Saga for side effects",
+            "Selector for derived state",
+            "Immer for state updates"
+        ],
+        "correctOption": 3,
+        "points": 10,
+         "explanation":"• Immer به صورت خودکار در Redux Toolkit است\n" +
+             "- می‌توانید state را مستقیماً modify کنید\n" +
+             "- Immer آن را به immutable updates تبدیل می‌کند\n" +
+             "- کد ساده‌تر و خواناتر می‌شود\n" +
+             "- در پشت صحنه draft state استفاده می‌کند"
+    },
+    {
+        "id": 255,
+        "question": "Which Redux Toolkit API combines reducers and action creators?",
+        "options": [
+            "createSlice",
+            "configureStore",
+            "combineReducers",
+            "applyMiddleware"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":"• createSlice هم reducers و هم actions می‌سازد\n" +
+            "- یک object با name، initialState و reducers می‌گیرد\n" +
+            "- action creators را خودکار generate می‌کند\n" +
+            "- action types را خودکار می‌سازد\n" +
+            "- boilerplate Redux را به شدت کاهش می‌دهد"
+    },
+    {
+        "id": 256,
+        "question": "Which function sets up the store with built-in middleware and DevTools?",
+        "options": [
+            "createReducer",
+            "createStore",
+            "configureStore",
+            "setupStore"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• configureStore تنظیم store را ساده می‌کند\n" +
+            "- Redux DevTools به صورت خودکار setup می‌شود\n" +
+            "- Thunk middleware پیش‌فرض اضافه می‌شود\n" +
+            "- development checks برای common mistakes\n" +
+            "- جایگزین createStore + applyMiddleware است"
+    },
+    {
+        "id": 257,
+        "question": "What is the recommended naming convention for Redux action types?",
+        "options": [
+            "Single word names only",
+            "Event name only",
+            "Random strings for uniqueness",
+            "Domain/event pattern"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• pattern 'domain/eventName' توصیه می‌شود\n" +
+            "- مثل 'todos/todoAdded' یا 'users/userLoggedIn'\n" +
+            "- واضح می‌کند action به کدام بخش مربوط است\n" +
+            "- در Redux Toolkit خودکار این pattern استفاده می‌شود\n" +
+            "- DevTools و debugging را بهتر می‌کند"
+    },
+    {
+        "id": 258,
+        "question":  "How are action creators handled in createSlice?",
+        "options": [
+            "Must be written manually by the developer",
+            "Auto-generated, accept one payload argument",
+            "Require multiple arguments for each action call",
+            "Cannot be accessed outside of the slice logic"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• createSlice خودکار action creators می‌سازد\n" +
+            "- برای هر reducer یک action creator ساخته می‌شود\n" +
+            "- فقط یک argument (payload) می‌گیرند\n" +
+            "- نیازی به نوشتن دستی نیست\n" +
+            "- در slice.actions در دسترس هستند"
+    },
+    {
+        "id": 259,
+        "question": "What is the primary purpose of createSlice?",
+        "options": [
+            "Installs external libraries for async handling",
+            "Manages routing and navigation inside React apps",
+            "Defines reducers and generates actions creators together",
+            "Creates global styles for components in the project"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• ساده‌سازی ساخت Redux logic است\n" +
+            "- reducers و action creators را با هم می‌سازد\n" +
+            "- action types را خودکار generate می‌کند\n" +
+            "- از Immer برای immutability استفاده می‌کند\n" +
+            "- boilerplate را به شدت کاهش می‌دهد"
+    },
+    {
+        "id": 260,
+        "question": "What is true about reducers inside createSlice?",
+        "options": [
+            "Always return a completely new object",
+            "Can write code that appears to mutate state due to Immer",
+            "Cannot use payload values from dispatched actions",
+            "Only work if written as pure asynchronous functions component"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• می‌توانید state را مستقیماً modify کنید\n" +
+            "- Immer این کار را به immutable تبدیل می‌کند\n" +
+            "- کد ساده‌تر و خواناتر می‌شود\n" +
+            "- در واقع draft state را modify می‌کنید\n" +
+            "- نیازی به spread operator نیست"
+    },
+    // {
+    //     "id": 247,
+    //     "question": "How are action creators provided in createSlice?",
+    //     "options": [
+    //         "Created manually in separate file",
+    //         "Only available with middleware",
+    //         "Auto-generated based on reducer names",
+    //         "Must be imported from Redux"
+    //     ],
+    //     "correctOption": 2,
+    //     "points": 20,
+    //     "explanation":""
+    // },
+    // {
+    //     "id": 248,
+    //     "question": "What is a key advantage of createSlice over traditional Redux?",
+    //     "options": [
+    //         "Reduces boilerplate by combining related logic",
+    //         "Prevents React components from re-rendering",
+    //         "Adds built-in routing and query string support",
+    //         "Eliminates the need for any store or middleware"
+    //     ],
+    //     "correctOption": 0,
+    //     "points": 20,
+    //     "explanation":""
+    // },
 //     {
 //         "id": 249,
 //         "question": "What does createSlice return?",
