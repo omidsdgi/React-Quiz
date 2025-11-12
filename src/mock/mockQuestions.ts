@@ -3972,11 +3972,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-                "explanation":"• Thunk امکان dispatch کردن functions را می‌دهد\n" +
-                    "- functions می‌توانند async logic داشته باشند\n" +
-                    "- API calls و side effects در thunks انجام می‌شوند\n" +
-                    "- بعد از completion، actions dispatch می‌کنند\n" +
-                    "- ساده‌ترین middleware برای async است"
+        "explanation":"• Thunk امکان dispatch کردن functions را می‌دهد\n" +
+            "- functions می‌توانند async logic داشته باشند\n" +
+            "- API calls و side effects در thunks انجام می‌شوند\n" +
+            "- بعد از completion، actions dispatch می‌کنند\n" +
+            "- ساده‌ترین middleware برای async است"
     },
     {
         "id": 251,
@@ -4040,11 +4040,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 10,
-         "explanation":"• Immer به صورت خودکار در Redux Toolkit است\n" +
-             "- می‌توانید state را مستقیماً modify کنید\n" +
-             "- Immer آن را به immutable updates تبدیل می‌کند\n" +
-             "- کد ساده‌تر و خواناتر می‌شود\n" +
-             "- در پشت صحنه draft state استفاده می‌کند"
+        "explanation":"• Immer به صورت خودکار در Redux Toolkit است\n" +
+            "- می‌توانید state را مستقیماً modify کنید\n" +
+            "- Immer آن را به immutable updates تبدیل می‌کند\n" +
+            "- کد ساده‌تر و خواناتر می‌شود\n" +
+            "- در پشت صحنه draft state استفاده می‌کند"
     },
     {
         "id": 255,
@@ -4148,138 +4148,179 @@ export const mockQuestions: Question[] = [
             "- در واقع draft state را modify می‌کنید\n" +
             "- نیازی به spread operator نیست"
     },
-    // {
-    //     "id": 247,
-    //     "question": "How are action creators provided in createSlice?",
-    //     "options": [
-    //         "Created manually in separate file",
-    //         "Only available with middleware",
-    //         "Auto-generated based on reducer names",
-    //         "Must be imported from Redux"
-    //     ],
-    //     "correctOption": 2,
-    //     "points": 20,
-    //     "explanation":""
-    // },
-    // {
-    //     "id": 248,
-    //     "question": "What is a key advantage of createSlice over traditional Redux?",
-    //     "options": [
-    //         "Reduces boilerplate by combining related logic",
-    //         "Prevents React components from re-rendering",
-    //         "Adds built-in routing and query string support",
-    //         "Eliminates the need for any store or middleware"
-    //     ],
-    //     "correctOption": 0,
-    //     "points": 20,
-    //     "explanation":""
-    // },
-//     {
-//         "id": 249,
-//         "question": "What does createSlice return?",
-//         "options": [
-//             "collection of selectors for reading global state",
-//             "Middleware that listens for dispatched actions",
-//             "Reducer function and auto-generated actions creators",
-//             "Hook that manages asynchronous API requests"
-//         ],
-//         "correctOption":2,
-//         "points": 20
-//     },
-//     {
-//         "id": 250,
-//         "question":  "How are reducers typically written inside createSlice?",
-//         "options": [
-//             "As JSX components that render data from the store",
-//             "As lifecycle hooks that are triggered by React updates",
-//             "As asynchronous functions that always await API responses",
-//             "As functions that directly modify state using Immer",
-//         ],
-//         "correctOption": 3,
-//         "points": 20
-//     },
-//     {
-//         "id": 251,
-//         "question":"What does createSlice automatically generate based on the reducer functions you define?",
-//         "options": [
-//             "Middleware functions for handling async operations",
-//             "Action creators with the same names as the reducers",
-//             "Component hooks for state management",
-//             "CSS classes for styling components"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         id: 252,
-//         question: "How many parameters do createSlice action creators accept?",
-//         options: [
-//             "Zero - always called without arguments",
-//             "One - payload value becoming action.payload",
-//             "Two - type and payload separately",
-//             "Multiple - as many as defined in reducer"
-//         ],
-//         correctOption: 1,
-//         points: 10,
-// "explanation":""
+    {
+        "id": 261,
+        "question": "How are action creators provided in createSlice?",
+        "options": [
+            "Created manually in separate file",
+            "Only available with middleware",
+            "Auto-generated based on reducer names",
+            "Must be imported from Redux"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• بر اساس نام reducers خودکار ساخته می‌شوند\n" +
+            "- در slice.actions در دسترس هستند\n" +
+            "- همان نام reducer را دارند\n" +
+            "- argument آن‌ها به payload تبدیل می‌شود\n" +
+            "- نیازی به نوشتن manual نیست"
+    },
+    {
+        "id": 262,
+        "question": "What is a key advantage of createSlice over traditional Redux?",
+        "options": [
+            "Reduces boilerplate by combining related logic",
+            "Prevents React components from re-rendering",
+            "Adds built-in routing and query string support",
+            "Eliminates the need for any store or middleware"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• تمام logic مرتبط در یک جا است\n" +
+            "- کد کمتر و خواناتر\n" +
+            "- action types، creators و reducers خودکار\n" +
+            "- از اشتباهات رایج جلوگیری می‌کند\n" +
+            "- maintenance و refactoring آسان‌تر است"
+    },
+    {
+        "id": 263,
+        "question": "What does createSlice return?",
+        "options": [
+            "collection of selectors for reading global state",
+            "Middleware that listens for dispatched actions",
+            "Reducer function and auto-generated actions creators",
+            "Hook that manages asynchronous API requests"
+        ],
+        "correctOption":2,
+        "points": 20,
+        "explanation":"• یک object با reducer و actions برمی‌گرداند\n" +
+            "- slice.reducer برای store استفاده می‌شود\n" +
+            "- slice.actions شامل action creators است\n" +
+            "- slice.name نام slice است\n" +
+            "- slice.caseReducers reducers داخلی هستند"
+    },
+    {
+        "id": 264,
+        "question":  "How are reducers typically written inside createSlice?",
+        "options": [
+            "As JSX components that render data from the store",
+            "As lifecycle hooks that are triggered by React updates",
+            "As asynchronous functions that always await API responses",
+            "As functions that directly modify state using Immer",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• به صورت مستقیم state را modify می‌کنید\n" +
+            "- مثل state.value += 1 یا state.items.push(item)\n" +
+            "- Immer این را به immutable updates تبدیل می‌کند\n" +
+            "- خیلی ساده‌تر از spread operators است\n" +
+            "- کد مثل mutating معمولی است"
+    },
+    {
+        "id": 265,
+        "question":"What does createSlice automatically generate based on the reducer functions you define?",
+        "options": [
+            "Middleware functions for handling async operations",
+            "Action creators with the same names as the reducers",
+            "Component hooks for state management",
+            "CSS classes for styling components"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• action creators با همان نام reducers ساخته می‌شوند\n" +
+            "- action types به صورت 'sliceName/reducerName'\n" +
+            "- argument به action.payload تبدیل می‌شود\n" +
+            "- نیازی به define کردن جداگانه نیست\n" +
+            "- consistency و کاهش اشتباه تضمین می‌شود"
+    },
+    {
+        id: 266,
+        question: "How many parameters do createSlice action creators accept?",
+        options: [
+            "Zero - always called without arguments",
+            "One - payload value becoming action.payload",
+            "Two - type and payload separately",
+            "Multiple - as many as defined in reducer"
+        ],
+        correctOption: 1,
+        points: 10,
+        "explanation":"• فقط یک parameter که به payload تبدیل می‌شود\n" +
+            "- برای چند parameter از object استفاده کنید\n" +
+            "- یا از prepare callback استفاده کنید\n" +
+            "- API ساده و consistent است\n" +
+            "- بیشتر use cases را cover می‌کند"
 
-//     },
-//     {
-//         id: 253,
-//         question: "What does Immer enable in createSlice reducers?",
-//         options: [
-//             "Automatically fetch data from APIs",
-//             "Create multiple store instances",
-//             "Write mutable-looking code while maintaining immutability",
-//             "Generate TypeScript types automatically"
-//         ],
-//         correctOption: 2,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 267,
+        question: "What does Immer enable in createSlice reducers?",
+        options: [
+            "Automatically fetch data from APIs",
+            "Create multiple store instances",
+            "Write mutable-looking code while maintaining immutability",
+            "Generate TypeScript types automatically"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation":"• نوشتن کد mutable-looking اما immutable واقعی\n" +
+            "- Immer draft state ایجاد می‌کند\n" +
+            "- تغییرات را track و immutable copy می‌سازد\n" +
+            "- کد خیلی ساده‌تر از spread operators\n" +
+            "- در Redux Toolkit built-in است"
 
-//     },
-//     {
-//         id: 254,
-//         question: "Which property in createSlice contains state update functions?",
-//         options: [
-//             "reducers field with case reducer functions",
-//             "actions field with action creator definitions",
-//             "middleware field with side effect handlers",
-//             "selectors field with state access functions"
-//         ],
-//         correctOption: 0,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 268,
+        question: "Which property in createSlice contains state update functions?",
+        options: [
+            "reducers field with case reducer functions",
+            "actions field with action creator definitions",
+            "middleware field with side effect handlers",
+            "selectors field with state access functions"
+        ],
+        correctOption: 0,
+        points: 20,
+        "explanation":"• reducers field شامل case reducer functions است\n" +
+            "- هر reducer یک action type را handle می‌کند\n" +
+            "- state و action را می‌گیرند\n" +
+            "- می‌توانند state را modify کنند (با Immer)\n" +
+            "- خودکار action creators ساخته می‌شوند"
+    },
+    {
+        id: 269,
+        question: "What naming pattern do createSlice action types follow?",
+        options: [
+            "SLICE_NAME_REDUCER_NAME (e.g., 'COUNTER_INCREMENT')",
+            "sliceName/reducerName (e.g., 'counter/increment')",
+            "reducerName_sliceName (e.g., 'increment_counter')",
+            "Random UUID strings for uniqueness"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":"• pattern 'sliceName/reducerName' استفاده می‌شود\n" +
+            "- مثل 'counter/increment' یا 'todos/add'\n" +
+            "- خودکار generate می‌شوند\n" +
+            "- واضح و descriptive هستند\n" +
+            "- در DevTools و debugging مفید است"
 
-//     },
-//     {
-//         id: 255,
-//         question: "What naming pattern do createSlice action types follow?",
-//         options: [
-//             "SLICE_NAME_REDUCER_NAME (e.g., 'COUNTER_INCREMENT')",
-//             "sliceName/reducerName (e.g., 'counter/increment')",
-//             "reducerName_sliceName (e.g., 'increment_counter')",
-//             "Random UUID strings for uniqueness"
-//         ],
-//         correctOption: 1,
-//         points: 20,
-// "explanation":""
-
-    //     },
-//     {
-//         id: 256,
-//         question: "How do you export the main reducer from createSlice?",
-//         options: [
-//             "Export slice.reducer from slice object",
-//             "Export slice.actions.reducer from slice",
-//             "Export createReducer(slice) as function",
-//             "Export slice.store as complete reducer"
-//         ],
-//         correctOption: 0,
-//         points: 10,
-// "explanation":""
-
-//     },
+    },
+    {
+        id: 270,
+        question: "How do you export the main reducer from createSlice?",
+        options: [
+            "Export slice.reducer from slice object",
+            "Export slice.actions.reducer from slice",
+            "Export createReducer(slice) as function",
+            "Export slice.store as complete reducer"
+        ],
+        correctOption: 0,
+        points: 10,
+        "explanation":"• slice.reducer را export می‌کنید\n" +
+            "- این reducer در configureStore استفاده می‌شود\n" +
+            "- معمولاً به صورت default export\n" +
+            "- slice.actions را هم export می‌کنید\n" +
+            "- برای استفاده در کامپوننت‌ها"
+    },
 //     {
 //         id: 257,
 //         question: "Which Redux boilerplate does createSlice eliminate?",
