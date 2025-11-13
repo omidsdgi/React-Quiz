@@ -4604,102 +4604,142 @@ export const mockQuestions: Question[] = [
             "- برای theme، language کافی است\n" +
             "- نیازی به Redux برای این موارد نیست"
     },
-//     {
-//         "id": 1369,
-//         "question": "What is the main purpose of React Context?",
-//         "options": [
-//             "Replace all state management libraries",
-//             "Share data without prop drilling",
-//             "Improve component render performance",
-//             "Handle all API requests centrally"
-//         ],
-//         "correctOption": 1,
-//         "points": 10
-//     },
-//     {
-//         "id": 1370,
-//         "question": "How do you create a Context in React?",
-//         "options": [
-//             "Using createContext() function from React",
-//             "Using new Context() constructor",
-//             "Using useContext hook directly",
-//             "Context is created automatically"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 1371,
-//         "question": "What is the purpose of Context Provider?",
-//         "options": [
-//             "To consume context values only",
-//             "To supply context value to descendant components",
-//             "To create multiple contexts simultaneously",
-//             "To validate context data types"
-//         ],
-//         "correctOption": 1,
-//         "points": 10
-//     },
-//     {
-//         "id": 1372,
-//         "question": "Can you have nested Context Providers of the same Context?",
-//         "options": [
-//             "No, causes infinite loops",
-//             "Yes, inner Provider overrides outer value",
-//             "Only with different context names",
-//             "Only in production mode"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 1373,
-//         "question": "What happens when Context value changes?",
-//         "options": [
-//             "Only Provider re-renders",
-//             "All consumers re-render automatically",
-//             "No components re-render",
-//             "Only direct children re-render"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 1374,
-//         "question": "How do you prevent unnecessary re-renders with Context?",
-//         "options": [
-//             "Split contexts and memoize values",
-//             "Use global variables instead",
-//             "Disable Context updates",
-//             "Use only primitive values"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
-//     {
-//         "id": 1375,
-//         "question": "Can you use multiple Contexts in one component?",
-//         "options": [
-//             "No, only one context per component",
-//             "Yes, using multiple useContext calls",
-//             "Only with Context composition pattern",
-//             "Only in Class Components"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 1376,
-//         "question": "What is the default value in createContext used for?",
-//         "options": [
-//             "When no Provider is found in tree",
-//             "As initial value for all consumers",
-//             "For TypeScript type inference only",
-//             "To reset context to defaults"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
+    {
+        "id": 287,
+        "question": "What is the main purpose of React Context?",
+        "options": [
+            "Replace all state management libraries",
+            "Share data without prop drilling",
+            "Improve component render performance",
+            "Handle all API requests centrally"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• Context برای sharing data بین components بدون prop drilling\n" +
+            "- جلوگیری از pass کردن props در چند لایه\n" +
+            "- برای global-ish data مثل theme، user، language\n" +
+            "- built-in React و نیازی به library نیست\n" +
+            "- اما جایگزین Redux برای همه موارد نیست"
+    },
+    {
+        "id": 288,
+        "question": "How do you create a Context in React?",
+        "options": [
+            "Using createContext() function from React",
+            "Using new Context() constructor",
+            "Using useContext hook directly",
+            "Context is created automatically"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• از React.createContext() استفاده می‌شود\n" +
+            "- یک Context object برمی‌گرداند\n" +
+            "- می‌تواند default value بگیرد\n" +
+            "- Provider و Consumer components دارد\n" +
+            "- معمولاً در فایل جداگانه define می‌شود"
+    },
+    {
+        "id": 289,
+        "question": "What is the purpose of Context Provider?",
+        "options": [
+            "To consume context values only",
+            "To supply context value to descendant components",
+            "To create multiple contexts simultaneously",
+            "To validate context data types"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• Provider مقدار Context را به children می‌دهد\n" +
+            "- value prop برای set کردن data\n" +
+            "- همه descendants می‌توانند access داشته باشند\n" +
+            "- تغییر value باعث re-render consumers می‌شود\n" +
+            "- معمولاً در بالای component tree"
+    },
+    {
+        "id": 290,
+        "question": "Can you have nested Context Providers of the same Context?",
+        "options": [
+            "No, causes infinite loops",
+            "Yes, inner Provider overrides outer value",
+            "Only with different context names",
+            "Only in production mode"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• بله، می‌توانید Providers را nest کنید\n" +
+            "- Provider داخلی مقدار بیرونی را override می‌کند\n" +
+            "- consumers نزدیک‌ترین Provider را می‌خوانند\n" +
+            "- برای scoped values مفید است\n" +
+            "- مثل theme override در بخش خاص"
+    },
+    {
+        "id": 291,
+        "question": "What happens when Context value changes?",
+        "options": [
+            "Only Provider re-renders",
+            "All consumers re-render automatically",
+            "No components re-render",
+            "Only direct children re-render"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• تمام consumers به صورت خودکار re-render می‌شوند\n" +
+            "- حتی اگر فقط بخشی از value نیاز باشد\n" +
+            "- React.memo نمی‌تواند این را جلوگیری کند\n" +
+            "- برای optimization باید Context را split کنید\n" +
+            "- این یکی از performance considerations است"
+    },
+    {
+        "id": 292,
+        "question": "How do you prevent unnecessary re-renders with Context?",
+        "options": [
+            "Split contexts and memoize values",
+            "Use global variables instead",
+            "Disable Context updates",
+            "Use only primitive values"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• Context را به چند Context کوچک‌تر تقسیم کنید\n" +
+            "- value را با useMemo wrap کنید\n" +
+            "- از children pattern استفاده کنید\n" +
+            "- consumers را با React.memo wrap کنید\n" +
+            "- ترکیب این techniques بهترین نتیجه را می‌دهد"
+    },
+    {
+        "id": 293,
+        "question": "Can you use multiple Contexts in one component?",
+        "options": [
+            "No, only one context per component",
+            "Yes, using multiple useContext calls",
+            "Only with Context composition pattern",
+            "Only in Class Components"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• بله، می‌توانید چندین useContext استفاده کنید\n" +
+            "- هر useContext یک Context جداگانه\n" +
+            "- const theme = useContext(ThemeContext)\n" +
+            "- const user = useContext(UserContext)\n" +
+            "- هیچ محدودیتی در تعداد نیست"
+    },
+    {
+        "id": 294,
+        "question": "What is the default value in createContext used for?",
+        "options": [
+            "When no Provider is found in tree",
+            "As initial value for all consumers",
+            "For TypeScript type inference only",
+            "To reset context to defaults"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• default value زمانی استفاده می‌شود که Provider نباشد\n" +
+            "- اگر component خارج از Provider باشد\n" +
+            "- برای testing بدون Provider مفید است\n" +
+            "- معمولاً null یا undefined قرار می‌دهند\n" +
+            "- با Provider، default value ignore می‌شود"
+    },
 //     {
 //         "id": 273,
 //         "question": "Which example demonstrates DOM traversal?",
@@ -4710,7 +4750,8 @@ export const mockQuestions: Question[] = [
 //             "JSON.stringify({name: 'Omid'})"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+// "explanation":
 //     },
 //     {
 //         "id": 274,
