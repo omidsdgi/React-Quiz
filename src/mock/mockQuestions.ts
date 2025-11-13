@@ -4321,146 +4321,187 @@ export const mockQuestions: Question[] = [
             "- slice.actions را هم export می‌کنید\n" +
             "- برای استفاده در کامپوننت‌ها"
     },
-//     {
-//         id: 257,
-//         question: "Which Redux boilerplate does createSlice eliminate?",
-//         options: [
-//             "Writing separate action creators and types manually",
-//             "Configuring store and middleware setup",
-//             "Creating component-level state hooks",
-//             "Defining routing and navigation logic"
-//         ],
-//         correctOption: 0,
-//         points: 20,
-// "explanation":""
+    {
+        id: 271,
+        question: "Which Redux boilerplate does createSlice eliminate?",
+        options: [
+            "Writing separate action creators and types manually",
+            "Configuring store and middleware setup",
+            "Creating component-level state hooks",
+            "Defining routing and navigation logic"
+        ],
+        correctOption: 0,
+        points: 20,
+        "explanation":"• نوشتن جداگانه action types، creators و reducers\n" +
+            "- switch statements در reducers\n" +
+            "- spread operators برای immutability\n" +
+            "- تکرار action type strings\n" +
+            "- همه این‌ها خودکار handle می‌شوند"
 
-//     },
-//     {
-//         id: 258,
-//         question: "What role does initialState serve in createSlice?",
-//         options: [
-//             "Determines component rendering order",
-//             "Specifies which middleware to use",
-//             "Defines starting value for slice's state",
-//             "Configures development tools integration"
-//         ],
-//         correctOption: 2,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 272,
+        question: "What role does initialState serve in createSlice?",
+        options: [
+            "Determines component rendering order",
+            "Specifies which middleware to use",
+            "Defines starting value for slice's state",
+            "Configures development tools integration"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation":"• مقدار اولیه state slice را مشخص می‌کند\n" +
+            "- می‌تواند object، array یا primitive باشد\n" +
+            "- در اولین render استفاده می‌شود\n" +
+            "- structure state را define می‌کند\n" +
+            "- معمولاً با TypeScript type می‌شود"
 
-//     },
-//     {
-//         id: 259,
-//         question: "When would you use the 'prepare' callback in createSlice?",
-//         options: [
-//             "Customize action payload before reaching reducer",
-//             "Define async operations after state updates",
-//             "Specify which components access this slice",
-//             "Configure Redux DevTools for debugging"
-//         ],
-//         correctOption: 0,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 273,
+        question: "When would you use the 'prepare' callback in createSlice?",
+        options: [
+            "Customize action payload before reaching reducer",
+            "Define async operations after state updates",
+            "Specify which components access this slice",
+            "Configure Redux DevTools for debugging"
+        ],
+        correctOption: 0,
+        points: 20,
+        "explanation":"• برای customize کردن payload قبل از reducer\n" +
+            "- وقتی نیاز به چند parameter دارید\n" +
+            "- برای generate کردن unique IDs\n" +
+            "- برای validation یا transformation\n" +
+            "- object با payload و meta return می‌کند"
 
-//     },
-//     {
-//         id: 260,
-//         question: "Which Redux feature is NOT available in Context API?",
-//         options: [
-//             "State management with useReducer",
-//             "Middleware support for side effects",
-//             "Passing data through component tree",
-//             "Integration with React DevTools"
-//         ],
-//         correctOption: 1,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 274,
+        question: "Which Redux feature is NOT available in Context API?",
+        options: [
+            "State management with useReducer",
+            "Middleware support for side effects",
+            "Passing data through component tree",
+            "Integration with React DevTools"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":"• middleware support برای async و side effects\n" +
+            "- Redux DevTools برای debugging\n" +
+            "- time-travel debugging\n" +
+            "- centralized state management structure\n" +
+            "- Context فقط برای passing data است"
 
-//     },
-//     {
-//         id: 261,
-//         question: "What problem occurs with multiple Context providers?",
-//         options: [
-//             "Built-in middleware becomes impossible",
-//             "Debugging experience is lost",
-//             "Async operations fail",
-//             "Provider hell with deeply nested wrappers"
-//         ],
-//         correctOption: 3,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 275,
+        question: "What problem occurs with multiple Context providers?",
+        options: [
+            "Built-in middleware becomes impossible",
+            "Debugging experience is lost",
+            "Async operations fail",
+            "Provider hell with deeply nested wrappers"
+        ],
+        correctOption: 3,
+        points: 20,
+        "explanation":"• provider hell با nested wrappers عمیق\n" +
+            "- کد خوانایی کمتری دارد\n" +
+            "- refactoring سخت‌تر می‌شود\n" +
+            "- performance issues با re-renders\n" +
+            "- Redux این مشکل را با single store حل می‌کند"
 
-//     },
-//     {
-//         id: 262,
-//         question: "Which scenario best suits Redux over Context API?",
-//         options: [
-//             "Passing theme colors through tree",
-//             "Managing frequently changing state across many components",
-//             "Sharing auth status between pages",
-//             "Providing translations to components"
-//         ],
-//         correctOption: 1,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 276,
+        question: "Which scenario best suits Redux over Context API?",
+        options: [
+            "Passing theme colors through tree",
+            "Managing frequently changing state across many components",
+            "Sharing auth status between pages",
+            "Providing translations to components"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":"• state پیچیده که frequently update می‌شود\n" +
+            "- بسیاری از کامپوننت‌ها به آن نیاز دارند\n" +
+            "- نیاز به middleware برای async logic\n" +
+            "- debugging پیشرفته لازم است\n" +
+            "- Context برای frequent updates slow است"
 
-//     },
-//     {
-//         id: 263,
-//         question: "What debugging advantage does Redux provide over Context?",
-//         options: [
-//             "Automatic error boundary creation",
-//             "Built-in TypeScript support",
-//             "Time-travel debugging with DevTools",
-//             "Faster component rendering"
-//         ],
-//         correctOption: 2,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 277,
+        question: "What debugging advantage does Redux provide over Context?",
+        options: [
+            "Automatic error boundary creation",
+            "Built-in TypeScript support",
+            "Time-travel debugging with DevTools",
+            "Faster component rendering"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation":"• Redux DevTools قدرتمند برای inspect کردن state\n" +
+            "- time-travel debugging برای undo/redo\n" +
+            "- action history و state changes قابل مشاهده\n" +
+            "- state diff بین actions\n" +
+            "- Context چنین ابزارهایی ندارد"
 
-//     },
-//     {
-//         id: 264,
-//         question: "What is a disadvantage of Redux compared to Context?",
-//         options: [
-//             "Built into React natively",
-//             "Requires additional packages and setup",
-//             "Cannot handle async operations",
-//             "Only provides DevTools support"
-//         ],
-//         correctOption: 1,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 278,
+        question: "What is a disadvantage of Redux compared to Context?",
+        options: [
+            "Built into React natively",
+            "Requires additional packages and setup",
+            "Cannot handle async operations",
+            "Only provides DevTools support"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":"• نیاز به نصب packages اضافی (redux، react-redux)\n" +
+            "- learning curve بالاتر\n" +
+            "- boilerplate بیشتر (حتی با Redux Toolkit)\n" +
+            "- setup پیچیده‌تر\n" +
+            "- Context built-in React است"
 
-//     },
-//     {
-//         id: 265,
-//         question: "Why can Context cause performance issues with frequent updates?",
-//         options: [
-//             "Automatically re-renders all consumers",
-//             "Cannot be split into smaller providers",
-//             "Requires manual optimization",
-//             "Doesn't support memoization"
-//         ],
-//         correctOption: 0,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 279,
+        question: "Why can Context cause performance issues with frequent updates?",
+        options: [
+            "Automatically re-renders all consumers",
+            "Cannot be split into smaller providers",
+            "Requires manual optimization",
+            "Doesn't support memoization"
+        ],
+        correctOption: 0,
+        points: 20,
+        "explanation":"• هر تغییر Context همه consumers را re-render می‌کند\n" +
+            "- حتی اگر consumer فقط بخشی از data بخواهد\n" +
+            "- optimization سخت است\n" +
+            "- برای frequent updates مناسب نیست\n" +
+            "- Redux با selectors این مشکل را حل می‌کند"
 
-//     },
-//     {
-//         id: 266,
-//         question: "Which tool provides better debugging for state management?",
-//         options: [
-//             "Context API with React DevTools",
-//             "Redux with dedicated DevTools extension",
-//             "useReducer with console logging",
-//             "Local state with debugger"
-//         ],
-//         correctOption: 1,
-//         points: 20,
-// "explanation":""
+    },
+    {
+        id: 280,
+        question: "Which tool provides better debugging for state management?",
+        options: [
+            "Context API with React DevTools",
+            "Redux with dedicated DevTools extension",
+            "useReducer with console logging",
+            "Local state with debugger"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":"• Redux DevTools امکانات debugging پیشرفته دارد\n" +
+            "- مشاهده تمام actions و state changes\n" +
+            "- time-travel برای undo/redo\n" +
+            "- state diff و action payload\n" +
+            "- React DevTools فقط Context value را نشان می‌دهد\n" +
+            "- Redux برای debugging بسیار بهتر است"
 
-//     },
+    },
 //     {
 //         id: 267,
 //         question: "When is Context API the better choice over Redux?",
