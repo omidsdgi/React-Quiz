@@ -4502,86 +4502,108 @@ export const mockQuestions: Question[] = [
             "- Redux برای debugging بسیار بهتر است"
 
     },
-//     {
-//         id: 267,
-//         question: "When is Context API the better choice over Redux?",
-//         options: [
-//             "For complex state with nested structures",
-//             "For apps requiring middleware",
-//             "For sharing rarely changing values like theme",
-//             "For shopping cart with frequent updates"
-//         ],
-//         correctOption: 2,
-//         points: 10,
-// "explanation":""
-
-//     },
-//     {
-//         id: 268,
-//         question: "What is the most appropriate use case for Context API?",
-//         options: [
-//             "Managing complex state with frequent updates",
-//             "Avoiding prop drilling for shared values",
-//             "Handling async data fetching",
-//             "Creating time-travel debugging"
-//         ],
-//         correctOption: 1,
-//         points: 10,
-// "explanation":""
-
-//     },
-//     {
-//         id: 269,
-//         question: "When should you choose Redux over Context?",
-//         options: [
-//             "For passing static config data",
-//             "For simple theme switching",
-//             "For frequently updating state across components",
-//             "For sharing user preferences"
-//         ],
-//         correctOption: 2,
-//         points: 20,
-// "explanation":""
-
-//     },
-//     {
-//         id: 270,
-//         question: "Why is Redux suitable for complex state management?",
-//         options: [
-//             "Built into React framework",
-//             "Prevents all re-renders automatically",
-//             "Provides predictable updates and debugging tools",
-//             "Eliminates need for component state"
-//         ],
-//         correctOption: 2,
-//         points: 20,
-// "explanation":""
-
-//     },
-//     {
-//         "id": 271,
-//         "question": "Which approach is more efficient for local component state?",
-//         "options": [
-//             "Redux Toolkit with createSlice",
-//             "Redux with middleware",
-//             "React Context API",
-//             "React DevTools management"
-//         ],
-//         "correctOption":2,
-//         "points": 10
-//     },
-//     {
-//         "id": 272,
-//         question: "Which tool is best for rarely changing global values like theme?",
-//         options: [
-//             "React Context API",
-//             "Redux Toolkit",
-//             "Redux with middleware",
-//             "Global store libraries"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
+    {
+        id: 281,
+        question: "When is Context API the better choice over Redux?",
+        options: [
+            "For complex state with nested structures",
+            "For apps requiring middleware",
+            "For sharing rarely changing values like theme",
+            "For shopping cart with frequent updates"
+        ],
+        correctOption: 2,
+        points: 10,
+        "explanation":"• برای state ساده که کم تغییر می‌کند (theme، language)\n" +
+            "- تعداد consumers محدود است\n" +
+            "- نیازی به middleware نیست\n" +
+            "- پروژه کوچک یا متوسط\n" +
+            "- می‌خواهید از dependencies اضافی اجتناب کنید"
+    },
+    {
+        id: 282,
+        question: "What is the most appropriate use case for Context API?",
+        options: [
+            "Managing complex state with frequent updates",
+            "Avoiding prop drilling for shared values",
+            "Handling async data fetching",
+            "Creating time-travel debugging"
+        ],
+        correctOption: 1,
+        points: 10,
+        "explanation":"• جلوگیری از prop drilling برای shared values\n" +
+            "- theme، language و user preferences\n" +
+            "- authentication state ساده\n" +
+            "- values که rarely تغییر می‌کنند\n" +
+            "- state که نیاز به middleware ندارد"
+    },
+    {
+        id: 283,
+        question: "When should you choose Redux over Context?",
+        options: [
+            "For passing static config data",
+            "For simple theme switching",
+            "For frequently updating state across components",
+            "For sharing user preferences"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation":"• state پیچیده با frequent updates\n" +
+            "- بسیاری از کامپوننت‌ها به state نیاز دارند\n" +
+            "- نیاز به async logic و middleware\n" +
+            "- debugging پیشرفته لازم است\n" +
+            "- تیم بزرگ و نیاز به structure"
+    },
+    {
+        id: 284,
+        question: "Why is Redux suitable for complex state management?",
+        options: [
+            "Built into React framework",
+            "Prevents all re-renders automatically",
+            "Provides predictable updates and debugging tools",
+            "Eliminates need for component state"
+        ],
+        correctOption: 2,
+        points: 20,
+        "explanation":"• predictable state updates با actions و reducers\n" +
+            "- middleware برای async و side effects\n" +
+            "- DevTools قدرتمند برای debugging\n" +
+            "- patterns استاندارد برای scaling\n" +
+            "- testing آسان‌تر با pure functions"
+    },
+    {
+        "id": 285,
+        "question": "Which approach is more efficient for local component state?",
+        "options": [
+            "Redux Toolkit with createSlice",
+            "Redux with middleware",
+            "React Context API",
+            "React DevTools management"
+        ],
+        "correctOption":2,
+        "points": 10,
+        "explanation":"• Context API یا useState/useReducer برای local state\n" +
+            "- Redux overhead اضافی برای local state دارد\n" +
+            "- Context built-in و ساده است\n" +
+            "- performance بهتر برای state محلی\n" +
+            "- Redux فقط برای shared state لازم است"
+    },
+    {
+        "id": 286,
+        question: "Which tool is best for rarely changing global values like theme?",
+        options: [
+            "React Context API",
+            "Redux Toolkit",
+            "Redux with middleware",
+            "Global store libraries"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":"• Context API برای rarely changing values عالی است\n" +
+            "- ساده و built-in React\n" +
+            "- overhead کمتر از Redux\n" +
+            "- برای theme، language کافی است\n" +
+            "- نیازی به Redux برای این موارد نیست"
+    },
 //     {
 //         "id": 1369,
 //         "question": "What is the main purpose of React Context?",
