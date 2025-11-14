@@ -17243,5 +17243,328 @@ export const mockQuestions: Question[] = [
 //         ],
 //         "correctOption": 1,
 //         "points": 30
-//     }
+//     },
+        {
+        "id": 1406,
+        "question": "How do you initialize a new project with npm?",
+        "options": [
+            "npm start",
+            "npm create",
+            "npm init",
+            "npm new"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• npm init برای ساخت package.json جدید\n" +
+            "- سوالاتی درباره نام، version، description می‌پرسد\n" +
+            "- npm init -y برای skip کردن سوالات و default values\n" +
+            "- اولین قدم هر پروژه Node.js\n" +
+            "- package.json فایل اصلی برای مدیریت dependencies"
+    },
+    {
+        "id": 1407,
+        "question": "How do you install a package and save it to package.json?",
+        "options": [
+            "npm get react",
+            "npm add react",
+            "npm download react",
+            "npm install react",
+        ],
+        "correctOption": 3,
+        "points": 10,
+        "explanation": "• npm install react یا npm i react برای نصب\n" +
+            "- خودکار در package.json و node_modules اضافه می‌شود\n" +
+            "- npm install react --save دیگر لازم نیست (پیش‌فرض است)\n" +
+            "- همزمان package-lock.json هم update می‌شود\n" +
+            "- برای چند package: npm install react react-dom"
+    },
+    {
+        "id": 1408,
+        "question": "How do you remove a package from your project?",
+        "options": [
+            "npm delete package-name",
+            "npm remove package-name",
+            "npm uninstall package-name",
+            "npm drop package-name"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• npm uninstall package-name یا npm un package-name\n" +
+            "- از node_modules و package.json حذف می‌شود\n" +
+            "- npm remove و npm rm هم کار می‌کنند (alias)\n" +
+            "- package-lock.json نیز update می‌شود\n" +
+            "- برای چند package: npm uninstall react react-dom"
+    },
+    {
+        "id": 1412,
+        "question": "How do you add a package using Yarn?",
+        "options": [
+            "yarn install react",
+            "yarn add react",
+            "yarn get react",
+            "yarn set react"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• yarn add react برای نصب package جدید\n" +
+            "- خودکار در package.json و yarn.lock اضافه می‌شود\n" +
+            "- yarn add react react-dom برای چند package\n" +
+            "- yarn add eslint --dev برای devDependencies\n" +
+            "- معادل npm install react"
+    },
+    {
+        "id": 1411,
+        "question": "What is the Yarn equivalent of npm install?",
+        "options": [
+            "yarn get",
+            "yarn add",
+            "yarn download",
+            "yarn install",
+        ],
+        "correctOption": 3,
+        "points": 10,
+        "explanation": "• yarn install یا فقط yarn\n" +
+            "- تمام dependencies از package.json نصب می‌شود\n" +
+            "- yarn.lock برای lock کردن versions\n" +
+            "- معمولاً سریع‌تر از npm\n" +
+            "- offline caching برای installs بدون اینترنت"
+    },
+    {
+        "id": 1413,
+        "question": "How do you run scripts defined in package.json?",
+        "options": [
+            "npm exec start",
+            "npm run start",
+            "npm do start",
+            "npm script start"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• npm run script-name برای اجرای scripts\n" +
+            "- مثل npm run dev، npm run build، npm run test\n" +
+            "- npm start و npm test بدون run کار می‌کنند\n" +
+            "- در yarn فقط yarn dev کافی است\n" +
+            "- scripts در package.json تعریف می‌شوند"
+    },
+    {
+        "id": 1414,
+        "question": "How do you check the installed version of a package?",
+        "options": [
+            "npm version react",
+            "npm check react",
+            "npm list react",
+            "npm info react"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• npm list react یا npm ls react\n" +
+            "- version نصب شده در پروژه را نشان می‌دهد\n" +
+            "- npm list --depth=0 فقط top-level packages\n" +
+            "- npm list -g --depth=0 برای global packages\n" +
+            "- yarn list react در Yarn"
+    },
+    {
+        "id": 1415,
+        "question": "What command shows available updates for packages?",
+        "options": [
+            "npm check",
+            "npm updates",
+            "npm outdated",
+            "npm versions"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• npm outdated لیست packages با version جدیدتر\n" +
+            "- Current: version فعلی نصب شده\n" +
+            "- Wanted: latest version در semver range\n" +
+            "- Latest: جدیدترین version در registry\n" +
+            "- yarn upgrade-interactive برای Yarn"
+    },
+    {
+        "id": 1419,
+        "question": "What does npm start command do?",
+        "options": [
+            "Starts npm service",
+            "Runs the 'start' script from package.json",
+            "Installs all dependencies",
+            "Creates a new project"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• npm start اجرای script با نام 'start' از package.json\n" +
+            "- معمولاً development server را start می‌کند\n" +
+            "- مثل npm run start اما بدون 'run'\n" +
+            "- npm test نیز همین رفتار را دارد\n" +
+            "- shortcut برای commonly used scripts"
+    },
+    {
+        "id": 1420,
+        "question": "How do you update a single package to latest version?",
+        "options": [
+            "npm update package-name",
+            "npm upgrade package-name",
+            "npm refresh package-name",
+            "npm latest package-name"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• npm update package-name برای update یک package\n" +
+            "- در محدوده semver range مشخص شده\n" +
+            "- npm update بدون نام، همه را update می‌کند\n" +
+            "- yarn upgrade package-name در Yarn\n" +
+            "- package-lock.json نیز update می‌شود"
+    },
+    {
+        "id": 1421,
+        "question": "What is the Yarn equivalent of npm uninstall?",
+        "options": [
+            "yarn delete",
+            "yarn remove",
+            "yarn drop",
+            "yarn uninstall"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• yarn remove package-name برای حذف\n" +
+            "- از package.json و yarn.lock حذف می‌شود\n" +
+            "- node_modules نیز پاک می‌شود\n" +
+            "- معادل npm uninstall\n" +
+            "- yarn remove react react-dom برای چند package"
+    },
+    {
+        "id": 1422,
+        "question": "How do you check npm version installed on your system?",
+        "options": [
+            "npm --version",
+            "npm check version",
+            "npm get version",
+            "npm info"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• npm --version یا npm -v برای check کردن\n" +
+            "- version npm روی سیستم شما\n" +
+            "- node --version یا node -v برای Node.js\n" +
+            "- yarn --version برای Yarn\n" +
+            "- مهم برای compatibility و troubleshooting"
+    },
+    {
+        "id": 1426,
+        "question": "How do you clear npm cache?",
+        "options": [
+            "npm cache clear",
+            "npm clean cache",
+            "npm cache clean --force",
+            "npm remove cache"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• npm cache clean --force برای پاک کردن cache\n" +
+            "- --force ضروری است برای تایید\n" +
+            "- وقتی corruption یا مشکلات عجیب دارید\n" +
+            "- yarn cache clean در Yarn\n" +
+            "- معمولاً نیازی به manual cleaning نیست"
+    },
+    {
+        "id": 1391,
+        "question": "What is the difference between npm install and npm ci?",
+        "options": [
+            "No difference, they are identical commands",
+            "npm install is for production, npm ci for development",
+            "npm ci is faster and uses exact versions from lock file",
+            "npm ci only installs devDependencies"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• npm ci برای CI/CD و production builds\n" +
+            "- از package-lock.json دقیقاً استفاده می‌کند\n" +
+            "- node_modules را حذف و از نو نصب می‌کند\n" +
+            "- سریع‌تر و deterministic است\n" +
+            "- npm install می‌تواند package-lock را update کند"
+    },
+    {
+        "id": 1393,
+        "question": "What is the difference between dependencies and devDependencies?",
+        "options": [
+            "devDependencies are faster to install",
+            "No difference, both are installed the same way",
+            "dependencies are optional, devDependencies required",
+            "dependencies for production, devDependencies for development",
+        ],
+        "correctOption": 3,
+        "points": 10,
+        "explanation": "• dependencies برای runtime نیاز است\n" +
+            "- در production bundle می‌آیند\n" +
+            "- devDependencies فقط برای development (testing, build tools)\n" +
+            "- npm install --production فقط dependencies را نصب می‌کند\n" +
+            "- eslint, jest در devDependencies قرار می‌گیرند"
+    },
+    {
+        "id": 1395,
+        "question": "What is the purpose of package-lock.json?",
+        "options": [
+            "Locks package.json from being edited",
+            "Ensures exact dependency versions across installs",
+            "Prevents npm install from running",
+            "Encrypts sensitive package information"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• package-lock.json exact versions تمام dependencies را ذخیره می‌کند\n" +
+            "- including nested dependencies\n" +
+            "- deterministic installs را تضمین می‌کند\n" +
+            "- در git commit می‌شود\n" +
+            "- npm ci از آن استفاده می‌کند"
+    },
+    {
+        "id": 1396,
+        "question": "What does npm outdated command show?",
+        "options": [
+            "Old files in project directory",
+            "Packages with available newer versions",
+            "Deprecated npm commands used",
+            "Unused dependencies in package.json"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• npm outdated لیست packages با versions جدیدتر\n" +
+            "- Current, Wanted و Latest versions\n" +
+            "- Wanted: مطابق با semver range در package.json\n" +
+            "- Latest: جدیدترین version در npm registry\n" +
+            "- برای planning updates مفید است"
+    },
+    {
+        "id": 1399,
+        "question": "What is npx used for?",
+        "options": [
+            "Installing packages permanently",
+            "Executing packages without global install",
+            "Removing unused packages",
+            "Updating package.json automatically"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• npx packages را بدون global install اجرا می‌کند\n" +
+            "- temporary download و execute\n" +
+            "- همیشه latest version استفاده می‌کند\n" +
+            "- npx create-react-app my-app\n" +
+            "- جلوگیری از global pollution"
+    },
+    {
+        "id": 1405,
+        "question": "What is npm cache and when should you clean it?",
+        "options": [
+            "Cache stores installed packages for faster reinstalls",
+            "Cache is browser cookies for npm website",
+            "Cache stores user preferences",
+            "Cache is temporary build files"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• npm cache downloaded packages را ذخیره می‌کند\n" +
+            "- برای faster subsequent installs\n" +
+            "- npm cache clean --force برای پاک کردن\n" +
+            "- زمانی که corruption یا weird errors\n" +
+            "- معمولاً نیازی به manual cleaning نیست"
+    },
 ]
