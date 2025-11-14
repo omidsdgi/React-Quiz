@@ -267,7 +267,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 17,
-        "question": "What is a DOM Element in React&apos;s context?",
+        "question": "What is a DOM Element in react's context?",
         "options": [
             "A React component rendered to the virtual DOM",
             "A JavaScript object representing component structure",
@@ -347,7 +347,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 22,
-        "question": "What is Browser Paint in React&apos;s rendering process?",
+        "question": "What is Browser Paint in react's rendering process?",
         "options": [
             "The phase where React builds virtual DOM tree",
             "The phase where React commits changes to DOM",
@@ -395,11 +395,11 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 25,
-        "question": "What is the Fiber Tree in React&apos;s architecture?",
+        "question": "What is the Fiber Tree in react's architecture?",
         "options": [
             "A tree of actual DOM elements in browser",
             "A tree of component class definitions component instances",
-            "React&apos;s internal data structure tracking component instances",
+            "react's internal data structure tracking component instances",
             "A visualization tool for React DevTools only"
         ],
         "correctOption": 2,
@@ -411,7 +411,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 26,
-        "question": "What is Reconciliation in React&apos;s rendering process?",
+        "question": "What is Reconciliation in react's rendering process?",
         "options": [
             "The process of comparing old and new virtual DOM",
             "The process of painting pixels to screen",
@@ -462,7 +462,7 @@ export const mockQuestions: Question[] = [
         "question": "Can React pause, reuse or throw away work during rendering?",
         "options": [
             "No, once started, rendering must complete entirely",
-            "Yes, React&apos;s fiber architecture enables work interruption",
+            "Yes, react's fiber architecture enables work interruption",
             "Only work can be paused but never reused",
             "Only work can be reused but never paused"
         ],
@@ -632,22 +632,6 @@ export const mockQuestions: Question[] = [
             "- Commit Phase: اعمال تغییرات به DOM واقعی\n" +
             "- Render می‌تواند متوقف شود، اما Commit باید synchronous باشد\n" +
             "- هر دو توسط React مدیریت می‌شوند"
-    },
-    {
-        "id": 40,
-        "question": "Can the Render Phase be interrupted in React?",
-        "options": [
-            "Yes, React can pause and resume rendering",
-            "No, rendering must complete once started",
-            "Only during initial mount can render pause",
-            "Only in development mode can render pause"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• Render Phase می‌تواند pause و resume شود\n" +
-            "- اگر update با priority بالاتر بیاید، کار فعلی pause می‌شود\n" +
-            "- Fiber architecture این امکان را فراهم می‌کند\n" +
-            "- این ویژگی Concurrent React است"
     },
     {
         "id": 41,
@@ -895,7 +879,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 56,
-        "question": "What is a Fiber in React&apos;s Fiber Tree?",
+        "question": "What is a Fiber in react's Fiber Tree?",
         "options": [
             "A JavaScript object tracking component instance",
             "A visual representation for React DevTools",
@@ -931,7 +915,7 @@ export const mockQuestions: Question[] = [
         "id": 58,
         "question": "How does Fiber Tree differ from Virtual DOM?",
         "options": [
-            "Fiber is React&apos;s internal structure, Virtual DOM is concept",
+            "Fiber is react's internal structure, Virtual DOM is concept",
             "Fiber and Virtual DOM are identical terms",
             "Fiber is for class components, Virtual DOM for functions",
             "Fiber is deprecated, Virtual DOM is modern approach"
@@ -1057,7 +1041,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 66,
-        "question": "What is a unit of work in React&apos;s rendering?",
+        "question": "What is a unit of work in react's rendering?",
         "options": [
             "Processing one component or fiber node",
             "Rendering entire component tree at once",
@@ -1313,7 +1297,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 82,
-        "question": "What is the order of phases in React&apos;s rendering?",
+        "question": "What is the order of phases in react's rendering?",
         "options": [
             "Commit Phase, Render Phase, Browser Paint",
             "Browser Paint, Render Phase, Commit Phase",
@@ -3180,7 +3164,7 @@ export const mockQuestions: Question[] = [
             "React deeply compares objects causing performance issues",
             "Objects cannot be serialized into dependency arrays",
             "Objects are compared by reference causing unnecessary re-runs",
-            "Objects cause memory leaks in React&apos;s fiber architecture"
+            "Objects cause memory leaks in react's fiber architecture"
         ],
         "correctOption":2,
         "points": 30,
@@ -3282,7 +3266,7 @@ export const mockQuestions: Question[] = [
             "It allows side effects when props or state change",
             "It's the primary mechanism for all business logic",
             "It ensures synchronous rendering with immediate DOM updates",
-            "It bypasses React&apos;s reconciliation algorithm safely"
+            "It bypasses react's reconciliation algorithm safely"
         ],
         "correctOption": 0,
         "points": 30,
@@ -6087,7 +6071,7 @@ export const mockQuestions: Question[] = [
 //         "question":  "Why is React Query valuable for managing server state?",
 //         "options": [
 //             "It automates fetching, caching, and synchronization of data",
-//             "It only replaces React&apos;s useState and useEffect for local state",
+//             "It only replaces react's useState and useEffect for local state",
 //             "It automatically generates UI components",
 //             "It completely disables all network requests"
 //         ],
@@ -7983,7 +7967,7 @@ export const mockQuestions: Question[] = [
 //         "question": "Why does incorrect HTML nesting lead to hydration mismatches?",
 //         "options": [
 //             "Because React cannot attach events to deeply nested elements",
-//             "Because the actual DOM differs structurally from React&apos;s virtual DOM",
+//             "Because the actual DOM differs structurally from react's virtual DOM",
 //             "Because the browser blocks nested element rendering",
 //             "Because React skips hydration for child nodes"
 //         ],
@@ -8044,8 +8028,8 @@ export const mockQuestions: Question[] = [
 //             "options": [
 //                 "It converts React into a server-only framework",
 //                 "It removes the need for React components entirely",
-//                 "it replaces React&apos;s component model with template files",
-//                 "It provides a higher-level structure built around React&apos;s ecosystem",
+//                 "it replaces react's component model with template files",
+//                 "It provides a higher-level structure built around react's ecosystem",
 //             ],
 //             "correctOption": 3,
 //             "points": 20
@@ -14641,7 +14625,7 @@ export const mockQuestions: Question[] = [
 //     },
 //     {
 //         "id": 1120,
-//         "question": "How do Server Actions integrate with React&apos;s Suspense?",
+//         "question": "How do Server Actions integrate with react's Suspense?",
 //         "options": [
 //             "Requires special Suspense configuration always",
 //             "Actions work with Suspense boundaries",
@@ -16214,7 +16198,7 @@ export const mockQuestions: Question[] = [
 //         },
 //         {
 //             "id": 1248,
-//             "question": "How does React&apos;s Virtual DOM support 'UI as function of state'?",
+//             "question": "How does react's Virtual DOM support 'UI as function of state'?",
 //             "options": [
 //                 "It stores all state in virtual memory",
 //                 "It compares new and old UI efficiently",
@@ -17567,4 +17551,174 @@ export const mockQuestions: Question[] = [
             "- زمانی که corruption یا weird errors\n" +
             "- معمولاً نیازی به manual cleaning نیست"
     },
+    {
+        "id": 1431,
+        "question": "What command creates a new Git repository?",
+        "options": [
+            "git create",
+            "git start",
+            "git init",
+            "git new"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• git init برای ساخت repository جدید\n" +
+            "- فولدر .git ایجاد می‌شود\n" +
+            "- اولین command برای شروع Git\n" +
+            "- در root directory پروژه اجرا می‌شود\n" +
+            "- بعد از آن می‌توانید commit کنید"
+    },
+    {
+        "id": 1432,
+        "question": "How do you download a repository from GitHub?",
+        "options": [
+            "git download <url>",
+            "git clone <url>",
+            "git pull <url>",
+            "git get <url>"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• git clone <url> برای دانلود repository\n" +
+            "- تمام history و files را می‌آورد\n" +
+            "- git clone https://github.com/user/repo.git\n" +
+            "- یک folder جدید ایجاد می‌کند\n" +
+            "- remote origin خودکار set می‌شود"
+    },
+    {
+        "id": 1433,
+        "question": "What command shows the current status of your repository?",
+        "options": [
+            "git info",
+            "git state",
+            "git status",
+            "git check"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• git status برای دیدن وضعیت فعلی\n" +
+            "- فایل‌های modified، staged، untracked\n" +
+            "- branch فعلی\n" +
+            "- commits ahead/behind\n" +
+            "- پرکاربردترین command روزانه"
+    },
+    {
+        "id": 1437,
+        "question": "What command downloads changes from GitHub?",
+        "options": [
+            "git fetch",
+            "git pull",
+            "git get",
+            "git download",
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• git pull برای دانلود و merge تغییرات\n" +
+            "- git pull origin main\n" +
+            "- معادل git fetch + git merge\n" +
+            "- تغییرات دیگران را می‌آورد\n" +
+            "- قبل از شروع کار روزانه اجرا کنید"
+    },
+    {
+        "id": 1442,
+        "question": "What file tells Git which files to ignore?",
+        "options": [
+            ".gitignore",
+            ".ignore",
+            "ignore.txt",
+            "git-ignore.txt"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• .gitignore فایل برای ignore کردن\n" +
+            "- node_modules/، .env، *.log\n" +
+            "- در root directory قرار می‌گیرد\n" +
+            "- patterns برای matching files\n" +
+            "- sensitive data را ignore کنید"
+    },
+    {
+        "id": 1443,
+        "question": "How do you temporarily save uncommitted changes?",
+        "options": [
+            "git save",
+            "git temp",
+            "git stash",
+            "git hold"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• git stash برای ذخیره موقت تغییرات\n" +
+            "- git stash pop برای برگرداندن\n" +
+            "- git stash list برای لیست stashes\n" +
+            "- وقتی می‌خواهید branch عوض کنید\n" +
+            "- git stash drop برای حذف"
+    },
+    {
+        "id": 1444,
+        "question": "What is the difference between git fetch and git pull?",
+        "options": [
+            "No difference, they are the same",
+            "fetch downloads, pull downloads and merges",
+            "fetch is faster than pull",
+            "pull only works with main branch"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• git fetch فقط تغییرات را download می‌کند\n" +
+            "- local branch را تغییر نمی‌دهد\n" +
+            "- git pull = fetch + merge\n" +
+            "- fetch برای دیدن تغییرات قبل از merge\n" +
+            "- pull مستقیماً تغییرات را apply می‌کند"
+    },
+    {
+        "id": 1445,
+        "question": "How do you undo the last commit but keep changes?",
+        "options": [
+            "git undo",
+            "git reset --soft HEAD~1",
+            "git revert HEAD",
+            "git back"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• git reset --soft HEAD~1 برای undo commit\n" +
+            "- changes در staging area می‌مانند\n" +
+            "- git reset --hard HEAD~1 همه را حذف می‌کند\n" +
+            "- git reset --mixed HEAD~1 از staging خارج می‌کند\n" +
+            "- فقط برای local commits که push نشده"
+    },
+    {
+        "id": 1448,
+        "question": "What is a Pull Request in GitHub?",
+        "options": [
+            "Pulling code from another repository",
+            "Request to merge your branch into another branch",
+            "Downloading repository files",
+            "Creating a new branch"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• Pull Request (PR) درخواست merge است\n" +
+            "- معمولاً از feature branch به main\n" +
+            "- دیگران code را review می‌کنند\n" +
+            "- discussion و comments\n" +
+            "- بعد از approval، merge می‌شود"
+    },
+    {
+        "id": 1450,
+        "question": "What does git clone do differently than downloading a ZIP?",
+        "options": [
+            "ZIP is faster than clone",
+            "Clone only downloads main branch",
+            "Clone includes Git history, ZIP doesn't",
+            "No difference between them"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• git clone تمام history و .git را می‌آورد\n" +
+            "- می‌توانید commit، branch، push کنید\n" +
+            "- ZIP فقط فایل‌های فعلی\n" +
+            "- ZIP نمی‌توانید با Git کار کنید\n" +
+            "- clone برای development، ZIP برای فقط دیدن"
+    }
 ]
