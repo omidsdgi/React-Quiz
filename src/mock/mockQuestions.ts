@@ -17720,5 +17720,226 @@ export const mockQuestions: Question[] = [
             "- ZIP فقط فایل‌های فعلی\n" +
             "- ZIP نمی‌توانید با Git کار کنید\n" +
             "- clone برای development، ZIP برای فقط دیدن"
+    },
+    {
+        "id": 1456,
+        "question": "What is TypeScript?",
+        "options": [
+            "A new programming language replacing JavaScript",
+            "JavaScript with static type checking",
+            "A JavaScript framework like React",
+            "A database query language"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• TypeScript superset از JavaScript است\n" +
+            "- اضافه کردن types به JavaScript\n" +
+            "- compile می‌شود به JavaScript\n" +
+            "- type errors در compile time\n" +
+            "- همه JavaScript کد، TypeScript معتبر است"
+    },
+    {
+        "id": 1461,
+        "question": "How do you define an array type in TypeScript?",
+        "options": [
+            "let numbers: number[] = [1, 2, 3]",
+            "let numbers: array<number> = [1, 2, 3]",
+            "let numbers: [number] = [1, 2, 3]",
+            "let numbers = number[1, 2, 3]"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• number[] برای array از numbers\n" +
+            "- string[] برای array از strings\n" +
+            "- Array<number> syntax دیگر (generics)\n" +
+            "- (number | string)[] برای mixed types\n" +
+            "- readonly number[] برای immutable"
+    },
+    {
+        "id": 1462,
+        "question": "What is an interface in TypeScript?",
+        "options": [
+            "A way to define object shape/structure",
+            "A class that can't be instantiated",
+            "A function type definition",
+            "A variable declaration"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• interface برای define کردن object structure\n" +
+            "- interface User { name: string; age: number }\n" +
+            "- می‌تواند extend شود\n" +
+            "- برای type checking objects\n" +
+            "- compile نمی‌شود به JavaScript"
+    },
+    {
+        "id": 1464,
+        "question": "What is the difference between interface and type?",
+        "options": [
+            "No difference, completely interchangeable",
+            "Interface can extend, type can't extend",
+            "Interface for objects, type for unions and other types",
+            "Type is deprecated, use interface"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• interface بیشتر برای object shapes\n" +
+            "- type برای unions، primitives، tuples\n" +
+            "- interface می‌تواند merged شود\n" +
+            "- type برای complex types بهتر\n" +
+            "- در React Props معمولاً interface"
+    },
+    {
+        "id": 1466,
+        "question": "What does the void type represent?",
+        "options": [
+            "Empty object",
+            "Null or undefined",
+            "Function that returns nothing",
+            "Any type"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• void برای functions که return ندارند\n" +
+            "- function log(message: string): void {}\n" +
+            "- معمولاً برای side effects\n" +
+            "- undefined return می‌توان داشت\n" +
+            "- null نمی‌تواند assign شود (strict mode)"
+    },
+    {
+        "id": 1470,
+        "question": "What is a tuple in TypeScript?",
+        "options": [
+            "An array with fixed length and types",
+            "A special kind of object",
+            "An array of only numbers",
+            "A function return type"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• tuple array با length و type ثابت\n" +
+            "- let point: [number, number] = [10, 20]\n" +
+            "- let user: [string, number] = ['Ali', 25]\n" +
+            "- ترتیب types مهم است\n" +
+            "- مثل Python tuples اما با type safety"
+    },
+    {
+        "id": 1471,
+        "question": "How do you define a type for React component props?",
+        "options": [
+            "interface Props { name: string }",
+            "type Props = { name: string }",
+            "props: { name: string }",
+            "Both interface and type work"
+        ],
+        "correctOption": 3,
+        "points": 10,
+        "explanation": "• هم interface و هم type کار می‌کنند\n" +
+            "- interface Props { name: string; age?: number }\n" +
+            "- const MyComponent = (props: Props) => {}\n" +
+            "- یا destructure: ({ name, age }: Props)\n" +
+            "- convention معمولاً interface در React"
+    },
+    {
+        "id": 1472,
+        "question": "What does the never type represent?",
+        "options": [
+            "Values that never occur",
+            "Null values only",
+            "Empty arrays",
+            "Undefined values"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• never برای values که هرگز اتفاق نمی‌افتند\n" +
+            "- functions که throw می‌کنند\n" +
+            "- infinite loops\n" +
+            "- unreachable code\n" +
+            "- exhaustive checks در switch/if"
+    },
+    {
+        "id": 1474,
+        "question": "What is the unknown type in TypeScript?",
+        "options": [
+            "Same as any type",
+            "Safer version of any, requires type checking",
+            "For undefined values only",
+            "For objects only"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• unknown ایمن‌تر از any است\n" +
+            "- نمی‌توانید بدون check استفاده کنید\n" +
+            "- باید typeof یا type guard استفاده کنید\n" +
+            "- let value: unknown = getValue()\n" +
+            "- توصیه می‌شود به جای any"
+    },
+    {
+        "id": 1475,
+        "question": "How do you type a variable that can be null?",
+        "options": [
+            "let name: string | null",
+            "let name: string?",
+            "let name: nullable<string>",
+            "let name: string = null"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• | null برای nullable types\n" +
+            "- let name: string | null = null\n" +
+            "- در strictNullChecks mode ضروری است\n" +
+            "- string | undefined نیز متفاوت است\n" +
+            "- optional (?) شامل undefined است"
+    },
+    {
+        "id": 1480,
+        "question": "What is the difference between type and interface for extending?",
+        "options": [
+            "interface uses extends, type uses &",
+            "Only type can extend",
+            "Only interface can extend",
+            "Both use extends keyword"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• interface با extends کار می‌کند\n" +
+            "- interface User extends Person {}\n" +
+            "- type با & (intersection)\n" +
+            "- type User = Person & { age: number }\n" +
+            "- هر دو برای composition استفاده می‌شوند"
+    },
+    {
+        "id": 1481,
+        "question": "How do you type an event handler in React?",
+        "options": [
+            "React.MouseEvent<HTMLButtonElement>",
+            "Event<HTMLInputElement>",
+            "MouseEvent",
+            "ButtonEvent"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• React.MouseEvent<HTMLButtonElement> برای click\n" +
+            "- React.ChangeEvent<HTMLInputElement> برای input\n" +
+            "- React.FormEvent<HTMLFormElement> برای form\n" +
+            "- const handleClick = (e: React.MouseEvent) => {}\n" +
+            "- generic برای element type"
+    },
+    {
+        "id": 1487,
+        "question": "How do you type an async function?",
+        "options": [
+            "async function fetch(): Promise<Data> {}",
+            "async function fetch(): async<Data> {}",
+            "async function fetch(): Future<Data> {}",
+            "async function fetch(): Async<Data> {}"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• Promise<Type> برای async functions\n" +
+            "- async function getData(): Promise<User> {}\n" +
+            "- const getData = async (): Promise<User[]> => {}\n" +
+            "- Promise<void> اگر return ندارد\n" +
+            "- await نتیجه unwrap می‌کند"
     }
 ]
