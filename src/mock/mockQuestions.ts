@@ -4724,211 +4724,291 @@ export const mockQuestions: Question[] = [
             "- معمولاً null یا undefined قرار می‌دهند\n" +
             "- با Provider، default value ignore می‌شود"
     },
-//     {
-//         "id": 273,
-//         "question": "Which example demonstrates DOM traversal?",
-//         "options": [
-//             "document.createElement('div')",
-//             "element.parentNode.nextSibling",
-//             "fetch('api/data')",
-//             "JSON.stringify({name: 'Omid'})"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-// "explanation":
-//     },
-//     {
-//         "id": 274,
-//         "question":"What distinguishes imperative from declarative programming?",
-//         "options": [
-//             "Imperative focuses on what should happen, declarative on how",
-//             "Declarative focuses on what should happen, imperative on how",
-//             "Imperative is faster, declarative is more readable",
-//             "Declarative requires more code, imperative requires less"
-//         ],
-//         "correctOption": 1,
-//         "points": 10
-//     },
-//     {
-//         "id": 275,
-//         "question": "Which approach represents declarative programming in React?",
-//         "options": [
-//             "Manually updating DOM elements with getElementById",
-//             "Using JSX to describe what the UI should look like",
-//             "Writing for loops to create HTML elements",
-//             "Directly manipulating CSS styles with JavaScript"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 276,
-//         "question": "What is the primary benefit of declarative programming in React?",
-//         "options": [
-//             "Write step-by-step DOM manipulation instructions",
-//             "Describe what UI should be, not how to build it",
-//             "Manually track all state and DOM changes",
-//             "Directly use querySelector for updates"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 277,
-//         "question": "Why is DOM traversing important in front-end development?",
-//         "options": [
-//             "Allows navigation and manipulation of HTML structure",
-//             "CSS styling replacement with JavaScript calculations",
-//             "Automatic JavaScript performance optimization",
-//             "Server-side HTML content generation"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 278,
-//         "question":  "How does feature-based folder structure improve maintainability?",
-//         "options": [
-//             "Files are separated by technical type only",
-//             "Bundle size reduces through automatic tree-shaking",
-//             "Related functionality groups together in modules",
-//             "Global state management enforces across components"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 279,
-//         "question": "What challenge arises from organizing projects by file type?",
-//         "options": [
-//             "Components become impossible to reuse",
-//             "UI and logic mix in directories",
-//             "Bundle size increases automatically",
-//             "Related files spread across folders"
-//         ],
-//         "correctOption": 3,
-//         "points": 20
-//     },
-//     {
-//         "id": 280,
-//         "question": "Where should components be placed in feature-based architecture?",
-//         "options": [
-//             "Within each feature directory with related files",
-//             "In centralized components folder for sharing",
-//             "Inside dedicated pages directory for routing",
-//             "Mixed with hooks regardless of boundaries"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 281,
-//         "question":"What does 'data loading waterfall' mean in React?",
-//         "options": [
-//             "Advanced caching strategies to completely eliminate the need for repeated network calls",
-//             "Multiple requests executed sequentially, causing slower loading times",
-//             "Executing all API requests in parallel regardless of dependencies",
-//             "Fetching data only for the components currently visible in the viewport",
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 282,
-//         "question": "What is the main purpose of the HTTP PATCH method?",
-//         "options": [
-//             "retrieves complete data of a resource without modifications",
-//             "Replaces entire resource with provided data",
-//             "Applies partial modifications to existing resource",
-//             "Creates completely new resource on server"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 283,
-//         "question": "How does HTTP PUT differ from PATCH?",
-//         "options": [
-//             "PUT retrieves resources, PATCH deletes them",
-//             "PUT replaces full resource, PATCH updates fields",
-//             "PUT creates new resources, PATCH deletes existing",
-//             "PUT sends partial data, PATCH requires full"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 284,
-//         "question": "When should POST be preferred over PUT or PATCH?",
-//         "options": [
-//             "Partially updating one property of resource",
-//             "Replacing entire resource with new data",
-//             "Creating completely new resource on server",
-//             "Retrieving current state of existing resource"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 285,
-//         "question": "Which scenario best fits the PATCH method?",
-//         "options": [
-//             "Uploading profile picture without changing other data",
-//             "Creating new order with customer and items",
-//             "Replacing entire shopping cart with new items",
-//             "Fetching order history for specific customer"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
-//     {
-//         "id": 286,
-//         question: "To update only delivery address of existing order, which HTTP method should be used?",
-//         "options": [
-//             "GET",
-//             "POST",
-//             "PUT",
-//             "PATCH"
-//         ],
-//         "correctOption": 3,
-//         "points": 20
-//     },
-//     {
-//         "id": 287,
-//         question: "To create a brand new pizza order, which HTTP method should be used?",
-//         "options": [
-//             "GET",
-//             "POST",
-//             "PUT",
-//             "PATCH"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 288,
-//         question: "To replace entire pizza menu with new list, which HTTP method should be used?",
-//         "options": [
-//             "GET",
-//             "POST",
-//             "PUT",
-//             "PATCH"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 289,
-//         "question":  "To view specific order details by ID, which HTTP method should be used?",
-//         "options": [
-//             "GET",
-//             "POST",
-//             "PUT",
-//             "PATCH"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
+    {
+        "id": 295,
+        "question": "Which example demonstrates DOM traversal?",
+        "options": [
+            "document.createElement('div')",
+            "element.parentNode.nextSibling",
+            "fetch('api/data')",
+            "JSON.stringify({name: 'Omid'})"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• parentNode و nextSibling برای حرکت در DOM tree\n" +
+            "- traversal یعنی navigate کردن بین nodes\n" +
+            "- برای دسترسی به elements مرتبط استفاده می‌شود\n" +
+            "- در React معمولاً نیازی به DOM traversal نیست\n" +
+            "- React declarative است و DOM را خودش مدیریت می‌کند"
+    },
+    {
+        "id": 296,
+        "question":"What distinguishes imperative from declarative programming?",
+        "options": [
+            "Imperative focuses on what should happen, declarative on how",
+            "Declarative focuses on what should happen, imperative on how",
+            "Imperative is faster, declarative is more readable",
+            "Declarative requires more code, imperative requires less"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• imperative: چگونه کاری انجام شود (HOW)\n" +
+            "- declarative: چه کاری انجام شود (WHAT)\n" +
+            "- imperative: step-by-step instructions\n" +
+            "- declarative: describe کردن نتیجه مورد نظر\n" +
+            "- React declarative است"
+    },
+    {
+        "id": 297,
+        "question": "Which approach represents declarative programming in React?",
+        "options": [
+            "Manually updating DOM elements with getElementById",
+            "Using JSX to describe what the UI should look like",
+            "Writing for loops to create HTML elements",
+            "Directly manipulating CSS styles with JavaScript"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• JSX توصیف می‌کند UI چگونه باید باشد\n" +
+            "- نه اینکه چگونه ساخته شود\n" +
+            "- React خودش DOM را update می‌کند\n" +
+            "- شما فقط desired state را declare می‌کنید\n" +
+            "- این declarative programming است"
+    },
+    {
+        "id": 298,
+        "question": "What is the primary benefit of declarative programming in React?",
+        "options": [
+            "Write step-by-step DOM manipulation instructions",
+            "Describe what UI should be, not how to build it",
+            "Manually track all state and DOM changes",
+            "Directly use querySelector for updates"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• کد ساده‌تر و خواناتر\n" +
+            "- شما چه می‌خواهید describe می‌کنید نه چگونه\n" +
+            "- React implementation details را handle می‌کند\n" +
+            "- کمتر bug و آسان‌تر maintenance\n" +
+            "- focus روی UI است نه DOM manipulation"
+    },
+    {
+        "id": 299,
+        "question": "Why is DOM traversing important in front-end development?",
+        "options": [
+            "Allows navigation and manipulation of HTML structure",
+            "CSS styling replacement with JavaScript calculations",
+            "Automatic JavaScript performance optimization",
+            "Server-side HTML content generation"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• برای navigate و manipulate کردن HTML structure\n" +
+            "- دسترسی به elements مرتبط\n" +
+            "- برای event delegation مفید است\n" +
+            "- در vanilla JavaScript ضروری است\n" +
+            "- اما در React کمتر نیاز است"
+    },
+    {
+        "id": 300,
+        "question":  "How does feature-based folder structure improve maintainability?",
+        "options": [
+            "Files are separated by technical type only",
+            "Bundle size reduces through automatic tree-shaking",
+            "Related functionality groups together in modules",
+            "Global state management enforces across components"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• فایل‌های مرتبط در یک folder هستند\n" +
+            "- راحت‌تر پیدا کردن و تغییر دادن\n" +
+            "- هر feature مستقل است\n" +
+            "- scaling و team collaboration بهتر\n" +
+            "- بهتر از تفکیک بر اساس نوع فایل"
+    },
+    {
+        "id": 301,
+        "question": "What challenge arises from organizing projects by file type?",
+        "options": [
+            "Components become impossible to reuse",
+            "UI and logic mix in directories",
+            "Bundle size increases automatically",
+            "Related files spread across folders"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• فایل‌های مرتبط در folders مختلف پراکنده می‌شوند\n" +
+            "- پیدا کردن همه قسمت‌های یک feature سخت است\n" +
+            "- refactoring پیچیده‌تر می‌شود\n" +
+            "- scaling مشکل دارد\n" +
+            "- feature-based بهتر است"
+    },
+    {
+        "id": 302,
+        "question": "Where should components be placed in feature-based architecture?",
+        "options": [
+            "Within each feature directory with related files",
+            "In centralized components folder for sharing",
+            "Inside dedicated pages directory for routing",
+            "Mixed with hooks regardless of boundaries"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• در folder مربوط به feature خود\n" +
+            "- با related files (hooks، utils، styles)\n" +
+            "- shared components در folder جداگانه\n" +
+            "- هر feature self-contained است\n" +
+            "- modularity و reusability بهتر"
+    },
+    {
+        "id": 303,
+        "question":"What does 'data loading waterfall' mean in React?",
+        "options": [
+            "Advanced caching strategies to completely eliminate the need for repeated network calls",
+            "Multiple requests executed sequentially, causing slower loading times",
+            "Executing all API requests in parallel regardless of dependencies",
+            "Fetching data only for the components currently visible in the viewport",
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• requests به صورت sequential اجرا می‌شوند\n" +
+            "- هر request منتظر قبلی است\n" +
+            "- loading time کل افزایش می‌یابد\n" +
+            "- باید requests را parallel کنید\n" +
+            "- React Query و Suspense کمک می‌کنند"
+    },
+    {
+        "id": 304,
+        "question": "What is the main purpose of the HTTP PATCH method?",
+        "options": [
+            "retrieves complete data of a resource without modifications",
+            "Replaces entire resource with provided data",
+            "Applies partial modifications to existing resource",
+            "Creates completely new resource on server"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• برای partial update یک resource\n" +
+            "- فقط فیلدهای تغییر یافته ارسال می‌شود\n" +
+            "- کم‌حجم‌تر از PUT\n" +
+            "- برای update جزئی مناسب است\n" +
+           "- مثل تغییر فقط email کاربر"
+    },
+    {
+        "id": 305,
+        "question": "How does HTTP PUT differ from PATCH?",
+        "options": [
+            "PUT retrieves resources, PATCH deletes them",
+            "PUT replaces full resource, PATCH updates fields",
+            "PUT creates new resources, PATCH deletes existing",
+            "PUT sends partial data, PATCH requires full"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• PUT کل resource را replace می‌کند\n" +
+            "- PATCH فقط بخش‌هایی را update می‌کند\n" +
+            "- PUT نیاز به تمام فیلدها دارد\n" +
+            "- PATCH فقط تغییرات را می‌فرستد\n" +
+            "- PATCH efficient تر برای updates جزئی"
+    },
+    {
+        "id": 306,
+        "question": "When should POST be preferred over PUT or PATCH?",
+        "options": [
+            "Partially updating one property of resource",
+            "Replacing entire resource with new data",
+            "Creating completely new resource on server",
+            "Retrieving current state of existing resource"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• برای ساخت resource کاملاً جدید\n" +
+            "- وقتی ID توسط server generate می‌شود\n" +
+            "- برای actions که resource جدید ایجاد می‌کنند\n" +
+            "- PUT/PATCH برای update resources موجود\n" +
+            "- POST برای create، PUT/PATCH برای update"
+    },
+    {
+        "id": 307,
+        "question": "Which scenario best fits the PATCH method?",
+        "options": [
+            "Uploading profile picture without changing other data",
+            "Creating new order with customer and items",
+            "Replacing entire shopping cart with new items",
+            "Fetching order history for specific customer"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• update کردن profile picture بدون تغییر بقیه\n" +
+            "- فقط فیلدهای خاص update می‌شوند\n" +
+            "- data کمتری ارسال می‌شود\n" +
+            "- efficient برای updates جزئی\n" +
+            "- بهتر از PUT که همه را می‌خواهد"
+    },
+    {
+        "id": 308,
+        question: "To update only delivery address of existing order, which HTTP method should be used?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• PATCH برای partial update مناسب است\n" +
+            "- فقط address field ارسال می‌شود\n" +
+            "- بقیه order تغییر نمی‌کند\n" +
+            "- efficient و targeted update\n" +
+            "- بهترین انتخاب برای این scenario"
+    },
+    {
+        "id": 309,
+        question: "To create a brand new pizza order, which HTTP method should be used?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• POST برای ایجاد resource جدید\n" +
+            "- order جدید در database ساخته می‌شود\n" +
+            "- server معمولاً ID generate می‌کند\n" +
+            "- استاندارد RESTful برای create\n" +
+            "- response شامل order ساخته شده"
+    },
+    {
+        "id": 310,
+        question: "To replace entire pizza menu with new list, which HTTP method should be used?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• PUT برای replace کردن کامل resource\n" +
+            "- تمام menu جدید ارسال می‌شود\n" +
+            "- menu قدیمی کاملاً replace می‌شود\n" +
+            "- idempotent است (تکرار نتیجه یکسان)\n" +
+            "- برای replacement کامل مناسب"
+    },
+    {
+        "id": 289,
+        "question":  "To view specific order details by ID, which HTTP method should be used?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": ""
+    },
 //     {
 //         "id": 290,
 //         "question": "To cancel and remove order completely, which HTTP method should be used?",
