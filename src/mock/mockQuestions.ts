@@ -5167,7 +5167,7 @@ export const mockQuestions: Question[] = [
              "- vanilla JavaScript برای apps بزرگ سخت است"
     },
     {
-        "id": 299,
+        "id": 321,
         "question": "What's a key advantage of React over vanilla JavaScript?",
         "options": [
             "React directly modifies DOM for speed",
@@ -5177,138 +5177,178 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
+         "explanation": "• Virtual DOM برای efficient updates\n" +
+             "- declarative UI به جای imperative\n" +
+             "- component reusability و composition\n" +
+             "- state management built-in\n" +
+             "- ecosystem غنی از libraries و tools"
+    },
+    {
+        "id": 322,
+        "question": "Why is component-based architecture preferred over vanilla JavaScript?",
+        "options": [
+            "Components enable reuse, isolation, and easier testing",
+            "Components eliminate the need for any JavaScript functions",
+            "Vanilla JavaScript cannot handle conditional rendering",
+            "Components automatically generate database queries"
+        ],
+        "correctOption": 0,
+        "points": 30,
+         "explanation": "• components قابل reuse در جاهای مختلف\n" +
+             "- isolation و encapsulation بهتر\n" +
+             "- testing آسان‌تر به صورت جداگانه\n" +
+             "- maintenance و scaling ساده‌تر\n" +
+             "- team collaboration بهتر"
+    },
+    {
+        "id": 323,
+        "question":"What was jQuery primarily designed to do?",
+        "options": [
+            "Manage server-side database connections",
+            "Simplify DOM manipulation and event handling",
+            "Replace HTML markup with JavaScript syntax",
+            "Compile JavaScript into optimized machine code"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation": "• jQuery برای ساده‌سازی DOM manipulation\n" +
+             "- cross-browser compatibility را حل می‌کرد\n" +
+             "- AJAX requests را آسان می‌کرد\n" +
+             "- animations و effects built-in\n" +
+             "- قبل از frameworks مدرن بسیار محبوب بود"
+    },
+    {
+        "id": 324,
+        "question":  "Which limitation of jQuery led to adoption of modern frameworks?",
+        "options": [
+            "jQuery prevented DOM manipulation capabilities",
+            "jQuery automatically converted code to server-side scripts",
+            "jQuery lacked structured state management patterns",
+            "jQuery could not run in modern browsers"
+        ],
+        "correctOption": 2,
+        "points": 30,
+         "explanation": "• jQuery structure و state management نداشت\n" +
+             "- برای SPAs پیچیده کافی نبود\n" +
+             "- component-based architecture نداشت\n" +
+             "- data binding و reactivity نداشت\n" +
+             "- React و Vue این مشکلات را حل کردند"
+    },
+    {
+        "id": 325,
+        "question": "How does a web application differ from a regular desktop application?",
+        "options": [
+            "Web applications run on servers and are accessed via browsers",
+            "Web applications execute entirely on local machines",
+            "Web applications contain only static HTML content",
+            "Web applications do not require a browser to run"
+        ],
+        "correctOption": 0,
+        "points": 10,
+         "explanation": "• web application در browser اجرا می‌شود\n" +
+             "- از server data می‌گیرد\n" +
+             "- نیازی به installation ندارد\n" +
+             "- cross-platform است\n" +
+             "- desktop app روی OS مستقیماً اجرا می‌شود"
+    },
+    {
+        "id": 326,
+        "question":  "What is the primary role of React Query in React applications?",
+        "options": [
+            "Styling React components using CSS-in-JS",
+            "Managing server state including fetching and caching",
+            "Replacing useState for local state management",
+            "Building UI components without JSX syntax"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation": "• React Query server state را مدیریت می‌کند\n" +
+             "- fetching، caching و synchronization\n" +
+             "- loading و error states خودکار\n" +
+             "- background refetching\n" +
+             "- alternative به Redux برای server data"
+    },
+    {
+        "id": 327,
+        "question": "Why do modern applications rely on front-end frameworks?",
+        "options": [
+            "To automatically convert HTML into server scripts",
+            "To simplify interactive UI and manage application state",
+            "To eliminate the need for backend infrastructure",
+            "To replace CSS with JavaScript styling solutions"
+        ],
+        "correctOption": 1,
+        "points": 30,
+         "explanation": "• frameworks state management را ساده می‌کنند\n" +
+             "- component-based architecture\n" +
+             "- reactivity و data binding\n" +
+             "- routing و navigation\n" +
+             "- vanilla JS برای apps پیچیده سخت است"
+    },
+    {
+        "id": 328,
+        "question": "What differentiates a web application from a web page?",
+        "options": [
+            "Pages allow interaction, apps are purely static",
+            "Pages require servers, apps work offline",
+            "Applications enable interaction, pages mainly display content",
+            "Applications run offline, pages need internet"
+        ],
+        "correctOption": 2,
+        "points": 10,
+         "explanation": "• web page بیشتر static و informational\n" +
+             "- web application interactive و functional\n" +
+             "- app دارای user actions و state\n" +
+             "- app مثل Gmail، page مثل blog\n" +
+             "- app معمولاً نیاز به backend دارد"
+    },
+    {
+        "id": 329,
+        "question": "When is React more beneficial than plain HTML/CSS/JS?",
+        "options": [
+            "React efficiently manages complex UI state and interactions",
+            "React automatically converts HTML into server-side scripts",
+            "React removes the need for CSS styling",
+            "React works only for pages without a server"
+        ],
+        "correctOption": 0,
+        "points": 30,
+         "explanation": "• React برای UI پیچیده با state زیاد\n" +
+             "- data که frequently تغییر می‌کند\n" +
+             "- reusable components لازم است\n" +
+             "- single page applications\n" +
+             "- plain JS برای static sites کافی است"
+    },
+    {
+        "id": 330,
+        "question":  "What does keeping the UI synchronized with data mean?",
+        "options": [
+            "Data should remain static to avoid frequent updates",
+            "UI updates occur only during full page refreshes",
+            "UI elements need manual updates for data changes",
+            "UI automatically reflects the current state of data"
+        ],
+        "correctOption": 3,
+        "points": 10,
+         "explanation": "• UI همیشه آخرین data را نشان می‌دهد\n" +
+             "- وقتی data تغییر کند، UI update شود\n" +
+             "- بدون manual DOM manipulation\n" +
+             "- React این کار را خودکار انجام می‌دهد\n" +
+             "- consistency بین state و view"
+    },
+    {
+        "id": 309,
+        "question":"How does React ensure UI stays in sync with data?",
+        "options": [
+            "By directly manipulating the DOM using vanilla JavaScript",
+            "By using state variables and triggering re-renders",
+            "By relying solely on global variables without state management",
+            "By refreshing the entire page after each data change"
+        ],
+        "correctOption": 1,
+        "points": 20,
          "explanation": ""
     },
-//     {
-//         "id": 300,
-//         "question": "Why is component-based architecture preferred over vanilla JavaScript?",
-//         "options": [
-//             "Components enable reuse, isolation, and easier testing",
-//             "Components eliminate the need for any JavaScript functions",
-//             "Vanilla JavaScript cannot handle conditional rendering",
-//             "Components automatically generate database queries"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 301,
-//         "question":"What was jQuery primarily designed to do?",
-//         "options": [
-//             "Manage server-side database connections",
-//             "Simplify DOM manipulation and event handling",
-//             "Replace HTML markup with JavaScript syntax",
-//             "Compile JavaScript into optimized machine code"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 302,
-//         "question":  "Which limitation of jQuery led to adoption of modern frameworks?",
-//         "options": [
-//             "jQuery prevented DOM manipulation capabilities",
-//             "jQuery automatically converted code to server-side scripts",
-//             "jQuery lacked structured state management patterns",
-//             "jQuery could not run in modern browsers"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 303,
-//         "question": "How does a web application differ from a regular desktop application?",
-//         "options": [
-//             "Web applications run on servers and are accessed via browsers",
-//             "Web applications execute entirely on local machines",
-//             "Web applications contain only static HTML content",
-//             "Web applications do not require a browser to run"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 304,
-//         "question":  "What is the primary role of React Query in React applications?",
-//         "options": [
-//             "Styling React components using CSS-in-JS",
-//             "Managing server state including fetching and caching",
-//             "Replacing useState for local state management",
-//             "Building UI components without JSX syntax"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 305,
-//         "question": "Why do modern applications rely on front-end frameworks?",
-//         "options": [
-//             "To automatically convert HTML into server scripts",
-//             "To simplify interactive UI and manage application state",
-//             "To eliminate the need for backend infrastructure",
-//             "To replace CSS with JavaScript styling solutions"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 306,
-//         "question": "What differentiates a web application from a web page?",
-//         "options": [
-//             "Pages allow interaction, apps are purely static",
-//             "Pages require servers, apps work offline",
-//             "Applications enable interaction, pages mainly display content",
-//             "Applications run offline, pages need internet"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 307,
-//         "question": "When is React more beneficial than plain HTML/CSS/JS?",
-//         "options": [
-//             "React efficiently manages complex UI state and interactions",
-//             "React automatically converts HTML into server-side scripts",
-//             "React removes the need for CSS styling",
-//             "React works only for pages without a server"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 308,
-//         "question":  "What does keeping the UI synchronized with data mean?",
-//         "options": [
-//             "Data should remain static to avoid frequent updates",
-//             "UI updates occur only during full page refreshes",
-//             "UI elements need manual updates for data changes",
-//             "UI automatically reflects the current state of data"
-//         ],
-//         "correctOption": 3,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 309,
-//         "question":"How does React ensure UI stays in sync with data?",
-//         "options": [
-//             "By directly manipulating the DOM using vanilla JavaScript",
-//             "By using state variables and triggering re-renders",
-//             "By relying solely on global variables without state management",
-//             "By refreshing the entire page after each data change"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation": ""
-//     },
 //     {
 //         "id": 310,
 //         "question": "Why is UI-data synchronization crucial in applications?",
