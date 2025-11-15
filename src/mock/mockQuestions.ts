@@ -5337,7 +5337,7 @@ export const mockQuestions: Question[] = [
              "- consistency بین state و view"
     },
     {
-        "id": 309,
+        "id": 331,
         "question":"How does React ensure UI stays in sync with data?",
         "options": [
             "By directly manipulating the DOM using vanilla JavaScript",
@@ -5347,127 +5347,165 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": ""
+         "explanation": "• React از state و re-rendering استفاده می‌کند\n" +
+             "- تغییر state باعث re-render می‌شود\n" +
+             "- Virtual DOM برای efficient updates\n" +
+             "- declarative approach\n" +
+             "- developer فقط state را update می‌کند"
     },
-//     {
-//         "id": 310,
-//         "question": "Why is UI-data synchronization crucial in applications?",
-//         "options": [
-//             "It ensures users see accurate and up-to-date information",
-//             "It speeds up applications by preventing updates",
-//             "It allows avoiding React or similar frameworks",
-//             "It caches old data without updating the interface"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 311,
-//         "question":"What does DOM traversal allow developers to do in JavaScript?",
-//         "options": [
-//             "Create new elements and attach them to the DOM",
-//             "Send asynchronous requests to a server",
-//             "Navigate and access nodes already present in the DOM",
-//             "Convert JavaScript code into machine instructions"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 312,
-//         "question": "What made jQuery popular among developers?",
-//         "options": [
-//             "Replaced JavaScript as browser language",
-//             "Automatically optimized web performance",
-//             "Eliminated need for CSS styling",
-//             "Provided cross-browser support for common DOM tasks"
-//         ],
-//         "correctOption":3,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 313,
-//         "question": "How would you best describe React?",
-//         "options": [
-//             "declarative, component-based, state-driven JavaScript library for building UIs",
-//             "full-featured JavaScript framework with built-in routing and state management",
-//             "CSS utility framework for creating responsive designs quickly",
-//             "server-side runtime environment for executing JavaScript outside the browser"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 314,
-//         "question":"What characterizes declarative programming in React?",
-//         "options": [
-//             "You manually update DOM elements step-by-step",
-//             "You write CSS classes for component styling",
-//             "You specify what the UI should look like",
-//             "You use server-side rendering for HTML"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 315,
-//         "question":  "How does imperative differ from declarative programming?",
-//         "options": [
-//             "You provide step-by-step instructions for execution",
-//             "You only declare what UI should display",
-//             "You style components using utility-first CSS",
-//             "You let frameworks handle all DOM updates"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 316,
-//         "question":"What role do case reducers play in Redux Toolkit?",
-//         "options": [
-//             "They replace Redux store with local state",
-//             "They automatically fetch data from external APIs",
-//             "They style components using predefined CSS classes",
-//             "They define how state changes for specific actions",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         id: 317,
-//         question: "What programming approach does React Router follow?",
-//         "options": [
-//             "Imperative programming with manual DOM updates",
-//             "Declarative programming with component-based routing",
-//             "Procedural programming with sequential execution",
-//             "Functional programming with pure function composition"
-//         ],
-//         correctOption: 1,
-//         points: 20,,
-// "explanation":""
-
-//     },
-//     {
-//         id: 318,
-//         question:  "Which route definition works best for large projects?",
-//         "options": [
-//             "Route objects with createBrowserRouter configuration",
-//             "JSX route definitions inside Routes components",
-//             "Dynamic routes for all page components",
-//             "Protected routes for authentication handling"
-//         ],
-//         correctOption: 0,
-//         points: 20,,
-// "explanation":""
-
-//     },
+    {
+        "id": 332,
+        "question": "Why is UI-data synchronization crucial in applications?",
+        "options": [
+            "It ensures users see accurate and up-to-date information",
+            "It speeds up applications by preventing updates",
+            "It allows avoiding React or similar frameworks",
+            "It caches old data without updating the interface"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation": "• کاربر باید accurate information ببیند\n" +
+             "- جلوگیری از stale data\n" +
+             "- user experience بهتر\n" +
+             "- trust و reliability\n" +
+             "- real-time updates مهم هستند"
+    },
+    {
+        "id": 333,
+        "question":"What does DOM traversal allow developers to do in JavaScript?",
+        "options": [
+            "Create new elements and attach them to the DOM",
+            "Send asynchronous requests to a server",
+            "Navigate and access nodes already present in the DOM",
+            "Convert JavaScript code into machine instructions"
+        ],
+        "correctOption": 2,
+        "points": 10,
+         "explanation": "• حرکت بین nodes در DOM tree\n" +
+             "- دسترسی به parent، children، siblings\n" +
+             "- parentNode، childNodes، nextSibling\n" +
+             "- برای navigation در HTML structure\n" +
+             "- در React کمتر نیاز است"
+    },
+    {
+        "id": 334,
+        "question": "What made jQuery popular among developers?",
+        "options": [
+            "Replaced JavaScript as browser language",
+            "Automatically optimized web performance",
+            "Eliminated need for CSS styling",
+            "Provided cross-browser support for common DOM tasks"
+        ],
+        "correctOption":3,
+        "points": 20,
+         "explanation": "• cross-browser compatibility آسان\n" +
+             "- syntax ساده و readable\n" +
+             "- DOM manipulation راحت\n" +
+             "- AJAX built-in\n" +
+             "- زمانی که browsers inconsistent بودند"
+    },
+    {
+        "id": 335,
+        "question": "How would you best describe React?",
+        "options": [
+            "declarative, component-based, state-driven JavaScript library for building UIs",
+            "full-featured JavaScript framework with built-in routing and state management",
+            "CSS utility framework for creating responsive designs quickly",
+            "server-side runtime environment for executing JavaScript outside the browser"
+        ],
+        "correctOption": 0,
+        "points": 10,
+         "explanation": "• declarative: چه می‌خواهید نه چگونه\n" +
+             "- component-based: reusable pieces\n" +
+             "- state-driven: UI از state می‌آید\n" +
+             "- JavaScript library نه framework کامل\n" +
+             "- برای building UIs طراحی شده"
+    },
+    {
+        "id": 336,
+        "question":"What characterizes declarative programming in React?",
+        "options": [
+            "You manually update DOM elements step-by-step",
+            "You write CSS classes for component styling",
+            "You specify what the UI should look like",
+            "You use server-side rendering for HTML"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• شما describe می‌کنید UI چگونه باید باشد\n" +
+             "- نه step-by-step چگونه بسازید\n" +
+             "- React implementation را handle می‌کند\n" +
+             "- مثل HTML declarative است\n" +
+             "- opposite از imperative"
+    },
+    {
+        "id": 337,
+        "question":  "How does imperative differ from declarative programming?",
+        "options": [
+            "You provide step-by-step instructions for execution",
+            "You only declare what UI should display",
+            "You style components using utility-first CSS",
+            "You let frameworks handle all DOM updates"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation": "• imperative: چگونه کاری انجام شود (HOW)\n" +
+             "- step-by-step instructions\n" +
+             "- declarative: چه کاری انجام شود (WHAT)\n" +
+             "- result را describe می‌کنید\n" +
+             "- imperative: DOM manipulation manual"
+    },
+    {
+        "id": 338,
+        "question":"What role do case reducers play in Redux Toolkit?",
+        "options": [
+            "They replace Redux store with local state",
+            "They automatically fetch data from external APIs",
+            "They style components using predefined CSS classes",
+            "They define how state changes for specific actions",
+        ],
+        "correctOption": 3,
+        "points": 20,
+         "explanation": "• case reducers هر action type را handle می‌کنند\n" +
+             "- مثل cases در switch statement\n" +
+             "- state و action می‌گیرند\n" +
+             "- state جدید return می‌کنند\n" +
+             "- در createSlice define می‌شوند"
+    },
+    {
+        id: 339,
+        question: "What programming approach does React Router follow?",
+        "options": [
+            "Imperative programming with manual DOM updates",
+            "Declarative programming with component-based routing",
+            "Procedural programming with sequential execution",
+            "Functional programming with pure function composition"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation": "• declarative programming با component-based routing\n" +
+            "- Routes به عنوان JSX components\n" +
+            "- <Route path='/about' element={<About />} />\n" +
+            "- composition بهتر از configuration\n" +
+            "- readable و maintainable"
+    },
+    {
+        id: 340,
+        question:  "Which route definition works best for large projects?",
+        "options": [
+            "Route objects with createBrowserRouter configuration",
+            "JSX route definitions inside Routes components",
+            "Dynamic routes for all page components",
+            "Protected routes for authentication handling"
+        ],
+        correctOption: 0,
+        points: 20,
+        "explanation":"• createBrowserRouter با route objects\n" +
+            "- centralized route configuration\n" +
+            "- data loading با loaders\n" +
+            "- error handling بهتر\n" +
+            "- nested routes ساده‌تر"
+    },
 //     {
 //         id: 319,
 //         question:"How do Navigate and useNavigate differ?",
