@@ -4997,7 +4997,7 @@ export const mockQuestions: Question[] = [
             "- برای replacement کامل مناسب"
     },
     {
-        "id": 289,
+        "id": 311,
         "question":  "To view specific order details by ID, which HTTP method should be used?",
         "options": [
             "GET",
@@ -5007,128 +5007,178 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-        "explanation": ""
+        "explanation": "• GET برای خواندن/دریافت data\n" +
+            "- فقط retrieve می‌کند، تغییر نمی‌دهد\n" +
+            "- safe و idempotent است\n" +
+            "- برای read operations استاندارد\n" +
+            "- معمولاً با ID در URL"
     },
-//     {
-//         "id": 290,
-//         "question": "To cancel and remove order completely, which HTTP method should be used?",
-//         "options": [
-//             "GET",
-//             "POST",
-//             "PUT",
-//             "DELETE"
-//         ],
-//         "correctOption": 3,
-//         "points": 10
-//     },
-//     {
-//         "id": 291,
-//         "question":"What defines a pure function in JavaScript?",
-//         "options": [
-//             "Always returns same output for same input",
-//             "Can modify variables outside its scope",
-//             "Depends on external states like Date.now()",
-//             "Causes side effects like DOM manipulation"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 292,
-//         "question":  "What makes a React component impure?",
-//         "options": [
-//             "Using props to render UI",
-//             "Returning JSX consistently from component",
-//             "Receiving children elements ",
-//             "Fetching data directly inside render",
-//         ],
-//         "correctOption": 3,
-//         "points": 20
-//     },
-//     {
-//         "id": 293,
-//         "question":  "Why should functions in useMemo be pure?",
-//         "options": [
-//             "Impure functions are automatically memoized",
-//             "Pure functions cannot accept any arguments",
-//             "Impure functions may return conflicting results",
-//             "useMemo only works with async functions"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 294,
-//         "question": "What breaks the purity of a Redux reducer?",
-//         "options": [
-//             "Returning new state object from reducer",
-//             "Spreading previous state into new one",
-//             "Calculating sum of two numbers",
-//             "Logging message to console from reducer"
-//         ],
-//         "correctOption": 3,
-//         "points": 20
-//     },
-//     {
-//         "id": 295,
-//         "question": "What is the best practice when modeling Redux state?",
-//         "options": [
-//             "Store the entire UI tree directly inside the state",
-//             "Duplicate entities in multiple parts of the state for faster access",
-//             "Normalize data and avoid deep nesting structures",
-//             "Keep derived values permanently stored in state"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 296,
-//         "question": "Why is normalization recommended in Redux?",
-//         "options": [
-//             "Makes state harder to update consistently",
-//             "Ensures all data is stored in nested objects",
-//             "Makes selectors unnecessary in the application",
-//             "Allows easy updates and avoids data duplication",
-//         ],
-//         "correctOption": 3,
-//         "points": 20
-//     },
-//     {
-//         "id": 297,
-//         "question": "Why prefer React Query over fetch with useEffect?",
-//         "options": [
-//             "eliminates the need for backend APIs",
-//             "Handles caching, refetching, and background updates",
-//             "replaces Redux for all state management including local state",
-//             "converts all API responses into static HTML automatically"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 298,
-//         "question": "Why do we need frameworks like React?",
-//         "options": [
-//             "JavaScript cannot support DOM manipulation",
-//             "Vanilla JavaScript cannot work with APIs",
-//             "Frameworks make state management easier in complex apps",
-//             "Frameworks replace JavaScript with different language"
-//         ],
-//         "correctOption": 2,
-//         "points": 10
-//     },
-//     {
-//         "id": 299,
-//         "question": "What's a key advantage of React over vanilla JavaScript?",
-//         "options": [
-//             "React directly modifies DOM for speed",
-//             "React removes need for event handling",
-//             "React introduces Virtual DOM for efficiency",
-//             "React converts CSS into JavaScript functions"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
+    {
+        "id": 312,
+        "question": "To cancel and remove order completely, which HTTP method should be used?",
+        "options": [
+            "GET",
+            "POST",
+            "PUT",
+            "DELETE"
+        ],
+        "correctOption": 3,
+        "points": 10,
+         "explanation": "• DELETE برای حذف resource\n" +
+             "- order کاملاً از database حذف می‌شود\n" +
+             "- idempotent است\n" +
+             "- استاندارد RESTful برای deletion\n" +
+             "- معمولاً 204 No Content return می‌کند"
+    },
+    {
+        "id": 313,
+        "question":"What defines a pure function in JavaScript?",
+        "options": [
+            "Always returns same output for same input",
+            "Can modify variables outside its scope",
+            "Depends on external states like Date.now()",
+            "Causes side effects like DOM manipulation"
+        ],
+        "correctOption": 0,
+        "points": 10,
+         "explanation": "• همیشه با input یکسان، output یکسان\n" +
+             "- بدون side effects (تغییر external state)\n" +
+             "- نتیجه فقط به arguments بستگی دارد\n" +
+             "- deterministic و predictable\n" +
+             "- Redux reducers باید pure باشند"
+    },
+    {
+        "id": 314,
+        "question":  "What makes a React component impure?",
+        "options": [
+            "Using props to render UI",
+            "Returning JSX consistently from component",
+            "Receiving children elements ",
+            "Fetching data directly inside render",
+        ],
+        "correctOption": 3,
+        "points": 20,
+         "explanation": "• fetch کردن data مستقیماً در render\n" +
+             "- تغییر دادن متغیرهای external\n" +
+             "- تکیه بر Date.now() یا Math.random()\n" +
+             "- mutating props یا state\n" +
+             "- side effects باید در useEffect باشند"
+    },
+    {
+        "id": 315,
+        "question":  "Why should functions in useMemo be pure?",
+        "options": [
+            "Impure functions are automatically memoized",
+            "Pure functions cannot accept any arguments",
+            "Impure functions may return conflicting results",
+            "useMemo only works with async functions"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• useMemo نتیجه را cache می‌کند\n" +
+             "- با dependencies یکسان، نتیجه باید یکسان باشد\n" +
+             "- impure functions نتایج inconsistent دارند\n" +
+             "- caching با impurity کار نمی‌کند\n" +
+             "- باعث bugs پنهان می‌شود"
+    },
+    {
+        "id": 316,
+        "question": "What breaks the purity of a Redux reducer?",
+        "options": [
+            "Returning new state object from reducer",
+            "Spreading previous state into new one",
+            "Calculating sum of two numbers",
+            "Logging message to console from reducer"
+        ],
+        "correctOption": 3,
+        "points": 20,
+         "explanation": "• logging به console یا calling APIs\n" +
+             "- mutating state مستقیماً\n" +
+             "- استفاده از Date.now() یا Math.random()\n" +
+             "- reading/writing external variables\n" +
+             "- reducers باید فقط state جدید return کنند"
+    },
+    {
+        "id": 317,
+        "question": "What is the best practice when modeling Redux state?",
+        "options": [
+            "Store the entire UI tree directly inside the state",
+            "Duplicate entities in multiple parts of the state for faster access",
+            "Normalize data and avoid deep nesting structures",
+            "Keep derived values permanently stored in state"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• normalize کردن data برای جلوگیری از duplication\n" +
+             "- از deep nesting اجتناب کنید\n" +
+             "- flat structure بهتر از nested است\n" +
+             "- استفاده از IDs برای relations\n" +
+             "- derived values را در state ذخیره نکنید"
+    },
+    {
+        "id": 318,
+        "question": "Why is normalization recommended in Redux?",
+        "options": [
+            "Makes state harder to update consistently",
+            "Ensures all data is stored in nested objects",
+            "Makes selectors unnecessary in the application",
+            "Allows easy updates and avoids data duplication",
+        ],
+        "correctOption": 3,
+        "points": 20,
+         "explanation": "• updates آسان‌تر و consistent تر\n" +
+             "- از data duplication جلوگیری می‌کند\n" +
+             "- performance بهتر برای lookups\n" +
+             "- relationships واضح‌تر با IDs\n" +
+             "- شبیه database normalization"
+    },
+    {
+        "id": 319,
+        "question": "Why prefer React Query over fetch with useEffect?",
+        "options": [
+            "eliminates the need for backend APIs",
+            "Handles caching, refetching, and background updates",
+            "replaces Redux for all state management including local state",
+            "converts all API responses into static HTML automatically"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation": "• caching خودکار برای performance\n" +
+             "- background refetching برای freshness\n" +
+             "- loading و error states built-in\n" +
+             "- optimistic updates و mutations\n" +
+             "- کد کمتر و ساده‌تر از manual fetch"
+    },
+    {
+        "id": 320,
+        "question": "Why do we need frameworks like React?",
+        "options": [
+            "JavaScript cannot support DOM manipulation",
+            "Vanilla JavaScript cannot work with APIs",
+            "Frameworks make state management easier in complex apps",
+            "Frameworks replace JavaScript with different language"
+        ],
+        "correctOption": 2,
+        "points": 10,
+         "explanation": "• state management پیچیده را ساده می‌کند\n" +
+             "- DOM manipulation خودکار و optimized\n" +
+             "- component-based architecture برای reusability\n" +
+             "- declarative programming برای readability\n" +
+             "- vanilla JavaScript برای apps بزرگ سخت است"
+    },
+    {
+        "id": 299,
+        "question": "What's a key advantage of React over vanilla JavaScript?",
+        "options": [
+            "React directly modifies DOM for speed",
+            "React removes need for event handling",
+            "React introduces Virtual DOM for efficiency",
+            "React converts CSS into JavaScript functions"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": ""
+    },
 //     {
 //         "id": 300,
 //         "question": "Why is component-based architecture preferred over vanilla JavaScript?",
@@ -5139,7 +5189,8 @@ export const mockQuestions: Question[] = [
 //             "Components automatically generate database queries"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 301,
@@ -5151,7 +5202,8 @@ export const mockQuestions: Question[] = [
 //             "Compile JavaScript into optimized machine code"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 302,
@@ -5163,7 +5215,8 @@ export const mockQuestions: Question[] = [
 //             "jQuery could not run in modern browsers"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 303,
@@ -5175,7 +5228,8 @@ export const mockQuestions: Question[] = [
 //             "Web applications do not require a browser to run"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 304,
@@ -5187,7 +5241,8 @@ export const mockQuestions: Question[] = [
 //             "Building UI components without JSX syntax"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 305,
@@ -5199,7 +5254,8 @@ export const mockQuestions: Question[] = [
 //             "To replace CSS with JavaScript styling solutions"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 306,
@@ -5211,7 +5267,8 @@ export const mockQuestions: Question[] = [
 //             "Applications run offline, pages need internet"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 307,
@@ -5223,7 +5280,8 @@ export const mockQuestions: Question[] = [
 //             "React works only for pages without a server"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 308,
@@ -5235,7 +5293,8 @@ export const mockQuestions: Question[] = [
 //             "UI automatically reflects the current state of data"
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 309,
@@ -5247,7 +5306,8 @@ export const mockQuestions: Question[] = [
 //             "By refreshing the entire page after each data change"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 310,
@@ -5259,7 +5319,8 @@ export const mockQuestions: Question[] = [
 //             "It caches old data without updating the interface"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 311,
@@ -5271,7 +5332,8 @@ export const mockQuestions: Question[] = [
 //             "Convert JavaScript code into machine instructions"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 312,
@@ -5283,7 +5345,8 @@ export const mockQuestions: Question[] = [
 //             "Provided cross-browser support for common DOM tasks"
 //         ],
 //         "correctOption":3,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 313,
@@ -5295,7 +5358,8 @@ export const mockQuestions: Question[] = [
 //             "server-side runtime environment for executing JavaScript outside the browser"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 314,
@@ -5307,7 +5371,8 @@ export const mockQuestions: Question[] = [
 //             "You use server-side rendering for HTML"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 315,
@@ -5319,7 +5384,8 @@ export const mockQuestions: Question[] = [
 //             "You let frameworks handle all DOM updates"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 316,
@@ -5331,7 +5397,8 @@ export const mockQuestions: Question[] = [
 //             "They define how state changes for specific actions",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         id: 317,
@@ -5399,7 +5466,8 @@ export const mockQuestions: Question[] = [
 //             "Makes applications independent of REST APIs"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 322,
@@ -5411,7 +5479,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically generates UI components for display"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 323,
@@ -5423,7 +5492,8 @@ export const mockQuestions: Question[] = [
 //             "Cached data replaces the need for useEffect entirely"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 324,
@@ -5435,7 +5505,8 @@ export const mockQuestions: Question[] = [
 //             "converts API responses into static HTML during build time"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 325,
@@ -5447,7 +5518,8 @@ export const mockQuestions: Question[] = [
 //             "How long data remains fresh before refetching",
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 326,
@@ -5460,7 +5532,8 @@ export const mockQuestions: Question[] = [
 //             "staleTime only applies to mutations, cacheTime only applies to queries"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 327,
@@ -5472,7 +5545,8 @@ export const mockQuestions: Question[] = [
 //             "To automatically generate new API endpoints"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 328,
@@ -5484,7 +5558,8 @@ export const mockQuestions: Question[] = [
 //             "Only the error object if the request fails"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 329,
@@ -5496,7 +5571,8 @@ export const mockQuestions: Question[] = [
 //             "isError boolean indicating failure state"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 330,
@@ -5508,7 +5584,8 @@ export const mockQuestions: Question[] = [
 //             "replacing the need for client-side state management libraries entirely"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 331,
@@ -5520,7 +5597,8 @@ export const mockQuestions: Question[] = [
 //             "Handling client-side routing and navigation"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 332,
@@ -5532,7 +5610,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically generates frontend components for display"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 333,
@@ -5544,7 +5623,8 @@ export const mockQuestions: Question[] = [
 //             " only supports static site generation"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 334,
@@ -5556,7 +5636,8 @@ export const mockQuestions: Question[] = [
 //             "Both modes function identically in all aspects"
 //         ],
 //         "correctOption":2,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 335,
@@ -5568,7 +5649,8 @@ export const mockQuestions: Question[] = [
 //             "By blocking UI updates until calls finish"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 336,
@@ -5580,7 +5662,8 @@ export const mockQuestions: Question[] = [
 //             "Long polling on every state change",
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 337,
@@ -5592,7 +5675,8 @@ export const mockQuestions: Question[] = [
 //             "Mirrors the server database directly inside the client’s memory"
 //         ],
 //         "correctOption":2,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 338,
@@ -5604,7 +5688,8 @@ export const mockQuestions: Question[] = [
 //             "Blocking UI until all data is fetched"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 339,
@@ -5616,7 +5701,8 @@ export const mockQuestions: Question[] = [
 //             "Because it disables caching for the fetched data"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 340,
@@ -5628,7 +5714,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetching prevents the component from ever re-rendering"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 341,
@@ -5640,7 +5727,8 @@ export const mockQuestions: Question[] = [
 //             "Events prevent all other handlers from executing"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 342,
@@ -5652,7 +5740,8 @@ export const mockQuestions: Question[] = [
 //             "Events prevent propagation to child elements"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 343,
@@ -5664,7 +5753,8 @@ export const mockQuestions: Question[] = [
 //             "Target phase, capturing phase, bubbling phase"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 344,
@@ -5676,7 +5766,8 @@ export const mockQuestions: Question[] = [
 //             "element.addEventListener('click', handler, {capture: false})"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 345,
@@ -5688,7 +5779,8 @@ export const mockQuestions: Question[] = [
 //             "Triggers event on all parent elements"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 346,
@@ -5700,7 +5792,8 @@ export const mockQuestions: Question[] = [
 //             "When you want to remove event listeners automatically"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 347,
@@ -5712,7 +5805,8 @@ export const mockQuestions: Question[] = [
 //             "Event executes on all elements simultaneously"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 348,
@@ -5724,7 +5818,8 @@ export const mockQuestions: Question[] = [
 //             "Creates separate event phases for each element"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 349,
@@ -5736,7 +5831,8 @@ export const mockQuestions: Question[] = [
 //             "The element that registered the event listener"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 350,
@@ -5748,7 +5844,8 @@ export const mockQuestions: Question[] = [
 //             "The element that will handle event next"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 351,
@@ -5760,7 +5857,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically removes listeners when elements disappear"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 352,
@@ -5772,7 +5870,8 @@ export const mockQuestions: Question[] = [
 //             "Event stops propagation automatically after execution"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 353,
@@ -5784,7 +5883,8 @@ export const mockQuestions: Question[] = [
 //             "Use event.stopPropagation() to test behavior"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 354,
@@ -5796,7 +5896,8 @@ export const mockQuestions: Question[] = [
 //             "Listeners execute in reverse registration order"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 356,
@@ -5808,7 +5909,8 @@ export const mockQuestions: Question[] = [
 //             "Component re-renders after short delay period"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 357,
@@ -5820,7 +5922,8 @@ export const mockQuestions: Question[] = [
 //             "Access element through ref.element property"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 358,
@@ -5832,7 +5935,8 @@ export const mockQuestions: Question[] = [
 //             "Anytime within component function body"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 359,
@@ -5844,7 +5948,8 @@ export const mockQuestions: Question[] = [
 //             "Promise that resolves to reference value"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 360,
@@ -5856,7 +5961,8 @@ export const mockQuestions: Question[] = [
 //             "useRef is asynchronous, while useState is synchronous"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 1377,
@@ -5868,7 +5974,8 @@ export const mockQuestions: Question[] = [
 //             "useRef is deprecated, use createRef"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 1378,
@@ -5880,7 +5987,8 @@ export const mockQuestions: Question[] = [
 //             "Only in Class Components"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 1379,
@@ -5892,7 +6000,8 @@ export const mockQuestions: Question[] = [
 //             "To replace useEffect with imperative code"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 1380,
@@ -5904,7 +6013,8 @@ export const mockQuestions: Question[] = [
 //             "Only for DOM manipulation"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 1381,
@@ -5916,7 +6026,8 @@ export const mockQuestions: Question[] = [
 //             "Intervals don't work with React"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 1382,
@@ -5928,7 +6039,8 @@ export const mockQuestions: Question[] = [
 //             "Ref updates are ignored during render"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 1383,
@@ -5940,7 +6052,8 @@ export const mockQuestions: Question[] = [
 //             "Only for reading, not writing"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 1384,
@@ -5952,7 +6065,8 @@ export const mockQuestions: Question[] = [
 //             "Use global event emitters"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 361,
@@ -5964,7 +6078,8 @@ export const mockQuestions: Question[] = [
 //             "Replacing setTimeout with a synchronous execution"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 362,
@@ -5976,7 +6091,8 @@ export const mockQuestions: Question[] = [
 //             "Because useRef has built-in comparison helpers for values"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 363,
@@ -5988,7 +6104,8 @@ export const mockQuestions: Question[] = [
 //             "The ref is passed to the parent component automatically"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 364,
@@ -6000,7 +6117,8 @@ export const mockQuestions: Question[] = [
 //             "No, refs only work in the component where they are declared"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 365,
@@ -6012,7 +6130,8 @@ export const mockQuestions: Question[] = [
 //             "To clear a ref when a component unmounts"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 366,
@@ -6024,7 +6143,8 @@ export const mockQuestions: Question[] = [
 //             "When you want to reset a value every time the component renders"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 367,
@@ -6036,7 +6156,8 @@ export const mockQuestions: Question[] = [
 //             "Only values that implement a special React interface"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 368,
@@ -6048,7 +6169,8 @@ export const mockQuestions: Question[] = [
 //             "By setting a 'focus' property with inputRef.setValue()"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 369,
@@ -6060,7 +6182,8 @@ export const mockQuestions: Question[] = [
 //             "Refs only store objects, while state only stores primitive values"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 370,
@@ -6072,7 +6195,8 @@ export const mockQuestions: Question[] = [
 //             "No, attaching both phases causes runtime errors"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 371,
@@ -6084,7 +6208,8 @@ export const mockQuestions: Question[] = [
 //             "To automatically generate CSS styles"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 372,
@@ -6096,7 +6221,8 @@ export const mockQuestions: Question[] = [
 //             "useState for updating local state"
 //         ],
 //         "correctOption": 1,
-//     "points": 10
+//     "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 373,
@@ -6108,7 +6234,8 @@ export const mockQuestions: Question[] = [
 //             "To permanently disable caching mechanisms"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 374,
@@ -6120,7 +6247,8 @@ export const mockQuestions: Question[] = [
 //             "Queuing mutations until the network is available"
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 375,
@@ -6132,7 +6260,8 @@ export const mockQuestions: Question[] = [
 //             "By converting asynchronous API calls into synchronous ones"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation": ""
 //     },
 //     {
 //         "id": 376,
