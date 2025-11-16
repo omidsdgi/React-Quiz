@@ -5506,139 +5506,179 @@ export const mockQuestions: Question[] = [
             "- error handling بهتر\n" +
             "- nested routes ساده‌تر"
     },
-//     {
-//         id: 319,
-//         question:"How do Navigate and useNavigate differ?",
-//         "options": [
-//             "Navigate works with objects, useNavigate with JSX",
-//             "Navigate is declarative, useNavigate is imperative",
-//             "They provide identical functionality and behavior",
-//             "Neither component is used for navigation"
-//         ],
-//         correctOption: 1,
-//         points: 20,,
-// "explanation":""
+    {
+        id: 341,
+        question:"How do Navigate and useNavigate differ?",
+        "options": [
+            "Navigate works with objects, useNavigate with JSX",
+            "Navigate is declarative, useNavigate is imperative",
+            "They provide identical functionality and behavior",
+            "Neither component is used for navigation"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":"• Navigate component declarative است\n" +
+            "- در JSX استفاده می‌شود: <Navigate to='/home' />\n" +
+            "- useNavigate hook imperative است\n" +
+            "- در event handlers: navigate('/home')\n" +
+            "- هر کدام use case خاص دارند"
 
-//     },
-//     {
-//         id: 320,
-//         question: "For layouts with fixed header/footer, which feature helps?",
-//         "options": [
-//             "Dynamic routes for different content sections",
-//             "Nested routes for hierarchical layout structure",
-//             "Protected routes for user authentication",
-//             "Route guards for access control management"
-//         ],
-//         correctOption: 1,
-//         points: 20,,
-// "explanation":""
+    },
+    {
+        id: 342,
+        question: "For layouts with fixed header/footer, which feature helps?",
+        "options": [
+            "Dynamic routes for different content sections",
+            "Nested routes for hierarchical layout structure",
+            "Protected routes for user authentication",
+            "Route guards for access control management"
+        ],
+        correctOption: 1,
+        points: 20,
+        "explanation":"• nested routes برای layouts مشترک\n" +
+            "- parent route با Outlet\n" +
+            "- header/footer در parent\n" +
+            "- children در Outlet render می‌شوند\n" +
+            "- DRY principle"
 
-//     },
-//     {
-//         "id": 321,
-//         "question":"What advantage does React Query provide in large apps?",
-//         "options": [
-//             "Server state caching and synchronization across components",
-//             "Prevents re-rendering by removing dependency arrays",
-//             "Compiles React code into server-side JavaScript",
-//             "Makes applications independent of REST APIs"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 322,
-//         "question":  "Why is caching valuable in React Query?",
-//         "options": [
-//             "Prevents storing any data in memory",
-//             "Allows data reuse without repeated server requests",
-//             "Replaces need for hooks like useState",
-//             "Automatically generates UI components for display"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 323,
-//         "question":"How does caching improve performance over plain fetch?",
-//         "options": [
-//             "Cached data enables faster UI updates and reduces unnecessary network requests",
-//             "Caching removes the need for APIs in web applications",
-//             "Caching only stores styles for components, not data",
-//             "Cached data replaces the need for useEffect entirely"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 324,
-//         "question":  "How does React Query caching enhance user experience?",
-//         "options": [
-//             "forces the UI to reload from scratch whenever new data is fetched",
-//             "completely prevents re-renders in all React components",
-//             "Keeps data instantly available while ensuring freshness",
-//             "converts API responses into static HTML during build time"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 325,
-//         "question":  "What does staleTime control in React Query?",
-//         "options": [
-//             "How long inactive queries stay in memory",
-//             "How often React Query clears localStorage",
-//             "How many components can subscribe to queries",
-//             "How long data remains fresh before refetching",
-//         ],
-//         "correctOption": 3,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 326,
-//         "question": "What is the difference between 'staleTime' and 'cacheTime' in React Query?",
-//         "options": [
-//             "staleTime controls freshness, cacheTime controls memory duration",
-//             "staleTime controls data freshness, while cacheTime controls cache duration",
-//             "staleTime deletes data permanently, cacheTime saves it forever",
-//             "staleTime is for server updates, cacheTime is for local state updates",
-//             "staleTime only applies to mutations, cacheTime only applies to queries"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 327,
-//         "question": "When would you increase staleTime for queries?",
-//         "options": [
-//             "To reduce unnecessary refetches for stable data",
-//             "To force React Query to clear queries instantly",
-//             "To remove queries from cache when unmounting",
-//             "To automatically generate new API endpoints"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 328,
-//         "question": "What does useQuery hook return to components?",
-//         "options": [
-//             "Only the fetched data from server",
-//             "A function that must be manually called to fetch data",
-//             "Query state object with data, loading, error",
-//             "Only the error object if the request fails"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//          "explanation": ""
-//     },
+    },
+    {
+        "id": 343,
+        "question":"What advantage does React Query provide in large apps?",
+        "options": [
+            "Server state caching and synchronization across components",
+            "Prevents re-rendering by removing dependency arrays",
+            "Compiles React code into server-side JavaScript",
+            "Makes applications independent of REST APIs"
+        ],
+        "correctOption": 0,
+        "points": 30,
+         "explanation": "• server state caching در سراسر app\n" +
+             "- automatic background refetching\n" +
+             "- data بین components share می‌شود\n" +
+             "- loading و error states unified\n" +
+             "- کاهش boilerplate code"
+    },
+    {
+        "id": 344,
+        "question":  "Why is caching valuable in React Query?",
+        "options": [
+            "Prevents storing any data in memory",
+            "Allows data reuse without repeated server requests",
+            "Replaces need for hooks like useState",
+            "Automatically generates UI components for display"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation": "• data reuse بدون API calls مجدد\n" +
+             "- سرعت بالاتر و UX بهتر\n" +
+             "- کاهش server load\n" +
+             "- کاهش bandwidth usage\n" +
+             "- instant navigation بین صفحات"
+    },
+    {
+        "id": 345,
+        "question":"How does caching improve performance over plain fetch?",
+        "options": [
+            "Cached data enables faster UI updates and reduces unnecessary network requests",
+            "Caching removes the need for APIs in web applications",
+            "Caching only stores styles for components, not data",
+            "Cached data replaces the need for useEffect entirely"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation": "• cached data فوراً available است\n" +
+             "- no loading spinners برای cached data\n" +
+             "- کمتر network requests\n" +
+             "- background updates برای freshness\n" +
+             "- perceived performance بسیار بهتر"
+    },
+    {
+        "id": 346,
+        "question":  "How does React Query caching enhance user experience?",
+        "options": [
+            "forces the UI to reload from scratch whenever new data is fetched",
+            "completely prevents re-renders in all React components",
+            "Keeps data instantly available while ensuring freshness",
+            "converts API responses into static HTML during build time"
+        ],
+        "correctOption": 2,
+        "points": 30,
+         "explanation": "• instant page loads با cached data\n" +
+             "- در background fresh data می‌آورد\n" +
+             "- stale-while-revalidate strategy\n" +
+             "- no blank screens\n" +
+             "- smooth و responsive UI"
+    },
+    {
+        "id": 347,
+        "question":  "What does staleTime control in React Query?",
+        "options": [
+            "How long inactive queries stay in memory",
+            "How often React Query clears localStorage",
+            "How many components can subscribe to queries",
+            "How long data remains fresh before refetching",
+        ],
+        "correctOption": 3,
+        "points": 10,
+         "explanation": "• staleTime مدت زمان fresh بودن data\n" +
+             "- تا این مدت refetch نمی‌شود\n" +
+             "- staleTime: 60000 یعنی 1 دقیقه fresh\n" +
+             "- پیش‌فرض 0 (بلافاصله stale)\n" +
+             "- برای static data بالا set کنید"
+    },
+    {
+        "id": 348,
+        "question": "What is the difference between 'staleTime' and 'cacheTime' in React Query?",
+        "options": [
+            "staleTime controls freshness, cacheTime controls memory duration",
+            "staleTime controls data freshness, while cacheTime controls cache duration",
+            "staleTime deletes data permanently, cacheTime saves it forever",
+            "staleTime is for server updates, cacheTime is for local state updates",
+            "staleTime only applies to mutations, cacheTime only applies to queries"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation": "• staleTime: مدت fresh بودن data\n" +
+             "- cacheTime: مدت ماندن در memory\n" +
+             "- staleTime برای refetch timing\n" +
+             "- cacheTime برای garbage collection\n" +
+             "- staleTime معمولاً کوتاه‌تر"
+    },
+    {
+        "id": 349,
+        "question": "When would you increase staleTime for queries?",
+        "options": [
+            "To reduce unnecessary refetches for stable data",
+            "To force React Query to clear queries instantly",
+            "To remove queries from cache when unmounting",
+            "To automatically generate new API endpoints"
+        ],
+        "correctOption": 0,
+        "points": 30,
+         "explanation": "• برای data که کم تغییر می‌کند\n" +
+             "- مثل user profile، settings\n" +
+             "- کاهش unnecessary refetches\n" +
+             "- بهبود performance\n" +
+             "- کاهش server load"
+    },
+    {
+        "id": 350,
+        "question": "What does useQuery hook return to components?",
+        "options": [
+            "Only the fetched data from server",
+            "A function that must be manually called to fetch data",
+            "Query state object with data, loading, error",
+            "Only the error object if the request fails"
+        ],
+        "correctOption": 2,
+        "points": 10,
+         "explanation": "• object با data، isLoading، error\n" +
+             "- isSuccess، isFetching، isError\n" +
+             "- refetch function\n" +
+             "- status: 'loading' | 'error' | 'success'\n" +
+             "- همه چیز برای UI state management"
+    },
 //     {
 //         "id": 329,
 //         "question":  "Which property is NOT in useQuery return object?",
