@@ -6019,136 +6019,176 @@ export const mockQuestions: Question[] = [
              "- efficient برای many children\n" +
              "- کمتر memory usage"
     },
-//     {
-//         "id": 349,
-//         "question": "What is event.target in the context of bubbling?",
-//         "options": [
-//             "The element currently handling the event",
-//             "The element where the event originally occurred",
-//             "The topmost parent element in hierarchy",
-//             "The element that registered the event listener"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 350,
-//         "question": "What is event.currentTarget during event propagation?",
-//         "options": [
-//             "The document root element for all events",
-//             "The element where event originally occurred",
-//             "The element currently executing event handler",
-//             "The element that will handle event next"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 351,
-//         "question": "Why is event delegation beneficial for dynamic content?",
-//         "options": [
-//             "Eliminates need for event listeners on elements",
-//             "Handles events for elements added after page load",
-//             "Prevents events from propagating to children",
-//             "Automatically removes listeners when elements disappear"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 352,
-//         "question": "What occurs during the target phase of event propagation?",
-//         "options": [
-//             "Event travels from document to target element",
-//             "Event travels from target element to document",
-//             "Event executes handlers registered on target element",
-//             "Event stops propagation automatically after execution"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 353,
-//         "question": "How can you determine which phase an event is in?",
-//         "options": [
-//             "Check event.phase property for current phase",
-//             "Check event.eventPhase property for current phase",
-//             "Compare event.target with event.currentTarget values",
-//             "Use event.stopPropagation() to test behavior"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 354,
-//         "question": "What happens with multiple listeners on same element?",
-//         "options": [
-//             "Only the first registered listener executes",
-//             "Only the last registered listener executes",
-//             "All listeners execute in registration order",
-//             "Listeners execute in reverse registration order"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 356,
-//         "question": "What happens when you update a ref's current value?",
-//         "options": [
-//             "Component re-renders automatically after update",
-//             "Component re-renders only on next state change",
-//             "Component does not re-render from ref changes",
-//             "Component re-renders after short delay period"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 357,
-//         "question": "How do you access a DOM element using useRef?",
-//         "options": [
-//             "Pass ref object to element's ref prop",
-//             "Call ref.current() method on element",
-//             "Use ref.getValue() to retrieve element",
-//             "Access element through ref.element property"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 358,
-//         "question": "When should you access ref.current in function components?",
-//         "options": [
-//             "During component render phase directly",
-//             "Inside useEffect or event handlers only",
-//             "Only during component initialization phase",
-//             "Anytime within component function body"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 359,
-//         "question": "What value does useRef return initially?",
-//         "options": [
-//             "Object with current property set to initial value",
-//             "Function that returns current reference value",
-//             "Array containing current value and setter function",
-//             "Promise that resolves to reference value"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation": ""
-//     },
+    {
+        "id": 371,
+        "question": "What is event.target in the context of bubbling?",
+        "options": [
+            "The element currently handling the event",
+            "The element where the event originally occurred",
+            "The topmost parent element in hierarchy",
+            "The element that registered the event listener"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation": "• element که event روی آن شروع شد\n" +
+             "- original target\n" +
+             "- در bubbling تغییر نمی‌کند\n" +
+             "- currentTarget متفاوت است\n" +
+             "- برای event delegation"
+    },
+    {
+        "id": 372,
+        "question": "What is event.currentTarget during event propagation?",
+        "options": [
+            "The document root element for all events",
+            "The element where event originally occurred",
+            "The element currently executing event handler",
+            "The element that will handle event next"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• element که handler روی آن است\n" +
+             "- در bubbling تغییر می‌کند\n" +
+             "- همیشه element با listener\n" +
+             "- target ثابت است\n" +
+             "- this نیز currentTarget است"
+    },
+    {
+        "id": 373,
+        "question": "Why is event delegation beneficial for dynamic content?",
+        "options": [
+            "Eliminates need for event listeners on elements",
+            "Handles events for elements added after page load",
+            "Prevents events from propagating to children",
+            "Automatically removes listeners when elements disappear"
+        ],
+        "correctOption": 1,
+        "points": 30,
+         "explanation": "• elements جدید نیازی به listener ندارند\n" +
+             "- parent listener handle می‌کند\n" +
+             "- کار با dynamically added elements\n" +
+             "- کمتر listeners\n" +
+             "- better performance"
+    },
+    {
+        "id": 374,
+        "question": "What occurs during the target phase of event propagation?",
+        "options": [
+            "Event travels from document to target element",
+            "Event travels from target element to document",
+            "Event executes handlers registered on target element",
+            "Event stops propagation automatically after execution"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• handlers روی target element اجرا می‌شوند\n" +
+             "- بعد از capturing\n" +
+             "- قبل از bubbling\n" +
+             "- event.target === event.currentTarget\n" +
+             "- middle phase"
+    },
+    {
+        "id": 375,
+        "question": "How can you determine which phase an event is in?",
+        "options": [
+            "Check event.phase property for current phase",
+            "Check event.eventPhase property for current phase",
+            "Compare event.target with event.currentTarget values",
+            "Use event.stopPropagation() to test behavior"
+        ],
+        "correctOption": 1,
+        "points": 30,
+         "explanation": "• event.eventPhase property\n" +
+             "- 1: CAPTURING_PHASE\n" +
+             "- 2: AT_TARGET\n" +
+             "- 3: BUBBLING_PHASE\n" +
+             "- numeric constants"
+    },
+    {
+        "id": 376,
+        "question": "What happens with multiple listeners on same element?",
+        "options": [
+            "Only the first registered listener executes",
+            "Only the last registered listener executes",
+            "All listeners execute in registration order",
+            "Listeners execute in reverse registration order"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• همه listeners به ترتیب registration اجرا می‌شوند\n" +
+             "- اولین registered، اولین executed\n" +
+             "- مگر stopImmediatePropagation\n" +
+             "- همه در همان phase\n" +
+             "- deterministic order"
+    },
+    {
+        "id": 377,
+        "question": "What happens when you update a ref's current value?",
+        "options": [
+            "Component re-renders automatically after update",
+            "Component re-renders only on next state change",
+            "Component does not re-render from ref changes",
+            "Component re-renders after short delay period"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• ref تغییر می‌کند اما re-render نمی‌شود\n" +
+             "- mutable value\n" +
+             "- state نیست\n" +
+             "- برای values که UI affect نمی‌کنند\n" +
+             "- synchronous update"
+    },
+    {
+        "id": 378,
+        "question": "How do you access a DOM element using useRef?",
+        "options": [
+            "Pass ref object to element's ref prop",
+            "Call ref.current() method on element",
+            "Use ref.getValue() to retrieve element",
+            "Access element through ref.element property"
+        ],
+        "correctOption": 0,
+        "points": 10,
+         "explanation": "• ref object را به ref prop pass کنید\n" +
+             "- <input ref={inputRef} />\n" +
+             "- بعد از mount: inputRef.current\n" +
+             "- DOM element در current\n" +
+             "- null قبل از mount"
+    },
+    {
+        "id": 379,
+        "question": "When should you access ref.current in function components?",
+        "options": [
+            "During component render phase directly",
+            "Inside useEffect or event handlers only",
+            "Only during component initialization phase",
+            "Anytime within component function body"
+        ],
+        "correctOption": 1,
+        "points": 30,
+         "explanation": "• فقط در useEffect یا event handlers\n" +
+             "- نه در render body\n" +
+             "- render phase باید pure باشد\n" +
+             "- بعد از mount قابل دسترس\n" +
+             "- side effect محسوب می‌شود"
+    },
+    {
+        "id": 380,
+        "question": "What value does useRef return initially?",
+        "options": [
+            "Object with current property set to initial value",
+            "Function that returns current reference value",
+            "Array containing current value and setter function",
+            "Promise that resolves to reference value"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation": "• object با property به نام current\n" +
+             "- { current: initialValue }\n" +
+             "- current mutable است\n" +
+             "- همان object در renders\n" +
+             "- stable reference"
+    },
 //     {
 //         "id": 360,
 //         "question":  "How does useRef differ from useState when storing values across renders?",
