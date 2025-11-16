@@ -5849,136 +5849,176 @@ export const mockQuestions: Question[] = [
              "- instant navigation\n" +
              "- predictive data loading"
     },
-//     {
-//         "id": 339,
-//         "question": "Why is prefetching useful in React Query?",
-//         "options": [
-//             "Because it reduces perceived loading time and makes the UI more responsive",
-//             "Because it automatically writes data to localStorage",
-//             "Because it removes the need for a backend API",
-//             "Because it disables caching for the fetched data"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 340,
-//         "question": "Which statement correctly describes how prefetching works in React Query?",
-//         "options": [
-//             "Prefetching loads and caches the data in advance, so when a component uses useQuery with the same key, the data is immediately available",
-//             "Prefetching disables caching and forces a refetch every time the component mounts",
-//             "Prefetching automatically converts data into static HTML",
-//             "Prefetching prevents the component from ever re-rendering"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 341,
-//         "question": "What is event bubbling in the DOM?",
-//         "options": [
-//             "Events travel from target element up to document root",
-//             "Events travel from document root down to target element",
-//             "Events execute only on the clicked element",
-//             "Events prevent all other handlers from executing"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 342,
-//         "question": "What is event capturing in the DOM?",
-//         "options": [
-//             "Events execute only on parent elements",
-//             "Events travel from document root down to target element",
-//             "Events travel from target element up to ancestors",
-//             "Events prevent propagation to child elements"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 343,
-//         "question": "In which order do event phases occur?",
-//         "options": [
-//             "Target phase, bubbling phase, capturing phase",
-//             "Bubbling phase, target phase, capturing phase",
-//             "Capturing phase, target phase, bubbling phase",
-//             "Target phase, capturing phase, bubbling phase"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 344,
-//         "question": "How do you register an event listener for capturing phase?",
-//         "options": [
-//             "element.addEventListener('click', handler, true)",
-//             "element.addEventListener('click', handler, false)",
-//             "element.addEventListener('click', handler, {bubble: false})",
-//             "element.addEventListener('click', handler, {capture: false})"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 345,
-//         "question": "What does event.stopPropagation() accomplish?",
-//         "options": [
-//             "Prevents default browser behavior for events",
-//             "Removes all event listeners from element",
-//             "Prevents event from continuing through phases",
-//             "Triggers event on all parent elements"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 346,
-//         "question": "When would you use event capturing over bubbling?",
-//         "options": [
-//             "When you need to handle events before children",
-//             "When you want events to execute on target only",
-//             "When you need to prevent all event propagation",
-//             "When you want to remove event listeners automatically"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 347,
-//         "question": "What happens if you call stopPropagation() during capturing?",
-//         "options": [
-//             "Event continues to target and bubbling phases",
-//             "Event stops and skips target and bubbling phases",
-//             "Event jumps directly to bubbling phase",
-//             "Event executes on all elements simultaneously"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 348,
-//         "question": "How does event delegation utilize event bubbling?",
-//         "options": [
-//             "Attaches listeners to each individual child element",
-//             "Prevents events from reaching parent elements",
-//             "Uses parent listener to handle child events",
-//             "Creates separate event phases for each element"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation": ""
-//     },
+    {
+        "id": 361,
+        "question": "Why is prefetching useful in React Query?",
+        "options": [
+            "Because it reduces perceived loading time and makes the UI more responsive",
+            "Because it automatically writes data to localStorage",
+            "Because it removes the need for a backend API",
+            "Because it disables caching for the fetched data"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation": "• کاهش perceived loading time\n" +
+             "- instant page transitions\n" +
+             "- بهتر UX\n" +
+             "- data از قبل آماده\n" +
+             "- مثل native apps"
+    },
+    {
+        "id": 362,
+        "question": "Which statement correctly describes how prefetching works in React Query?",
+        "options": [
+            "Prefetching loads and caches the data in advance, so when a component uses useQuery with the same key, the data is immediately available",
+            "Prefetching disables caching and forces a refetch every time the component mounts",
+            "Prefetching automatically converts data into static HTML",
+            "Prefetching prevents the component from ever re-rendering"
+        ],
+        "correctOption": 0,
+        "points": 30,
+         "explanation": "• prefetch data را در cache می‌گذارد\n" +
+             "- useQuery با همان key فوراً data دارد\n" +
+             "- no loading state\n" +
+             "- background refetch اگر stale\n" +
+             "- seamless experience"
+    },
+    {
+        "id": 363,
+        "question": "What is event bubbling in the DOM?",
+        "options": [
+            "Events travel from target element up to document root",
+            "Events travel from document root down to target element",
+            "Events execute only on the clicked element",
+            "Events prevent all other handlers from executing"
+        ],
+        "correctOption": 0,
+        "points": 10,
+         "explanation": "• events از child به parent travel می‌کنند\n" +
+             "- از target element به document\n" +
+             "- به ترتیب ancestors\n" +
+             "- default behavior در DOM\n" +
+             "- می‌توان با stopPropagation جلوگیری کرد"
+    },
+    {
+        "id": 364,
+        "question": "What is event capturing in the DOM?",
+        "options": [
+            "Events execute only on parent elements",
+            "Events travel from document root down to target element",
+            "Events travel from target element up to ancestors",
+            "Events prevent propagation to child elements"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation": "• events از parent به child travel می‌کنند\n" +
+             "- از document به target element\n" +
+             "- قبل از bubbling\n" +
+             "- addEventListener(event, handler, true)\n" +
+             "- کمتر استفاده می‌شود"
+    },
+    {
+        "id": 365,
+        "question": "In which order do event phases occur?",
+        "options": [
+            "Target phase, bubbling phase, capturing phase",
+            "Bubbling phase, target phase, capturing phase",
+            "Capturing phase, target phase, bubbling phase",
+            "Target phase, capturing phase, bubbling phase"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• 1. Capturing: document → target\n" +
+             "- 2. Target: روی element خود\n" +
+             "- 3. Bubbling: target → document\n" +
+             "- capturing → target → bubbling\n" +
+             "- همیشه این ترتیب"
+    },
+    {
+        "id": 366,
+        "question": "How do you register an event listener for capturing phase?",
+        "options": [
+            "element.addEventListener('click', handler, true)",
+            "element.addEventListener('click', handler, false)",
+            "element.addEventListener('click', handler, {bubble: false})",
+            "element.addEventListener('click', handler, {capture: false})"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation": "• addEventListener با third argument: true\n" +
+             "- element.addEventListener('click', handler, true)\n" +
+             "- یا { capture: true }\n" +
+             "- false یا omit برای bubbling\n" +
+             "- پیش‌فرض bubbling است"
+    },
+    {
+        "id": 367,
+        "question": "What does event.stopPropagation() accomplish?",
+        "options": [
+            "Prevents default browser behavior for events",
+            "Removes all event listeners from element",
+            "Prevents event from continuing through phases",
+            "Triggers event on all parent elements"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• جلوگیری از continue کردن event\n" +
+             "- در bubbling یا capturing\n" +
+             "- parent handlers اجرا نمی‌شوند\n" +
+             "- فقط current element\n" +
+             "- preventDefault متفاوت است"
+    },
+    {
+        "id": 368,
+        "question": "When would you use event capturing over bubbling?",
+        "options": [
+            "When you need to handle events before children",
+            "When you want events to execute on target only",
+            "When you need to prevent all event propagation",
+            "When you want to remove event listeners automatically"
+        ],
+        "correctOption": 0,
+        "points": 30,
+         "explanation": "• وقتی می‌خواهید parent زودتر handle کند\n" +
+             "- قبل از child elements\n" +
+             "- برای global handlers\n" +
+             "- event delegation خاص\n" +
+             "- کمتر common است"
+    },
+    {
+        "id": 369,
+        "question": "What happens if you call stopPropagation() during capturing?",
+        "options": [
+            "Event continues to target and bubbling phases",
+            "Event stops and skips target and bubbling phases",
+            "Event jumps directly to bubbling phase",
+            "Event executes on all elements simultaneously"
+        ],
+        "correctOption": 1,
+        "points": 30,
+         "explanation": "• event متوقف می‌شود\n" +
+             "- به target نمی‌رسد\n" +
+             "- bubbling هم اتفاق نمی‌افتد\n" +
+             "- فقط handlers تا آن نقطه اجرا شده‌اند\n" +
+             "- complete stop"
+    },
+    {
+        "id": 370,
+        "question": "How does event delegation utilize event bubbling?",
+        "options": [
+            "Attaches listeners to each individual child element",
+            "Prevents events from reaching parent elements",
+            "Uses parent listener to handle child events",
+            "Creates separate event phases for each element"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• یک listener روی parent\n" +
+             "- children events به parent bubble می‌کنند\n" +
+             "- event.target برای تشخیص child\n" +
+             "- efficient برای many children\n" +
+             "- کمتر memory usage"
+    },
 //     {
 //         "id": 349,
 //         "question": "What is event.target in the context of bubbling?",
