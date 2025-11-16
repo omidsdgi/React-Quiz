@@ -5679,136 +5679,176 @@ export const mockQuestions: Question[] = [
              "- status: 'loading' | 'error' | 'success'\n" +
              "- همه چیز برای UI state management"
     },
-//     {
-//         "id": 329,
-//         "question":  "Which property is NOT in useQuery return object?",
-//         "options": [
-//             "data property containing fetched information",
-//             "isLoading boolean indicating fetch status",
-//             "mutate function for triggering updates",
-//             "isError boolean indicating failure state"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 330,
-//         "question":"How does useQuery output improve UI responsiveness?",
-//         "options": [
-//             "Exposes states like isLoading and isFetching for instant UI reactions",
-//             "automatically converting all data into static HTML at build time",
-//             "prevents components from re-rendering after data changes",
-//             "replacing the need for client-side state management libraries entirely"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 331,
-//         "question": "What is Strapi's primary function?",
-//         "options": [
-//             "Building frontend UI component libraries",
-//             "Managing content and exposing APIs as CMS",
-//             "Optimizing bundle size in React applications",
-//             "Handling client-side routing and navigation"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 332,
-//         "question": "Which feature distinguishes Strapi from traditional CMS?",
-//         "options": [
-//             "Provides automatic API generation with REST/GraphQL",
-//             "Replaces React state management libraries completely",
-//             "Works exclusively with serverless databases",
-//             "Automatically generates frontend components for display"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 333,
-//         "question":  "Why choose Strapi over WordPress for modern development?",
-//         "options": [
-//             "Allows complete backend control while staying frontend-agnostic",
-//             "comes with a pre-built frontend theme system",
-//             "requires no authentication for any API requests",
-//             " only supports static site generation"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 334,
-//         "question": "What differs between Strapi development and production modes?",
-//         "options": [
-//             "Development provides better security than production",
-//             "Production allows hot-reloading like development mode",
-//             "Development for local testing, production for live servers",
-//             "Both modes function identically in all aspects"
-//         ],
-//         "correctOption":2,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 335,
-//         "question": "How does React Query maintain server synchronization?",
-//         "options": [
-//             "By automatically refetching stale data in background",
-//             "By manually refreshing page on every request",
-//             "By storing data permanently in localStorage",
-//             "By blocking UI updates until calls finish"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 336,
-//         "question":  "What mechanism keeps React Query cache fresh?",
-//         "options": [
-//             "Server-side rendering exclusively for updates",
-//             "Stale-while-revalidate strategy for background updates",
-//             "Manual refetching triggered by button clicks",
-//             "Long polling on every state change",
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 337,
-//         "question":"Why is React Query efficient for server synchronization?",
-//         "options": [
-//             "Bypasses the cache and forces a fresh API call",
-//             "Because it synchronizes data only once when the app starts",
-//             "Combines cache, refetch, and dependency updates efficiently",
-//             "Mirrors the server database directly inside the client’s memory"
-//         ],
-//         "correctOption":2,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 338,
-//         "question": "What does 'prefetching' data in React Query mean?",
-//         "options": [
-//             "Fetching data in advance before the component needs it",
-//             "Fetching data only after the component renders",
-//             "Deleting old cached data",
-//             "Blocking UI until all data is fetched"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//          "explanation": ""
-//     },
+    {
+        "id": 351,
+        "question":  "Which property is NOT in useQuery return object?",
+        "options": [
+            "data property containing fetched information",
+            "isLoading boolean indicating fetch status",
+            "mutate function for triggering updates",
+            "isError boolean indicating failure state"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation": "• mutate برای useMutation است نه useQuery\n" +
+             "- useQuery فقط برای reading\n" +
+             "- useMutation برای creating/updating/deleting\n" +
+             "- data، isLoading، error در useQuery\n" +
+             "- mutate، mutateAsync در useMutation"
+    },
+    {
+        "id": 352,
+        "question":"How does useQuery output improve UI responsiveness?",
+        "options": [
+            "Exposes states like isLoading and isFetching for instant UI reactions",
+            "automatically converting all data into static HTML at build time",
+            "prevents components from re-rendering after data changes",
+            "replacing the need for client-side state management libraries entirely"
+        ],
+        "correctOption": 0,
+        "points": 30,
+         "explanation": "• isLoading برای showing spinners\n" +
+             "- isError برای error messages\n" +
+             "- isFetching برای background updates\n" +
+             "- instant feedback به user\n" +
+             "- professional UX"
+    },
+    {
+        "id": 353,
+        "question": "What is Strapi's primary function?",
+        "options": [
+            "Building frontend UI component libraries",
+            "Managing content and exposing APIs as CMS",
+            "Optimizing bundle size in React applications",
+            "Handling client-side routing and navigation"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation": "• Strapi headless CMS است\n" +
+             "- content management با admin panel\n" +
+             "- auto-generate REST/GraphQL APIs\n" +
+             "- backend بدون coding زیاد\n" +
+             "- برای content-heavy apps"
+    },
+    {
+        "id": 354,
+        "question": "Which feature distinguishes Strapi from traditional CMS?",
+        "options": [
+            "Provides automatic API generation with REST/GraphQL",
+            "Replaces React state management libraries completely",
+            "Works exclusively with serverless databases",
+            "Automatically generates frontend components for display"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation": "• headless: frontend-agnostic\n" +
+             "- API-first approach\n" +
+             "- customizable با code\n" +
+             "- modern tech stack (Node.js)\n" +
+             "- WordPress monolithic است"
+    },
+    {
+        "id": 355,
+        "question":  "Why choose Strapi over WordPress for modern development?",
+        "options": [
+            "Allows complete backend control while staying frontend-agnostic",
+            "comes with a pre-built frontend theme system",
+            "requires no authentication for any API requests",
+            " only supports static site generation"
+        ],
+        "correctOption": 0,
+        "points": 30,
+         "explanation": "• API-first برای any frontend\n" +
+             "- JavaScript/TypeScript stack\n" +
+             "- customization بیشتر\n" +
+             "- modern architecture\n" +
+             "- WordPress PHP-based و legacy"
+    },
+    {
+        "id": 356,
+        "question": "What differs between Strapi development and production modes?",
+        "options": [
+            "Development provides better security than production",
+            "Production allows hot-reloading like development mode",
+            "Development for local testing, production for live servers",
+            "Both modes function identically in all aspects"
+        ],
+        "correctOption":2,
+        "points": 10,
+         "explanation": "• development: admin panel enabled\n" +
+             "- hot-reloading و debugging\n" +
+             "- production: optimized و secure\n" +
+             "- admin panel معمولاً disabled\n" +
+             "- environment variables متفاوت"
+    },
+    {
+        "id": 357,
+        "question": "How does React Query maintain server synchronization?",
+        "options": [
+            "By automatically refetching stale data in background",
+            "By manually refreshing page on every request",
+            "By storing data permanently in localStorage",
+            "By blocking UI updates until calls finish"
+        ],
+        "correctOption": 0,
+        "points": 10,
+         "explanation": "• automatic background refetching\n" +
+             "- refetchOnWindowFocus: true\n" +
+             "- refetchOnReconnect\n" +
+             "- stale-while-revalidate\n" +
+             "- data همیشه تا حد ممکن fresh"
+    },
+    {
+        "id": 358,
+        "question":  "What mechanism keeps React Query cache fresh?",
+        "options": [
+            "Server-side rendering exclusively for updates",
+            "Stale-while-revalidate strategy for background updates",
+            "Manual refetching triggered by button clicks",
+            "Long polling on every state change",
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation": "• stale-while-revalidate strategy\n" +
+             "- cached data سریع نشان می‌دهد\n" +
+             "- در background refetch می‌کند\n" +
+             "- UI با fresh data update می‌شود\n" +
+             "- best of both worlds"
+    },
+    {
+        "id": 359,
+        "question":"Why is React Query efficient for server synchronization?",
+        "options": [
+            "Bypasses the cache and forces a fresh API call",
+            "Because it synchronizes data only once when the app starts",
+            "Combines cache, refetch, and dependency updates efficiently",
+            "Mirrors the server database directly inside the client’s memory"
+        ],
+        "correctOption":2,
+        "points": 30,
+         "explanation": "• caching کاهش network requests\n" +
+             "- background updates بدون blocking UI\n" +
+             "- smart refetch strategies\n" +
+             "- deduplication از duplicate requests\n" +
+             "- ترکیب performance و freshness"
+    },
+    {
+        "id": 360,
+        "question": "What does 'prefetching' data in React Query mean?",
+        "options": [
+            "Fetching data in advance before the component needs it",
+            "Fetching data only after the component renders",
+            "Deleting old cached data",
+            "Blocking UI until all data is fetched"
+        ],
+        "correctOption": 0,
+        "points": 10,
+         "explanation": "• loading data قبل از نیاز واقعی\n" +
+             "- در background و silent\n" +
+             "- data در cache ready\n" +
+             "- instant navigation\n" +
+             "- predictive data loading"
+    },
 //     {
 //         "id": 339,
 //         "question": "Why is prefetching useful in React Query?",
