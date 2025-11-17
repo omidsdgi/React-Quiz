@@ -6700,6 +6700,81 @@ export const mockQuestions: Question[] = [
             "- stale-while-revalidate\n" +
             "- primary hook برای GET operations"
     },
+    {
+        "id": 411,
+        "question": "Where should images be stored in a React project to achieve better optimization and performance?",
+        "options": [
+            "In the public folder for faster serving",
+            "In the src folder and imported in components",
+            "Inside a CSS file as base64 strings",
+            "On a remote server without compression"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• تصاویر در فولدر src هنگام build بهینه‌سازی می‌شوند\n" +
+            "• ابزارهایی مانند Webpack یا Vite آن‌ها را فشرده و با نام هش ذخیره می‌کنند\n" +
+            "• این روش موجب بهبود سرعت بارگذاری و مدیریت بهتر کش مرورگر می‌شود"
+    },
+    {
+        "id": 412,
+        "question": "What is the default behavior of images stored inside the public folder in a React project?",
+        "options": [
+            "They are automatically optimized during build",
+            "They are bundled together with JavaScript code",
+            "They are served directly without build-time optimization",
+            "They are converted into WebP format automatically"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• تصاویر در فولدر public بدون فشرده‌سازی و بهینه‌سازی ارائه می‌شوند\n" +
+            "• فایل‌ها مستقیماً از سرور برای مرورگر ارسال می‌شوند\n" +
+            "• مناسب برای فایل‌های عمومی مانند favicon یا robots.txt هستند"
+    },
+    {
+        "id": 413,
+        "question": "Which feature in Next.js provides automatic image optimization, resizing, and lazy loading?",
+        "options": [
+            "React.StrictMode for image validation",
+            "Next.js <Image> component for optimized images",
+            "Webpack DevServer for live reloading",
+            "React.lazy for component-level optimization"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• کامپوننت <Image> در Next.js به‌طور خودکار اندازه‌ی تصاویر را مدیریت می‌کند\n" +
+            "• تصاویر را به فرمت‌های مدرن مانند WebP تبدیل می‌نماید\n" +
+            "• lazy loading را فعال کرده و عملکرد صفحه را بهبود می‌دهد"
+    },
+    {
+        "id": 414,
+        "question": "What is a major disadvantage of storing images inside the public folder?",
+        "options": [
+            "They skip optimization and remain uncompressed",
+            "They cause errors during component rendering",
+            "They are converted to different formats automatically",
+            "They cannot be accessed from environment variables"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• تصاویر در فولدر public در مرحله‌ی build پردازش نمی‌شوند\n" +
+            "• هیچ فشرده‌سازی یا تغییر اندازه‌ای روی آن‌ها انجام نمی‌شود\n" +
+            "• این موضوع می‌تواند باعث افزایش حجم و کاهش سرعت بارگذاری شود"
+    },
+    {
+        "id": 415,
+        "question": "Why is importing images from the src folder considered a better practice in React?",
+        "options": [
+            "Because it allows auto-optimization and cache busting",
+            "Because it avoids the need for static assets",
+            "Because it disables code splitting for images",
+            "Because it removes them from the final build output"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• ایمپورت تصاویر از src باعث وارد شدن آن‌ها به فرایند build می‌شود\n" +
+            "• ابزارهای build آن‌ها را فشرده و نام فایل‌ها را هش می‌کنند\n" +
+            "• نتیجه: عملکرد بهتر، کش مؤثرتر و حجم کمتر فایل‌ها"
+    },
 //     {
 //         "id": 382,
 //         "question": "In React Query, what occurs when multiple useQuery hooks use the same queryKey?",
