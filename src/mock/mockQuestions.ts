@@ -6530,130 +6530,176 @@ export const mockQuestions: Question[] = [
              "- side effects روی server\n" +
              "- opposite از queries (read-only)"
     },
-//     {
-//         "id": 372,
-//         "question": "Which React Query hook is used for modifying server data?",
-//         "options": [
-//             "useQuery for fetching data",
-//             "useMutation for modifying server data",
-//             "useEffect for managing side effects",
-//             "useState for updating local state"
-//         ],
-//         "correctOption": 1,
-//     "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 373,
-//         "question":"Why use mutation callbacks like onSuccess in React Query?",
-//         "options": [
-//             "To update the cache or trigger side effects after a mutation",
-//             "To transform mutations into query operations",
-//             "To block UI updates after data changes",
-//             "To permanently disable caching mechanisms"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 374,
-//         "question": "What does offline support enable in React Query?",
-//         "options": [
-//             "Blocking all server communication permanently",
-//             "Automatically reloading the entire page when offline",
-//             "Turning queries into static file operations",
-//             "Queuing mutations until the network is available"
-//         ],
-//         "correctOption": 3,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 375,
-//         "question": "How does React Query provide a smooth offline experience?",
-//         "options": [
-//             "By disabling all UI components",
-//             "By serving cached data and queuing mutations",
-//             "By blocking queries from executing again",
-//             "By converting asynchronous API calls into synchronous ones"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 376,
-//         "question":"Which combination supports effective offline-first behavior?",
-//         "options": [
-//             "Permanently disabling staleTime and cacheTime",
-//             "Managing server state only with useState",
-//             "Combining caching, background refetching, and mutation queuing",
-//             "Clearing the cache whenever the app reconnects"
-//         ],
-//         "correctOption": 2,
-//         "points": 30
-//     },
-//     {
-//         "id": 377,
-//         "question":  "Why is React Query valuable for managing server state?",
-//         "options": [
-//             "It automates fetching, caching, and synchronization of data",
-//             "It only replaces react's useState and useEffect for local state",
-//             "It automatically generates UI components",
-//             "It completely disables all network requests"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 378,
-//         "question": "Which problems does React Query solve in applications?",
-//         "options": [
-//             "Automatically applying styles to components without CSS",
-//             "Preventing duplicate network requests and keeping server data in sync",
-//             "Eliminating the need for any backend APIs",
-//             "Allowing React apps to work entirely without state management"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 379,
-//         "question": "Why is manual server state management challenging?",
-//         "options": [
-//             "Because React Query is needed to create components",
-//             "Because it blocks component rendering completely",
-//             "Because caching, synchronization, and updates are complex to handle by hand",
-//             "Because it automatically transforms APIs between REST and GraphQL"
-//         ],
-//         "correctOption": 2,
-//         "points": 30
-//     },
-//     {
-//         "id": 380,
-//         "question":"How do useQuery and useMutation differ in purpose?",
-//         "options": [
-//             "useQuery styles components, useMutation handles routing",
-//             "useQuery manages local storage, useMutation controls authentication",
-//             "useQuery updates the DOM, useMutation adds event listeners",
-//             "useQuery fetches data, useMutation modifies data",
-//         ],
-//         "correctOption": 3,
-//         "points": 20
-//     },
-//     {
-//         "id": 381,
-//         "question": "Which React Query hook is mainly responsible for fetching and caching server data?",
-//         "options": [
-//             "useMutation",
-//             "useReducer",
-//             "useQuery",
-//             "useEffect"
-//         ],
-//         "correctOption": 2,
-//         "points": 10
-//     },
+    {
+        "id": 401,
+        "question": "Which React Query hook is used for modifying server data?",
+        "options": [
+            "useQuery for fetching data",
+            "useMutation for modifying server data",
+            "useEffect for managing side effects",
+            "useState for updating local state"
+        ],
+        "correctOption": 1,
+    "points": 10,
+         "explanation": "• useMutation برای CUD operations\n" +
+             "- create، update، delete\n" +
+             "- useQuery فقط برای read\n" +
+             "- mutate function برای trigger\n" +
+             "- callbacks برای side effects"
+    },
+    {
+        "id": 402,
+        "question":"Why use mutation callbacks like onSuccess in React Query?",
+        "options": [
+            "To update the cache or trigger side effects after a mutation",
+            "To transform mutations into query operations",
+            "To block UI updates after data changes",
+            "To permanently disable caching mechanisms"
+        ],
+        "correctOption": 0,
+        "points": 30,
+         "explanation": "• اجرای code بعد از successful mutation\n" +
+             "- invalidate کردن queries\n" +
+             "- showing success messages\n" +
+             "- navigation به صفحه دیگر\n" +
+             "- side effects management"
+    },
+    {
+        "id": 403,
+        "question": "What does offline support enable in React Query?",
+        "options": [
+            "Blocking all server communication permanently",
+            "Automatically reloading the entire page when offline",
+            "Turning queries into static file operations",
+            "Queuing mutations until the network is available"
+        ],
+        "correctOption": 3,
+        "points": 10,
+         "explanation": "• ذخیره mutations در queue وقتی offline\n" +
+             "- وقتی online شد، اجرا می‌شوند\n" +
+             "- seamless user experience\n" +
+             "- automatic retry mechanism\n" +
+             "- persistence بین page refreshes"
+    },
+    {
+        "id": 404,
+        "question": "How does React Query provide a smooth offline experience?",
+        "options": [
+            "By disabling all UI components",
+            "By serving cached data and queuing mutations",
+            "By blocking queries from executing again",
+            "By converting asynchronous API calls into synchronous ones"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation": "• cached data فوراً نشان داده می‌شود\n" +
+             "- mutations در queue ذخیره می‌شوند\n" +
+             "- optimistic updates\n" +
+             "- automatic sync وقتی reconnect\n" +
+             "- user می‌تواند کار کند offline"
+    },
+    {
+        "id": 405,
+        "question":"Which combination supports effective offline-first behavior?",
+        "options": [
+            "Permanently disabling staleTime and cacheTime",
+            "Managing server state only with useState",
+            "Combining caching, background refetching, and mutation queuing",
+            "Clearing the cache whenever the app reconnects"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• caching: instant data access\n" +
+            "- background refetching: freshness\n" +
+            "- mutation queuing: offline operations\n" +
+            "- persistence: survive page refresh\n" +
+            "- ترکیب همه برای best experience"
+    },
+    {
+        "id": 406,
+        "question":  "Why is React Query valuable for managing server state?",
+        "options": [
+            "It automates fetching, caching, and synchronization of data",
+            "It only replaces react's useState and useEffect for local state",
+            "It automatically generates UI components",
+            "It completely disables all network requests"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• automating fetching، caching، synchronization\n" +
+            "- کاهش boilerplate code\n" +
+            "- loading و error states automatic\n" +
+            "- background updates\n" +
+            "- alternative به Redux برای server data"
+    },
+    {
+        "id": 407,
+        "question": "Which problems does React Query solve in applications?",
+        "options": [
+            "Automatically applying styles to components without CSS",
+            "Preventing duplicate network requests and keeping server data in sync",
+            "Eliminating the need for any backend APIs",
+            "Allowing React apps to work entirely without state management"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• جلوگیری از duplicate requests\n" +
+            "- keeping data synchronized\n" +
+            "- caching برای performance\n" +
+            "- background refetching\n" +
+            "- ساده‌سازی async state management"
+    },
+    {
+        "id": 408,
+        "question": "Why is manual server state management challenging?",
+        "options": [
+            "Because React Query is needed to create components",
+            "Because it blocks component rendering completely",
+            "Because caching, synchronization, and updates are complex to handle by hand",
+            "Because it automatically transforms APIs between REST and GraphQL"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• caching پیچیده برای implement\n" +
+            "- synchronization بین components\n" +
+            "- handling loading/error states\n" +
+            "- avoiding duplicate requests\n" +
+            "- React Query این مشکلات را حل می‌کند"
+    },
+    {
+        "id": 409,
+        "question":"How do useQuery and useMutation differ in purpose?",
+        "options": [
+            "useQuery styles components, useMutation handles routing",
+            "useQuery manages local storage, useMutation controls authentication",
+            "useQuery updates the DOM, useMutation adds event listeners",
+            "useQuery fetches data, useMutation modifies data",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• useQuery برای reading/fetching data\n" +
+            "- GET requests\n" +
+            "- useMutation برای modifying data\n" +
+            "- POST، PUT، DELETE requests\n" +
+            "- read vs write operations"
+    },
+    {
+        "id": 410,
+        "question": "Which React Query hook is mainly responsible for fetching and caching server data?",
+        "options": [
+            "useMutation",
+            "useReducer",
+            "useQuery",
+            "useEffect"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• useQuery برای data fetching\n" +
+            "- automatic caching\n" +
+            "- background refetching\n" +
+            "- stale-while-revalidate\n" +
+            "- primary hook برای GET operations"
+    },
 //     {
 //         "id": 382,
 //         "question": "In React Query, what occurs when multiple useQuery hooks use the same queryKey?",
