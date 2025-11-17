@@ -6775,66 +6775,91 @@ export const mockQuestions: Question[] = [
             "• ابزارهای build آن‌ها را فشرده و نام فایل‌ها را هش می‌کنند\n" +
             "• نتیجه: عملکرد بهتر، کش مؤثرتر و حجم کمتر فایل‌ها"
     },
-//     {
-//         "id": 382,
-//         "question": "In React Query, what occurs when multiple useQuery hooks use the same queryKey?",
-//         "options": [
-//             "Each query executes independently without caching",
-//             "React Query shares and reuses the cached data across them",
-//             "It throws an error and crashes the application",
-//             "Only the first query runs while the others are skipped"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 383,
-//         "question": "Which pattern helps prevent unnecessary network requests when using useQuery?",
-//         "options": [
-//             "Use a unique queryKey with caching enabled",
-//             "Disable caching to always fetch fresh data",
-//             "Wrap useQuery inside useEffect on every render",
-//             "Manually trigger refetch on every component mount"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
-//     {
-//         "id": 384,
-//         "question":"Which practice improves efficiency when using useQuery?",
-//         "options": [
-//             "Provide unique queryKeys and leverage caching",
-//             "Turn off caching completely for faster updates",
-//             "Call useQuery only inside a useEffect hook",
-//             "Refetch data manually each time instead of using cache"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
-//     {
-//         "id": 385,
-//         "question":"Which React Query hook is used for creating, updating, or deleting server data?",
-//         "options": [
-//             "useQuery",
-//             "useMutation",
-//             "useReducer",
-//             "useState"
-//         ],
-//         "correctOption": 1,
-//         "points": 10
-//     },
-//     {
-//         "id": 386,
-//         "question":  "After a successful mutation, what is the recommended way to update cached queries?",
-//         "options": [
-//             "Reload the entire page to get fresh data",
-//             "Invalidate or update related query keys",
-//             "Reset local state manually using useState",
-//             "Run the same mutation again to refresh data"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
+    {
+        "id": 416,
+        "question": "In React Query, what occurs when multiple useQuery hooks use the same queryKey?",
+        "options": [
+            "Each query executes independently without caching",
+            "React Query shares and reuses the cached data across them",
+            "It throws an error and crashes the application",
+            "Only the first query runs while the others are skipped"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• data sharing بین hooks\n" +
+            "- فقط یک request\n" +
+            "- همه از cache یکسان استفاده می‌کنند\n" +
+            "- automatic deduplication\n" +
+            "- efficient data management"
+    },
+    {
+        "id": 417,
+        "question": "Which pattern helps prevent unnecessary network requests when using useQuery?",
+        "options": [
+            "Use a unique queryKey with caching enabled",
+            "Disable caching to always fetch fresh data",
+            "Wrap useQuery inside useEffect on every render",
+            "Manually trigger refetch on every component mount"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• unique queryKey با caching enabled\n" +
+            "- staleTime برای control کردن freshness\n" +
+            "- cache hit به جای network request\n" +
+            "- refetchOnWindowFocus کنترل شده\n" +
+            "- smart defaults"
+    },
+    {
+        "id": 418,
+        "question":"Which practice improves efficiency when using useQuery?",
+        "options": [
+            "Provide unique queryKeys and leverage caching",
+            "Turn off caching completely for faster updates",
+            "Call useQuery only inside a useEffect hook",
+            "Refetch data manually each time instead of using cache"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• providing unique queryKeys\n" +
+            "- leveraging caching mechanism\n" +
+            "- appropriate staleTime values\n" +
+            "- avoiding unnecessary refetches\n" +
+            "- proper dependency arrays"
+    },
+    {
+        "id": 419,
+        "question":"Which React Query hook is used for creating, updating, or deleting server data?",
+        "options": [
+            "useQuery",
+            "useMutation",
+            "useReducer",
+            "useState"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• useMutation برای CUD operations\n" +
+            "- POST: create\n" +
+            "- PUT/PATCH: update\n" +
+            "- DELETE: remove\n" +
+            "- side effects روی server"
+    },
+    {
+        "id": 420,
+        "question":  "After a successful mutation, what is the recommended way to update cached queries?",
+        "options": [
+            "Reload the entire page to get fresh data",
+            "Invalidate or update related query keys",
+            "Reset local state manually using useState",
+            "Run the same mutation again to refresh data"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• invalidate کردن related query keys\n" +
+            "- queryClient.invalidateQueries\n" +
+            "- باعث refetch می‌شود\n" +
+            "- یا manual update با setQueryData\n" +
+            "- sync کردن cache با server"
+    },
 //     {
 //         "id": 387,
 //         "question": "Which statement about useMutation compared to useQuery is correct?",
@@ -6845,7 +6870,8 @@ export const mockQuestions: Question[] = [
 //             "useMutation cannot handle error states"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//         "explanation":""
 //     },
 //             {
 //             "id": 388,
