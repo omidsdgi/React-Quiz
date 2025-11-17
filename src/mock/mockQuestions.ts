@@ -6151,7 +6151,7 @@ export const mockQuestions: Question[] = [
         "points": 10,
          "explanation": "• ref object را به ref prop pass کنید\n" +
              "- <input ref={inputRef} />\n" +
-             "- بعد از mount: inputRef.current\n" +
+             "- بعد از mount. inputRef.current\n" +
              "- DOM element در current\n" +
              "- null قبل از mount"
     },
@@ -6359,136 +6359,177 @@ export const mockQuestions: Question[] = [
              "- بدون re-render\n" +
              "- persistent بین renders"
     },
-//     {
-//         "id": 362,
-//         "question": "Why is useRef often used to store previous values in a component?",
-//         "options": [
-//             "Because useRef automatically tracks a history of values",
-//             "Because useRef values trigger updates when they change",
-//             "Because useRef stores values without causing re-renders",
-//             "Because useRef has built-in comparison helpers for values"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 363,
-//         "question": "What happens to a ref when its component unmounts?",
-//         "options": [
-//             "The ref value stays in memory until you clear it manually",
-//             "The ref is reset and its memory can be freed automatically",
-//             "Accessing the ref after unmount will throw an error",
-//             "The ref is passed to the parent component automatically"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 364,
-//         "question": "Can refs be passed to child components as props?",
-//         "options": [
-//             "Yes, refs can always be passed like any normal prop",
-//             "No, refs cannot be shared between components",
-//             "Yes, but it requires using forwardRef in the child component",
-//             "No, refs only work in the component where they are declared"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 365,
-//         "question": "What is the primary purpose of forwardRef in React?",
-//         "options": [
-//             "To create multiple refs inside a single component",
-//             "To allow a parent component to pass a ref to a child component",
-//             "To convert refs into state variables automatically",
-//             "To clear a ref when a component unmounts"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 366,
-//         "question": "When is useRef preferable over using a regular variable in a function component?",
-//         "options": [
-//             "When you need a value to persist across re-renders",
-//             "When you want a change in value to trigger a re-render",
-//             "When you need to share values between different components",
-//             "When you want to reset a value every time the component renders"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 367,
-//         "question": "What types of values can be stored in a useRef?",
-//         "options": [
-//             "Only DOM element references for direct manipulation",
-//             "Only primitive values like numbers and strings",
-//             "Any mutable value including objects, arrays, or functions",
-//             "Only values that implement a special React interface"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 368,
-//         "question":"How can you focus an input element using useRef?",
-//         "options": [
-//             "By calling inputRef.current.focus() inside an effect or event handler",
-//             "By calling inputRef.focus() directly during render",
-//             "By invoking inputRef.current() with 'focus' as a parameter",
-//             "By setting a 'focus' property with inputRef.setValue()"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 369,
-//         "question": "What is the main difference between refs and state in React?",
-//         "options": [
-//             "Refs store immutable values, while state stores mutable values",
-//             "Refs trigger re-renders, while state manages lifecycle events",
-//             "Refs persist values without re-rendering, while state updates trigger re-renders",
-//             "Refs only store objects, while state only stores primitive values"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 370,
-//         "question":"Can you attach both capturing and bubbling event listeners on the same element in React?",
-//         "options": [
-//             "Yes, bubbling listeners run before capturing listeners on the same element",
-//             "No, React allows only one event phase per element",
-//             "Yes, capturing listeners run before bubbling listeners on the same element",
-//             "No, attaching both phases causes runtime errors"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//          "explanation": ""
-//     },
-//     {
-//         "id": 371,
-//         "question": "What is the primary purpose of a mutation in React Query?",
-//         "options": [
-//             "To create, update, or delete server data",
-//             "To read server data from the cache only",
-//             "To render React components",
-//             "To automatically generate CSS styles"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//          "explanation": ""
-//     },
+    {
+        "id": 391,
+        "question": "Why is useRef often used to store previous values in a component?",
+        "options": [
+            "Because useRef automatically tracks a history of values",
+            "Because useRef values trigger updates when they change",
+            "Because useRef stores values without causing re-renders",
+            "Because useRef has built-in comparison helpers for values"
+        ],
+        "correctOption": 2,
+        "points": 30,
+         "explanation": "• ذخیره value قبلی بدون re-render\n" +
+             "- comparison با value فعلی\n" +
+             "- usePrevious custom hook\n" +
+             "- state قبلی در memory\n" +
+             "- برای detecting changes"
+    },
+    {
+        "id": 392,
+        "question": "What happens to a ref when its component unmounts?",
+        "options": [
+            "The ref value stays in memory until you clear it manually",
+            "The ref is reset and its memory can be freed automatically",
+            "Accessing the ref after unmount will throw an error",
+            "The ref is passed to the parent component automatically"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation": "• ref garbage collected می‌شود\n" +
+             "- memory آزاد می‌شود\n" +
+             "- automatic cleanup\n" +
+             "- DOM references نیز cleared\n" +
+             "- memory leak نمی‌کند"
+    },
+    {
+        "id": 393,
+        "question": "Can refs be passed to child components as props?",
+        "options": [
+            "Yes, refs can always be passed like any normal prop",
+            "No, refs cannot be shared between components",
+            "Yes, but it requires using forwardRef in the child component",
+            "No, refs only work in the component where they are declared"
+        ],
+        "correctOption": 2,
+        "points": 30,
+         "explanation": "Can refs be passed to child components as props?\",\n" +
+             "\"explanation\": \"• نه به صورت مستقیم، ref reserved است\\n\" +\n" +
+             "    \"- باید از forwardRef استفاده کنید\\n\" +\n" +
+             "    \"- یا نام دیگری بدهید\\n\" +\n" +
+             "    \"- React.forwardRef wrapper\\n\" +\n" +
+             "    \"- special handling لازم"
+    },
+    {
+        "id": 394,
+        "question": "What is the primary purpose of forwardRef in React?",
+        "options": [
+            "To create multiple refs inside a single component",
+            "To allow a parent component to pass a ref to a child component",
+            "To convert refs into state variables automatically",
+            "To clear a ref when a component unmounts"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation": "• passing ref از parent به child component\n" +
+             "- child می‌تواند DOM element را expose کند\n" +
+             "- ref در props نیست\n" +
+             "- argument دوم در component function\n" +
+             "- برای library components"
+    },
+    {
+        "id": 395,
+        "question": "When is useRef preferable over using a regular variable in a function component?",
+        "options": [
+            "When you need a value to persist across re-renders",
+            "When you want a change in value to trigger a re-render",
+            "When you need to share values between different components",
+            "When you want to reset a value every time the component renders"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation": "• وقتی value باید persist بین renders\n" +
+             "- let variable هر render reset می‌شود\n" +
+             "- ref.current نگه داشته می‌شود\n" +
+             "- برای mutable values\n" +
+             "- stable reference"
+    },
+    {
+        "id": 396,
+        "question": "What types of values can be stored in a useRef?",
+        "options": [
+            "Only DOM element references for direct manipulation",
+            "Only primitive values like numbers and strings",
+            "Any mutable value including objects, arrays, or functions",
+            "Only values that implement a special React interface"
+        ],
+        "correctOption": 2,
+        "points": 10,
+         "explanation": "• هر type: primitives، objects، arrays، functions\n" +
+             "- DOM references\n" +
+             "- timer IDs\n" +
+             "- previous values\n" +
+             "- any mutable value"
+    },
+    {
+        "id": 397,
+        "question":"How can you focus an input element using useRef?",
+        "options": [
+            "By calling inputRef.current.focus() inside an effect or event handler",
+            "By calling inputRef.focus() directly during render",
+            "By invoking inputRef.current() with 'focus' as a parameter",
+            "By setting a 'focus' property with inputRef.setValue()"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation": "• inputRef.current.focus() در useEffect یا handler\n" +
+             "- <input ref={inputRef} />\n" +
+             "- بعد از mount\n" +
+             "- imperative DOM access\n" +
+             "- common use case"
+    },
+    {
+        "id": 398,
+        "question": "What is the main difference between refs and state in React?",
+        "options": [
+            "Refs store immutable values, while state stores mutable values",
+            "Refs trigger re-renders, while state manages lifecycle events",
+            "Refs persist values without re-rendering, while state updates trigger re-renders",
+            "Refs only store objects, while state only stores primitive values"
+        ],
+        "correctOption": 2,
+        "points": 10,
+         "explanation": "• refs: persist بدون re-render\n" +
+             "- state: persist با re-render\n" +
+             "- refs: mutable directly\n" +
+             "- state: immutable updates\n" +
+             "- use cases متفاوت"
+    },
+    {
+        "id": 399,
+        "question":"Can you attach both capturing and bubbling event listeners on the same element in React?",
+        "options": [
+            "Yes, bubbling listeners run before capturing listeners on the same element",
+            "No, React allows only one event phase per element",
+            "Yes, capturing listeners run before bubbling listeners on the same element",
+            "No, attaching both phases causes runtime errors"
+        ],
+        "correctOption": 2,
+        "points": 30,
+         "explanation": "• بله، با addEventListener دو بار\n" +
+             "- یکی با capture: true\n" +
+             "- یکی با capture: false\n" +
+             "- capturing اول اجرا می‌شود\n" +
+             "- هر دو handlers execute می‌شوند"
+    },
+    {
+        "id": 400,
+        "question": "What is the primary purpose of a mutation in React Query?",
+        "options": [
+            "To create, update, or delete server data",
+            "To read server data from the cache only",
+            "To render React components",
+            "To automatically generate CSS styles"
+        ],
+        "correctOption": 0,
+        "points": 10,
+         "explanation": "• تغییر دادن server data\n" +
+             "- POST، PUT، PATCH، DELETE\n" +
+             "- create، update، delete operations\n" +
+             "- side effects روی server\n" +
+             "- opposite از queries (read-only)"
+    },
 //     {
 //         "id": 372,
 //         "question": "Which React Query hook is used for modifying server data?",
