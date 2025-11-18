@@ -823,8 +823,7 @@ export const mockQuestions: Question[] = [
         "explanation": "• تغییر state فقط یکی از دلایل render است\n" +
             "- re-render شدن parent باعث render فرزندان می‌شود\n" +
             "- تغییر Context value تمام consumers را render می‌کند\n" +
-            "- تغییر props نیز باعث render می‌شود (در واقع به خاطر parent re-render)\n" +
-            "- forceUpdate در class components نیز render را trigger می‌کند"
+            "- تغییر props نیز باعث render می‌شود (در واقع به خاطر parent re-render)"
     },
     {
         "id": 53,
@@ -1164,8 +1163,7 @@ export const mockQuestions: Question[] = [
         "points": 10,
         "explanation":"• در useEffect برای side effects بعد از render\n" +
             "- در event handlers برای user interactions\n" +
-            "- نه در render logic که هر render اجرا می‌شود\n" +
-            "- React lifecycle methods در class components"
+            "- نه در render logic که هر render اجرا می‌شود"
     },
     {
         "id": 74,
@@ -18616,5 +18614,151 @@ export const mockQuestions: Question[] = [
             "- const getData = async (): Promise<User[]> => {}\n" +
             "- Promise<void> اگر return ندارد\n" +
             "- await نتیجه unwrap می‌کند"
+    },
+    {
+        "id": 53,
+        "question": "When encountering a temporary build error like 'Module not found: Error: Can't resolve \"path/index.js\"' after recent file changes, what is the first recommended action?",
+        "options": [
+            "Restart the development server using CTRL + C and npm start.",
+            "Reinstall all dependencies by deleting node_modules and running npm install.",
+            "Create a new package.json file and reinitialize the project.",
+            "Clear browser cache and refresh the page."
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• در برخی مواقع پس از تغییرات اخیر در فایل‌ها، build موقتاً دچار خطا می‌شود\n" +
+            "- ری‌استارت سرور توسعه باعث ری‌بیلد کامل پروژه و رفع خطاهای موقت می‌شود\n" +
+            "- در صورت تداوم خطا پس از ری‌استارت، حذف و نصب مجدد وابستگی‌ها مرحله بعدی است\n" +
+            "- پاک‌کردن کش مرورگر تأثیری بر خطاهای build ندارد"
+    },
+    {
+        "id": 54,
+        "question": "What is the primary purpose of the src folder in a React project?",
+        "options": [
+            "It serves as the brain of the app, containing all the JavaScript and TypeScript files.",
+            "It stores static assets like images and HTML templates.",
+            "It maintains a snapshot of the project’s dependency tree.",
+            "It contains the compiled production-ready code after the build process."
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• پوشه src محل اصلی کدهای منبع برنامه است\n" +
+            "- شامل فایل‌های logic، componentها و ماژول‌های TypeScript/JavaScript است\n" +
+            "- فایل‌های استاتیک مانند تصاویر معمولاً در پوشه public نگهداری می‌شوند\n" +
+            "- خروجی نهایی build در پوشه dist یا build ذخیره می‌شود، نه در src"
+    },
+    {
+        "id": 55,
+        "question": "Which of the following statements about React components is correct?",
+        "options": [
+            "Components cannot return JSX directly and require a wrapper function.",
+            "Components must always use function declarations; arrow functions are not allowed.",
+            "Components must start with a capital letter to be recognized by React.",
+            "Components can only be created using class syntax in modern React."
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• در React نام کامپوننت‌ها باید با حرف بزرگ شروع شود تا React بتواند آن‌ها را از عناصر HTML متمایز کند\n" +
+            "- استفاده از حروف کوچک باعث می‌شود React آن را به عنوان یک تگ HTML معمولی تفسیر کند\n" +
+            "- می‌توان از function declaration یا arrow function برای تعریف کامپوننت استفاده کرد\n" +
+            "- نیاز به هیچ wrapper خاصی برای بازگرداندن JSX وجود ندارد"
+    },
+    {
+        "id": 56,
+        "question": "In JSX, why do we use className instead of class for styling elements?",
+        "options": [
+            "className automatically applies camelCase conventions to all class names.",
+            "className provides better browser compatibility for styled components.",
+            "className is used to avoid conflicts with the class keyword in JavaScript.",
+            "className enables conditional rendering of CSS styles automatically."
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• در JSX از className به جای class استفاده می‌شود چون 'class' در JavaScript یک کلمه رزرو شده است\n" +
+            "- JSX در نهایت به JavaScript کامپایل می‌شود، بنابراین استفاده از class باعث بروز خطا می‌شود\n" +
+            "- React هنگام render مقدار className را به ویژگی HTML class تبدیل می‌کند\n" +
+            "- این ویژگی رفتاری خاصی برای camelCase یا styled components ندارد"
+    },
+    {
+        "id": 57,
+        "question": "What is the purpose of adding 'emmet.includeLanguages': { 'javascript': 'javascriptreact' } in the settings.json file?",
+        "options": [
+            "It ensures automatic formatting of JSX elements on save.",
+            "It automatically renames React components to match file names.",
+            "It enables Emmet support in .js files for JSX syntax.",
+            "It converts JavaScript files into TypeScript automatically."
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• با این تنظیم، VS Code تشخیص می‌دهد که فایل‌های JavaScript حاوی JSX هستند\n" +
+            "- این ویژگی پشتیبانی Emmet (شامل auto-complete و expand کردن shorthandها) را برای JSX فعال می‌کند\n" +
+            "- به طور پیش‌فرض Emmet فقط در فایل‌های .jsx یا .tsx فعال است\n" +
+            "- این تنظیم هیچ ربطی به فرمت خودکار یا TypeScript ندارد"
+    },
+    {
+        "id": 58,
+        "question": "Why is React.Fragment or shorthand <> used in React components?",
+        "options": [
+            "To improve performance by optimizing how JSX is compiled.",
+            "To ensure that JSX elements use camelCase property naming convention.",
+            "To group multiple elements without adding extra DOM nodes.",
+            "To automatically wrap elements with a parent <div> during rendering."
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• از React.Fragment یا فرم کوتاه <> برای گروه‌بندی چند المنت JSX استفاده می‌شود\n" +
+            "- این کار بدون افزودن تگ اضافی به DOM انجام می‌شود\n" +
+            "- استفاده از div اضافی می‌تواند باعث به‌هم‌ریختگی ساختار و مشکلات در استایل شود\n" +
+            "- Fragment هیچ تأثیری بر نام‌گذاری camelCase یا عملکرد JSX ندارد"
+    },
+    {
+        "id": 59,
+        "question": "Why are components like Image, Title, and Author separated into their own functional components?",
+        "options": [
+            "To enable independent styling and testing of each component.",
+            "To promote reusability and maintainability in larger applications.",
+            "To reduce the number of return statements in the parent component.",
+            "To automatically fetch data for each component from an API."
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• جداسازی کامپوننت‌ها باعث افزایش قابلیت استفاده مجدد و نگهداری آسان‌تر کد می‌شود\n" +
+            "- هر کامپوننت می‌تواند مستقل تست و استایل‌دهی شود\n" +
+            "- کاهش تعداد returnها هدف اصلی نیست و داده‌ها به صورت خودکار fetch نمی‌شوند\n" +
+            "- این ساختار به خوانایی و سازمان‌دهی بهتر پروژه کمک می‌کند"
+    },
+    {
+        "id": 60,
+        "question": "In the Greeting component, why is Person called as <Person /> instead of Person()?",
+        "options": [
+            "Calling Person() directly would break React's virtual DOM mechanism.",
+            "Using <Person /> is required only if the component is a functional component.",
+            "It is just a stylistic choice and both approaches work identically.",
+            "React components must be invoked as JSX elements to ensure proper rendering.",
+        ],
+        "correctOption": 3,
+        "points": 10,
+        "explanation": "• در React، کامپوننت‌ها باید به صورت JSX (<Person />) فراخوانی شوند تا React بتواند lifecycle و virtual DOM را مدیریت کند\n" +
+            "- فراخوانی مستقیم Person() ممکن است باعث عدم هماهنگی با سیستم رندر React شود\n" +
+            "- این محدودیت فقط برای functional components نیست و برای class components هم صادق است\n" +
+            "- این موضوع صرفاً یک انتخاب استایلی نیست و رفتار رندر را تحت تأثیر قرار می‌دهد"
+    },
+    {
+        "id": 61,
+        "question": "What is the purpose of React Developer Tools?",
+        "options": [
+            "To modify component styles directly in the browser.",
+            "To inspect and debug the component hierarchy and props in a React.",
+            "To automatically optimize React components for better performance.",
+            "To convert class components to functional components automatically."
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• React Developer Tools برای بررسی و دیباگ کامپوننت‌ها و props در یک برنامه React استفاده می‌شود\n" +
+            "- امکان مشاهده درخت کامپوننت‌ها، state و props به صورت زنده فراهم می‌کند\n" +
+            "- این ابزار تغییر خودکار استایل یا بهینه‌سازی کامپوننت‌ها را انجام نمی‌دهد\n" +
+            "- تبدیل خودکار نوع کامپوننت‌ها نیز توسط این ابزار انجام نمی‌شود"
     }
+
+
 ]
