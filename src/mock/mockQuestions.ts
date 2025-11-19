@@ -7028,149 +7028,189 @@ export const mockQuestions: Question[] = [
              "- real-time like behavior\n" +
              "- automatic periodic updates"
         },
-//         {
-//             "id": 399,
-//             "question": "Which useQuery option helps with pagination to avoid blank state while fetching new data?",
-//             "options": [
-//                 "enabled",
-//                 "refetchOnWindowFocus",
-//                 "keepPreviousData",
-//                 "retry"
-//             ],
-//             "correctOption": 2,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 400,
-//             "question": "How does React Query ensure consistency between server and client after a mutation?",
-//             "options": [
-//                 "Reload the browser window automatically",
-//                 "Automatically invalidate all cached queries",
-//                 "Invalidate specific queries or manually refetch",
-//                 "Clear the entire cache immediately"
-//             ],
-//             "correctOption": 2,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 401,
-//             "question": "What is query invalidation in React Query?",
-//             "options": [
-//                 "Marking queries stale to trigger refetch",
-//                 "Deleting all cached data permanently",
-//                 "Resetting all query keys globally",
-//                 "Pausing queries until manually enabled"
-//             ],
-//             "correctOption": 0,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 402,
-//             "question": "What does hydrate/dehydrate refer to in React Query?",
-//             "options": [
-//                 "Saving and restoring query state for SSR",
-//                 "Synchronizing queries with Redux store",
-//                 "Exporting query data to JSON files",
-//                 "Clearing memory leaks during refetch"
-//             ],
-//             "correctOption": 0,
-//             "points": 30,
-//          "explanation":""
-//         },
-//         {
-//             "id": 403,
-//             "question": "What is the primary purpose of React Hook Form?",
-//             "options": [
-//                 "Managing server-side data fetching",
-//                 "Simplifying form state and validation",
-//                 "Creating component animations",
-//                 "Managing global application state"
-//             ],
-//             "correctOption": 1,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 404,
-//             "question": "Which hook initializes a form in React Hook Form?",
-//             "options": [
-//                 "useState",
-//                 "useForm",
-//                 "useController",
-//                 "useReducer"
-//             ],
-//             "correctOption": 1,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 405,
-//             "question": "What does the register function do in React Hook Form?",
-//             "options": [
-//                 "Submits form data to server",
-//                 "Resets all form fields",
-//                 "Connects inputs to form state",
-//                 "Triggers form re-rendering"
-//             ],
-//             "correctOption": 2,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 406,
-//             "question": "Which function handles form submission in React Hook Form?",
-//             "options": [
-//                 "useSubmit",
-//                 "submitForm",
-//                 "handleSubmit",
-//                 "onSubmitHandler"
-//             ],
-//             "correctOption":2,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 407,
-//             "question": "How do you apply validation rules in React Hook Form?",
-//             "options": [
-//                 "Add attributes directly to input",
-//                 "Wrap input in Validation component",
-//                 "Pass options object to register",
-//                 "Use useValidation hook"
-//             ],
-//             "correctOption": 2,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 408,
-//             "question": "What does the errors object represent in useForm?",
-//             "options": [
-//                 "List of server-side API errors",
-//                 "Runtime errors during rendering",
-//                 "Validation errors for form fields",
-//                 "React component errors"
-//             ],
-//             "correctOption": 2,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 409,
-//             "question": "Why is React Hook Form performant?",
-//             "options": [
-//                 "Automatically fetches data from APIs",
-//                 "Reduces re-renders with isolated reactivity",
-//                 "Compiles forms into WebAssembly",
-//                 "Disables validation for speed"
-//             ],
-//             "correctOption": 1,
-//             "points": 30,
-//          "explanation":""
-//         },
+        {
+            "id": 431,
+            "question": "Which useQuery option helps with pagination to avoid blank state while fetching new data?",
+            "options": [
+                "enabled",
+                "refetchOnWindowFocus",
+                "keepPreviousData",
+                "retry"
+            ],
+            "correctOption": 2,
+            "points": 20,
+         "explanation":"• keepPreviousData: true\n" +
+             "- previous page data نشان داده می‌شود\n" +
+             "- تا new page load شود\n" +
+             "- no blank screens\n" +
+             "- smooth pagination"
+        },
+        {
+            "id": 432,
+            "question": "How does React Query ensure consistency between server and client after a mutation?",
+            "options": [
+                "Reload the browser window automatically",
+                "Automatically invalidate all cached queries",
+                "Invalidate specific queries or manually refetch",
+                "Clear the entire cache immediately"
+            ],
+            "correctOption": 2,
+            "points": 20,
+         "explanation":"• invalidation و refetching strategies\n" +
+             "- queryClient.invalidateQueries\n" +
+             "- automatic refetch of stale queries\n" +
+             "- optimistic updates با rollback\n" +
+             "- cache synchronization"
+        },
+        {
+            "id": 433,
+            "question": "What is query invalidation in React Query?",
+            "options": [
+                "Marking queries stale to trigger refetch",
+                "Deleting all cached data permanently",
+                "Resetting all query keys globally",
+                "Pausing queries until manually enabled"
+            ],
+            "correctOption": 0,
+            "points": 20,
+         "explanation":"• invalidation یعنی marking کردن query به عنوان stale\n" +
+             "- باعث refetch خودکار می‌شود\n" +
+             "- معمولاً بعد از mutations استفاده می‌شود\n" +
+             "- با queryClient.invalidateQueries انجام می‌شود\n" +
+             "- data را fresh و synchronized نگه می‌دارد"
+        },
+        {
+            "id": 434,
+            "question": "What does hydrate/dehydrate refer to in React Query?",
+            "options": [
+                "Saving and restoring query state for SSR",
+                "Synchronizing queries with Redux store",
+                "Exporting query data to JSON files",
+                "Clearing memory leaks during refetch"
+            ],
+            "correctOption": 0,
+            "points": 30,
+         "explanation":"• dehydrate: ذخیره کردن query state برای SSR\n" +
+             "- hydrate: بازگردانی query state در client\n" +
+             "- برای server-side rendering استفاده می‌شود\n" +
+             "- data از server به client منتقل می‌شود\n" +
+             "- جلوگیری از refetch غیرضروری در client"
+        },
+        {
+            "id": 435,
+            "question": "What is the primary purpose of React Hook Form?",
+            "options": [
+                "Managing server-side data fetching",
+                "Simplifying form state and validation",
+                "Creating component animations",
+                "Managing global application state"
+            ],
+            "correctOption": 1,
+            "points": 10,
+         "explanation":"• ساده‌سازی form state و validation management\n" +
+             "- performance بالا با uncontrolled inputs\n" +
+             "- کد کمتر نسبت به راه‌های سنتی\n" +
+             "- built-in validation و error handling\n" +
+             "- integration آسان با UI libraries"
+        },
+        {
+            "id": 436,
+            "question": "Which hook initializes a form in React Hook Form?",
+            "options": [
+                "useState",
+                "useForm",
+                "useController",
+                "useReducer"
+            ],
+            "correctOption": 1,
+            "points": 10,
+         "explanation":"• useForm برای initialize کردن form\n" +
+             "- register، handleSubmit و formState return می‌کند\n" +
+             "- options مثل defaultValues و validation mode\n" +
+             "- تمام form logic را مدیریت می‌کند\n" +
+             "- یک بار در component صدا زده می‌شود"
+        },
+        {
+            "id": 437,
+            "question": "What does the register function do in React Hook Form?",
+            "options": [
+                "Submits form data to server",
+                "Resets all form fields",
+                "Connects inputs to form state",
+                "Triggers form re-rendering"
+            ],
+            "correctOption": 2,
+            "points": 10,
+         "explanation":"• inputs را به form state متصل می‌کند\n" +
+             "- validation rules را اضافه می‌کند\n" +
+             "- با spread operator به input pass می‌شود\n" +
+             "- onChange، onBlur و ref را set می‌کند\n" +
+             "- tracking خودکار input values"
+        },
+        {
+            "id": 438,
+            "question": "Which function handles form submission in React Hook Form?",
+            "options": [
+                "useSubmit",
+                "submitForm",
+                "handleSubmit",
+                "onSubmitHandler"
+            ],
+            "correctOption":2,
+            "points": 10,
+         "explanation":"• handleSubmit validation و submission را مدیریت می‌کند\n" +
+             "- validation را قبل از submit اجرا می‌کند\n" +
+             "- در صورت موفقیت، callback را صدا می‌زند\n" +
+             "- data را به صورت object می‌دهد\n" +
+             "- preventDefault خودکار"
+        },
+        {
+            "id": 439,
+            "question": "How do you apply validation rules in React Hook Form?",
+            "options": [
+                "Add attributes directly to input",
+                "Wrap input in Validation component",
+                "Pass options object to register",
+                "Use useValidation hook"
+            ],
+            "correctOption": 2,
+            "points": 20,
+         "explanation":"• options object را به register pass می‌کنید\n" +
+             "- مثل { required: true, minLength: 3 }\n" +
+             "- pattern، validate و custom rules\n" +
+             "- error messages قابل customize\n" +
+             "- validation مثل HTML5 اما قدرتمندتر"
+        },
+        {
+            "id": 440,
+            "question": "What does the errors object represent in useForm?",
+            "options": [
+                "List of server-side API errors",
+                "Runtime errors during rendering",
+                "Validation errors for form fields",
+                "React component errors"
+            ],
+            "correctOption": 2,
+            "points": 20,
+         "explanation":"• شامل validation errors برای هر field\n" +
+             "- از formState.errors دریافت می‌شود\n" +
+             "- type و message برای هر error\n" +
+             "- برای نمایش error messages استفاده می‌شود\n" +
+             "- به صورت real-time update می‌شود"
+        },
+        {
+            "id": 409,
+            "question": "Why is React Hook Form performant?",
+            "options": [
+                "Automatically fetches data from APIs",
+                "Reduces re-renders with isolated reactivity",
+                "Compiles forms into WebAssembly",
+                "Disables validation for speed"
+            ],
+            "correctOption": 1,
+            "points": 30,
+         "explanation":""
+        },
 //         {
 //             "id": 410,
 //             "question": "Which hook controls custom components in React Hook Form?",
