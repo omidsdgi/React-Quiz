@@ -6858,139 +6858,176 @@ export const mockQuestions: Question[] = [
             "- یا manual update با setQueryData\n" +
             "- sync کردن cache با server"
     },
-//     {
-//         "id": 387,
-//         "question": "Which statement about useMutation compared to useQuery is correct?",
-//         "options": [
-//             "useMutation executes synchronously by default",
-//             "useMutation only works with GraphQL APIs",
-//             "useMutation must be triggered manually and does not run automatically",
-//             "useMutation cannot handle error states"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//         "explanation":""
-//     },
-//             {
-//             "id": 388,
-//             "question": "What is the primary purpose of the queryKey in useQuery?",
-//                 "options": [
-//                     "Uniquely identify queries for caching and refetching",
-//                     "Define the API endpoint URL",
-//                     "Specify the type of loading spinner to show",
-//                     "Configure mutation success callbacks"
-//                 ],
-//             "correctOption": 0,
-//             "points": 20
-//         },
-//         {
-//             "id": 389,
-//             "question": "In React Query, what is the difference between staleTime and cacheTime?",
-//             "options": [
-//                 "staleTime defines retry attempts; cacheTime defines error persistence",
-//                 "Both represent the same concept of cache duration",
-//                 "staleTime determines how long data is considered fresh; cacheTime controls how long inactive data stays in memory",
-//                 "staleTime is only used for mutations; cacheTime only for queries"
-//             ],
-//             "correctOption": 2,
-//             "points": 30
-//         },
-//         {
-//             "id": 390,
-//             "question":"How can you prevent a useQuery from automatically running when a component mounts?",
-//             "options": [
-//                 "Remove the queryKey entirely",
-//                 "Use useMutation instead of useQuery",
-//                 "Disable React StrictMode in the app",
-//                 "Set enabled: false in the query options"
-//             ],
-//             "correctOption":3,
-//             "points": 10
-//         },
-//         {
-//             "id": 391,
-//             "question":  "Which callback in useMutation is typically used to update the cache after a successful mutation?",
-//             "options": [
-//                 "onSettled",
-//                 "onMutate",
-//                 "onSuccess",
-//                 "onError"
-//             ],
-//             "correctOption": 2,
-//             "points": 20
-//         },
-//         {
-//             "id": 392,
-//             "question":  "Why are optimistic updates useful in useMutation?",
-//             "options": [
-//                 "They automatically retry failed requests",
-//                 "They update the UI immediately before server response",
-//                 "They prevent memory leaks in components",
-//                 "They enforce unique query keys"
-//             ],
-//             "correctOption": 1,
-//             "points": 30
-//         },
-//         {
-//             "id": 393,
-//             "question": "Which React Query function is commonly used inside a mutation's onSuccess callback to refresh relevant queries?",
-//             "options": [
-//                 "resetQueries",
-//                 "refetchQueries",
-//                 "cancelQueries",
-//                 "invalidateQueries"
-//             ],
-//             "correctOption": 3,
-//             "points": 20
-//         },
-//         {
-//             "id": 394,
-//             "question": "What happens when multiple queries are dependent in React Query?",
-//             "options": [
-//                 "They run in parallel ignoring dependencies",
-//                 "The next query waits for previous query's data",
-//                 "All queries share the same queryKey",
-//                 "Dependent queries are not supported"
-//             ],
-//             "correctOption": 1,
-//             "points": 20
-//         },
-//         {
-//             "id": 395,
-//             "question": "Which tool helps visualize query and mutation states during development?",
-//             "options": [
-//                 "Redux DevTools",
-//                 "React Query Devtools",
-//                 "React Profiler",
-//                 "Apollo Studio"
-//             ],
-//             "correctOption": 1,
-//             "points": 10
-//         },
-//         {
-//             "id": 381,
-//             "question": "What does useQuery return in case of an error?",
-//             "options": [
-//                 "Only null data",
-//                 "An error object along with isError: true",
-//                 "Throws a JavaScript exception",
-//                 "Nothing is returned"
-//             ],
-//             "correctOption": 1,
-//             "points": 20
-//         },
-//         {
-//             "id": 396,
-//             "question": "Which option in useQuery allows background synchronization at intervals?",
-//             "options": [
-//                 "cacheTime",
-//                 "refetchInterval",
-//                 "retry",
-//                 "keepPreviousData"
-//             ],
-//             "correctOption": 1,
-//             "points": 20
-//         },
+    {
+        "id": 421,
+        "question": "Which statement about useMutation compared to useQuery is correct?",
+        "options": [
+            "useMutation executes synchronously by default",
+            "useMutation only works with GraphQL APIs",
+            "useMutation must be triggered manually and does not run automatically",
+            "useMutation cannot handle error states"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• useMutation باید manually trigger شود\n" +
+            "- mutate() function را call می‌کنید\n" +
+            "- useQuery automatic run می‌شود\n" +
+            "- mutations on-demand هستند\n" +
+            "- queries eager loading"
+    },
+            {
+            "id": 422,
+            "question": "What is the primary purpose of the queryKey in useQuery?",
+                "options": [
+                    "Uniquely identify queries for caching and refetching",
+                    "Define the API endpoint URL",
+                    "Specify the type of loading spinner to show",
+                    "Configure mutation success callbacks"
+                ],
+            "correctOption": 0,
+            "points": 20,
+         "explanation":"• unique identification برای query\n" +
+             "- caching mechanism\n" +
+             "- refetching control\n" +
+             "- invalidation targeting\n" +
+             "- array از identifiers"
+        },
+        {
+            "id": 423,
+            "question": "In React Query, what is the difference between staleTime and cacheTime?",
+            "options": [
+                "staleTime defines retry attempts; cacheTime defines error persistence",
+                "Both represent the same concept of cache duration",
+                "staleTime determines how long data is considered fresh; cacheTime controls how long inactive data stays in memory",
+                "staleTime is only used for mutations; cacheTime only for queries"
+            ],
+            "correctOption": 2,
+            "points": 30,
+         "explanation":"• staleTime: مدت fresh بودن\n" +
+             "- تا این مدت refetch نمی‌شود\n" +
+             "- cacheTime: مدت ماندن inactive data\n" +
+             "- garbage collection timing\n" +
+             "- دو concept متفاوت"
+        },
+        {
+            "id": 424,
+            "question":"How can you prevent a useQuery from automatically running when a component mounts?",
+            "options": [
+                "Remove the queryKey entirely",
+                "Use useMutation instead of useQuery",
+                "Disable React StrictMode in the app",
+                "Set enabled: false in the query options"
+            ],
+            "correctOption":3,
+            "points": 10,
+         "explanation":"• enabled: false در options\n" +
+             "- query run نمی‌شود تا true شود\n" +
+             "- conditional fetching\n" +
+             "- manual control\n" +
+             "- refetch() برای manual trigger"
+        },
+        {
+            "id": 425,
+            "question":  "Which callback in useMutation is typically used to update the cache after a successful mutation?",
+            "options": [
+                "onSettled",
+                "onMutate",
+                "onSuccess",
+                "onError"
+            ],
+            "correctOption": 2,
+            "points": 20,
+         "explanation":"• onSuccess callback\n" +
+             "- دریافت mutation result\n" +
+             "- invalidate queries\n" +
+             "- setQueryData برای optimistic updates\n" +
+             "- sync cache with server"
+        },
+        {
+            "id": 426,
+            "question":  "Why are optimistic updates useful in useMutation?",
+            "options": [
+                "They automatically retry failed requests",
+                "They update the UI immediately before server response",
+                "They prevent memory leaks in components",
+                "They enforce unique query keys"
+            ],
+            "correctOption": 1,
+            "points": 30,
+         "explanation":"• UI بلافاصله update می‌شود\n" +
+             "- قبل از server response\n" +
+             "- instant feedback\n" +
+             "- اگر fail شود rollback\n" +
+             "- بهتر UX"
+        },
+        {
+            "id": 427,
+            "question": "Which React Query function is commonly used inside a mutation's onSuccess callback to refresh relevant queries?",
+            "options": [
+                "resetQueries",
+                "refetchQueries",
+                "cancelQueries",
+                "invalidateQueries"
+            ],
+            "correctOption": 3,
+            "points": 20,
+         "explanation":"• queryClient.invalidateQueries(['queryKey'])\n" +
+             "- marking queries as stale\n" +
+             "- trigger refetch\n" +
+             "- sync کردن cache\n" +
+             "- fresh data بعد از mutation"
+        },
+        {
+            "id": 428,
+            "question": "What happens when multiple queries are dependent in React Query?",
+            "options": [
+                "They run in parallel ignoring dependencies",
+                "The next query waits for previous query's data",
+                "All queries share the same queryKey",
+                "Dependent queries are not supported"
+            ],
+            "correctOption": 1,
+            "points": 20,
+         "explanation":"• enabled option برای wait کردن\n" +
+             "- query دوم منتظر data اولی\n" +
+             "- enabled: !!previousData\n" +
+             "- sequential fetching\n" +
+             "- dependency chain"
+        },
+        {
+            "id": 429,
+            "question": "Which tool helps visualize query and mutation states during development?",
+            "options": [
+                "Redux DevTools",
+                "React Query Devtools",
+                "React Profiler",
+                "Apollo Studio"
+            ],
+            "correctOption": 1,
+            "points": 10,
+         "explanation":"• React Query Devtools\n" +
+             "- showing query states\n" +
+             "- cache contents\n" +
+             "- mutation status\n" +
+             "- debugging tool powerful"
+        },
+        {
+            "id": 430,
+            "question": "Which option in useQuery allows background synchronization at intervals?",
+            "options": [
+                "cacheTime",
+                "refetchInterval",
+                "retry",
+                "keepPreviousData"
+            ],
+            "correctOption": 1,
+            "points": 20,
+         "explanation":"• refetchInterval: milliseconds\n" +
+             "- polling data\n" +
+             "- refetchInterval: 5000 // هر 5 ثانیه\n" +
+             "- real-time like behavior\n" +
+             "- automatic periodic updates"
+        },
 //         {
 //             "id": 399,
 //             "question": "Which useQuery option helps with pagination to avoid blank state while fetching new data?",
@@ -7001,7 +7038,8 @@ export const mockQuestions: Question[] = [
 //                 "retry"
 //             ],
 //             "correctOption": 2,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 400,
@@ -7013,7 +7051,8 @@ export const mockQuestions: Question[] = [
 //                 "Clear the entire cache immediately"
 //             ],
 //             "correctOption": 2,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 401,
@@ -7025,7 +7064,8 @@ export const mockQuestions: Question[] = [
 //                 "Pausing queries until manually enabled"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 402,
@@ -7037,7 +7077,8 @@ export const mockQuestions: Question[] = [
 //                 "Clearing memory leaks during refetch"
 //             ],
 //             "correctOption": 0,
-//             "points": 30
+//             "points": 30,
+//          "explanation":""
 //         },
 //         {
 //             "id": 403,
@@ -7049,7 +7090,8 @@ export const mockQuestions: Question[] = [
 //                 "Managing global application state"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 404,
@@ -7061,7 +7103,8 @@ export const mockQuestions: Question[] = [
 //                 "useReducer"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 405,
@@ -7073,7 +7116,8 @@ export const mockQuestions: Question[] = [
 //                 "Triggers form re-rendering"
 //             ],
 //             "correctOption": 2,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 406,
@@ -7085,7 +7129,8 @@ export const mockQuestions: Question[] = [
 //                 "onSubmitHandler"
 //             ],
 //             "correctOption":2,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 407,
@@ -7097,7 +7142,8 @@ export const mockQuestions: Question[] = [
 //                 "Use useValidation hook"
 //             ],
 //             "correctOption": 2,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 408,
@@ -7109,7 +7155,8 @@ export const mockQuestions: Question[] = [
 //                 "React component errors"
 //             ],
 //             "correctOption": 2,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 409,
@@ -7121,7 +7168,8 @@ export const mockQuestions: Question[] = [
 //                 "Disables validation for speed"
 //             ],
 //             "correctOption": 1,
-//             "points": 30
+//             "points": 30,
+//          "explanation":""
 //         },
 //         {
 //             "id": 410,
@@ -7133,7 +7181,8 @@ export const mockQuestions: Question[] = [
 //                 "useReducer"
 //             ],
 //             "correctOption": 0,
-//             "points": 30
+//             "points": 30,
+//          "explanation":""
 //         },
 //         {
 //             "id": 411,
@@ -7145,7 +7194,8 @@ export const mockQuestions: Question[] = [
 //                 "replaceValue"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 412,
@@ -7157,7 +7207,8 @@ export const mockQuestions: Question[] = [
 //                 "Fetching form data from external APIs"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 413,
@@ -7169,7 +7220,8 @@ export const mockQuestions: Question[] = [
 //                 "Because uncontrolled inputs are easier to style"
 //             ],
 //             "correctOption":2,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 414,
@@ -7181,7 +7233,8 @@ export const mockQuestions: Question[] = [
 //                 "They improve rendering performance significantly"
 //             ],
 //             "correctOption": 0,
-//             "points": 30
+//             "points": 30,
+//          "explanation":""
 //         },
 //         {
 //             "id": 415,
@@ -7193,7 +7246,8 @@ export const mockQuestions: Question[] = [
 //                 "trigger"
 //             ],
 //             "correctOption": 2,
-//             "points": 30
+//             "points": 30,
+//          "explanation":""
 //         },
 //         {
 //             "id": 416,
@@ -7205,7 +7259,8 @@ export const mockQuestions: Question[] = [
 //                 "By using async resolver or validate function",
 //             ],
 //             "correctOption": 3,
-//             "points": 30
+//             "points": 30,
+//          "explanation":""
 //         },
 //         {
 //             "id": 417,
@@ -7217,7 +7272,8 @@ export const mockQuestions: Question[] = [
 //                 "It doesn't support any validation rules"
 //             ],
 //             "correctOption": 0,
-//             "points": 30
+//             "points": 30,
+//          "explanation":""
 //         },
 //     {
 //         "id": 418,
@@ -7229,7 +7285,8 @@ export const mockQuestions: Question[] = [
 //             "To render conditional UI elements"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 419,
@@ -7241,7 +7298,8 @@ export const mockQuestions: Question[] = [
 //             "ref"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 420,
@@ -7253,7 +7311,8 @@ export const mockQuestions: Question[] = [
 //             "A callback validating inputs and triggering handler",
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 421,
@@ -7265,7 +7324,8 @@ export const mockQuestions: Question[] = [
 //             "By wrapping inputs in FormProvider component"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 422,
@@ -7277,7 +7337,8 @@ export const mockQuestions: Question[] = [
 //             "trigger"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 423,
@@ -7289,7 +7350,8 @@ export const mockQuestions: Question[] = [
 //             "To connect multiple forms together"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 424,
@@ -7301,7 +7363,8 @@ export const mockQuestions: Question[] = [
 //             "checkValidity"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 425,
@@ -7313,7 +7376,8 @@ export const mockQuestions: Question[] = [
 //             "resetFields()"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //         {
 //             "id": 426,
@@ -7325,7 +7389,8 @@ export const mockQuestions: Question[] = [
 //                 "`retry`"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 427,
@@ -7337,7 +7402,8 @@ export const mockQuestions: Question[] = [
 //                 "`refetchInterval`"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 428,
@@ -7349,7 +7415,8 @@ export const mockQuestions: Question[] = [
 //                 "`retry: 3` and `refetchIntervalOnMount: true`"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 429,
@@ -7361,7 +7428,8 @@ export const mockQuestions: Question[] = [
 //                 "Whether query data is fresh or stale"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //     {
 //         "id": 430,
@@ -7373,7 +7441,8 @@ export const mockQuestions: Question[] = [
 //             "All queries in cache are reset"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 431,
@@ -7385,7 +7454,8 @@ export const mockQuestions: Question[] = [
 //             "It automatically generates forms from API data"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 432,
@@ -7397,7 +7467,8 @@ export const mockQuestions: Question[] = [
 //             "retry: 3 and refetchOnMount: false"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //         {
 //             "id": 433,
@@ -7409,7 +7480,8 @@ export const mockQuestions: Question[] = [
 //                 "Connect, Retry, Update, Deliver"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 434,
@@ -7421,7 +7493,8 @@ export const mockQuestions: Question[] = [
 //                 "Deleting a cabin from system"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 435,
@@ -7433,7 +7506,8 @@ export const mockQuestions: Question[] = [
 //                 "useContext"
 //             ],
 //             "correctOption": 2,
-//             "points": 30
+//             "points": 30,
+//          "explanation":""
 //         },
 //     {
 //             "id": 436,
@@ -7445,7 +7519,8 @@ export const mockQuestions: Question[] = [
 //             "Delete"
 //         ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 437,
@@ -7457,7 +7532,8 @@ export const mockQuestions: Question[] = [
 //                 "Delete"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 438,
@@ -7469,7 +7545,8 @@ export const mockQuestions: Question[] = [
 //                 "Delete"
 //             ],
 //             "correctOption": 2,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 439,
@@ -7481,7 +7558,8 @@ export const mockQuestions: Question[] = [
 //                 "Delete"
 //             ],
 //             "correctOption": 3,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 440,
@@ -7493,7 +7571,8 @@ export const mockQuestions: Question[] = [
 //                 "useContext"
 //             ],
 //             "correctOption": 2,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 441,
@@ -7505,7 +7584,8 @@ export const mockQuestions: Question[] = [
 //                 "None of them"
 //             ],
 //             "correctOption": 1,
-//             "points": 30
+//             "points": 30,
+//          "explanation":""
 //         },
 //         {
 //             "id": 442,
@@ -7517,7 +7597,8 @@ export const mockQuestions: Question[] = [
 //                 "Because it always deletes old records first",
 //             ],
 //             "correctOption": 3,
-//             "points": 30
+//             "points": 30,
+//          "explanation":""
 //         },
 //         {
 //             "id": 443,
@@ -7529,7 +7610,8 @@ export const mockQuestions: Question[] = [
 //                 "Database connectivity"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 444,
@@ -7541,7 +7623,8 @@ export const mockQuestions: Question[] = [
 //                 "console.log(age);"
 //             ],
 //             "correctOption": 2,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 445,
@@ -7553,7 +7636,8 @@ export const mockQuestions: Question[] = [
 //                 "To automatically fetch data from APIs"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 446,
@@ -7565,7 +7649,8 @@ export const mockQuestions: Question[] = [
 //                 "CSS styling errors in components"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //         {
 //             "id": 447,
@@ -7577,7 +7662,8 @@ export const mockQuestions: Question[] = [
 //                 "It throws compile error if strict mode enabled",
 //             ],
 //             "correctOption": 3,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 448,
@@ -7589,7 +7675,8 @@ export const mockQuestions: Question[] = [
 //                 "It converts JSX to HTML directly"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 449,
@@ -7601,7 +7688,8 @@ export const mockQuestions: Question[] = [
 //                 "CSS modules system"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//          "explanation":""
 //         },
 //         {
 //             "id": 450,
@@ -7613,7 +7701,8 @@ export const mockQuestions: Question[] = [
 //                 "User input validation errors"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//          "explanation":""
 //         },
 //     {
 //         "id": 451,
@@ -7625,7 +7714,8 @@ export const mockQuestions: Question[] = [
 //             "Broken HTML layout and structure issues"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 452,
@@ -7637,7 +7727,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically fetches data from external APIs",
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 453,
@@ -7649,7 +7740,8 @@ export const mockQuestions: Question[] = [
 //             "User entering wrong login credentials"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 454,
@@ -7661,7 +7753,8 @@ export const mockQuestions: Question[] = [
 //             "Browser developer tools"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 455,
@@ -7673,7 +7766,8 @@ export const mockQuestions: Question[] = [
 //             "When user interacts with UI elements"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 456,
@@ -7685,7 +7779,8 @@ export const mockQuestions: Question[] = [
 //             "Converts forms to server-side code"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 457,
@@ -7697,7 +7792,8 @@ export const mockQuestions: Question[] = [
 //             "Converts inputs to server variables"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 458,
@@ -7709,7 +7805,8 @@ export const mockQuestions: Question[] = [
 //             "Component that cannot receive any props"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 459,
@@ -7721,7 +7818,8 @@ export const mockQuestions: Question[] = [
 //             "Manually track blur with useState"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 460,
@@ -7733,7 +7831,8 @@ export const mockQuestions: Question[] = [
 //             "Use touchedFields after user interaction",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 461,
@@ -7745,7 +7844,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically fixes all validation rules"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//          "explanation":""
 //     },
 //     {
 //         "id": 462,
@@ -7757,7 +7857,8 @@ export const mockQuestions: Question[] = [
 //             "Prevents React from re-rendering input"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 463,
@@ -7769,7 +7870,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically infers validation rules"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//          "explanation":""
 //     },
 //     {
 //         "id": 464,
@@ -7781,7 +7883,8 @@ export const mockQuestions: Question[] = [
 //             "Overrides default HTML element attributes"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//          "explanation":""
 //     },
 //     {
 //         "id": 465,
@@ -7793,7 +7896,8 @@ export const mockQuestions: Question[] = [
 //             "Using context API to render props"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 466,
@@ -7805,7 +7909,8 @@ export const mockQuestions: Question[] = [
 //             "<Provider><Consumer>{value => <Child value={value} />}</Consumer></Provider>"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 467,
@@ -7817,7 +7922,8 @@ export const mockQuestions: Question[] = [
 //             "Caused errors in React strict mode"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//          "explanation":""
 //     },
 //     {
 //         "id": 468,
@@ -7829,7 +7935,8 @@ export const mockQuestions: Question[] = [
 //             "Avoid writing any props in child components"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 469,
@@ -7841,7 +7948,8 @@ export const mockQuestions: Question[] = [
 //             "Direct DOM manipulation methods"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 470,
@@ -7853,7 +7961,8 @@ export const mockQuestions: Question[] = [
 //             "Eliminates need for CSS styling"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 471,
@@ -7865,7 +7974,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically memoizes all child components"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 472,
@@ -7877,7 +7987,8 @@ export const mockQuestions: Question[] = [
 //             "Importing parent hook directly"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//          "explanation":""
 //     },
 //     {
 //         "id": 473,
@@ -7889,7 +8000,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically closes modal on route changes"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 475,
@@ -7901,7 +8013,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically adds animations to modal"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//          "explanation":""
 //     },
 //     {
 //         "id": 1385,
@@ -7913,7 +8026,8 @@ export const mockQuestions: Question[] = [
 //             "Handling asynchronous operations"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 1386,
@@ -7925,7 +8039,8 @@ export const mockQuestions: Question[] = [
 //             "Portals are created automatically"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//          "explanation":""
 //     },
 //     {
 //         "id": 1387,
@@ -8287,6 +8402,19 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 3,
 //         "points": 30
 //     },
+//         {
+//             "id": 381,
+//             "question": "What does useQuery return in case of an error?",
+//             "options": [
+//                 "Only null data",
+//                 "An error object along with isError: true",
+//                 "Throws a JavaScript exception",
+//                 "Nothing is returned"
+//             ],
+//             "correctOption": 1,
+//             "points": 20,
+//          "explanation":""
+//         },
 //     {
 //         "id": 501,
 //         "question": "How can you implement smart pagination prefetching?",
