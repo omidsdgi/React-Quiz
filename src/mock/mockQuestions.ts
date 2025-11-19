@@ -18758,6 +18758,102 @@ export const mockQuestions: Question[] = [
             "- امکان مشاهده درخت کامپوننت‌ها، state و props به صورت زنده فراهم می‌کند\n" +
             "- این ابزار تغییر خودکار استایل یا بهینه‌سازی کامپوننت‌ها را انجام نمی‌دهد\n" +
             "- تبدیل خودکار نوع کامپوننت‌ها نیز توسط این ابزار انجام نمی‌شود"
+    },
+    {
+        "id": 62,
+        "question": "What is the main reason for using the style prop for inline styling in JSX?",
+        "options": [
+            "Inline styles allow using CSS syntax without transformations.",
+            "Inline styles are more performant than external CSS in React applications.",
+            "The style prop is a JavaScript object, allowing dynamic styling with computed properties.",
+            "The style prop automatically converts CSS files into scoped modules."
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• در JSX، ویژگی style به صورت یک شیء جاوااسکریپت تعریف می‌شود\n" +
+            "- این ساختار امکان استفاده از مقادیر پویا و متغیرها را در استایل‌ها فراهم می‌کند\n" +
+            "- از سینتکس CSS معمول (با خط فاصله) پشتیبانی نمی‌کند و باید از camelCase استفاده شود\n" +
+            "- عملکرد آن بهتر از CSS خارجی نیست و برای استایل‌های ساده یا پویا مناسب‌تر است"
+    },
+    {
+        "id": 63,
+        "question": "What happens when an array index is used as the key instead of a unique identifier in a list of React components?",
+        "options": [
+            "The key will improve the rendering speed by using the index value.",
+            "The list will render correctly, but reordering or modifying items may cause unexpected behavior.",
+            "React will throw an error because key should be a string.",
+            "The list items will automatically re-render even without state changes."
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• استفاده از index به عنوان key باعث می‌شود React در تغییر ترتیب یا حذف آیتم‌ها، تشخیص درستی از تغییرات نداشته باشد\n" +
+            "- این موضوع می‌تواند به render اشتباه یا از دست رفتن state محلی منجر شود\n" +
+            "- هرچند کامپوننت‌ها بدون خطا render می‌شوند، رفتار آن‌ها در به‌روزرسانی‌ها غیرقابل پیش‌بینی است\n" +
+            "- کلید باید مقدار یکتا و پایدار (مانند id) داشته باشد تا الگوریتم diff به‌درستی کار کند"
+    },
+    {
+        "id": 64,
+        "question": "What is the purpose of using the spread operator (...) when passing props to a React component?",
+        "options": [
+            "It improves performance by reducing the size of the props object.",
+            "It passes each property as separate props to the component.",
+            "It combines all props into a single object for the component.",
+            "It prevents unnecessary re-renders by memoizing the props."
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• عملگر spread در زمان ارسال props باعث می‌شود ویژگی‌های یک شیء به صورت جداگانه به کامپوننت منتقل شوند\n" +
+            "- به عنوان مثال، اگر شیء شامل title و author باشد، این دو به صورت جداگانه به عنوان props در دسترس خواهند بود\n" +
+            "- این روش عملکرد را بهبود نمی‌دهد بلکه فقط کد را خواناتر می‌کند\n" +
+            "- props جدید ساخته نمی‌شود بلکه پراپرتی‌های شیء به همان شکل گسترش می‌یابند"
+    },
+    {
+        "id": 65,
+        "question": "Why is the key prop important when rendering a list of items in React?",
+        "options": [
+            "It ensures the props are passed correctly to the child components.",
+            "It prevents the application from throwing an error during rendering.",
+            "It automatically provides a unique ID for each list element in the DOM.",
+            "It uniquely identifies a list item to optimize rendering and updates efficiently.",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• ویژگی key به React کمک می‌کند تا هر آیتم در لیست را به‌طور یکتا شناسایی کند\n" +
+            "- این شناسایی باعث بهینه‌سازی فرآیند diffing و جلوگیری از render غیرضروری می‌شود\n" +
+            "- در صورت عدم وجود key، React هشدار می‌دهد اما الزاماً خطا رخ نمی‌دهد\n" +
+            "- key برای props یا ایجاد ID خودکار در DOM استفاده نمی‌شود"
+    },
+    {
+        "id": 66,
+        "question": "How can you pass the event object in an inline event handler in React?",
+        "options": [
+            "By accessing it directly within the onChange handler.",
+            "By using an inline arrow function to pass the event object to the handler.",
+            "By declaring a global variable named e to represent the event object.",
+            "By importing the event object from the React library manually."
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• در React، برای دریافت event باید از تابع پیکان (arrow function) استفاده کرد که رویداد را به عنوان آرگومان دریافت می‌کند\n" +
+            "- مثال: (e) => handleChange(e) یا مستقیماً (e) => console.log(e.target.value)\n" +
+            "- event به‌صورت خودکار به تابع منتقل نمی‌شود مگر آن‌که در تعریف تابع اشاره شود\n" +
+            "- نیازی به تعریف متغیر global یا import جداگانه برای event نیست"
+    },
+    {
+        "id": 67,
+        "question": "What happens when you use an inline function directly in an onClick event in React?",
+        "options": [
+            "The function only runs when the button is clicked.",
+            "The function runs immediately when the component renders.",
+            "The function cannot use variables from outside its scope.",
+            "The function must be defined outside the component to work."
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• در React اگر تابع ناشناس مستقیماً در رویداد onClick نوشته شود، فقط هنگام کلیک اجرا می‌شود\n" +
+            "- این روش باعث می‌شود تابع در زمان render فراخوانی نشود\n" +
+            "- تابع می‌تواند به متغیرها و stateهای بیرونی دسترسی داشته باشد\n" +
+            "- نیازی نیست تابع خارج از کامپوننت تعریف شود مگر برای بهینه‌سازی"
     }
 
 
