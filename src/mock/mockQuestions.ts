@@ -19022,6 +19022,86 @@ export const mockQuestions: Question[] = [
             "- این روش باعث می‌شود تابع در زمان render فراخوانی نشود\n" +
             "- تابع می‌تواند به متغیرها و stateهای بیرونی دسترسی داشته باشد\n" +
             "- نیازی نیست تابع خارج از کامپوننت تعریف شود مگر برای بهینه‌سازی"
+    },
+    {
+        "id": 68,
+        "question": "What is the default file where the root React component is rendered in a create-react-app project?",
+        "options": [
+            "public/index.html",
+            "src/App.js",
+            "src/index.js",
+            "src/main.js"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• در پروژه‌هایی که با create-react-app ساخته می‌شوند، ریشه برنامه در فایل src/index.js رندر می‌شود\n" +
+            "- این فایل کامپوننت <App /> را در عنصر DOM با شناسه root که در public/index.html قرار دارد، mount می‌کند\n" +
+            "- فایل App.js تنها کامپوننت اصلی برنامه است، نه محل رندر\n" +
+            "- فایل index.html صرفاً ساختار پایه HTML را فراهم می‌کند و شامل هیچ کد React نیست"
+    },
+    {
+        "id": 69,
+        "question": "What is a fundamental rule about JSX syntax in React components?",
+        "options": [
+            "JSX can include multiple sibling elements without a parent.",
+            "JSX must return a single element as its parent.",
+            "JSX allows comments using // directly within the HTML structure.",
+            "JSX requires every element to have a key prop."
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• در JSX باید تمام المنت‌ها درون یک المنت والد (مثل div یا Fragment) قرار گیرند\n" +
+            "- JSX نمی‌تواند چند المنت هم‌سطح را بدون والد برگرداند\n" +
+            "- برای نوشتن کامنت باید از {/* comment */} استفاده کرد، نه //\n" +
+            "- ویژگی key فقط هنگام ساخت لیست الزامی است، نه برای تمام المنت‌ها"
+    },
+    {
+        "id": 70,
+        "question": "When using the style prop in JSX, what is the correct syntax?",
+        "options": [
+            "The value should be an object with camelCase property names.",
+            "The value can only be imported from an external CSS file.",
+            "The value should be a string with CSS rules.",
+            "The value must be written in a separate style tag inside JSX."
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• در JSX ویژگی style باید به‌صورت یک شیء جاوااسکریپت تعریف شود\n" +
+            "- نام ویژگی‌ها باید به شکل camelCase نوشته شوند (مثل backgroundColor به‌جای background-color)\n" +
+            "- استایل‌ها نمی‌توانند به‌صورت رشته CSS معمولی نوشته شوند\n" +
+            "- برای استایل‌های خارجی باید از فایل CSS مجزا استفاده کرد، نه از ویژگی style"
+    },
+    {
+        "id": 71,
+        "question": "In React, why is using camelCase important for attribute names in JSX?",
+        "options": [
+            "Because camelCase attributes ensure compatibility with CSS frameworks.",
+            "Because React does not support traditional HTML attribute naming conventions.",
+            "Because camelCase automatically optimizes rendering performance.",
+            "Because JSX attributes map directly to JavaScript properties.",
+        ],
+        "correctOption": 3,
+        "points": 10,
+        "explanation": "• در JSX ویژگی‌ها (attributes) در واقع به ویژگی‌های جاوااسکریپت نگاشت می‌شوند\n" +
+            "- به همین دلیل باید از نام‌گذاری camelCase استفاده شود (مثل onClick به‌جای onclick)\n" +
+            "- این ساختار با نحوه‌ی تعریف پراپرتی‌ها در DOM مطابقت دارد\n" +
+            "- ربطی به فریم‌ورک‌های CSS یا بهینه‌سازی عملکرد ندارد"
+    },
+    {
+        "id": 72,
+        "question": "Which of the following statements about import in React is true?",
+        "options": [
+            "Named imports cannot coexist with default imports in the same file.",
+            "Default imports can include multiple variables in a single statement.",
+            "Named imports require the same name as the exported variable.",
+            "Default imports must always be renamed using the 'as' keyword."
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• در importهای نام‌دار باید نام دقیق متغیر export شده را استفاده کرد\n" +
+            "- مثال: export const Button → import { Button } from './Button'\n" +
+            "- default import فقط یک مقدار را دریافت می‌کند ولی می‌تواند همراه named import استفاده شود\n" +
+            "- استفاده از as فقط برای تغییر نام اختیاری است و اجباری نیست"
     }
 
 
