@@ -4890,7 +4890,7 @@ export const mockQuestions: Question[] = [
             "- فقط فیلدهای تغییر یافته ارسال می‌شود\n" +
             "- کم‌حجم‌تر از PUT\n" +
             "- برای update جزئی مناسب است\n" +
-           "- مثل تغییر فقط email کاربر"
+            "- مثل تغییر فقط email کاربر"
     },
     {
         "id": 305,
@@ -5022,11 +5022,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 10,
-         "explanation": "• DELETE برای حذف resource\n" +
-             "- order کاملاً از database حذف می‌شود\n" +
-             "- idempotent است\n" +
-             "- استاندارد RESTful برای deletion\n" +
-             "- معمولاً 204 No Content return می‌کند"
+        "explanation": "• DELETE برای حذف resource\n" +
+            "- order کاملاً از database حذف می‌شود\n" +
+            "- idempotent است\n" +
+            "- استاندارد RESTful برای deletion\n" +
+            "- معمولاً 204 No Content return می‌کند"
     },
     {
         "id": 313,
@@ -5039,11 +5039,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-         "explanation": "• همیشه با input یکسان، output یکسان\n" +
-             "- بدون side effects (تغییر external state)\n" +
-             "- نتیجه فقط به arguments بستگی دارد\n" +
-             "- deterministic و predictable\n" +
-             "- Redux reducers باید pure باشند"
+        "explanation": "• همیشه با input یکسان، output یکسان\n" +
+            "- بدون side effects (تغییر external state)\n" +
+            "- نتیجه فقط به arguments بستگی دارد\n" +
+            "- deterministic و predictable\n" +
+            "- Redux reducers باید pure باشند"
     },
     {
         "id": 314,
@@ -5056,11 +5056,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-         "explanation": "• fetch کردن data مستقیماً در render\n" +
-             "- تغییر دادن متغیرهای external\n" +
-             "- تکیه بر Date.now() یا Math.random()\n" +
-             "- mutating props یا state\n" +
-             "- side effects باید در useEffect باشند"
+        "explanation": "• fetch کردن data مستقیماً در render\n" +
+            "- تغییر دادن متغیرهای external\n" +
+            "- تکیه بر Date.now() یا Math.random()\n" +
+            "- mutating props یا state\n" +
+            "- side effects باید در useEffect باشند"
     },
     {
         "id": 315,
@@ -5073,11 +5073,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• useMemo نتیجه را cache می‌کند\n" +
-             "- با dependencies یکسان، نتیجه باید یکسان باشد\n" +
-             "- impure functions نتایج inconsistent دارند\n" +
-             "- caching با impurity کار نمی‌کند\n" +
-             "- باعث bugs پنهان می‌شود"
+        "explanation": "• useMemo نتیجه را cache می‌کند\n" +
+            "- با dependencies یکسان، نتیجه باید یکسان باشد\n" +
+            "- impure functions نتایج inconsistent دارند\n" +
+            "- caching با impurity کار نمی‌کند\n" +
+            "- باعث bugs پنهان می‌شود"
     },
     {
         "id": 316,
@@ -5090,11 +5090,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-         "explanation": "• logging به console یا calling APIs\n" +
-             "- mutating state مستقیماً\n" +
-             "- استفاده از Date.now() یا Math.random()\n" +
-             "- reading/writing external variables\n" +
-             "- reducers باید فقط state جدید return کنند"
+        "explanation": "• logging به console یا calling APIs\n" +
+            "- mutating state مستقیماً\n" +
+            "- استفاده از Date.now() یا Math.random()\n" +
+            "- reading/writing external variables\n" +
+            "- reducers باید فقط state جدید return کنند"
     },
     {
         "id": 317,
@@ -5107,11 +5107,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• normalize کردن data برای جلوگیری از duplication\n" +
-             "- از deep nesting اجتناب کنید\n" +
-             "- flat structure بهتر از nested است\n" +
-             "- استفاده از IDs برای relations\n" +
-             "- derived values را در state ذخیره نکنید"
+        "explanation": "• normalize کردن data برای جلوگیری از duplication\n" +
+            "- از deep nesting اجتناب کنید\n" +
+            "- flat structure بهتر از nested است\n" +
+            "- استفاده از IDs برای relations\n" +
+            "- derived values را در state ذخیره نکنید"
     },
     {
         "id": 318,
@@ -5124,11 +5124,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-         "explanation": "• updates آسان‌تر و consistent تر\n" +
-             "- از data duplication جلوگیری می‌کند\n" +
-             "- performance بهتر برای lookups\n" +
-             "- relationships واضح‌تر با IDs\n" +
-             "- شبیه database normalization"
+        "explanation": "• updates آسان‌تر و consistent تر\n" +
+            "- از data duplication جلوگیری می‌کند\n" +
+            "- performance بهتر برای lookups\n" +
+            "- relationships واضح‌تر با IDs\n" +
+            "- شبیه database normalization"
     },
     {
         "id": 319,
@@ -5141,11 +5141,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• caching خودکار برای performance\n" +
-             "- background refetching برای freshness\n" +
-             "- loading و error states built-in\n" +
-             "- optimistic updates و mutations\n" +
-             "- کد کمتر و ساده‌تر از manual fetch"
+        "explanation": "• caching خودکار برای performance\n" +
+            "- background refetching برای freshness\n" +
+            "- loading و error states built-in\n" +
+            "- optimistic updates و mutations\n" +
+            "- کد کمتر و ساده‌تر از manual fetch"
     },
     {
         "id": 320,
@@ -5158,11 +5158,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-         "explanation": "• state management پیچیده را ساده می‌کند\n" +
-             "- DOM manipulation خودکار و optimized\n" +
-             "- component-based architecture برای reusability\n" +
-             "- declarative programming برای readability\n" +
-             "- vanilla JavaScript برای apps بزرگ سخت است"
+        "explanation": "• state management پیچیده را ساده می‌کند\n" +
+            "- DOM manipulation خودکار و optimized\n" +
+            "- component-based architecture برای reusability\n" +
+            "- declarative programming برای readability\n" +
+            "- vanilla JavaScript برای apps بزرگ سخت است"
     },
     {
         "id": 321,
@@ -5175,11 +5175,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• Virtual DOM برای efficient updates\n" +
-             "- declarative UI به جای imperative\n" +
-             "- component reusability و composition\n" +
-             "- state management built-in\n" +
-             "- ecosystem غنی از libraries و tools"
+        "explanation": "• Virtual DOM برای efficient updates\n" +
+            "- declarative UI به جای imperative\n" +
+            "- component reusability و composition\n" +
+            "- state management built-in\n" +
+            "- ecosystem غنی از libraries و tools"
     },
     {
         "id": 322,
@@ -5192,11 +5192,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-         "explanation": "• components قابل reuse در جاهای مختلف\n" +
-             "- isolation و encapsulation بهتر\n" +
-             "- testing آسان‌تر به صورت جداگانه\n" +
-             "- maintenance و scaling ساده‌تر\n" +
-             "- team collaboration بهتر"
+        "explanation": "• components قابل reuse در جاهای مختلف\n" +
+            "- isolation و encapsulation بهتر\n" +
+            "- testing آسان‌تر به صورت جداگانه\n" +
+            "- maintenance و scaling ساده‌تر\n" +
+            "- team collaboration بهتر"
     },
     {
         "id": 323,
@@ -5209,11 +5209,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-         "explanation": "• jQuery برای ساده‌سازی DOM manipulation\n" +
-             "- cross-browser compatibility را حل می‌کرد\n" +
-             "- AJAX requests را آسان می‌کرد\n" +
-             "- animations و effects built-in\n" +
-             "- قبل از frameworks مدرن بسیار محبوب بود"
+        "explanation": "• jQuery برای ساده‌سازی DOM manipulation\n" +
+            "- cross-browser compatibility را حل می‌کرد\n" +
+            "- AJAX requests را آسان می‌کرد\n" +
+            "- animations و effects built-in\n" +
+            "- قبل از frameworks مدرن بسیار محبوب بود"
     },
     {
         "id": 324,
@@ -5226,11 +5226,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-         "explanation": "• jQuery structure و state management نداشت\n" +
-             "- برای SPAs پیچیده کافی نبود\n" +
-             "- component-based architecture نداشت\n" +
-             "- data binding و reactivity نداشت\n" +
-             "- React و Vue این مشکلات را حل کردند"
+        "explanation": "• jQuery structure و state management نداشت\n" +
+            "- برای SPAs پیچیده کافی نبود\n" +
+            "- component-based architecture نداشت\n" +
+            "- data binding و reactivity نداشت\n" +
+            "- React و Vue این مشکلات را حل کردند"
     },
     {
         "id": 325,
@@ -5243,11 +5243,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-         "explanation": "• web application در browser اجرا می‌شود\n" +
-             "- از server data می‌گیرد\n" +
-             "- نیازی به installation ندارد\n" +
-             "- cross-platform است\n" +
-             "- desktop app روی OS مستقیماً اجرا می‌شود"
+        "explanation": "• web application در browser اجرا می‌شود\n" +
+            "- از server data می‌گیرد\n" +
+            "- نیازی به installation ندارد\n" +
+            "- cross-platform است\n" +
+            "- desktop app روی OS مستقیماً اجرا می‌شود"
     },
     {
         "id": 326,
@@ -5260,11 +5260,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-         "explanation": "• React Query server state را مدیریت می‌کند\n" +
-             "- fetching، caching و synchronization\n" +
-             "- loading و error states خودکار\n" +
-             "- background refetching\n" +
-             "- alternative به Redux برای server data"
+        "explanation": "• React Query server state را مدیریت می‌کند\n" +
+            "- fetching، caching و synchronization\n" +
+            "- loading و error states خودکار\n" +
+            "- background refetching\n" +
+            "- alternative به Redux برای server data"
     },
     {
         "id": 327,
@@ -5277,11 +5277,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-         "explanation": "• frameworks state management را ساده می‌کنند\n" +
-             "- component-based architecture\n" +
-             "- reactivity و data binding\n" +
-             "- routing و navigation\n" +
-             "- vanilla JS برای apps پیچیده سخت است"
+        "explanation": "• frameworks state management را ساده می‌کنند\n" +
+            "- component-based architecture\n" +
+            "- reactivity و data binding\n" +
+            "- routing و navigation\n" +
+            "- vanilla JS برای apps پیچیده سخت است"
     },
     {
         "id": 328,
@@ -5294,11 +5294,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-         "explanation": "• web page بیشتر static و informational\n" +
-             "- web application interactive و functional\n" +
-             "- app دارای user actions و state\n" +
-             "- app مثل Gmail، page مثل blog\n" +
-             "- app معمولاً نیاز به backend دارد"
+        "explanation": "• web page بیشتر static و informational\n" +
+            "- web application interactive و functional\n" +
+            "- app دارای user actions و state\n" +
+            "- app مثل Gmail، page مثل blog\n" +
+            "- app معمولاً نیاز به backend دارد"
     },
     {
         "id": 329,
@@ -5311,11 +5311,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-         "explanation": "• React برای UI پیچیده با state زیاد\n" +
-             "- data که frequently تغییر می‌کند\n" +
-             "- reusable components لازم است\n" +
-             "- single page applications\n" +
-             "- plain JS برای static sites کافی است"
+        "explanation": "• React برای UI پیچیده با state زیاد\n" +
+            "- data که frequently تغییر می‌کند\n" +
+            "- reusable components لازم است\n" +
+            "- single page applications\n" +
+            "- plain JS برای static sites کافی است"
     },
     {
         "id": 330,
@@ -5328,11 +5328,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 10,
-         "explanation": "• UI همیشه آخرین data را نشان می‌دهد\n" +
-             "- وقتی data تغییر کند، UI update شود\n" +
-             "- بدون manual DOM manipulation\n" +
-             "- React این کار را خودکار انجام می‌دهد\n" +
-             "- consistency بین state و view"
+        "explanation": "• UI همیشه آخرین data را نشان می‌دهد\n" +
+            "- وقتی data تغییر کند، UI update شود\n" +
+            "- بدون manual DOM manipulation\n" +
+            "- React این کار را خودکار انجام می‌دهد\n" +
+            "- consistency بین state و view"
     },
     {
         "id": 331,
@@ -5345,11 +5345,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• React از state و re-rendering استفاده می‌کند\n" +
-             "- تغییر state باعث re-render می‌شود\n" +
-             "- Virtual DOM برای efficient updates\n" +
-             "- declarative approach\n" +
-             "- developer فقط state را update می‌کند"
+        "explanation": "• React از state و re-rendering استفاده می‌کند\n" +
+            "- تغییر state باعث re-render می‌شود\n" +
+            "- Virtual DOM برای efficient updates\n" +
+            "- declarative approach\n" +
+            "- developer فقط state را update می‌کند"
     },
     {
         "id": 332,
@@ -5362,11 +5362,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation": "• کاربر باید accurate information ببیند\n" +
-             "- جلوگیری از stale data\n" +
-             "- user experience بهتر\n" +
-             "- trust و reliability\n" +
-             "- real-time updates مهم هستند"
+        "explanation": "• کاربر باید accurate information ببیند\n" +
+            "- جلوگیری از stale data\n" +
+            "- user experience بهتر\n" +
+            "- trust و reliability\n" +
+            "- real-time updates مهم هستند"
     },
     {
         "id": 333,
@@ -5379,11 +5379,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-         "explanation": "• حرکت بین nodes در DOM tree\n" +
-             "- دسترسی به parent، children، siblings\n" +
-             "- parentNode، childNodes، nextSibling\n" +
-             "- برای navigation در HTML structure\n" +
-             "- در React کمتر نیاز است"
+        "explanation": "• حرکت بین nodes در DOM tree\n" +
+            "- دسترسی به parent، children، siblings\n" +
+            "- parentNode، childNodes، nextSibling\n" +
+            "- برای navigation در HTML structure\n" +
+            "- در React کمتر نیاز است"
     },
     {
         "id": 334,
@@ -5396,11 +5396,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption":3,
         "points": 20,
-         "explanation": "• cross-browser compatibility آسان\n" +
-             "- syntax ساده و readable\n" +
-             "- DOM manipulation راحت\n" +
-             "- AJAX built-in\n" +
-             "- زمانی که browsers inconsistent بودند"
+        "explanation": "• cross-browser compatibility آسان\n" +
+            "- syntax ساده و readable\n" +
+            "- DOM manipulation راحت\n" +
+            "- AJAX built-in\n" +
+            "- زمانی که browsers inconsistent بودند"
     },
     {
         "id": 335,
@@ -5413,11 +5413,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-         "explanation": "• declarative: چه می‌خواهید نه چگونه\n" +
-             "- component-based: reusable pieces\n" +
-             "- state-driven: UI از state می‌آید\n" +
-             "- JavaScript library نه framework کامل\n" +
-             "- برای building UIs طراحی شده"
+        "explanation": "• declarative: چه می‌خواهید نه چگونه\n" +
+            "- component-based: reusable pieces\n" +
+            "- state-driven: UI از state می‌آید\n" +
+            "- JavaScript library نه framework کامل\n" +
+            "- برای building UIs طراحی شده"
     },
     {
         "id": 336,
@@ -5430,11 +5430,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• شما describe می‌کنید UI چگونه باید باشد\n" +
-             "- نه step-by-step چگونه بسازید\n" +
-             "- React implementation را handle می‌کند\n" +
-             "- مثل HTML declarative است\n" +
-             "- opposite از imperative"
+        "explanation": "• شما describe می‌کنید UI چگونه باید باشد\n" +
+            "- نه step-by-step چگونه بسازید\n" +
+            "- React implementation را handle می‌کند\n" +
+            "- مثل HTML declarative است\n" +
+            "- opposite از imperative"
     },
     {
         "id": 337,
@@ -5447,11 +5447,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation": "• imperative: چگونه کاری انجام شود (HOW)\n" +
-             "- step-by-step instructions\n" +
-             "- declarative: چه کاری انجام شود (WHAT)\n" +
-             "- result را describe می‌کنید\n" +
-             "- imperative: DOM manipulation manual"
+        "explanation": "• imperative: چگونه کاری انجام شود (HOW)\n" +
+            "- step-by-step instructions\n" +
+            "- declarative: چه کاری انجام شود (WHAT)\n" +
+            "- result را describe می‌کنید\n" +
+            "- imperative: DOM manipulation manual"
     },
     {
         "id": 338,
@@ -5464,11 +5464,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-         "explanation": "• case reducers هر action type را handle می‌کنند\n" +
-             "- مثل cases در switch statement\n" +
-             "- state و action می‌گیرند\n" +
-             "- state جدید return می‌کنند\n" +
-             "- در createSlice define می‌شوند"
+        "explanation": "• case reducers هر action type را handle می‌کنند\n" +
+            "- مثل cases در switch statement\n" +
+            "- state و action می‌گیرند\n" +
+            "- state جدید return می‌کنند\n" +
+            "- در createSlice define می‌شوند"
     },
     {
         id: 339,
@@ -5551,11 +5551,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-         "explanation": "• server state caching در سراسر app\n" +
-             "- automatic background refetching\n" +
-             "- data بین components share می‌شود\n" +
-             "- loading و error states unified\n" +
-             "- کاهش boilerplate code"
+        "explanation": "• server state caching در سراسر app\n" +
+            "- automatic background refetching\n" +
+            "- data بین components share می‌شود\n" +
+            "- loading و error states unified\n" +
+            "- کاهش boilerplate code"
     },
     {
         "id": 344,
@@ -5568,11 +5568,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-         "explanation": "• data reuse بدون API calls مجدد\n" +
-             "- سرعت بالاتر و UX بهتر\n" +
-             "- کاهش server load\n" +
-             "- کاهش bandwidth usage\n" +
-             "- instant navigation بین صفحات"
+        "explanation": "• data reuse بدون API calls مجدد\n" +
+            "- سرعت بالاتر و UX بهتر\n" +
+            "- کاهش server load\n" +
+            "- کاهش bandwidth usage\n" +
+            "- instant navigation بین صفحات"
     },
     {
         "id": 345,
@@ -5585,11 +5585,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation": "• cached data فوراً available است\n" +
-             "- no loading spinners برای cached data\n" +
-             "- کمتر network requests\n" +
-             "- background updates برای freshness\n" +
-             "- perceived performance بسیار بهتر"
+        "explanation": "• cached data فوراً available است\n" +
+            "- no loading spinners برای cached data\n" +
+            "- کمتر network requests\n" +
+            "- background updates برای freshness\n" +
+            "- perceived performance بسیار بهتر"
     },
     {
         "id": 346,
@@ -5602,11 +5602,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-         "explanation": "• instant page loads با cached data\n" +
-             "- در background fresh data می‌آورد\n" +
-             "- stale-while-revalidate strategy\n" +
-             "- no blank screens\n" +
-             "- smooth و responsive UI"
+        "explanation": "• instant page loads با cached data\n" +
+            "- در background fresh data می‌آورد\n" +
+            "- stale-while-revalidate strategy\n" +
+            "- no blank screens\n" +
+            "- smooth و responsive UI"
     },
     {
         "id": 347,
@@ -5619,11 +5619,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 10,
-         "explanation": "• staleTime مدت زمان fresh بودن data\n" +
-             "- تا این مدت refetch نمی‌شود\n" +
-             "- staleTime: 60000 یعنی 1 دقیقه fresh\n" +
-             "- پیش‌فرض 0 (بلافاصله stale)\n" +
-             "- برای static data بالا set کنید"
+        "explanation": "• staleTime مدت زمان fresh بودن data\n" +
+            "- تا این مدت refetch نمی‌شود\n" +
+            "- staleTime: 60000 یعنی 1 دقیقه fresh\n" +
+            "- پیش‌فرض 0 (بلافاصله stale)\n" +
+            "- برای static data بالا set کنید"
     },
     {
         "id": 348,
@@ -5637,11 +5637,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• staleTime: مدت fresh بودن data\n" +
-             "- cacheTime: مدت ماندن در memory\n" +
-             "- staleTime برای refetch timing\n" +
-             "- cacheTime برای garbage collection\n" +
-             "- staleTime معمولاً کوتاه‌تر"
+        "explanation": "• staleTime: مدت fresh بودن data\n" +
+            "- cacheTime: مدت ماندن در memory\n" +
+            "- staleTime برای refetch timing\n" +
+            "- cacheTime برای garbage collection\n" +
+            "- staleTime معمولاً کوتاه‌تر"
     },
     {
         "id": 349,
@@ -5654,11 +5654,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-         "explanation": "• برای data که کم تغییر می‌کند\n" +
-             "- مثل user profile، settings\n" +
-             "- کاهش unnecessary refetches\n" +
-             "- بهبود performance\n" +
-             "- کاهش server load"
+        "explanation": "• برای data که کم تغییر می‌کند\n" +
+            "- مثل user profile، settings\n" +
+            "- کاهش unnecessary refetches\n" +
+            "- بهبود performance\n" +
+            "- کاهش server load"
     },
     {
         "id": 350,
@@ -5671,11 +5671,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-         "explanation": "• object با data، isLoading، error\n" +
-             "- isSuccess، isFetching، isError\n" +
-             "- refetch function\n" +
-             "- status: 'loading' | 'error' | 'success'\n" +
-             "- همه چیز برای UI state management"
+        "explanation": "• object با data، isLoading، error\n" +
+            "- isSuccess، isFetching، isError\n" +
+            "- refetch function\n" +
+            "- status: 'loading' | 'error' | 'success'\n" +
+            "- همه چیز برای UI state management"
     },
     {
         "id": 351,
@@ -5688,11 +5688,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• mutate برای useMutation است نه useQuery\n" +
-             "- useQuery فقط برای reading\n" +
-             "- useMutation برای creating/updating/deleting\n" +
-             "- data، isLoading، error در useQuery\n" +
-             "- mutate، mutateAsync در useMutation"
+        "explanation": "• mutate برای useMutation است نه useQuery\n" +
+            "- useQuery فقط برای reading\n" +
+            "- useMutation برای creating/updating/deleting\n" +
+            "- data، isLoading، error در useQuery\n" +
+            "- mutate، mutateAsync در useMutation"
     },
     {
         "id": 352,
@@ -5705,11 +5705,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-         "explanation": "• isLoading برای showing spinners\n" +
-             "- isError برای error messages\n" +
-             "- isFetching برای background updates\n" +
-             "- instant feedback به user\n" +
-             "- professional UX"
+        "explanation": "• isLoading برای showing spinners\n" +
+            "- isError برای error messages\n" +
+            "- isFetching برای background updates\n" +
+            "- instant feedback به user\n" +
+            "- professional UX"
     },
     {
         "id": 353,
@@ -5722,11 +5722,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-         "explanation": "• Strapi headless CMS است\n" +
-             "- content management با admin panel\n" +
-             "- auto-generate REST/GraphQL APIs\n" +
-             "- backend بدون coding زیاد\n" +
-             "- برای content-heavy apps"
+        "explanation": "• Strapi headless CMS است\n" +
+            "- content management با admin panel\n" +
+            "- auto-generate REST/GraphQL APIs\n" +
+            "- backend بدون coding زیاد\n" +
+            "- برای content-heavy apps"
     },
     {
         "id": 354,
@@ -5739,11 +5739,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation": "• headless: frontend-agnostic\n" +
-             "- API-first approach\n" +
-             "- customizable با code\n" +
-             "- modern tech stack (Node.js)\n" +
-             "- WordPress monolithic است"
+        "explanation": "• headless: frontend-agnostic\n" +
+            "- API-first approach\n" +
+            "- customizable با code\n" +
+            "- modern tech stack (Node.js)\n" +
+            "- WordPress monolithic است"
     },
     {
         "id": 355,
@@ -5756,11 +5756,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-         "explanation": "• API-first برای any frontend\n" +
-             "- JavaScript/TypeScript stack\n" +
-             "- customization بیشتر\n" +
-             "- modern architecture\n" +
-             "- WordPress PHP-based و legacy"
+        "explanation": "• API-first برای any frontend\n" +
+            "- JavaScript/TypeScript stack\n" +
+            "- customization بیشتر\n" +
+            "- modern architecture\n" +
+            "- WordPress PHP-based و legacy"
     },
     {
         "id": 356,
@@ -5773,11 +5773,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption":2,
         "points": 10,
-         "explanation": "• development: admin panel enabled\n" +
-             "- hot-reloading و debugging\n" +
-             "- production: optimized و secure\n" +
-             "- admin panel معمولاً disabled\n" +
-             "- environment variables متفاوت"
+        "explanation": "• development: admin panel enabled\n" +
+            "- hot-reloading و debugging\n" +
+            "- production: optimized و secure\n" +
+            "- admin panel معمولاً disabled\n" +
+            "- environment variables متفاوت"
     },
     {
         "id": 357,
@@ -5790,11 +5790,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-         "explanation": "• automatic background refetching\n" +
-             "- refetchOnWindowFocus: true\n" +
-             "- refetchOnReconnect\n" +
-             "- stale-while-revalidate\n" +
-             "- data همیشه تا حد ممکن fresh"
+        "explanation": "• automatic background refetching\n" +
+            "- refetchOnWindowFocus: true\n" +
+            "- refetchOnReconnect\n" +
+            "- stale-while-revalidate\n" +
+            "- data همیشه تا حد ممکن fresh"
     },
     {
         "id": 358,
@@ -5807,11 +5807,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• stale-while-revalidate strategy\n" +
-             "- cached data سریع نشان می‌دهد\n" +
-             "- در background refetch می‌کند\n" +
-             "- UI با fresh data update می‌شود\n" +
-             "- best of both worlds"
+        "explanation": "• stale-while-revalidate strategy\n" +
+            "- cached data سریع نشان می‌دهد\n" +
+            "- در background refetch می‌کند\n" +
+            "- UI با fresh data update می‌شود\n" +
+            "- best of both worlds"
     },
     {
         "id": 359,
@@ -5824,11 +5824,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption":2,
         "points": 30,
-         "explanation": "• caching کاهش network requests\n" +
-             "- background updates بدون blocking UI\n" +
-             "- smart refetch strategies\n" +
-             "- deduplication از duplicate requests\n" +
-             "- ترکیب performance و freshness"
+        "explanation": "• caching کاهش network requests\n" +
+            "- background updates بدون blocking UI\n" +
+            "- smart refetch strategies\n" +
+            "- deduplication از duplicate requests\n" +
+            "- ترکیب performance و freshness"
     },
     {
         "id": 360,
@@ -5841,11 +5841,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-         "explanation": "• loading data قبل از نیاز واقعی\n" +
-             "- در background و silent\n" +
-             "- data در cache ready\n" +
-             "- instant navigation\n" +
-             "- predictive data loading"
+        "explanation": "• loading data قبل از نیاز واقعی\n" +
+            "- در background و silent\n" +
+            "- data در cache ready\n" +
+            "- instant navigation\n" +
+            "- predictive data loading"
     },
     {
         "id": 361,
@@ -5858,11 +5858,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation": "• کاهش perceived loading time\n" +
-             "- instant page transitions\n" +
-             "- بهتر UX\n" +
-             "- data از قبل آماده\n" +
-             "- مثل native apps"
+        "explanation": "• کاهش perceived loading time\n" +
+            "- instant page transitions\n" +
+            "- بهتر UX\n" +
+            "- data از قبل آماده\n" +
+            "- مثل native apps"
     },
     {
         "id": 362,
@@ -5875,11 +5875,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-         "explanation": "• prefetch data را در cache می‌گذارد\n" +
-             "- useQuery با همان key فوراً data دارد\n" +
-             "- no loading state\n" +
-             "- background refetch اگر stale\n" +
-             "- seamless experience"
+        "explanation": "• prefetch data را در cache می‌گذارد\n" +
+            "- useQuery با همان key فوراً data دارد\n" +
+            "- no loading state\n" +
+            "- background refetch اگر stale\n" +
+            "- seamless experience"
     },
     {
         "id": 363,
@@ -5892,11 +5892,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-         "explanation": "• events از child به parent travel می‌کنند\n" +
-             "- از target element به document\n" +
-             "- به ترتیب ancestors\n" +
-             "- default behavior در DOM\n" +
-             "- می‌توان با stopPropagation جلوگیری کرد"
+        "explanation": "• events از child به parent travel می‌کنند\n" +
+            "- از target element به document\n" +
+            "- به ترتیب ancestors\n" +
+            "- default behavior در DOM\n" +
+            "- می‌توان با stopPropagation جلوگیری کرد"
     },
     {
         "id": 364,
@@ -5909,11 +5909,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-         "explanation": "• events از parent به child travel می‌کنند\n" +
-             "- از document به target element\n" +
-             "- قبل از bubbling\n" +
-             "- addEventListener(event, handler, true)\n" +
-             "- کمتر استفاده می‌شود"
+        "explanation": "• events از parent به child travel می‌کنند\n" +
+            "- از document به target element\n" +
+            "- قبل از bubbling\n" +
+            "- addEventListener(event, handler, true)\n" +
+            "- کمتر استفاده می‌شود"
     },
     {
         "id": 365,
@@ -5926,11 +5926,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• 1. Capturing: document → target\n" +
-             "- 2. Target: روی element خود\n" +
-             "- 3. Bubbling: target → document\n" +
-             "- capturing → target → bubbling\n" +
-             "- همیشه این ترتیب"
+        "explanation": "• 1. Capturing: document → target\n" +
+            "- 2. Target: روی element خود\n" +
+            "- 3. Bubbling: target → document\n" +
+            "- capturing → target → bubbling\n" +
+            "- همیشه این ترتیب"
     },
     {
         "id": 366,
@@ -5943,11 +5943,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation": "• addEventListener با third argument: true\n" +
-             "- element.addEventListener('click', handler, true)\n" +
-             "- یا { capture: true }\n" +
-             "- false یا omit برای bubbling\n" +
-             "- پیش‌فرض bubbling است"
+        "explanation": "• addEventListener با third argument: true\n" +
+            "- element.addEventListener('click', handler, true)\n" +
+            "- یا { capture: true }\n" +
+            "- false یا omit برای bubbling\n" +
+            "- پیش‌فرض bubbling است"
     },
     {
         "id": 367,
@@ -5960,11 +5960,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• جلوگیری از continue کردن event\n" +
-             "- در bubbling یا capturing\n" +
-             "- parent handlers اجرا نمی‌شوند\n" +
-             "- فقط current element\n" +
-             "- preventDefault متفاوت است"
+        "explanation": "• جلوگیری از continue کردن event\n" +
+            "- در bubbling یا capturing\n" +
+            "- parent handlers اجرا نمی‌شوند\n" +
+            "- فقط current element\n" +
+            "- preventDefault متفاوت است"
     },
     {
         "id": 368,
@@ -5977,11 +5977,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-         "explanation": "• وقتی می‌خواهید parent زودتر handle کند\n" +
-             "- قبل از child elements\n" +
-             "- برای global handlers\n" +
-             "- event delegation خاص\n" +
-             "- کمتر common است"
+        "explanation": "• وقتی می‌خواهید parent زودتر handle کند\n" +
+            "- قبل از child elements\n" +
+            "- برای global handlers\n" +
+            "- event delegation خاص\n" +
+            "- کمتر common است"
     },
     {
         "id": 369,
@@ -5994,11 +5994,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-         "explanation": "• event متوقف می‌شود\n" +
-             "- به target نمی‌رسد\n" +
-             "- bubbling هم اتفاق نمی‌افتد\n" +
-             "- فقط handlers تا آن نقطه اجرا شده‌اند\n" +
-             "- complete stop"
+        "explanation": "• event متوقف می‌شود\n" +
+            "- به target نمی‌رسد\n" +
+            "- bubbling هم اتفاق نمی‌افتد\n" +
+            "- فقط handlers تا آن نقطه اجرا شده‌اند\n" +
+            "- complete stop"
     },
     {
         "id": 370,
@@ -6011,11 +6011,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• یک listener روی parent\n" +
-             "- children events به parent bubble می‌کنند\n" +
-             "- event.target برای تشخیص child\n" +
-             "- efficient برای many children\n" +
-             "- کمتر memory usage"
+        "explanation": "• یک listener روی parent\n" +
+            "- children events به parent bubble می‌کنند\n" +
+            "- event.target برای تشخیص child\n" +
+            "- efficient برای many children\n" +
+            "- کمتر memory usage"
     },
     {
         "id": 371,
@@ -6028,11 +6028,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• element که event روی آن شروع شد\n" +
-             "- original target\n" +
-             "- در bubbling تغییر نمی‌کند\n" +
-             "- currentTarget متفاوت است\n" +
-             "- برای event delegation"
+        "explanation": "• element که event روی آن شروع شد\n" +
+            "- original target\n" +
+            "- در bubbling تغییر نمی‌کند\n" +
+            "- currentTarget متفاوت است\n" +
+            "- برای event delegation"
     },
     {
         "id": 372,
@@ -6045,11 +6045,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• element که handler روی آن است\n" +
-             "- در bubbling تغییر می‌کند\n" +
-             "- همیشه element با listener\n" +
-             "- target ثابت است\n" +
-             "- this نیز currentTarget است"
+        "explanation": "• element که handler روی آن است\n" +
+            "- در bubbling تغییر می‌کند\n" +
+            "- همیشه element با listener\n" +
+            "- target ثابت است\n" +
+            "- this نیز currentTarget است"
     },
     {
         "id": 373,
@@ -6062,11 +6062,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-         "explanation": "• elements جدید نیازی به listener ندارند\n" +
-             "- parent listener handle می‌کند\n" +
-             "- کار با dynamically added elements\n" +
-             "- کمتر listeners\n" +
-             "- better performance"
+        "explanation": "• elements جدید نیازی به listener ندارند\n" +
+            "- parent listener handle می‌کند\n" +
+            "- کار با dynamically added elements\n" +
+            "- کمتر listeners\n" +
+            "- better performance"
     },
     {
         "id": 374,
@@ -6079,11 +6079,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• handlers روی target element اجرا می‌شوند\n" +
-             "- بعد از capturing\n" +
-             "- قبل از bubbling\n" +
-             "- event.target === event.currentTarget\n" +
-             "- middle phase"
+        "explanation": "• handlers روی target element اجرا می‌شوند\n" +
+            "- بعد از capturing\n" +
+            "- قبل از bubbling\n" +
+            "- event.target === event.currentTarget\n" +
+            "- middle phase"
     },
     {
         "id": 375,
@@ -6096,11 +6096,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-         "explanation": "• event.eventPhase property\n" +
-             "- 1: CAPTURING_PHASE\n" +
-             "- 2: AT_TARGET\n" +
-             "- 3: BUBBLING_PHASE\n" +
-             "- numeric constants"
+        "explanation": "• event.eventPhase property\n" +
+            "- 1: CAPTURING_PHASE\n" +
+            "- 2: AT_TARGET\n" +
+            "- 3: BUBBLING_PHASE\n" +
+            "- numeric constants"
     },
     {
         "id": 376,
@@ -6113,11 +6113,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• همه listeners به ترتیب registration اجرا می‌شوند\n" +
-             "- اولین registered، اولین executed\n" +
-             "- مگر stopImmediatePropagation\n" +
-             "- همه در همان phase\n" +
-             "- deterministic order"
+        "explanation": "• همه listeners به ترتیب registration اجرا می‌شوند\n" +
+            "- اولین registered، اولین executed\n" +
+            "- مگر stopImmediatePropagation\n" +
+            "- همه در همان phase\n" +
+            "- deterministic order"
     },
     {
         "id": 377,
@@ -6130,11 +6130,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• ref تغییر می‌کند اما re-render نمی‌شود\n" +
-             "- mutable value\n" +
-             "- state نیست\n" +
-             "- برای values که UI affect نمی‌کنند\n" +
-             "- synchronous update"
+        "explanation": "• ref تغییر می‌کند اما re-render نمی‌شود\n" +
+            "- mutable value\n" +
+            "- state نیست\n" +
+            "- برای values که UI affect نمی‌کنند\n" +
+            "- synchronous update"
     },
     {
         "id": 378,
@@ -6147,11 +6147,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-         "explanation": "• ref object را به ref prop pass کنید\n" +
-             "- <input ref={inputRef} />\n" +
-             "- بعد از mount. inputRef.current\n" +
-             "- DOM element در current\n" +
-             "- null قبل از mount"
+        "explanation": "• ref object را به ref prop pass کنید\n" +
+            "- <input ref={inputRef} />\n" +
+            "- بعد از mount. inputRef.current\n" +
+            "- DOM element در current\n" +
+            "- null قبل از mount"
     },
     {
         "id": 379,
@@ -6164,11 +6164,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-         "explanation": "• فقط در useEffect یا event handlers\n" +
-             "- نه در render body\n" +
-             "- render phase باید pure باشد\n" +
-             "- بعد از mount قابل دسترس\n" +
-             "- side effect محسوب می‌شود"
+        "explanation": "• فقط در useEffect یا event handlers\n" +
+            "- نه در render body\n" +
+            "- render phase باید pure باشد\n" +
+            "- بعد از mount قابل دسترس\n" +
+            "- side effect محسوب می‌شود"
     },
     {
         "id": 380,
@@ -6181,11 +6181,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation": "• object با property به نام current\n" +
-             "- { current: initialValue }\n" +
-             "- current mutable است\n" +
-             "- همان object در renders\n" +
-             "- stable reference"
+        "explanation": "• object با property به نام current\n" +
+            "- { current: initialValue }\n" +
+            "- current mutable است\n" +
+            "- همان object در renders\n" +
+            "- stable reference"
     },
     {
         "id": 381,
@@ -6198,11 +6198,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation": "• useRef تغییر بدون re-render\n" +
-             "- useState تغییر با re-render\n" +
-             "- ref برای non-UI values\n" +
-             "- state برای UI-affecting values\n" +
-             "- useRef synchronous، useState asynchronous"
+        "explanation": "• useRef تغییر بدون re-render\n" +
+            "- useState تغییر با re-render\n" +
+            "- ref برای non-UI values\n" +
+            "- state برای UI-affecting values\n" +
+            "- useRef synchronous، useState asynchronous"
     },
     {
         "id": 382,
@@ -6215,11 +6215,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• useRef همان object را در renders نگه می‌دارد\n" +
-             "- createRef هر بار object جدید می‌سازد\n" +
-             "- useRef برای function components\n" +
-             "- createRef برای class components\n" +
-             "- در function components حتماً useRef"
+        "explanation": "• useRef همان object را در renders نگه می‌دارد\n" +
+            "- createRef هر بار object جدید می‌سازد\n" +
+            "- useRef برای function components\n" +
+            "- createRef برای class components\n" +
+            "- در function components حتماً useRef"
     },
     {
         "id": 383,
@@ -6232,11 +6232,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation": "• با React.forwardRef می‌توانید ref را forward کنید\n" +
-             "- ref به عنوان prop pass نمی‌شود (reserved)\n" +
-             "- forwardRef component را wrap می‌کند\n" +
-             "- ref به عنوان argument دوم می‌آید\n" +
-             "- برای library components مفید است"
+        "explanation": "• با React.forwardRef می‌توانید ref را forward کنید\n" +
+            "- ref به عنوان prop pass نمی‌شود (reserved)\n" +
+            "- forwardRef component را wrap می‌کند\n" +
+            "- ref به عنوان argument دوم می‌آید\n" +
+            "- برای library components مفید است"
     },
     {
         "id": 384,
@@ -6249,11 +6249,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-         "explanation": "• useImperativeHandle متدهای custom را از طریق ref expose می‌کند\n" +
-             "- با forwardRef استفاده می‌شود\n" +
-             "- parent می‌تواند این متدها را صدا بزند\n" +
-             "- برای control کردن child از parent\n" +
-             "- مثل focus()، play()، pause() custom"
+        "explanation": "• useImperativeHandle متدهای custom را از طریق ref expose می‌کند\n" +
+            "- با forwardRef استفاده می‌شود\n" +
+            "- parent می‌تواند این متدها را صدا بزند\n" +
+            "- برای control کردن child از parent\n" +
+            "- مثل focus()، play()، pause() custom"
     },
     {
         "id": 385,
@@ -6266,11 +6266,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-         "explanation": "• refs برای values که render را trigger نمی‌کنند\n" +
-             "- مثل timer IDs، previous values\n" +
-             "- DOM references برای focus یا scroll\n" +
-             "- mutable values که UI effect ندارند\n" +
-             "- state برای data که UI را affect می‌کند"
+        "explanation": "• refs برای values که render را trigger نمی‌کنند\n" +
+            "- مثل timer IDs، previous values\n" +
+            "- DOM references برای focus یا scroll\n" +
+            "- mutable values که UI effect ندارند\n" +
+            "- state برای data که UI را affect می‌کند"
     },
     {
         "id": 386,
@@ -6283,11 +6283,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• refs عالی برای storing timer IDs هستند\n" +
-             "- تغییر ref re-render نمی‌کند\n" +
-             "- می‌توانید در cleanup آن را clear کنید\n" +
-             "- const timerRef = useRef()\n" +
-             "- timerRef.current = setInterval(...)"
+        "explanation": "• refs عالی برای storing timer IDs هستند\n" +
+            "- تغییر ref re-render نمی‌کند\n" +
+            "- می‌توانید در cleanup آن را clear کنید\n" +
+            "- const timerRef = useRef()\n" +
+            "- timerRef.current = setInterval(...)"
     },
     {
         "id": 387,
@@ -6300,11 +6300,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-         "explanation": "• updating ref.current در render phase باید avoided شود\n" +
-             "- می‌تواند باعث inconsistency شود\n" +
-             "- render باید pure باشد\n" +
-             "- در useEffect یا event handlers update کنید\n" +
-             "- exception: اولین render برای initialize"
+        "explanation": "• updating ref.current در render phase باید avoided شود\n" +
+            "- می‌تواند باعث inconsistency شود\n" +
+            "- render باید pure باشد\n" +
+            "- در useEffect یا event handlers update کنید\n" +
+            "- exception: اولین render برای initialize"
     },
     {
         "id": 388,
@@ -6317,11 +6317,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-         "explanation": "• refs در Server Components کار نمی‌کنند\n" +
-             "- نیاز به client-side interactivity دارند\n" +
-             "- DOM reference در server وجود ندارد\n" +
-             "- باید component را 'use client' کنید\n" +
-             "- refs فقط در Client Components"
+        "explanation": "• refs در Server Components کار نمی‌کنند\n" +
+            "- نیاز به client-side interactivity دارند\n" +
+            "- DOM reference در server وجود ندارد\n" +
+            "- باید component را 'use client' کنید\n" +
+            "- refs فقط در Client Components"
     },
     {
         "id": 389,
@@ -6334,11 +6334,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-         "explanation": "• با forwardRef + useImperativeHandle\n" +
-             "- child با forwardRef wrap می‌شود\n" +
-             "- useImperativeHandle متدها را expose می‌کند\n" +
-             "- parent با ref.current.method() صدا می‌زند\n" +
-             "- encapsulation را حفظ می‌کند"
+        "explanation": "• با forwardRef + useImperativeHandle\n" +
+            "- child با forwardRef wrap می‌شود\n" +
+            "- useImperativeHandle متدها را expose می‌کند\n" +
+            "- parent با ref.current.method() صدا می‌زند\n" +
+            "- encapsulation را حفظ می‌کند"
     },
     {
         "id": 390,
@@ -6351,11 +6351,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• storing timer ID برای clearInterval/clearTimeout\n" +
-             "- timerRef.current = setInterval(...)\n" +
-             "- در cleanup: clearInterval(timerRef.current)\n" +
-             "- بدون re-render\n" +
-             "- persistent بین renders"
+        "explanation": "• storing timer ID برای clearInterval/clearTimeout\n" +
+            "- timerRef.current = setInterval(...)\n" +
+            "- در cleanup: clearInterval(timerRef.current)\n" +
+            "- بدون re-render\n" +
+            "- persistent بین renders"
     },
     {
         "id": 391,
@@ -6368,11 +6368,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-         "explanation": "• ذخیره value قبلی بدون re-render\n" +
-             "- comparison با value فعلی\n" +
-             "- usePrevious custom hook\n" +
-             "- state قبلی در memory\n" +
-             "- برای detecting changes"
+        "explanation": "• ذخیره value قبلی بدون re-render\n" +
+            "- comparison با value فعلی\n" +
+            "- usePrevious custom hook\n" +
+            "- state قبلی در memory\n" +
+            "- برای detecting changes"
     },
     {
         "id": 392,
@@ -6385,11 +6385,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• ref garbage collected می‌شود\n" +
-             "- memory آزاد می‌شود\n" +
-             "- automatic cleanup\n" +
-             "- DOM references نیز cleared\n" +
-             "- memory leak نمی‌کند"
+        "explanation": "• ref garbage collected می‌شود\n" +
+            "- memory آزاد می‌شود\n" +
+            "- automatic cleanup\n" +
+            "- DOM references نیز cleared\n" +
+            "- memory leak نمی‌کند"
     },
     {
         "id": 393,
@@ -6402,12 +6402,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-         "explanation": "Can refs be passed to child components as props?\",\n" +
-             "\"explanation\": \"• نه به صورت مستقیم، ref reserved است\\n\" +\n" +
-             "    \"- باید از forwardRef استفاده کنید\\n\" +\n" +
-             "    \"- یا نام دیگری بدهید\\n\" +\n" +
-             "    \"- React.forwardRef wrapper\\n\" +\n" +
-             "    \"- special handling لازم"
+        "explanation": "Can refs be passed to child components as props?\",\n" +
+            "\"explanation\": \"• نه به صورت مستقیم، ref reserved است\\n\" +\n" +
+            "    \"- باید از forwardRef استفاده کنید\\n\" +\n" +
+            "    \"- یا نام دیگری بدهید\\n\" +\n" +
+            "    \"- React.forwardRef wrapper\\n\" +\n" +
+            "    \"- special handling لازم"
     },
     {
         "id": 394,
@@ -6420,11 +6420,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• passing ref از parent به child component\n" +
-             "- child می‌تواند DOM element را expose کند\n" +
-             "- ref در props نیست\n" +
-             "- argument دوم در component function\n" +
-             "- برای library components"
+        "explanation": "• passing ref از parent به child component\n" +
+            "- child می‌تواند DOM element را expose کند\n" +
+            "- ref در props نیست\n" +
+            "- argument دوم در component function\n" +
+            "- برای library components"
     },
     {
         "id": 395,
@@ -6437,11 +6437,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation": "• وقتی value باید persist بین renders\n" +
-             "- let variable هر render reset می‌شود\n" +
-             "- ref.current نگه داشته می‌شود\n" +
-             "- برای mutable values\n" +
-             "- stable reference"
+        "explanation": "• وقتی value باید persist بین renders\n" +
+            "- let variable هر render reset می‌شود\n" +
+            "- ref.current نگه داشته می‌شود\n" +
+            "- برای mutable values\n" +
+            "- stable reference"
     },
     {
         "id": 396,
@@ -6454,11 +6454,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-         "explanation": "• هر type: primitives، objects، arrays، functions\n" +
-             "- DOM references\n" +
-             "- timer IDs\n" +
-             "- previous values\n" +
-             "- any mutable value"
+        "explanation": "• هر type: primitives، objects، arrays، functions\n" +
+            "- DOM references\n" +
+            "- timer IDs\n" +
+            "- previous values\n" +
+            "- any mutable value"
     },
     {
         "id": 397,
@@ -6471,11 +6471,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation": "• inputRef.current.focus() در useEffect یا handler\n" +
-             "- <input ref={inputRef} />\n" +
-             "- بعد از mount\n" +
-             "- imperative DOM access\n" +
-             "- common use case"
+        "explanation": "• inputRef.current.focus() در useEffect یا handler\n" +
+            "- <input ref={inputRef} />\n" +
+            "- بعد از mount\n" +
+            "- imperative DOM access\n" +
+            "- common use case"
     },
     {
         "id": 398,
@@ -6488,11 +6488,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-         "explanation": "• refs: persist بدون re-render\n" +
-             "- state: persist با re-render\n" +
-             "- refs: mutable directly\n" +
-             "- state: immutable updates\n" +
-             "- use cases متفاوت"
+        "explanation": "• refs: persist بدون re-render\n" +
+            "- state: persist با re-render\n" +
+            "- refs: mutable directly\n" +
+            "- state: immutable updates\n" +
+            "- use cases متفاوت"
     },
     {
         "id": 399,
@@ -6505,11 +6505,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-         "explanation": "• بله، با addEventListener دو بار\n" +
-             "- یکی با capture: true\n" +
-             "- یکی با capture: false\n" +
-             "- capturing اول اجرا می‌شود\n" +
-             "- هر دو handlers execute می‌شوند"
+        "explanation": "• بله، با addEventListener دو بار\n" +
+            "- یکی با capture: true\n" +
+            "- یکی با capture: false\n" +
+            "- capturing اول اجرا می‌شود\n" +
+            "- هر دو handlers execute می‌شوند"
     },
     {
         "id": 400,
@@ -6522,11 +6522,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-         "explanation": "• تغییر دادن server data\n" +
-             "- POST، PUT، PATCH، DELETE\n" +
-             "- create، update، delete operations\n" +
-             "- side effects روی server\n" +
-             "- opposite از queries (read-only)"
+        "explanation": "• تغییر دادن server data\n" +
+            "- POST، PUT، PATCH، DELETE\n" +
+            "- create، update، delete operations\n" +
+            "- side effects روی server\n" +
+            "- opposite از queries (read-only)"
     },
     {
         "id": 401,
@@ -6538,12 +6538,12 @@ export const mockQuestions: Question[] = [
             "useState for updating local state"
         ],
         "correctOption": 1,
-    "points": 10,
-         "explanation": "• useMutation برای CUD operations\n" +
-             "- create، update، delete\n" +
-             "- useQuery فقط برای read\n" +
-             "- mutate function برای trigger\n" +
-             "- callbacks برای side effects"
+        "points": 10,
+        "explanation": "• useMutation برای CUD operations\n" +
+            "- create، update، delete\n" +
+            "- useQuery فقط برای read\n" +
+            "- mutate function برای trigger\n" +
+            "- callbacks برای side effects"
     },
     {
         "id": 402,
@@ -6556,11 +6556,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-         "explanation": "• اجرای code بعد از successful mutation\n" +
-             "- invalidate کردن queries\n" +
-             "- showing success messages\n" +
-             "- navigation به صفحه دیگر\n" +
-             "- side effects management"
+        "explanation": "• اجرای code بعد از successful mutation\n" +
+            "- invalidate کردن queries\n" +
+            "- showing success messages\n" +
+            "- navigation به صفحه دیگر\n" +
+            "- side effects management"
     },
     {
         "id": 403,
@@ -6573,11 +6573,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 10,
-         "explanation": "• ذخیره mutations در queue وقتی offline\n" +
-             "- وقتی online شد، اجرا می‌شوند\n" +
-             "- seamless user experience\n" +
-             "- automatic retry mechanism\n" +
-             "- persistence بین page refreshes"
+        "explanation": "• ذخیره mutations در queue وقتی offline\n" +
+            "- وقتی online شد، اجرا می‌شوند\n" +
+            "- seamless user experience\n" +
+            "- automatic retry mechanism\n" +
+            "- persistence بین page refreshes"
     },
     {
         "id": 404,
@@ -6590,11 +6590,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation": "• cached data فوراً نشان داده می‌شود\n" +
-             "- mutations در queue ذخیره می‌شوند\n" +
-             "- optimistic updates\n" +
-             "- automatic sync وقتی reconnect\n" +
-             "- user می‌تواند کار کند offline"
+        "explanation": "• cached data فوراً نشان داده می‌شود\n" +
+            "- mutations در queue ذخیره می‌شوند\n" +
+            "- optimistic updates\n" +
+            "- automatic sync وقتی reconnect\n" +
+            "- user می‌تواند کار کند offline"
     },
     {
         "id": 405,
@@ -6875,472 +6875,512 @@ export const mockQuestions: Question[] = [
             "- mutations on-demand هستند\n" +
             "- queries eager loading"
     },
-            {
-            "id": 422,
-            "question": "What is the primary purpose of the queryKey in useQuery?",
-                "options": [
-                    "Uniquely identify queries for caching and refetching",
-                    "Define the API endpoint URL",
-                    "Specify the type of loading spinner to show",
-                    "Configure mutation success callbacks"
-                ],
-            "correctOption": 0,
-            "points": 20,
-         "explanation":"• unique identification برای query\n" +
-             "- caching mechanism\n" +
-             "- refetching control\n" +
-             "- invalidation targeting\n" +
-             "- array از identifiers"
-        },
-        {
-            "id": 423,
-            "question": "In React Query, what is the difference between staleTime and cacheTime?",
-            "options": [
-                "staleTime defines retry attempts; cacheTime defines error persistence",
-                "Both represent the same concept of cache duration",
-                "staleTime determines how long data is considered fresh; cacheTime controls how long inactive data stays in memory",
-                "staleTime is only used for mutations; cacheTime only for queries"
-            ],
-            "correctOption": 2,
-            "points": 30,
-         "explanation":"• staleTime: مدت fresh بودن\n" +
-             "- تا این مدت refetch نمی‌شود\n" +
-             "- cacheTime: مدت ماندن inactive data\n" +
-             "- garbage collection timing\n" +
-             "- دو concept متفاوت"
-        },
-        {
-            "id": 424,
-            "question":"How can you prevent a useQuery from automatically running when a component mounts?",
-            "options": [
-                "Remove the queryKey entirely",
-                "Use useMutation instead of useQuery",
-                "Disable React StrictMode in the app",
-                "Set enabled: false in the query options"
-            ],
-            "correctOption":3,
-            "points": 10,
-         "explanation":"• enabled: false در options\n" +
-             "- query run نمی‌شود تا true شود\n" +
-             "- conditional fetching\n" +
-             "- manual control\n" +
-             "- refetch() برای manual trigger"
-        },
-        {
-            "id": 425,
-            "question":  "Which callback in useMutation is typically used to update the cache after a successful mutation?",
-            "options": [
-                "onSettled",
-                "onMutate",
-                "onSuccess",
-                "onError"
-            ],
-            "correctOption": 2,
-            "points": 20,
-         "explanation":"• onSuccess callback\n" +
-             "- دریافت mutation result\n" +
-             "- invalidate queries\n" +
-             "- setQueryData برای optimistic updates\n" +
-             "- sync cache with server"
-        },
-        {
-            "id": 426,
-            "question":  "Why are optimistic updates useful in useMutation?",
-            "options": [
-                "They automatically retry failed requests",
-                "They update the UI immediately before server response",
-                "They prevent memory leaks in components",
-                "They enforce unique query keys"
-            ],
-            "correctOption": 1,
-            "points": 30,
-         "explanation":"• UI بلافاصله update می‌شود\n" +
-             "- قبل از server response\n" +
-             "- instant feedback\n" +
-             "- اگر fail شود rollback\n" +
-             "- بهتر UX"
-        },
-        {
-            "id": 427,
-            "question": "Which React Query function is commonly used inside a mutation's onSuccess callback to refresh relevant queries?",
-            "options": [
-                "resetQueries",
-                "refetchQueries",
-                "cancelQueries",
-                "invalidateQueries"
-            ],
-            "correctOption": 3,
-            "points": 20,
-         "explanation":"• queryClient.invalidateQueries(['queryKey'])\n" +
-             "- marking queries as stale\n" +
-             "- trigger refetch\n" +
-             "- sync کردن cache\n" +
-             "- fresh data بعد از mutation"
-        },
-        {
-            "id": 428,
-            "question": "What happens when multiple queries are dependent in React Query?",
-            "options": [
-                "They run in parallel ignoring dependencies",
-                "The next query waits for previous query's data",
-                "All queries share the same queryKey",
-                "Dependent queries are not supported"
-            ],
-            "correctOption": 1,
-            "points": 20,
-         "explanation":"• enabled option برای wait کردن\n" +
-             "- query دوم منتظر data اولی\n" +
-             "- enabled: !!previousData\n" +
-             "- sequential fetching\n" +
-             "- dependency chain"
-        },
-        {
-            "id": 429,
-            "question": "Which tool helps visualize query and mutation states during development?",
-            "options": [
-                "Redux DevTools",
-                "React Query Devtools",
-                "React Profiler",
-                "Apollo Studio"
-            ],
-            "correctOption": 1,
-            "points": 10,
-         "explanation":"• React Query Devtools\n" +
-             "- showing query states\n" +
-             "- cache contents\n" +
-             "- mutation status\n" +
-             "- debugging tool powerful"
-        },
-        {
-            "id": 430,
-            "question": "Which option in useQuery allows background synchronization at intervals?",
-            "options": [
-                "cacheTime",
-                "refetchInterval",
-                "retry",
-                "keepPreviousData"
-            ],
-            "correctOption": 1,
-            "points": 20,
-         "explanation":"• refetchInterval: milliseconds\n" +
-             "- polling data\n" +
-             "- refetchInterval: 5000 // هر 5 ثانیه\n" +
-             "- real-time like behavior\n" +
-             "- automatic periodic updates"
-        },
-        {
-            "id": 431,
-            "question": "Which useQuery option helps with pagination to avoid blank state while fetching new data?",
-            "options": [
-                "enabled",
-                "refetchOnWindowFocus",
-                "keepPreviousData",
-                "retry"
-            ],
-            "correctOption": 2,
-            "points": 20,
-         "explanation":"• keepPreviousData: true\n" +
-             "- previous page data نشان داده می‌شود\n" +
-             "- تا new page load شود\n" +
-             "- no blank screens\n" +
-             "- smooth pagination"
-        },
-        {
-            "id": 432,
-            "question": "How does React Query ensure consistency between server and client after a mutation?",
-            "options": [
-                "Reload the browser window automatically",
-                "Automatically invalidate all cached queries",
-                "Invalidate specific queries or manually refetch",
-                "Clear the entire cache immediately"
-            ],
-            "correctOption": 2,
-            "points": 20,
-         "explanation":"• invalidation و refetching strategies\n" +
-             "- queryClient.invalidateQueries\n" +
-             "- automatic refetch of stale queries\n" +
-             "- optimistic updates با rollback\n" +
-             "- cache synchronization"
-        },
-        {
-            "id": 433,
-            "question": "What is query invalidation in React Query?",
-            "options": [
-                "Marking queries stale to trigger refetch",
-                "Deleting all cached data permanently",
-                "Resetting all query keys globally",
-                "Pausing queries until manually enabled"
-            ],
-            "correctOption": 0,
-            "points": 20,
-         "explanation":"• invalidation یعنی marking کردن query به عنوان stale\n" +
-             "- باعث refetch خودکار می‌شود\n" +
-             "- معمولاً بعد از mutations استفاده می‌شود\n" +
-             "- با queryClient.invalidateQueries انجام می‌شود\n" +
-             "- data را fresh و synchronized نگه می‌دارد"
-        },
-        {
-            "id": 434,
-            "question": "What does hydrate/dehydrate refer to in React Query?",
-            "options": [
-                "Saving and restoring query state for SSR",
-                "Synchronizing queries with Redux store",
-                "Exporting query data to JSON files",
-                "Clearing memory leaks during refetch"
-            ],
-            "correctOption": 0,
-            "points": 30,
-         "explanation":"• dehydrate: ذخیره کردن query state برای SSR\n" +
-             "- hydrate: بازگردانی query state در client\n" +
-             "- برای server-side rendering استفاده می‌شود\n" +
-             "- data از server به client منتقل می‌شود\n" +
-             "- جلوگیری از refetch غیرضروری در client"
-        },
-        {
-            "id": 435,
-            "question": "What is the primary purpose of React Hook Form?",
-            "options": [
-                "Managing server-side data fetching",
-                "Simplifying form state and validation",
-                "Creating component animations",
-                "Managing global application state"
-            ],
-            "correctOption": 1,
-            "points": 10,
-         "explanation":"• ساده‌سازی form state و validation management\n" +
-             "- performance بالا با uncontrolled inputs\n" +
-             "- کد کمتر نسبت به راه‌های سنتی\n" +
-             "- built-in validation و error handling\n" +
-             "- integration آسان با UI libraries"
-        },
-        {
-            "id": 436,
-            "question": "Which hook initializes a form in React Hook Form?",
-            "options": [
-                "useState",
-                "useForm",
-                "useController",
-                "useReducer"
-            ],
-            "correctOption": 1,
-            "points": 10,
-         "explanation":"• useForm برای initialize کردن form\n" +
-             "- register، handleSubmit و formState return می‌کند\n" +
-             "- options مثل defaultValues و validation mode\n" +
-             "- تمام form logic را مدیریت می‌کند\n" +
-             "- یک بار در component صدا زده می‌شود"
-        },
-        {
-            "id": 437,
-            "question": "What does the register function do in React Hook Form?",
-            "options": [
-                "Submits form data to server",
-                "Resets all form fields",
-                "Connects inputs to form state",
-                "Triggers form re-rendering"
-            ],
-            "correctOption": 2,
-            "points": 10,
-         "explanation":"• inputs را به form state متصل می‌کند\n" +
-             "- validation rules را اضافه می‌کند\n" +
-             "- با spread operator به input pass می‌شود\n" +
-             "- onChange، onBlur و ref را set می‌کند\n" +
-             "- tracking خودکار input values"
-        },
-        {
-            "id": 438,
-            "question": "Which function handles form submission in React Hook Form?",
-            "options": [
-                "useSubmit",
-                "submitForm",
-                "handleSubmit",
-                "onSubmitHandler"
-            ],
-            "correctOption":2,
-            "points": 10,
-         "explanation":"• handleSubmit validation و submission را مدیریت می‌کند\n" +
-             "- validation را قبل از submit اجرا می‌کند\n" +
-             "- در صورت موفقیت، callback را صدا می‌زند\n" +
-             "- data را به صورت object می‌دهد\n" +
-             "- preventDefault خودکار"
-        },
-        {
-            "id": 439,
-            "question": "How do you apply validation rules in React Hook Form?",
-            "options": [
-                "Add attributes directly to input",
-                "Wrap input in Validation component",
-                "Pass options object to register",
-                "Use useValidation hook"
-            ],
-            "correctOption": 2,
-            "points": 20,
-         "explanation":"• options object را به register pass می‌کنید\n" +
-             "- مثل { required: true, minLength: 3 }\n" +
-             "- pattern، validate و custom rules\n" +
-             "- error messages قابل customize\n" +
-             "- validation مثل HTML5 اما قدرتمندتر"
-        },
-        {
-            "id": 440,
-            "question": "What does the errors object represent in useForm?",
-            "options": [
-                "List of server-side API errors",
-                "Runtime errors during rendering",
-                "Validation errors for form fields",
-                "React component errors"
-            ],
-            "correctOption": 2,
-            "points": 20,
-         "explanation":"• شامل validation errors برای هر field\n" +
-             "- از formState.errors دریافت می‌شود\n" +
-             "- type و message برای هر error\n" +
-             "- برای نمایش error messages استفاده می‌شود\n" +
-             "- به صورت real-time update می‌شود"
-        },
-        {
-            "id": 409,
-            "question": "Why is React Hook Form performant?",
-            "options": [
-                "Automatically fetches data from APIs",
-                "Reduces re-renders with isolated reactivity",
-                "Compiles forms into WebAssembly",
-                "Disables validation for speed"
-            ],
-            "correctOption": 1,
-            "points": 30,
-         "explanation":""
-        },
-//         {
-//             "id": 410,
-//             "question": "Which hook controls custom components in React Hook Form?",
-//             "options": [
-//                 "useController",
-//                 "useFormContext",
-//                 "useCustomInput",
-//                 "useReducer"
-//             ],
-//             "correctOption": 0,
-//             "points": 30,
-//          "explanation":""
-//         },
-//         {
-//             "id": 411,
-//             "question": "Which method lets you programmatically update a field’s value?",
-//             "options": [
-//                 "updateField",
-//                 "setValue",
-//                 "patch",
-//                 "replaceValue"
-//             ],
-//             "correctOption": 1,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 412,
-//             "question": "What problem does useController solve?",
-//             "options": [
-//                 "Integrating controlled components with React Hook Form",
-//                 "Handling async validation across multiple fields",
-//                 "Improving form styling with custom CSS",
-//                 "Fetching form data from external APIs"
-//             ],
-//             "correctOption": 0,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 413,
-//             "question": "Why does React Hook Form rely primarily on uncontrolled inputs?",
-//             "options": [
-//                 "Because uncontrolled inputs validate themselves automatically",
-//                 "Because controlled inputs are not React-compatible",
-//                 "Because uncontrolled inputs reduce re-renders significantly",
-//                 "Because uncontrolled inputs are easier to style"
-//             ],
-//             "correctOption":2,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 414,
-//             "question": "Which option best describes the role of resolvers?",
-//             "options": [
-//                 "They provide schema-based validation support",
-//                 "They handle async form submissions automatically",
-//                 "They manage form context across components",
-//                 "They improve rendering performance significantly"
-//             ],
-//             "correctOption": 0,
-//             "points": 30,
-//          "explanation":""
-//         },
-//         {
-//             "id": 415,
-//             "question": "Which hook reads field value without subscribing to updates?",
-//             "options": [
-//                 "setValue",
-//                 "watch",
-//                 "getValues",
-//                 "trigger"
-//             ],
-//             "correctOption": 2,
-//             "points": 30,
-//          "explanation":""
-//         },
-//         {
-//             "id": 416,
-//             "question": "How can you implement async validation for username?",
-//             "options": [
-//                 "By using watch with useEffect hook",
-//                 "By wrapping inputs in FormProvider component",
-//                 "By manually calling setValue in onChange",
-//                 "By using async resolver or validate function",
-//             ],
-//             "correctOption": 3,
-//             "points": 30,
-//          "explanation":""
-//         },
-//         {
-//             "id": 417,
-//             "question": "What is one key performance advantage of React Hook Form?",
-//             "options": [
-//                 "It uses uncontrolled inputs reducing re-renders",
-//                 "It automatically caches all inputs in Redux",
-//                 "It ships smaller bundle but causes re-renders",
-//                 "It doesn't support any validation rules"
-//             ],
-//             "correctOption": 0,
-//             "points": 30,
-//          "explanation":""
-//         },
-//     {
-//         "id": 418,
-//         "question": "What is the primary purpose of the useForm hook?",
-//         "options": [
-//             "To handle component lifecycle methods",
-//             "To register inputs and manage form state",
-//             "To create global state across components",
-//             "To render conditional UI elements"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 419,
-//         "question": "Which prop must be applied for React Hook Form tracking?",
-//         "options": [
-//             "onChange",
-//             "value",
-//             "register",
-//             "ref"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//          "explanation":""
-//     },
+    {
+        "id": 422,
+        "question": "What is the primary purpose of the queryKey in useQuery?",
+        "options": [
+            "Uniquely identify queries for caching and refetching",
+            "Define the API endpoint URL",
+            "Specify the type of loading spinner to show",
+            "Configure mutation success callbacks"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• unique identification برای query\n" +
+            "- caching mechanism\n" +
+            "- refetching control\n" +
+            "- invalidation targeting\n" +
+            "- array از identifiers"
+    },
+    {
+        "id": 423,
+        "question": "In React Query, what is the difference between staleTime and cacheTime?",
+        "options": [
+            "staleTime defines retry attempts; cacheTime defines error persistence",
+            "Both represent the same concept of cache duration",
+            "staleTime determines how long data is considered fresh; cacheTime controls how long inactive data stays in memory",
+            "staleTime is only used for mutations; cacheTime only for queries"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• staleTime: مدت fresh بودن\n" +
+            "- تا این مدت refetch نمی‌شود\n" +
+            "- cacheTime: مدت ماندن inactive data\n" +
+            "- garbage collection timing\n" +
+            "- دو concept متفاوت"
+    },
+    {
+        "id": 424,
+        "question":"How can you prevent a useQuery from automatically running when a component mounts?",
+        "options": [
+            "Remove the queryKey entirely",
+            "Use useMutation instead of useQuery",
+            "Disable React StrictMode in the app",
+            "Set enabled: false in the query options"
+        ],
+        "correctOption":3,
+        "points": 10,
+        "explanation":"• enabled: false در options\n" +
+            "- query run نمی‌شود تا true شود\n" +
+            "- conditional fetching\n" +
+            "- manual control\n" +
+            "- refetch() برای manual trigger"
+    },
+    {
+        "id": 425,
+        "question":  "Which callback in useMutation is typically used to update the cache after a successful mutation?",
+        "options": [
+            "onSettled",
+            "onMutate",
+            "onSuccess",
+            "onError"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• onSuccess callback\n" +
+            "- دریافت mutation result\n" +
+            "- invalidate queries\n" +
+            "- setQueryData برای optimistic updates\n" +
+            "- sync cache with server"
+    },
+    {
+        "id": 426,
+        "question":  "Why are optimistic updates useful in useMutation?",
+        "options": [
+            "They automatically retry failed requests",
+            "They update the UI immediately before server response",
+            "They prevent memory leaks in components",
+            "They enforce unique query keys"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• UI بلافاصله update می‌شود\n" +
+            "- قبل از server response\n" +
+            "- instant feedback\n" +
+            "- اگر fail شود rollback\n" +
+            "- بهتر UX"
+    },
+    {
+        "id": 427,
+        "question": "Which React Query function is commonly used inside a mutation's onSuccess callback to refresh relevant queries?",
+        "options": [
+            "resetQueries",
+            "refetchQueries",
+            "cancelQueries",
+            "invalidateQueries"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• queryClient.invalidateQueries(['queryKey'])\n" +
+            "- marking queries as stale\n" +
+            "- trigger refetch\n" +
+            "- sync کردن cache\n" +
+            "- fresh data بعد از mutation"
+    },
+    {
+        "id": 428,
+        "question": "What happens when multiple queries are dependent in React Query?",
+        "options": [
+            "They run in parallel ignoring dependencies",
+            "The next query waits for previous query's data",
+            "All queries share the same queryKey",
+            "Dependent queries are not supported"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• enabled option برای wait کردن\n" +
+            "- query دوم منتظر data اولی\n" +
+            "- enabled: !!previousData\n" +
+            "- sequential fetching\n" +
+            "- dependency chain"
+    },
+    {
+        "id": 429,
+        "question": "Which tool helps visualize query and mutation states during development?",
+        "options": [
+            "Redux DevTools",
+            "React Query Devtools",
+            "React Profiler",
+            "Apollo Studio"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• React Query Devtools\n" +
+            "- showing query states\n" +
+            "- cache contents\n" +
+            "- mutation status\n" +
+            "- debugging tool powerful"
+    },
+    {
+        "id": 430,
+        "question": "Which option in useQuery allows background synchronization at intervals?",
+        "options": [
+            "cacheTime",
+            "refetchInterval",
+            "retry",
+            "keepPreviousData"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• refetchInterval: milliseconds\n" +
+            "- polling data\n" +
+            "- refetchInterval: 5000 // هر 5 ثانیه\n" +
+            "- real-time like behavior\n" +
+            "- automatic periodic updates"
+    },
+    {
+        "id": 431,
+        "question": "Which useQuery option helps with pagination to avoid blank state while fetching new data?",
+        "options": [
+            "enabled",
+            "refetchOnWindowFocus",
+            "keepPreviousData",
+            "retry"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• keepPreviousData: true\n" +
+            "- previous page data نشان داده می‌شود\n" +
+            "- تا new page load شود\n" +
+            "- no blank screens\n" +
+            "- smooth pagination"
+    },
+    {
+        "id": 432,
+        "question": "How does React Query ensure consistency between server and client after a mutation?",
+        "options": [
+            "Reload the browser window automatically",
+            "Automatically invalidate all cached queries",
+            "Invalidate specific queries or manually refetch",
+            "Clear the entire cache immediately"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• invalidation و refetching strategies\n" +
+            "- queryClient.invalidateQueries\n" +
+            "- automatic refetch of stale queries\n" +
+            "- optimistic updates با rollback\n" +
+            "- cache synchronization"
+    },
+    {
+        "id": 433,
+        "question": "What is query invalidation in React Query?",
+        "options": [
+            "Marking queries stale to trigger refetch",
+            "Deleting all cached data permanently",
+            "Resetting all query keys globally",
+            "Pausing queries until manually enabled"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• invalidation یعنی marking کردن query به عنوان stale\n" +
+            "- باعث refetch خودکار می‌شود\n" +
+            "- معمولاً بعد از mutations استفاده می‌شود\n" +
+            "- با queryClient.invalidateQueries انجام می‌شود\n" +
+            "- data را fresh و synchronized نگه می‌دارد"
+    },
+    {
+        "id": 434,
+        "question": "What does hydrate/dehydrate refer to in React Query?",
+        "options": [
+            "Saving and restoring query state for SSR",
+            "Synchronizing queries with Redux store",
+            "Exporting query data to JSON files",
+            "Clearing memory leaks during refetch"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• dehydrate: ذخیره کردن query state برای SSR\n" +
+            "- hydrate: بازگردانی query state در client\n" +
+            "- برای server-side rendering استفاده می‌شود\n" +
+            "- data از server به client منتقل می‌شود\n" +
+            "- جلوگیری از refetch غیرضروری در client"
+    },
+    {
+        "id": 435,
+        "question": "What is the primary purpose of React Hook Form?",
+        "options": [
+            "Managing server-side data fetching",
+            "Simplifying form state and validation",
+            "Creating component animations",
+            "Managing global application state"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• ساده‌سازی form state و validation management\n" +
+            "- performance بالا با uncontrolled inputs\n" +
+            "- کد کمتر نسبت به راه‌های سنتی\n" +
+            "- built-in validation و error handling\n" +
+            "- integration آسان با UI libraries"
+    },
+    {
+        "id": 436,
+        "question": "Which hook initializes a form in React Hook Form?",
+        "options": [
+            "useState",
+            "useForm",
+            "useController",
+            "useReducer"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• useForm برای initialize کردن form\n" +
+            "- register، handleSubmit و formState return می‌کند\n" +
+            "- options مثل defaultValues و validation mode\n" +
+            "- تمام form logic را مدیریت می‌کند\n" +
+            "- یک بار در component صدا زده می‌شود"
+    },
+    {
+        "id": 437,
+        "question": "What does the register function do in React Hook Form?",
+        "options": [
+            "Submits form data to server",
+            "Resets all form fields",
+            "Connects inputs to form state",
+            "Triggers form re-rendering"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• inputs را به form state متصل می‌کند\n" +
+            "- validation rules را اضافه می‌کند\n" +
+            "- با spread operator به input pass می‌شود\n" +
+            "- onChange، onBlur و ref را set می‌کند\n" +
+            "- tracking خودکار input values"
+    },
+    {
+        "id": 438,
+        "question": "Which function handles form submission in React Hook Form?",
+        "options": [
+            "useSubmit",
+            "submitForm",
+            "handleSubmit",
+            "onSubmitHandler"
+        ],
+        "correctOption":2,
+        "points": 10,
+        "explanation":"• handleSubmit validation و submission را مدیریت می‌کند\n" +
+            "- validation را قبل از submit اجرا می‌کند\n" +
+            "- در صورت موفقیت، callback را صدا می‌زند\n" +
+            "- data را به صورت object می‌دهد\n" +
+            "- preventDefault خودکار"
+    },
+    {
+        "id": 439,
+        "question": "How do you apply validation rules in React Hook Form?",
+        "options": [
+            "Add attributes directly to input",
+            "Wrap input in Validation component",
+            "Pass options object to register",
+            "Use useValidation hook"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• options object را به register pass می‌کنید\n" +
+            "- مثل { required: true, minLength: 3 }\n" +
+            "- pattern، validate و custom rules\n" +
+            "- error messages قابل customize\n" +
+            "- validation مثل HTML5 اما قدرتمندتر"
+    },
+    {
+        "id": 440,
+        "question": "What does the errors object represent in useForm?",
+        "options": [
+            "List of server-side API errors",
+            "Runtime errors during rendering",
+            "Validation errors for form fields",
+            "React component errors"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• شامل validation errors برای هر field\n" +
+            "- از formState.errors دریافت می‌شود\n" +
+            "- type و message برای هر error\n" +
+            "- برای نمایش error messages استفاده می‌شود\n" +
+            "- به صورت real-time update می‌شود"
+    },
+    {
+        "id": 441,
+        "question": "Why is React Hook Form performant?",
+        "options": [
+            "Automatically fetches data from APIs",
+            "Reduces re-renders with isolated reactivity",
+            "Compiles forms into WebAssembly",
+            "Disables validation for speed"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• از uncontrolled inputs استفاده می‌کند\n" +
+            "- re-renders را به minimum می‌رساند\n" +
+            "- isolated re-rendering فقط برای changed fields\n" +
+            "- بدون dependencies سنگین\n" +
+            "- native HTML validation هم support می‌کند"
+    },
+    {
+        "id": 442,
+        "question": "Which hook controls custom components in React Hook Form?",
+        "options": [
+            "useController",
+            "useFormContext",
+            "useCustomInput",
+            "useReducer"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• useController برای controlled components\n" +
+            "- field object با value، onChange و onBlur\n" +
+            "- برای third-party UI libraries مفید\n" +
+            "- مثل Material-UI یا Ant Design\n" +
+            "- Controller component هم همین کار را می‌کند"
+    },
+    {
+        "id": 443,
+        "question": "Which method lets you programmatically update a field’s value?",
+        "options": [
+            "updateField",
+            "setValue",
+            "patch",
+            "replaceValue"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• setValue برای تغییر مقدار field به صورت برنامه‌نویسی\n" +
+            "- fieldName و value را می‌گیرد\n" +
+            "- options برای validation و touched\n" +
+            "- مفید برای dynamic updates\n" +
+            "- مثل auto-fill یا reset کردن fields"
+    },
+    {
+        "id": 444,
+        "question": "What problem does useController solve?",
+        "options": [
+            "Integrating controlled components with React Hook Form",
+            "Handling async validation across multiple fields",
+            "Improving form styling with custom CSS",
+            "Fetching form data from external APIs"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• integration با controlled components\n" +
+            "- third-party libraries که controlled هستند\n" +
+            "- access به field state و methods\n" +
+            "- consistency با React Hook Form\n" +
+            "- alternative به Controller component"
+    },
+    {
+        "id": 445,
+        "question": "Why does React Hook Form rely primarily on uncontrolled inputs?",
+        "options": [
+            "Because uncontrolled inputs validate themselves automatically",
+            "Because controlled inputs are not React-compatible",
+            "Because uncontrolled inputs reduce re-renders significantly",
+            "Because uncontrolled inputs are easier to style"
+        ],
+        "correctOption":2,
+        "points": 20,
+        "explanation":"• uncontrolled inputs re-renders کمتری دارند\n" +
+            "- performance بهتر برای forms بزرگ\n" +
+            "- React state را برای هر keystroke update نمی‌کند\n" +
+            "- DOM خودش value را نگه می‌دارد\n" +
+            "- فقط در submit مقادیر خوانده می‌شوند"
+    },
+    {
+        "id": 446,
+        "question": "Which option best describes the role of resolvers?",
+        "options": [
+            "They provide schema-based validation support",
+            "They handle async form submissions automatically",
+            "They manage form context across components",
+            "They improve rendering performance significantly"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• resolvers برای schema-based validation\n" +
+            "- integration با Yup، Zod، Joi\n" +
+            "- validation rules centralized\n" +
+            "- type safety با TypeScript\n" +
+            "- reusable validation schemas"
+    },
+    {
+        "id": 447,
+        "question": "Which hook reads field value without subscribing to updates?",
+        "options": [
+            "setValue",
+            "watch",
+            "getValues",
+            "trigger"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• getValues مقدار field را بدون subscription می‌خواند\n" +
+            "- re-render نمی‌کند\n" +
+            "- برای read-only access مناسب\n" +
+            "- watch برای subscription استفاده می‌شود\n" +
+            "- performance بهتر برای simple reads"
+    },
+    {
+        "id": 448,
+        "question": "How can you implement async validation for username?",
+        "options": [
+            "By using watch with useEffect hook",
+            "By wrapping inputs in FormProvider component",
+            "By manually calling setValue in onChange",
+            "By using async resolver or validate function",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• validate function با async/await\n" +
+            "- API call برای check کردن availability\n" +
+            "- return true/false یا error message\n" +
+            "- در register options قرار می‌گیرد\n" +
+            "- debounce برای کاهش API calls"
+    },
+    {
+        "id": 449,
+        "question": "What is one key performance advantage of React Hook Form?",
+        "options": [
+            "It uses uncontrolled inputs reducing re-renders",
+            "It automatically caches all inputs in Redux",
+            "It ships smaller bundle but causes re-renders",
+            "It doesn't support any validation rules"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• uncontrolled inputs باعث کاهش re-renders\n" +
+            "- isolated field updates\n" +
+            "- تنها changed fields re-render می‌شوند\n" +
+            "- bundle size کوچک\n" +
+            "- native validation support"
+    },
+    {
+        "id": 450,
+        "question": "What is the primary purpose of the useForm hook?",
+        "options": [
+            "To handle component lifecycle methods",
+            "To register inputs and manage form state",
+            "To create global state across components",
+            "To render conditional UI elements"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• مدیریت کامل form state و behavior\n" +
+            "- register برای inputs، handleSubmit برای submission\n" +
+            "- formState برای errors و touched\n" +
+            "- validation و error handling\n" +
+            "- core hook در React Hook Form"
+    },
+    {
+        "id": 419,
+        "question": "Which prop must be applied for React Hook Form tracking?",
+        "options": [
+            "onChange",
+            "value",
+            "register",
+            "ref"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":""
+    },
 //     {
 //         "id": 420,
 //         "question":  "What does the handleSubmit function return?",
@@ -18069,7 +18109,7 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 1,
 //         "points": 30
 //     },
-        {
+    {
         "id": 1406,
         "question": "How do you initialize a new project with npm?",
         "options": [
