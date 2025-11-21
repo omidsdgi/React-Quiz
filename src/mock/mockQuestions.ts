@@ -602,22 +602,6 @@ export const mockQuestions: Question[] = [
             "- از renders غیرضروری جلوگیری می‌کند"
     },
     {
-        "id": 38,
-        "question": "When does React flush batched state updates?",
-        "options": [
-            "After event handler completes execution fully",
-            "Immediately when setState is called",
-            "Only when component unmounts from tree",
-            "Only when user stops interacting with UI"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• React بعد از اتمام event handler، updates را flush می‌کند\n" +
-            "- در React 18، حتی در promises و timeouts هم batch می‌شود\n" +
-            "- این به معنی تاخیر نیست، بلکه optimization است\n" +
-            "- می‌توانید با flushSync آن را synchronous کنید"
-    },
-    {
         "id": 39,
         "question": "What is the difference between Render Phase and Commit Phase?",
         "options": [
@@ -1277,22 +1261,7 @@ export const mockQuestions: Question[] = [
             "- state نهایی بعد از اعمال همه updates محاسبه می‌شود\n" +
             "- می‌توان از functional updates برای اطمینان استفاده کرد"
     },
-    {
-        "id": 81,
-        "question": "Can you force React to flush batched updates immediately?",
-        "options": [
-            "No, flushing is automatic and uncontrollable",
-            "Yes, using flushSync from react-dom",
-            "Yes, using forceUpdate on component",
-            "No, batching cannot be interrupted ever"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation":"• با استفاده از flushSync از react-dom\n" +
-            "- updates را synchronously اعمال می‌کند\n" +
-            "- معمولا نیازی نیست و باید با احتیاط استفاده شود\n" +
-            "- ممکن است performance را کاهش دهد"
-    },
+
     {
         "id": 82,
         "question": "What is the order of phases in react's rendering?",
@@ -2414,7 +2383,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 159,
-        "question": "Why include component functions in useEffect dependency arrays?",
+        "question": "Why include Why should functions defined inside a React component be added to the dependency array of useEffect?component functions in useEffect dependency arrays?",
         options: [
             "Functions are recreated on every component render cycle",
             "React automatically memoizes all functions in components",
@@ -7538,136 +7507,144 @@ export const mockQuestions: Question[] = [
              "- برای real-time data مفید\n" +
              "- automatic cleanup وقتی component unmount شود"
         },
-//         {
-//             "id": 429,
-//             "question": "What does refetchIntervalOnMount option control?",
-//             "options": [
-//                 "Whether queries refetch when window regains focus",
-//                 "Whether query starts polling immediately on mount",
-//                 "How many retries attempted on failure",
-//                 "Whether query data is fresh or stale"
-//             ],
-//             "correctOption": 1,
-//             "points": 20,
-//          "explanation":""
-//         },
-//     {
-//         "id": 430,
-//         "question": "What happens when cached data becomes stale?",
-//         "options": [
-//             "Cached data is deleted from memory automatically",
-//             "Query state updates to 'stale' allowing custom effects",
-//             "Query immediately refetches data regardless of settings",
-//             "All queries in cache are reset"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 431,
-//         "question":  "Why is TanStack Query considered state management library?",
-//         "options": [
-//             "It allows direct modification of component state",
-//             "It manages server state and keeps UI synchronized",
-//             "It replaces Redux for all local state",
-//             "It automatically generates forms from API data"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 432,
-//         "question":"Which combination allows polling data in background?",
-//         "options": [
-//             "refetchInterval: 5000 and refetchIntervalInBackground: true",
-//             "staleTime: 0 and enabled: true",
-//             "cacheTime: 10000 and refetchOnWindowFocus: true",
-//             "retry: 3 and refetchOnMount: false"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation":""
-//     },
-//         {
-//             "id": 433,
-//             "question": "What does CRUD stand for in application development?",
-//             "options": [
-//                 "Compute, Render, Upload, Deploy",
-//                 "Create, Read, Update, Delete",
-//                 "Check, Run, Undo, Debug",
-//                 "Connect, Retry, Update, Deliver"
-//             ],
-//             "correctOption": 1,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 434,
-//             "question": "Which of the following represents the 'Read' operation?",
-//             "options": [
-//                 "Adding a new user to database",
-//                 "Fetching a list of cabins from Supabase",
-//                 "Changing a user's password field",
-//                 "Deleting a cabin from system"
-//             ],
-//             "correctOption": 1,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 435,
-//             "question": "Which hook is most commonly used for 'Update' operation?",
-//             "options": [
-//                 "useEffect",
-//                 "useQuery",
-//                 "useMutation",
-//                 "useContext"
-//             ],
-//             "correctOption": 2,
-//             "points": 30,
-//          "explanation":""
-//         },
-//     {
-//             "id": 436,
-//             "question": "Which CRUD operation inserts new record into database?",
-//         "options": [
-//             "Create",
-//             "Read",
-//             "Update",
-//             "Delete"
-//         ],
-//             "correctOption": 0,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 437,
-//             "question": "Which CRUD operation retrieves data from API endpoint?",
-//             "options": [
-//                 "Create",
-//                 "Read",
-//                 "Update",
-//                 "Delete"
-//             ],
-//             "correctOption": 1,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 438,
-//             "question": "When modifying existing user's email, which CRUD applies?",
-//             "options": [
-//                 "Create",
-//                 "Read",
-//                 "Update",
-//                 "Delete"
-//             ],
-//             "correctOption": 2,
-//             "points": 10,
-//          "explanation":""
-//         },
+        {
+            "id": 461,
+            "question": "What does refetchIntervalOnMount option control?",
+            "options": [
+                "Whether queries refetch when window regains focus",
+                "Whether query starts polling immediately on mount",
+                "How many retries attempted on failure",
+                "Whether query data is fresh or stale"
+            ],
+            "correctOption": 1,
+            "points": 20,
+         "explanation":"• آیا interval بلافاصله در mount شروع شود\n" +
+             "- یا منتظر اولین interval بماند\n" +
+             "- پیش‌فرض true است\n" +
+             "- برای timing دقیق polling\n" +
+             "- با refetchInterval کار می‌کند"
+        },
+    {
+        "id": 462,
+        "question": "What happens when cached data becomes stale?",
+        "options": [
+            "Cached data is deleted from memory automatically",
+            "Query state updates to 'stale' allowing custom effects",
+            "Query immediately refetches data regardless of settings",
+            "All queries in cache are reset"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• query state به 'stale' تغییر می‌کند\n" +
+            "- اما data هنوز در cache است و قابل استفاده\n" +
+            "- در background refetch می‌شود\n" +
+            "- staleTime مدت زمان fresh بودن را کنترل می‌کند\n" +
+            "- این behavior مطلوب برای UX است"
+    },
+    {
+        "id": 431,
+        "question":  "Why is TanStack Query considered state management library?",
+        "options": [
+            "It allows direct modification of component state",
+            "It manages server state and keeps UI synchronized",
+            "It replaces Redux for all local state",
+            "It automatically generates forms from API data"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation":""
+    },
+    {
+        "id": 432,
+        "question":"Which combination allows polling data in background?",
+        "options": [
+            "refetchInterval: 5000 and refetchIntervalInBackground: true",
+            "staleTime: 0 and enabled: true",
+            "cacheTime: 10000 and refetchOnWindowFocus: true",
+            "retry: 3 and refetchOnMount: false"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation":""
+    },
+        {
+            "id": 433,
+            "question": "What does CRUD stand for in application development?",
+            "options": [
+                "Compute, Render, Upload, Deploy",
+                "Create, Read, Update, Delete",
+                "Check, Run, Undo, Debug",
+                "Connect, Retry, Update, Deliver"
+            ],
+            "correctOption": 1,
+            "points": 10,
+         "explanation":""
+        },
+        {
+            "id": 434,
+            "question": "Which of the following represents the 'Read' operation?",
+            "options": [
+                "Adding a new user to database",
+                "Fetching a list of cabins from Supabase",
+                "Changing a user's password field",
+                "Deleting a cabin from system"
+            ],
+            "correctOption": 1,
+            "points": 20,
+         "explanation":""
+        },
+        {
+            "id": 435,
+            "question": "Which hook is most commonly used for 'Update' operation?",
+            "options": [
+                "useEffect",
+                "useQuery",
+                "useMutation",
+                "useContext"
+            ],
+            "correctOption": 2,
+            "points": 30,
+         "explanation":""
+        },
+    {
+            "id": 436,
+            "question": "Which CRUD operation inserts new record into database?",
+        "options": [
+            "Create",
+            "Read",
+            "Update",
+            "Delete"
+        ],
+            "correctOption": 0,
+            "points": 10,
+         "explanation":""
+        },
+        {
+            "id": 437,
+            "question": "Which CRUD operation retrieves data from API endpoint?",
+            "options": [
+                "Create",
+                "Read",
+                "Update",
+                "Delete"
+            ],
+            "correctOption": 1,
+            "points": 10,
+         "explanation":""
+        },
+        {
+            "id": 438,
+            "question": "When modifying existing user's email, which CRUD applies?",
+            "options": [
+                "Create",
+                "Read",
+                "Update",
+                "Delete"
+            ],
+            "correctOption": 2,
+            "points": 10,
+         "explanation":""
+        },
 //         {
 //             "id": 439,
 //             "question": "Which CRUD action permanently removes record from database?",
