@@ -7369,7 +7369,7 @@ export const mockQuestions: Question[] = [
             "- core hook در React Hook Form"
     },
     {
-        "id": 419,
+        "id": 451,
         "question": "Which prop must be applied for React Hook Form tracking?",
         "options": [
             "onChange",
@@ -7379,125 +7379,165 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-        "explanation":""
+        "explanation":"• register باید به input apply شود\n" +
+            "- با spread operator: {...register('name')}\n" +
+            "- بدون register، tracking نمی‌شود\n" +
+            "- validation rules در register\n" +
+            "- onChange و ref خودکار set می‌شوند"
     },
-//     {
-//         "id": 420,
-//         "question":  "What does the handleSubmit function return?",
-//         "options": [
-//             "The final form values as object",
-//             "A reset function for form fields",
-//             "Nothing, it just triggers re-renders component",
-//             "A callback validating inputs and triggering handler",
-//         ],
-//         "correctOption": 3,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 421,
-//         "question": "How can you provide default values to a form?",
-//         "options": [
-//             "By setting value attribute directly on inputs",
-//             "By passing defaultValues object to useForm",
-//             "By calling reset after component rendering",
-//             "By wrapping inputs in FormProvider component"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 422,
-//         "question": "Which hook allows subscribing to specific field changes?",
-//         "options": [
-//             "useEffect",
-//             "watch",
-//             "useFormContext",
-//             "trigger"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 423,
-//         "question": "What is the main use of FormProvider and useFormContext?",
-//         "options": [
-//             "To style forms globally across application",
-//             "To share form state across nested components",
-//             "To reset form values automatically",
-//             "To connect multiple forms together"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 424,
-//         "question":  "Which method manually triggers validation for fields?",
-//         "options": [
-//             "reset",
-//             "validate",
-//             "trigger",
-//             "checkValidity"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 425,
-//         "question": "How do you reset all fields to initial values?",
-//         "options": [
-//             "resetForm()",
-//             "reset()",
-//             "clear()",
-//             "resetFields()"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation":""
-//     },
-//         {
-//             "id": 426,
-//             "question":  "Which option prevents query from running on mount?",
-//             "options": [
-//                 "`enabled`",
-//                 "`refetchOnMount`",
-//                 "`refetchIntervalOnMount`",
-//                 "`retry`"
-//             ],
-//             "correctOption": 0,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 427,
-//             "question":  "Which option controls refetch on window focus?",
-//             "options": [
-//                 "`enabled`",
-//                 "`refetchOnWindowFocus`",
-//                 "`refetchOnMount`",
-//                 "`refetchInterval`"
-//             ],
-//             "correctOption": 1,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 428,
-//             "question":"How do you poll data every 10 seconds in background?",
-//             "options": [
-//                 "`refetchInterval: 10000` and `refetchIntervalInBackground: true`",
-//                 "`refetchOnWindowFocus: true` and `refetchInterval: 10000`",
-//                 "`enabled: true` and `refetchOnMount: always`",
-//                 "`retry: 3` and `refetchIntervalOnMount: true`"
-//             ],
-//             "correctOption": 0,
-//             "points": 20,
-//          "explanation":""
-//         },
+    {
+        "id": 452,
+        "question":  "What does the handleSubmit function return?",
+        "options": [
+            "The final form values as object",
+            "A reset function for form fields",
+            "Nothing, it just triggers re-renders component",
+            "A callback validating inputs and triggering handler",
+        ],
+        "correctOption": 3,
+        "points": 10,
+         "explanation":"• callback که validation و submission را handle می‌کند\n" +
+             "- به onSubmit در form pass می‌شود\n" +
+             "- validation قبل از callback\n" +
+             "- preventDefault خودکار\n" +
+             "- data به صورت object در callback"
+    },
+    {
+        "id": 453,
+        "question": "How can you provide default values to a form?",
+        "options": [
+            "By setting value attribute directly on inputs",
+            "By passing defaultValues object to useForm",
+            "By calling reset after component rendering",
+            "By wrapping inputs in FormProvider component"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation":"• defaultValues در useForm options\n" +
+             "- object با field names و values\n" +
+             "- برای edit forms مفید\n" +
+             "- async defaultValues هم support می‌شود\n" +
+             "- reset() می‌تواند به defaultValues برگردد"
+    },
+    {
+        "id": 454,
+        "question": "Which hook allows subscribing to specific field changes?",
+        "options": [
+            "useEffect",
+            "watch",
+            "useFormContext",
+            "trigger"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation":"• watch برای subscribe به field changes\n" +
+             "- می‌تواند یک یا چند field را watch کند\n" +
+             "- re-render می‌کند وقتی value تغییر کند\n" +
+             "- برای conditional rendering مفید\n" +
+             "- getValues برای بدون re-render"
+    },
+    {
+        "id": 455,
+        "question": "What is the main use of FormProvider and useFormContext?",
+        "options": [
+            "To style forms globally across application",
+            "To share form state across nested components",
+            "To reset form values automatically",
+            "To connect multiple forms together"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation":"• sharing form methods بین nested components\n" +
+             "- بدون prop drilling\n" +
+             "- FormProvider در بالا، useFormContext در children\n" +
+             "- برای forms پیچیده با deeply nested fields\n" +
+             "- Context API pattern"
+    },
+    {
+        "id": 456,
+        "question":  "Which method manually triggers validation for fields?",
+        "options": [
+            "reset",
+            "validate",
+            "trigger",
+            "checkValidity"
+        ],
+        "correctOption": 2,
+        "points": 20,
+         "explanation":"• trigger برای manual validation\n" +
+             "- می‌تواند یک یا همه fields را validate کند\n" +
+             "- async است و boolean return می‌کند\n" +
+             "- برای custom validation timing\n" +
+             "- مثل onBlur یا button click"
+    },
+    {
+        "id": 457,
+        "question": "How do you reset all fields to initial values?",
+        "options": [
+            "resetForm()",
+            "reset()",
+            "clear()",
+            "resetFields()"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation":"• reset() همه fields را به default برمی‌گرداند\n" +
+             "- errors و touched را clear می‌کند\n" +
+             "- می‌تواند values جدید بگیرد\n" +
+             "- مفید بعد از successful submission\n" +
+             "- state کامل form را reset می‌کند"
+    },
+        {
+            "id": 458,
+            "question":  "Which option prevents query from running on mount?",
+            "options": [
+                "`enabled`",
+                "`refetchOnMount`",
+                "`refetchIntervalOnMount`",
+                "`retry`"
+            ],
+            "correctOption": 0,
+            "points": 10,
+         "explanation":"• enabled: false در useQuery options\n" +
+             "- query تا true شدن اجرا نمی‌شود\n" +
+             "- برای conditional fetching\n" +
+             "- مثل منتظر ماندن برای user input\n" +
+             "- manual refetch با refetch() همیشه کار می‌کند"
+        },
+        {
+            "id": 459,
+            "question":  "Which option controls refetch on window focus?",
+            "options": [
+                "`enabled`",
+                "`refetchOnWindowFocus`",
+                "`refetchOnMount`",
+                "`refetchInterval`"
+            ],
+            "correctOption": 1,
+            "points": 10,
+         "explanation":"• refetchOnWindowFocus در query options\n" +
+             "- پیش‌فرض true است\n" +
+             "- وقتی tab دوباره focus شود، refetch می‌کند\n" +
+             "- برای keeping data fresh\n" +
+             "- می‌توانید false کنید برای disable"
+        },
+        {
+            "id": 460,
+            "question":"How do you poll data every 10 seconds in background?",
+            "options": [
+                "`refetchInterval: 10000` and `refetchIntervalInBackground: true`",
+                "`refetchOnWindowFocus: true` and `refetchInterval: 10000`",
+                "`enabled: true` and `refetchOnMount: always`",
+                "`retry: 3` and `refetchIntervalOnMount: true`"
+            ],
+            "correctOption": 0,
+            "points": 20,
+         "explanation":"• refetchInterval: 10000 برای polling\n" +
+             "- refetchIntervalInBackground: true برای background\n" +
+             "- حتی وقتی tab focus ندارد\n" +
+             "- برای real-time data مفید\n" +
+             "- automatic cleanup وقتی component unmount شود"
+        },
 //         {
 //             "id": 429,
 //             "question": "What does refetchIntervalOnMount option control?",
