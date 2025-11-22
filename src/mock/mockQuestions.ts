@@ -1443,7 +1443,7 @@ export const mockQuestions: Question[] = [
         "question": "What is the key difference between useCallback and useMemo?",
         "options": [
             "useCallback memoizes functions, useMemo memoizes values",
-            "useCallback stores values, useMemo stores functio1ns",
+            "useCallback stores values, useMemo stores functions",
             "useMemo is for effects, useCallback is for state",
             "They perform identical functions"
         ],
@@ -1724,7 +1724,7 @@ export const mockQuestions: Question[] = [
         "explanation":"• هوک useRef برای نگهداری مقدار متغیر قابل تغییر استفاده می‌شود بدون آنکه باعث re-render شود\n" +
             "- مقدار ذخیره‌شده در useRef در بین رندرها پایدار باقی می‌ماند\n" +
             "- useState در صورت تغییر مقدار باعث re-render می‌شود\n" +
-            "- useEffect برای مدیریت side effectها و useMemo برای memoization محاسبات استفاده می‌شوند"
+            "- useEffect برای مدیریت side effect  و useMemo برای memoization محاسبات استفاده می‌شوند"
     },
     {
         "id": 111,
@@ -1837,136 +1837,156 @@ export const mockQuestions: Question[] = [
             "- React صرفاً props را به عنوان ورودی دریافت می‌کند، رندر خودکار به تغییرات داخلی props نیست\n" +
             "- تفاوت بین primitive و object/array مهم است برای مقایسه در memoization، اما علت اصلی re-render والد است"
     },
-//     {
-//         "id": 118,
-//         "question": "What does 'render' mean in React terminology?",
-//         "options": [
-//             "Updating the actual DOM elements on the page",
-//             "Painting pixels on the screen for visual display",
-//             "Executing the component function to create Virtual DOM",
-//             "Running useEffect hooks inside the component function"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 119,
-//         "question":  "Does every React render update the actual DOM?",
-//         "options": [
-//             "Yes, every render immediately updates the DOM elements",
-//             "No, only when React finds differences in the Virtual DOM",
-//             "This behavior is only true for class-based components",
-//             "Only when state changes occur, not when prop changes"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 120,
-//         "question": "What defines a wasted render in React performance terms?",
-//         "options": [
-//             "A render producing same Virtual DOM",
-//             "A render taking longer than 16ms",
-//             "A render updating DOM unnecessarily",
-//             "Any render triggered by parent updates"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 121,
-//         "question": "What is the purpose of memoization in React?",
-//         "options": [
-//             "To permanently store components in memory",
-//             "To parallelize all component renders automatically",
-//             "To reuse previous results if inputs unchanged",
-//             "To prevent all future component renders"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 122,
-//         "question": "When is React.memo ineffective?",
-//         "options": [
-//             "When components always receive new props or object references",
-//             "When components have children components nested inside",
-//             "When components are wrapped in stateful parent components",
-//             "When components are functions instead of class components"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 123,
-//         "question": "What is the main difference between React.memo and useMemo?",
-//         "options": [
-//             "React.memo is for class components, useMemo is for functions",
-//             "React.memo memoizes components, useMemo memoizes computed values",
-//             "React.memo is faster than useMemo in all performance cases",
-//             "React.memo automatically deep-memoizes all props and state deeply"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 124,
-//         "question": "What is the main difference between useMemo and useCallback?",
-//         "options": [
-//             "useMemo prevents re-renders, useCallback prevents effect re-execution",
-//             "useMemo works with primitives, useCallback works with objects",
-//             "useMemo memoizes computed values, useCallback memoizes functions",
-//             "useMemo caches component props, useCallback caches state"
-//         ],
-//         "correctOption":2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 125,
-//         "question": "How do React.memo and useMemo/useCallback differ in scope?",
-//         "options": [
-//             "React.memo memoizes components, useMemo/useCallback memoize values inside",
-//             "React.memo caches state, useMemo caches props, useCallback caches context",
-//             "React.memo prevents all re-renders, useMemo/useCallback only prevent effects",
-//             "React.memo works with primitives, useMemo/useCallback work with objects"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 126,
-//         "question": "What role does the dependency array play in useMemo?",
-//         "options": [
-//             "It prevents the function from ever running again",
-//             "It specifies which props should be passed to React.memo",
-//             "It ensures recalculation happens on every component render",
-//             "It determines when the memoized value should be recalculated"
-//         ],
-//         "correctOption":3,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 127,
-//         "question": "What similarity exists between useMemo dependency arrays and React.memo?",
-//         "options": [
-//             "Both automatically stabilize function references without developer effort",
-//             "Both control when re-computation or re-rendering occurs based on changes",
-//             "Both prevent re-renders completely regardless of any input changes",
-//             "Both only work with primitive values and ignore objects or arrays"
-//         ],
-//         "correctOption":1,
-//         "points": 20,
-//                 "explanation":""
-//     },
+    {
+        "id": 118,
+        "question": "What does 'render' mean in React terminology?",
+        "options": [
+            "Updating the actual DOM elements on the page",
+            "Painting pixels on the screen for visual display",
+            "Executing the component function to create Virtual DOM",
+            "Running useEffect hooks inside the component function"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• Render یعنی اجرای تابع کامپوننت برای ساخت Virtual DOM\n" +
+            "- React ابتدا Virtual DOM می‌سازد، سپس تفاوت‌ها را با DOM واقعی مقایسه می‌کند\n" +
+            "- Render با به‌روزرسانی DOM واقعی متفاوت است"
+    },
+    {
+        "id": 119,
+        "question":  "Does every React render update the actual DOM?",
+        "options": [
+            "Yes, every render immediately updates the DOM elements",
+            "No, only when React finds differences in the Virtual DOM",
+            "This behavior is only true for class-based components",
+            "Only when state changes occur, not when prop changes"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• React از الگوریتم Reconciliation برای مقایسه Virtual DOM قبلی و جدید استفاده می‌کند\n" +
+            "- فقط در صورت یافتن تفاوت، DOM واقعی به‌روزرسانی می‌شود\n" +
+            "- این رویکرد باعث بهینه‌سازی عملکرد می‌شود"
+    },
+    {
+        "id": 120,
+        "question": "What defines a wasted render in React performance terms?",
+        "options": [
+            "A render producing same Virtual DOM",
+            "A render taking longer than 16ms",
+            "A render updating DOM unnecessarily",
+            "Any render triggered by parent updates"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• Wasted render زمانی است که Virtual DOM تغییری نداشته باشد ولی DOM واقعی بی‌دلیل به‌روزرسانی شود\n" +
+            "- این renders اتلاف منابع محسوب می‌شوند\n" +
+            "- با Memoization می‌توان از آنها جلوگیری کرد"
+    },
+    {
+        "id": 121,
+        "question": "What is the purpose of memoization in React?",
+        "options": [
+            "To permanently store components in memory",
+            "To parallelize all component renders automatically",
+            "To reuse previous results if inputs unchanged",
+            "To prevent all future component renders"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• Memoization تکنیکی برای کش کردن نتایج محاسبات است\n" +
+            "- اگر ورودی‌ها تغییر نکرده باشند، نتیجه قبلی استفاده می‌شود\n" +
+            "- باعث کاهش محاسبات تکراری و بهبود عملکرد می‌شود"
+    },
+    {
+        "id": 122,
+        "question": "When is React.memo ineffective?",
+        "options": [
+            "When components always receive new props or object references",
+            "When components have children components nested inside",
+            "When components are wrapped in stateful parent components",
+            "When components are functions instead of class components"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• React.memo با مقایسه shallow props کار می‌کند\n" +
+            "- اگر props همیشه reference جدید داشته باشند، memoization بی‌اثر است\n" +
+            "- برای حل این مشکل باید از useMemo یا useCallback استفاده کرد"
+    },
+    {
+        "id": 123,
+        "question": "What is the main difference between React.memo and useMemo?",
+        "options": [
+            "React.memo is for class components, useMemo is for functions",
+            "React.memo memoizes components, useMemo memoizes computed values",
+            "React.memo is faster than useMemo in all performance cases",
+            "React.memo automatically deep-memoizes all props and state deeply"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• React.memo یک HOC برای memoize کردن کل کامپوننت است\n" +
+            "- useMemo یک hook برای memoize کردن مقادیر محاسباتی داخل کامپوننت است\n" +
+            "- هر کدام کاربرد خاص خود را دارند"
+    },
+    {
+        "id": 124,
+        "question": "What is the main difference between useMemo and useCallback?",
+        "options": [
+            "useMemo prevents re-renders, useCallback prevents effect re-execution",
+            "useMemo works with primitives, useCallback works with objects",
+            "useMemo memoizes computed values, useCallback memoizes functions",
+            "useMemo caches component props, useCallback caches state"
+        ],
+        "correctOption":2,
+        "points": 30,
+        "explanation":"• useMemo برای memoize کردن نتیجه محاسبات استفاده می‌شود\n" +
+            "- useCallback برای memoize کردن خود تابع استفاده می‌شود\n" +
+            "- useCallback معادل useMemo(() => fn, deps) است"
+    },
+    {
+        "id": 125,
+        "question": "How do React.memo and useMemo/useCallback differ in scope?",
+        "options": [
+            "React.memo memoizes components, useMemo/useCallback memoize values inside",
+            "React.memo caches state, useMemo caches props, useCallback caches context",
+            "React.memo prevents all re-renders, useMemo/useCallback only prevent effects",
+            "React.memo works with primitives, useMemo/useCallback work with objects"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• React.memo در سطح کامپوننت کار می‌کند و از re-render جلوگیری می‌کند\n" +
+            "- useMemo و useCallback در داخل کامپوننت کار می‌کنند\n" +
+            "- React.memo برای optimization بین کامپوننت‌ها، useMemo/useCallback برای optimization داخل کامپوننت"
+    },
+    {
+        "id": 126,
+        "question": "What role does the dependency array play in useMemo?",
+        "options": [
+            "It prevents the function from ever running again",
+            "It specifies which props should be passed to React.memo",
+            "It ensures recalculation happens on every component render",
+            "It determines when the memoized value should be recalculated"
+        ],
+        "correctOption":3,
+        "points": 30,
+        "explanation":"• آرایه dependency مشخص می‌کند چه زمانی مقدار دوباره محاسبه شود\n" +
+            "- اگر هیچ یک از dependency ها تغییر نکرده باشند، مقدار cache شده برگردانده می‌شود\n" +
+            "- تغییر هر یک از dependency ها باعث اجرای مجدد تابع می‌شود"
+    },
+    {
+        "id": 127,
+        "question": "What similarity exists between useMemo dependency arrays and React.memo?",
+        "options": [
+            "Both automatically stabilize function references without developer effort",
+            "Both control when re-computation or re-rendering occurs based on changes",
+            "Both prevent re-renders completely regardless of any input changes",
+            "Both only work with primitive values and ignore objects or arrays"
+        ],
+        "correctOption":1,
+        "points": 20,
+        "explanation":"• هر دو براساس تغییرات ورودی تصمیم می‌گیرند\n" +
+            "- React.memo props را مقایسه می‌کند، useMemo dependencies را\n" +
+            "- هر دو از shallow comparison استفاده می‌کنند"
+    },
 //     {
 //         "id": 128,
 //         "question":"What happens when useMemo's dependency array doesn't change between renders?",
@@ -4972,7 +4992,7 @@ export const mockQuestions: Question[] = [
         "explanation": "• POST برای ایجاد resource جدید\n" +
             "- order جدید در database ساخته می‌شود\n" +
             "- server معمولاً ID generate می‌کند\n" +
-            "- استاندارد RESTful برای create\n" +
+            "- استاندارد RESTFUL برای create\n" +
             "- response شامل order ساخته شده"
     },
     {
@@ -5023,7 +5043,7 @@ export const mockQuestions: Question[] = [
         "explanation": "• DELETE برای حذف resource\n" +
             "- order کاملاً از database حذف می‌شود\n" +
             "- idempotent است\n" +
-            "- استاندارد RESTful برای deletion\n" +
+            "- استاندارد RESTFUL برای deletion\n" +
             "- معمولاً 204 No Content return می‌کند"
     },
     {
@@ -5479,11 +5499,9 @@ export const mockQuestions: Question[] = [
         ],
         correctOption: 1,
         points: 20,
-        "explanation": "• declarative programming با component-based routing\n" +
-            "- Routes به عنوان JSX components\n" +
-            "- <Route path='/about' element={<About />} />\n" +
-            "- composition بهتر از configuration\n" +
-            "- readable و maintainable"
+        "explanation": "• React Router از رویکرد declarative برای تعریف مسیرها استفاده می‌کند\n" +
+            "- مسیرها به صورت کامپوننت‌های JSX تعریف می‌شوند نه کدهای imperative\n" +
+            "- این رویکرد با فلسفه React هماهنگ است و خوانایی کد را افزایش می‌دهد"
     },
     {
         id: 340,
@@ -6145,11 +6163,9 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-        "explanation": "• ref object را به ref prop pass کنید\n" +
-            "- <input ref={inputRef} />\n" +
-            "- بعد از mount. inputRef.current\n" +
-            "- DOM element در current\n" +
-            "- null قبل از mount"
+        "explanation": "• برای دسترسی به DOM element باید ref object را به prop مخصوص ref المنت پاس داد\n" +
+            "- React به صورت خودکار المنت DOM را در ref.current ذخیره می‌کند\n" +
+            "- بعد از mount شدن کامپوننت می‌توان از ref.current برای دسترسی مستقیم به المنت استفاده کرد"
     },
     {
         "id": 379,
@@ -6469,11 +6485,9 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation": "• inputRef.current.focus() در useEffect یا handler\n" +
-            "- <input ref={inputRef} />\n" +
-            "- بعد از mount\n" +
-            "- imperative DOM access\n" +
-            "- common use case"
+        "explanation": "• برای focus کردن input باید inputRef.current.focus() را در useEffect یا event handler فراخوانی کنیم\n" +
+            "- ref.current به المنت DOM واقعی اشاره می‌کند و تمام متدهای DOM مثل focus() را دارد\n" +
+            "- نباید در حین render مستقیماً DOM را دستکاری کرد، بلکه باید در effect یا event handler انجام شود"
     },
     {
         "id": 398,
@@ -10058,7 +10072,7 @@ export const mockQuestions: Question[] = [
 //         "question": "Is '@' alias specific to Next.js only?",
 //         "options": [
 //             "Yes, it only works in Next.js apps",
-//             "Yes, but can be polyfilled for other tools",
+//             "Yes, but can be poly filled for other tools",
 //             "No, it's a native JavaScript ES6 feature",
 //             "No, it's common in many modern frameworks",
 //         ],
@@ -10127,7 +10141,7 @@ export const mockQuestions: Question[] = [
 //     },
 //     {
 //         "id": 654,
-//         "question": "What is font subsetting in Next.js?",
+//         "question": "What is font sub setting in Next.js?",
 //         "options": [
 //             "Loading only specific font weights and styles",
 //             "Converting fonts to smaller file formats",
@@ -17465,7 +17479,7 @@ export const mockQuestions: Question[] = [
 //         "options": [
 //             "Query elements by ARIA role",
 //             "Get component by class name",
-//             "Query by data-testid attribute",
+//             "Query by data-tested attribute",
 //             "Get element by internal state"
 //         ],
 //         "correctOption": 0,
@@ -18897,7 +18911,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 10,
         "explanation": "• پوشه src محل اصلی کدهای منبع برنامه است\n" +
-            "- شامل فایل‌های logic، componentها و ماژول‌های TypeScript/JavaScript است\n" +
+            "- شامل فایل‌های logic، component و ماژول‌های TypeScript/JavaScript است\n" +
             "- فایل‌های استاتیک مانند تصاویر معمولاً در پوشه public نگهداری می‌شوند\n" +
             "- خروجی نهایی build در پوشه dist یا build ذخیره می‌شود، نه در src"
     },
@@ -18935,7 +18949,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 57,
-        "question": "What is the purpose of adding 'emmet.includeLanguages': { 'javascript': 'javascriptreact' } in the settings.json file?",
+        "question": "What is the purpose of adding 'emmet.includeLanguages': { 'javascript': 'javascript react' } in the settings.json file?",
         "options": [
             "It ensures automatic formatting of JSX elements on save.",
             "It automatically renames React components to match file names.",
@@ -18945,7 +18959,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 2,
         "points": 10,
         "explanation": "• با این تنظیم، VS Code تشخیص می‌دهد که فایل‌های JavaScript حاوی JSX هستند\n" +
-            "- این ویژگی پشتیبانی Emmet (شامل auto-complete و expand کردن shorthandها) را برای JSX فعال می‌کند\n" +
+            "- این ویژگی پشتیبانی Emmet (شامل auto-complete و expand کردن shorthand) را برای JSX فعال می‌کند\n" +
             "- به طور پیش‌فرض Emmet فقط در فایل‌های .jsx یا .tsx فعال است\n" +
             "- این تنظیم هیچ ربطی به فرمت خودکار یا TypeScript ندارد"
     },
@@ -18978,7 +18992,7 @@ export const mockQuestions: Question[] = [
         "points": 10,
         "explanation": "• جداسازی کامپوننت‌ها باعث افزایش قابلیت استفاده مجدد و نگهداری آسان‌تر کد می‌شود\n" +
             "- هر کامپوننت می‌تواند مستقل تست و استایل‌دهی شود\n" +
-            "- کاهش تعداد returnها هدف اصلی نیست و داده‌ها به صورت خودکار fetch نمی‌شوند\n" +
+            "- کاهش تعداد return هدف اصلی نیست و داده‌ها به صورت خودکار fetch نمی‌شوند\n" +
             "- این ساختار به خوانایی و سازمان‌دهی بهتر پروژه کمک می‌کند"
     },
     {
@@ -19106,7 +19120,7 @@ export const mockQuestions: Question[] = [
         "points": 10,
         "explanation": "• در React اگر تابع ناشناس مستقیماً در رویداد onClick نوشته شود، فقط هنگام کلیک اجرا می‌شود\n" +
             "- این روش باعث می‌شود تابع در زمان render فراخوانی نشود\n" +
-            "- تابع می‌تواند به متغیرها و stateهای بیرونی دسترسی داشته باشد\n" +
+            "- تابع می‌تواند به متغیرها و state های بیرونی دسترسی داشته باشد\n" +
             "- نیازی نیست تابع خارج از کامپوننت تعریف شود مگر برای بهینه‌سازی"
     },
     {
@@ -19184,7 +19198,7 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-        "explanation": "• در importهای نام‌دار باید نام دقیق متغیر export شده را استفاده کرد\n" +
+        "explanation": "• در import های نام‌دار باید نام دقیق متغیر export شده را استفاده کرد\n" +
             "- مثال: export const Button → import { Button } from './Button'\n" +
             "- default import فقط یک مقدار را دریافت می‌کند ولی می‌تواند همراه named import استفاده شود\n" +
             "- استفاده از as فقط برای تغییر نام اختیاری است و اجباری نیست"
