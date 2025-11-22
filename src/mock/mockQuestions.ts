@@ -11,9 +11,9 @@ export const mockQuestions: Question[] = [
             "Both ways",
             "The developers decides",
         ],
-        correctOption: 0,
-        points: 10,
-        explanation: "• React از الگوی Unidirectional Data Flow استفاده می‌کند\n" +
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• React از الگوی Unidirectional Data Flow استفاده می‌کند\n" +
             "- داده‌ها از طریق props از والد به فرزند منتقل می‌شوند\n" +
             "- این الگو قابلیت پیش‌بینی و دیباگ کردن را افزایش می‌دهد\n" +
             "- برای انتقال داده از فرزند به والد از callback functions استفاده می‌شود"
@@ -27,9 +27,9 @@ export const mockQuestions: Question[] = [
             "When applying dynamic styles",
             "Almost never - React manages the DOM"
         ],
-        correctOption: 3,
-        points: 20,
-        explanation: "• React از Virtual DOM برای مدیریت DOM واقعی استفاده می‌کند\n" +
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• React از Virtual DOM برای مدیریت DOM واقعی استفاده می‌کند\n" +
             "- دستکاری مستقیم DOM می‌تواند با سیستم React تداخل داشته باشد\n" +
             "- فقط در موارد خاص مثل focus، scroll یا اندازه‌گیری المان‌ها از ref استفاده کنید\n" +
             "- React بهترین راه برای به‌روزرسانی UI را خودکار مدیریت می‌کند"
@@ -1689,7 +1689,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption":1,
         "points": 20,
-        "explanation":""
+        "explanation":"• برای رندر کردن لیست‌های بزرگ در React از تکنیک 'virtualization' یا 'windowing' استفاده می‌شود\n" +
+            "- این روش فقط آیتم‌های قابل مشاهده در viewport را رندر می‌کند و بقیه را در صورت نیاز بارگذاری می‌کند\n" +
+            "- استفاده از Context یا useState تأثیری در بهینه‌سازی عملکرد لیست ندارد\n" +
+            "- key prop برای شناسایی آیتم‌ها لازم است اما مشکل عملکردی را حل نمی‌کند"
     },
     {
         "id": 109,
@@ -1702,7 +1705,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-        "explanation":""
+        "explanation":"• React Profiler ابزاری برای تحلیل عملکرد کامپوننت‌ها در زمان رندر است\n" +
+            "- زمان رندر هر کامپوننت و دفعات re-render را نمایش می‌دهد\n" +
+            "- به شناسایی کامپوننت‌هایی که بی‌دلیل دوباره رندر می‌شوند کمک می‌کند\n" +
+            "- این ابزار ارتباطی با شبکه، حافظه Node.js یا فرمت کد ندارد"
     },
     {
         "id": 110,
@@ -1715,7 +1721,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-        "explanation":""
+        "explanation":"• هوک useRef برای نگهداری مقدار متغیر قابل تغییر استفاده می‌شود بدون آنکه باعث re-render شود\n" +
+            "- مقدار ذخیره‌شده در useRef در بین رندرها پایدار باقی می‌ماند\n" +
+            "- useState در صورت تغییر مقدار باعث re-render می‌شود\n" +
+            "- useEffect برای مدیریت side effectها و useMemo برای memoization محاسبات استفاده می‌شوند"
     },
     {
         "id": 111,
@@ -1728,86 +1737,106 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 10,
-        "explanation":""
+        "explanation":"• در بهینه‌سازی عملکرد React تمرکز اصلی بر جلوگیری از رندرهای غیرضروری و کاهش حجم bundle است\n" +
+            "- این کار شامل استفاده از memoization، code-splitting و lazy loading می‌شود\n" +
+            "- افزودن هوک یا افزایش عمق کامپوننت‌ها معمولاً باعث کاهش عملکرد می‌شود\n" +
+            "- بهینه‌سازی CSS یا بک‌اند بر عملکرد مستقیم React تأثیری ندارد"
     },
-//     {
-//         "id": 112,
-//         "question":"Which technique most directly reduces wasted re-renders?",
-//         options: [
-//             "Code splitting with React.lazy",
-//             "Compressing static assets like images",
-//             "Wrapping components with React.memo",
-//             "Minifying JavaScript bundles"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 113,
-//         "question": "What defines a wasted render in React?",
-//         "options": [
-//             "Any render that takes longer than 16 ms to execute",
-//             "The initial render when a component first mounts in the tree",
-//             "A render where output is identical to previous render",
-//             "A render triggered by legitimate state or prop changes"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 114,
-//         "question": "When does a React component re-render?",
-//         "options": [
-//             "Only when its internal state changes through setState calls",
-//             "When state changes, context changes, or parent component re-renders",
-//             "Only when incoming props are different from the previous render",
-//             "Only when useEffect dependencies are updated in the component"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 115,
-//         "question": "What happens when a React Context value changes?",
-//         "options": [
-//             "Only the Provider component re-renders after the value change",
-//             "Only consumers reading the specific changed property will re-render",
-//             "All consumer components re-render regardless of which data changed",
-//             "No consumer re-renders unless explicitly triggered by developer"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 116,
-//         "question": "Which approach prevents creating new context value objects on every render?",
-//         "options": [
-//             "const value = useMemo(() => ({ user, setUser }), [user]);",
-//             "const value = { user, setUser }; // Direct object creation",
-//             "const value = useCallback(() => ({ user, setUser }), []);",
-//             "const value = useState({ user, setUser }); // State approach"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 117,
-//         "question": "Do prop changes directly cause React components to re-render?",
-//         "options": [
-//             "Yes, React monitors all props and triggers re-renders automatically",
-//             "No, only when props are arrays or objects with new references",
-//             "Yes, but only for primitive prop values like strings and numbers",
-//             "No, prop changes occur because the parent component re-rendered"
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//                 "explanation":""
-//     },
+    {
+        "id": 112,
+        "question":"Which technique most directly reduces wasted re-renders?",
+        options: [
+            "Code splitting with React.lazy",
+            "Compressing static assets like images",
+            "Wrapping components with React.memo",
+            "Minifying JavaScript bundles"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• استفاده از React.memo باعث جلوگیری از رندر مجدد کامپوننت‌هایی می‌شود که props آن‌ها تغییری نکرده است\n" +
+            "- این تکنیک با مقایسه سطحی props از رندرهای غیرضروری جلوگیری می‌کند\n" +
+            "- React.lazy برای تقسیم کد در سطح فایل استفاده می‌شود نه کنترل رندر\n" +
+            "- فشرده‌سازی فایل‌ها یا minify کردن کد فقط بر زمان بارگذاری تأثیر دارد، نه رفتار رندر"
+    },
+    {
+        "id": 113,
+        "question": "What defines a wasted render in React?",
+        "options": [
+            "Any render that takes longer than 16 ms to execute",
+            "The initial render when a component first mounts in the tree",
+            "A render where output is identical to previous render",
+            "A render triggered by legitimate state or prop changes"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• رندر بی‌هوده (wasted render) زمانی رخ می‌دهد که خروجی کامپوننت در مقایسه با رندر قبلی هیچ تغییری نکند\n" +
+            "- در این حالت، منابع محاسباتی صرف عملی می‌شوند که تأثیری در UI ندارد\n" +
+            "- رندر اولیه همیشه ضروری است و بی‌هوده محسوب نمی‌شود\n" +
+            "- زمان اجرای طولانی یا تغییرات واقعی در props/state دلیل منطقی برای رندر است"
+    },
+    {
+        "id": 114,
+        "question": "When does a React component re-render?",
+        "options": [
+            "Only when its internal state changes through setState calls",
+            "When state changes, context changes, or parent component re-renders",
+            "Only when incoming props are different from the previous render",
+            "Only when useEffect dependencies are updated in the component"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• یک کامپوننت React زمانی دوباره رندر می‌شود که state داخلی، مقدار context یا والد آن تغییر کند\n" +
+            "- تغییر در props معمولاً ناشی از رندر مجدد والد است\n" +
+            "- useEffect پس از رندر اجرا می‌شود و علت رندر نیست\n" +
+            "- setState یکی از دلایل رندر است اما تنها دلیل نیست"
+    },
+    {
+        "id": 115,
+        "question": "What happens when a React Context value changes?",
+        "options": [
+            "Only the Provider component re-renders after the value change",
+            "Only consumers reading the specific changed property will re-render",
+            "All consumer components re-render regardless of which data changed",
+            "No consumer re-renders unless explicitly triggered by developer"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• وقتی مقدار Context تغییر می‌کند، تمام کامپوننت‌هایی که از آن Context استفاده می‌کنند دوباره رندر می‌شوند\n" +
+            "- این اتفاق حتی اگر فقط بخشی از داده تغییر کرده باشد نیز می‌افتد\n" +
+            "- Provider خودش معمولاً منبع تغییر است و re-render به‌صورت خودکار در consumers انجام می‌شود\n" +
+            "- برای جلوگیری از رندر غیرضروری می‌توان از memoization یا تقسیم Context استفاده کرد"
+    },
+    {
+        "id": 116,
+        "question": "Which approach prevents creating new context value objects on every render?",
+        "options": [
+            "const value = useMemo(() => ({ user, setUser }), [user]);",
+            "const value = { user, setUser }; // Direct object creation",
+            "const value = useCallback(() => ({ user, setUser }), []);",
+            "const value = useState({ user, setUser }); // State approach"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• استفاده از useMemo باعث می‌شود شیء context فقط زمانی که وابستگی‌های آن تغییر می‌کند، دوباره ساخته شود\n" +
+            "- در غیر این صورت، در هر رندر شیء جدید ساخته شده و تمام consumers بی‌دلیل رندر می‌شوند\n" +
+            "- useCallback برای memoization توابع است نه اشیاء\n" +
+            "- استفاده مستقیم از شیء یا useState در این حالت منجر به ایجاد مقدار جدید در هر رندر می‌شود"
+    },
+    {
+        "id": 117,
+        "question": "Do prop changes directly cause React components to re-render?",
+        "options": [
+            "Yes, React monitors all props and triggers re-renders automatically",
+            "No, only when props are arrays or objects with new references",
+            "Yes, but only for primitive prop values like strings and numbers",
+            "No, prop changes occur because the parent component re-rendered"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• تغییر props باعث re-render مستقیم کامپوننت نمی‌شود، بلکه رندر شدن والد باعث ارسال props جدید و re-render فرزند می‌شود\n" +
+            "- React صرفاً props را به عنوان ورودی دریافت می‌کند، رندر خودکار به تغییرات داخلی props نیست\n" +
+            "- تفاوت بین primitive و object/array مهم است برای مقایسه در memoization، اما علت اصلی re-render والد است"
+    },
 //     {
 //         "id": 118,
 //         "question": "What does 'render' mean in React terminology?",
@@ -7365,11 +7394,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 10,
-         "explanation":"• callback که validation و submission را handle می‌کند\n" +
-             "- به onSubmit در form pass می‌شود\n" +
-             "- validation قبل از callback\n" +
-             "- preventDefault خودکار\n" +
-             "- data به صورت object در callback"
+        "explanation":"• callback که validation و submission را handle می‌کند\n" +
+            "- به onSubmit در form pass می‌شود\n" +
+            "- validation قبل از callback\n" +
+            "- preventDefault خودکار\n" +
+            "- data به صورت object در callback"
     },
     {
         "id": 453,
@@ -7382,11 +7411,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-         "explanation":"• defaultValues در useForm options\n" +
-             "- object با field names و values\n" +
-             "- برای edit forms مفید\n" +
-             "- async defaultValues هم support می‌شود\n" +
-             "- reset() می‌تواند به defaultValues برگردد"
+        "explanation":"• defaultValues در useForm options\n" +
+            "- object با field names و values\n" +
+            "- برای edit forms مفید\n" +
+            "- async defaultValues هم support می‌شود\n" +
+            "- reset() می‌تواند به defaultValues برگردد"
     },
     {
         "id": 454,
@@ -7399,11 +7428,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-         "explanation":"• watch برای subscribe به field changes\n" +
-             "- می‌تواند یک یا چند field را watch کند\n" +
-             "- re-render می‌کند وقتی value تغییر کند\n" +
-             "- برای conditional rendering مفید\n" +
-             "- getValues برای بدون re-render"
+        "explanation":"• watch برای subscribe به field changes\n" +
+            "- می‌تواند یک یا چند field را watch کند\n" +
+            "- re-render می‌کند وقتی value تغییر کند\n" +
+            "- برای conditional rendering مفید\n" +
+            "- getValues برای بدون re-render"
     },
     {
         "id": 455,
@@ -7416,11 +7445,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-         "explanation":"• sharing form methods بین nested components\n" +
-             "- بدون prop drilling\n" +
-             "- FormProvider در بالا، useFormContext در children\n" +
-             "- برای forms پیچیده با deeply nested fields\n" +
-             "- Context API pattern"
+        "explanation":"• sharing form methods بین nested components\n" +
+            "- بدون prop drilling\n" +
+            "- FormProvider در بالا، useFormContext در children\n" +
+            "- برای forms پیچیده با deeply nested fields\n" +
+            "- Context API pattern"
     },
     {
         "id": 456,
@@ -7433,11 +7462,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-         "explanation":"• trigger برای manual validation\n" +
-             "- می‌تواند یک یا همه fields را validate کند\n" +
-             "- async است و boolean return می‌کند\n" +
-             "- برای custom validation timing\n" +
-             "- مثل onBlur یا button click"
+        "explanation":"• trigger برای manual validation\n" +
+            "- می‌تواند یک یا همه fields را validate کند\n" +
+            "- async است و boolean return می‌کند\n" +
+            "- برای custom validation timing\n" +
+            "- مثل onBlur یا button click"
     },
     {
         "id": 457,
@@ -7450,80 +7479,80 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation":"• reset() همه fields را به default برمی‌گرداند\n" +
-             "- errors و touched را clear می‌کند\n" +
-             "- می‌تواند values جدید بگیرد\n" +
-             "- مفید بعد از successful submission\n" +
-             "- state کامل form را reset می‌کند"
+        "explanation":"• reset() همه fields را به default برمی‌گرداند\n" +
+            "- errors و touched را clear می‌کند\n" +
+            "- می‌تواند values جدید بگیرد\n" +
+            "- مفید بعد از successful submission\n" +
+            "- state کامل form را reset می‌کند"
     },
-        {
-            "id": 458,
-            "question":  "Which option prevents query from running on mount?",
-            "options": [
-                "`enabled`",
-                "`refetchOnMount`",
-                "`refetchIntervalOnMount`",
-                "`retry`"
-            ],
-            "correctOption": 0,
-            "points": 10,
-         "explanation":"• enabled: false در useQuery options\n" +
-             "- query تا true شدن اجرا نمی‌شود\n" +
-             "- برای conditional fetching\n" +
-             "- مثل منتظر ماندن برای user input\n" +
-             "- manual refetch با refetch() همیشه کار می‌کند"
-        },
-        {
-            "id": 459,
-            "question":  "Which option controls refetch on window focus?",
-            "options": [
-                "`enabled`",
-                "`refetchOnWindowFocus`",
-                "`refetchOnMount`",
-                "`refetchInterval`"
-            ],
-            "correctOption": 1,
-            "points": 10,
-         "explanation":"• refetchOnWindowFocus در query options\n" +
-             "- پیش‌فرض true است\n" +
-             "- وقتی tab دوباره focus شود، refetch می‌کند\n" +
-             "- برای keeping data fresh\n" +
-             "- می‌توانید false کنید برای disable"
-        },
-        {
-            "id": 460,
-            "question":"How do you poll data every 10 seconds in background?",
-            "options": [
-                "`refetchInterval: 10000` and `refetchIntervalInBackground: true`",
-                "`refetchOnWindowFocus: true` and `refetchInterval: 10000`",
-                "`enabled: true` and `refetchOnMount: always`",
-                "`retry: 3` and `refetchIntervalOnMount: true`"
-            ],
-            "correctOption": 0,
-            "points": 20,
-         "explanation":"• refetchInterval: 10000 برای polling\n" +
-             "- refetchIntervalInBackground: true برای background\n" +
-             "- حتی وقتی tab focus ندارد\n" +
-             "- برای real-time data مفید\n" +
-             "- automatic cleanup وقتی component unmount شود"
-        },
-        {
-            "id": 461,
-            "question": "What does refetchIntervalOnMount option control?",
-            "options": [
-                "Whether queries refetch when window regains focus",
-                "Whether query starts polling immediately on mount",
-                "How many retries attempted on failure",
-                "Whether query data is fresh or stale"
-            ],
-            "correctOption": 1,
-            "points": 20,
-         "explanation":"• آیا interval بلافاصله در mount شروع شود\n" +
-             "- یا منتظر اولین interval بماند\n" +
-             "- پیش‌فرض true است\n" +
-             "- برای timing دقیق polling\n" +
-             "- با refetchInterval کار می‌کند"
-        },
+    {
+        "id": 458,
+        "question":  "Which option prevents query from running on mount?",
+        "options": [
+            "`enabled`",
+            "`refetchOnMount`",
+            "`refetchIntervalOnMount`",
+            "`retry`"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":"• enabled: false در useQuery options\n" +
+            "- query تا true شدن اجرا نمی‌شود\n" +
+            "- برای conditional fetching\n" +
+            "- مثل منتظر ماندن برای user input\n" +
+            "- manual refetch با refetch() همیشه کار می‌کند"
+    },
+    {
+        "id": 459,
+        "question":  "Which option controls refetch on window focus?",
+        "options": [
+            "`enabled`",
+            "`refetchOnWindowFocus`",
+            "`refetchOnMount`",
+            "`refetchInterval`"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• refetchOnWindowFocus در query options\n" +
+            "- پیش‌فرض true است\n" +
+            "- وقتی tab دوباره focus شود، refetch می‌کند\n" +
+            "- برای keeping data fresh\n" +
+            "- می‌توانید false کنید برای disable"
+    },
+    {
+        "id": 460,
+        "question":"How do you poll data every 10 seconds in background?",
+        "options": [
+            "`refetchInterval: 10000` and `refetchIntervalInBackground: true`",
+            "`refetchOnWindowFocus: true` and `refetchInterval: 10000`",
+            "`enabled: true` and `refetchOnMount: always`",
+            "`retry: 3` and `refetchIntervalOnMount: true`"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• refetchInterval: 10000 برای polling\n" +
+            "- refetchIntervalInBackground: true برای background\n" +
+            "- حتی وقتی tab focus ندارد\n" +
+            "- برای real-time data مفید\n" +
+            "- automatic cleanup وقتی component unmount شود"
+    },
+    {
+        "id": 461,
+        "question": "What does refetchIntervalOnMount option control?",
+        "options": [
+            "Whether queries refetch when window regains focus",
+            "Whether query starts polling immediately on mount",
+            "How many retries attempted on failure",
+            "Whether query data is fresh or stale"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• آیا interval بلافاصله در mount شروع شود\n" +
+            "- یا منتظر اولین interval بماند\n" +
+            "- پیش‌فرض true است\n" +
+            "- برای timing دقیق polling\n" +
+            "- با refetchInterval کار می‌کند"
+    },
     {
         "id": 462,
         "question": "What happens when cached data becomes stale?",
@@ -7552,7 +7581,7 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-         "explanation":""
+        "explanation":""
     },
     {
         "id": 432,
@@ -7565,86 +7594,86 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-         "explanation":""
+        "explanation":""
     },
-        {
-            "id": 433,
-            "question": "What does CRUD stand for in application development?",
-            "options": [
-                "Compute, Render, Upload, Deploy",
-                "Create, Read, Update, Delete",
-                "Check, Run, Undo, Debug",
-                "Connect, Retry, Update, Deliver"
-            ],
-            "correctOption": 1,
-            "points": 10,
-         "explanation":""
-        },
-        {
-            "id": 434,
-            "question": "Which of the following represents the 'Read' operation?",
-            "options": [
-                "Adding a new user to database",
-                "Fetching a list of cabins from Supabase",
-                "Changing a user's password field",
-                "Deleting a cabin from system"
-            ],
-            "correctOption": 1,
-            "points": 20,
-         "explanation":""
-        },
-        {
-            "id": 435,
-            "question": "Which hook is most commonly used for 'Update' operation?",
-            "options": [
-                "useEffect",
-                "useQuery",
-                "useMutation",
-                "useContext"
-            ],
-            "correctOption": 2,
-            "points": 30,
-         "explanation":""
-        },
     {
-            "id": 436,
-            "question": "Which CRUD operation inserts new record into database?",
+        "id": 433,
+        "question": "What does CRUD stand for in application development?",
+        "options": [
+            "Compute, Render, Upload, Deploy",
+            "Create, Read, Update, Delete",
+            "Check, Run, Undo, Debug",
+            "Connect, Retry, Update, Deliver"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":""
+    },
+    {
+        "id": 434,
+        "question": "Which of the following represents the 'Read' operation?",
+        "options": [
+            "Adding a new user to database",
+            "Fetching a list of cabins from Supabase",
+            "Changing a user's password field",
+            "Deleting a cabin from system"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 435,
+        "question": "Which hook is most commonly used for 'Update' operation?",
+        "options": [
+            "useEffect",
+            "useQuery",
+            "useMutation",
+            "useContext"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 436,
+        "question": "Which CRUD operation inserts new record into database?",
         "options": [
             "Create",
             "Read",
             "Update",
             "Delete"
         ],
-            "correctOption": 0,
-            "points": 10,
-         "explanation":""
-        },
-        {
-            "id": 437,
-            "question": "Which CRUD operation retrieves data from API endpoint?",
-            "options": [
-                "Create",
-                "Read",
-                "Update",
-                "Delete"
-            ],
-            "correctOption": 1,
-            "points": 10,
-         "explanation":""
-        },
-        {
-            "id": 438,
-            "question": "When modifying existing user's email, which CRUD applies?",
-            "options": [
-                "Create",
-                "Read",
-                "Update",
-                "Delete"
-            ],
-            "correctOption": 2,
-            "points": 10,
-         "explanation":""
-        },
+        "correctOption": 0,
+        "points": 10,
+        "explanation":""
+    },
+    {
+        "id": 437,
+        "question": "Which CRUD operation retrieves data from API endpoint?",
+        "options": [
+            "Create",
+            "Read",
+            "Update",
+            "Delete"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":""
+    },
+    {
+        "id": 438,
+        "question": "When modifying existing user's email, which CRUD applies?",
+        "options": [
+            "Create",
+            "Read",
+            "Update",
+            "Delete"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":""
+    },
 //         {
 //             "id": 439,
 //             "question": "Which CRUD action permanently removes record from database?",
