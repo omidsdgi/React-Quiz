@@ -1987,149 +1987,171 @@ export const mockQuestions: Question[] = [
             "- React.memo props را مقایسه می‌کند، useMemo dependencies را\n" +
             "- هر دو از shallow comparison استفاده می‌کنند"
     },
-//     {
-//         "id": 128,
-//         "question":"What happens when useMemo's dependency array doesn't change between renders?",
-//         "options": [
-//             "A new value is always recalculated",
-//             "The previously cached value is returned",
-//             "React removes memoized value to save memory",
-//             "The component will never re-render again"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 129,
-//         "question": "Which tool is primarily used for preventing unnecessary component re-renders?",
-//         "options": [
-//             "useState hook for managing component state",
-//             "useMemo hook for memoizing computed values",
-//             "useCallback hook for memoizing function references",
-//             "React.memo higher-order component wrapper"
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 130,
-//         "question": "Which hook prevents expensive recalculations inside components?",
-//         "options": [
-//             "useCallback hook for memoizing function references",
-//             "useMemo hook for memoizing computed values",
-//             "useEffect hook for handling side effects",
-//             "React.memo higher-order component wrapper"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 131,
-//         "question": "Which hook is useful for memoizing values used in dependency arrays of other hooks?",
-//         "options": [
-//             "useMemo hook for memoizing computed values",
-//             "useState hook for managing component state",
-//             "useRef hook for persisting values across renders",
-//             "useCallback hook for memoizing function references"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 132,
-//         "question": "What's the best approach to prevent child component re-renders when props haven't changed?",
-//         "options": [
-//             "useMemo in the parent component to memoize props",
-//             "React.memo wrapping the child component directly",
-//             "useCallback to memoize the child component function",
-//             "useEffect to control prop updates in the parent"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 133,
-//         "question": "What's the best approach for avoiding expensive recalculations depending on multiple variables?",
-//         "options": [
-//             "useMemo with proper dependency array containing all variables",
-//             "useCallback wrapping the computation function for stability",
-//             "React.memo wrapping the parent component to prevent updates",
-//             "useEffect storing computed value in state for persistence"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 134,
-//         "question": "How should you stabilize expensive values used in other hook dependency arrays?",
-//         "options": [
-//             "useCallback for stabilizing the computed value reference",
-//             "React.memo wrapping the component that contains the value",
-//             "useRef to persist the value across renders",
-//             "useMemo to memoize the value with dependencies"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 135,
-//         "question": "Why does passing arrow functions as props prevent React.memo from working effectively?",
-//         "options": [
-//             "Arrow functions cannot access props or state from parent components",
-//             "React.memo converts arrow functions to regular function declarations",
-//             "Arrow functions create new references on every render cycle",
-//             "useCallback recreates arrow functions every render automatically"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 136,
-//         "question": "When do useMemo and useEffect callbacks execute in the component lifecycle?",
-//         "options": [
-//             "useMemo runs after commit, useEffect runs during render phase",
-//             "useMemo runs during rendering, useEffect runs after rendering phase",
-//             "Both run during rendering before DOM commit phase",
-//             "Both run after rendering, asynchronously in the next cycle"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 137,
-//         "question": "What is the primary difference in purpose between useMemo and useEffect?",
-//         "options": [
-//             "Both are used for memoizing values inside component functions",
-//             "Both are used for managing side effects after rendering",
-//             "useMemo handles side effects, useEffect memoizes computed values",
-//             "useMemo memoizes computed values, useEffect handles side effects"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 138,
-//         "question": "What do useMemo and useEffect return?",
-//         "options": [
-//             "useMemo returns functions, useEffect returns computed values",
-//             "Neither hook returns any value to the component",
-//             "useMemo returns a memoized value, useEffect returns cleanup function",
-//             "Both hooks return cleanup functions for memory management"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
+    {
+        "id": 128,
+        "question":"What happens when useMemo's dependency array doesn't change between renders?",
+        "options": [
+            "A new value is always recalculated",
+            "The previously cached value is returned",
+            "React removes memoized value to save memory",
+            "The component will never re-render again"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• اگر dependency ها تغییر نکرده باشند، مقدار قبلی از cache برگردانده می‌شود\n" +
+            "- محاسبه مجدد انجام نمی‌شود و از منابع صرفه‌جویی می‌شود\n" +
+            "- این رفتار اصل اساسی memoization است"
+    },
+    {
+        "id": 129,
+        "question": "Which tool is primarily used for preventing unnecessary component re-renders?",
+        "options": [
+            "useState hook for managing component state",
+            "useMemo hook for memoizing computed values",
+            "useCallback hook for memoizing function references",
+            "React.memo higher-order component wrapper"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• React.memo ابزار اصلی برای جلوگیری از re-render غیرضروری کامپوننت است\n" +
+            "- کل کامپوننت را wrap می‌کند و props را مقایسه می‌کند\n" +
+            "- اگر props تغییر نکرده باشند، از re-render جلوگیری می‌کند"
+    },
+    {
+        "id": 130,
+        "question": "Which hook prevents expensive recalculations inside components?",
+        "options": [
+            "useCallback hook for memoizing function references",
+            "useMemo hook for memoizing computed values",
+            "useEffect hook for handling side effects",
+            "React.memo higher-order component wrapper"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• useMemo برای جلوگیری از محاسبات پرهزینه استفاده می‌شود\n" +
+            "- نتیجه محاسبات را cache می‌کند و در renderهای بعدی استفاده می‌کند\n" +
+            "- فقط زمانی دوباره محاسبه می‌کند که dependencies تغییر کنند"
+    },
+    {
+        "id": 131,
+        "question": "Which hook is useful for memoizing values used in dependency arrays of other hooks?",
+        "options": [
+            "useMemo hook for memoizing computed values",
+            "useState hook for managing component state",
+            "useRef hook for persisting values across renders",
+            "useCallback hook for memoizing function references"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• useMemo برای پایدار کردن مقادیر در dependency arrays استفاده می‌شود\n" +
+            "- مانع از re-run شدن غیرضروری hookهای دیگر می‌شود\n" +
+            "- به خصوص برای objects و arrays که reference جدید می‌گیرند مفید است"
+    },
+    {
+        "id": 132,
+        "question": "What's the best approach to prevent child component re-renders when props haven't changed?",
+        "options": [
+            "useMemo in the parent component to memoize props",
+            "React.memo wrapping the child component directly",
+            "useCallback to memoize the child component function",
+            "useEffect to control prop updates in the parent"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• React.memo بهترین روش برای جلوگیری از re-render فرزند است\n" +
+            "- مستقیماً child component را wrap می‌کند\n" +
+            "- props را shallow compare می‌کند و در صورت عدم تغییر از re-render جلوگیری می‌کند"
+    },
+    {
+        "id": 133,
+        "question": "What's the best approach for avoiding expensive recalculations depending on multiple variables?",
+        "options": [
+            "useMemo with proper dependency array containing all variables",
+            "useCallback wrapping the computation function for stability",
+            "React.memo wrapping the parent component to prevent updates",
+            "useEffect storing computed value in state for persistence"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• useMemo با dependency array کامل بهترین راه‌حل است\n" +
+            "- تمام متغیرهای مؤثر در محاسبه باید در dependency array باشند\n" +
+            "- فقط زمانی محاسبه مجدد می‌شود که یکی از dependencies تغییر کند"
+    },
+    {
+        "id": 134,
+        "question": "How should you stabilize expensive values used in other hook dependency arrays?",
+        "options": [
+            "useCallback for stabilizing the computed value reference",
+            "React.memo wrapping the component that contains the value",
+            "useRef to persist the value across renders",
+            "useMemo to memoize the value with dependencies"
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• useMemo برای پایدار کردن مقادیر پرهزینه در dependency arrays استفاده می‌شود\n" +
+            "- reference ثابت برای مقدار ایجاد می‌کند\n" +
+            "- از اجرای مکرر hookهای وابسته جلوگیری می‌کند"
+    },
+    {
+        "id": 135,
+        "question": "Why does passing arrow functions as props prevent React.memo from working effectively?",
+        "options": [
+            "Arrow functions cannot access props or state from parent components",
+            "React.memo converts arrow functions to regular function declarations",
+            "Arrow functions create new references on every render cycle",
+            "useCallback recreates arrow functions every render automatically"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• هر بار render، arrow function جدیدی با reference متفاوت ساخته می‌شود\n" +
+            "- React.memo با shallow comparison reference ها را مقایسه می‌کند\n" +
+            "- برای حل این مشکل باید از useCallback استفاده کرد"
+    },
+    {
+        "id": 136,
+        "question": "When do useMemo and useEffect callbacks execute in the component lifecycle?",
+        "options": [
+            "useMemo runs after commit, useEffect runs during render phase",
+            "useMemo runs during rendering, useEffect runs after rendering phase",
+            "Both run during rendering before DOM commit phase",
+            "Both run after rendering, asynchronously in the next cycle"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• useMemo در حین rendering و به صورت synchronous اجرا می‌شود\n" +
+            "- useEffect بعد از rendering و commit به DOM اجرا می‌شود\n" +
+            "- این تفاوت timing برای use case های متفاوت است"
+    },
+    {
+        "id": 137,
+        "question": "What is the primary difference in purpose between useMemo and useEffect?",
+        "options": [
+            "Both are used for memoizing values inside component functions",
+            "Both are used for managing side effects after rendering",
+            "useMemo handles side effects, useEffect memoizes computed values",
+            "useMemo memoizes computed values, useEffect handles side effects"
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• useMemo برای memoize کردن محاسبات و جلوگیری از محاسبات تکراری است\n" +
+            "- useEffect برای side effects مثل API calls، subscriptions است\n" +
+            "- useMemo مقدار برمی‌گرداند، useEffect فقط side effect اجرا می‌کند"
+    },
+    {
+        "id": 138,
+        "question": "What do useMemo and useEffect return?",
+        "options": [
+            "useMemo returns functions, useEffect returns computed values",
+            "Neither hook returns any value to the component",
+            "useMemo returns a memoized value, useEffect returns cleanup function",
+            "Both hooks return cleanup functions for memory management"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• useMemo مقدار memoize شده را برمی‌گرداند\n" +
+            "- useEffect یک cleanup function اختیاری برمی‌گرداند\n" +
+            "- cleanup function برای پاکسازی side effects مثل unsubscribe استفاده می‌شود"
+    },
     {
         "id": 139,
         "question": "Why is calling Hooks indirectly through call/apply invalid?",
