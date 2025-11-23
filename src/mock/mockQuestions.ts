@@ -7607,7 +7607,7 @@ export const mockQuestions: Question[] = [
             "- این behavior مطلوب برای UX است"
     },
     {
-        "id": 431,
+        "id": 463,
         "question":  "Why is TanStack Query considered state management library?",
         "options": [
             "It allows direct modification of component state",
@@ -7617,10 +7617,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation":"• server state را manage می‌کند\n" +
+            "- caching، synchronization و updates\n" +
+            "- state بین components share می‌شود\n" +
+            "- lifecycle management برای async data\n" +
+            "- alternative برای Redux برای server state"
     },
     {
-        "id": 432,
+        "id": 464,
         "question":"Which combination allows polling data in background?",
         "options": [
             "refetchInterval: 5000 and refetchIntervalInBackground: true",
@@ -7630,10 +7634,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation":"• refetchInterval + refetchIntervalInBackground: true\n" +
+            "- حتی وقتی window focus ندارد\n" +
+            "- برای real-time updates\n" +
+            "- مثل notifications یا live scores\n" +
+            "- باید با احتیاط استفاده شود (battery/bandwidth)"
     },
     {
-        "id": 433,
+        "id": 465,
         "question": "What does CRUD stand for in application development?",
         "options": [
             "Compute, Render, Upload, Deploy",
@@ -7643,10 +7651,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-        "explanation":""
+        "explanation":"• Create: ساخت record جدید\n" +
+            "- Read: خواندن/دریافت data\n" +
+            "- Update: تغییر دادن existing data\n" +
+            "- Delete: حذف کردن record\n" +
+            "- چهار عملیات اصلی database"
     },
     {
-        "id": 434,
+        "id": 466,
         "question": "Which of the following represents the 'Read' operation?",
         "options": [
             "Adding a new user to database",
@@ -7656,10 +7668,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation":"• fetching یا retrieving data از database\n" +
+            "- HTTP GET method\n" +
+            "- useQuery در React Query\n" +
+            "- نمایش data به user\n" +
+            "- بدون تغییر در server"
     },
     {
-        "id": 435,
+        "id": 467,
         "question": "Which hook is most commonly used for 'Update' operation?",
         "options": [
             "useEffect",
@@ -7669,10 +7685,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation":"• useMutation برای update operations\n" +
+            "- HTTP PUT یا PATCH\n" +
+            "- تغییر existing records\n" +
+            "- invalidation برای sync کردن cache\n" +
+            "- onSuccess برای UI updates"
     },
     {
-        "id": 436,
+        "id": 468,
         "question": "Which CRUD operation inserts new record into database?",
         "options": [
             "Create",
@@ -7682,10 +7702,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-        "explanation":""
+        "explanation":"• Create با HTTP POST\n" +
+            "- record جدید در database\n" +
+            "- useMutation در React Query\n" +
+            "- server معمولاً ID generate می‌کند\n" +
+            "- بعد از success، cache invalidation"
     },
     {
-        "id": 437,
+        "id": 469,
         "question": "Which CRUD operation retrieves data from API endpoint?",
         "options": [
             "Create",
@@ -7695,10 +7719,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-        "explanation":""
+        "explanation":"• Read با HTTP GET\n" +
+            "- useQuery در React Query\n" +
+            "- فقط retrieve، بدون modification\n" +
+            "- caching برای performance\n" +
+            "- safe و idempotent"
     },
     {
-        "id": 438,
+        "id": 470,
         "question": "When modifying existing user's email, which CRUD applies?",
         "options": [
             "Create",
@@ -7708,138 +7736,142 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-        "explanation":""
+        "explanation":"• Update با PUT یا PATCH\n" +
+            "- تغییر existing data\n" +
+            "- useMutation در React Query\n" +
+            "- PATCH اگر فقط email\n" +
+            "- PUT اگر تمام user object"
     },
-//         {
-//             "id": 439,
-//             "question": "Which CRUD action permanently removes record from database?",
-//             "options": [
-//                 "Create",
-//                 "Read",
-//                 "Update",
-//                 "Delete"
-//             ],
-//             "correctOption": 3,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 440,
-//             "question":"Which hook is most suitable for Create, Update, Delete?",
-//             "options": [
-//                 "useEffect",
-//                 "useState",
-//                 "useMutation",
-//                 "useContext"
-//             ],
-//             "correctOption": 2,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 441,
-//             "question": "Which CRUD operation requires invalidating cached queries?",
-//             "options": [
-//                 "Only Read",
-//                 "Create/Update/Delete",
-//                 "All of them",
-//                 "None of them"
-//             ],
-//             "correctOption": 1,
-//             "points": 30,
-//          "explanation":""
-//         },
-//         {
-//             "id": 442,
-//             "question":  "Why is Update often more complex than Create?",
-//             "options": [
-//                 "Because it bypasses state management entirely",
-//                 "Because it does not require validation",
-//                 "Because it must handle existing and new values",
-//                 "Because it always deletes old records first",
-//             ],
-//             "correctOption": 3,
-//             "points": 30,
-//          "explanation":""
-//         },
-//         {
-//             "id": 443,
-//             "question": "What does TypeScript mainly add to JavaScript?",
-//             "options": [
-//                 "Server-side rendering capabilities",
-//                 "Static type checking",
-//                 "Automatic UI rendering",
-//                 "Database connectivity"
-//             ],
-//             "correctOption": 1,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 444,
-//             "question":"Which of the following will TypeScript flag as error?",
-//             "options": [
-//                 "let age: number = 30;",
-//                 "age = 40;",
-//                 "age = 'thirty';",
-//                 "console.log(age);"
-//             ],
-//             "correctOption": 2,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 445,
-//             "question":  "Why does TypeScript check function parameter types?",
-//             "options": [
-//                 "To optimize runtime performance automatically",
-//                 "To prevent passing arguments of incorrect type",
-//                 "To convert JavaScript code to HTML",
-//                 "To automatically fetch data from APIs"
-//             ],
-//             "correctOption": 1,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 446,
-//             "question": "Which of these will TypeScript catch?",
-//             "options": [
-//                 "Accessing non-existent property on object",
-//                 "Logic errors in sorting algorithms",
-//                 "Network request failures at runtime",
-//                 "CSS styling errors in components"
-//             ],
-//             "correctOption": 0,
-//             "points": 10,
-//          "explanation":""
-//         },
-//         {
-//             "id": 447,
-//             "question": "How does TypeScript handle null in string variable?",
-//             "options": [
-//                 "It ignores the value completely",
-//                 "It treats undefined as zero value",
-//                 "It automatically converts null to empty string",
-//                 "It throws compile error if strict mode enabled",
-//             ],
-//             "correctOption": 3,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 448,
-//             "question": "Why is TypeScript helpful in large React projects?",
-//             "options": [
-//                 "It reduces runtime errors and improves productivity",
-//                 "It automatically styles all React components",
-//                 "It replaces Redux for state management",
-//                 "It converts JSX to HTML directly"
-//             ],
-//             "correctOption": 0,
-//             "points": 20,
-//          "explanation":""
-//         },
+        {
+            "id": 439,
+            "question": "Which CRUD action permanently removes record from database?",
+            "options": [
+                "Create",
+                "Read",
+                "Update",
+                "Delete"
+            ],
+            "correctOption": 3,
+            "points": 10,
+         "explanation":""
+        },
+        {
+            "id": 440,
+            "question":"Which hook is most suitable for Create, Update, Delete?",
+            "options": [
+                "useEffect",
+                "useState",
+                "useMutation",
+                "useContext"
+            ],
+            "correctOption": 2,
+            "points": 20,
+         "explanation":""
+        },
+        {
+            "id": 441,
+            "question": "Which CRUD operation requires invalidating cached queries?",
+            "options": [
+                "Only Read",
+                "Create/Update/Delete",
+                "All of them",
+                "None of them"
+            ],
+            "correctOption": 1,
+            "points": 30,
+         "explanation":""
+        },
+        {
+            "id": 442,
+            "question":  "Why is Update often more complex than Create?",
+            "options": [
+                "Because it bypasses state management entirely",
+                "Because it does not require validation",
+                "Because it must handle existing and new values",
+                "Because it always deletes old records first",
+            ],
+            "correctOption": 3,
+            "points": 30,
+         "explanation":""
+        },
+        {
+            "id": 443,
+            "question": "What does TypeScript mainly add to JavaScript?",
+            "options": [
+                "Server-side rendering capabilities",
+                "Static type checking",
+                "Automatic UI rendering",
+                "Database connectivity"
+            ],
+            "correctOption": 1,
+            "points": 10,
+         "explanation":""
+        },
+        {
+            "id": 444,
+            "question":"Which of the following will TypeScript flag as error?",
+            "options": [
+                "let age: number = 30;",
+                "age = 40;",
+                "age = 'thirty';",
+                "console.log(age);"
+            ],
+            "correctOption": 2,
+            "points": 10,
+         "explanation":""
+        },
+        {
+            "id": 445,
+            "question":  "Why does TypeScript check function parameter types?",
+            "options": [
+                "To optimize runtime performance automatically",
+                "To prevent passing arguments of incorrect type",
+                "To convert JavaScript code to HTML",
+                "To automatically fetch data from APIs"
+            ],
+            "correctOption": 1,
+            "points": 10,
+         "explanation":""
+        },
+        {
+            "id": 446,
+            "question": "Which of these will TypeScript catch?",
+            "options": [
+                "Accessing non-existent property on object",
+                "Logic errors in sorting algorithms",
+                "Network request failures at runtime",
+                "CSS styling errors in components"
+            ],
+            "correctOption": 0,
+            "points": 10,
+         "explanation":""
+        },
+        {
+            "id": 447,
+            "question": "How does TypeScript handle null in string variable?",
+            "options": [
+                "It ignores the value completely",
+                "It treats undefined as zero value",
+                "It automatically converts null to empty string",
+                "It throws compile error if strict mode enabled",
+            ],
+            "correctOption": 3,
+            "points": 20,
+         "explanation":""
+        },
+        {
+            "id": 448,
+            "question": "Why is TypeScript helpful in large React projects?",
+            "options": [
+                "It reduces runtime errors and improves productivity",
+                "It automatically styles all React components",
+                "It replaces Redux for state management",
+                "It converts JSX to HTML directly"
+            ],
+            "correctOption": 0,
+            "points": 20,
+         "explanation":""
+        },
 //         {
 //             "id": 449,
 //             "question":  "Which TypeScript feature prevents incorrect object shapes?",
