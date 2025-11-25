@@ -2454,7 +2454,7 @@ export const mockQuestions: Question[] = [
     },
     {
         "id": 159,
-        "question": "Why include Why should functions defined inside a React component be added to the dependency array of useEffect?component functions in useEffect dependency arrays?",
+        "question": "Why should functions defined inside a React component be added to the dependency array of useEffect?",
         options: [
             "Functions are recreated on every component render cycle",
             "React automatically memoizes all functions in components",
@@ -7743,7 +7743,7 @@ export const mockQuestions: Question[] = [
             "- PUT اگر تمام user object"
     },
         {
-            "id": 439,
+            "id": 471,
             "question": "Which CRUD action permanently removes record from database?",
             "options": [
                 "Create",
@@ -7753,10 +7753,14 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 3,
             "points": 10,
-         "explanation":""
+         "explanation":"• Delete با HTTP DELETE\n" +
+             "- حذف permanent از database\n" +
+             "- useMutation برای این operation\n" +
+             "- معمولاً confirmation لازم است\n" +
+             "- cache invalidation بعد از success"
         },
         {
-            "id": 440,
+            "id": 472,
             "question":"Which hook is most suitable for Create, Update, Delete?",
             "options": [
                 "useEffect",
@@ -7766,10 +7770,14 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 2,
             "points": 20,
-         "explanation":""
+         "explanation":"• useMutation برای همه CUD operations\n" +
+             "- useQuery فقط برای Read\n" +
+             "- mutations state را تغییر می‌دهند\n" +
+             "- callbacks برای side effects\n" +
+             "- optimistic updates support"
         },
         {
-            "id": 441,
+            "id": 473,
             "question": "Which CRUD operation requires invalidating cached queries?",
             "options": [
                 "Only Read",
@@ -7779,10 +7787,14 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 1,
             "points": 30,
-         "explanation":""
+         "explanation":"• Create، Update، Delete همه نیاز به invalidation\n" +
+             "- چون server state را تغییر می‌دهند\n" +
+             "- cache باید sync شود\n" +
+             "- Read نیازی به invalidation ندارد\n" +
+             "- queryClient.invalidateQueries بعد از mutations"
         },
         {
-            "id": 442,
+            "id": 474,
             "question":  "Why is Update often more complex than Create?",
             "options": [
                 "Because it bypasses state management entirely",
@@ -7792,10 +7804,14 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 3,
             "points": 30,
-         "explanation":""
+         "explanation":"• باید existing values را handle کند\n" +
+             "- merge کردن new و old data\n" +
+             "- partial updates (PATCH) vs full (PUT)\n" +
+             "- optimistic updates پیچیده‌تر\n" +
+             "- validation برای هر دو حالت"
         },
         {
-            "id": 443,
+            "id": 475,
             "question": "What does TypeScript mainly add to JavaScript?",
             "options": [
                 "Server-side rendering capabilities",
@@ -7805,10 +7821,14 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 1,
             "points": 10,
-         "explanation":""
+         "explanation":"• static type checking در compile time\n" +
+             "- errors را قبل از runtime می‌گیرد\n" +
+             "- autocomplete و IntelliSense\n" +
+             "- documentation از طریق types\n" +
+             "- refactoring ایمن‌تر"
         },
         {
-            "id": 444,
+            "id": 476,
             "question":"Which of the following will TypeScript flag as error?",
             "options": [
                 "let age: number = 30;",
@@ -7818,10 +7838,14 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 2,
             "points": 10,
-         "explanation":""
+         "explanation":"• age = 'thirty' چون age تایپ number است\n" +
+             "- type mismatch خطا می‌دهد\n" +
+             "- در compile time catch می‌شود\n" +
+             "- از bugs runtime جلوگیری می‌کند\n" +
+             "- type safety enforcement"
         },
         {
-            "id": 445,
+            "id": 477,
             "question":  "Why does TypeScript check function parameter types?",
             "options": [
                 "To optimize runtime performance automatically",
@@ -7831,10 +7855,14 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 1,
             "points": 10,
-         "explanation":""
+         "explanation":"• جلوگیری از passing wrong argument types\n" +
+             "- function signature را enforce می‌کند\n" +
+             "- compile time errors به جای runtime\n" +
+             "- self-documenting code\n" +
+             "- IDE support برای autocomplete"
         },
         {
-            "id": 446,
+            "id": 478,
             "question": "Which of these will TypeScript catch?",
             "options": [
                 "Accessing non-existent property on object",
@@ -7844,10 +7872,14 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 0,
             "points": 10,
-         "explanation":""
+         "explanation":"• دسترسی به property که وجود ندارد\n" +
+             "- object.nonExistentProperty\n" +
+             "- typos در property names\n" +
+             "- type safety برای objects\n" +
+             "- logic errors را نمی‌گیرد"
         },
         {
-            "id": 447,
+            "id": 479,
             "question": "How does TypeScript handle null in string variable?",
             "options": [
                 "It ignores the value completely",
@@ -7857,10 +7889,14 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 3,
             "points": 20,
-         "explanation":""
+         "explanation":"• در strict mode، null به string assign نمی‌شود\n" +
+             "- compile error می‌دهد\n" +
+             "- باید type را string | null کنید\n" +
+             "- null safety enforcement\n" +
+             "- از null reference errors جلوگیری"
         },
         {
-            "id": 448,
+            "id": 480,
             "question": "Why is TypeScript helpful in large React projects?",
             "options": [
                 "It reduces runtime errors and improves productivity",
@@ -7870,7 +7906,11 @@ export const mockQuestions: Question[] = [
             ],
             "correctOption": 0,
             "points": 20,
-         "explanation":""
+         "explanation":"• type safety برای props و state\n" +
+             "- refactoring ایمن‌تر\n" +
+             "- autocomplete برای productivity\n" +
+             "- catch کردن errors در development\n" +
+             "- documentation خودکار از types"
         },
 //         {
 //             "id": 449,
