@@ -8082,149 +8082,176 @@ export const mockQuestions: Question[] = [
             "- React single source of truth است\n" +
             "- re-render در هر keystroke"
     },
-//     {
-//         "id": 459,
-//         "question": "What is best practice for showing validation errors?",
-//         "options": [
-//             "Show all error messages on mount",
-//             "Use touchedFields after user interaction",
-//             "Display errors only after submission",
-//             "Manually track blur with useState"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 460,
-//         "question": "Which is best practice for error messages in forms?",
-//         "options": [
-//             "Manually implement blur tracking",
-//             "Show all errors immediately on mount",
-//             "Show errors only after form submission",
-//             "Use touchedFields after user interaction",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 461,
-//         "question": "Why does using onTouched improve user experience?",
-//         "options": [
-//             "Prevents unnecessary component re-renders",
-//             "Disables inputs until form submission",
-//             "Shows errors only after user interaction",
-//             "Automatically fixes all validation rules"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//          "explanation":""
-//     },
-//     {
-//         "id": 462,
-//         "question": "Why use spread operator with register function?",
-//         "options": [
-//             "Copies only the input value property",
-//             "Passes all necessary props automatically",
-//             "Removes need for validation rules",
-//             "Prevents React from re-rendering input"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 463,
-//         "question": "What happens if you use register without spreading?",
-//         "options": [
-//             "Nothing changes, form works the same",
-//             "TypeScript throws error but works fine",
-//             "Input won't connect to form state",
-//             "Automatically infers validation rules"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//          "explanation":""
-//     },
-//     {
-//         "id": 464,
-//         "question": "Which best describes what ...register does?",
-//         "options": [
-//             "Spreads only validation rules to component",
-//             "Adds custom hook into component props",
-//             "Spreads handlers and validation rules",
-//             "Overrides default HTML element attributes"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//          "explanation":""
-//     },
-//     {
-//         "id": 465,
-//         "question": "What is the main idea of Render Props pattern?",
-//         "options": [
-//             "Passing JSX elements as component props",
-//             "Passing function as prop controlling render",
-//             "Rendering props automatically inside DOM",
-//             "Using context API to render props"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 466,
-//         "question": "Which best demonstrates the Render Props pattern?",
-//         "options": [
-//             "<DataProvider><Child /></DataProvider>",
-//             "<DataProvider render={data => <Child data={data} />} />",
-//             "<Child data={useData()} />",
-//             "<Provider><Consumer>{value => <Child value={value} />}</Consumer></Provider>"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 467,
-//         "question": "Why has Render Props usage decreased in recent years?",
-//         "options": [
-//             "No longer supported in React 18 version",
-//             "Hooks provide simpler way to share logic",
-//             "Context API completely replaced the pattern",
-//             "Caused errors in React strict mode"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//          "explanation":""
-//     },
-//     {
-//         "id": 468,
-//         "question": "What is main purpose of Compound Component Pattern?",
-//         "options": [
-//             "Bundle multiple components into single file",
-//             "Allow related components work together unified",
-//             "Reduce size of final JavaScript bundle",
-//             "Avoid writing any props in child components"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 469,
-//         "question": "Which technique shares state in Compound Component Pattern?",
-//         "options": [
-//             "Prop drilling through component tree",
-//             "React Context for state sharing",
-//             "Redux store for global state",
-//             "Direct DOM manipulation methods"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
+    {
+        "id": 491,
+        "question": "What is best practice for showing validation errors?",
+        "options": [
+            "Show all error messages on mount",
+            "Use touchedFields after user interaction",
+            "Display errors only after submission",
+            "Manually track blur with useState"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation":"• استفاده از touchedFields بعد از interaction\n" +
+             "- errors فقط برای touched fields\n" +
+             "- بهتر از showing همه errors در mount\n" +
+             "- UX بهتر برای user\n" +
+             "- onBlur یا onChange برای timing"
+    },
+    {
+        "id": 492,
+        "question": "Which is best practice for error messages in forms?",
+        "options": [
+            "Manually implement blur tracking",
+            "Show all errors immediately on mount",
+            "Show errors only after form submission",
+            "Use touchedFields after user interaction",
+        ],
+        "correctOption": 3,
+        "points": 20,
+         "explanation":"• نمایش errors بعد از user interaction\n" +
+             "- با touchedFields check کردن\n" +
+             "- نه بلافاصله در mount\n" +
+             "- progressive validation\n" +
+             "- UX friendly approach"
+    },
+    {
+        "id": 493,
+        "question": "Why does using onTouched improve user experience?",
+        "options": [
+            "Prevents unnecessary component re-renders",
+            "Disables inputs until form submission",
+            "Shows errors only after user interaction",
+            "Automatically fixes all validation rules"
+        ],
+        "correctOption": 2,
+        "points": 30,
+         "explanation":"• errors فقط بعد از interaction نشان داده می‌شوند\n" +
+             "- نه بلافاصله وقتی form باز می‌شود\n" +
+             "- کمتر overwhelming برای user\n" +
+             "- natural validation flow\n" +
+             "- مانند native forms"
+    },
+    {
+        "id": 494,
+        "question": "Why use spread operator with register function?",
+        "options": [
+            "Copies only the input value property",
+            "Passes all necessary props automatically",
+            "Removes need for validation rules",
+            "Prevents React from re-rendering input"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation":"• تمام props لازم را به input pass می‌کند\n" +
+             "- onChange، onBlur، ref، name\n" +
+             "- {...register('email')} ساده‌تر از manual\n" +
+             "- validation rules هم included\n" +
+             "- cleaner و readable code"
+    },
+    {
+        "id": 495,
+        "question": "What happens if you use register without spreading?",
+        "options": [
+            "Nothing changes, form works the same",
+            "TypeScript throws error but works fine",
+            "Input won't connect to form state",
+            "Automatically infers validation rules"
+        ],
+        "correctOption": 2,
+        "points": 30,
+         "explanation":"• input به form state connect نمی‌شود\n" +
+             "- values track نمی‌شوند\n" +
+             "- validation کار نمی‌کند\n" +
+             "- spread operator ضروری است\n" +
+             "- بدون آن form broken است"
+    },
+    {
+        "id": 496,
+        "question": "Which best describes what ...register does?",
+        "options": [
+            "Spreads only validation rules to component",
+            "Adds custom hook into component props",
+            "Spreads handlers and validation rules",
+            "Overrides default HTML element attributes"
+        ],
+        "correctOption": 2,
+        "points": 30,
+         "explanation":"• handlers (onChange، onBlur) و ref را spread می‌کند\n" +
+             "- validation rules را apply می‌کند\n" +
+             "- name attribute را set می‌کند\n" +
+             "- input را به form متصل می‌کند\n" +
+             "- all-in-one connection"
+    },
+    {
+        "id": 497,
+        "question": "What is the main idea of Render Props pattern?",
+        "options": [
+            "Passing JSX elements as component props",
+            "Passing function as prop controlling render",
+            "Rendering props automatically inside DOM",
+            "Using context API to render props"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation":"• passing function به عنوان prop که render logic دارد\n" +
+             "- child function به جای JSX\n" +
+             "- sharing logic بین components\n" +
+             "- flexibility در rendering\n" +
+             "- قبل از hooks رایج بود"
+    },
+    {
+        "id": 498,
+        "question": "Why has Render Props usage decreased in recent years?",
+        "options": [
+            "No longer supported in React 18 version",
+            "Hooks provide simpler way to share logic",
+            "Context API completely replaced the pattern",
+            "Caused errors in React strict mode"
+        ],
+        "correctOption": 1,
+        "points": 30,
+         "explanation":"• Hooks راه ساده‌تری برای logic sharing\n" +
+             "- custom hooks جایگزین render props\n" +
+             "- کد خواناتر با hooks\n" +
+             "- کمتر nesting و complexity\n" +
+             "- Hooks modern approach هستند"
+    },
+    {
+        "id": 499,
+        "question": "What is main purpose of Compound Component Pattern?",
+        "options": [
+            "Bundle multiple components into single file",
+            "Allow related components work together unified",
+            "Reduce size of final JavaScript bundle",
+            "Avoid writing any props in child components"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation":"• components مرتبط با هم کار می‌کنند\n" +
+             "- state implicitly share می‌شود\n" +
+             "- flexible API برای composition\n" +
+             "- مثل Select.Option یا Tabs.Panel\n" +
+             "- readability و reusability"
+    },
+    {
+        "id": 500,
+        "question": "Which technique shares state in Compound Component Pattern?",
+        "options": [
+            "Prop drilling through component tree",
+            "React Context for state sharing",
+            "Redux store for global state",
+            "Direct DOM manipulation methods"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation":"• React Context برای implicit state sharing\n" +
+             "- parent context provide می‌کند\n" +
+             "- children با useContext مصرف می‌کنند\n" +
+             "- بدون prop drilling\n" +
+             "- clean و flexible API"
+    },
 //     {
 //         "id": 470,
 //         "question": "Why prefer compound components over single component?",
