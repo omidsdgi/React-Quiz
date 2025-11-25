@@ -7912,136 +7912,176 @@ export const mockQuestions: Question[] = [
              "- catch کردن errors در development\n" +
              "- documentation خودکار از types"
         },
-//         {
-//             "id": 449,
-//             "question":  "Which TypeScript feature prevents incorrect object shapes?",
-//             "options": [
-//                 "Interfaces and type annotations",
-//                 "React hooks for state",
-//                 "Async/await syntax",
-//                 "CSS modules system"
-//             ],
-//             "correctOption": 0,
-//             "points": 20,
-//          "explanation":""
-//         },
-//         {
-//             "id": 450,
-//             "question": "What kind of errors does TypeScript detect before runtime?",
-//             "options": [
-//                 "Runtime network connection errors",
-//                 "Compile-time type mismatches",
-//                 "CSS styling layout mistakes",
-//                 "User input validation errors"
-//             ],
-//             "correctOption": 1,
-//             "points": 10,
-//          "explanation":""
-//         },
-//     {
-//         "id": 451,
-//         "question": "Which of the following will TypeScript catch during development?",
-//         "options": [
-//             "Accessing property that doesn't exist on objects",
-//             "Logic errors in complex sorting algorithms",
-//             "API response failures during runtime execution",
-//             "Broken HTML layout and structure issues"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 452,
-//         "question": "Why is detecting errors at compile-time useful?",
-//         "options": [
-//             "Generates CSS styles for components automatically",
-//             "Prevents runtime crashes improving code reliability",
-//             "Reduces network latency improving page speed",
-//             "Automatically fetches data from external APIs",
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 453,
-//         "question": "Which scenario is a compile-time error TypeScript detects?",
-//         "options": [
-//             "Server not responding to network requests",
-//             "Button element not triggering click events",
-//             "Calling function with incorrect argument types",
-//             "User entering wrong login credentials"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 454,
-//         "question": "Which TypeScript feature ensures errors before runtime?",
-//         "options": [
-//             "React hooks implementation",
-//             "Static type checking system",
-//             "CSS modules integration",
-//             "Browser developer tools"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 455,
-//         "question": "At which stage does TypeScript execute type checks?",
-//         "options": [
-//             "During runtime execution in browser",
-//             "During compilation before code runs",
-//             "After deployment to production server",
-//             "When user interacts with UI elements"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 456,
-//         "question": "Why is React Hook Form popular among developers?",
-//         "options": [
-//             "Automatically generates CSS for form elements",
-//             "Provides performant form state management",
-//             "Replaces Redux for all state management",
-//             "Converts forms to server-side code"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 457,
-//         "question": "Why does React Hook Form trigger fewer re-renders?",
-//         "options": [
-//             "Uses uncontrolled inputs reducing re-renders",
-//             "Automatically batches all network requests",
-//             "Only works with functional components",
-//             "Converts inputs to server variables"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 458,
-//         "question": "In React forms, what is a controlled component?",
-//         "options": [
-//             "Component managing its own internal state",
-//             "Component fetching data from APIs automatically",
-//             "Component where React controls input value",
-//             "Component that cannot receive any props"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//          "explanation":""
-//     },
+    {
+        "id": 481,
+        "question":  "Which TypeScript feature prevents incorrect object shapes?",
+        "options": [
+            "Interfaces and type annotations",
+            "React hooks for state",
+            "Async/await syntax",
+            "CSS modules system"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• interfaces و type annotations\n" +
+            "- object structure را define می‌کنند\n" +
+            "- required و optional properties\n" +
+            "- compile time validation\n" +
+            "- consistency در codebase"
+    },
+    {
+        "id": 482,
+        "question": "What kind of errors does TypeScript detect before runtime?",
+        "options": [
+            "Runtime network connection errors",
+            "Compile-time type mismatches",
+            "CSS styling layout mistakes",
+            "User input validation errors"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• type mismatches و type errors\n" +
+            "- undefined properties\n" +
+            "- wrong function arguments\n" +
+            "- در compile time catch می‌شود\n" +
+            "- logic errors را نمی‌گیرد"
+    },
+    {
+        "id": 483,
+        "question": "Which of the following will TypeScript catch during development?",
+        "options": [
+            "Accessing property that doesn't exist on objects",
+            "Logic errors in complex sorting algorithms",
+            "API response failures during runtime execution",
+            "Broken HTML layout and structure issues"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":"• accessing non-existent properties\n" +
+            "- typos در property یا method names\n" +
+            "- type mismatches\n" +
+            "- در editor با red underline\n" +
+            "- قبل از run کردن code"
+    },
+    {
+        "id": 484,
+        "question": "Why is detecting errors at compile-time useful?",
+        "options": [
+            "Generates CSS styles for components automatically",
+            "Prevents runtime crashes improving code reliability",
+            "Reduces network latency improving page speed",
+            "Automatically fetches data from external APIs",
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• bugs را قبل از production می‌گیرد\n" +
+            "- debugging آسان‌تر در development\n" +
+            "- runtime crashes کمتر\n" +
+            "- confidence بیشتر در refactoring\n" +
+            "- user experience بهتر"
+    },
+    {
+        "id": 485,
+        "question": "Which scenario is a compile-time error TypeScript detects?",
+        "options": [
+            "Server not responding to network requests",
+            "Button element not triggering click events",
+            "Calling function with incorrect argument types",
+            "User entering wrong login credentials"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• calling function با wrong argument types\n" +
+            "- myFunc(123) اگر string می‌خواهد\n" +
+            "- در compile time error می‌دهد\n" +
+            "- IDE قبل از run نشان می‌دهد\n" +
+            "- network errors runtime هستند"
+    },
+    {
+        "id": 486,
+        "question": "Which TypeScript feature ensures errors before runtime?",
+        "options": [
+            "React hooks implementation",
+            "Static type checking system",
+            "CSS modules integration",
+            "Browser developer tools"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• static type checking system\n" +
+            "- analysis در compile time\n" +
+            "- type inference و annotations\n" +
+            "- strict mode برای safety بیشتر\n" +
+            "- compiler errors قبل از execution"
+    },
+    {
+        "id": 487,
+        "question": "At which stage does TypeScript execute type checks?",
+        "options": [
+            "During runtime execution in browser",
+            "During compilation before code runs",
+            "After deployment to production server",
+            "When user interacts with UI elements"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• during compilation قبل از run\n" +
+            "- TypeScript به JavaScript compile می‌شود\n" +
+            "- type checking در این مرحله\n" +
+            "- runtime فقط JavaScript اجرا می‌شود\n" +
+            "- types در compiled code نیستند"
+    },
+    {
+        "id": 488,
+        "question": "Why is React Hook Form popular among developers?",
+        "options": [
+            "Automatically generates CSS for form elements",
+            "Provides performant form state management",
+            "Replaces Redux for all state management",
+            "Converts forms to server-side code"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• performance عالی با uncontrolled inputs\n" +
+            "- API ساده و intuitive\n" +
+            "- bundle size کوچک\n" +
+            "- validation قدرتمند built-in\n" +
+            "- DevEx خوب با TypeScript"
+    },
+    {
+        "id": 489,
+        "question": "Why does React Hook Form trigger fewer re-renders?",
+        "options": [
+            "Uses uncontrolled inputs reducing re-renders",
+            "Automatically batches all network requests",
+            "Only works with functional components",
+            "Converts inputs to server variables"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• از uncontrolled inputs استفاده می‌کند\n" +
+            "- DOM خودش values را نگه می‌دارد\n" +
+            "- React state برای هر keystroke update نمی‌شود\n" +
+            "- isolated re-rendering فقط لازم\n" +
+            "- performance بهتر از Formik"
+    },
+    {
+        "id": 490,
+        "question": "In React forms, what is a controlled component?",
+        "options": [
+            "Component managing its own internal state",
+            "Component fetching data from APIs automatically",
+            "Component where React controls input value",
+            "Component that cannot receive any props"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• component که React value را control می‌کند\n" +
+            "- value از state می‌آید\n" +
+            "- onChange state را update می‌کند\n" +
+            "- React single source of truth است\n" +
+            "- re-render در هر keystroke"
+    },
 //     {
 //         "id": 459,
 //         "question": "What is best practice for showing validation errors?",
