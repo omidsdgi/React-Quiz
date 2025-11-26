@@ -14,9 +14,9 @@ export const initialState :QuizState= {
     secondsRemaining:null,
     selectedLevel: null,
     availableQuestions: {
-        fundamental: mockQuestions.filter(q => q.points === 10),
-        intermediate: mockQuestions.filter(q => q.points === 20),
-        advanced: mockQuestions.filter(q => q.points === 30)
+        fundamental:[],
+        intermediate: [],
+        advanced: []
     }
 }
 
@@ -30,12 +30,23 @@ function getQuestionsByLevel(level: "fundamental" | "intermediate" | "advanced")
     return mockQuestions.filter(q => q.points === pointsMap[level]);
 }
 
+function getQuestionsWithRange(
+    level: "fundamental" | "intermediate" | "advanced",
+    startIndex: number,
+    count: number
+): Question[] {
+    const allLevelQuestions = getQuestionsByLevel(level);
+    const endIndex = startIndex + count - 1;
+    const actualEndIndex = Math.min(endIndex, allLevelQuestions.length);
+
+    return allLevelQuestions.slice(startIndex - 1, actualEndIndex);
+}
+
 export function QuizReducer(state:QuizState,action:Action):QuizState {
     switch (action.type) {
         case "dataReceived":
             return {
                 ...state,
-                questions: action.payload,
                 status:"ready"
             }
         case "dataFailed":
@@ -76,7 +87,6 @@ export function QuizReducer(state:QuizState,action:Action):QuizState {
             return {
                 ...initialState,
                 highScore: state.highScore,
-                availableQuestions: state.availableQuestions,
                 status:"ready"
             }
         case "tick":
@@ -86,11 +96,10 @@ export function QuizReducer(state:QuizState,action:Action):QuizState {
                 status:state.secondsRemaining === 1 ? "finished" : state.status,
             }
         case "selectLevel":
-            console.log(`Reducer: selectLevel called with ${action.payload}`);
-            const filtered = getQuestionsByLevel(action.payload);
+            const allLevelQuestions = getQuestionsByLevel(action.payload);
             return {
                 ...state,
-                questions: filtered,
+                questions: allLevelQuestions,
                 status: "ready",
                 selectedLevel: action.payload,
                 index: 0,
@@ -113,6 +122,26 @@ export function QuizReducer(state:QuizState,action:Action):QuizState {
                 answer: null,
                 points: 0
             };
+
+        case "selectLevelWithCount":
+            const { level: selectedLevel, count, startFrom = 1 } = action.payload;
+
+            const selectedQuestionsWithCount = getQuestionsWithRange(
+                selectedLevel,
+                startFrom,
+                count
+            );
+
+            return {
+                ...state,
+                questions: selectedQuestionsWithCount,
+                status: "ready",
+                selectedLevel: selectedLevel,
+                index: 0,
+                answer: null,
+                points: 0
+            };
+
         default:
             throw new Error("Unknown action type");
     }

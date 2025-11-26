@@ -10,10 +10,8 @@ export  function Options({
     const hasAnswered = answer !== null;
 
     const handleClick = (index: number) => {
-        // ثبت پاسخ
         dispatch({ type: "newAnswer", payload: index });
 
-        // نمایش Modal با توضیحات
         const isCorrect = index === question.correctOption;
         onShowExplanation?.(isCorrect);
     };

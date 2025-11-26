@@ -10,9 +10,7 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
     const [showRangeSelection, setShowRangeSelection] = useState<boolean>(false);
 
 
-    // تعداد سوالات موجود برای هر سطح - با safe access
     const getLevelQuestionCount = (level: "fundamental" | "intermediate" | "advanced"): number => {
-
         const pointsMap = {
             fundamental: 10,
             intermediate: 20,
@@ -24,7 +22,6 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
     const handleLevelSelect = (level: "fundamental" | "intermediate" | "advanced") => {
         const questionCount = getLevelQuestionCount(level);
 
-        // اگر سوالی موجود نباشد
         if (questionCount === 0) {
             console.warn(`No questions available for ${level} level`);
             return;
@@ -38,12 +35,14 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
 
     const handleRangeSubmit = () => {
         if (selectedLevel && startRange <= endRange && startRange > 0) {
+            const count = endRange - startRange + 1;
+
             dispatch({
-                type: "selectRange",
+                type: "selectLevelWithCount",
                 payload: {
                     level: selectedLevel,
-                    startIndex: startRange,
-                    endIndex: endRange
+                    count: count,
+                    startFrom: startRange
                 }
             });
             setShowRangeSelection(false);
@@ -90,6 +89,7 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
     if (showRangeSelection && selectedLevel) {
         const maxQuestions = getLevelQuestionCount(selectedLevel);
         const selectedLevelInfo = levelInfo.find(info => info.key === selectedLevel);
+        const selectedCount = Math.max(0, endRange - startRange + 1)
 
         return (
             <div className="start">
@@ -177,9 +177,15 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
                         </label>
                     </div>
 
-                    <p className="range-info">
-                        Selected: {Math.max(0, endRange - startRange + 1)} questions
-                        • Total points: {Math.max(0, endRange - startRange + 1) * (selectedLevelInfo?.points || 0)}
+                    <p className="optimization-info" style={{
+                        fontSize: '1.3rem',
+                        color: 'var(--color-theme)',
+                        marginTop: '1rem',
+                        padding: '1rem',
+                        backgroundColor: 'rgba(26, 230, 181, 0.1)',
+                        borderRadius: '8px'
+                    }}>
+                        ⚡ Optimized: Only {selectedCount} questions will be loaded (not all {maxQuestions})
                     </p>
 
                     <div className="range-buttons">

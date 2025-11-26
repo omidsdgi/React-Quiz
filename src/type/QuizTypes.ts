@@ -52,6 +52,7 @@ export interface OptionsProps {
     answer: number | null;
     points: number;
     dispatch: React.Dispatch<Action>;
+    onShowExplanation?: (isCorrect: boolean) => void;
 }
 
 export interface NextButtonProps {
@@ -91,4 +92,5 @@ export type Action =
     | { type: "restart" }
     | { type: "tick" }
     | { type: "selectLevel"; payload: "fundamental" | "intermediate" | "advanced" }
-    | { type: "selectRange"; payload: { level: "fundamental" | "intermediate" | "advanced"; startIndex: number; endIndex: number } };
+    | { type: "selectRange"; payload: { level: "fundamental" | "intermediate" | "advanced"; startIndex: number; endIndex: number } }
+    | { type: "selectLevelWithCount"; payload: { level: "fundamental" | "intermediate" | "advanced"; count: number; startFrom?: number } };
