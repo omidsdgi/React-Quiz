@@ -6,7 +6,7 @@ export const SEC_PER_QUESTION=60
 
 export const initialState :QuizState= {
     questions:[],
-    status:"loading",
+    status:"ready",
     index:0,
     answer:null,
     points:0,
@@ -97,6 +97,7 @@ export function QuizReducer(state:QuizState,action:Action):QuizState {
             }
         case "selectLevel":
             const allLevelQuestions = getQuestionsByLevel(action.payload);
+
             return {
                 ...state,
                 questions: allLevelQuestions,
