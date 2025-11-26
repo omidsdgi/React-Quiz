@@ -2979,24 +2979,7 @@ export const mockQuestions: Question[] = [
             "- فقط برای منابع critical استفاده کنید\n" +
             "- معمولاً 2-3 preload کافی است"
     },
-    {
-        id: 190,
-        question:  "Why does Link with prefetch=true improve navigation performance?",
-        "options": [
-            "It reduces React rendering time for all components",
-            "It preloads target page JavaScript during browser idle time",
-            "It disables hydration errors throughout the application",
-            "It inlines CSS for the target page improving render speed"
-        ],
-        correctOption: 1,
-        points: 10,
-        "explanation": "• Link صفحه هدف را قبل از کلیک بارگذاری می‌کند\n" +
-            "- در زمان idle browser این کار انجام می‌شود\n" +
-            "- وقتی کاربر کلیک می‌کند، صفحه آماده است\n" +
-            "- navigation فوری و بدون loading می‌شود\n" +
-            "- یکی از ویژگی‌های قدرتمند Next.js است"
-    },
-    {
+        {
         id: 191,
         question: "Which strategy is most effective for optimizing initial page load time?",
         "options": [
@@ -8252,134 +8235,177 @@ export const mockQuestions: Question[] = [
              "- بدون prop drilling\n" +
              "- clean و flexible API"
     },
-//     {
-//         "id": 470,
-//         "question": "Why prefer compound components over single component?",
-//         "options": [
-//             "Makes API more flexible and declarative",
-//             "Reduces need for TypeScript typings",
-//             "Automatically optimizes rendering performance",
-//             "Eliminates need for CSS styling"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 471,
-//         "question": "What problem does Compound Component Pattern solve?",
-//         "options": [
-//             "Reduces JSX nesting making UI flat",
-//             "Avoids hard-coding giving flexibility",
-//             "Ensures better tree-shaking during build",
-//             "Automatically memoizes all child components"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 472,
-//         "question": "How do children access parent state in Compound Component pattern?",
-//         "options": [
-//             "Calling function exported from parent",
-//             "Reading from global variables directly",
-//             "Through React Context and useContext",
-//             "Importing parent hook directly"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//          "explanation":""
-//     },
-//     {
-//         "id": 473,
-//         "question": "Why is React Portal often used for Modal?",
-//         "options": [
-//             "Replaces need for CSS styling modals",
-//             "Renders modal outside root DOM hierarchy",
-//             "Improves server-side rendering performance",
-//             "Automatically closes modal on route changes"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 475,
-//         "question": "What is main purpose of React Portal for modals?",
-//         "options": [
-//             "Reduces number of modal re-renders",
-//             "Renders modal outside parent DOM hierarchy",
-//             "Improves performance of state updates",
-//             "Automatically adds animations to modal"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//          "explanation":""
-//     },
-//     {
-//         "id": 1385,
-//         "question": "What problem do React Portals solve?",
-//         "options": [
-//             "Slow component rendering performance",
-//             "Rendering children outside parent DOM hierarchy",
-//             "Managing global application state",
-//             "Handling asynchronous operations"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 1386,
-//         "question": "How do you create a Portal in React?",
-//         "options": [
-//             "Using ReactDOM.createPortal(child, container)",
-//             "Using new Portal(child, container)",
-//             "Using usePortal hook from React",
-//             "Portals are created automatically"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//          "explanation":""
-//     },
-//     {
-//         "id": 1387,
-//         "question": "Do events bubble through Portals?",
-//         "options": [
-//             "No, events are trapped in portal",
-//             "Yes, events bubble through React tree despite DOM location",
-//             "Only synthetic events bubble",
-//             "Events must be manually forwarded"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 1388,
-//         "question": "What is a common use case for Portals?",
-//         "options": [
-//             "Optimizing component performance",
-//             "Modals, tooltips, and overlays",
-//             "Managing form validation state",
-//             "Implementing dark mode themes"
-//         ],
-//         "correctOption": 1,
-//         "points": 10
-//     },
-//     {
-//         "id": 1389,
-//         "question": "Can context work through Portals?",
-//         "options": [
-//             "No, context is broken by portals",
-//             "Yes, context works based on React tree",
-//             "Only with special portal context",
-//             "Context must be manually passed"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
+    {
+        "id": 501,
+        "question": "Why prefer compound components over single component?",
+        "options": [
+            "Makes API more flexible and declarative",
+            "Reduces need for TypeScript typings",
+            "Automatically optimizes rendering performance",
+            "Eliminates need for CSS styling"
+        ],
+        "correctOption": 0,
+        "points": 20,
+         "explanation":"• API flexible و declarative است\n" +
+             "- user کنترل بیشتر روی structure\n" +
+             "- composition بهتر از configuration\n" +
+             "- extensible و customizable\n" +
+             "- readability کد بالاتر"
+    },
+    {
+        "id": 502,
+        "question": "What problem does Compound Component Pattern solve?",
+        "options": [
+            "Reduces JSX nesting making UI flat",
+            "Avoids hard-coding giving flexibility",
+            "Ensures better tree-shaking during build",
+            "Automatically memoizes all child components"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation":"• از hard-coding structure جلوگیری می‌کند\n" +
+             "- flexibility در چیدمان components\n" +
+             "- user می‌تواند ترتیب را تغییر دهد\n" +
+             "- بدون props drilling زیاد\n" +
+             "- مثل HTML native elements"
+    },
+    {
+        "id": 503,
+        "question": "How do children access parent state in Compound Component pattern?",
+        "options": [
+            "Calling function exported from parent",
+            "Reading from global variables directly",
+            "Through React Context and useContext",
+            "Importing parent hook directly"
+        ],
+        "correctOption": 2,
+        "points": 30,
+         "explanation":"• از React Context و useContext\n" +
+             "- parent Provider است\n" +
+             "- children Consumer هستند\n" +
+             "- implicit connection بدون props\n" +
+             "- clean و maintainable code"
+    },
+    {
+        "id": 504,
+        "question": "Why is React Portal often used for Modal?",
+        "options": [
+            "Replaces need for CSS styling modals",
+            "Renders modal outside root DOM hierarchy",
+            "Improves server-side rendering performance",
+            "Automatically closes modal on route changes"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation":"• modal را خارج از parent DOM render می‌کند\n" +
+             "- از stacking context issues جلوگیری\n" +
+             "- از overflow: hidden مشکلات فرار\n" +
+             "- z-index management آسان‌تر\n" +
+             "- semantically در document.body"
+    },
+    {
+        "id": 505,
+        "question": "What is main purpose of React Portal for modals?",
+        "options": [
+            "Reduces number of modal re-renders",
+            "Renders modal outside parent DOM hierarchy",
+            "Improves performance of state updates",
+            "Automatically adds animations to modal"
+        ],
+        "correctOption": 1,
+        "points": 20,
+         "explanation":"• rendering خارج از parent DOM hierarchy\n" +
+             "- در document.body یا modal-root\n" +
+             "- از CSS constraints فرار\n" +
+             "- full-screen overlays راحت‌تر\n" +
+             "- event bubbling همچنان کار می‌کند"
+    },
+    {
+        "id": 506,
+        "question": "What problem do React Portals solve?",
+        "options": [
+            "Slow component rendering performance",
+            "Rendering children outside parent DOM hierarchy",
+            "Managing global application state",
+            "Handling asynchronous operations"
+        ],
+        "correctOption": 1,
+        "points": 10,
+         "explanation":"• Portal rendering خارج از parent DOM tree\n" +
+             "- مفید برای modals، tooltips، overlays\n" +
+             "- از CSS stacking context فرار می‌کند\n" +
+             "- اما در React tree همچنان child است\n" +
+             "- event bubbling عادی کار می‌کند"
+    },
+{
+    "id": 507,
+    "question": "How do you create a Portal in React?",
+    "options": [
+    "Using ReactDOM.createPortal(child, container)",
+    "Using new Portal(child, container)",
+    "Using usePortal hook from React",
+    "Portals are created automatically"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation":"• ReactDOM.createPortal(children, domNode)\n" +
+        "- children: JSX که می‌خواهید render کنید\n" +
+        "- domNode: DOM element هدف (مثل document.body)\n" +
+        "- در component return می‌شود\n" +
+        "- مثل JSX عادی اما در DOM دیگر"
+},
+{
+    "id": 508,
+    "question": "Do events bubble through Portals?",
+    "options": [
+    "No, events are trapped in portal",
+    "Yes, events bubble through React tree despite DOM location",
+    "Only synthetic events bubble",
+    "Events must be manually forwarded"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• events در React tree bubble می‌کنند نه DOM tree\n" +
+        "- حتی اگر Portal در DOM جای دیگر باشد\n" +
+        "- parent می‌تواند events Portal را بگیرد\n" +
+        "- React event system این را handle می‌کند\n" +
+        "- برای event delegation مفید است"
+},
+{
+    "id": 509,
+    "question": "What is a common use case for Portals?",
+    "options": [
+    "Optimizing component performance",
+    "Modals, tooltips, and overlays",
+    "Managing form validation state",
+    "Implementing dark mode themes"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• Portals برای UI elements که باید خارج از parent باشند\n" +
+        "- Modals که full-screen هستند\n" +
+        "- Tooltips که از overflow فرار می‌کنند\n" +
+        "- Dropdown menus با positioning پیچیده\n" +
+        "- هر چیزی که z-index issues دارد"
+},
+{
+    "id": 510,
+    "question": "Can context work through Portals?",
+    "options": [
+    "No, context is broken by portals",
+    "Yes, context works based on React tree",
+    "Only with special portal context",
+    "Context must be manually passed"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• بله، Context بر اساس React tree است نه DOM\n" +
+        "- Portal child همچنان در React tree است\n" +
+        "- می‌تواند Context از ancestors بخواند\n" +
+        "- DOM location مهم نیست\n" +
+        "- React relationship را حفظ می‌کند"
+},
+    // {
 //         "id": 1390,
 //         "question": "What happens when a Portal's target container doesn't exist?",
 //         "options": [
@@ -8389,7 +8415,8 @@ export const mockQuestions: Question[] = [
 //             "Component doesn't render anything"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 476,
@@ -8401,7 +8428,8 @@ export const mockQuestions: Question[] = [
 //             "In virtual DOM but not real DOM"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 477,
@@ -8413,7 +8441,8 @@ export const mockQuestions: Question[] = [
 //             "Removes need for CSS classes entirely"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 478,
@@ -8425,7 +8454,8 @@ export const mockQuestions: Question[] = [
 //             "usePortal()"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 479,
@@ -8437,7 +8467,8 @@ export const mockQuestions: Question[] = [
 //             "Making sure focus trapped inside modal",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 480,
@@ -8449,7 +8480,8 @@ export const mockQuestions: Question[] = [
 //             "Blocking UI updates until data loads"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 481,
@@ -8461,7 +8493,8 @@ export const mockQuestions: Question[] = [
 //             "Disables caching for better performance"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 482,
@@ -8473,7 +8506,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetching prevents components from re-rendering"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 483,
@@ -8485,7 +8519,8 @@ export const mockQuestions: Question[] = [
 //             "React.prefetch() with query key and function"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 484,
@@ -8497,7 +8532,8 @@ export const mockQuestions: Question[] = [
 //             "During component unmounting for cleanup"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 485,
@@ -8509,7 +8545,8 @@ export const mockQuestions: Question[] = [
 //             "useQuery waits for prefetch to complete"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 486,
@@ -8521,7 +8558,8 @@ export const mockQuestions: Question[] = [
 //             "Use onScroll event when user scrolls"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 487,
@@ -8533,7 +8571,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetching and preloading are identical"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 488,
@@ -8545,7 +8584,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only primitive types work"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 489,
@@ -8557,7 +8597,8 @@ export const mockQuestions: Question[] = [
 //             "Data automatically converts to localStorage"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 490,
@@ -8569,7 +8610,8 @@ export const mockQuestions: Question[] = [
 //             "Reduces server load by caching data"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 491,
@@ -8581,7 +8623,8 @@ export const mockQuestions: Question[] = [
 //             "Prevents normal useQuery hooks working"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 492,
@@ -8593,7 +8636,8 @@ export const mockQuestions: Question[] = [
 //             "No, mutations require user interaction"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 493,
@@ -8605,7 +8649,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetching cannot occur during startup"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 494,
@@ -8617,7 +8662,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetching automatically sets staleTime zero"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 495,
@@ -8629,7 +8675,8 @@ export const mockQuestions: Question[] = [
 //             "Reduces total number of pages dataset"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 496,
@@ -8641,7 +8688,8 @@ export const mockQuestions: Question[] = [
 //             "Only when user hovers pagination controls"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+    //  "explanation":""
 //     },
 //     {
 //         "id": 497,
@@ -8653,7 +8701,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetch random pages to improve performance"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 498,
@@ -8665,7 +8714,8 @@ export const mockQuestions: Question[] = [
 //             "React.prefetch with page number and data"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 499,
@@ -8677,7 +8727,8 @@ export const mockQuestions: Question[] = [
 //             "Page waits for prefetch operation completion"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 500,
@@ -8689,7 +8740,8 @@ export const mockQuestions: Question[] = [
 //             "No, this wastes bandwidth and memory"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 500,
@@ -8701,7 +8753,8 @@ export const mockQuestions: Question[] = [
 //             "No, this wastes bandwidth and memory"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //         {
 //             "id": 381,
@@ -8713,7 +8766,8 @@ export const mockQuestions: Question[] = [
 //                 "Nothing is returned"
 //             ],
 //             "correctOption": 1,
-//             "points": 20,
+//             "points": 20,,
+//  "explanation":""
 //          "explanation":""
 //         },
 //     {
@@ -8726,7 +8780,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetch randomly to distribute server load"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 502,
@@ -8738,7 +8793,8 @@ export const mockQuestions: Question[] = [
 //             "Eliminates need for pagination controls completely"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 503,
@@ -8750,7 +8806,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetch entire dataset regardless of page size"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 504,
@@ -8762,7 +8819,8 @@ export const mockQuestions: Question[] = [
 //             "Server response time for authentication requests"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 505,
@@ -8774,7 +8832,8 @@ export const mockQuestions: Question[] = [
 //             "Infinite scroll only works without prefetching"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 506,
@@ -8786,7 +8845,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetched data becomes stale and needs refetching",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 507,
@@ -8798,7 +8858,8 @@ export const mockQuestions: Question[] = [
 //             "Use same prefetching strategy as desktop"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 508,
@@ -8810,7 +8871,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetching that works only in background tabs"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 509,
@@ -8822,7 +8884,8 @@ export const mockQuestions: Question[] = [
 //             "Prefetch only during low network usage"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 514,
@@ -8834,7 +8897,8 @@ export const mockQuestions: Question[] = [
 //             "A browser mechanism that preloads scripts to prevent render delay"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 516,
@@ -8846,7 +8910,8 @@ export const mockQuestions: Question[] = [
 //             "Only after user interaction"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 518,
@@ -8858,7 +8923,8 @@ export const mockQuestions: Question[] = [
 //             "Removing unused HTML nodes from the DOM",
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 519,
@@ -8870,7 +8936,8 @@ export const mockQuestions: Question[] = [
 //             "To reset the DOM structure after first paint"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 520,
@@ -8882,7 +8949,8 @@ export const mockQuestions: Question[] = [
 //             "Server-side rendering (SSR)",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 521,
@@ -8894,7 +8962,8 @@ export const mockQuestions: Question[] = [
 //             "WebAssembly-based rendering"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 522,
@@ -8906,7 +8975,8 @@ export const mockQuestions: Question[] = [
 //             "Because SSR reduces interactivity on such sites"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 523,
@@ -8918,7 +8988,8 @@ export const mockQuestions: Question[] = [
 //             "Incremental static regeneration (ISR)"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 524,
@@ -8930,7 +9001,8 @@ export const mockQuestions: Question[] = [
 //             "Synchronous Server Generation and Immediate Script Rendering"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 525,
@@ -8942,7 +9014,8 @@ export const mockQuestions: Question[] = [
 //             "Dynamic rendering generates pages once during build"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 526,
@@ -8954,7 +9027,8 @@ export const mockQuestions: Question[] = [
 //             "The number of images loaded in the viewport"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 529,
@@ -8966,7 +9040,8 @@ export const mockQuestions: Question[] = [
 //             "After the component mounts on the client",
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 530,
@@ -8978,7 +9053,8 @@ export const mockQuestions: Question[] = [
 //             "Because it hides content from crawlers for performance"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 531,
@@ -8990,7 +9066,8 @@ export const mockQuestions: Question[] = [
 //             "By disabling JavaScript execution entirely"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 532,
@@ -9002,7 +9079,8 @@ export const mockQuestions: Question[] = [
 //             "JavaScript execution that binds events and updates the DOM",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 533,
@@ -9014,7 +9092,8 @@ export const mockQuestions: Question[] = [
 //             "It rebuilds the entire UI without using existing markup"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 534,
@@ -9026,7 +9105,8 @@ export const mockQuestions: Question[] = [
 //             "Replacing server-rendered content with new markup"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 535,
@@ -9038,7 +9118,8 @@ export const mockQuestions: Question[] = [
 //             "The page uses browser APIs to rebuild the DOM"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 536,
@@ -9050,7 +9131,8 @@ export const mockQuestions: Question[] = [
 //             "The server sends updated HTML to fix the issue"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 537,
@@ -9062,7 +9144,8 @@ export const mockQuestions: Question[] = [
 //             "Disabling JavaScript execution on client"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 538,
@@ -9074,7 +9157,8 @@ export const mockQuestions: Question[] = [
 //             "Because React skips hydration for child nodes"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 539,
@@ -9086,7 +9170,8 @@ export const mockQuestions: Question[] = [
 //             "It triggers rehydration of the same content repeatedly"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 540,
@@ -9098,7 +9183,8 @@ export const mockQuestions: Question[] = [
 //             "Avoid using browser-only APIs like window or document during SSR",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //             "id": 541,
@@ -9110,7 +9196,8 @@ export const mockQuestions: Question[] = [
 //                 "A CSS preprocessor used with React"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 542,
@@ -9122,7 +9209,8 @@ export const mockQuestions: Question[] = [
 //                 "It automatically converts all React code into static HTML"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 543,
@@ -9134,7 +9222,8 @@ export const mockQuestions: Question[] = [
 //                 "It provides a higher-level structure built around react's ecosystem",
 //             ],
 //             "correctOption": 3,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 544,
@@ -9146,7 +9235,8 @@ export const mockQuestions: Question[] = [
 //                 "Server-side data fetching and mutation"
 //             ],
 //             "correctOption": 2,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 545,
@@ -9158,7 +9248,8 @@ export const mockQuestions: Question[] = [
 //                 "It automatically generates database schemas from components"
 //             ],
 //             "correctOption": 1,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 546,
@@ -9170,7 +9261,8 @@ export const mockQuestions: Question[] = [
 //                 "DOM manipulation with document.querySelector"
 //             ],
 //             "correctOption": 0,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 547,
@@ -9182,7 +9274,8 @@ export const mockQuestions: Question[] = [
 //                 "Using server middleware for navigation"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 548,
@@ -9194,7 +9287,8 @@ export const mockQuestions: Question[] = [
 //                 "Server-only rendering without client hydration support"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 549,
@@ -9206,7 +9300,8 @@ export const mockQuestions: Question[] = [
 //                 "Next.js prevents using asynchronous operations in components"
 //             ],
 //             "correctOption": 0,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 560,
@@ -9218,7 +9313,8 @@ export const mockQuestions: Question[] = [
 //                 "Enforcing a single large client bundle for easier caching"
 //             ],
 //             "correctOption": 2,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //     {
 //         "id": 561,
@@ -9230,7 +9326,8 @@ export const mockQuestions: Question[] = [
 //             "Using only form submissions to change pages"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 562,
@@ -9242,7 +9339,8 @@ export const mockQuestions: Question[] = [
 //             "Because <a> automatically disables JavaScript execution",
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 563,
@@ -9254,7 +9352,8 @@ export const mockQuestions: Question[] = [
 //             "It ensures external links are opened in a new browser window"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 564,
@@ -9266,7 +9365,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only when navigating through the browser’s back button"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 565,
@@ -9278,7 +9378,8 @@ export const mockQuestions: Question[] = [
 //             "To store metadata and SEO configurations for dynamic routes"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 566,
@@ -9290,7 +9391,8 @@ export const mockQuestions: Question[] = [
 //             "To handle background data fetching and caching before rendering"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //         {
 //             "id": 567,
@@ -9302,7 +9404,8 @@ export const mockQuestions: Question[] = [
 //                 "To generate page metadata for SEO at build time"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 568,
@@ -9314,7 +9417,8 @@ export const mockQuestions: Question[] = [
 //                 "To require JavaScript for rendering on the client"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 569,
@@ -9326,7 +9430,8 @@ export const mockQuestions: Question[] = [
 //                 "To pass client-side event handlers to Server Components"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 570,
@@ -9338,7 +9443,8 @@ export const mockQuestions: Question[] = [
 //                 "To generate metadata for SEO without user interaction"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 571,
@@ -9350,7 +9456,8 @@ export const mockQuestions: Question[] = [
 //                 "To re-render on local state or prop changes within the component",
 //             ],
 //             "correctOption": 3,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 572,
@@ -9362,7 +9469,8 @@ export const mockQuestions: Question[] = [
 //                 "To output pre-rendered HTML to the client"
 //             ],
 //             "correctOption": 1,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 573,
@@ -9374,7 +9482,8 @@ export const mockQuestions: Question[] = [
 //                 "To import only other Client Components ",
 //             ],
 //             "correctOption": 3,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 574,
@@ -9386,7 +9495,8 @@ export const mockQuestions: Question[] = [
 //                 "To Client Components are preferred for pre-rendering SEO content"
 //             ],
 //             "correctOption": 3,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //     {
 //         "id": 575,
@@ -9398,7 +9508,8 @@ export const mockQuestions: Question[] = [
 //             "Better accessibility for search engine crawlers and static tools",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 576,
@@ -9410,7 +9521,8 @@ export const mockQuestions: Question[] = [
 //             "Longer deployment complexity for dynamic applications"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 577,
@@ -9422,7 +9534,8 @@ export const mockQuestions: Question[] = [
 //             "Incremental Static Regeneration (ISR), because state is only updated periodically"
 //         ],
 //         "correctOption":1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 578,
@@ -9434,7 +9547,8 @@ export const mockQuestions: Question[] = [
 //             "The UI does not change even if state or props update",
 //         ],
 //         "correctOption":2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 579,
@@ -9446,7 +9560,8 @@ export const mockQuestions: Question[] = [
 //             "In CSR, UI and server data are identical; in SSR, state drives all interactions"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //         {
 //             "id": 580,
@@ -9458,7 +9573,8 @@ export const mockQuestions: Question[] = [
 //                 "To disable React hooks in client components completely for performance improvements, preventing state and effects from being used in interactive components"
 //             ],
 //             "correctOption": 1,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 581,
@@ -9470,7 +9586,8 @@ export const mockQuestions: Question[] = [
 //                 "A component that disables interactivity and only renders static HTML"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 582,
@@ -9482,7 +9599,8 @@ export const mockQuestions: Question[] = [
 //                 "They always include JavaScript in the client bundle for hydration"
 //             ],
 //             "correctOption": 0,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 583,
@@ -9494,7 +9612,8 @@ export const mockQuestions: Question[] = [
 //                 "No, they need to be implemented via frameworks like Next.js App Router",
 //             ],
 //             "correctOption": 3,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //     {
 //         "id": 584,
@@ -9506,7 +9625,8 @@ export const mockQuestions: Question[] = [
 //             "To a component that outputs metadata for SEO purposes"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //         {
 //             "id": 585,
@@ -9518,7 +9638,8 @@ export const mockQuestions: Question[] = [
 //                 "To re-render when any parent Server Component updates"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 586,
@@ -9530,7 +9651,8 @@ export const mockQuestions: Question[] = [
 //                 "To prevent fetching data entirely and only render static HTML"
 //             ],
 //             "correctOption": 2,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 587,
@@ -9542,7 +9664,8 @@ export const mockQuestions: Question[] = [
 //                 "To pass only serializable data, avoiding functions or classes",
 //             ],
 //             "correctOption": 3,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 588,
@@ -9554,7 +9677,8 @@ export const mockQuestions: Question[] = [
 //                 "To prevent any client-side re-renders by using Server Components"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 589,
@@ -9566,7 +9690,8 @@ export const mockQuestions: Question[] = [
 //                 "To import only static HTML files and JSON data"
 //             ],
 //             "correctOption": 0,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 590,
@@ -9578,7 +9703,8 @@ export const mockQuestions: Question[] = [
 //                 "To prevent any nested components from rendering"
 //             ],
 //             "correctOption": 2,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 591,
@@ -9590,7 +9716,8 @@ export const mockQuestions: Question[] = [
 //                 "To pass a serializable object like JSON"
 //             ],
 //             "correctOption": 2,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 592,
@@ -9602,7 +9729,8 @@ export const mockQuestions: Question[] = [
 //                 "To fetch data using async/await inside a Server Component instead",
 //             ],
 //             "correctOption": 3,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 593,
@@ -9614,7 +9742,8 @@ export const mockQuestions: Question[] = [
 //                 "To re-render automatically on every local state change",
 //             ],
 //             "correctOption": 3,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 594,
@@ -9626,7 +9755,8 @@ export const mockQuestions: Question[] = [
 //                 "Allow circular imports across client-server boundaries"
 //             ],
 //             "correctOption": 1,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 595,
@@ -9638,7 +9768,8 @@ export const mockQuestions: Question[] = [
 //                 "To share input values across multiple Client Components",
 //             ],
 //             "correctOption": 2,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 596,
@@ -9650,7 +9781,8 @@ export const mockQuestions: Question[] = [
 //                 "To Client Components can render Server Components passed as props in child Server Components"
 //             ],
 //             "correctOption": 0,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //     {
 //         "id": 597,
@@ -9662,7 +9794,8 @@ export const mockQuestions: Question[] = [
 //             "To generate only static HTML without interactivity"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 598,
@@ -9674,7 +9807,8 @@ export const mockQuestions: Question[] = [
 //             "To automatically convert server components to client components when state changes"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 599,
@@ -9686,7 +9820,8 @@ export const mockQuestions: Question[] = [
 //             "To show only the server-rendered content without interactive loading",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 600,
@@ -9698,7 +9833,8 @@ export const mockQuestions: Question[] = [
 //             "To automatically convert the child into a server component"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 601,
@@ -9710,7 +9846,8 @@ export const mockQuestions: Question[] = [
 //             "To render only static HTML without server processing"
 //         ],
 //         "correctOption":2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 602,
@@ -9722,7 +9859,8 @@ export const mockQuestions: Question[] = [
 //             "To compile server code into a client-compatible bundle"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 603,
@@ -9734,7 +9872,8 @@ export const mockQuestions: Question[] = [
 //             "To use serializable props such as strings, numbers, and plain objects",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 604,
@@ -9746,7 +9885,8 @@ export const mockQuestions: Question[] = [
 //             "To keep server components isolated from client-side state and events"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 605,
@@ -9758,7 +9898,8 @@ export const mockQuestions: Question[] = [
 //             "To restrict async/await usage entirely in Server Components for performance reasons",
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 606,
@@ -9770,7 +9911,8 @@ export const mockQuestions: Question[] = [
 //             "To render automatically after all client components finish hydrating",
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 607,
@@ -9782,7 +9924,8 @@ export const mockQuestions: Question[] = [
 //             "To synchronize client and server states before starting the rendering process"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 608,
@@ -9794,7 +9937,8 @@ export const mockQuestions: Question[] = [
 //             "To allow the browser to progressively render available content"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 609,
@@ -9806,7 +9950,8 @@ export const mockQuestions: Question[] = [
 //             "Because hooks increase server load significantly"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 610,
@@ -9818,7 +9963,8 @@ export const mockQuestions: Question[] = [
 //             "The hook is ignored silently"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 611,
@@ -9830,7 +9976,8 @@ export const mockQuestions: Question[] = [
 //             "JSX syntax for rendering"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 612,
@@ -9842,7 +9989,8 @@ export const mockQuestions: Question[] = [
 //             "Because it requires special configuration"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 613,
@@ -9854,7 +10002,8 @@ export const mockQuestions: Question[] = [
 //             "Hooks are only for class components"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 614,
@@ -9866,7 +10015,8 @@ export const mockQuestions: Question[] = [
 //             "Only the component name with its CSS styles"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 615,
@@ -9878,7 +10028,8 @@ export const mockQuestions: Question[] = [
 //             "The database query results for all components"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 616,
@@ -9890,7 +10041,8 @@ export const mockQuestions: Question[] = [
 //             "Complete source code including all comments"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 617,
@@ -9902,7 +10054,8 @@ export const mockQuestions: Question[] = [
 //             "Because it's compressed for network transmission"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 618,
@@ -9914,7 +10067,8 @@ export const mockQuestions: Question[] = [
 //             "The code is executed on the server first"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 619,
@@ -9926,7 +10080,8 @@ export const mockQuestions: Question[] = [
 //             "Skips Server Components entirely from payload"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 620,
@@ -9938,7 +10093,8 @@ export const mockQuestions: Question[] = [
 //             "Because functions are deprecated in modern React"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 621,
@@ -9950,7 +10106,8 @@ export const mockQuestions: Question[] = [
 //             "To optimize server-side memory usage patterns"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 622,
@@ -9962,7 +10119,8 @@ export const mockQuestions: Question[] = [
 //             "Sends payload back to server for further processing"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 623,
@@ -9974,7 +10132,8 @@ export const mockQuestions: Question[] = [
 //             "It compresses everything into optimized binary format"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 624,
@@ -9986,7 +10145,8 @@ export const mockQuestions: Question[] = [
 //             "SSR uses React, RSC uses plain JavaScript"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 625,
@@ -9998,7 +10158,8 @@ export const mockQuestions: Question[] = [
 //             "Both render everything on client after downloading"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 626,
@@ -10010,7 +10171,8 @@ export const mockQuestions: Question[] = [
 //             "Both prevent any component interactivity on client"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 627,
@@ -10022,7 +10184,8 @@ export const mockQuestions: Question[] = [
 //             "SSR fetches before render, RSC fetches during render",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 628,
@@ -10034,7 +10197,8 @@ export const mockQuestions: Question[] = [
 //             "SSR sends nothing, RSC sends full JavaScript bundle"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 629,
@@ -10046,7 +10210,8 @@ export const mockQuestions: Question[] = [
 //             "Neither sends any JavaScript to the browser"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 630,
@@ -10058,7 +10223,8 @@ export const mockQuestions: Question[] = [
 //             "No, RSC completely replaces SSR in all cases"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 631,
@@ -10070,7 +10236,8 @@ export const mockQuestions: Question[] = [
 //             "Neither requires hydration for any components"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 632,
@@ -10082,7 +10249,8 @@ export const mockQuestions: Question[] = [
 //             "RSC renders everything faster than SSR always"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 633,
@@ -10094,7 +10262,8 @@ export const mockQuestions: Question[] = [
 //             "Neither has any impact on search rankings"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 634,
@@ -10106,7 +10275,8 @@ export const mockQuestions: Question[] = [
 //             "SSR works only with React, RSC with all frameworks"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 635,
@@ -10118,7 +10288,8 @@ export const mockQuestions: Question[] = [
 //             "Neither can manage component state at all"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 636,
@@ -10130,7 +10301,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports navigation between different pages"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 637,
@@ -10142,7 +10314,8 @@ export const mockQuestions: Question[] = [
 //             "Neither requires any server resources at all"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 638,
@@ -10154,7 +10327,8 @@ export const mockQuestions: Question[] = [
 //             "Neither affects Time to Interactive at all"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 639,
@@ -10166,7 +10340,8 @@ export const mockQuestions: Question[] = [
 //             "A marker for server-only component imports"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 640,
@@ -10178,7 +10353,8 @@ export const mockQuestions: Question[] = [
 //             "To make imports work only on server",
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 641,
@@ -10190,7 +10366,8 @@ export const mockQuestions: Question[] = [
 //             "In .env file as environment variable"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 642,
@@ -10202,7 +10379,8 @@ export const mockQuestions: Question[] = [
 //             "The public folder for static asset files"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 643,
@@ -10214,7 +10392,8 @@ export const mockQuestions: Question[] = [
 //             "No, changing it breaks all Next.js features"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 644,
@@ -10226,7 +10405,8 @@ export const mockQuestions: Question[] = [
 //             "It enables server-side rendering for components"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 645,
@@ -10238,7 +10418,8 @@ export const mockQuestions: Question[] = [
 //             "No, it's common in many modern frameworks",
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 646,
@@ -10250,7 +10431,8 @@ export const mockQuestions: Question[] = [
 //             "TypeScript will auto-fix the configuration"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 647,
@@ -10262,7 +10444,8 @@ export const mockQuestions: Question[] = [
 //             "No, only '@' and '~' are permitted"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 648,
@@ -10274,7 +10457,8 @@ export const mockQuestions: Question[] = [
 //             "No, it's exclusive to JavaScript ES modules"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 652,
@@ -10286,7 +10470,8 @@ export const mockQuestions: Question[] = [
 //             "To convert fonts to proprietary format"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 653,
@@ -10298,7 +10483,8 @@ export const mockQuestions: Question[] = [
 //             "By adding font URL to next.config.js"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 654,
@@ -10310,7 +10496,8 @@ export const mockQuestions: Question[] = [
 //             "Splitting fonts across multiple CDN servers"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 655,
@@ -10322,7 +10509,8 @@ export const mockQuestions: Question[] = [
 //             "languages: ['latin']"
 //         ],
 //         "correctOption":2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 656,
@@ -10334,7 +10522,8 @@ export const mockQuestions: Question[] = [
 //             "Using import statement in global styles"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 657,
@@ -10346,7 +10535,8 @@ export const mockQuestions: Question[] = [
 //             "It disables font loading on slow connections"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 658,
