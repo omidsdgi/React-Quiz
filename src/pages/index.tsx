@@ -9,11 +9,10 @@ import {
     QuizReducer,
     StartScreen
 } from "@/components";
-import {useEffect, useReducer, useState} from "react";
+import {useCallback, useMemo, useReducer, useState} from "react";
 import {Main} from "@/components";
 import Footer from "@/components/Footer";
 import Timer from "@/components/Timer";
-import {mockQuestions} from "@/mock/mockQuestions";
 import {ExplanationModal} from "@/components/ExplanationModal";
 
 export default function Home() {
@@ -26,13 +25,15 @@ export default function Home() {
     });
     const {questions, status, index, answer, points, highScore, secondsRemaining} = state;
 
-    const numQuestions=questions.length;
-    const maxPossiblePoints=questions.reduce((prev,cur)=>prev +cur.points,0)
-    useEffect(()=>{
-        dispatch({type:"dataReceived",payload:mockQuestions});
-    },[])
+    const numQuestions=useMemo(()=>
+        questions.length, [questions.length]
+    );
 
-    const handleShowExplanation = () => {
+    const maxPossiblePoints=useMemo(()=>
+        questions.reduce((prev,cur)=>prev +cur.points,0), [questions]
+    )
+
+    const handleShowExplanation = useCallback(() => {
         const currentQuestion = questions[index];
         const isCorrect = answer === currentQuestion.correctOption;
         setModalState({
@@ -40,11 +41,12 @@ export default function Home() {
             isCorrect,
             explanation: currentQuestion.explanation
         });
-    };
+    },[questions,index,answer]);
 
-    const handleCloseModal = () => {
+    const handleCloseModal = useCallback(() => {
         setModalState(prev => ({ ...prev, isOpen: false }));
-    };
+    },[]);
+    console.log("STATUS:", status, state);
 
     return (
         <div className="app">
