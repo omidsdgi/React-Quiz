@@ -32,8 +32,9 @@ export default function Home() {
         dispatch({type:"dataReceived",payload:mockQuestions});
     },[])
 
-    const handleShowExplanation = (isCorrect: boolean) => {
+    const handleShowExplanation = () => {
         const currentQuestion = questions[index];
+        const isCorrect = answer === currentQuestion.correctOption;
         setModalState({
             isOpen: true,
             isCorrect,
@@ -71,10 +72,21 @@ export default function Home() {
                             answer={answer}
                             dispatch={dispatch}
                             points={points}
-                            onShowExplanation={handleShowExplanation}
                         />
                         <Footer>
                             <Timer secondsRemaining={secondsRemaining} dispatch={dispatch}/>
+                            {answer !== null && (
+                                <button
+                                    onClick={handleShowExplanation}
+                                    className="btn btn-ui"
+                                    style={{
+                                        backgroundColor: 'var(--color-medium)',
+                                        marginLeft: '1rem'
+                                    }}
+                                >
+                                    نمایش توضیحات
+                                </button>
+                            )}
                             <NextButton
                                 dispatch={dispatch}
                                 answer={answer}

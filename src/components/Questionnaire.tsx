@@ -6,7 +6,6 @@ export function Questionnaire({
                                   answer,
                                   points,
                                   dispatch,
-                                  onShowExplanation
                               }:QuestionnaireProps) {
     return (
         <div>
@@ -16,7 +15,6 @@ export function Questionnaire({
                 answer={answer}
                 dispatch={dispatch}
                 points={points}
-                onShowExplanation={onShowExplanation}
             />
         </div>
     );
