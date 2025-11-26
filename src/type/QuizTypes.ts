@@ -45,7 +45,6 @@ export interface QuestionnaireProps {
     answer: number | null;
     points: number;
     dispatch: React.Dispatch<Action>;
-    onShowExplanation: (isCorrect: boolean) => void;
 }
 
 export interface OptionsProps {
@@ -53,7 +52,6 @@ export interface OptionsProps {
     answer: number | null;
     points: number;
     dispatch: React.Dispatch<Action>;
-    onShowExplanation: (isCorrect: boolean) => void;
 }
 
 export interface NextButtonProps {
