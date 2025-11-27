@@ -1848,9 +1848,7 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-        "explanation": "• Render یعنی اجرای تابع کامپوننت برای ساخت Virtual DOM\n" +
-            "- React ابتدا Virtual DOM می‌سازد، سپس تفاوت‌ها را با DOM واقعی مقایسه می‌کند\n" +
-            "- Render با به‌روزرسانی DOM واقعی متفاوت است"
+        "explanation":""
     },
     {
         "id": 119,
@@ -2203,84 +2201,84 @@ export const mockQuestions: Question[] = [
             "- ESLint با قانون rules-of-hooks این موارد را بررسی می‌کند\n" +
             "- حفظ ترتیب ثابت برای عملکرد صحیح React ضروری است"
     },
-    // {
-    //     "id": 142,
-    //     "question": "What defines a Custom Hook in React?",
-    //     "options": [
-    //         "Any function that starts with 'use' prefix",
-    //         "A function using other React hooks",
-    //         "Both: starts with 'use' and uses React hooks",
-    //         "A function exported from a hooks file"
-    //     ],
-    //     "correctOption": 2,
-    //     "points": 10,
-    //             "explanation":""
-    // },
-    // {
-    //     "id": 143,
-    //     "question": "When should you create a Custom Hook?",
-    //     "options": [
-    //         "For every component you create",
-    //         "When logic is reused across components",
-    //         "Only for API calls and data fetching",
-    //         "Never, use built-in hooks only"
-    //     ],
-    //     "correctOption": 1,
-    //     "points": 10,
-    //             "explanation":""
-    // },
-    // {
-    //     "id": 144,
-    //     "question": "What is the naming convention for Custom Hooks?",
-    //     "options": [
-    //         "Must start with 'use' followed by descriptive name",
-    //         "Must end with 'Hook' suffix",
-    //         "Must be in camelCase only",
-    //         "No specific naming convention required"
-    //     ],
-    //     "correctOption": 0,
-    //     "points": 10,
-    //             "explanation":""
-    // },
-    // {
-    //     "id": 145,
-    //     "question": "Can Custom Hooks use other React hooks like useState?",
-    //     "options": [
-    //         "No, Custom Hooks cannot use other hooks",
-    //         "Yes, that's the main purpose of Custom Hooks",
-    //         "Only useState, not other hooks",
-    //         "Only in Class Components"
-    //     ],
-    //     "correctOption": 1,
-    //     "points": 10,
-    //             "explanation":""
-    // },
-    // {
-    //     "id": 146,
-    //     "question": "How do you handle errors in a Custom Hook for API fetching?",
-    //     "options": [
-    //         "Errors cannot be handled in Custom Hooks",
-    //         "Use try-catch and return error state",
-    //         "Let errors bubble to parent component always",
-    //         "Use error boundaries inside the hook"
-    //     ],
-    //     "correctOption": 1,
-    //     "points": 20,
-    //             "explanation":""
-    // },
-    // {
-    //     "id": 147,
-    //     "question": "What should a Custom Hook for form handling return?",
-    //     "options": [
-    //         "Only the form values object",
-    //         "JSX for the entire form",
-    //         "Values, handlers, and validation state",
-    //         "Nothing, it should mutate props directly"
-    //     ],
-    //     "correctOption": 2,
-    //     "points": 20,
-    //             "explanation":""
-    // },
+// {
+//     "id": 142,
+//     "question": "What defines a Custom Hook in React?",
+//     "options": [
+//         "Any function that starts with 'use' prefix",
+//         "A function using other React hooks",
+//         "Both: starts with 'use' and uses React hooks",
+//         "A function exported from a hooks file"
+//     ],
+//     "correctOption": 2,
+//     "points": 10,
+//             "explanation":""
+// },
+// {
+//     "id": 143,
+//     "question": "When should you create a Custom Hook?",
+//     "options": [
+//         "For every component you create",
+//         "When logic is reused across components",
+//         "Only for API calls and data fetching",
+//         "Never, use built-in hooks only"
+//     ],
+//     "correctOption": 1,
+//     "points": 10,
+//             "explanation":""
+// },
+// {
+//     "id": 144,
+//     "question": "What is the naming convention for Custom Hooks?",
+//     "options": [
+//         "Must start with 'use' followed by descriptive name",
+//         "Must end with 'Hook' suffix",
+//         "Must be in camelCase only",
+//         "No specific naming convention required"
+//     ],
+//     "correctOption": 0,
+//     "points": 10,
+//             "explanation":""
+// },
+// {
+//     "id": 145,
+//     "question": "Can Custom Hooks use other React hooks like useState?",
+//     "options": [
+//         "No, Custom Hooks cannot use other hooks",
+//         "Yes, that's the main purpose of Custom Hooks",
+//         "Only useState, not other hooks",
+//         "Only in Class Components"
+//     ],
+//     "correctOption": 1,
+//     "points": 10,
+//             "explanation":""
+// },
+// {
+//     "id": 146,
+//     "question": "How do you handle errors in a Custom Hook for API fetching?",
+//     "options": [
+//         "Errors cannot be handled in Custom Hooks",
+//         "Use try-catch and return error state",
+//         "Let errors bubble to parent component always",
+//         "Use error boundaries inside the hook"
+//     ],
+//     "correctOption": 1,
+//     "points": 20,
+//             "explanation":""
+// },
+// {
+//     "id": 147,
+//     "question": "What should a Custom Hook for form handling return?",
+//     "options": [
+//         "Only the form values object",
+//         "JSX for the entire form",
+//         "Values, handlers, and validation state",
+//         "Nothing, it should mutate props directly"
+//     ],
+//     "correctOption": 2,
+//     "points": 20,
+//             "explanation":""
+// },
 //     {
 //         "id": 148,
 //         "question": "Can Custom Hooks call other Custom Hooks?",
@@ -2333,1021 +2331,1021 @@ export const mockQuestions: Question[] = [
 //         "points": 10,
 //                 "explanation":""
 //     },
-    {
-        "id": 152,
-        "question": "How does useMemo help with object props in memoized components?",
-        options: [
-            "It prevents garbage collection of objects",
-            "It converts objects to primitive values",
-            "It maintains stable object references",
-            "It performs deep comparison of objects"
-        ],
-        correctOption: 2,
-        "points": 20,
-        "explanation":"• useMemo reference ثابتی از object ایجاد می‌کند\n" +
-            "- بدون useMemo، object جدید در هر render ساخته می‌شود\n" +
-            "- React.memo با reference جدید، component را دوباره render می‌کند\n" +
-            "- useMemo فقط زمانی object جدید می‌سازد که dependencies تغییر کنند\n" +
-            "- این به جلوگیری از re-renders غیرضروری کمک می‌کند"
-    },
-    {
-        "id": 153,
-        "question":"What is the key difference between useCallback and useMemo?",
-        options: [
-            "useCallback memoizes functions, useMemo memoizes values",
-            "useCallback prevents renders, useMemo prevents effects",
-            "useCallback handles async, useMemo handles sync logic",
-            "useCallback works with props, useMemo works with state"
-        ],
-        correctOption: 0,
-        "points": 20,
-        "explanation":"• useCallback برای memoize کردن functions استفاده می‌شود\n" +
-            "- useMemo برای memoize کردن مقادیر محاسبه شده استفاده می‌شود\n" +
-            "- useCallback معادل useMemo(() => fn, deps) است\n" +
-            "- هر دو از re-creation غیرضروری جلوگیری می‌کنند\n" +
-            "- برای استفاده صحیح، نوع داده را در نظر بگیرید"
-    },
-    {
-        "id": 154,
-        "question":  "Why do useState setters have stable identity across renders?",
-        options: [
-            "React automatically memoizes all functions",
-            "Setters are recreated but hidden by React",
-            "React guarantees stable references for setters",
-            "Setters only work with primitive values"
-        ],
-        correctOption: 2,
-        "points": 20,
-        "explanation":"• React تضمین می‌کند که setter functions همیشه reference ثابت دارند\n" +
-            "- نیازی به اضافه کردن آن‌ها به dependency arrays نیست\n" +
-            "- این رفتار برای useState و useReducer dispatch صادق است\n" +
-            "- کمک به جلوگیری از re-runs غیرضروری effects می‌کند\n" +
-            "- یکی از optimizations داخلی React است"
-    },
-    {
-        "id": 155,
-        "question":"What does stable identity mean for useReducer dispatch?",
-        options: [
-            "The function reference never changes",
-            "It produces consistent action results",
-            "It handles all action types equally",
-            "It works with any reducer function"
-        ],
-        correctOption: 0,
-        "points": 20,
-        "explanation":"• dispatch function همیشه reference یکسانی دارد\n" +
-            "- مانند useState setters، نیازی به dependency array ندارد\n" +
-            "- React این stability را تضمین می‌کند\n" +
-            "- باعث سادگی در نوشتن effects و callbacks می‌شود\n" +
-            "- می‌توانید با اطمینان از dispatch در useEffect استفاده کنید"
-    },
-    {
-        "id": 156,
-        "question": "Why can useState setters be omitted from dependency arrays?",
-        options: [
-            "React adds them automatically at runtime",
-            "React guarantees their stable identity",
-            "They're compared by value not reference",
-            "They only track primitive dependencies"
-        ],
-        correctOption: 1,
-        "points": 30,
-        "explanation":"• React تضمین می‌کند setter functions هرگز تغییر نمی‌کنند\n" +
-            "- این یعنی اضافه کردن آن‌ها به deps تاثیری ندارد\n" +
-            "- ESLint به طور خودکار این موضوع را می‌داند\n" +
-            "- تنها برای useState و useReducer dispatch صادق است\n" +
-            "- سایر functions باید در dependency array قرار گیرند"
-    },
-    {
-        "id": 157,
-        "question":  "What happens when state variables are missing from useEffect dependencies?",
-        options: [
-            "React adds the variables automatically",
-            "The effect uses the latest values",
-            "The effect captures stale values",
-            "The effect runs on every render"
-        ],
-        correctOption: 2,
-        "points": 30,
-        "explanation":"• وقتی state از dependencies حذف شود، effect مقدار قدیمی را می‌بیند\n" +
-            "- این به stale closure معروف است\n" +
-            "- effect فقط زمانی مقادیر capture می‌کند که ایجاد می‌شود\n" +
-            "- همیشه تمام reactive values را در deps قرار دهید\n" +
-            "- ESLint exhaustive-deps این مشکل را تشخیص می‌دهد"
-    },
-    {
-        "id": 158,
-        "question":  "Why must props be included in useCallback dependency arrays?",
-        options: [
-            "React freezes props unless included",
-            "Props have stable identity like setters",
-            "useCallback only works with primitives",
-            "Props can change causing stale closures"
-        ],
-        correctOption: 3,
-        "points": 20,
-        "explanation":"• props می‌توانند در هر render تغییر کنند\n" +
-            "- بدون اضافه کردن به deps، function مقدار قدیمی prop را می‌بیند\n" +
-            "- این باعث bugs پنهان و رفتار غیرمنتظره می‌شود\n" +
-            "- همیشه props استفاده شده را در dependency array قرار دهید\n" +
-            "- ESLint به شناسایی این موارد کمک می‌کند"
-    },
-    {
-        "id": 159,
-        "question": "Why should functions defined inside a React component be added to the dependency array of useEffect?",
-        options: [
-            "Functions are recreated on every component render cycle",
-            "React automatically memoizes all functions in components",
-            "Functions have stable references like dispatch from useReducer",
-            "Dependency arrays only need to track function calls"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• functions در هر render دوباره ساخته می‌شوند\n" +
-            "- reference جدید باعث re-run شدن effect می‌شود\n" +
-            "- باید function را با useCallback wrap کنید یا داخل effect بیاورید\n" +
-            "- یا function را خارج از component تعریف کنید\n" +
-            "- این یکی از دلایل اصلی re-renders غیرضروری است"
-    },
-    {
-        "id": 160,
-        "question": "Why can frequently changing Context values cause performance issues?",
-        options: [
-            "React ignores all context updates for performance reasons",
-            "All consumers re-render whenever any context value changes",
-            "Context automatically freezes all values to prevent updates",
-            "useMemo cannot be used properly with Context values"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation":"• هر تغییر در Context باعث re-render همه consumers می‌شود\n" +
-            "- حتی اگر consumer فقط بخشی از value را استفاده کند\n" +
-            "- برای optimization، Context را به چند قسمت کوچک تقسیم کنید\n" +
-            "- یا از useMemo برای wrap کردن value استفاده کنید\n" +
-            "- pattern children به کاهش re-renders کمک می‌کند"
-    },
-    {
-        "id": 161,
-        "question": "How can you optimize Context to prevent unnecessary re-renders?",
-        options: [
-            "Wrap context values with useMemo for stable references",
-            "Always pass new object literals as context values",
-            "Use class components instead of functional components",
-            "Avoid using React.memo on any consumer components"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• useMemo reference ثابت برای Context value ایجاد می‌کند\n" +
-            "- بدون useMemo، object جدید در هر render ساخته می‌شود\n" +
-            "- این باعث re-render همه consumers حتی بدون تغییر واقعی می‌شود\n" +
-            "- dependencies را دقیق مشخص کنید تا فقط زمان نیاز update شود\n" +
-            "- ترکیب با React.memo در consumers بسیار موثر است"
-    },
-    {
-        "id": 162,
-        "question": "What strategy helps avoid wasted renders in Context with many consumers?",
-        options: [
-            "Convert all consumers to class-based components only",
-            "Always update entire context on any state change",
-            "Use single large context for all application state",
-            "Split context into multiple focused smaller providers"
-        ],
-        "correctOption":3,
-        "points": 30,
-        "explanation":"• تقسیم Context به چند Provider کوچک‌تر بسیار موثر است\n" +
-            "- هر consumer فقط به Context مورد نیاز خود subscribe می‌شود\n" +
-            "- تغییر در یک Context، consumers دیگر را تحت تاثیر قرار نمی‌دهد\n" +
-            "- مثلاً User Context و Theme Context را جدا نگه دارید\n" +
-            "- این pattern به scalability برنامه کمک می‌کند"
-    },
-    {
-        "id": 163,
-        "question":"How does passing children help optimize Context performance?",
-        options: [
-            "Makes entire subtree always re-render together",
-            "Automatically freezes all context values",
-            "Allows only necessary parts to re-render",
-            "Converts all consumers to use useMemo"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation":"• با استفاده از children pattern، فقط Provider دوباره render می‌شود\n" +
-            "- children که از بیرون pass شده‌اند، re-render نمی‌شوند\n" +
-            "- این technique به نام 'children as props' معروف است\n" +
-            "- باعث کاهش چشمگیر re-renders غیرضروری می‌شود\n" +
-            "- یکی از بهترین روش‌های optimization در React است"
-    },
-    {
-        "id": 164,
-        "question": "Why wrap Context values containing objects in useMemo?",
-        options: [
-            "Forces all consumers to re-render",
-            "Keeps object references stable between renders",
-            "Automatically freezes object values for immutability",
-            "Converts complex objects to primitive types"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• objects در هر render reference جدید می‌گیرند\n" +
-            "- React با === مقایسه می‌کند نه deep equality\n" +
-            "- useMemo object را تا زمان تغییر dependencies حفظ می‌کند\n" +
-            "- این از re-render غیرضروری تمام consumers جلوگیری می‌کند\n" +
-            "- همیشه برای Context values از useMemo استفاده کنید"
-    },
-    {
-        "id": 165,
-        "question": "How does React.memo help Context consumer performance?",
-        options: [
-            "Prevents re-render unless component props actually change",
-            "Automatically memoizes all context values in consumers",
-            "Ensures children components never update unnecessarily",
-            "Merges multiple context values together for efficiency"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• React.memo component را wrap می‌کند و props را check می‌کند\n" +
-            "- اگر props تغییر نکرده باشد، re-render نمی‌شود\n" +
-            "- حتی اگر parent (Provider) re-render شود\n" +
-            "- ترکیب React.memo با useMemo در value بسیار قدرتمند است\n" +
-            "- برای consumers با UI سنگین توصیه می‌شود"
-    },
-    {
-        "id": 166,
-        "question": "What advantage does children pattern with React.memo provide?",
-        options: [
-            "Children receive new props without any re-rendering",
-            "Only context-dependent components re-render when needed",
-            "Entire component subtree renders once per change",
-            "Context values automatically become static primitive types"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation":"• با ترکیب children و React.memo، کنترل دقیق روی re-renders دارید\n" +
-            "- فقط کامپوننت‌هایی که واقعاً به Context نیاز دارند re-render می‌شوند\n" +
-            "- بقیه tree بدون تغییر باقی می‌ماند\n" +
-            "- این pattern برای برنامه‌های بزرگ بسیار مفید است\n" +
-            "- performance را به طور قابل توجهی بهبود می‌بخشد"
-    },
-    {
-        "id": 147,
-        "question":  "Why do inline objects as Context values trigger unnecessary re-renders?",
-        options: [
-            "React deeply compares all object contents every render",
-            "New object references are created on every render",
-            "Context always re-renders all consumers",
-            "Objects are automatically converted to primitives "
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation":"• هر بار که component render می‌شود، object جدیدی ساخته می‌شود\n" +
-            "- حتی اگر محتوای object یکسان باشد، reference متفاوت است\n" +
-            "- React فقط reference را بررسی می‌کند نه محتوا\n" +
-            "- همین باعث re-render همه consumers می‌شود\n" +
-            "- همیشه از useMemo برای inline objects استفاده کنید"
-    },
-    {
-        "id": 168,
-        "question": "What's the recommended way to avoid re-renders with Context objects?",
-        options: [
-            "Wrap Context.Provider component itself with React.memo",
-            "Create new object literals each render for freshness",
-            "Wrap object values in useMemo with proper dependencies",
-            "Convert all objects to JSON strings before passing"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation":"• useMemo object را memoize می‌کند و reference را ثابت نگه می‌دارد\n" +
-            "- dependencies مشخص می‌کنند چه زمانی object باید update شود\n" +
-            "- این بهترین و ساده‌ترین راه برای optimization است\n" +
-            "- JSON.stringify یا memo کردن Provider کار نمی‌کند\n" +
-            "- همیشه این pattern را برای Context values دنبال کنید"
-    },
-    {
-        "id": 169,
-        "question": "How does React.memo reduce Context consumer re-renders?",
-        options: [
-            "Re-renders only when component props change, not context",
-            "Forces all consumers to render together for consistency",
-            "Automatically memoizes Context values in provider components",
-            "Uses shallow comparison for context updates instead"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation":"• React.memo props را check می‌کند نه Context\n" +
-            "- اگر props تغییر نکرده باشد، component re-render نمی‌شود\n" +
-            "- اما اگر Context تغییر کند، باز هم re-render می‌شود\n" +
-            "- برای جلوگیری کامل، Context را نیز optimize کنید\n" +
-            "- ترکیب هر دو technique بهترین نتیجه را می‌دهد"
-    },
-    {
-        "id": 170,
-        "question": "What combination best reduces Context-related wasted renders?",
-        options: [
-            "useMemo for values, React.memo for consumers, children pattern",
-            "useMemo for values, partial memoization, separate state contexts",
-            "useCallback for values, React.memo for consumers, split contexts",
-            "useState for values, class consumers, single global contexts"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation":"• ترکیب useMemo (برای values) + React.memo (برای consumers) + children pattern بهترین است\n" +
-            "- useMemo از re-creation غیرضروری value جلوگیری می‌کند\n" +
-            "- React.memo از re-render غیرضروری consumers جلوگیری می‌کند\n" +
-            "- children pattern فقط قسمت‌های لازم را re-render می‌کند\n" +
-            "- این سه تکنیک با هم، بهترین performance را می‌دهند"
-    },
-    {
-        "id": 171,
-        "question": "What does bundle size represent in React applications?",
-        options: [
-            "Total number of React components in the project",
-            "Combined size of all JavaScript and CSS files",
-            "Memory consumed by React in browser runtime",
-            "Total amount of network requests per page load"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• bundle size مجموع حجم تمام فایل‌های JavaScript و CSS است\n" +
-            "- شامل کد خود برنامه، کتابخانه‌ها و dependencies می‌شود\n" +
-            "- bundle بزرگ‌تر یعنی زمان بارگذاری بیشتر برای کاربر\n" +
-            "- با tools مثل webpack-bundle-analyzer قابل بررسی است\n" +
-            "- کاهش bundle size یکی از اهداف اصلی optimization است"
-    },
-    {
-        "id": 172,
-        "question": "How does larger bundle size affect application performance?",
-        options: [
-            "Makes web pages load much faster than before",
-            "Reduces network bandwidth usage significantly",
-            "Improves SEO ranking for search engines",
-            "Makes applications load slower for users"
-        ],
-        "correctOption":3,
-        "points": 10,
-        "explanation":"• bundle بزرگ‌تر زمان download و parse را افزایش می‌دهد\n" +
-            "- کاربران با اینترنت کند تاثیر بیشتری می‌بینند\n" +
-            "- زمان Time to Interactive (TTI) افزایش می‌یابد\n" +
-            "- مصرف data موبایل بیشتری دارد\n" +
-            "- تجربه کاربری ضعیف‌تر و نرخ bounce بالاتر می‌شود"
-    },
-    {
-        "id": 173,
-        "question":  "What is the main goal of code splitting?",
-        options: [
-            "Combine all files into one single large bundle",
-            "Rewrite components into smaller atomic functions",
-            "Split code into smaller chunks loaded on demand",
-            "Reduce total number of React hooks used throughout"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• code splitting کد را به چند بخش کوچک‌تر تقسیم می‌کند\n" +
-            "- فقط کدی که الان نیاز است بارگذاری می‌شود\n" +
-            "- بقیه کد زمانی که لازم شد load می‌شود (lazy loading)\n" +
-            "- initial bundle size کاهش می‌یابد\n" +
-            "- سرعت بارگذاری اولیه بهبود پیدا می‌کند"
-    },
-    {
-        "id": 174,
-        "question": "Which React feature enables lazy loading of components?",
-        options: [
-            "React.StrictMode combined with error boundary components",
-            "React.Suspense combined with React.lazy function calls",
-            "useMemo combined with useCallback hooks for optimization",
-            "React.memo combined with stable props for consistency"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• React.lazy برای lazy loading کامپوننت‌ها استفاده می‌شود\n" +
-            "- باید با React.Suspense ترکیب شود\n" +
-            "- Suspense fallback UI را تا load شدن نشان می‌دهد\n" +
-            "- فقط با dynamic import() کار می‌کند\n" +
-            "- مناسب برای route-based splitting است"
-    },
-    {
-        "id": 175,
-        "question": "What happens with page-based bundle splitting in Next.js?",
-        options: [
-            "All pages are still combined into one large bundle",
-            "Only components with useEffect hooks get separated",
-            "Pages are split but still downloaded together",
-            "Each page loads as a separate bundle"
-        ],
-        "correctOption": 3,
-        "points": 30,
-        "explanation":"• Next.js به صورت خودکار هر page را جدا می‌کند\n" +
-            "- هر صفحه bundle مستقل خود را دارد\n" +
-            "- فقط کد صفحه فعلی بارگذاری می‌شود\n" +
-            "- navigation بین صفحات سریع‌تر می‌شود\n" +
-            "- یکی از مزایای بزرگ Next.js نسبت به CRA است"
-    },
-    {
-        "id": 176,
-        "question":"What role does React.Suspense play with lazy components?",
-        options: [
-            "Shows fallback UI until lazy component loading",
-            "Prevents unnecessary component re-renders during loading",
-            "Creates separate bundles automatically for each component",
-            "Optimizes performance without requiring additional configuration"
-        ],
-        "correctOption":0,
-        "points": 30,
-        "explanation":"• Suspense یک wrapper برای lazy components است\n" +
-            "- fallback prop محتوای loading را مشخص می‌کند\n" +
-            "- تا component load شود، fallback نمایش داده می‌شود\n" +
-            "- می‌تواند چند lazy component را wrap کند\n" +
-            "- تجربه کاربری بهتری نسبت به loading خالی ایجاد می‌کند"
-    },
-    {
-        "id": 177,
-        question: "What is the main purpose of tree-shaking?",
-        options: [
-            "Split JavaScript code into multiple chunks",
-            "Remove unused code from final bundles",
-            "Improve CSS loading performance significantly",
-            "Automatically lazy-load images when they become visible"
-        ],
-        correctOption: 1,
-        points: 10,
-        "explanation": "• tree-shaking کد استفاده نشده را از bundle حذف می‌کند\n" +
-            "- در زمان build توسط bundler انجام می‌شود\n" +
-            "- فقط با ES modules (import/export) کار می‌کند\n" +
-            "- کتابخانه‌های بزرگ را کوچک‌تر می‌کند\n" +
-            "- webpack و Rollup به خوبی این کار را انجام می‌دهند"
-    },
-    {
-        "id": 178,
-        question: "Which feature enables component-based code splitting?",
-        options: [
-            "React.memo for component memoization and optimization",
-            "useCallback for function reference memoization stability",
-            "React.lazy with Suspense boundaries for loading states",
-            "StrictMode for development debugging and error detection"
-        ],
-        correctOption: 2,
-        points: 10,
-        "explanation": "• React.lazy امکان تقسیم کد بر اساس کامپوننت را می‌دهد\n" +
-            "- هر کامپوننت می‌تواند bundle جداگانه داشته باشد\n" +
-            "- با Suspense برای مدیریت loading state ترکیب می‌شود\n" +
-            "- مناسب برای کامپوننت‌های سنگین یا کم استفاده است\n" +
-            "- performance برنامه را بهبود می‌بخشد"
-    },
-    {
-        "id": 179,
-        question: "How does dynamic import() improve performance?",
-        options: [
-            "Loads JavaScript modules only when actually required",
-            "Always reduces bundle size significantly for all applications",
-            "Automatically compresses JavaScript files during build process",
-            "Preloads all modules at application startup for speed"
-        ],
-        correctOption: 0,
-        points: 10,
-        "explanation": "• import() ماژول‌ها را به صورت asynchronous بارگذاری می‌کند\n" +
-            "- فقط زمانی که واقعاً نیاز است اجرا می‌شود\n" +
-            "- bundle اولیه کوچک‌تر می‌شود\n" +
-            "- Promise برمی‌گرداند که resolve به module می‌شود\n" +
-            "- پایه React.lazy و code splitting است"
-    },
-    {
-        "id": 180,
-        question: "Which plugin helps analyze Next.js bundle sizes?",
-        options: [
-            "webpack-bundle-analyzer for build process analysis",
-            "eslint-plugin-next for code linting and quality",
-            "@next/bundle-analyzer for bundle size visualization",
-            "next-optimizer for performance optimization across board"
-        ],
-        correctOption: 2,
-        points: 10,
-        "explanation": "• Image component تصاویر را به صورت خودکار optimize می‌کند\n" +
-            "- lazy loading پیش‌فرض برای تصاویر\n" +
-            "- تبدیل خودکار به فرمت‌های مدرن مثل WebP\n" +
-            "- resize و optimization بر اساس device\n" +
-            "- جلوگیری از layout shift با تعیین ابعاد"
-    },
-    {
-        "id": 181,
-        question:"Why use Next.js Image component over regular img?",
-        options: [
-            "Increases resolution of all images to HD",
-            "Converts all image formats to WebP",
-            "Automatically lazy-loads and optimizes images",
-            "Completely avoids browser caching for freshness"
-        ],
-        correctOption: 2,
-        points: 10,
-        "explanation": "• Image component تصاویر را به صورت خودکار optimize می‌کند\n" +
-            "- lazy loading پیش‌فرض برای تصاویر\n" +
-            "- تبدیل خودکار به فرمت‌های مدرن مثل WebP\n" +
-            "- resize و optimization بر اساس device\n" +
-            "- جلوگیری از layout shift با تعیین ابعاد"
-    },
-    {
-        "id": 182,
-        question: "How does caching help with bundle optimization?",
-        options: [
-            "Reduces React component re-renders",
-            "Automatically inlines critical CSS for faster rendering",
-            "Prevents downloading unchanged bundles on repeat visits",
-            "Forces all JavaScript modules to preload for speed"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation": "• caching از دانلود مجدد فایل‌های unchanged جلوگیری می‌کند\n" +
-            "- browser فایل‌ها را در cache ذخیره می‌کند\n" +
-            "- با content hashing فایل‌ها versioning می‌شوند\n" +
-            "- فقط فایل‌های تغییر یافته دوباره download می‌شوند\n" +
-            "- سرعت بارگذاری در بازدیدهای بعدی بسیار بهتر است"
-    },
-    {
-        "id": 183,
-        question: "What's the downside of importing large third-party libraries?",
-        options: [
-            "They completely disable React hooks throughout application",
-            "They significantly increase initial JavaScript load time",
-            "They prevent tree-shaking optimization from working properly",
-            "They block Suspense fallback rendering during loading"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation": "• کتابخانه‌های بزرگ bundle size را قابل توجه افزایش می‌دهند\n" +
-            "- زمان parsing و execution بیشتری نیاز است\n" +
-            "- ممکن است بخش‌های زیادی استفاده نشود\n" +
-            "- بهتر است از tree-shakable libraries استفاده کنید\n" +
-            "- یا فقط بخش مورد نیاز را import کنید"
-    },
-    {
-        "id": 184,
-        question: "What happens to imported but unused libraries with tree-shaking?",
-        options: [
-            "Library code will not be included in final bundle",
-            "Library code will always remain in bundle regardless",
-            "Library code throws runtime error during execution phase",
-            "Library code preloads for future potential use"
-        ],
-        correctOption: 0,
-        points: 30,
-        "explanation": "• tree-shaking کد استفاده نشده را حذف می‌کند\n" +
-            "- اگر چیزی از library استفاده نشود، در bundle نمی‌آید\n" +
-            "- فقط با ES modules (import/export) کار می‌کند\n" +
-            "- CommonJS (require) قابل tree-shake نیست\n" +
-            "- کتابخانه‌ها باید side-effect free باشند"
-    },
-    {
-        "id": 185,
-        question: "How can unused CSS affect bundle performance?",
-        options: [
-            "Increases JavaScript execution time throughout the application",
-            "Completely disables CSS modules functionality across project",
-            "increases the bundle size without offering meaningful functionality",
-            "Forces application to use inline styles only"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation": "• CSS استفاده نشده حجم bundle را بیهوده افزایش می‌دهد\n" +
-            "- browser باید همه CSS را parse و apply کند\n" +
-            "- زمان rendering را کند می‌کند\n" +
-            "- از tools مثل PurgeCSS برای حذف استفاده کنید\n" +
-            "- CSS Modules و Tailwind این مشکل را کاهش می‌دهند"
-    },
-    {
-        "id": 186,
-        question:  "In Next.js, what differs preloading from prefetching?",
-        options: [
-            "Preloading waits for idle time, prefetching happens immediately",
-            "Preloading fetches immediately, prefetching waits for idle time",
-            "Both techniques have identical behavior in all situations",
-            "Both techniques disable cache headers completely for requests"
-        ],
-        correctOption: 1,
-        points:30,
-        "explanation": "• preload منابع critical را فوراً بارگذاری می‌کند\n" +
-            "- prefetch منابع را در زمان idle بارگذاری می‌کند\n" +
-            "- preload برای fonts، critical CSS استفاده می‌شود\n" +
-            "- prefetch برای صفحات بعدی استفاده می‌شود\n" +
-            "- استفاده نادرست preload می‌تواند مضر باشد"
-    },
-    {
-        id: 187,
+{
+    "id": 152,
+    "question": "How does useMemo help with object props in memoized components?",
+    options: [
+    "It prevents garbage collection of objects",
+    "It converts objects to primitive values",
+    "It maintains stable object references",
+    "It performs deep comparison of objects"
+],
+    correctOption: 2,
+    "points": 20,
+    "explanation":"• useMemo reference ثابتی از object ایجاد می‌کند\n" +
+"- بدون useMemo، object جدید در هر render ساخته می‌شود\n" +
+"- React.memo با reference جدید، component را دوباره render می‌کند\n" +
+"- useMemo فقط زمانی object جدید می‌سازد که dependencies تغییر کنند\n" +
+"- این به جلوگیری از re-renders غیرضروری کمک می‌کند"
+},
+{
+    "id": 153,
+    "question":"What is the key difference between useCallback and useMemo?",
+    options: [
+    "useCallback memoizes functions, useMemo memoizes values",
+    "useCallback prevents renders, useMemo prevents effects",
+    "useCallback handles async, useMemo handles sync logic",
+    "useCallback works with props, useMemo works with state"
+],
+    correctOption: 0,
+    "points": 20,
+    "explanation":"• useCallback برای memoize کردن functions استفاده می‌شود\n" +
+"- useMemo برای memoize کردن مقادیر محاسبه شده استفاده می‌شود\n" +
+"- useCallback معادل useMemo(() => fn, deps) است\n" +
+"- هر دو از re-creation غیرضروری جلوگیری می‌کنند\n" +
+"- برای استفاده صحیح، نوع داده را در نظر بگیرید"
+},
+{
+    "id": 154,
+    "question":  "Why do useState setters have stable identity across renders?",
+    options: [
+    "React automatically memoizes all functions",
+    "Setters are recreated but hidden by React",
+    "React guarantees stable references for setters",
+    "Setters only work with primitive values"
+],
+    correctOption: 2,
+    "points": 20,
+    "explanation":"• React تضمین می‌کند که setter functions همیشه reference ثابت دارند\n" +
+"- نیازی به اضافه کردن آن‌ها به dependency arrays نیست\n" +
+"- این رفتار برای useState و useReducer dispatch صادق است\n" +
+"- کمک به جلوگیری از re-runs غیرضروری effects می‌کند\n" +
+"- یکی از optimizations داخلی React است"
+},
+{
+    "id": 155,
+    "question":"What does stable identity mean for useReducer dispatch?",
+    options: [
+    "The function reference never changes",
+    "It produces consistent action results",
+    "It handles all action types equally",
+    "It works with any reducer function"
+],
+    correctOption: 0,
+    "points": 20,
+    "explanation":"• dispatch function همیشه reference یکسانی دارد\n" +
+"- مانند useState setters، نیازی به dependency array ندارد\n" +
+"- React این stability را تضمین می‌کند\n" +
+"- باعث سادگی در نوشتن effects و callbacks می‌شود\n" +
+"- می‌توانید با اطمینان از dispatch در useEffect استفاده کنید"
+},
+{
+    "id": 156,
+    "question": "Why can useState setters be omitted from dependency arrays?",
+    options: [
+    "React adds them automatically at runtime",
+    "React guarantees their stable identity",
+    "They're compared by value not reference",
+    "They only track primitive dependencies"
+],
+    correctOption: 1,
+    "points": 30,
+    "explanation":"• React تضمین می‌کند setter functions هرگز تغییر نمی‌کنند\n" +
+"- این یعنی اضافه کردن آن‌ها به deps تاثیری ندارد\n" +
+"- ESLint به طور خودکار این موضوع را می‌داند\n" +
+"- تنها برای useState و useReducer dispatch صادق است\n" +
+"- سایر functions باید در dependency array قرار گیرند"
+},
+{
+    "id": 157,
+    "question":  "What happens when state variables are missing from useEffect dependencies?",
+    options: [
+    "React adds the variables automatically",
+    "The effect uses the latest values",
+    "The effect captures stale values",
+    "The effect runs on every render"
+],
+    correctOption: 2,
+    "points": 30,
+    "explanation":"• وقتی state از dependencies حذف شود، effect مقدار قدیمی را می‌بیند\n" +
+"- این به stale closure معروف است\n" +
+"- effect فقط زمانی مقادیر capture می‌کند که ایجاد می‌شود\n" +
+"- همیشه تمام reactive values را در deps قرار دهید\n" +
+"- ESLint exhaustive-deps این مشکل را تشخیص می‌دهد"
+},
+{
+    "id": 158,
+    "question":  "Why must props be included in useCallback dependency arrays?",
+    options: [
+    "React freezes props unless included",
+    "Props have stable identity like setters",
+    "useCallback only works with primitives",
+    "Props can change causing stale closures"
+],
+    correctOption: 3,
+    "points": 20,
+    "explanation":"• props می‌توانند در هر render تغییر کنند\n" +
+"- بدون اضافه کردن به deps، function مقدار قدیمی prop را می‌بیند\n" +
+"- این باعث bugs پنهان و رفتار غیرمنتظره می‌شود\n" +
+"- همیشه props استفاده شده را در dependency array قرار دهید\n" +
+"- ESLint به شناسایی این موارد کمک می‌کند"
+},
+{
+    "id": 159,
+    "question": "Why should functions defined inside a React component be added to the dependency array of useEffect?",
+    options: [
+    "Functions are recreated on every component render cycle",
+    "React automatically memoizes all functions in components",
+    "Functions have stable references like dispatch from useReducer",
+    "Dependency arrays only need to track function calls"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• functions در هر render دوباره ساخته می‌شوند\n" +
+"- reference جدید باعث re-run شدن effect می‌شود\n" +
+"- باید function را با useCallback wrap کنید یا داخل effect بیاورید\n" +
+"- یا function را خارج از component تعریف کنید\n" +
+"- این یکی از دلایل اصلی re-renders غیرضروری است"
+},
+{
+    "id": 160,
+    "question": "Why can frequently changing Context values cause performance issues?",
+    options: [
+    "React ignores all context updates for performance reasons",
+    "All consumers re-render whenever any context value changes",
+    "Context automatically freezes all values to prevent updates",
+    "useMemo cannot be used properly with Context values"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• هر تغییر در Context باعث re-render همه consumers می‌شود\n" +
+"- حتی اگر consumer فقط بخشی از value را استفاده کند\n" +
+"- برای optimization، Context را به چند قسمت کوچک تقسیم کنید\n" +
+"- یا از useMemo برای wrap کردن value استفاده کنید\n" +
+"- pattern children به کاهش re-renders کمک می‌کند"
+},
+{
+    "id": 161,
+    "question": "How can you optimize Context to prevent unnecessary re-renders?",
+    options: [
+    "Wrap context values with useMemo for stable references",
+    "Always pass new object literals as context values",
+    "Use class components instead of functional components",
+    "Avoid using React.memo on any consumer components"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• useMemo reference ثابت برای Context value ایجاد می‌کند\n" +
+"- بدون useMemo، object جدید در هر render ساخته می‌شود\n" +
+"- این باعث re-render همه consumers حتی بدون تغییر واقعی می‌شود\n" +
+"- dependencies را دقیق مشخص کنید تا فقط زمان نیاز update شود\n" +
+"- ترکیب با React.memo در consumers بسیار موثر است"
+},
+{
+    "id": 162,
+    "question": "What strategy helps avoid wasted renders in Context with many consumers?",
+    options: [
+    "Convert all consumers to class-based components only",
+    "Always update entire context on any state change",
+    "Use single large context for all application state",
+    "Split context into multiple focused smaller providers"
+],
+    "correctOption":3,
+    "points": 30,
+    "explanation":"• تقسیم Context به چند Provider کوچک‌تر بسیار موثر است\n" +
+"- هر consumer فقط به Context مورد نیاز خود subscribe می‌شود\n" +
+"- تغییر در یک Context، consumers دیگر را تحت تاثیر قرار نمی‌دهد\n" +
+"- مثلاً User Context و Theme Context را جدا نگه دارید\n" +
+"- این pattern به scalability برنامه کمک می‌کند"
+},
+{
+    "id": 163,
+    "question":"How does passing children help optimize Context performance?",
+    options: [
+    "Makes entire subtree always re-render together",
+    "Automatically freezes all context values",
+    "Allows only necessary parts to re-render",
+    "Converts all consumers to use useMemo"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• با استفاده از children pattern، فقط Provider دوباره render می‌شود\n" +
+"- children که از بیرون pass شده‌اند، re-render نمی‌شوند\n" +
+"- این technique به نام 'children as props' معروف است\n" +
+"- باعث کاهش چشمگیر re-renders غیرضروری می‌شود\n" +
+"- یکی از بهترین روش‌های optimization در React است"
+},
+{
+    "id": 164,
+    "question": "Why wrap Context values containing objects in useMemo?",
+    options: [
+    "Forces all consumers to re-render",
+    "Keeps object references stable between renders",
+    "Automatically freezes object values for immutability",
+    "Converts complex objects to primitive types"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• objects در هر render reference جدید می‌گیرند\n" +
+"- React با === مقایسه می‌کند نه deep equality\n" +
+"- useMemo object را تا زمان تغییر dependencies حفظ می‌کند\n" +
+"- این از re-render غیرضروری تمام consumers جلوگیری می‌کند\n" +
+"- همیشه برای Context values از useMemo استفاده کنید"
+},
+{
+    "id": 165,
+    "question": "How does React.memo help Context consumer performance?",
+    options: [
+    "Prevents re-render unless component props actually change",
+    "Automatically memoizes all context values in consumers",
+    "Ensures children components never update unnecessarily",
+    "Merges multiple context values together for efficiency"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• React.memo component را wrap می‌کند و props را check می‌کند\n" +
+"- اگر props تغییر نکرده باشد، re-render نمی‌شود\n" +
+"- حتی اگر parent (Provider) re-render شود\n" +
+"- ترکیب React.memo با useMemo در value بسیار قدرتمند است\n" +
+"- برای consumers با UI سنگین توصیه می‌شود"
+},
+{
+    "id": 166,
+    "question": "What advantage does children pattern with React.memo provide?",
+    options: [
+    "Children receive new props without any re-rendering",
+    "Only context-dependent components re-render when needed",
+    "Entire component subtree renders once per change",
+    "Context values automatically become static primitive types"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• با ترکیب children و React.memo، کنترل دقیق روی re-renders دارید\n" +
+"- فقط کامپوننت‌هایی که واقعاً به Context نیاز دارند re-render می‌شوند\n" +
+"- بقیه tree بدون تغییر باقی می‌ماند\n" +
+"- این pattern برای برنامه‌های بزرگ بسیار مفید است\n" +
+"- performance را به طور قابل توجهی بهبود می‌بخشد"
+},
+{
+    "id": 147,
+    "question":  "Why do inline objects as Context values trigger unnecessary re-renders?",
+    options: [
+    "React deeply compares all object contents every render",
+    "New object references are created on every render",
+    "Context always re-renders all consumers",
+    "Objects are automatically converted to primitives "
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• هر بار که component render می‌شود، object جدیدی ساخته می‌شود\n" +
+"- حتی اگر محتوای object یکسان باشد، reference متفاوت است\n" +
+"- React فقط reference را بررسی می‌کند نه محتوا\n" +
+"- همین باعث re-render همه consumers می‌شود\n" +
+"- همیشه از useMemo برای inline objects استفاده کنید"
+},
+{
+    "id": 168,
+    "question": "What's the recommended way to avoid re-renders with Context objects?",
+    options: [
+    "Wrap Context.Provider component itself with React.memo",
+    "Create new object literals each render for freshness",
+    "Wrap object values in useMemo with proper dependencies",
+    "Convert all objects to JSON strings before passing"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• useMemo object را memoize می‌کند و reference را ثابت نگه می‌دارد\n" +
+"- dependencies مشخص می‌کنند چه زمانی object باید update شود\n" +
+"- این بهترین و ساده‌ترین راه برای optimization است\n" +
+"- JSON.stringify یا memo کردن Provider کار نمی‌کند\n" +
+"- همیشه این pattern را برای Context values دنبال کنید"
+},
+{
+    "id": 169,
+    "question": "How does React.memo reduce Context consumer re-renders?",
+    options: [
+    "Re-renders only when component props change, not context",
+    "Forces all consumers to render together for consistency",
+    "Automatically memoizes Context values in provider components",
+    "Uses shallow comparison for context updates instead"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• React.memo props را check می‌کند نه Context\n" +
+"- اگر props تغییر نکرده باشد، component re-render نمی‌شود\n" +
+"- اما اگر Context تغییر کند، باز هم re-render می‌شود\n" +
+"- برای جلوگیری کامل، Context را نیز optimize کنید\n" +
+"- ترکیب هر دو technique بهترین نتیجه را می‌دهد"
+},
+{
+    "id": 170,
+    "question": "What combination best reduces Context-related wasted renders?",
+    options: [
+    "useMemo for values, React.memo for consumers, children pattern",
+    "useMemo for values, partial memoization, separate state contexts",
+    "useCallback for values, React.memo for consumers, split contexts",
+    "useState for values, class consumers, single global contexts"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• ترکیب useMemo (برای values) + React.memo (برای consumers) + children pattern بهترین است\n" +
+"- useMemo از re-creation غیرضروری value جلوگیری می‌کند\n" +
+"- React.memo از re-render غیرضروری consumers جلوگیری می‌کند\n" +
+"- children pattern فقط قسمت‌های لازم را re-render می‌کند\n" +
+"- این سه تکنیک با هم، بهترین performance را می‌دهند"
+},
+{
+    "id": 171,
+    "question": "What does bundle size represent in React applications?",
+    options: [
+    "Total number of React components in the project",
+    "Combined size of all JavaScript and CSS files",
+    "Memory consumed by React in browser runtime",
+    "Total amount of network requests per page load"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• bundle size مجموع حجم تمام فایل‌های JavaScript و CSS است\n" +
+"- شامل کد خود برنامه، کتابخانه‌ها و dependencies می‌شود\n" +
+"- bundle بزرگ‌تر یعنی زمان بارگذاری بیشتر برای کاربر\n" +
+"- با tools مثل webpack-bundle-analyzer قابل بررسی است\n" +
+"- کاهش bundle size یکی از اهداف اصلی optimization است"
+},
+{
+    "id": 172,
+    "question": "How does larger bundle size affect application performance?",
+    options: [
+    "Makes web pages load much faster than before",
+    "Reduces network bandwidth usage significantly",
+    "Improves SEO ranking for search engines",
+    "Makes applications load slower for users"
+],
+    "correctOption":3,
+    "points": 10,
+    "explanation":"• bundle بزرگ‌تر زمان download و parse را افزایش می‌دهد\n" +
+"- کاربران با اینترنت کند تاثیر بیشتری می‌بینند\n" +
+"- زمان Time to Interactive (TTI) افزایش می‌یابد\n" +
+"- مصرف data موبایل بیشتری دارد\n" +
+"- تجربه کاربری ضعیف‌تر و نرخ bounce بالاتر می‌شود"
+},
+{
+    "id": 173,
+    "question":  "What is the main goal of code splitting?",
+    options: [
+    "Combine all files into one single large bundle",
+    "Rewrite components into smaller atomic functions",
+    "Split code into smaller chunks loaded on demand",
+    "Reduce total number of React hooks used throughout"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• code splitting کد را به چند بخش کوچک‌تر تقسیم می‌کند\n" +
+"- فقط کدی که الان نیاز است بارگذاری می‌شود\n" +
+"- بقیه کد زمانی که لازم شد load می‌شود (lazy loading)\n" +
+"- initial bundle size کاهش می‌یابد\n" +
+"- سرعت بارگذاری اولیه بهبود پیدا می‌کند"
+},
+{
+    "id": 174,
+    "question": "Which React feature enables lazy loading of components?",
+    options: [
+    "React.StrictMode combined with error boundary components",
+    "React.Suspense combined with React.lazy function calls",
+    "useMemo combined with useCallback hooks for optimization",
+    "React.memo combined with stable props for consistency"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• React.lazy برای lazy loading کامپوننت‌ها استفاده می‌شود\n" +
+"- باید با React.Suspense ترکیب شود\n" +
+"- Suspense fallback UI را تا load شدن نشان می‌دهد\n" +
+"- فقط با dynamic import() کار می‌کند\n" +
+"- مناسب برای route-based splitting است"
+},
+{
+    "id": 175,
+    "question": "What happens with page-based bundle splitting in Next.js?",
+    options: [
+    "All pages are still combined into one large bundle",
+    "Only components with useEffect hooks get separated",
+    "Pages are split but still downloaded together",
+    "Each page loads as a separate bundle"
+],
+    "correctOption": 3,
+    "points": 30,
+    "explanation":"• Next.js به صورت خودکار هر page را جدا می‌کند\n" +
+"- هر صفحه bundle مستقل خود را دارد\n" +
+"- فقط کد صفحه فعلی بارگذاری می‌شود\n" +
+"- navigation بین صفحات سریع‌تر می‌شود\n" +
+"- یکی از مزایای بزرگ Next.js نسبت به CRA است"
+},
+{
+    "id": 176,
+    "question":"What role does React.Suspense play with lazy components?",
+    options: [
+    "Shows fallback UI until lazy component loading",
+    "Prevents unnecessary component re-renders during loading",
+    "Creates separate bundles automatically for each component",
+    "Optimizes performance without requiring additional configuration"
+],
+    "correctOption":0,
+    "points": 30,
+    "explanation":"• Suspense یک wrapper برای lazy components است\n" +
+"- fallback prop محتوای loading را مشخص می‌کند\n" +
+"- تا component load شود، fallback نمایش داده می‌شود\n" +
+"- می‌تواند چند lazy component را wrap کند\n" +
+"- تجربه کاربری بهتری نسبت به loading خالی ایجاد می‌کند"
+},
+{
+    "id": 177,
+    question: "What is the main purpose of tree-shaking?",
+    options: [
+    "Split JavaScript code into multiple chunks",
+    "Remove unused code from final bundles",
+    "Improve CSS loading performance significantly",
+    "Automatically lazy-load images when they become visible"
+],
+    correctOption: 1,
+    points: 10,
+    "explanation": "• tree-shaking کد استفاده نشده را از bundle حذف می‌کند\n" +
+"- در زمان build توسط bundler انجام می‌شود\n" +
+"- فقط با ES modules (import/export) کار می‌کند\n" +
+"- کتابخانه‌های بزرگ را کوچک‌تر می‌کند\n" +
+"- webpack و Rollup به خوبی این کار را انجام می‌دهند"
+},
+{
+    "id": 178,
+    question: "Which feature enables component-based code splitting?",
+    options: [
+    "React.memo for component memoization and optimization",
+    "useCallback for function reference memoization stability",
+    "React.lazy with Suspense boundaries for loading states",
+    "StrictMode for development debugging and error detection"
+],
+    correctOption: 2,
+    points: 10,
+    "explanation": "• React.lazy امکان تقسیم کد بر اساس کامپوننت را می‌دهد\n" +
+"- هر کامپوننت می‌تواند bundle جداگانه داشته باشد\n" +
+"- با Suspense برای مدیریت loading state ترکیب می‌شود\n" +
+"- مناسب برای کامپوننت‌های سنگین یا کم استفاده است\n" +
+"- performance برنامه را بهبود می‌بخشد"
+},
+{
+    "id": 179,
+    question: "How does dynamic import() improve performance?",
+    options: [
+    "Loads JavaScript modules only when actually required",
+    "Always reduces bundle size significantly for all applications",
+    "Automatically compresses JavaScript files during build process",
+    "Preloads all modules at application startup for speed"
+],
+    correctOption: 0,
+    points: 10,
+    "explanation": "• import() ماژول‌ها را به صورت asynchronous بارگذاری می‌کند\n" +
+"- فقط زمانی که واقعاً نیاز است اجرا می‌شود\n" +
+"- bundle اولیه کوچک‌تر می‌شود\n" +
+"- Promise برمی‌گرداند که resolve به module می‌شود\n" +
+"- پایه React.lazy و code splitting است"
+},
+{
+    "id": 180,
+    question: "Which plugin helps analyze Next.js bundle sizes?",
+    options: [
+    "webpack-bundle-analyzer for build process analysis",
+    "eslint-plugin-next for code linting and quality",
+    "@next/bundle-analyzer for bundle size visualization",
+    "next-optimizer for performance optimization across board"
+],
+    correctOption: 2,
+    points: 10,
+    "explanation": "• Image component تصاویر را به صورت خودکار optimize می‌کند\n" +
+"- lazy loading پیش‌فرض برای تصاویر\n" +
+"- تبدیل خودکار به فرمت‌های مدرن مثل WebP\n" +
+"- resize و optimization بر اساس device\n" +
+"- جلوگیری از layout shift با تعیین ابعاد"
+},
+{
+    "id": 181,
+    question:"Why use Next.js Image component over regular img?",
+    options: [
+    "Increases resolution of all images to HD",
+    "Converts all image formats to WebP",
+    "Automatically lazy-loads and optimizes images",
+    "Completely avoids browser caching for freshness"
+],
+    correctOption: 2,
+    points: 10,
+    "explanation": "• Image component تصاویر را به صورت خودکار optimize می‌کند\n" +
+"- lazy loading پیش‌فرض برای تصاویر\n" +
+"- تبدیل خودکار به فرمت‌های مدرن مثل WebP\n" +
+"- resize و optimization بر اساس device\n" +
+"- جلوگیری از layout shift با تعیین ابعاد"
+},
+{
+    "id": 182,
+    question: "How does caching help with bundle optimization?",
+    options: [
+    "Reduces React component re-renders",
+    "Automatically inlines critical CSS for faster rendering",
+    "Prevents downloading unchanged bundles on repeat visits",
+    "Forces all JavaScript modules to preload for speed"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation": "• caching از دانلود مجدد فایل‌های unchanged جلوگیری می‌کند\n" +
+"- browser فایل‌ها را در cache ذخیره می‌کند\n" +
+"- با content hashing فایل‌ها versioning می‌شوند\n" +
+"- فقط فایل‌های تغییر یافته دوباره download می‌شوند\n" +
+"- سرعت بارگذاری در بازدیدهای بعدی بسیار بهتر است"
+},
+{
+    "id": 183,
+    question: "What's the downside of importing large third-party libraries?",
+    options: [
+    "They completely disable React hooks throughout application",
+    "They significantly increase initial JavaScript load time",
+    "They prevent tree-shaking optimization from working properly",
+    "They block Suspense fallback rendering during loading"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation": "• کتابخانه‌های بزرگ bundle size را قابل توجه افزایش می‌دهند\n" +
+"- زمان parsing و execution بیشتری نیاز است\n" +
+"- ممکن است بخش‌های زیادی استفاده نشود\n" +
+"- بهتر است از tree-shakable libraries استفاده کنید\n" +
+"- یا فقط بخش مورد نیاز را import کنید"
+},
+{
+    "id": 184,
+    question: "What happens to imported but unused libraries with tree-shaking?",
+    options: [
+    "Library code will not be included in final bundle",
+    "Library code will always remain in bundle regardless",
+    "Library code throws runtime error during execution phase",
+    "Library code preloads for future potential use"
+],
+    correctOption: 0,
+    points: 30,
+    "explanation": "• tree-shaking کد استفاده نشده را حذف می‌کند\n" +
+"- اگر چیزی از library استفاده نشود، در bundle نمی‌آید\n" +
+"- فقط با ES modules (import/export) کار می‌کند\n" +
+"- CommonJS (require) قابل tree-shake نیست\n" +
+"- کتابخانه‌ها باید side-effect free باشند"
+},
+{
+    "id": 185,
+    question: "How can unused CSS affect bundle performance?",
+    options: [
+    "Increases JavaScript execution time throughout the application",
+    "Completely disables CSS modules functionality across project",
+    "increases the bundle size without offering meaningful functionality",
+    "Forces application to use inline styles only"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation": "• CSS استفاده نشده حجم bundle را بیهوده افزایش می‌دهد\n" +
+"- browser باید همه CSS را parse و apply کند\n" +
+"- زمان rendering را کند می‌کند\n" +
+"- از tools مثل PurgeCSS برای حذف استفاده کنید\n" +
+"- CSS Modules و Tailwind این مشکل را کاهش می‌دهند"
+},
+{
+    "id": 186,
+    question:  "In Next.js, what differs preloading from prefetching?",
+    options: [
+    "Preloading waits for idle time, prefetching happens immediately",
+    "Preloading fetches immediately, prefetching waits for idle time",
+    "Both techniques have identical behavior in all situations",
+    "Both techniques disable cache headers completely for requests"
+],
+    correctOption: 1,
+    points:30,
+    "explanation": "• preload منابع critical را فوراً بارگذاری می‌کند\n" +
+"- prefetch منابع را در زمان idle بارگذاری می‌کند\n" +
+"- preload برای fonts، critical CSS استفاده می‌شود\n" +
+"- prefetch برای صفحات بعدی استفاده می‌شود\n" +
+"- استفاده نادرست preload می‌تواند مضر باشد"
+},
+{
+    id: 187,
         question:  "What is the main purpose of preload?",
-        options: [
-            "Download resources only when user clicks on links",
-            "Download critical resources as early as possible",
-            "Reduce size of JavaScript bundles automatically",
-            "Block unused CSS files from loading unnecessarily"
-        ],
-        correctOption: 1,
-        points: 10,
-        "explanation": "• preload به browser می‌گوید منابع مهم را زودتر دانلود کند\n" +
-            "- برای منابعی که حتماً نیاز است استفاده می‌شود\n" +
-            "- مثل fonts، critical CSS یا hero images\n" +
-            "- priority بالایی دارد و بلافاصله شروع می‌شود\n" +
-            "- باید با دقت استفاده شود تا bandwidth هدر نرود"
-    },
-    {
-        id: 188,
+    options: [
+    "Download resources only when user clicks on links",
+    "Download critical resources as early as possible",
+    "Reduce size of JavaScript bundles automatically",
+    "Block unused CSS files from loading unnecessarily"
+],
+    correctOption: 1,
+    points: 10,
+    "explanation": "• preload به browser می‌گوید منابع مهم را زودتر دانلود کند\n" +
+"- برای منابعی که حتماً نیاز است استفاده می‌شود\n" +
+"- مثل fonts، critical CSS یا hero images\n" +
+"- priority بالایی دارد و بلافاصله شروع می‌شود\n" +
+"- باید با دقت استفاده شود تا bandwidth هدر نرود"
+},
+{
+    id: 188,
         question: "How does prefetch improve user experience?",
-        options: [
-            "Executes JavaScript code faster in browser runtime",
-            "Automatically caches all images for offline usage",
-            "Loads future page resources during browser idle time",
-            "Reduces React component re-renders significantly"
-        ],
-        correctOption: 2,
-        points: 10,
-        "explanation": "• prefetch صفحات احتمالی بعدی را پیش‌بارگذاری می‌کند\n" +
-            "- در زمان idle browser انجام می‌شود\n" +
-            "- navigation فوری و بدون تاخیر می‌شود\n" +
-            "- Next.js به صورت خودکار links را prefetch می‌کند\n" +
-            "- تجربه کاربری نزدیک به native apps"
-    },
-    {
-        id: 189,
+    options: [
+    "Executes JavaScript code faster in browser runtime",
+    "Automatically caches all images for offline usage",
+    "Loads future page resources during browser idle time",
+    "Reduces React component re-renders significantly"
+],
+    correctOption: 2,
+    points: 10,
+    "explanation": "• prefetch صفحات احتمالی بعدی را پیش‌بارگذاری می‌کند\n" +
+"- در زمان idle browser انجام می‌شود\n" +
+"- navigation فوری و بدون تاخیر می‌شود\n" +
+"- Next.js به صورت خودکار links را prefetch می‌کند\n" +
+"- تجربه کاربری نزدیک به native apps"
+},
+{
+    id: 189,
         question: "What's the biggest risk of incorrect preload usage?",
-        options: [
-            "Increasing bundle splitting unnecessarily throughout application",
-            "Blocking lazy-loading of components during runtime",
-            "Overloading network with too many high-priority requests",
-            "Preventing prefetch functionality from working properly"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation": "• استفاده بیش از حد preload bandwidth را مصرف می‌کند\n" +
-            "- منابع واقعاً مهم دیرتر بارگذاری می‌شوند\n" +
-            "- بر روی کاربران با اینترنت کند تاثیر منفی دارد\n" +
-            "- فقط برای منابع critical استفاده کنید\n" +
-            "- معمولاً 2-3 preload کافی است"
-    },
-        {
-        id: 191,
+    options: [
+    "Increasing bundle splitting unnecessarily throughout application",
+    "Blocking lazy-loading of components during runtime",
+    "Overloading network with too many high-priority requests",
+    "Preventing prefetch functionality from working properly"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation": "• استفاده بیش از حد preload bandwidth را مصرف می‌کند\n" +
+"- منابع واقعاً مهم دیرتر بارگذاری می‌شوند\n" +
+"- بر روی کاربران با اینترنت کند تاثیر منفی دارد\n" +
+"- فقط برای منابع critical استفاده کنید\n" +
+"- معمولاً 2-3 preload کافی است"
+},
+{
+    id: 191,
         question: "Which strategy is most effective for optimizing initial page load time?",
-        "options": [
-            "Disable caching for all resources",
-            "Prefetch all images on the page",
-            "Prefetch non-critical JavaScript files",
-            "Preload critical fonts and above-the-fold CSS"
-        ],
-        correctOption:3,
-        points: 20,
-        "explanation": "• preload کردن منابع critical مثل fonts و CSS اولویت اول است\n" +
-            "- above-the-fold content باید سریع نمایش داده شود\n" +
-            "- lazy load کردن تصاویر و کامپوننت‌های غیرضروری\n" +
-            "- code splitting برای کاهش initial bundle\n" +
-            "- ترکیب این تکنیک‌ها بهترین نتیجه را می‌دهد"
-    },
-    {
-        id: 192,
+    "options": [
+    "Disable caching for all resources",
+    "Prefetch all images on the page",
+    "Prefetch non-critical JavaScript files",
+    "Preload critical fonts and above-the-fold CSS"
+],
+    correctOption:3,
+    points: 20,
+    "explanation": "• preload کردن منابع critical مثل fonts و CSS اولویت اول است\n" +
+"- above-the-fold content باید سریع نمایش داده شود\n" +
+"- lazy load کردن تصاویر و کامپوننت‌های غیرضروری\n" +
+"- code splitting برای کاهش initial bundle\n" +
+"- ترکیب این تکنیک‌ها بهترین نتیجه را می‌دهد"
+},
+{
+    id: 192,
         question: "What defines a reactive value in React?",
-        "options": [
-            "A value that remains constant during component lifecycle",
-            "A value that triggers component updates when it changes",
-            "A value stored outside the component scope",
-            "A function that executes only once during rendering"
-        ],
-        correctOption: 1,
-        points: 10,
-        "explanation": "• reactive value مقداری است که تغییر آن باعث re-render می‌شود\n" +
-            "- مثل state، props، context values\n" +
-            "- React به صورت خودکار آن‌ها را track می‌کند\n" +
-            "- متغیرهای معمولی reactive نیستند\n" +
-            "- باید در dependency arrays قرار گیرند"
-    },
-    {
-        id: 193,
+    "options": [
+    "A value that remains constant during component lifecycle",
+    "A value that triggers component updates when it changes",
+    "A value stored outside the component scope",
+    "A function that executes only once during rendering"
+],
+    correctOption: 1,
+    points: 10,
+    "explanation": "• reactive value مقداری است که تغییر آن باعث re-render می‌شود\n" +
+"- مثل state، props، context values\n" +
+"- React به صورت خودکار آن‌ها را track می‌کند\n" +
+"- متغیرهای معمولی reactive نیستند\n" +
+"- باید در dependency arrays قرار گیرند"
+},
+{
+    id: 193,
         question:  "Which hook is designed to create reactive computed values in React?",
-        "options": [
-            "useState",
-            "useEffect",
-            "useMemo",
-            "useCallback"
-        ],
-        "correctOption": 2,
-        points: 10,
-        "explanation": "• useMemo برای ساخت مقادیر محاسبه شده reactive است\n" +
-            "- مقدار را فقط زمان تغییر dependencies دوباره محاسبه می‌کند\n" +
-            "- از محاسبات گران قیمت غیرضروری جلوگیری می‌کند\n" +
-            "- مقدار برگشتی reactive است\n" +
-            "- برای derived state مناسب است"
-    },
-    {
-        id: 194,
+    "options": [
+    "useState",
+    "useEffect",
+    "useMemo",
+    "useCallback"
+],
+    "correctOption": 2,
+    points: 10,
+    "explanation": "• useMemo برای ساخت مقادیر محاسبه شده reactive است\n" +
+"- مقدار را فقط زمان تغییر dependencies دوباره محاسبه می‌کند\n" +
+"- از محاسبات گران قیمت غیرضروری جلوگیری می‌کند\n" +
+"- مقدار برگشتی reactive است\n" +
+"- برای derived state مناسب است"
+},
+{
+    id: 194,
         question:"Why are regular variables in React components not reactive?",
-        "options": [
-            "React ignores primitive data types",
-            "JavaScript doesn't support reactive programming",
-            "React doesn't track changes to regular variables",
-            "React only monitors Context values"
-        ],
-        "correctOption": 2,
-        points: 20,
-        "explanation": "• متغیرهای معمولی هیچ ارتباطی با rendering system ندارند\n" +
-            "- React تغییرات آن‌ها را track نمی‌کند\n" +
-            "- تغییر آن‌ها باعث re-render نمی‌شود\n" +
-            "- در هر render مقدار اولیه می‌گیرند\n" +
-            "- برای reactive values از useState استفاده کنید"
-    },
-    {        id: 195,
-        question:"What is true about reactive values in React?",
-        "options": [
-            "They automatically trigger re-renders when changed",
-            "They require manual DOM updates after changes",
-            "They only work with primitive data types",
-            "They cannot be used in functional components"
-        ],
-        correctOption: 0,
-        points: 20,
-        "explanation": ""
-    },
-    {
-        id: 196,
+    "options": [
+    "React ignores primitive data types",
+    "JavaScript doesn't support reactive programming",
+    "React doesn't track changes to regular variables",
+    "React only monitors Context values"
+],
+    "correctOption": 2,
+    points: 20,
+    "explanation": "• متغیرهای معمولی هیچ ارتباطی با rendering system ندارند\n" +
+"- React تغییرات آن‌ها را track نمی‌کند\n" +
+"- تغییر آن‌ها باعث re-render نمی‌شود\n" +
+"- در هر render مقدار اولیه می‌گیرند\n" +
+"- برای reactive values از useState استفاده کنید"
+},
+{        id: 195,
+    question:"What is true about reactive values in React?",
+    "options": [
+    "They automatically trigger re-renders when changed",
+    "They require manual DOM updates after changes",
+    "They only work with primitive data types",
+    "They cannot be used in functional components"
+],
+    correctOption: 0,
+    points: 20,
+    "explanation": ""
+},
+{
+    id: 196,
         question: "Why must reactive values be included in useEffect dependency arrays?",
-        "options": [
-            "To prevent stale closures and ensure current values",
-            "To reduce the final bundle size significantly",
-            "To prevent unnecessary component re-renders",
-            "To satisfy ESLint rules and best practices"
-        ],
-        correctOption: 0,
-        points: 20,
-        "explanation": "• تغییر reactive values به صورت خودکار باعث re-render می‌شود\n" +
-            "- React آن‌ها را monitor می‌کند\n" +
-            "- شامل state، props، context می‌شوند\n" +
-            "- باید در useEffect dependencies قرار گیرند\n" +
-            "- پایه سیستم reactivity در React هستند"
-    },
-    {
-        id: 197,
+    "options": [
+    "To prevent stale closures and ensure current values",
+    "To reduce the final bundle size significantly",
+    "To prevent unnecessary component re-renders",
+    "To satisfy ESLint rules and best practices"
+],
+    correctOption: 0,
+    points: 20,
+    "explanation": "• تغییر reactive values به صورت خودکار باعث re-render می‌شود\n" +
+"- React آن‌ها را monitor می‌کند\n" +
+"- شامل state، props، context می‌شوند\n" +
+"- باید در useEffect dependencies قرار گیرند\n" +
+"- پایه سیستم reactivity در React هستند"
+},
+{
+    id: 197,
         question:  "Which of these is considered a reactive value in React?",
-        "options": [
-            "A local variable declared inside render",
-            "A literal number inside useEffect",
-            "Props passed from a parent component",
-            "A module-level constant"
-        ],
-        correctOption: 2,
-        points: 10,
-        "explanation": "• props از والد به فرزند pass می‌شوند و reactive هستند\n" +
-            "- تغییر props باعث re-render کامپوننت می‌شود\n" +
-            "- باید در dependency arrays قرار گیرند\n" +
-            "- متغیرهای local و constants reactive نیستند\n" +
-            "- state و context values نیز reactive هستند"
-    },
-    {
-        id: 198,
+    "options": [
+    "A local variable declared inside render",
+    "A literal number inside useEffect",
+    "Props passed from a parent component",
+    "A module-level constant"
+],
+    correctOption: 2,
+    points: 10,
+    "explanation": "• props از والد به فرزند pass می‌شوند و reactive هستند\n" +
+"- تغییر props باعث re-render کامپوننت می‌شود\n" +
+"- باید در dependency arrays قرار گیرند\n" +
+"- متغیرهای local و constants reactive نیستند\n" +
+"- state و context values نیز reactive هستند"
+},
+{
+    id: 198,
         question:  "Which value does NOT need to be included in dependency arrays?",
-        "options": [
-            "State values from useState",
-            "Functions returned by useCallback",
-            "Setter functions from useState",
-            "Props passed from parent components"
-        ],
-        correctOption: 2,
-        points: 10,
-        "explanation": "• setter functions از useState reference ثابت دارند\n" +
-            "- React تضمین می‌کند هرگز تغییر نمی‌کنند\n" +
-            "- نیازی به اضافه کردن به deps نیست\n" +
-            "- dispatch از useReducer نیز همین رفتار را دارد\n" +
-            "- بقیه reactive values باید اضافه شوند"
-    },
-    {
-        id: 199,
+    "options": [
+    "State values from useState",
+    "Functions returned by useCallback",
+    "Setter functions from useState",
+    "Props passed from parent components"
+],
+    correctOption: 2,
+    points: 10,
+    "explanation": "• setter functions از useState reference ثابت دارند\n" +
+"- React تضمین می‌کند هرگز تغییر نمی‌کنند\n" +
+"- نیازی به اضافه کردن به deps نیست\n" +
+"- dispatch از useReducer نیز همین رفتار را دارد\n" +
+"- بقیه reactive values باید اضافه شوند"
+},
+{
+    id: 199,
         question: "What happens when a reactive value is missing from a dependency array?",
-        "options": [
-            "React throws a runtime error immediately",
-            "The component fails to mount properly",
-            "The code works but may use stale values",
-            "Effects or memoized functions use stale values"
-        ],
-        correctOption: 3,
-        points: 30,
-        "explanation": "• effect یا callback مقدار قدیمی (stale) را می‌بیند\n" +
-            "- این به stale closure معروف است\n" +
-            "- باعث bugs پنهان و رفتار نادرست می‌شود\n" +
-            "- ESLint warnings را جدی بگیرید\n" +
-            "- همیشه تمام dependencies را اضافه کنید"
-    },
-    {
-        id: 200,
+    "options": [
+    "React throws a runtime error immediately",
+    "The component fails to mount properly",
+    "The code works but may use stale values",
+    "Effects or memoized functions use stale values"
+],
+    correctOption: 3,
+    points: 30,
+    "explanation": "• effect یا callback مقدار قدیمی (stale) را می‌بیند\n" +
+"- این به stale closure معروف است\n" +
+"- باعث bugs پنهان و رفتار نادرست می‌شود\n" +
+"- ESLint warnings را جدی بگیرید\n" +
+"- همیشه تمام dependencies را اضافه کنید"
+},
+{
+    id: 200,
         question: "Which tool automatically detects missing dependencies in useEffect?",
-        "options": [
-            "Prettier code formatter",
-            "React DevTools browser extension",
-            "TypeScript compiler",
-            "ESLint exhaustive-deps rule",
-        ],
-        correctOption: 3,
-        points: 10,
-        "explanation": "• ESLint با قانون exhaustive-deps این کار را انجام می‌دهد\n" +
-            "- بخشی از eslint-plugin-react-hooks است\n" +
-            "- warnings قرمز رنگ در editor نشان می‌دهد\n" +
-            "- به جلوگیری از stale closure کمک می‌کند\n" +
-            "- حتماً آن را در پروژه نصب و فعال کنید"
-    },
-    {
-        "id": 201,
-        "question":  "Why must context values used in useEffect be included in dependency arrays?",
-        "options": [
-            "React automatically tracks context changes",
-            "Effects may read outdated context values",
-            "useEffect ignores context values unless explicitly listed",
-            "React serializes context values for comparison"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation":"• context values می‌توانند تغییر کنند\n" +
-            "- بدون اضافه کردن به deps، effect مقدار قدیمی را می‌بیند\n" +
-            "- مانند props و state، reactive هستند\n" +
-            "- ESLint آن‌ها را شناسایی می‌کند\n" +
-            "- همیشه context values استفاده شده را اضافه کنید"
-    },
-    {
-        "id": 202,
-        "question": "What is a stale closure in React hooks?",
-        "options": [
-            "A closure that captures outdated values from previous renders",
-            "A closure preserved in memory for deterministic updates",
-            "A closure garbage collected after re-rendering",
-            "A closure created when multiple effects overlap"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• closure ای که مقادیر قدیمی از renders قبلی را capture کرده\n" +
-            "- زمانی اتفاق می‌افتد که dependencies کامل نباشند\n" +
-            "- function مقدار فعلی reactive values را نمی‌بیند\n" +
-            "- باعث bugs پنهان و رفتار غیرمنتظره می‌شود\n" +
-            "- با اضافه کردن صحیح dependencies حل می‌شود"
-    },
-    {
-        "id": 203,
-        "question": "Why should objects not be used directly as dependencies in hooks?",
-        "options": [
-            "React deeply compares objects causing performance issues",
-            "Objects cannot be serialized into dependency arrays",
-            "Objects are compared by reference causing unnecessary re-runs",
-            "Objects cause memory leaks in react's fiber architecture"
-        ],
-        "correctOption":2,
-        "points": 30,
-        "explanation":"• objects در هر render reference جدید می‌گیرند\n" +
-            "- React با === مقایسه می‌کند نه deep equality\n" +
-            "- باعث re-run غیرضروری effect یا callback می‌شود\n" +
-            "- باید object را memoize کنید یا properties خاص را استفاده کنید\n" +
-            "- این یکی از مشکلات رایج در React است"
-    },
-    {
-        "id": 204,
-        "question": "How can you prevent unnecessary re-runs when a function causes dependency issues?",
-        "options": [
-            "Declare the function as a global variable",
-            "Wrap the function in React.memo",
-            "Move the function into the effect or memoize with useCallback",
-            "Call the function conditionally to avoid dependencies"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation":"• function را با useCallback wrap کنید\n" +
-            "- یا function را داخل effect بیاورید\n" +
-            "- یا function را خارج از component تعریف کنید\n" +
-            "- functions در هر render دوباره ساخته می‌شوند\n" +
-            "- useCallback reference ثابت ایجاد می‌کند"
-    },
-    {
-        "id": 205,
-        "question": "What is the best practice for functions that don't reference reactive values?",
-        "options": [
-            "Keep them inside components but wrap with useEffect",
-            "Move them outside the component to avoid recreation",
-            "Memoize them with useMemo for stability",
-            "Convert them to static methods in React.memo"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation":"• functions بدون reactive values را خارج از component ببرید\n" +
-            "- دیگر نیازی به dependency array یا useCallback نیست\n" +
-            "- performance بهتر و کد ساده‌تر می‌شود\n" +
-            "- فقط زمانی داخل component بمانند که به props/state نیاز دارند\n" +
-            "- این بهترین و ساده‌ترین راه است"
-    },
-    {
-        "id": 206,
-        "question": "Instead of adding entire objects as dependencies in React hooks, what is the better practice?",
-        "options": [
-            "Include only specific properties of the object that code actually uses.",
-            "Use JSON.stringify on objects for value comparison",
-            "Clone objects and memoize with useCallback",
-            "Convert objects to primitive values at runtime"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• فقط properties خاصی که استفاده می‌شود را اضافه کنید\n" +
-            "- مثلاً به جای user، فقط user.id اضافه کنید\n" +
-            "- از re-runs غیرضروری جلوگیری می‌کند\n" +
-            "- کد واضح‌تر و dependency list خواناتر می‌شود\n" +
-            "- یکی از بهترین practices در React است"
-    },
-    {
-        "id": 207,
-        "question": "How can you fix objects that don't work correctly as dependencies?",
-        "options": [
-            "Wrap objects in React.memo to prevent recreation",
-            "Place objects inside state variables for deep comparison",
-            "Convert objects into functions and call inside useEffect",
-            "Move or memoize objects to keep references stable"
-        ],
-        "correctOption": 3,
-        "points": 30,
-        "explanation":"• object را با useMemo wrap کنید تا reference ثابت شود\n" +
-            "- یا object را خارج از component ببرید\n" +
-            "- یا فقط properties لازم را در deps بگذارید\n" +
-            "- useMemo فقط زمان تغییر dependencies object جدید می‌سازد\n" +
-            "- مشکل reference equality حل می‌شود"
-    },
-    {
-        "id": 208,
-        "question":  "What pattern works better when you have multiple related reactive values?",
-        "options": [
-            "Store them inside useRef to avoid re-renders",
-            "Combine them with useReducer for stability",
-            "Merge them into one object and stringify for comparison",
-            "Wrap them all in useMemo for shorter dependency arrays"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation":"• useReducer برای state مرتبط بهتر از useState جداگانه است\n" +
-            "- همه state در یک object می‌آید\n" +
-            "- dispatch function stable است و نیاز به deps ندارد\n" +
-            "- logic به reducer منتقل می‌شود\n" +
-            "- dependency arrays ساده‌تر و کوتاه‌تر می‌شوند"
-    },
-    {
-        "id": 209,
-        "question": "Why is useEffect often described as an 'escape hatch' in React?",
-        "options": [
-            "It allows side effects when props or state change",
-            "It's the primary mechanism for all business logic",
-            "It ensures synchronous rendering with immediate DOM updates",
-            "It bypasses react's reconciliation algorithm safely"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• useEffect برای synchronization با سیستم‌های خارج از React است\n" +
-            "- مثل APIs، DOM، subscriptions\n" +
-            "- نباید برای orchestration بین state ها استفاده شود\n" +
-            "- اکثر موارد با derived state یا event handlers حل می‌شود\n" +
-            "- فقط زمانی که واقعاً نیاز است استفاده کنید"
-    },
-    {
-        "id": 210,
-        "question":"Why should useEffect be considered a last resort?",
-        "options": [
-            "useEffect causes memory leaks by default",
-            "React discourages side effects entirely",
-            "Most effects can be avoided by deriving state or using event handlers",
-            "useEffect blocks rendering until completion"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation":"• اغلب می‌توان از useEffect اجتناب کرد\n" +
-            "- derived state بهتر از effect برای محاسبات است\n" +
-            "- event handlers بهتر از effect برای user actions هستند\n" +
-            "- effects باعث پیچیدگی و bugs می‌شوند\n" +
-            "- ابتدا راه‌های دیگر را بررسی کنید"
-    },
-    {
-        "id": 211,
-        "question": "Which is NOT a recommended use case for useEffect?",
-        "options": [
-            "Synchronizing external systems when props change",
-            "Updating state in response to user button clicks",
-            "Fetching data on component mount",
-            "Subscribing to global events with cleanup"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation":"• برای response به user interactions از event handlers استفاده کنید\n" +
-            "- useEffect برای side effects پس از render است\n" +
-            "- onClick بهتر از useEffect برای button clicks است\n" +
-            "- effect نباید جایگزین event handlers شود\n" +
-            "- هر کدام use case خاص خود را دارند"
-    },
-    {
-        "id": 211,
-        "question": "What is the recommended way to synchronize multiple state variables?",
-        "options": [
-            "Derive one state from another or use a single reducer",
-            "Use multiple useEffect hooks for each state variable",
-            "Store related states in a ref object and mutate directly",
-            "Use context providers to automatically sync states"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• یک state را از دیگری derive کنید\n" +
-            "- یا از useReducer برای state مرتبط استفاده کنید\n" +
-            "- نیازی به useEffect برای sync کردن نیست\n" +
-            "- این ساده‌تر و کم bug تر است\n" +
-            "- از ایجاد infinite loops جلوگیری می‌کند"
-    },
+    "options": [
+    "Prettier code formatter",
+    "React DevTools browser extension",
+    "TypeScript compiler",
+    "ESLint exhaustive-deps rule",
+],
+    correctOption: 3,
+    points: 10,
+    "explanation": "• ESLint با قانون exhaustive-deps این کار را انجام می‌دهد\n" +
+"- بخشی از eslint-plugin-react-hooks است\n" +
+"- warnings قرمز رنگ در editor نشان می‌دهد\n" +
+"- به جلوگیری از stale closure کمک می‌کند\n" +
+"- حتماً آن را در پروژه نصب و فعال کنید"
+},
+{
+    "id": 201,
+    "question":  "Why must context values used in useEffect be included in dependency arrays?",
+    "options": [
+    "React automatically tracks context changes",
+    "Effects may read outdated context values",
+    "useEffect ignores context values unless explicitly listed",
+    "React serializes context values for comparison"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• context values می‌توانند تغییر کنند\n" +
+"- بدون اضافه کردن به deps، effect مقدار قدیمی را می‌بیند\n" +
+"- مانند props و state، reactive هستند\n" +
+"- ESLint آن‌ها را شناسایی می‌کند\n" +
+"- همیشه context values استفاده شده را اضافه کنید"
+},
+{
+    "id": 202,
+    "question": "What is a stale closure in React hooks?",
+    "options": [
+    "A closure that captures outdated values from previous renders",
+    "A closure preserved in memory for deterministic updates",
+    "A closure garbage collected after re-rendering",
+    "A closure created when multiple effects overlap"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• closure ای که مقادیر قدیمی از renders قبلی را capture کرده\n" +
+"- زمانی اتفاق می‌افتد که dependencies کامل نباشند\n" +
+"- function مقدار فعلی reactive values را نمی‌بیند\n" +
+"- باعث bugs پنهان و رفتار غیرمنتظره می‌شود\n" +
+"- با اضافه کردن صحیح dependencies حل می‌شود"
+},
+{
+    "id": 203,
+    "question": "Why should objects not be used directly as dependencies in hooks?",
+    "options": [
+    "React deeply compares objects causing performance issues",
+    "Objects cannot be serialized into dependency arrays",
+    "Objects are compared by reference causing unnecessary re-runs",
+    "Objects cause memory leaks in react's fiber architecture"
+],
+    "correctOption":2,
+    "points": 30,
+    "explanation":"• objects در هر render reference جدید می‌گیرند\n" +
+"- React با === مقایسه می‌کند نه deep equality\n" +
+"- باعث re-run غیرضروری effect یا callback می‌شود\n" +
+"- باید object را memoize کنید یا properties خاص را استفاده کنید\n" +
+"- این یکی از مشکلات رایج در React است"
+},
+{
+    "id": 204,
+    "question": "How can you prevent unnecessary re-runs when a function causes dependency issues?",
+    "options": [
+    "Declare the function as a global variable",
+    "Wrap the function in React.memo",
+    "Move the function into the effect or memoize with useCallback",
+    "Call the function conditionally to avoid dependencies"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• function را با useCallback wrap کنید\n" +
+"- یا function را داخل effect بیاورید\n" +
+"- یا function را خارج از component تعریف کنید\n" +
+"- functions در هر render دوباره ساخته می‌شوند\n" +
+"- useCallback reference ثابت ایجاد می‌کند"
+},
+{
+    "id": 205,
+    "question": "What is the best practice for functions that don't reference reactive values?",
+    "options": [
+    "Keep them inside components but wrap with useEffect",
+    "Move them outside the component to avoid recreation",
+    "Memoize them with useMemo for stability",
+    "Convert them to static methods in React.memo"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• functions بدون reactive values را خارج از component ببرید\n" +
+"- دیگر نیازی به dependency array یا useCallback نیست\n" +
+"- performance بهتر و کد ساده‌تر می‌شود\n" +
+"- فقط زمانی داخل component بمانند که به props/state نیاز دارند\n" +
+"- این بهترین و ساده‌ترین راه است"
+},
+{
+    "id": 206,
+    "question": "Instead of adding entire objects as dependencies in React hooks, what is the better practice?",
+    "options": [
+    "Include only specific properties of the object that code actually uses.",
+    "Use JSON.stringify on objects for value comparison",
+    "Clone objects and memoize with useCallback",
+    "Convert objects to primitive values at runtime"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• فقط properties خاصی که استفاده می‌شود را اضافه کنید\n" +
+"- مثلاً به جای user، فقط user.id اضافه کنید\n" +
+"- از re-runs غیرضروری جلوگیری می‌کند\n" +
+"- کد واضح‌تر و dependency list خواناتر می‌شود\n" +
+"- یکی از بهترین practices در React است"
+},
+{
+    "id": 207,
+    "question": "How can you fix objects that don't work correctly as dependencies?",
+    "options": [
+    "Wrap objects in React.memo to prevent recreation",
+    "Place objects inside state variables for deep comparison",
+    "Convert objects into functions and call inside useEffect",
+    "Move or memoize objects to keep references stable"
+],
+    "correctOption": 3,
+    "points": 30,
+    "explanation":"• object را با useMemo wrap کنید تا reference ثابت شود\n" +
+"- یا object را خارج از component ببرید\n" +
+"- یا فقط properties لازم را در deps بگذارید\n" +
+"- useMemo فقط زمان تغییر dependencies object جدید می‌سازد\n" +
+"- مشکل reference equality حل می‌شود"
+},
+{
+    "id": 208,
+    "question":  "What pattern works better when you have multiple related reactive values?",
+    "options": [
+    "Store them inside useRef to avoid re-renders",
+    "Combine them with useReducer for stability",
+    "Merge them into one object and stringify for comparison",
+    "Wrap them all in useMemo for shorter dependency arrays"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• useReducer برای state مرتبط بهتر از useState جداگانه است\n" +
+"- همه state در یک object می‌آید\n" +
+"- dispatch function stable است و نیاز به deps ندارد\n" +
+"- logic به reducer منتقل می‌شود\n" +
+"- dependency arrays ساده‌تر و کوتاه‌تر می‌شوند"
+},
+{
+    "id": 209,
+    "question": "Why is useEffect often described as an 'escape hatch' in React?",
+    "options": [
+    "It allows side effects when props or state change",
+    "It's the primary mechanism for all business logic",
+    "It ensures synchronous rendering with immediate DOM updates",
+    "It bypasses react's reconciliation algorithm safely"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• useEffect برای synchronization با سیستم‌های خارج از React است\n" +
+"- مثل APIs، DOM، subscriptions\n" +
+"- نباید برای orchestration بین state ها استفاده شود\n" +
+"- اکثر موارد با derived state یا event handlers حل می‌شود\n" +
+"- فقط زمانی که واقعاً نیاز است استفاده کنید"
+},
+{
+    "id": 210,
+    "question":"Why should useEffect be considered a last resort?",
+    "options": [
+    "useEffect causes memory leaks by default",
+    "React discourages side effects entirely",
+    "Most effects can be avoided by deriving state or using event handlers",
+    "useEffect blocks rendering until completion"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• اغلب می‌توان از useEffect اجتناب کرد\n" +
+"- derived state بهتر از effect برای محاسبات است\n" +
+"- event handlers بهتر از effect برای user actions هستند\n" +
+"- effects باعث پیچیدگی و bugs می‌شوند\n" +
+"- ابتدا راه‌های دیگر را بررسی کنید"
+},
+{
+    "id": 211,
+    "question": "Which is NOT a recommended use case for useEffect?",
+    "options": [
+    "Synchronizing external systems when props change",
+    "Updating state in response to user button clicks",
+    "Fetching data on component mount",
+    "Subscribing to global events with cleanup"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• برای response به user interactions از event handlers استفاده کنید\n" +
+"- useEffect برای side effects پس از render است\n" +
+"- onClick بهتر از useEffect برای button clicks است\n" +
+"- effect نباید جایگزین event handlers شود\n" +
+"- هر کدام use case خاص خود را دارند"
+},
+{
+    "id": 211,
+    "question": "What is the recommended way to synchronize multiple state variables?",
+    "options": [
+    "Derive one state from another or use a single reducer",
+    "Use multiple useEffect hooks for each state variable",
+    "Store related states in a ref object and mutate directly",
+    "Use context providers to automatically sync states"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• یک state را از دیگری derive کنید\n" +
+"- یا از useReducer برای state مرتبط استفاده کنید\n" +
+"- نیازی به useEffect برای sync کردن نیست\n" +
+"- این ساده‌تر و کم bug تر است\n" +
+"- از ایجاد infinite loops جلوگیری می‌کند"
+},
 //{
 //     "id": 212,
 //     "question": "What is lifting state up in React?",
@@ -3452,4891 +3450,4891 @@ export const mockQuestions: Question[] = [
 //     "points": 30,
 //                 "explanation":""
 // },
-    {
-        "id": 220,
-        "question":  "What causes the stale closure problem in effects or callbacks?",
-        "options": [
-            "Functions automatically rebind to latest state and props",
-            "Functions hold snapshots from when they were created",
-            "React intentionally freezes state values after initial render",
-            "Closures only work with primitive values in JavaScript"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• functions snapshot از مقادیر زمان ایجاد را نگه می‌دارند\n" +
-            "- اگر reactive values در deps نباشند، مقادیر قدیمی را می‌بینند\n" +
-            "- JavaScript closure چنین رفتار می‌کند\n" +
-            "- React این مشکل را با dependency arrays حل می‌کند\n" +
-            "- همیشه تمام reactive values را اضافه کنید"
-    },
-    {
-        "id": 221,
-        "question":"What is the best way to prevent the stale closure problem?",
-        "options": [
-            "Always use global variables instead of state",
-            "Freeze objects in state for consistency",
-            "Add current state or props as dependencies",
-            "Avoid using closures in React components"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation":"• همه reactive values را در dependency array قرار دهید\n" +
-            "- ESLint warnings را جدی بگیرید و رفع کنید\n" +
-            "- از useCallback/useMemo برای stability استفاده کنید\n" +
-            "- یا functions را داخل effect بیاورید\n" +
-            "- testing به شناسایی این bugs کمک می‌کند"
-    },
-    {
-        id: 222,
+{
+    "id": 220,
+    "question":  "What causes the stale closure problem in effects or callbacks?",
+    "options": [
+    "Functions automatically rebind to latest state and props",
+    "Functions hold snapshots from when they were created",
+    "React intentionally freezes state values after initial render",
+    "Closures only work with primitive values in JavaScript"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• functions snapshot از مقادیر زمان ایجاد را نگه می‌دارند\n" +
+"- اگر reactive values در deps نباشند، مقادیر قدیمی را می‌بینند\n" +
+"- JavaScript closure چنین رفتار می‌کند\n" +
+"- React این مشکل را با dependency arrays حل می‌کند\n" +
+"- همیشه تمام reactive values را اضافه کنید"
+},
+{
+    "id": 221,
+    "question":"What is the best way to prevent the stale closure problem?",
+    "options": [
+    "Always use global variables instead of state",
+    "Freeze objects in state for consistency",
+    "Add current state or props as dependencies",
+    "Avoid using closures in React components"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• همه reactive values را در dependency array قرار دهید\n" +
+"- ESLint warnings را جدی بگیرید و رفع کنید\n" +
+"- از useCallback/useMemo برای stability استفاده کنید\n" +
+"- یا functions را داخل effect بیاورید\n" +
+"- testing به شناسایی این bugs کمک می‌کند"
+},
+{
+    id: 222,
         question: "What is Redux?",
-        options: [
-            "A predictable state management library",
-            "A library for styling React components",
-            "A built-in React API for managing side effects",
-            "A tool for minifying JavaScript bundles"
-        ],
-        correctOption: 0,
-        points: 10,
-        "explanation": "• Redux یک کتابخانه state management پیش‌بینی‌پذیر است\n" +
-            "- state را در یک store مرکزی نگه می‌دارد\n" +
-            "- با actions و reducers state را update می‌کند\n" +
-            "- مستقل از React است اما با آن کار می‌کند\n" +
-            "- برای state management پیچیده مناسب است"
-    },
-    {
-        id: 223,
+    options: [
+    "A predictable state management library",
+    "A library for styling React components",
+    "A built-in React API for managing side effects",
+    "A tool for minifying JavaScript bundles"
+],
+    correctOption: 0,
+    points: 10,
+    "explanation": "• Redux یک کتابخانه state management پیش‌بینی‌پذیر است\n" +
+"- state را در یک store مرکزی نگه می‌دارد\n" +
+"- با actions و reducers state را update می‌کند\n" +
+"- مستقل از React است اما با آن کار می‌کند\n" +
+"- برای state management پیچیده مناسب است"
+},
+{
+    id: 223,
         question: "Is Redux specific to React applications?",
-        "options": [
-            "Yes, it only works with React",
-            "No, it only works with Angular applications",
-            "No, it can be used with any JavaScript application",
-            "Yes, Redux is part of React core"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation": "• Redux مستقل از React است\n" +
-            "- می‌تواند با Angular، Vue یا vanilla JS استفاده شود\n" +
-            "- react-redux برای اتصال به React استفاده می‌شود\n" +
-            "- Redux یک الگوی architecture است نه React-specific\n" +
-            "- اما بیشتر در اکوسیستم React استفاده می‌شود"
-    },
-    {
-        id: 224,
+    "options": [
+    "Yes, it only works with React",
+    "No, it only works with Angular applications",
+    "No, it can be used with any JavaScript application",
+    "Yes, Redux is part of React core"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation": "• Redux مستقل از React است\n" +
+"- می‌تواند با Angular، Vue یا vanilla JS استفاده شود\n" +
+"- react-redux برای اتصال به React استفاده می‌شود\n" +
+"- Redux یک الگوی architecture است نه React-specific\n" +
+"- اما بیشتر در اکوسیستم React استفاده می‌شود"
+},
+{
+    id: 224,
         question: "Why must Redux reducers avoid asynchronous operations?",
-        options: [
-            "Async operations make reducers unpredictable",
-            "Reducers cannot return promises in JavaScript",
-            "Async operations always cause memory leaks",
-            "Reducers can only process primitive data types"
-        ],
-        correctOption: 0,
-        points: 20,
-        "explanation": "• reducers باید pure functions باشند\n" +
-            "- async operations نتایج غیرقابل پیش‌بینی دارند\n" +
-            "- Redux به synchronous updates متکی است\n" +
-            "- برای async از middleware مثل Redux Thunk استفاده کنید\n" +
-            "- purity باعث قابلیت test و debug می‌شود"
-    },
-    {
-        id: 225,
+    options: [
+    "Async operations make reducers unpredictable",
+    "Reducers cannot return promises in JavaScript",
+    "Async operations always cause memory leaks",
+    "Reducers can only process primitive data types"
+],
+    correctOption: 0,
+    points: 20,
+    "explanation": "• reducers باید pure functions باشند\n" +
+"- async operations نتایج غیرقابل پیش‌بینی دارند\n" +
+"- Redux به synchronous updates متکی است\n" +
+"- برای async از middleware مثل Redux Thunk استفاده کنید\n" +
+"- purity باعث قابلیت test و debug می‌شود"
+},
+{
+    id: 225,
         question:  "What is the primary difference between Redux and useReducer?",
-        options: [
-            "Redux is synchronous, useReducer is asynchronous",
-            "Redux manages global state, useReducer manages local state",
-            "Redux handles styling, useReducer manages state",
-            "Redux stores strings, useReducer handles objects"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• Redux برای global state در کل برنامه است\n" +
-            "- useReducer برای local state در یک کامپوننت است\n" +
-            "- Redux middleware، DevTools و ecosystem دارد\n" +
-            "- useReducer ساده‌تر و بدون dependency اضافی است\n" +
-            "- Redux برای state پیچیده shared بهتر است"
-    },
-    {
-        id: 226,
+    options: [
+    "Redux is synchronous, useReducer is asynchronous",
+    "Redux manages global state, useReducer manages local state",
+    "Redux handles styling, useReducer manages state",
+    "Redux stores strings, useReducer handles objects"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• Redux برای global state در کل برنامه است\n" +
+"- useReducer برای local state در یک کامپوننت است\n" +
+"- Redux middleware، DevTools و ecosystem دارد\n" +
+"- useReducer ساده‌تر و بدون dependency اضافی است\n" +
+"- Redux برای state پیچیده shared بهتر است"
+},
+{
+    id: 226,
         question: "Why use multiple reducers in a Redux application?",
-        options: [
-            "Manage different parts of state separately",
-            "Create duplicate copies of state logic",
-            "Reduce total application bundle size significantly",
-            "Make all reducers asynchronous by default"
-        ],
-        correctOption: 0,
-        points: 20,
-        "explanation": "• هر reducer بخش مشخصی از state را مدیریت می‌کند\n" +
-            "- کد سازمان‌یافته‌تر و قابل نگهداری‌تر می‌شود\n" +
-            "- combineReducers آن‌ها را به یک root reducer ترکیب می‌کند\n" +
-            "- هر تیم می‌تواند روی reducer خود کار کند\n" +
-            "- testing و debugging ساده‌تر می‌شود"
-    },
-    {
-        id: 227,
+    options: [
+    "Manage different parts of state separately",
+    "Create duplicate copies of state logic",
+    "Reduce total application bundle size significantly",
+    "Make all reducers asynchronous by default"
+],
+    correctOption: 0,
+    points: 20,
+    "explanation": "• هر reducer بخش مشخصی از state را مدیریت می‌کند\n" +
+"- کد سازمان‌یافته‌تر و قابل نگهداری‌تر می‌شود\n" +
+"- combineReducers آن‌ها را به یک root reducer ترکیب می‌کند\n" +
+"- هر تیم می‌تواند روی reducer خود کار کند\n" +
+"- testing و debugging ساده‌تر می‌شود"
+},
+{
+    id: 227,
         question:"What is an action creator in Redux?",
-        options: [
-            "A reducer that updates state directly",
-            "A function returning action objects",
-            "A function removing actions from memory",
-            "Middleware that delays action execution timing"
-        ],
-        correctOption: 1,
-        points: 10,
-        "explanation": "• action creator تابعی است که action object برمی‌گرداند\n" +
-            "- از hard-coding action types جلوگیری می‌کند\n" +
-            "- می‌تواند payload را به عنوان argument بگیرد\n" +
-            "- کد را خواناتر و قابل استفاده مجدد می‌کند\n" +
-            "- در Redux Toolkit به صورت خودکار ساخته می‌شوند"
-    },
-    {
-        id: 228,
+    options: [
+    "A reducer that updates state directly",
+    "A function returning action objects",
+    "A function removing actions from memory",
+    "Middleware that delays action execution timing"
+],
+    correctOption: 1,
+    points: 10,
+    "explanation": "• action creator تابعی است که action object برمی‌گرداند\n" +
+"- از hard-coding action types جلوگیری می‌کند\n" +
+"- می‌تواند payload را به عنوان argument بگیرد\n" +
+"- کد را خواناتر و قابل استفاده مجدد می‌کند\n" +
+"- در Redux Toolkit به صورت خودکار ساخته می‌شوند"
+},
+{
+    id: 228,
         question:  "What advantage does Redux offer over Context API?",
-        options: [
-            "Context generates reducers automatically for developers",
-            "Redux is used only for styling",
-            "Redux provides middleware and debugging tools",
-            "Context works only with React frameworks"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation": "• Redux middleware برای side effects و async logic دارد\n" +
-            "- DevTools قدرتمند برای debugging و time-travel\n" +
-            "- Performance بهتر برای updates مکرر\n" +
-            "- Ecosystem غنی از کتابخانه‌ها و tools\n" +
-            "- الگوهای استاندارد برای state management پیچیده"
-    },
-    {
-        id: 229,
+    options: [
+    "Context generates reducers automatically for developers",
+    "Redux is used only for styling",
+    "Redux provides middleware and debugging tools",
+    "Context works only with React frameworks"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation": "• Redux middleware برای side effects و async logic دارد\n" +
+"- DevTools قدرتمند برای debugging و time-travel\n" +
+"- Performance بهتر برای updates مکرر\n" +
+"- Ecosystem غنی از کتابخانه‌ها و tools\n" +
+"- الگوهای استاندارد برای state management پیچیده"
+},
+{
+    id: 229,
         question: "How does Redux differ from useState?",
-        options: [
-            "Redux handles only async API requests",
-            "useState saves to localStorage automatically",
-            "useState works only with class components",
-            "Redux handles global, useState local state"
-        ],
-        correctOption: 3,
-        points: 20,
-        "explanation" : "• Redux برای global state در سراسر برنامه است\n" +
-            "- useState برای local state در یک کامپوننت است\n" +
-            "- Redux state قابل اشتراک بین همه کامپوننت‌ها\n" +
-            "- useState ساده‌تر برای state ساده است\n" +
-            "- Redux برای state پیچیده و shared مناسب‌تر است"
-    },
-    {
-        id: 230,
+    options: [
+    "Redux handles only async API requests",
+    "useState saves to localStorage automatically",
+    "useState works only with class components",
+    "Redux handles global, useState local state"
+],
+    correctOption: 3,
+    points: 20,
+    "explanation" : "• Redux برای global state در سراسر برنامه است\n" +
+"- useState برای local state در یک کامپوننت است\n" +
+"- Redux state قابل اشتراک بین همه کامپوننت‌ها\n" +
+"- useState ساده‌تر برای state ساده است\n" +
+"- Redux برای state پیچیده و shared مناسب‌تر است"
+},
+{
+    id: 230,
         question: "Why don't modern React apps need Redux?",
-        options: [
-            "Redux cannot work with TypeScript projects",
-            "React provides useState, useReducer, Context API",
-            "Redux is deprecated and no longer supported",
-            "React apps don't need state management"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation": "• React حالا useState، useReducer و Context API دارد\n" +
-            "- کتابخانه‌های مثل React Query برای server state بهترند\n" +
-            "- بیشتر برنامه‌ها state پیچیده global ندارند\n" +
-            "- Redux complexity اضافی برای پروژه‌های کوچک است\n" +
-            "- اما برای state management پیچیده هنوز مفید است"
-    },
-    {
-        id: 231,
+    options: [
+    "Redux cannot work with TypeScript projects",
+    "React provides useState, useReducer, Context API",
+    "Redux is deprecated and no longer supported",
+    "React apps don't need state management"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation": "• React حالا useState، useReducer و Context API دارد\n" +
+"- کتابخانه‌های مثل React Query برای server state بهترند\n" +
+"- بیشتر برنامه‌ها state پیچیده global ندارند\n" +
+"- Redux complexity اضافی برای پروژه‌های کوچک است\n" +
+"- اما برای state management پیچیده هنوز مفید است"
+},
+{
+    id: 231,
         question: "Which state is best managed locally?",
-        options: [
-            "Remote data from external APIs",
-            "Global state shared between applications",
-            "UI state like modals and inputs",
-            "Server-side database state for users"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation": "• UI state مثل modals، tabs، forms بهتر است local باشد\n" +
-            "- state که فقط یک کامپوننت نیاز دارد\n" +
-            "- temporary state مثل input values\n" +
-            "- loading و error states خاص یک feature\n" +
-            "- state که نیازی به sharing ندارد"
-    },
-    {
-        id: 232,
+    options: [
+    "Remote data from external APIs",
+    "Global state shared between applications",
+    "UI state like modals and inputs",
+    "Server-side database state for users"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation": "• UI state مثل modals، tabs، forms بهتر است local باشد\n" +
+"- state که فقط یک کامپوننت نیاز دارد\n" +
+"- temporary state مثل input values\n" +
+"- loading و error states خاص یک feature\n" +
+"- state که نیازی به sharing ندارد"
+},
+{
+    id: 232,
         question: "Which state requires global management tools?",
-        options: [
-            "UI state like active tab selection",
-            "Temporary variables in function scope",
-            "CSS class toggles for styling",
-            "Remote state like user API data"
-        ],
-        correctOption: 3,
-        points: 20,
-        "explanation": "• remote state (server data) با React Query بهتر مدیریت می‌شود\n" +
-            "- authentication state که در همه جا نیاز است\n" +
-            "- theme، language و user preferences\n" +
-            "- shopping cart و checkout state\n" +
-            "- هر state که بین صفحات مختلف share می‌شود"
-    },
-    {
-        id: 233,
+    options: [
+    "UI state like active tab selection",
+    "Temporary variables in function scope",
+    "CSS class toggles for styling",
+    "Remote state like user API data"
+],
+    correctOption: 3,
+    points: 20,
+    "explanation": "• remote state (server data) با React Query بهتر مدیریت می‌شود\n" +
+"- authentication state که در همه جا نیاز است\n" +
+"- theme، language و user preferences\n" +
+"- shopping cart و checkout state\n" +
+"- هر state که بین صفحات مختلف share می‌شود"
+},
+{
+    id: 233,
         question: "Best approach for combining UI and remote state?",
-        options: [
-            "Keep UI local, manage remote globally",
-            "Store all state in APIs only",
-            "Move everything to Redux without exceptions",
-            "Store UI state on server always"
-        ],
-        correctOption: 0,
-        points: 20,
-        "explanation": "• UI state را local (useState/useReducer) نگه دارید\n" +
-            "- remote state را با React Query یا SWR مدیریت کنید\n" +
-            "- هر کدام ابزار مناسب خود را دارند\n" +
-            "- mixing آن‌ها باعث پیچیدگی می‌شود\n" +
-            "- separation of concerns را رعایت کنید"
-    },
-    {
-        id: 234,
+    options: [
+    "Keep UI local, manage remote globally",
+    "Store all state in APIs only",
+    "Move everything to Redux without exceptions",
+    "Store UI state on server always"
+],
+    correctOption: 0,
+    points: 20,
+    "explanation": "• UI state را local (useState/useReducer) نگه دارید\n" +
+"- remote state را با React Query یا SWR مدیریت کنید\n" +
+"- هر کدام ابزار مناسب خود را دارند\n" +
+"- mixing آن‌ها باعث پیچیدگی می‌شود\n" +
+"- separation of concerns را رعایت کنید"
+},
+{
+    id: 234,
         question: "Most effective tool for managing remote state?",
-        options: [
-            "useReducer hook only for state management",
-            "Plain Redux without any middleware support",
-            "Manual fetch with setInterval polling continuously",
-            "React Query or similar data-fetching libraries"
-        ],
-        correctOption: 3,
-        points: 20,
-        "explanation": "• React Query یا SWR برای server state طراحی شده‌اند\n" +
-            "- caching، refetching و synchronization خودکار\n" +
-            "- loading و error states را مدیریت می‌کنند\n" +
-            "- optimistic updates و mutations\n" +
-            "- بهتر از Redux + manual fetch هستند"
-    },
-    {
-        id: 235,
+    options: [
+    "useReducer hook only for state management",
+    "Plain Redux without any middleware support",
+    "Manual fetch with setInterval polling continuously",
+    "React Query or similar data-fetching libraries"
+],
+    correctOption: 3,
+    points: 20,
+    "explanation": "• React Query یا SWR برای server state طراحی شده‌اند\n" +
+"- caching، refetching و synchronization خودکار\n" +
+"- loading و error states را مدیریت می‌کنند\n" +
+"- optimistic updates و mutations\n" +
+"- بهتر از Redux + manual fetch هستند"
+},
+{
+    id: 235,
         question: "Why has Redux adoption decreased recently?",
-        options: [
-            "React removed Redux support in versions",
-            "Redux only works with outdated React",
-            "Remote state better handled by specialized libraries",
-            "Redux cannot store complex data structures"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation": "• کتابخانه‌های specialized مثل React Query بهترند\n" +
-            "- Context API برای state ساده کافی است\n" +
-            "- Redux boilerplate زیاد برای پروژه‌های کوچک\n" +
-            "- بیشتر state در برنامه‌ها server state است\n" +
-            "- tools مدرن‌تر و ساده‌تر وجود دارند"
-    },
-    {
-        id: 236,
+    options: [
+    "React removed Redux support in versions",
+    "Redux only works with outdated React",
+    "Remote state better handled by specialized libraries",
+    "Redux cannot store complex data structures"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation": "• کتابخانه‌های specialized مثل React Query بهترند\n" +
+"- Context API برای state ساده کافی است\n" +
+"- Redux boilerplate زیاد برای پروژه‌های کوچک\n" +
+"- بیشتر state در برنامه‌ها server state است\n" +
+"- tools مدرن‌تر و ساده‌تر وجود دارند"
+},
+{
+    id: 236,
         question: "What defines the ideal Redux use case?",
-        options: [
-            "Single component with local state only",
-            "Styling multiple components with CSS frameworks",
-            "Making asynchronous API calls exclusively for data",
-            "Frequent state updates across many components"
-        ],
-        correctOption: 3,
-        points: 20,
-        "explanation": "• state پیچیده که در بسیاری از کامپوننت‌ها نیاز است\n" +
-            "- updates مکرر و frequent از جاهای مختلف\n" +
-            "- نیاز به middleware برای async logic\n" +
-            "- debugging پیشرفته با DevTools\n" +
-            "- برنامه‌های بزرگ با تیم‌های متعدد"
-    },
-    {
-        id: 237,
+    options: [
+    "Single component with local state only",
+    "Styling multiple components with CSS frameworks",
+    "Making asynchronous API calls exclusively for data",
+    "Frequent state updates across many components"
+],
+    correctOption: 3,
+    points: 20,
+    "explanation": "• state پیچیده که در بسیاری از کامپوننت‌ها نیاز است\n" +
+"- updates مکرر و frequent از جاهای مختلف\n" +
+"- نیاز به middleware برای async logic\n" +
+"- debugging پیشرفته با DevTools\n" +
+"- برنامه‌های بزرگ با تیم‌های متعدد"
+},
+{
+    id: 237,
         question: "What is the key difference between UI state and remote state?",
-        options: [
-            "UI state requires HTTP requests, remote state is static",
-            "UI state is local to components, remote state comes from servers",
-            "UI state needs Redux, remote state needs Context API",
-            "UI state persists forever, remote state is temporary"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation": "• UI state local به کامپوننت است (modals، forms)\n" +
-            "- remote state از server می‌آید و sync نیاز دارد\n" +
-            "- UI state با useState/useReducer خوب است\n" +
-            "- remote state با React Query بهتر مدیریت می‌شود\n" +
-            "- هر کدام challenges و solutions متفاوت دارند"
-    },
-    {
+    options: [
+    "UI state requires HTTP requests, remote state is static",
+    "UI state is local to components, remote state comes from servers",
+    "UI state needs Redux, remote state needs Context API",
+    "UI state persists forever, remote state is temporary"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation": "• UI state local به کامپوننت است (modals، forms)\n" +
+"- remote state از server می‌آید و sync نیاز دارد\n" +
+"- UI state با useState/useReducer خوب است\n" +
+"- remote state با React Query بهتر مدیریت می‌شود\n" +
+"- هر کدام challenges و solutions متفاوت دارند"
+},
+{
 
-        id: 238,
+    id: 238,
         question: "When should you choose Redux over Context API with useReducer?",
-        options: [
-            "For complex state with frequent updates across many components",
-            "For small applications with minimal state needs",
-            "When all updates happen within single component tree",
-            "When avoiding external dependencies is priority"
-        ],
-        correctOption: 0,
-        points: 30,
-        "explanation": "• وقتی state پیچیده و در همه جا نیاز است\n" +
-            "- updates بسیار مکرر که performance مهم است\n" +
-            "- نیاز به middleware برای async logic\n" +
-            "- debugging پیشرفته و time-travel لازم است\n" +
-            "- تیم بزرگ و نیاز به structure استاندارد"
-    },
-    {
-        id: 239,
+    options: [
+    "For complex state with frequent updates across many components",
+    "For small applications with minimal state needs",
+    "When all updates happen within single component tree",
+    "When avoiding external dependencies is priority"
+],
+    correctOption: 0,
+    points: 30,
+    "explanation": "• وقتی state پیچیده و در همه جا نیاز است\n" +
+"- updates بسیار مکرر که performance مهم است\n" +
+"- نیاز به middleware برای async logic\n" +
+"- debugging پیشرفته و time-travel لازم است\n" +
+"- تیم بزرگ و نیاز به structure استاندارد"
+},
+{
+    id: 239,
         question: "What is the key difference between Redux and useReducer?",
-        options: [
-            "useReducer has middleware, Redux handles async",
-            "Redux is synchronous, useReducer is asynchronous",
-            "Redux is global with middleware, useReducer is local",
-            "They function identically with no differences"
-        ],
-        correctOption: 2,
-        points: 30,
-        "explanation": "• Redux global store با middleware support دارد\n" +
-            "- useReducer local state در یک کامپوننت است\n" +
-            "- Redux DevTools و ecosystem قدرتمند دارد\n" +
-            "- useReducer ساده‌تر و built-in React است\n" +
-            "- Redux برای sharing state بین کامپوننت‌ها بهتر است"
-    },
-    {   id: 240,
-        question: "What is the main responsibility of the Redux store?",
-        options: [
-            "Directly render UI components into the DOM",
-            "Automatically fetch and manage remote data for components",
-            "Generate and dispatch action creators for updating state",
-            "Hold state tree and manage updates via  reducers"
-        ],
-        correctOption: 3,
-        points: 20,
-        "explanation": "• store تمام state tree برنامه را نگه می‌دارد\n" +
-            "- actions را دریافت و به reducers ارسال می‌کند\n" +
-            "- state updates را از طریق reducers مدیریت می‌کند\n" +
-            "- به کامپوننت‌ها اجازه subscribe کردن می‌دهد\n" +
-            "- middleware pipeline را اجرا می‌کند"
-    },
-    {
-        id: 241,
+    options: [
+    "useReducer has middleware, Redux handles async",
+    "Redux is synchronous, useReducer is asynchronous",
+    "Redux is global with middleware, useReducer is local",
+    "They function identically with no differences"
+],
+    correctOption: 2,
+    points: 30,
+    "explanation": "• Redux global store با middleware support دارد\n" +
+"- useReducer local state در یک کامپوننت است\n" +
+"- Redux DevTools و ecosystem قدرتمند دارد\n" +
+"- useReducer ساده‌تر و built-in React است\n" +
+"- Redux برای sharing state بین کامپوننت‌ها بهتر است"
+},
+{   id: 240,
+    question: "What is the main responsibility of the Redux store?",
+    options: [
+    "Directly render UI components into the DOM",
+    "Automatically fetch and manage remote data for components",
+    "Generate and dispatch action creators for updating state",
+    "Hold state tree and manage updates via  reducers"
+],
+    correctOption: 3,
+    points: 20,
+    "explanation": "• store تمام state tree برنامه را نگه می‌دارد\n" +
+"- actions را دریافت و به reducers ارسال می‌کند\n" +
+"- state updates را از طریق reducers مدیریت می‌کند\n" +
+"- به کامپوننت‌ها اجازه subscribe کردن می‌دهد\n" +
+"- middleware pipeline را اجرا می‌کند"
+},
+{
+    id: 241,
         question: "Why use multiple reducers in a Redux store?",
-        options: [
-            "Enable parallel execution of actions",
-            "Organize state into focused, manageable slices",
-            "Manage React component lifecycle",
-            "Handle styling and rendering separately"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• state را به slices منطقی تقسیم می‌کند\n" +
-            "- هر reducer مسئولیت مشخصی دارد\n" +
-            "- کد سازمان‌یافته‌تر و قابل maintenance است\n" +
-            "- team members می‌توانند مستقل کار کنند\n" +
-            "- combineReducers آن‌ها را merge می‌کند"
-    },
-    {
-        id: 242,
+    options: [
+    "Enable parallel execution of actions",
+    "Organize state into focused, manageable slices",
+    "Manage React component lifecycle",
+    "Handle styling and rendering separately"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• state را به slices منطقی تقسیم می‌کند\n" +
+"- هر reducer مسئولیت مشخصی دارد\n" +
+"- کد سازمان‌یافته‌تر و قابل maintenance است\n" +
+"- team members می‌توانند مستقل کار کنند\n" +
+"- combineReducers آن‌ها را merge می‌کند"
+},
+{
+    id: 242,
         question: "What is the purpose of an action creator in Redux?",
-        options: [
-            "Directly modify state in the store",
-            "Return an action object describing state change",
-            "Render UI based on dispatched actions",
-            "Combine multiple reducers into one"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• تابعی که action object می‌سازد و return می‌کند\n" +
-            "- از hard-coding action types جلوگیری می‌کند\n" +
-            "- payload را به صورت parameter می‌گیرد\n" +
-            "- consistency و reusability را تضمین می‌کند\n" +
-            "- در Redux Toolkit خودکار generate می‌شوند"
-    },
-    {
-        id: 243,
+    options: [
+    "Directly modify state in the store",
+    "Return an action object describing state change",
+    "Render UI based on dispatched actions",
+    "Combine multiple reducers into one"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• تابعی که action object می‌سازد و return می‌کند\n" +
+"- از hard-coding action types جلوگیری می‌کند\n" +
+"- payload را به صورت parameter می‌گیرد\n" +
+"- consistency و reusability را تضمین می‌کند\n" +
+"- در Redux Toolkit خودکار generate می‌شوند"
+},
+{
+    id: 243,
         question: "Why separate state logic from components in Redux?",
-        "options": [
-            "To prevent Redux DevTools from being triggered",
-            "To reduce the final bundle size of the application",
-            "To make code predictable, maintainable, and debuggable",
-            "To avoid using React components for state updates"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• separation of concerns را رعایت می‌کند\n" +
-            "- logic قابل test بدون UI می‌شود\n" +
-            "- کامپوننت‌ها ساده‌تر و focused می‌شوند\n" +
-            "- state logic قابل reuse در جاهای مختلف است\n" +
-            "- debugging و maintenance آسان‌تر می‌شود"
-    },
-    {
-        id: 244,
+    "options": [
+    "To prevent Redux DevTools from being triggered",
+    "To reduce the final bundle size of the application",
+    "To make code predictable, maintainable, and debuggable",
+    "To avoid using React components for state updates"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• separation of concerns را رعایت می‌کند\n" +
+"- logic قابل test بدون UI می‌شود\n" +
+"- کامپوننت‌ها ساده‌تر و focused می‌شوند\n" +
+"- state logic قابل reuse در جاهای مختلف است\n" +
+"- debugging و maintenance آسان‌تر می‌شود"
+},
+{
+    id: 244,
         question: "Which tool best handles server state in modern React apps?",
-        "options": [
-            "Redux with a single global store for all state types",
-            "Context API for passing remote data through component tree",
-            "React Query for caching, fetching, and syncing server state",
-            "useReducer hook for managing local component state"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation":"• React Query برای server state optimization شده\n" +
-            "- caching، refetching و synchronization خودکار\n" +
-            "- loading، error و success states\n" +
-            "- optimistic updates و mutations\n" +
-            "- بهتر از Redux برای این use case است"
+    "options": [
+    "Redux with a single global store for all state types",
+    "Context API for passing remote data through component tree",
+    "React Query for caching, fetching, and syncing server state",
+    "useReducer hook for managing local component state"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation":"• React Query برای server state optimization شده\n" +
+"- caching، refetching و synchronization خودکار\n" +
+"- loading، error و success states\n" +
+"- optimistic updates و mutations\n" +
+"- بهتر از Redux برای این use case است"
 
-    },
-    {
-        id: 245,
+},
+{
+    id: 245,
         question: "What performance issue arises with Context for frequently changing state?",
-        "options": [
-            "Context API cannot pass data to deeply nested components",
-            "Frequent updates cause unnecessary re-renders in all consumers",
-            "Context API is only designed for styling and theming",
-            "Context API requires Redux to handle any state properly"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• تغییر Context باعث re-render همه consumers می‌شود\n" +
-            "- حتی اگر consumer فقط بخشی از data را بخواهد\n" +
-            "- برای frequent updates performance problem ایجاد می‌کند\n" +
-            "- باید Context را split کنید یا از useMemo استفاده کنید\n" +
-            "- Redux برای این موارد بهتر optimize شده"
+    "options": [
+    "Context API cannot pass data to deeply nested components",
+    "Frequent updates cause unnecessary re-renders in all consumers",
+    "Context API is only designed for styling and theming",
+    "Context API requires Redux to handle any state properly"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• تغییر Context باعث re-render همه consumers می‌شود\n" +
+"- حتی اگر consumer فقط بخشی از data را بخواهد\n" +
+"- برای frequent updates performance problem ایجاد می‌کند\n" +
+"- باید Context را split کنید یا از useMemo استفاده کنید\n" +
+"- Redux برای این موارد بهتر optimize شده"
 
-    },
-    {
-        id: 246,
+},
+{
+    id: 246,
         question: "Why do modern React apps often not need Redux for remote state?",
-        "options": [
-            "Redux has been deprecated and is no longer supported",
-            "Context API fully replaces Redux for all state management",
-            "Redux cannot manage remote data in React applications",
-            "Libraries like React Query handle server state more effectively"
-        ],
-        correctOption: 3,
-        points: 20,
-        "explanation":"• React Query و SWR برای server state بهتر هستند\n" +
-            "- caching، invalidation و refetching خودکار\n" +
-            "- code کمتر و ساده‌تر نسبت به Redux\n" +
-            "- focus روی server state challenges است\n" +
-            "- Redux برای UI state global هنوز مفید است"
+    "options": [
+    "Redux has been deprecated and is no longer supported",
+    "Context API fully replaces Redux for all state management",
+    "Redux cannot manage remote data in React applications",
+    "Libraries like React Query handle server state more effectively"
+],
+    correctOption: 3,
+    points: 20,
+    "explanation":"• React Query و SWR برای server state بهتر هستند\n" +
+"- caching، invalidation و refetching خودکار\n" +
+"- code کمتر و ساده‌تر نسبت به Redux\n" +
+"- focus روی server state challenges است\n" +
+"- Redux برای UI state global هنوز مفید است"
 
-    },
-    {
-        id: 247,
+},
+{
+    id: 247,
         question: "Why has Redux adoption decreased recently?",
-        "options": [
-            "React automatically handles all state management internally",
-            "Most global state is remote and better handled by specialized libraries",
-            "Redux no longer works with current React versions",
-            "UI state requirements have become too complex for Redux"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• اکثر global state در واقع remote state است\n" +
-            "- tools مثل React Query این کار را بهتر انجام می‌دهند\n" +
-            "- Context API برای UI state ساده کافی است\n" +
-            "- Redux Toolkit boilerplate را کاهش داد اما هنوز پیچیده است\n" +
-            "- ecosystem React به ابزارهای specialized رفته"
+    "options": [
+    "React automatically handles all state management internally",
+    "Most global state is remote and better handled by specialized libraries",
+    "Redux no longer works with current React versions",
+    "UI state requirements have become too complex for Redux"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• اکثر global state در واقع remote state است\n" +
+"- tools مثل React Query این کار را بهتر انجام می‌دهند\n" +
+"- Context API برای UI state ساده کافی است\n" +
+"- Redux Toolkit boilerplate را کاهش داد اما هنوز پیچیده است\n" +
+"- ecosystem React به ابزارهای specialized رفته"
 
-    },
-    {
-        "id": 248,
-        "question": "What is the primary role of middleware in Redux?",
-        "options": [
-            "To let components update state directly without reducers",
-            "To intercept actions and run additional logic",
-            "To replace reducers with custom asynchronous handlers",
-            "To make the store update automatically without dispatch"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• middleware بین dispatch و reducer قرار می‌گیرد\n" +
-            "- actions را intercept و modify می‌کند\n" +
-            "- امکان async logic و side effects را می‌دهد\n" +
-            "- logging، error reporting و analytics\n" +
-            "- Redux Thunk و Saga examples از middleware هستند"
-    },
-    {
-        "id": 249,
-        "question":"Where should side effects like API calls be handled in Redux?",
-        "options": [
-            "Inside reducer functions",
-            "Inside middleware or thunks",
-            "Directly in React components only",
-            "Inside the store configuration"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• در middleware مثل Redux Thunk یا Saga\n" +
-            "- reducers باید pure و بدون side effects باشند\n" +
-            "- thunks به store و dispatch دسترسی دارند\n" +
-            "- می‌توانند async operations انجام دهند\n" +
-            "- بعد از completion، action dispatch می‌کنند"
-    },
-    {
-        "id": 250,
-        "question": "What is the main purpose of Redux Thunk?",
-        "options": [
-            "Defer rendering until data is ready",
-            "Optimize reducers by memoizing updates",
-            "Prevent unnecessary component re-renders",
-            "Handle async logic before dispatching actions"
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation":"• Thunk امکان dispatch کردن functions را می‌دهد\n" +
-            "- functions می‌توانند async logic داشته باشند\n" +
-            "- API calls و side effects در thunks انجام می‌شوند\n" +
-            "- بعد از completion، actions dispatch می‌کنند\n" +
-            "- ساده‌ترین middleware برای async است"
-    },
-    {
-        "id": 251,
-        "question": "What enables Redux to handle asynchronous operations before updating state?",
-        "options": [
-            "Reducer functions",
-            "Store configuration",
-            "Thunk middleware",
-            "Component lifecycle methods"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• middleware مثل Thunk این امکان را می‌دهد\n" +
-            "- action creators می‌توانند functions return کنند\n" +
-            "- functions می‌توانند async باشند\n" +
-            "- بعد از async work، action واقعی dispatch می‌شود\n" +
-            "- reducer سپس state را update می‌کند"
-    },
-    {
-        "id": 252,
-        "question": "Which feature is NOT provided by Redux Toolkit?",
-        "options": [
-            "createSlice for reducing boilerplate code",
-            "createAsyncThunk for handling async logic",
-            "Built-in support for Immer library",
-            "Class-based component lifecycle methods"
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation":"• Redux Toolkit برای simplifying Redux است\n" +
-            "- createSlice، configureStore و createAsyncThunk دارد\n" +
-            "- Immer برای immutable updates built-in است\n" +
-            "- اما lifecycle methods مربوط به class components است\n" +
-            "- Redux Toolkit با function components و hooks کار می‌کند"
-    },
-    {
-        "id": 253,
-        "question":"Which capability is NOT provided by createSlice?",
-        "options": [
-            "Automatically generates action creators and types",
-            "Allows writing mutable-looking code safely with Immer",
-            "Eliminates the need to configure a Redux store",
-            "Reduces boilerplate by combining state, reducers, and actions"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• createSlice reducer، actions و types می‌سازد\n" +
-            "- Immer برای mutable-looking code دارد\n" +
-            "- boilerplate را کاهش می‌دهد\n" +
-            "- اما store configuration را انجام نمی‌دهد\n" +
-            "- برای store از configureStore استفاده کنید"
-    },
-    {
-        "id": 254,
-        "question":"Which library lets you write mutable-looking code in Redux Toolkit?",
-        "options": [
-            "Thunk for async operations",
-            "Saga for side effects",
-            "Selector for derived state",
-            "Immer for state updates"
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation":"• Immer به صورت خودکار در Redux Toolkit است\n" +
-            "- می‌توانید state را مستقیماً modify کنید\n" +
-            "- Immer آن را به immutable updates تبدیل می‌کند\n" +
-            "- کد ساده‌تر و خواناتر می‌شود\n" +
-            "- در پشت صحنه draft state استفاده می‌کند"
-    },
-    {
-        "id": 255,
-        "question": "Which Redux Toolkit API combines reducers and action creators?",
-        "options": [
-            "createSlice",
-            "configureStore",
-            "combineReducers",
-            "applyMiddleware"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation":"• createSlice هم reducers و هم actions می‌سازد\n" +
-            "- یک object با name، initialState و reducers می‌گیرد\n" +
-            "- action creators را خودکار generate می‌کند\n" +
-            "- action types را خودکار می‌سازد\n" +
-            "- boilerplate Redux را به شدت کاهش می‌دهد"
-    },
-    {
-        "id": 256,
-        "question": "Which function sets up the store with built-in middleware and DevTools?",
-        "options": [
-            "createReducer",
-            "createStore",
-            "configureStore",
-            "setupStore"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation":"• configureStore تنظیم store را ساده می‌کند\n" +
-            "- Redux DevTools به صورت خودکار setup می‌شود\n" +
-            "- Thunk middleware پیش‌فرض اضافه می‌شود\n" +
-            "- development checks برای common mistakes\n" +
-            "- جایگزین createStore + applyMiddleware است"
-    },
-    {
-        "id": 257,
-        "question": "What is the recommended naming convention for Redux action types?",
-        "options": [
-            "Single word names only",
-            "Event name only",
-            "Random strings for uniqueness",
-            "Domain/event pattern"
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation":"• pattern 'domain/eventName' توصیه می‌شود\n" +
-            "- مثل 'todos/todoAdded' یا 'users/userLoggedIn'\n" +
-            "- واضح می‌کند action به کدام بخش مربوط است\n" +
-            "- در Redux Toolkit خودکار این pattern استفاده می‌شود\n" +
-            "- DevTools و debugging را بهتر می‌کند"
-    },
-    {
-        "id": 258,
-        "question":  "How are action creators handled in createSlice?",
-        "options": [
-            "Must be written manually by the developer",
-            "Auto-generated, accept one payload argument",
-            "Require multiple arguments for each action call",
-            "Cannot be accessed outside of the slice logic"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• createSlice خودکار action creators می‌سازد\n" +
-            "- برای هر reducer یک action creator ساخته می‌شود\n" +
-            "- فقط یک argument (payload) می‌گیرند\n" +
-            "- نیازی به نوشتن دستی نیست\n" +
-            "- در slice.actions در دسترس هستند"
-    },
-    {
-        "id": 259,
-        "question": "What is the primary purpose of createSlice?",
-        "options": [
-            "Installs external libraries for async handling",
-            "Manages routing and navigation inside React apps",
-            "Defines reducers and generates actions creators together",
-            "Creates global styles for components in the project"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• ساده‌سازی ساخت Redux logic است\n" +
-            "- reducers و action creators را با هم می‌سازد\n" +
-            "- action types را خودکار generate می‌کند\n" +
-            "- از Immer برای immutability استفاده می‌کند\n" +
-            "- boilerplate را به شدت کاهش می‌دهد"
-    },
-    {
-        "id": 260,
-        "question": "What is true about reducers inside createSlice?",
-        "options": [
-            "Always return a completely new object",
-            "Can write code that appears to mutate state due to Immer",
-            "Cannot use payload values from dispatched actions",
-            "Only work if written as pure asynchronous functions component"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• می‌توانید state را مستقیماً modify کنید\n" +
-            "- Immer این کار را به immutable تبدیل می‌کند\n" +
-            "- کد ساده‌تر و خواناتر می‌شود\n" +
-            "- در واقع draft state را modify می‌کنید\n" +
-            "- نیازی به spread operator نیست"
-    },
-    {
-        "id": 261,
-        "question": "How are action creators provided in createSlice?",
-        "options": [
-            "Created manually in separate file",
-            "Only available with middleware",
-            "Auto-generated based on reducer names",
-            "Must be imported from Redux"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• بر اساس نام reducers خودکار ساخته می‌شوند\n" +
-            "- در slice.actions در دسترس هستند\n" +
-            "- همان نام reducer را دارند\n" +
-            "- argument آن‌ها به payload تبدیل می‌شود\n" +
-            "- نیازی به نوشتن manual نیست"
-    },
-    {
-        "id": 262,
-        "question": "What is a key advantage of createSlice over traditional Redux?",
-        "options": [
-            "Reduces boilerplate by combining related logic",
-            "Prevents React components from re-rendering",
-            "Adds built-in routing and query string support",
-            "Eliminates the need for any store or middleware"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation":"• تمام logic مرتبط در یک جا است\n" +
-            "- کد کمتر و خواناتر\n" +
-            "- action types، creators و reducers خودکار\n" +
-            "- از اشتباهات رایج جلوگیری می‌کند\n" +
-            "- maintenance و refactoring آسان‌تر است"
-    },
-    {
-        "id": 263,
-        "question": "What does createSlice return?",
-        "options": [
-            "collection of selectors for reading global state",
-            "Middleware that listens for dispatched actions",
-            "Reducer function and auto-generated actions creators",
-            "Hook that manages asynchronous API requests"
-        ],
-        "correctOption":2,
-        "points": 20,
-        "explanation":"• یک object با reducer و actions برمی‌گرداند\n" +
-            "- slice.reducer برای store استفاده می‌شود\n" +
-            "- slice.actions شامل action creators است\n" +
-            "- slice.name نام slice است\n" +
-            "- slice.caseReducers reducers داخلی هستند"
-    },
-    {
-        "id": 264,
-        "question":  "How are reducers typically written inside createSlice?",
-        "options": [
-            "As JSX components that render data from the store",
-            "As lifecycle hooks that are triggered by React updates",
-            "As asynchronous functions that always await API responses",
-            "As functions that directly modify state using Immer",
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation":"• به صورت مستقیم state را modify می‌کنید\n" +
-            "- مثل state.value += 1 یا state.items.push(item)\n" +
-            "- Immer این را به immutable updates تبدیل می‌کند\n" +
-            "- خیلی ساده‌تر از spread operators است\n" +
-            "- کد مثل mutating معمولی است"
-    },
-    {
-        "id": 265,
-        "question":"What does createSlice automatically generate based on the reducer functions you define?",
-        "options": [
-            "Middleware functions for handling async operations",
-            "Action creators with the same names as the reducers",
-            "Component hooks for state management",
-            "CSS classes for styling components"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• action creators با همان نام reducers ساخته می‌شوند\n" +
-            "- action types به صورت 'sliceName/reducerName'\n" +
-            "- argument به action.payload تبدیل می‌شود\n" +
-            "- نیازی به define کردن جداگانه نیست\n" +
-            "- consistency و کاهش اشتباه تضمین می‌شود"
-    },
-    {
-        id: 266,
+},
+{
+    "id": 248,
+    "question": "What is the primary role of middleware in Redux?",
+    "options": [
+    "To let components update state directly without reducers",
+    "To intercept actions and run additional logic",
+    "To replace reducers with custom asynchronous handlers",
+    "To make the store update automatically without dispatch"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• middleware بین dispatch و reducer قرار می‌گیرد\n" +
+"- actions را intercept و modify می‌کند\n" +
+"- امکان async logic و side effects را می‌دهد\n" +
+"- logging، error reporting و analytics\n" +
+"- Redux Thunk و Saga examples از middleware هستند"
+},
+{
+    "id": 249,
+    "question":"Where should side effects like API calls be handled in Redux?",
+    "options": [
+    "Inside reducer functions",
+    "Inside middleware or thunks",
+    "Directly in React components only",
+    "Inside the store configuration"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• در middleware مثل Redux Thunk یا Saga\n" +
+"- reducers باید pure و بدون side effects باشند\n" +
+"- thunks به store و dispatch دسترسی دارند\n" +
+"- می‌توانند async operations انجام دهند\n" +
+"- بعد از completion، action dispatch می‌کنند"
+},
+{
+    "id": 250,
+    "question": "What is the main purpose of Redux Thunk?",
+    "options": [
+    "Defer rendering until data is ready",
+    "Optimize reducers by memoizing updates",
+    "Prevent unnecessary component re-renders",
+    "Handle async logic before dispatching actions"
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation":"• Thunk امکان dispatch کردن functions را می‌دهد\n" +
+"- functions می‌توانند async logic داشته باشند\n" +
+"- API calls و side effects در thunks انجام می‌شوند\n" +
+"- بعد از completion، actions dispatch می‌کنند\n" +
+"- ساده‌ترین middleware برای async است"
+},
+{
+    "id": 251,
+    "question": "What enables Redux to handle asynchronous operations before updating state?",
+    "options": [
+    "Reducer functions",
+    "Store configuration",
+    "Thunk middleware",
+    "Component lifecycle methods"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• middleware مثل Thunk این امکان را می‌دهد\n" +
+"- action creators می‌توانند functions return کنند\n" +
+"- functions می‌توانند async باشند\n" +
+"- بعد از async work، action واقعی dispatch می‌شود\n" +
+"- reducer سپس state را update می‌کند"
+},
+{
+    "id": 252,
+    "question": "Which feature is NOT provided by Redux Toolkit?",
+    "options": [
+    "createSlice for reducing boilerplate code",
+    "createAsyncThunk for handling async logic",
+    "Built-in support for Immer library",
+    "Class-based component lifecycle methods"
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation":"• Redux Toolkit برای simplifying Redux است\n" +
+"- createSlice، configureStore و createAsyncThunk دارد\n" +
+"- Immer برای immutable updates built-in است\n" +
+"- اما lifecycle methods مربوط به class components است\n" +
+"- Redux Toolkit با function components و hooks کار می‌کند"
+},
+{
+    "id": 253,
+    "question":"Which capability is NOT provided by createSlice?",
+    "options": [
+    "Automatically generates action creators and types",
+    "Allows writing mutable-looking code safely with Immer",
+    "Eliminates the need to configure a Redux store",
+    "Reduces boilerplate by combining state, reducers, and actions"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• createSlice reducer، actions و types می‌سازد\n" +
+"- Immer برای mutable-looking code دارد\n" +
+"- boilerplate را کاهش می‌دهد\n" +
+"- اما store configuration را انجام نمی‌دهد\n" +
+"- برای store از configureStore استفاده کنید"
+},
+{
+    "id": 254,
+    "question":"Which library lets you write mutable-looking code in Redux Toolkit?",
+    "options": [
+    "Thunk for async operations",
+    "Saga for side effects",
+    "Selector for derived state",
+    "Immer for state updates"
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation":"• Immer به صورت خودکار در Redux Toolkit است\n" +
+"- می‌توانید state را مستقیماً modify کنید\n" +
+"- Immer آن را به immutable updates تبدیل می‌کند\n" +
+"- کد ساده‌تر و خواناتر می‌شود\n" +
+"- در پشت صحنه draft state استفاده می‌کند"
+},
+{
+    "id": 255,
+    "question": "Which Redux Toolkit API combines reducers and action creators?",
+    "options": [
+    "createSlice",
+    "configureStore",
+    "combineReducers",
+    "applyMiddleware"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation":"• createSlice هم reducers و هم actions می‌سازد\n" +
+"- یک object با name، initialState و reducers می‌گیرد\n" +
+"- action creators را خودکار generate می‌کند\n" +
+"- action types را خودکار می‌سازد\n" +
+"- boilerplate Redux را به شدت کاهش می‌دهد"
+},
+{
+    "id": 256,
+    "question": "Which function sets up the store with built-in middleware and DevTools?",
+    "options": [
+    "createReducer",
+    "createStore",
+    "configureStore",
+    "setupStore"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation":"• configureStore تنظیم store را ساده می‌کند\n" +
+"- Redux DevTools به صورت خودکار setup می‌شود\n" +
+"- Thunk middleware پیش‌فرض اضافه می‌شود\n" +
+"- development checks برای common mistakes\n" +
+"- جایگزین createStore + applyMiddleware است"
+},
+{
+    "id": 257,
+    "question": "What is the recommended naming convention for Redux action types?",
+    "options": [
+    "Single word names only",
+    "Event name only",
+    "Random strings for uniqueness",
+    "Domain/event pattern"
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation":"• pattern 'domain/eventName' توصیه می‌شود\n" +
+"- مثل 'todos/todoAdded' یا 'users/userLoggedIn'\n" +
+"- واضح می‌کند action به کدام بخش مربوط است\n" +
+"- در Redux Toolkit خودکار این pattern استفاده می‌شود\n" +
+"- DevTools و debugging را بهتر می‌کند"
+},
+{
+    "id": 258,
+    "question":  "How are action creators handled in createSlice?",
+    "options": [
+    "Must be written manually by the developer",
+    "Auto-generated, accept one payload argument",
+    "Require multiple arguments for each action call",
+    "Cannot be accessed outside of the slice logic"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• createSlice خودکار action creators می‌سازد\n" +
+"- برای هر reducer یک action creator ساخته می‌شود\n" +
+"- فقط یک argument (payload) می‌گیرند\n" +
+"- نیازی به نوشتن دستی نیست\n" +
+"- در slice.actions در دسترس هستند"
+},
+{
+    "id": 259,
+    "question": "What is the primary purpose of createSlice?",
+    "options": [
+    "Installs external libraries for async handling",
+    "Manages routing and navigation inside React apps",
+    "Defines reducers and generates actions creators together",
+    "Creates global styles for components in the project"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• ساده‌سازی ساخت Redux logic است\n" +
+"- reducers و action creators را با هم می‌سازد\n" +
+"- action types را خودکار generate می‌کند\n" +
+"- از Immer برای immutability استفاده می‌کند\n" +
+"- boilerplate را به شدت کاهش می‌دهد"
+},
+{
+    "id": 260,
+    "question": "What is true about reducers inside createSlice?",
+    "options": [
+    "Always return a completely new object",
+    "Can write code that appears to mutate state due to Immer",
+    "Cannot use payload values from dispatched actions",
+    "Only work if written as pure asynchronous functions component"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• می‌توانید state را مستقیماً modify کنید\n" +
+"- Immer این کار را به immutable تبدیل می‌کند\n" +
+"- کد ساده‌تر و خواناتر می‌شود\n" +
+"- در واقع draft state را modify می‌کنید\n" +
+"- نیازی به spread operator نیست"
+},
+{
+    "id": 261,
+    "question": "How are action creators provided in createSlice?",
+    "options": [
+    "Created manually in separate file",
+    "Only available with middleware",
+    "Auto-generated based on reducer names",
+    "Must be imported from Redux"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• بر اساس نام reducers خودکار ساخته می‌شوند\n" +
+"- در slice.actions در دسترس هستند\n" +
+"- همان نام reducer را دارند\n" +
+"- argument آن‌ها به payload تبدیل می‌شود\n" +
+"- نیازی به نوشتن manual نیست"
+},
+{
+    "id": 262,
+    "question": "What is a key advantage of createSlice over traditional Redux?",
+    "options": [
+    "Reduces boilerplate by combining related logic",
+    "Prevents React components from re-rendering",
+    "Adds built-in routing and query string support",
+    "Eliminates the need for any store or middleware"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• تمام logic مرتبط در یک جا است\n" +
+"- کد کمتر و خواناتر\n" +
+"- action types، creators و reducers خودکار\n" +
+"- از اشتباهات رایج جلوگیری می‌کند\n" +
+"- maintenance و refactoring آسان‌تر است"
+},
+{
+    "id": 263,
+    "question": "What does createSlice return?",
+    "options": [
+    "collection of selectors for reading global state",
+    "Middleware that listens for dispatched actions",
+    "Reducer function and auto-generated actions creators",
+    "Hook that manages asynchronous API requests"
+],
+    "correctOption":2,
+    "points": 20,
+    "explanation":"• یک object با reducer و actions برمی‌گرداند\n" +
+"- slice.reducer برای store استفاده می‌شود\n" +
+"- slice.actions شامل action creators است\n" +
+"- slice.name نام slice است\n" +
+"- slice.caseReducers reducers داخلی هستند"
+},
+{
+    "id": 264,
+    "question":  "How are reducers typically written inside createSlice?",
+    "options": [
+    "As JSX components that render data from the store",
+    "As lifecycle hooks that are triggered by React updates",
+    "As asynchronous functions that always await API responses",
+    "As functions that directly modify state using Immer",
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation":"• به صورت مستقیم state را modify می‌کنید\n" +
+"- مثل state.value += 1 یا state.items.push(item)\n" +
+"- Immer این را به immutable updates تبدیل می‌کند\n" +
+"- خیلی ساده‌تر از spread operators است\n" +
+"- کد مثل mutating معمولی است"
+},
+{
+    "id": 265,
+    "question":"What does createSlice automatically generate based on the reducer functions you define?",
+    "options": [
+    "Middleware functions for handling async operations",
+    "Action creators with the same names as the reducers",
+    "Component hooks for state management",
+    "CSS classes for styling components"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• action creators با همان نام reducers ساخته می‌شوند\n" +
+"- action types به صورت 'sliceName/reducerName'\n" +
+"- argument به action.payload تبدیل می‌شود\n" +
+"- نیازی به define کردن جداگانه نیست\n" +
+"- consistency و کاهش اشتباه تضمین می‌شود"
+},
+{
+    id: 266,
         question: "How many parameters do createSlice action creators accept?",
-        options: [
-            "Zero - always called without arguments",
-            "One - payload value becoming action.payload",
-            "Two - type and payload separately",
-            "Multiple - as many as defined in reducer"
-        ],
-        correctOption: 1,
-        points: 10,
-        "explanation":"• فقط یک parameter که به payload تبدیل می‌شود\n" +
-            "- برای چند parameter از object استفاده کنید\n" +
-            "- یا از prepare callback استفاده کنید\n" +
-            "- API ساده و consistent است\n" +
-            "- بیشتر use cases را cover می‌کند"
+    options: [
+    "Zero - always called without arguments",
+    "One - payload value becoming action.payload",
+    "Two - type and payload separately",
+    "Multiple - as many as defined in reducer"
+],
+    correctOption: 1,
+    points: 10,
+    "explanation":"• فقط یک parameter که به payload تبدیل می‌شود\n" +
+"- برای چند parameter از object استفاده کنید\n" +
+"- یا از prepare callback استفاده کنید\n" +
+"- API ساده و consistent است\n" +
+"- بیشتر use cases را cover می‌کند"
 
-    },
-    {
-        id: 267,
+},
+{
+    id: 267,
         question: "What does Immer enable in createSlice reducers?",
-        options: [
-            "Automatically fetch data from APIs",
-            "Create multiple store instances",
-            "Write mutable-looking code while maintaining immutability",
-            "Generate TypeScript types automatically"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation":"• نوشتن کد mutable-looking اما immutable واقعی\n" +
-            "- Immer draft state ایجاد می‌کند\n" +
-            "- تغییرات را track و immutable copy می‌سازد\n" +
-            "- کد خیلی ساده‌تر از spread operators\n" +
-            "- در Redux Toolkit built-in است"
+    options: [
+    "Automatically fetch data from APIs",
+    "Create multiple store instances",
+    "Write mutable-looking code while maintaining immutability",
+    "Generate TypeScript types automatically"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation":"• نوشتن کد mutable-looking اما immutable واقعی\n" +
+"- Immer draft state ایجاد می‌کند\n" +
+"- تغییرات را track و immutable copy می‌سازد\n" +
+"- کد خیلی ساده‌تر از spread operators\n" +
+"- در Redux Toolkit built-in است"
 
-    },
-    {
-        id: 268,
+},
+{
+    id: 268,
         question: "Which property in createSlice contains state update functions?",
-        options: [
-            "reducers field with case reducer functions",
-            "actions field with action creator definitions",
-            "middleware field with side effect handlers",
-            "selectors field with state access functions"
-        ],
-        correctOption: 0,
-        points: 20,
-        "explanation":"• reducers field شامل case reducer functions است\n" +
-            "- هر reducer یک action type را handle می‌کند\n" +
-            "- state و action را می‌گیرند\n" +
-            "- می‌توانند state را modify کنند (با Immer)\n" +
-            "- خودکار action creators ساخته می‌شوند"
-    },
-    {
-        id: 269,
+    options: [
+    "reducers field with case reducer functions",
+    "actions field with action creator definitions",
+    "middleware field with side effect handlers",
+    "selectors field with state access functions"
+],
+    correctOption: 0,
+    points: 20,
+    "explanation":"• reducers field شامل case reducer functions است\n" +
+"- هر reducer یک action type را handle می‌کند\n" +
+"- state و action را می‌گیرند\n" +
+"- می‌توانند state را modify کنند (با Immer)\n" +
+"- خودکار action creators ساخته می‌شوند"
+},
+{
+    id: 269,
         question: "What naming pattern do createSlice action types follow?",
-        options: [
-            "SLICE_NAME_REDUCER_NAME (e.g., 'COUNTER_INCREMENT')",
-            "sliceName/reducerName (e.g., 'counter/increment')",
-            "reducerName_sliceName (e.g., 'increment_counter')",
-            "Random UUID strings for uniqueness"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• pattern 'sliceName/reducerName' استفاده می‌شود\n" +
-            "- مثل 'counter/increment' یا 'todos/add'\n" +
-            "- خودکار generate می‌شوند\n" +
-            "- واضح و descriptive هستند\n" +
-            "- در DevTools و debugging مفید است"
+    options: [
+    "SLICE_NAME_REDUCER_NAME (e.g., 'COUNTER_INCREMENT')",
+    "sliceName/reducerName (e.g., 'counter/increment')",
+    "reducerName_sliceName (e.g., 'increment_counter')",
+    "Random UUID strings for uniqueness"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• pattern 'sliceName/reducerName' استفاده می‌شود\n" +
+"- مثل 'counter/increment' یا 'todos/add'\n" +
+"- خودکار generate می‌شوند\n" +
+"- واضح و descriptive هستند\n" +
+"- در DevTools و debugging مفید است"
 
-    },
-    {
-        id: 270,
+},
+{
+    id: 270,
         question: "How do you export the main reducer from createSlice?",
-        options: [
-            "Export slice.reducer from slice object",
-            "Export slice.actions.reducer from slice",
-            "Export createReducer(slice) as function",
-            "Export slice.store as complete reducer"
-        ],
-        correctOption: 0,
-        points: 10,
-        "explanation":"• slice.reducer را export می‌کنید\n" +
-            "- این reducer در configureStore استفاده می‌شود\n" +
-            "- معمولاً به صورت default export\n" +
-            "- slice.actions را هم export می‌کنید\n" +
-            "- برای استفاده در کامپوننت‌ها"
-    },
-    {
-        id: 271,
+    options: [
+    "Export slice.reducer from slice object",
+    "Export slice.actions.reducer from slice",
+    "Export createReducer(slice) as function",
+    "Export slice.store as complete reducer"
+],
+    correctOption: 0,
+    points: 10,
+    "explanation":"• slice.reducer را export می‌کنید\n" +
+"- این reducer در configureStore استفاده می‌شود\n" +
+"- معمولاً به صورت default export\n" +
+"- slice.actions را هم export می‌کنید\n" +
+"- برای استفاده در کامپوننت‌ها"
+},
+{
+    id: 271,
         question: "Which Redux boilerplate does createSlice eliminate?",
-        options: [
-            "Writing separate action creators and types manually",
-            "Configuring store and middleware setup",
-            "Creating component-level state hooks",
-            "Defining routing and navigation logic"
-        ],
-        correctOption: 0,
-        points: 20,
-        "explanation":"• نوشتن جداگانه action types، creators و reducers\n" +
-            "- switch statements در reducers\n" +
-            "- spread operators برای immutability\n" +
-            "- تکرار action type strings\n" +
-            "- همه این‌ها خودکار handle می‌شوند"
+    options: [
+    "Writing separate action creators and types manually",
+    "Configuring store and middleware setup",
+    "Creating component-level state hooks",
+    "Defining routing and navigation logic"
+],
+    correctOption: 0,
+    points: 20,
+    "explanation":"• نوشتن جداگانه action types، creators و reducers\n" +
+"- switch statements در reducers\n" +
+"- spread operators برای immutability\n" +
+"- تکرار action type strings\n" +
+"- همه این‌ها خودکار handle می‌شوند"
 
-    },
-    {
-        id: 272,
+},
+{
+    id: 272,
         question: "What role does initialState serve in createSlice?",
-        options: [
-            "Determines component rendering order",
-            "Specifies which middleware to use",
-            "Defines starting value for slice's state",
-            "Configures development tools integration"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation":"• مقدار اولیه state slice را مشخص می‌کند\n" +
-            "- می‌تواند object، array یا primitive باشد\n" +
-            "- در اولین render استفاده می‌شود\n" +
-            "- structure state را define می‌کند\n" +
-            "- معمولاً با TypeScript type می‌شود"
+    options: [
+    "Determines component rendering order",
+    "Specifies which middleware to use",
+    "Defines starting value for slice's state",
+    "Configures development tools integration"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation":"• مقدار اولیه state slice را مشخص می‌کند\n" +
+"- می‌تواند object، array یا primitive باشد\n" +
+"- در اولین render استفاده می‌شود\n" +
+"- structure state را define می‌کند\n" +
+"- معمولاً با TypeScript type می‌شود"
 
-    },
-    {
-        id: 273,
+},
+{
+    id: 273,
         question: "When would you use the 'prepare' callback in createSlice?",
-        options: [
-            "Customize action payload before reaching reducer",
-            "Define async operations after state updates",
-            "Specify which components access this slice",
-            "Configure Redux DevTools for debugging"
-        ],
-        correctOption: 0,
-        points: 20,
-        "explanation":"• برای customize کردن payload قبل از reducer\n" +
-            "- وقتی نیاز به چند parameter دارید\n" +
-            "- برای generate کردن unique IDs\n" +
-            "- برای validation یا transformation\n" +
-            "- object با payload و meta return می‌کند"
+    options: [
+    "Customize action payload before reaching reducer",
+    "Define async operations after state updates",
+    "Specify which components access this slice",
+    "Configure Redux DevTools for debugging"
+],
+    correctOption: 0,
+    points: 20,
+    "explanation":"• برای customize کردن payload قبل از reducer\n" +
+"- وقتی نیاز به چند parameter دارید\n" +
+"- برای generate کردن unique IDs\n" +
+"- برای validation یا transformation\n" +
+"- object با payload و meta return می‌کند"
 
-    },
-    {
-        id: 274,
+},
+{
+    id: 274,
         question: "Which Redux feature is NOT available in Context API?",
-        options: [
-            "State management with useReducer",
-            "Middleware support for side effects",
-            "Passing data through component tree",
-            "Integration with React DevTools"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• middleware support برای async و side effects\n" +
-            "- Redux DevTools برای debugging\n" +
-            "- time-travel debugging\n" +
-            "- centralized state management structure\n" +
-            "- Context فقط برای passing data است"
+    options: [
+    "State management with useReducer",
+    "Middleware support for side effects",
+    "Passing data through component tree",
+    "Integration with React DevTools"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• middleware support برای async و side effects\n" +
+"- Redux DevTools برای debugging\n" +
+"- time-travel debugging\n" +
+"- centralized state management structure\n" +
+"- Context فقط برای passing data است"
 
-    },
-    {
-        id: 275,
+},
+{
+    id: 275,
         question: "What problem occurs with multiple Context providers?",
-        options: [
-            "Built-in middleware becomes impossible",
-            "Debugging experience is lost",
-            "Async operations fail",
-            "Provider hell with deeply nested wrappers"
-        ],
-        correctOption: 3,
-        points: 20,
-        "explanation":"• provider hell با nested wrappers عمیق\n" +
-            "- کد خوانایی کمتری دارد\n" +
-            "- refactoring سخت‌تر می‌شود\n" +
-            "- performance issues با re-renders\n" +
-            "- Redux این مشکل را با single store حل می‌کند"
+    options: [
+    "Built-in middleware becomes impossible",
+    "Debugging experience is lost",
+    "Async operations fail",
+    "Provider hell with deeply nested wrappers"
+],
+    correctOption: 3,
+    points: 20,
+    "explanation":"• provider hell با nested wrappers عمیق\n" +
+"- کد خوانایی کمتری دارد\n" +
+"- refactoring سخت‌تر می‌شود\n" +
+"- performance issues با re-renders\n" +
+"- Redux این مشکل را با single store حل می‌کند"
 
-    },
-    {
-        id: 276,
+},
+{
+    id: 276,
         question: "Which scenario best suits Redux over Context API?",
-        options: [
-            "Passing theme colors through tree",
-            "Managing frequently changing state across many components",
-            "Sharing auth status between pages",
-            "Providing translations to components"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• state پیچیده که frequently update می‌شود\n" +
-            "- بسیاری از کامپوننت‌ها به آن نیاز دارند\n" +
-            "- نیاز به middleware برای async logic\n" +
-            "- debugging پیشرفته لازم است\n" +
-            "- Context برای frequent updates slow است"
+    options: [
+    "Passing theme colors through tree",
+    "Managing frequently changing state across many components",
+    "Sharing auth status between pages",
+    "Providing translations to components"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• state پیچیده که frequently update می‌شود\n" +
+"- بسیاری از کامپوننت‌ها به آن نیاز دارند\n" +
+"- نیاز به middleware برای async logic\n" +
+"- debugging پیشرفته لازم است\n" +
+"- Context برای frequent updates slow است"
 
-    },
-    {
-        id: 277,
+},
+{
+    id: 277,
         question: "What debugging advantage does Redux provide over Context?",
-        options: [
-            "Automatic error boundary creation",
-            "Built-in TypeScript support",
-            "Time-travel debugging with DevTools",
-            "Faster component rendering"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation":"• Redux DevTools قدرتمند برای inspect کردن state\n" +
-            "- time-travel debugging برای undo/redo\n" +
-            "- action history و state changes قابل مشاهده\n" +
-            "- state diff بین actions\n" +
-            "- Context چنین ابزارهایی ندارد"
+    options: [
+    "Automatic error boundary creation",
+    "Built-in TypeScript support",
+    "Time-travel debugging with DevTools",
+    "Faster component rendering"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation":"• Redux DevTools قدرتمند برای inspect کردن state\n" +
+"- time-travel debugging برای undo/redo\n" +
+"- action history و state changes قابل مشاهده\n" +
+"- state diff بین actions\n" +
+"- Context چنین ابزارهایی ندارد"
 
-    },
-    {
-        id: 278,
+},
+{
+    id: 278,
         question: "What is a disadvantage of Redux compared to Context?",
-        options: [
-            "Built into React natively",
-            "Requires additional packages and setup",
-            "Cannot handle async operations",
-            "Only provides DevTools support"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• نیاز به نصب packages اضافی (redux، react-redux)\n" +
-            "- learning curve بالاتر\n" +
-            "- boilerplate بیشتر (حتی با Redux Toolkit)\n" +
-            "- setup پیچیده‌تر\n" +
-            "- Context built-in React است"
+    options: [
+    "Built into React natively",
+    "Requires additional packages and setup",
+    "Cannot handle async operations",
+    "Only provides DevTools support"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• نیاز به نصب packages اضافی (redux، react-redux)\n" +
+"- learning curve بالاتر\n" +
+"- boilerplate بیشتر (حتی با Redux Toolkit)\n" +
+"- setup پیچیده‌تر\n" +
+"- Context built-in React است"
 
-    },
-    {
-        id: 279,
+},
+{
+    id: 279,
         question: "Why can Context cause performance issues with frequent updates?",
-        options: [
-            "Automatically re-renders all consumers",
-            "Cannot be split into smaller providers",
-            "Requires manual optimization",
-            "Doesn't support memoization"
-        ],
-        correctOption: 0,
-        points: 20,
-        "explanation":"• هر تغییر Context همه consumers را re-render می‌کند\n" +
-            "- حتی اگر consumer فقط بخشی از data بخواهد\n" +
-            "- optimization سخت است\n" +
-            "- برای frequent updates مناسب نیست\n" +
-            "- Redux با selectors این مشکل را حل می‌کند"
+    options: [
+    "Automatically re-renders all consumers",
+    "Cannot be split into smaller providers",
+    "Requires manual optimization",
+    "Doesn't support memoization"
+],
+    correctOption: 0,
+    points: 20,
+    "explanation":"• هر تغییر Context همه consumers را re-render می‌کند\n" +
+"- حتی اگر consumer فقط بخشی از data بخواهد\n" +
+"- optimization سخت است\n" +
+"- برای frequent updates مناسب نیست\n" +
+"- Redux با selectors این مشکل را حل می‌کند"
 
-    },
-    {
-        id: 280,
+},
+{
+    id: 280,
         question: "Which tool provides better debugging for state management?",
-        options: [
-            "Context API with React DevTools",
-            "Redux with dedicated DevTools extension",
-            "useReducer with console logging",
-            "Local state with debugger"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• Redux DevTools امکانات debugging پیشرفته دارد\n" +
-            "- مشاهده تمام actions و state changes\n" +
-            "- time-travel برای undo/redo\n" +
-            "- state diff و action payload\n" +
-            "- React DevTools فقط Context value را نشان می‌دهد\n" +
-            "- Redux برای debugging بسیار بهتر است"
+    options: [
+    "Context API with React DevTools",
+    "Redux with dedicated DevTools extension",
+    "useReducer with console logging",
+    "Local state with debugger"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• Redux DevTools امکانات debugging پیشرفته دارد\n" +
+"- مشاهده تمام actions و state changes\n" +
+"- time-travel برای undo/redo\n" +
+"- state diff و action payload\n" +
+"- React DevTools فقط Context value را نشان می‌دهد\n" +
+"- Redux برای debugging بسیار بهتر است"
 
-    },
-    {
-        id: 281,
+},
+{
+    id: 281,
         question: "When is Context API the better choice over Redux?",
-        options: [
-            "For complex state with nested structures",
-            "For apps requiring middleware",
-            "For sharing rarely changing values like theme",
-            "For shopping cart with frequent updates"
-        ],
-        correctOption: 2,
-        points: 10,
-        "explanation":"• برای state ساده که کم تغییر می‌کند (theme، language)\n" +
-            "- تعداد consumers محدود است\n" +
-            "- نیازی به middleware نیست\n" +
-            "- پروژه کوچک یا متوسط\n" +
-            "- می‌خواهید از dependencies اضافی اجتناب کنید"
-    },
-    {
-        id: 282,
+    options: [
+    "For complex state with nested structures",
+    "For apps requiring middleware",
+    "For sharing rarely changing values like theme",
+    "For shopping cart with frequent updates"
+],
+    correctOption: 2,
+    points: 10,
+    "explanation":"• برای state ساده که کم تغییر می‌کند (theme، language)\n" +
+"- تعداد consumers محدود است\n" +
+"- نیازی به middleware نیست\n" +
+"- پروژه کوچک یا متوسط\n" +
+"- می‌خواهید از dependencies اضافی اجتناب کنید"
+},
+{
+    id: 282,
         question: "What is the most appropriate use case for Context API?",
-        options: [
-            "Managing complex state with frequent updates",
-            "Avoiding prop drilling for shared values",
-            "Handling async data fetching",
-            "Creating time-travel debugging"
-        ],
-        correctOption: 1,
-        points: 10,
-        "explanation":"• جلوگیری از prop drilling برای shared values\n" +
-            "- theme، language و user preferences\n" +
-            "- authentication state ساده\n" +
-            "- values که rarely تغییر می‌کنند\n" +
-            "- state که نیاز به middleware ندارد"
-    },
-    {
-        id: 283,
+    options: [
+    "Managing complex state with frequent updates",
+    "Avoiding prop drilling for shared values",
+    "Handling async data fetching",
+    "Creating time-travel debugging"
+],
+    correctOption: 1,
+    points: 10,
+    "explanation":"• جلوگیری از prop drilling برای shared values\n" +
+"- theme، language و user preferences\n" +
+"- authentication state ساده\n" +
+"- values که rarely تغییر می‌کنند\n" +
+"- state که نیاز به middleware ندارد"
+},
+{
+    id: 283,
         question: "When should you choose Redux over Context?",
-        options: [
-            "For passing static config data",
-            "For simple theme switching",
-            "For frequently updating state across components",
-            "For sharing user preferences"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation":"• state پیچیده با frequent updates\n" +
-            "- بسیاری از کامپوننت‌ها به state نیاز دارند\n" +
-            "- نیاز به async logic و middleware\n" +
-            "- debugging پیشرفته لازم است\n" +
-            "- تیم بزرگ و نیاز به structure"
-    },
-    {
-        id: 284,
+    options: [
+    "For passing static config data",
+    "For simple theme switching",
+    "For frequently updating state across components",
+    "For sharing user preferences"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation":"• state پیچیده با frequent updates\n" +
+"- بسیاری از کامپوننت‌ها به state نیاز دارند\n" +
+"- نیاز به async logic و middleware\n" +
+"- debugging پیشرفته لازم است\n" +
+"- تیم بزرگ و نیاز به structure"
+},
+{
+    id: 284,
         question: "Why is Redux suitable for complex state management?",
-        options: [
-            "Built into React framework",
-            "Prevents all re-renders automatically",
-            "Provides predictable updates and debugging tools",
-            "Eliminates need for component state"
-        ],
-        correctOption: 2,
-        points: 20,
-        "explanation":"• predictable state updates با actions و reducers\n" +
-            "- middleware برای async و side effects\n" +
-            "- DevTools قدرتمند برای debugging\n" +
-            "- patterns استاندارد برای scaling\n" +
-            "- testing آسان‌تر با pure functions"
-    },
-    {
-        "id": 285,
-        "question": "Which approach is more efficient for local component state?",
-        "options": [
-            "Redux Toolkit with createSlice",
-            "Redux with middleware",
-            "React Context API",
-            "React DevTools management"
-        ],
-        "correctOption":2,
-        "points": 10,
-        "explanation":"• Context API یا useState/useReducer برای local state\n" +
-            "- Redux overhead اضافی برای local state دارد\n" +
-            "- Context built-in و ساده است\n" +
-            "- performance بهتر برای state محلی\n" +
-            "- Redux فقط برای shared state لازم است"
-    },
-    {
-        "id": 286,
-        question: "Which tool is best for rarely changing global values like theme?",
-        options: [
-            "React Context API",
-            "Redux Toolkit",
-            "Redux with middleware",
-            "Global store libraries"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation":"• Context API برای rarely changing values عالی است\n" +
-            "- ساده و built-in React\n" +
-            "- overhead کمتر از Redux\n" +
-            "- برای theme، language کافی است\n" +
-            "- نیازی به Redux برای این موارد نیست"
-    },
-    {
-        "id": 287,
-        "question": "What is the main purpose of React Context?",
-        "options": [
-            "Replace all state management libraries",
-            "Share data without prop drilling",
-            "Improve component render performance",
-            "Handle all API requests centrally"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• Context برای sharing data بین components بدون prop drilling\n" +
-            "- جلوگیری از pass کردن props در چند لایه\n" +
-            "- برای global-ish data مثل theme، user، language\n" +
-            "- built-in React و نیازی به library نیست\n" +
-            "- اما جایگزین Redux برای همه موارد نیست"
-    },
-    {
-        "id": 288,
-        "question": "How do you create a Context in React?",
-        "options": [
-            "Using createContext() function from React",
-            "Using new Context() constructor",
-            "Using useContext hook directly",
-            "Context is created automatically"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• از React.createContext() استفاده می‌شود\n" +
-            "- یک Context object برمی‌گرداند\n" +
-            "- می‌تواند default value بگیرد\n" +
-            "- Provider و Consumer components دارد\n" +
-            "- معمولاً در فایل جداگانه define می‌شود"
-    },
-    {
-        "id": 289,
-        "question": "What is the purpose of Context Provider?",
-        "options": [
-            "To consume context values only",
-            "To supply context value to descendant components",
-            "To create multiple contexts simultaneously",
-            "To validate context data types"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• Provider مقدار Context را به children می‌دهد\n" +
-            "- value prop برای set کردن data\n" +
-            "- همه descendants می‌توانند access داشته باشند\n" +
-            "- تغییر value باعث re-render consumers می‌شود\n" +
-            "- معمولاً در بالای component tree"
-    },
-    {
-        "id": 290,
-        "question": "Can you have nested Context Providers of the same Context?",
-        "options": [
-            "No, causes infinite loops",
-            "Yes, inner Provider overrides outer value",
-            "Only with different context names",
-            "Only in production mode"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• بله، می‌توانید Providers را nest کنید\n" +
-            "- Provider داخلی مقدار بیرونی را override می‌کند\n" +
-            "- consumers نزدیک‌ترین Provider را می‌خوانند\n" +
-            "- برای scoped values مفید است\n" +
-            "- مثل theme override در بخش خاص"
-    },
-    {
-        "id": 291,
-        "question": "What happens when Context value changes?",
-        "options": [
-            "Only Provider re-renders",
-            "All consumers re-render automatically",
-            "No components re-render",
-            "Only direct children re-render"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• تمام consumers به صورت خودکار re-render می‌شوند\n" +
-            "- حتی اگر فقط بخشی از value نیاز باشد\n" +
-            "- React.memo نمی‌تواند این را جلوگیری کند\n" +
-            "- برای optimization باید Context را split کنید\n" +
-            "- این یکی از performance considerations است"
-    },
-    {
-        "id": 292,
-        "question": "How do you prevent unnecessary re-renders with Context?",
-        "options": [
-            "Split contexts and memoize values",
-            "Use global variables instead",
-            "Disable Context updates",
-            "Use only primitive values"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• Context را به چند Context کوچک‌تر تقسیم کنید\n" +
-            "- value را با useMemo wrap کنید\n" +
-            "- از children pattern استفاده کنید\n" +
-            "- consumers را با React.memo wrap کنید\n" +
-            "- ترکیب این techniques بهترین نتیجه را می‌دهد"
-    },
-    {
-        "id": 293,
-        "question": "Can you use multiple Contexts in one component?",
-        "options": [
-            "No, only one context per component",
-            "Yes, using multiple useContext calls",
-            "Only with Context composition pattern",
-            "Only in Class Components"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• بله، می‌توانید چندین useContext استفاده کنید\n" +
-            "- هر useContext یک Context جداگانه\n" +
-            "- const theme = useContext(ThemeContext)\n" +
-            "- const user = useContext(UserContext)\n" +
-            "- هیچ محدودیتی در تعداد نیست"
-    },
-    {
-        "id": 294,
-        "question": "What is the default value in createContext used for?",
-        "options": [
-            "When no Provider is found in tree",
-            "As initial value for all consumers",
-            "For TypeScript type inference only",
-            "To reset context to defaults"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• default value زمانی استفاده می‌شود که Provider نباشد\n" +
-            "- اگر component خارج از Provider باشد\n" +
-            "- برای testing بدون Provider مفید است\n" +
-            "- معمولاً null یا undefined قرار می‌دهند\n" +
-            "- با Provider، default value ignore می‌شود"
-    },
-    {
-        "id": 295,
-        "question": "Which example demonstrates DOM traversal?",
-        "options": [
-            "document.createElement('div')",
-            "element.parentNode.nextSibling",
-            "fetch('api/data')",
-            "JSON.stringify({name: 'Omid'})"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• parentNode و nextSibling برای حرکت در DOM tree\n" +
-            "- traversal یعنی navigate کردن بین nodes\n" +
-            "- برای دسترسی به elements مرتبط استفاده می‌شود\n" +
-            "- در React معمولاً نیازی به DOM traversal نیست\n" +
-            "- React declarative است و DOM را خودش مدیریت می‌کند"
-    },
-    {
-        "id": 296,
-        "question":"What distinguishes imperative from declarative programming?",
-        "options": [
-            "Imperative focuses on what should happen, declarative on how",
-            "Declarative focuses on what should happen, imperative on how",
-            "Imperative is faster, declarative is more readable",
-            "Declarative requires more code, imperative requires less"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• imperative: چگونه کاری انجام شود (HOW)\n" +
-            "- declarative: چه کاری انجام شود (WHAT)\n" +
-            "- imperative: step-by-step instructions\n" +
-            "- declarative: describe کردن نتیجه مورد نظر\n" +
-            "- React declarative است"
-    },
-    {
-        "id": 297,
-        "question": "Which approach represents declarative programming in React?",
-        "options": [
-            "Manually updating DOM elements with getElementById",
-            "Using JSX to describe what the UI should look like",
-            "Writing for loops to create HTML elements",
-            "Directly manipulating CSS styles with JavaScript"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• JSX توصیف می‌کند UI چگونه باید باشد\n" +
-            "- نه اینکه چگونه ساخته شود\n" +
-            "- React خودش DOM را update می‌کند\n" +
-            "- شما فقط desired state را declare می‌کنید\n" +
-            "- این declarative programming است"
-    },
-    {
-        "id": 298,
-        "question": "What is the primary benefit of declarative programming in React?",
-        "options": [
-            "Write step-by-step DOM manipulation instructions",
-            "Describe what UI should be, not how to build it",
-            "Manually track all state and DOM changes",
-            "Directly use querySelector for updates"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• کد ساده‌تر و خواناتر\n" +
-            "- شما چه می‌خواهید describe می‌کنید نه چگونه\n" +
-            "- React implementation details را handle می‌کند\n" +
-            "- کمتر bug و آسان‌تر maintenance\n" +
-            "- focus روی UI است نه DOM manipulation"
-    },
-    {
-        "id": 299,
-        "question": "Why is DOM traversing important in front-end development?",
-        "options": [
-            "Allows navigation and manipulation of HTML structure",
-            "CSS styling replacement with JavaScript calculations",
-            "Automatic JavaScript performance optimization",
-            "Server-side HTML content generation"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• برای navigate و manipulate کردن HTML structure\n" +
-            "- دسترسی به elements مرتبط\n" +
-            "- برای event delegation مفید است\n" +
-            "- در vanilla JavaScript ضروری است\n" +
-            "- اما در React کمتر نیاز است"
-    },
-    {
-        "id": 300,
-        "question":  "How does feature-based folder structure improve maintainability?",
-        "options": [
-            "Files are separated by technical type only",
-            "Bundle size reduces through automatic tree-shaking",
-            "Related functionality groups together in modules",
-            "Global state management enforces across components"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• فایل‌های مرتبط در یک folder هستند\n" +
-            "- راحت‌تر پیدا کردن و تغییر دادن\n" +
-            "- هر feature مستقل است\n" +
-            "- scaling و team collaboration بهتر\n" +
-            "- بهتر از تفکیک بر اساس نوع فایل"
-    },
-    {
-        "id": 301,
-        "question": "What challenge arises from organizing projects by file type?",
-        "options": [
-            "Components become impossible to reuse",
-            "UI and logic mix in directories",
-            "Bundle size increases automatically",
-            "Related files spread across folders"
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation": "• فایل‌های مرتبط در folders مختلف پراکنده می‌شوند\n" +
-            "- پیدا کردن همه قسمت‌های یک feature سخت است\n" +
-            "- refactoring پیچیده‌تر می‌شود\n" +
-            "- scaling مشکل دارد\n" +
-            "- feature-based بهتر است"
-    },
-    {
-        "id": 302,
-        "question": "Where should components be placed in feature-based architecture?",
-        "options": [
-            "Within each feature directory with related files",
-            "In centralized components folder for sharing",
-            "Inside dedicated pages directory for routing",
-            "Mixed with hooks regardless of boundaries"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• در folder مربوط به feature خود\n" +
-            "- با related files (hooks، utils، styles)\n" +
-            "- shared components در folder جداگانه\n" +
-            "- هر feature self-contained است\n" +
-            "- modularity و reusability بهتر"
-    },
-    {
-        "id": 303,
-        "question":"What does 'data loading waterfall' mean in React?",
-        "options": [
-            "Advanced caching strategies to completely eliminate the need for repeated network calls",
-            "Multiple requests executed sequentially, causing slower loading times",
-            "Executing all API requests in parallel regardless of dependencies",
-            "Fetching data only for the components currently visible in the viewport",
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation": "• requests به صورت sequential اجرا می‌شوند\n" +
-            "- هر request منتظر قبلی است\n" +
-            "- loading time کل افزایش می‌یابد\n" +
-            "- باید requests را parallel کنید\n" +
-            "- React Query و Suspense کمک می‌کنند"
-    },
-    {
-        "id": 304,
-        "question": "What is the main purpose of the HTTP PATCH method?",
-        "options": [
-            "retrieves complete data of a resource without modifications",
-            "Replaces entire resource with provided data",
-            "Applies partial modifications to existing resource",
-            "Creates completely new resource on server"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• برای partial update یک resource\n" +
-            "- فقط فیلدهای تغییر یافته ارسال می‌شود\n" +
-            "- کم‌حجم‌تر از PUT\n" +
-            "- برای update جزئی مناسب است\n" +
-            "- مثل تغییر فقط email کاربر"
-    },
-    {
-        "id": 305,
-        "question": "How does HTTP PUT differ from PATCH?",
-        "options": [
-            "PUT retrieves resources, PATCH deletes them",
-            "PUT replaces full resource, PATCH updates fields",
-            "PUT creates new resources, PATCH deletes existing",
-            "PUT sends partial data, PATCH requires full"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• PUT کل resource را replace می‌کند\n" +
-            "- PATCH فقط بخش‌هایی را update می‌کند\n" +
-            "- PUT نیاز به تمام فیلدها دارد\n" +
-            "- PATCH فقط تغییرات را می‌فرستد\n" +
-            "- PATCH efficient تر برای updates جزئی"
-    },
-    {
-        "id": 306,
-        "question": "When should POST be preferred over PUT or PATCH?",
-        "options": [
-            "Partially updating one property of resource",
-            "Replacing entire resource with new data",
-            "Creating completely new resource on server",
-            "Retrieving current state of existing resource"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• برای ساخت resource کاملاً جدید\n" +
-            "- وقتی ID توسط server generate می‌شود\n" +
-            "- برای actions که resource جدید ایجاد می‌کنند\n" +
-            "- PUT/PATCH برای update resources موجود\n" +
-            "- POST برای create، PUT/PATCH برای update"
-    },
-    {
-        "id": 307,
-        "question": "Which scenario best fits the PATCH method?",
-        "options": [
-            "Uploading profile picture without changing other data",
-            "Creating new order with customer and items",
-            "Replacing entire shopping cart with new items",
-            "Fetching order history for specific customer"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• update کردن profile picture بدون تغییر بقیه\n" +
-            "- فقط فیلدهای خاص update می‌شوند\n" +
-            "- data کمتری ارسال می‌شود\n" +
-            "- efficient برای updates جزئی\n" +
-            "- بهتر از PUT که همه را می‌خواهد"
-    },
-    {
-        "id": 308,
-        question: "To update only delivery address of existing order, which HTTP method should be used?",
-        "options": [
-            "GET",
-            "POST",
-            "PUT",
-            "PATCH"
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation": "• PATCH برای partial update مناسب است\n" +
-            "- فقط address field ارسال می‌شود\n" +
-            "- بقیه order تغییر نمی‌کند\n" +
-            "- efficient و targeted update\n" +
-            "- بهترین انتخاب برای این scenario"
-    },
-    {
-        "id": 309,
-        question: "To create a brand new pizza order, which HTTP method should be used?",
-        "options": [
-            "GET",
-            "POST",
-            "PUT",
-            "PATCH"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• POST برای ایجاد resource جدید\n" +
-            "- order جدید در database ساخته می‌شود\n" +
-            "- server معمولاً ID generate می‌کند\n" +
-            "- استاندارد RESTFUL برای create\n" +
-            "- response شامل order ساخته شده"
-    },
-    {
-        "id": 310,
-        question: "To replace entire pizza menu with new list, which HTTP method should be used?",
-        "options": [
-            "GET",
-            "POST",
-            "PUT",
-            "PATCH"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• PUT برای replace کردن کامل resource\n" +
-            "- تمام menu جدید ارسال می‌شود\n" +
-            "- menu قدیمی کاملاً replace می‌شود\n" +
-            "- idempotent است (تکرار نتیجه یکسان)\n" +
-            "- برای replacement کامل مناسب"
-    },
-    {
-        "id": 311,
-        "question":  "To view specific order details by ID, which HTTP method should be used?",
-        "options": [
-            "GET",
-            "POST",
-            "PUT",
-            "PATCH"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• GET برای خواندن/دریافت data\n" +
-            "- فقط retrieve می‌کند، تغییر نمی‌دهد\n" +
-            "- safe و idempotent است\n" +
-            "- برای read operations استاندارد\n" +
-            "- معمولاً با ID در URL"
-    },
-    {
-        "id": 312,
-        "question": "To cancel and remove order completely, which HTTP method should be used?",
-        "options": [
-            "GET",
-            "POST",
-            "PUT",
-            "DELETE"
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation": "• DELETE برای حذف resource\n" +
-            "- order کاملاً از database حذف می‌شود\n" +
-            "- idempotent است\n" +
-            "- استاندارد RESTFUL برای deletion\n" +
-            "- معمولاً 204 No Content return می‌کند"
-    },
-    {
-        "id": 313,
-        "question":"What defines a pure function in JavaScript?",
-        "options": [
-            "Always returns same output for same input",
-            "Can modify variables outside its scope",
-            "Depends on external states like Date.now()",
-            "Causes side effects like DOM manipulation"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• همیشه با input یکسان، output یکسان\n" +
-            "- بدون side effects (تغییر external state)\n" +
-            "- نتیجه فقط به arguments بستگی دارد\n" +
-            "- deterministic و predictable\n" +
-            "- Redux reducers باید pure باشند"
-    },
-    {
-        "id": 314,
-        "question":  "What makes a React component impure?",
-        "options": [
-            "Using props to render UI",
-            "Returning JSX consistently from component",
-            "Receiving children elements ",
-            "Fetching data directly inside render",
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation": "• fetch کردن data مستقیماً در render\n" +
-            "- تغییر دادن متغیرهای external\n" +
-            "- تکیه بر Date.now() یا Math.random()\n" +
-            "- mutating props یا state\n" +
-            "- side effects باید در useEffect باشند"
-    },
-    {
-        "id": 315,
-        "question":  "Why should functions in useMemo be pure?",
-        "options": [
-            "Impure functions are automatically memoized",
-            "Pure functions cannot accept any arguments",
-            "Impure functions may return conflicting results",
-            "useMemo only works with async functions"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• useMemo نتیجه را cache می‌کند\n" +
-            "- با dependencies یکسان، نتیجه باید یکسان باشد\n" +
-            "- impure functions نتایج inconsistent دارند\n" +
-            "- caching با impurity کار نمی‌کند\n" +
-            "- باعث bugs پنهان می‌شود"
-    },
-    {
-        "id": 316,
-        "question": "What breaks the purity of a Redux reducer?",
-        "options": [
-            "Returning new state object from reducer",
-            "Spreading previous state into new one",
-            "Calculating sum of two numbers",
-            "Logging message to console from reducer"
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation": "• logging به console یا calling APIs\n" +
-            "- mutating state مستقیماً\n" +
-            "- استفاده از Date.now() یا Math.random()\n" +
-            "- reading/writing external variables\n" +
-            "- reducers باید فقط state جدید return کنند"
-    },
-    {
-        "id": 317,
-        "question": "What is the best practice when modeling Redux state?",
-        "options": [
-            "Store the entire UI tree directly inside the state",
-            "Duplicate entities in multiple parts of the state for faster access",
-            "Normalize data and avoid deep nesting structures",
-            "Keep derived values permanently stored in state"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• normalize کردن data برای جلوگیری از duplication\n" +
-            "- از deep nesting اجتناب کنید\n" +
-            "- flat structure بهتر از nested است\n" +
-            "- استفاده از IDs برای relations\n" +
-            "- derived values را در state ذخیره نکنید"
-    },
-    {
-        "id": 318,
-        "question": "Why is normalization recommended in Redux?",
-        "options": [
-            "Makes state harder to update consistently",
-            "Ensures all data is stored in nested objects",
-            "Makes selectors unnecessary in the application",
-            "Allows easy updates and avoids data duplication",
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation": "• updates آسان‌تر و consistent تر\n" +
-            "- از data duplication جلوگیری می‌کند\n" +
-            "- performance بهتر برای lookups\n" +
-            "- relationships واضح‌تر با IDs\n" +
-            "- شبیه database normalization"
-    },
-    {
-        "id": 319,
-        "question": "Why prefer React Query over fetch with useEffect?",
-        "options": [
-            "eliminates the need for backend APIs",
-            "Handles caching, refetching, and background updates",
-            "replaces Redux for all state management including local state",
-            "converts all API responses into static HTML automatically"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• caching خودکار برای performance\n" +
-            "- background refetching برای freshness\n" +
-            "- loading و error states built-in\n" +
-            "- optimistic updates و mutations\n" +
-            "- کد کمتر و ساده‌تر از manual fetch"
-    },
-    {
-        "id": 320,
-        "question": "Why do we need frameworks like React?",
-        "options": [
-            "JavaScript cannot support DOM manipulation",
-            "Vanilla JavaScript cannot work with APIs",
-            "Frameworks make state management easier in complex apps",
-            "Frameworks replace JavaScript with different language"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• state management پیچیده را ساده می‌کند\n" +
-            "- DOM manipulation خودکار و optimized\n" +
-            "- component-based architecture برای reusability\n" +
-            "- declarative programming برای readability\n" +
-            "- vanilla JavaScript برای apps بزرگ سخت است"
-    },
-    {
-        "id": 321,
-        "question": "What's a key advantage of React over vanilla JavaScript?",
-        "options": [
-            "React directly modifies DOM for speed",
-            "React removes need for event handling",
-            "React introduces Virtual DOM for efficiency",
-            "React converts CSS into JavaScript functions"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• Virtual DOM برای efficient updates\n" +
-            "- declarative UI به جای imperative\n" +
-            "- component reusability و composition\n" +
-            "- state management built-in\n" +
-            "- ecosystem غنی از libraries و tools"
-    },
-    {
-        "id": 322,
-        "question": "Why is component-based architecture preferred over vanilla JavaScript?",
-        "options": [
-            "Components enable reuse, isolation, and easier testing",
-            "Components eliminate the need for any JavaScript functions",
-            "Vanilla JavaScript cannot handle conditional rendering",
-            "Components automatically generate database queries"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• components قابل reuse در جاهای مختلف\n" +
-            "- isolation و encapsulation بهتر\n" +
-            "- testing آسان‌تر به صورت جداگانه\n" +
-            "- maintenance و scaling ساده‌تر\n" +
-            "- team collaboration بهتر"
-    },
-    {
-        "id": 323,
-        "question":"What was jQuery primarily designed to do?",
-        "options": [
-            "Manage server-side database connections",
-            "Simplify DOM manipulation and event handling",
-            "Replace HTML markup with JavaScript syntax",
-            "Compile JavaScript into optimized machine code"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• jQuery برای ساده‌سازی DOM manipulation\n" +
-            "- cross-browser compatibility را حل می‌کرد\n" +
-            "- AJAX requests را آسان می‌کرد\n" +
-            "- animations و effects built-in\n" +
-            "- قبل از frameworks مدرن بسیار محبوب بود"
-    },
-    {
-        "id": 324,
-        "question":  "Which limitation of jQuery led to adoption of modern frameworks?",
-        "options": [
-            "jQuery prevented DOM manipulation capabilities",
-            "jQuery automatically converted code to server-side scripts",
-            "jQuery lacked structured state management patterns",
-            "jQuery could not run in modern browsers"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation": "• jQuery structure و state management نداشت\n" +
-            "- برای SPAs پیچیده کافی نبود\n" +
-            "- component-based architecture نداشت\n" +
-            "- data binding و reactivity نداشت\n" +
-            "- React و Vue این مشکلات را حل کردند"
-    },
-    {
-        "id": 325,
-        "question": "How does a web application differ from a regular desktop application?",
-        "options": [
-            "Web applications run on servers and are accessed via browsers",
-            "Web applications execute entirely on local machines",
-            "Web applications contain only static HTML content",
-            "Web applications do not require a browser to run"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• web application در browser اجرا می‌شود\n" +
-            "- از server data می‌گیرد\n" +
-            "- نیازی به installation ندارد\n" +
-            "- cross-platform است\n" +
-            "- desktop app روی OS مستقیماً اجرا می‌شود"
-    },
-    {
-        "id": 326,
-        "question":  "What is the primary role of React Query in React applications?",
-        "options": [
-            "Styling React components using CSS-in-JS",
-            "Managing server state including fetching and caching",
-            "Replacing useState for local state management",
-            "Building UI components without JSX syntax"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• React Query server state را مدیریت می‌کند\n" +
-            "- fetching، caching و synchronization\n" +
-            "- loading و error states خودکار\n" +
-            "- background refetching\n" +
-            "- alternative به Redux برای server data"
-    },
-    {
-        "id": 327,
-        "question": "Why do modern applications rely on front-end frameworks?",
-        "options": [
-            "To automatically convert HTML into server scripts",
-            "To simplify interactive UI and manage application state",
-            "To eliminate the need for backend infrastructure",
-            "To replace CSS with JavaScript styling solutions"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation": "• frameworks state management را ساده می‌کنند\n" +
-            "- component-based architecture\n" +
-            "- reactivity و data binding\n" +
-            "- routing و navigation\n" +
-            "- vanilla JS برای apps پیچیده سخت است"
-    },
-    {
-        "id": 328,
-        "question": "What differentiates a web application from a web page?",
-        "options": [
-            "Pages allow interaction, apps are purely static",
-            "Pages require servers, apps work offline",
-            "Applications enable interaction, pages mainly display content",
-            "Applications run offline, pages need internet"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• web page بیشتر static و informational\n" +
-            "- web application interactive و functional\n" +
-            "- app دارای user actions و state\n" +
-            "- app مثل Gmail، page مثل blog\n" +
-            "- app معمولاً نیاز به backend دارد"
-    },
-    {
-        "id": 329,
-        "question": "When is React more beneficial than plain HTML/CSS/JS?",
-        "options": [
-            "React efficiently manages complex UI state and interactions",
-            "React automatically converts HTML into server-side scripts",
-            "React removes the need for CSS styling",
-            "React works only for pages without a server"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• React برای UI پیچیده با state زیاد\n" +
-            "- data که frequently تغییر می‌کند\n" +
-            "- reusable components لازم است\n" +
-            "- single page applications\n" +
-            "- plain JS برای static sites کافی است"
-    },
-    {
-        "id": 330,
-        "question":  "What does keeping the UI synchronized with data mean?",
-        "options": [
-            "Data should remain static to avoid frequent updates",
-            "UI updates occur only during full page refreshes",
-            "UI elements need manual updates for data changes",
-            "UI automatically reflects the current state of data"
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation": "• UI همیشه آخرین data را نشان می‌دهد\n" +
-            "- وقتی data تغییر کند، UI update شود\n" +
-            "- بدون manual DOM manipulation\n" +
-            "- React این کار را خودکار انجام می‌دهد\n" +
-            "- consistency بین state و view"
-    },
-    {
-        "id": 331,
-        "question":"How does React ensure UI stays in sync with data?",
-        "options": [
-            "By directly manipulating the DOM using vanilla JavaScript",
-            "By using state variables and triggering re-renders",
-            "By relying solely on global variables without state management",
-            "By refreshing the entire page after each data change"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• React از state و re-rendering استفاده می‌کند\n" +
-            "- تغییر state باعث re-render می‌شود\n" +
-            "- Virtual DOM برای efficient updates\n" +
-            "- declarative approach\n" +
-            "- developer فقط state را update می‌کند"
-    },
-    {
-        "id": 332,
-        "question": "Why is UI-data synchronization crucial in applications?",
-        "options": [
-            "It ensures users see accurate and up-to-date information",
-            "It speeds up applications by preventing updates",
-            "It allows avoiding React or similar frameworks",
-            "It caches old data without updating the interface"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• کاربر باید accurate information ببیند\n" +
-            "- جلوگیری از stale data\n" +
-            "- user experience بهتر\n" +
-            "- trust و reliability\n" +
-            "- real-time updates مهم هستند"
-    },
-    {
-        "id": 333,
-        "question":"What does DOM traversal allow developers to do in JavaScript?",
-        "options": [
-            "Create new elements and attach them to the DOM",
-            "Send asynchronous requests to a server",
-            "Navigate and access nodes already present in the DOM",
-            "Convert JavaScript code into machine instructions"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• حرکت بین nodes در DOM tree\n" +
-            "- دسترسی به parent، children، siblings\n" +
-            "- parentNode، childNodes، nextSibling\n" +
-            "- برای navigation در HTML structure\n" +
-            "- در React کمتر نیاز است"
-    },
-    {
-        "id": 334,
-        "question": "What made jQuery popular among developers?",
-        "options": [
-            "Replaced JavaScript as browser language",
-            "Automatically optimized web performance",
-            "Eliminated need for CSS styling",
-            "Provided cross-browser support for common DOM tasks"
-        ],
-        "correctOption":3,
-        "points": 20,
-        "explanation": "• cross-browser compatibility آسان\n" +
-            "- syntax ساده و readable\n" +
-            "- DOM manipulation راحت\n" +
-            "- AJAX built-in\n" +
-            "- زمانی که browsers inconsistent بودند"
-    },
-    {
-        "id": 335,
-        "question": "How would you best describe React?",
-        "options": [
-            "declarative, component-based, state-driven JavaScript library for building UIs",
-            "full-featured JavaScript framework with built-in routing and state management",
-            "CSS utility framework for creating responsive designs quickly",
-            "server-side runtime environment for executing JavaScript outside the browser"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• declarative: چه می‌خواهید نه چگونه\n" +
-            "- component-based: reusable pieces\n" +
-            "- state-driven: UI از state می‌آید\n" +
-            "- JavaScript library نه framework کامل\n" +
-            "- برای building UIs طراحی شده"
-    },
-    {
-        "id": 336,
-        "question":"What characterizes declarative programming in React?",
-        "options": [
-            "You manually update DOM elements step-by-step",
-            "You write CSS classes for component styling",
-            "You specify what the UI should look like",
-            "You use server-side rendering for HTML"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• شما describe می‌کنید UI چگونه باید باشد\n" +
-            "- نه step-by-step چگونه بسازید\n" +
-            "- React implementation را handle می‌کند\n" +
-            "- مثل HTML declarative است\n" +
-            "- opposite از imperative"
-    },
-    {
-        "id": 337,
-        "question":  "How does imperative differ from declarative programming?",
-        "options": [
-            "You provide step-by-step instructions for execution",
-            "You only declare what UI should display",
-            "You style components using utility-first CSS",
-            "You let frameworks handle all DOM updates"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• imperative: چگونه کاری انجام شود (HOW)\n" +
-            "- step-by-step instructions\n" +
-            "- declarative: چه کاری انجام شود (WHAT)\n" +
-            "- result را describe می‌کنید\n" +
-            "- imperative: DOM manipulation manual"
-    },
-    {
-        "id": 338,
-        "question":"What role do case reducers play in Redux Toolkit?",
-        "options": [
-            "They replace Redux store with local state",
-            "They automatically fetch data from external APIs",
-            "They style components using predefined CSS classes",
-            "They define how state changes for specific actions",
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation": "• case reducers هر action type را handle می‌کنند\n" +
-            "- مثل cases در switch statement\n" +
-            "- state و action می‌گیرند\n" +
-            "- state جدید return می‌کنند\n" +
-            "- در createSlice define می‌شوند"
-    },
-    {
-        id: 339,
+    options: [
+    "Built into React framework",
+    "Prevents all re-renders automatically",
+    "Provides predictable updates and debugging tools",
+    "Eliminates need for component state"
+],
+    correctOption: 2,
+    points: 20,
+    "explanation":"• predictable state updates با actions و reducers\n" +
+"- middleware برای async و side effects\n" +
+"- DevTools قدرتمند برای debugging\n" +
+"- patterns استاندارد برای scaling\n" +
+"- testing آسان‌تر با pure functions"
+},
+{
+    "id": 285,
+    "question": "Which approach is more efficient for local component state?",
+    "options": [
+    "Redux Toolkit with createSlice",
+    "Redux with middleware",
+    "React Context API",
+    "React DevTools management"
+],
+    "correctOption":2,
+    "points": 10,
+    "explanation":"• Context API یا useState/useReducer برای local state\n" +
+"- Redux overhead اضافی برای local state دارد\n" +
+"- Context built-in و ساده است\n" +
+"- performance بهتر برای state محلی\n" +
+"- Redux فقط برای shared state لازم است"
+},
+{
+    "id": 286,
+    question: "Which tool is best for rarely changing global values like theme?",
+    options: [
+    "React Context API",
+    "Redux Toolkit",
+    "Redux with middleware",
+    "Global store libraries"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation":"• Context API برای rarely changing values عالی است\n" +
+"- ساده و built-in React\n" +
+"- overhead کمتر از Redux\n" +
+"- برای theme، language کافی است\n" +
+"- نیازی به Redux برای این موارد نیست"
+},
+{
+    "id": 287,
+    "question": "What is the main purpose of React Context?",
+    "options": [
+    "Replace all state management libraries",
+    "Share data without prop drilling",
+    "Improve component render performance",
+    "Handle all API requests centrally"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• Context برای sharing data بین components بدون prop drilling\n" +
+"- جلوگیری از pass کردن props در چند لایه\n" +
+"- برای global-ish data مثل theme، user، language\n" +
+"- built-in React و نیازی به library نیست\n" +
+"- اما جایگزین Redux برای همه موارد نیست"
+},
+{
+    "id": 288,
+    "question": "How do you create a Context in React?",
+    "options": [
+    "Using createContext() function from React",
+    "Using new Context() constructor",
+    "Using useContext hook directly",
+    "Context is created automatically"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• از React.createContext() استفاده می‌شود\n" +
+"- یک Context object برمی‌گرداند\n" +
+"- می‌تواند default value بگیرد\n" +
+"- Provider و Consumer components دارد\n" +
+"- معمولاً در فایل جداگانه define می‌شود"
+},
+{
+    "id": 289,
+    "question": "What is the purpose of Context Provider?",
+    "options": [
+    "To consume context values only",
+    "To supply context value to descendant components",
+    "To create multiple contexts simultaneously",
+    "To validate context data types"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• Provider مقدار Context را به children می‌دهد\n" +
+"- value prop برای set کردن data\n" +
+"- همه descendants می‌توانند access داشته باشند\n" +
+"- تغییر value باعث re-render consumers می‌شود\n" +
+"- معمولاً در بالای component tree"
+},
+{
+    "id": 290,
+    "question": "Can you have nested Context Providers of the same Context?",
+    "options": [
+    "No, causes infinite loops",
+    "Yes, inner Provider overrides outer value",
+    "Only with different context names",
+    "Only in production mode"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• بله، می‌توانید Providers را nest کنید\n" +
+"- Provider داخلی مقدار بیرونی را override می‌کند\n" +
+"- consumers نزدیک‌ترین Provider را می‌خوانند\n" +
+"- برای scoped values مفید است\n" +
+"- مثل theme override در بخش خاص"
+},
+{
+    "id": 291,
+    "question": "What happens when Context value changes?",
+    "options": [
+    "Only Provider re-renders",
+    "All consumers re-render automatically",
+    "No components re-render",
+    "Only direct children re-render"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• تمام consumers به صورت خودکار re-render می‌شوند\n" +
+"- حتی اگر فقط بخشی از value نیاز باشد\n" +
+"- React.memo نمی‌تواند این را جلوگیری کند\n" +
+"- برای optimization باید Context را split کنید\n" +
+"- این یکی از performance considerations است"
+},
+{
+    "id": 292,
+    "question": "How do you prevent unnecessary re-renders with Context?",
+    "options": [
+    "Split contexts and memoize values",
+    "Use global variables instead",
+    "Disable Context updates",
+    "Use only primitive values"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• Context را به چند Context کوچک‌تر تقسیم کنید\n" +
+"- value را با useMemo wrap کنید\n" +
+"- از children pattern استفاده کنید\n" +
+"- consumers را با React.memo wrap کنید\n" +
+"- ترکیب این techniques بهترین نتیجه را می‌دهد"
+},
+{
+    "id": 293,
+    "question": "Can you use multiple Contexts in one component?",
+    "options": [
+    "No, only one context per component",
+    "Yes, using multiple useContext calls",
+    "Only with Context composition pattern",
+    "Only in Class Components"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• بله، می‌توانید چندین useContext استفاده کنید\n" +
+"- هر useContext یک Context جداگانه\n" +
+"- const theme = useContext(ThemeContext)\n" +
+"- const user = useContext(UserContext)\n" +
+"- هیچ محدودیتی در تعداد نیست"
+},
+{
+    "id": 294,
+    "question": "What is the default value in createContext used for?",
+    "options": [
+    "When no Provider is found in tree",
+    "As initial value for all consumers",
+    "For TypeScript type inference only",
+    "To reset context to defaults"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• default value زمانی استفاده می‌شود که Provider نباشد\n" +
+"- اگر component خارج از Provider باشد\n" +
+"- برای testing بدون Provider مفید است\n" +
+"- معمولاً null یا undefined قرار می‌دهند\n" +
+"- با Provider، default value ignore می‌شود"
+},
+{
+    "id": 295,
+    "question": "Which example demonstrates DOM traversal?",
+    "options": [
+    "document.createElement('div')",
+    "element.parentNode.nextSibling",
+    "fetch('api/data')",
+    "JSON.stringify({name: 'Omid'})"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• parentNode و nextSibling برای حرکت در DOM tree\n" +
+"- traversal یعنی navigate کردن بین nodes\n" +
+"- برای دسترسی به elements مرتبط استفاده می‌شود\n" +
+"- در React معمولاً نیازی به DOM traversal نیست\n" +
+"- React declarative است و DOM را خودش مدیریت می‌کند"
+},
+{
+    "id": 296,
+    "question":"What distinguishes imperative from declarative programming?",
+    "options": [
+    "Imperative focuses on what should happen, declarative on how",
+    "Declarative focuses on what should happen, imperative on how",
+    "Imperative is faster, declarative is more readable",
+    "Declarative requires more code, imperative requires less"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• imperative: چگونه کاری انجام شود (HOW)\n" +
+"- declarative: چه کاری انجام شود (WHAT)\n" +
+"- imperative: step-by-step instructions\n" +
+"- declarative: describe کردن نتیجه مورد نظر\n" +
+"- React declarative است"
+},
+{
+    "id": 297,
+    "question": "Which approach represents declarative programming in React?",
+    "options": [
+    "Manually updating DOM elements with getElementById",
+    "Using JSX to describe what the UI should look like",
+    "Writing for loops to create HTML elements",
+    "Directly manipulating CSS styles with JavaScript"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• JSX توصیف می‌کند UI چگونه باید باشد\n" +
+"- نه اینکه چگونه ساخته شود\n" +
+"- React خودش DOM را update می‌کند\n" +
+"- شما فقط desired state را declare می‌کنید\n" +
+"- این declarative programming است"
+},
+{
+    "id": 298,
+    "question": "What is the primary benefit of declarative programming in React?",
+    "options": [
+    "Write step-by-step DOM manipulation instructions",
+    "Describe what UI should be, not how to build it",
+    "Manually track all state and DOM changes",
+    "Directly use querySelector for updates"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• کد ساده‌تر و خواناتر\n" +
+"- شما چه می‌خواهید describe می‌کنید نه چگونه\n" +
+"- React implementation details را handle می‌کند\n" +
+"- کمتر bug و آسان‌تر maintenance\n" +
+"- focus روی UI است نه DOM manipulation"
+},
+{
+    "id": 299,
+    "question": "Why is DOM traversing important in front-end development?",
+    "options": [
+    "Allows navigation and manipulation of HTML structure",
+    "CSS styling replacement with JavaScript calculations",
+    "Automatic JavaScript performance optimization",
+    "Server-side HTML content generation"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• برای navigate و manipulate کردن HTML structure\n" +
+"- دسترسی به elements مرتبط\n" +
+"- برای event delegation مفید است\n" +
+"- در vanilla JavaScript ضروری است\n" +
+"- اما در React کمتر نیاز است"
+},
+{
+    "id": 300,
+    "question":  "How does feature-based folder structure improve maintainability?",
+    "options": [
+    "Files are separated by technical type only",
+    "Bundle size reduces through automatic tree-shaking",
+    "Related functionality groups together in modules",
+    "Global state management enforces across components"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• فایل‌های مرتبط در یک folder هستند\n" +
+"- راحت‌تر پیدا کردن و تغییر دادن\n" +
+"- هر feature مستقل است\n" +
+"- scaling و team collaboration بهتر\n" +
+"- بهتر از تفکیک بر اساس نوع فایل"
+},
+{
+    "id": 301,
+    "question": "What challenge arises from organizing projects by file type?",
+    "options": [
+    "Components become impossible to reuse",
+    "UI and logic mix in directories",
+    "Bundle size increases automatically",
+    "Related files spread across folders"
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation": "• فایل‌های مرتبط در folders مختلف پراکنده می‌شوند\n" +
+"- پیدا کردن همه قسمت‌های یک feature سخت است\n" +
+"- refactoring پیچیده‌تر می‌شود\n" +
+"- scaling مشکل دارد\n" +
+"- feature-based بهتر است"
+},
+{
+    "id": 302,
+    "question": "Where should components be placed in feature-based architecture?",
+    "options": [
+    "Within each feature directory with related files",
+    "In centralized components folder for sharing",
+    "Inside dedicated pages directory for routing",
+    "Mixed with hooks regardless of boundaries"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• در folder مربوط به feature خود\n" +
+"- با related files (hooks، utils، styles)\n" +
+"- shared components در folder جداگانه\n" +
+"- هر feature self-contained است\n" +
+"- modularity و reusability بهتر"
+},
+{
+    "id": 303,
+    "question":"What does 'data loading waterfall' mean in React?",
+    "options": [
+    "Advanced caching strategies to completely eliminate the need for repeated network calls",
+    "Multiple requests executed sequentially, causing slower loading times",
+    "Executing all API requests in parallel regardless of dependencies",
+    "Fetching data only for the components currently visible in the viewport",
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation": "• requests به صورت sequential اجرا می‌شوند\n" +
+"- هر request منتظر قبلی است\n" +
+"- loading time کل افزایش می‌یابد\n" +
+"- باید requests را parallel کنید\n" +
+"- React Query و Suspense کمک می‌کنند"
+},
+{
+    "id": 304,
+    "question": "What is the main purpose of the HTTP PATCH method?",
+    "options": [
+    "retrieves complete data of a resource without modifications",
+    "Replaces entire resource with provided data",
+    "Applies partial modifications to existing resource",
+    "Creates completely new resource on server"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• برای partial update یک resource\n" +
+"- فقط فیلدهای تغییر یافته ارسال می‌شود\n" +
+"- کم‌حجم‌تر از PUT\n" +
+"- برای update جزئی مناسب است\n" +
+"- مثل تغییر فقط email کاربر"
+},
+{
+    "id": 305,
+    "question": "How does HTTP PUT differ from PATCH?",
+    "options": [
+    "PUT retrieves resources, PATCH deletes them",
+    "PUT replaces full resource, PATCH updates fields",
+    "PUT creates new resources, PATCH deletes existing",
+    "PUT sends partial data, PATCH requires full"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• PUT کل resource را replace می‌کند\n" +
+"- PATCH فقط بخش‌هایی را update می‌کند\n" +
+"- PUT نیاز به تمام فیلدها دارد\n" +
+"- PATCH فقط تغییرات را می‌فرستد\n" +
+"- PATCH efficient تر برای updates جزئی"
+},
+{
+    "id": 306,
+    "question": "When should POST be preferred over PUT or PATCH?",
+    "options": [
+    "Partially updating one property of resource",
+    "Replacing entire resource with new data",
+    "Creating completely new resource on server",
+    "Retrieving current state of existing resource"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• برای ساخت resource کاملاً جدید\n" +
+"- وقتی ID توسط server generate می‌شود\n" +
+"- برای actions که resource جدید ایجاد می‌کنند\n" +
+"- PUT/PATCH برای update resources موجود\n" +
+"- POST برای create، PUT/PATCH برای update"
+},
+{
+    "id": 307,
+    "question": "Which scenario best fits the PATCH method?",
+    "options": [
+    "Uploading profile picture without changing other data",
+    "Creating new order with customer and items",
+    "Replacing entire shopping cart with new items",
+    "Fetching order history for specific customer"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• update کردن profile picture بدون تغییر بقیه\n" +
+"- فقط فیلدهای خاص update می‌شوند\n" +
+"- data کمتری ارسال می‌شود\n" +
+"- efficient برای updates جزئی\n" +
+"- بهتر از PUT که همه را می‌خواهد"
+},
+{
+    "id": 308,
+    question: "To update only delivery address of existing order, which HTTP method should be used?",
+    "options": [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH"
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation": "• PATCH برای partial update مناسب است\n" +
+"- فقط address field ارسال می‌شود\n" +
+"- بقیه order تغییر نمی‌کند\n" +
+"- efficient و targeted update\n" +
+"- بهترین انتخاب برای این scenario"
+},
+{
+    "id": 309,
+    question: "To create a brand new pizza order, which HTTP method should be used?",
+    "options": [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• POST برای ایجاد resource جدید\n" +
+"- order جدید در database ساخته می‌شود\n" +
+"- server معمولاً ID generate می‌کند\n" +
+"- استاندارد RESTFUL برای create\n" +
+"- response شامل order ساخته شده"
+},
+{
+    "id": 310,
+    question: "To replace entire pizza menu with new list, which HTTP method should be used?",
+    "options": [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• PUT برای replace کردن کامل resource\n" +
+"- تمام menu جدید ارسال می‌شود\n" +
+"- menu قدیمی کاملاً replace می‌شود\n" +
+"- idempotent است (تکرار نتیجه یکسان)\n" +
+"- برای replacement کامل مناسب"
+},
+{
+    "id": 311,
+    "question":  "To view specific order details by ID, which HTTP method should be used?",
+    "options": [
+    "GET",
+    "POST",
+    "PUT",
+    "PATCH"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• GET برای خواندن/دریافت data\n" +
+"- فقط retrieve می‌کند، تغییر نمی‌دهد\n" +
+"- safe و idempotent است\n" +
+"- برای read operations استاندارد\n" +
+"- معمولاً با ID در URL"
+},
+{
+    "id": 312,
+    "question": "To cancel and remove order completely, which HTTP method should be used?",
+    "options": [
+    "GET",
+    "POST",
+    "PUT",
+    "DELETE"
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation": "• DELETE برای حذف resource\n" +
+"- order کاملاً از database حذف می‌شود\n" +
+"- idempotent است\n" +
+"- استاندارد RESTFUL برای deletion\n" +
+"- معمولاً 204 No Content return می‌کند"
+},
+{
+    "id": 313,
+    "question":"What defines a pure function in JavaScript?",
+    "options": [
+    "Always returns same output for same input",
+    "Can modify variables outside its scope",
+    "Depends on external states like Date.now()",
+    "Causes side effects like DOM manipulation"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• همیشه با input یکسان، output یکسان\n" +
+"- بدون side effects (تغییر external state)\n" +
+"- نتیجه فقط به arguments بستگی دارد\n" +
+"- deterministic و predictable\n" +
+"- Redux reducers باید pure باشند"
+},
+{
+    "id": 314,
+    "question":  "What makes a React component impure?",
+    "options": [
+    "Using props to render UI",
+    "Returning JSX consistently from component",
+    "Receiving children elements ",
+    "Fetching data directly inside render",
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation": "• fetch کردن data مستقیماً در render\n" +
+"- تغییر دادن متغیرهای external\n" +
+"- تکیه بر Date.now() یا Math.random()\n" +
+"- mutating props یا state\n" +
+"- side effects باید در useEffect باشند"
+},
+{
+    "id": 315,
+    "question":  "Why should functions in useMemo be pure?",
+    "options": [
+    "Impure functions are automatically memoized",
+    "Pure functions cannot accept any arguments",
+    "Impure functions may return conflicting results",
+    "useMemo only works with async functions"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• useMemo نتیجه را cache می‌کند\n" +
+"- با dependencies یکسان، نتیجه باید یکسان باشد\n" +
+"- impure functions نتایج inconsistent دارند\n" +
+"- caching با impurity کار نمی‌کند\n" +
+"- باعث bugs پنهان می‌شود"
+},
+{
+    "id": 316,
+    "question": "What breaks the purity of a Redux reducer?",
+    "options": [
+    "Returning new state object from reducer",
+    "Spreading previous state into new one",
+    "Calculating sum of two numbers",
+    "Logging message to console from reducer"
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation": "• logging به console یا calling APIs\n" +
+"- mutating state مستقیماً\n" +
+"- استفاده از Date.now() یا Math.random()\n" +
+"- reading/writing external variables\n" +
+"- reducers باید فقط state جدید return کنند"
+},
+{
+    "id": 317,
+    "question": "What is the best practice when modeling Redux state?",
+    "options": [
+    "Store the entire UI tree directly inside the state",
+    "Duplicate entities in multiple parts of the state for faster access",
+    "Normalize data and avoid deep nesting structures",
+    "Keep derived values permanently stored in state"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• normalize کردن data برای جلوگیری از duplication\n" +
+"- از deep nesting اجتناب کنید\n" +
+"- flat structure بهتر از nested است\n" +
+"- استفاده از IDs برای relations\n" +
+"- derived values را در state ذخیره نکنید"
+},
+{
+    "id": 318,
+    "question": "Why is normalization recommended in Redux?",
+    "options": [
+    "Makes state harder to update consistently",
+    "Ensures all data is stored in nested objects",
+    "Makes selectors unnecessary in the application",
+    "Allows easy updates and avoids data duplication",
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation": "• updates آسان‌تر و consistent تر\n" +
+"- از data duplication جلوگیری می‌کند\n" +
+"- performance بهتر برای lookups\n" +
+"- relationships واضح‌تر با IDs\n" +
+"- شبیه database normalization"
+},
+{
+    "id": 319,
+    "question": "Why prefer React Query over fetch with useEffect?",
+    "options": [
+    "eliminates the need for backend APIs",
+    "Handles caching, refetching, and background updates",
+    "replaces Redux for all state management including local state",
+    "converts all API responses into static HTML automatically"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• caching خودکار برای performance\n" +
+"- background refetching برای freshness\n" +
+"- loading و error states built-in\n" +
+"- optimistic updates و mutations\n" +
+"- کد کمتر و ساده‌تر از manual fetch"
+},
+{
+    "id": 320,
+    "question": "Why do we need frameworks like React?",
+    "options": [
+    "JavaScript cannot support DOM manipulation",
+    "Vanilla JavaScript cannot work with APIs",
+    "Frameworks make state management easier in complex apps",
+    "Frameworks replace JavaScript with different language"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• state management پیچیده را ساده می‌کند\n" +
+"- DOM manipulation خودکار و optimized\n" +
+"- component-based architecture برای reusability\n" +
+"- declarative programming برای readability\n" +
+"- vanilla JavaScript برای apps بزرگ سخت است"
+},
+{
+    "id": 321,
+    "question": "What's a key advantage of React over vanilla JavaScript?",
+    "options": [
+    "React directly modifies DOM for speed",
+    "React removes need for event handling",
+    "React introduces Virtual DOM for efficiency",
+    "React converts CSS into JavaScript functions"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• Virtual DOM برای efficient updates\n" +
+"- declarative UI به جای imperative\n" +
+"- component reusability و composition\n" +
+"- state management built-in\n" +
+"- ecosystem غنی از libraries و tools"
+},
+{
+    "id": 322,
+    "question": "Why is component-based architecture preferred over vanilla JavaScript?",
+    "options": [
+    "Components enable reuse, isolation, and easier testing",
+    "Components eliminate the need for any JavaScript functions",
+    "Vanilla JavaScript cannot handle conditional rendering",
+    "Components automatically generate database queries"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• components قابل reuse در جاهای مختلف\n" +
+"- isolation و encapsulation بهتر\n" +
+"- testing آسان‌تر به صورت جداگانه\n" +
+"- maintenance و scaling ساده‌تر\n" +
+"- team collaboration بهتر"
+},
+{
+    "id": 323,
+    "question":"What was jQuery primarily designed to do?",
+    "options": [
+    "Manage server-side database connections",
+    "Simplify DOM manipulation and event handling",
+    "Replace HTML markup with JavaScript syntax",
+    "Compile JavaScript into optimized machine code"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• jQuery برای ساده‌سازی DOM manipulation\n" +
+"- cross-browser compatibility را حل می‌کرد\n" +
+"- AJAX requests را آسان می‌کرد\n" +
+"- animations و effects built-in\n" +
+"- قبل از frameworks مدرن بسیار محبوب بود"
+},
+{
+    "id": 324,
+    "question":  "Which limitation of jQuery led to adoption of modern frameworks?",
+    "options": [
+    "jQuery prevented DOM manipulation capabilities",
+    "jQuery automatically converted code to server-side scripts",
+    "jQuery lacked structured state management patterns",
+    "jQuery could not run in modern browsers"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation": "• jQuery structure و state management نداشت\n" +
+"- برای SPAs پیچیده کافی نبود\n" +
+"- component-based architecture نداشت\n" +
+"- data binding و reactivity نداشت\n" +
+"- React و Vue این مشکلات را حل کردند"
+},
+{
+    "id": 325,
+    "question": "How does a web application differ from a regular desktop application?",
+    "options": [
+    "Web applications run on servers and are accessed via browsers",
+    "Web applications execute entirely on local machines",
+    "Web applications contain only static HTML content",
+    "Web applications do not require a browser to run"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• web application در browser اجرا می‌شود\n" +
+"- از server data می‌گیرد\n" +
+"- نیازی به installation ندارد\n" +
+"- cross-platform است\n" +
+"- desktop app روی OS مستقیماً اجرا می‌شود"
+},
+{
+    "id": 326,
+    "question":  "What is the primary role of React Query in React applications?",
+    "options": [
+    "Styling React components using CSS-in-JS",
+    "Managing server state including fetching and caching",
+    "Replacing useState for local state management",
+    "Building UI components without JSX syntax"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• React Query server state را مدیریت می‌کند\n" +
+"- fetching، caching و synchronization\n" +
+"- loading و error states خودکار\n" +
+"- background refetching\n" +
+"- alternative به Redux برای server data"
+},
+{
+    "id": 327,
+    "question": "Why do modern applications rely on front-end frameworks?",
+    "options": [
+    "To automatically convert HTML into server scripts",
+    "To simplify interactive UI and manage application state",
+    "To eliminate the need for backend infrastructure",
+    "To replace CSS with JavaScript styling solutions"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation": "• frameworks state management را ساده می‌کنند\n" +
+"- component-based architecture\n" +
+"- reactivity و data binding\n" +
+"- routing و navigation\n" +
+"- vanilla JS برای apps پیچیده سخت است"
+},
+{
+    "id": 328,
+    "question": "What differentiates a web application from a web page?",
+    "options": [
+    "Pages allow interaction, apps are purely static",
+    "Pages require servers, apps work offline",
+    "Applications enable interaction, pages mainly display content",
+    "Applications run offline, pages need internet"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• web page بیشتر static و informational\n" +
+"- web application interactive و functional\n" +
+"- app دارای user actions و state\n" +
+"- app مثل Gmail، page مثل blog\n" +
+"- app معمولاً نیاز به backend دارد"
+},
+{
+    "id": 329,
+    "question": "When is React more beneficial than plain HTML/CSS/JS?",
+    "options": [
+    "React efficiently manages complex UI state and interactions",
+    "React automatically converts HTML into server-side scripts",
+    "React removes the need for CSS styling",
+    "React works only for pages without a server"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• React برای UI پیچیده با state زیاد\n" +
+"- data که frequently تغییر می‌کند\n" +
+"- reusable components لازم است\n" +
+"- single page applications\n" +
+"- plain JS برای static sites کافی است"
+},
+{
+    "id": 330,
+    "question":  "What does keeping the UI synchronized with data mean?",
+    "options": [
+    "Data should remain static to avoid frequent updates",
+    "UI updates occur only during full page refreshes",
+    "UI elements need manual updates for data changes",
+    "UI automatically reflects the current state of data"
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation": "• UI همیشه آخرین data را نشان می‌دهد\n" +
+"- وقتی data تغییر کند، UI update شود\n" +
+"- بدون manual DOM manipulation\n" +
+"- React این کار را خودکار انجام می‌دهد\n" +
+"- consistency بین state و view"
+},
+{
+    "id": 331,
+    "question":"How does React ensure UI stays in sync with data?",
+    "options": [
+    "By directly manipulating the DOM using vanilla JavaScript",
+    "By using state variables and triggering re-renders",
+    "By relying solely on global variables without state management",
+    "By refreshing the entire page after each data change"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• React از state و re-rendering استفاده می‌کند\n" +
+"- تغییر state باعث re-render می‌شود\n" +
+"- Virtual DOM برای efficient updates\n" +
+"- declarative approach\n" +
+"- developer فقط state را update می‌کند"
+},
+{
+    "id": 332,
+    "question": "Why is UI-data synchronization crucial in applications?",
+    "options": [
+    "It ensures users see accurate and up-to-date information",
+    "It speeds up applications by preventing updates",
+    "It allows avoiding React or similar frameworks",
+    "It caches old data without updating the interface"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• کاربر باید accurate information ببیند\n" +
+"- جلوگیری از stale data\n" +
+"- user experience بهتر\n" +
+"- trust و reliability\n" +
+"- real-time updates مهم هستند"
+},
+{
+    "id": 333,
+    "question":"What does DOM traversal allow developers to do in JavaScript?",
+    "options": [
+    "Create new elements and attach them to the DOM",
+    "Send asynchronous requests to a server",
+    "Navigate and access nodes already present in the DOM",
+    "Convert JavaScript code into machine instructions"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• حرکت بین nodes در DOM tree\n" +
+"- دسترسی به parent، children، siblings\n" +
+"- parentNode، childNodes، nextSibling\n" +
+"- برای navigation در HTML structure\n" +
+"- در React کمتر نیاز است"
+},
+{
+    "id": 334,
+    "question": "What made jQuery popular among developers?",
+    "options": [
+    "Replaced JavaScript as browser language",
+    "Automatically optimized web performance",
+    "Eliminated need for CSS styling",
+    "Provided cross-browser support for common DOM tasks"
+],
+    "correctOption":3,
+    "points": 20,
+    "explanation": "• cross-browser compatibility آسان\n" +
+"- syntax ساده و readable\n" +
+"- DOM manipulation راحت\n" +
+"- AJAX built-in\n" +
+"- زمانی که browsers inconsistent بودند"
+},
+{
+    "id": 335,
+    "question": "How would you best describe React?",
+    "options": [
+    "declarative, component-based, state-driven JavaScript library for building UIs",
+    "full-featured JavaScript framework with built-in routing and state management",
+    "CSS utility framework for creating responsive designs quickly",
+    "server-side runtime environment for executing JavaScript outside the browser"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• declarative: چه می‌خواهید نه چگونه\n" +
+"- component-based: reusable pieces\n" +
+"- state-driven: UI از state می‌آید\n" +
+"- JavaScript library نه framework کامل\n" +
+"- برای building UIs طراحی شده"
+},
+{
+    "id": 336,
+    "question":"What characterizes declarative programming in React?",
+    "options": [
+    "You manually update DOM elements step-by-step",
+    "You write CSS classes for component styling",
+    "You specify what the UI should look like",
+    "You use server-side rendering for HTML"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• شما describe می‌کنید UI چگونه باید باشد\n" +
+"- نه step-by-step چگونه بسازید\n" +
+"- React implementation را handle می‌کند\n" +
+"- مثل HTML declarative است\n" +
+"- opposite از imperative"
+},
+{
+    "id": 337,
+    "question":  "How does imperative differ from declarative programming?",
+    "options": [
+    "You provide step-by-step instructions for execution",
+    "You only declare what UI should display",
+    "You style components using utility-first CSS",
+    "You let frameworks handle all DOM updates"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• imperative: چگونه کاری انجام شود (HOW)\n" +
+"- step-by-step instructions\n" +
+"- declarative: چه کاری انجام شود (WHAT)\n" +
+"- result را describe می‌کنید\n" +
+"- imperative: DOM manipulation manual"
+},
+{
+    "id": 338,
+    "question":"What role do case reducers play in Redux Toolkit?",
+    "options": [
+    "They replace Redux store with local state",
+    "They automatically fetch data from external APIs",
+    "They style components using predefined CSS classes",
+    "They define how state changes for specific actions",
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation": "• case reducers هر action type را handle می‌کنند\n" +
+"- مثل cases در switch statement\n" +
+"- state و action می‌گیرند\n" +
+"- state جدید return می‌کنند\n" +
+"- در createSlice define می‌شوند"
+},
+{
+    id: 339,
         question: "What programming approach does React Router follow?",
-        "options": [
-            "Imperative programming with manual DOM updates",
-            "Declarative programming with component-based routing",
-            "Procedural programming with sequential execution",
-            "Functional programming with pure function composition"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation": "• React Router از رویکرد declarative برای تعریف مسیرها استفاده می‌کند\n" +
-            "- مسیرها به صورت کامپوننت‌های JSX تعریف می‌شوند نه کدهای imperative\n" +
-            "- این رویکرد با فلسفه React هماهنگ است و خوانایی کد را افزایش می‌دهد"
-    },
-    {
-        id: 340,
+    "options": [
+    "Imperative programming with manual DOM updates",
+    "Declarative programming with component-based routing",
+    "Procedural programming with sequential execution",
+    "Functional programming with pure function composition"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation": "• React Router از رویکرد declarative برای تعریف مسیرها استفاده می‌کند\n" +
+"- مسیرها به صورت کامپوننت‌های JSX تعریف می‌شوند نه کدهای imperative\n" +
+"- این رویکرد با فلسفه React هماهنگ است و خوانایی کد را افزایش می‌دهد"
+},
+{
+    id: 340,
         question:  "Which route definition works best for large projects?",
-        "options": [
-            "Route objects with createBrowserRouter configuration",
-            "JSX route definitions inside Routes components",
-            "Dynamic routes for all page components",
-            "Protected routes for authentication handling"
-        ],
-        correctOption: 0,
-        points: 20,
-        "explanation":"• createBrowserRouter با route objects\n" +
-            "- centralized route configuration\n" +
-            "- data loading با loaders\n" +
-            "- error handling بهتر\n" +
-            "- nested routes ساده‌تر"
-    },
-    {
-        id: 341,
+    "options": [
+    "Route objects with createBrowserRouter configuration",
+    "JSX route definitions inside Routes components",
+    "Dynamic routes for all page components",
+    "Protected routes for authentication handling"
+],
+    correctOption: 0,
+    points: 20,
+    "explanation":"• createBrowserRouter با route objects\n" +
+"- centralized route configuration\n" +
+"- data loading با loaders\n" +
+"- error handling بهتر\n" +
+"- nested routes ساده‌تر"
+},
+{
+    id: 341,
         question:"How do Navigate and useNavigate differ?",
-        "options": [
-            "Navigate works with objects, useNavigate with JSX",
-            "Navigate is declarative, useNavigate is imperative",
-            "They provide identical functionality and behavior",
-            "Neither component is used for navigation"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• Navigate component declarative است\n" +
-            "- در JSX استفاده می‌شود: <Navigate to='/home' />\n" +
-            "- useNavigate hook imperative است\n" +
-            "- در event handlers: navigate('/home')\n" +
-            "- هر کدام use case خاص دارند"
+    "options": [
+    "Navigate works with objects, useNavigate with JSX",
+    "Navigate is declarative, useNavigate is imperative",
+    "They provide identical functionality and behavior",
+    "Neither component is used for navigation"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• Navigate component declarative است\n" +
+"- در JSX استفاده می‌شود: <Navigate to='/home' />\n" +
+"- useNavigate hook imperative است\n" +
+"- در event handlers: navigate('/home')\n" +
+"- هر کدام use case خاص دارند"
 
-    },
-    {
-        id: 342,
+},
+{
+    id: 342,
         question: "For layouts with fixed header/footer, which feature helps?",
-        "options": [
-            "Dynamic routes for different content sections",
-            "Nested routes for hierarchical layout structure",
-            "Protected routes for user authentication",
-            "Route guards for access control management"
-        ],
-        correctOption: 1,
-        points: 20,
-        "explanation":"• nested routes برای layouts مشترک\n" +
-            "- parent route با Outlet\n" +
-            "- header/footer در parent\n" +
-            "- children در Outlet render می‌شوند\n" +
-            "- DRY principle"
+    "options": [
+    "Dynamic routes for different content sections",
+    "Nested routes for hierarchical layout structure",
+    "Protected routes for user authentication",
+    "Route guards for access control management"
+],
+    correctOption: 1,
+    points: 20,
+    "explanation":"• nested routes برای layouts مشترک\n" +
+"- parent route با Outlet\n" +
+"- header/footer در parent\n" +
+"- children در Outlet render می‌شوند\n" +
+"- DRY principle"
 
-    },
-    {
-        "id": 343,
-        "question":"What advantage does React Query provide in large apps?",
-        "options": [
-            "Server state caching and synchronization across components",
-            "Prevents re-rendering by removing dependency arrays",
-            "Compiles React code into server-side JavaScript",
-            "Makes applications independent of REST APIs"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• server state caching در سراسر app\n" +
-            "- automatic background refetching\n" +
-            "- data بین components share می‌شود\n" +
-            "- loading و error states unified\n" +
-            "- کاهش boilerplate code"
-    },
-    {
-        "id": 344,
-        "question":  "Why is caching valuable in React Query?",
-        "options": [
-            "Prevents storing any data in memory",
-            "Allows data reuse without repeated server requests",
-            "Replaces need for hooks like useState",
-            "Automatically generates UI components for display"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• data reuse بدون API calls مجدد\n" +
-            "- سرعت بالاتر و UX بهتر\n" +
-            "- کاهش server load\n" +
-            "- کاهش bandwidth usage\n" +
-            "- instant navigation بین صفحات"
-    },
-    {
-        "id": 345,
-        "question":"How does caching improve performance over plain fetch?",
-        "options": [
-            "Cached data enables faster UI updates and reduces unnecessary network requests",
-            "Caching removes the need for APIs in web applications",
-            "Caching only stores styles for components, not data",
-            "Cached data replaces the need for useEffect entirely"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• cached data فوراً available است\n" +
-            "- no loading spinners برای cached data\n" +
-            "- کمتر network requests\n" +
-            "- background updates برای freshness\n" +
-            "- perceived performance بسیار بهتر"
-    },
-    {
-        "id": 346,
-        "question":  "How does React Query caching enhance user experience?",
-        "options": [
-            "forces the UI to reload from scratch whenever new data is fetched",
-            "completely prevents re-renders in all React components",
-            "Keeps data instantly available while ensuring freshness",
-            "converts API responses into static HTML during build time"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation": "• instant page loads با cached data\n" +
-            "- در background fresh data می‌آورد\n" +
-            "- stale-while-revalidate strategy\n" +
-            "- no blank screens\n" +
-            "- smooth و responsive UI"
-    },
-    {
-        "id": 347,
-        "question":  "What does staleTime control in React Query?",
-        "options": [
-            "How long inactive queries stay in memory",
-            "How often React Query clears localStorage",
-            "How many components can subscribe to queries",
-            "How long data remains fresh before refetching",
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation": "• staleTime مدت زمان fresh بودن data\n" +
-            "- تا این مدت refetch نمی‌شود\n" +
-            "- staleTime: 60000 یعنی 1 دقیقه fresh\n" +
-            "- پیش‌فرض 0 (بلافاصله stale)\n" +
-            "- برای static data بالا set کنید"
-    },
-    {
-        "id": 348,
-        "question": "What is the difference between 'staleTime' and 'cacheTime' in React Query?",
-        "options": [
-            "staleTime controls freshness, cacheTime controls memory duration",
-            "staleTime controls data freshness, while cacheTime controls cache duration",
-            "staleTime deletes data permanently, cacheTime saves it forever",
-            "staleTime is for server updates, cacheTime is for local state updates",
-            "staleTime only applies to mutations, cacheTime only applies to queries"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• staleTime: مدت fresh بودن data\n" +
-            "- cacheTime: مدت ماندن در memory\n" +
-            "- staleTime برای refetch timing\n" +
-            "- cacheTime برای garbage collection\n" +
-            "- staleTime معمولاً کوتاه‌تر"
-    },
-    {
-        "id": 349,
-        "question": "When would you increase staleTime for queries?",
-        "options": [
-            "To reduce unnecessary refetches for stable data",
-            "To force React Query to clear queries instantly",
-            "To remove queries from cache when unmounting",
-            "To automatically generate new API endpoints"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• برای data که کم تغییر می‌کند\n" +
-            "- مثل user profile، settings\n" +
-            "- کاهش unnecessary refetches\n" +
-            "- بهبود performance\n" +
-            "- کاهش server load"
-    },
-    {
-        "id": 350,
-        "question": "What does useQuery hook return to components?",
-        "options": [
-            "Only the fetched data from server",
-            "A function that must be manually called to fetch data",
-            "Query state object with data, loading, error",
-            "Only the error object if the request fails"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• object با data، isLoading، error\n" +
-            "- isSuccess، isFetching، isError\n" +
-            "- refetch function\n" +
-            "- status: 'loading' | 'error' | 'success'\n" +
-            "- همه چیز برای UI state management"
-    },
-    {
-        "id": 351,
-        "question":  "Which property is NOT in useQuery return object?",
-        "options": [
-            "data property containing fetched information",
-            "isLoading boolean indicating fetch status",
-            "mutate function for triggering updates",
-            "isError boolean indicating failure state"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• mutate برای useMutation است نه useQuery\n" +
-            "- useQuery فقط برای reading\n" +
-            "- useMutation برای creating/updating/deleting\n" +
-            "- data، isLoading، error در useQuery\n" +
-            "- mutate، mutateAsync در useMutation"
-    },
-    {
-        "id": 352,
-        "question":"How does useQuery output improve UI responsiveness?",
-        "options": [
-            "Exposes states like isLoading and isFetching for instant UI reactions",
-            "automatically converting all data into static HTML at build time",
-            "prevents components from re-rendering after data changes",
-            "replacing the need for client-side state management libraries entirely"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• isLoading برای showing spinners\n" +
-            "- isError برای error messages\n" +
-            "- isFetching برای background updates\n" +
-            "- instant feedback به user\n" +
-            "- professional UX"
-    },
-    {
-        "id": 353,
-        "question": "What is Strapi's primary function?",
-        "options": [
-            "Building frontend UI component libraries",
-            "Managing content and exposing APIs as CMS",
-            "Optimizing bundle size in React applications",
-            "Handling client-side routing and navigation"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• Strapi headless CMS است\n" +
-            "- content management با admin panel\n" +
-            "- auto-generate REST/GraphQL APIs\n" +
-            "- backend بدون coding زیاد\n" +
-            "- برای content-heavy apps"
-    },
-    {
-        "id": 354,
-        "question": "Which feature distinguishes Strapi from traditional CMS?",
-        "options": [
-            "Provides automatic API generation with REST/GraphQL",
-            "Replaces React state management libraries completely",
-            "Works exclusively with serverless databases",
-            "Automatically generates frontend components for display"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• headless: frontend-agnostic\n" +
-            "- API-first approach\n" +
-            "- customizable با code\n" +
-            "- modern tech stack (Node.js)\n" +
-            "- WordPress monolithic است"
-    },
-    {
-        "id": 355,
-        "question":  "Why choose Strapi over WordPress for modern development?",
-        "options": [
-            "Allows complete backend control while staying frontend-agnostic",
-            "comes with a pre-built frontend theme system",
-            "requires no authentication for any API requests",
-            " only supports static site generation"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• API-first برای any frontend\n" +
-            "- JavaScript/TypeScript stack\n" +
-            "- customization بیشتر\n" +
-            "- modern architecture\n" +
-            "- WordPress PHP-based و legacy"
-    },
-    {
-        "id": 356,
-        "question": "What differs between Strapi development and production modes?",
-        "options": [
-            "Development provides better security than production",
-            "Production allows hot-reloading like development mode",
-            "Development for local testing, production for live servers",
-            "Both modes function identically in all aspects"
-        ],
-        "correctOption":2,
-        "points": 10,
-        "explanation": "• development: admin panel enabled\n" +
-            "- hot-reloading و debugging\n" +
-            "- production: optimized و secure\n" +
-            "- admin panel معمولاً disabled\n" +
-            "- environment variables متفاوت"
-    },
-    {
-        "id": 357,
-        "question": "How does React Query maintain server synchronization?",
-        "options": [
-            "By automatically refetching stale data in background",
-            "By manually refreshing page on every request",
-            "By storing data permanently in localStorage",
-            "By blocking UI updates until calls finish"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• automatic background refetching\n" +
-            "- refetchOnWindowFocus: true\n" +
-            "- refetchOnReconnect\n" +
-            "- stale-while-revalidate\n" +
-            "- data همیشه تا حد ممکن fresh"
-    },
-    {
-        "id": 358,
-        "question":  "What mechanism keeps React Query cache fresh?",
-        "options": [
-            "Server-side rendering exclusively for updates",
-            "Stale-while-revalidate strategy for background updates",
-            "Manual refetching triggered by button clicks",
-            "Long polling on every state change",
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• stale-while-revalidate strategy\n" +
-            "- cached data سریع نشان می‌دهد\n" +
-            "- در background refetch می‌کند\n" +
-            "- UI با fresh data update می‌شود\n" +
-            "- best of both worlds"
-    },
-    {
-        "id": 359,
-        "question":"Why is React Query efficient for server synchronization?",
-        "options": [
-            "Bypasses the cache and forces a fresh API call",
-            "Because it synchronizes data only once when the app starts",
-            "Combines cache, refetch, and dependency updates efficiently",
-            "Mirrors the server database directly inside the client’s memory"
-        ],
-        "correctOption":2,
-        "points": 30,
-        "explanation": "• caching کاهش network requests\n" +
-            "- background updates بدون blocking UI\n" +
-            "- smart refetch strategies\n" +
-            "- deduplication از duplicate requests\n" +
-            "- ترکیب performance و freshness"
-    },
-    {
-        "id": 360,
-        "question": "What does 'prefetching' data in React Query mean?",
-        "options": [
-            "Fetching data in advance before the component needs it",
-            "Fetching data only after the component renders",
-            "Deleting old cached data",
-            "Blocking UI until all data is fetched"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• loading data قبل از نیاز واقعی\n" +
-            "- در background و silent\n" +
-            "- data در cache ready\n" +
-            "- instant navigation\n" +
-            "- predictive data loading"
-    },
-    {
-        "id": 361,
-        "question": "Why is prefetching useful in React Query?",
-        "options": [
-            "Because it reduces perceived loading time and makes the UI more responsive",
-            "Because it automatically writes data to localStorage",
-            "Because it removes the need for a backend API",
-            "Because it disables caching for the fetched data"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• کاهش perceived loading time\n" +
-            "- instant page transitions\n" +
-            "- بهتر UX\n" +
-            "- data از قبل آماده\n" +
-            "- مثل native apps"
-    },
-    {
-        "id": 362,
-        "question": "Which statement correctly describes how prefetching works in React Query?",
-        "options": [
-            "Prefetching loads and caches the data in advance, so when a component uses useQuery with the same key, the data is immediately available",
-            "Prefetching disables caching and forces a refetch every time the component mounts",
-            "Prefetching automatically converts data into static HTML",
-            "Prefetching prevents the component from ever re-rendering"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• prefetch data را در cache می‌گذارد\n" +
-            "- useQuery با همان key فوراً data دارد\n" +
-            "- no loading state\n" +
-            "- background refetch اگر stale\n" +
-            "- seamless experience"
-    },
-    {
-        "id": 363,
-        "question": "What is event bubbling in the DOM?",
-        "options": [
-            "Events travel from target element up to document root",
-            "Events travel from document root down to target element",
-            "Events execute only on the clicked element",
-            "Events prevent all other handlers from executing"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• events از child به parent travel می‌کنند\n" +
-            "- از target element به document\n" +
-            "- به ترتیب ancestors\n" +
-            "- default behavior در DOM\n" +
-            "- می‌توان با stopPropagation جلوگیری کرد"
-    },
-    {
-        "id": 364,
-        "question": "What is event capturing in the DOM?",
-        "options": [
-            "Events execute only on parent elements",
-            "Events travel from document root down to target element",
-            "Events travel from target element up to ancestors",
-            "Events prevent propagation to child elements"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• events از parent به child travel می‌کنند\n" +
-            "- از document به target element\n" +
-            "- قبل از bubbling\n" +
-            "- addEventListener(event, handler, true)\n" +
-            "- کمتر استفاده می‌شود"
-    },
-    {
-        "id": 365,
-        "question": "In which order do event phases occur?",
-        "options": [
-            "Target phase, bubbling phase, capturing phase",
-            "Bubbling phase, target phase, capturing phase",
-            "Capturing phase, target phase, bubbling phase",
-            "Target phase, capturing phase, bubbling phase"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• 1. Capturing: document → target\n" +
-            "- 2. Target: روی element خود\n" +
-            "- 3. Bubbling: target → document\n" +
-            "- capturing → target → bubbling\n" +
-            "- همیشه این ترتیب"
-    },
-    {
-        "id": 366,
-        "question": "How do you register an event listener for capturing phase?",
-        "options": [
-            "element.addEventListener('click', handler, true)",
-            "element.addEventListener('click', handler, false)",
-            "element.addEventListener('click', handler, {bubble: false})",
-            "element.addEventListener('click', handler, {capture: false})"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• addEventListener با third argument: true\n" +
-            "- element.addEventListener('click', handler, true)\n" +
-            "- یا { capture: true }\n" +
-            "- false یا omit برای bubbling\n" +
-            "- پیش‌فرض bubbling است"
-    },
-    {
-        "id": 367,
-        "question": "What does event.stopPropagation() accomplish?",
-        "options": [
-            "Prevents default browser behavior for events",
-            "Removes all event listeners from element",
-            "Prevents event from continuing through phases",
-            "Triggers event on all parent elements"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• جلوگیری از continue کردن event\n" +
-            "- در bubbling یا capturing\n" +
-            "- parent handlers اجرا نمی‌شوند\n" +
-            "- فقط current element\n" +
-            "- preventDefault متفاوت است"
-    },
-    {
-        "id": 368,
-        "question": "When would you use event capturing over bubbling?",
-        "options": [
-            "When you need to handle events before children",
-            "When you want events to execute on target only",
-            "When you need to prevent all event propagation",
-            "When you want to remove event listeners automatically"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• وقتی می‌خواهید parent زودتر handle کند\n" +
-            "- قبل از child elements\n" +
-            "- برای global handlers\n" +
-            "- event delegation خاص\n" +
-            "- کمتر common است"
-    },
-    {
-        "id": 369,
-        "question": "What happens if you call stopPropagation() during capturing?",
-        "options": [
-            "Event continues to target and bubbling phases",
-            "Event stops and skips target and bubbling phases",
-            "Event jumps directly to bubbling phase",
-            "Event executes on all elements simultaneously"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation": "• event متوقف می‌شود\n" +
-            "- به target نمی‌رسد\n" +
-            "- bubbling هم اتفاق نمی‌افتد\n" +
-            "- فقط handlers تا آن نقطه اجرا شده‌اند\n" +
-            "- complete stop"
-    },
-    {
-        "id": 370,
-        "question": "How does event delegation utilize event bubbling?",
-        "options": [
-            "Attaches listeners to each individual child element",
-            "Prevents events from reaching parent elements",
-            "Uses parent listener to handle child events",
-            "Creates separate event phases for each element"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• یک listener روی parent\n" +
-            "- children events به parent bubble می‌کنند\n" +
-            "- event.target برای تشخیص child\n" +
-            "- efficient برای many children\n" +
-            "- کمتر memory usage"
-    },
-    {
-        "id": 371,
-        "question": "What is event.target in the context of bubbling?",
-        "options": [
-            "The element currently handling the event",
-            "The element where the event originally occurred",
-            "The topmost parent element in hierarchy",
-            "The element that registered the event listener"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• element که event روی آن شروع شد\n" +
-            "- original target\n" +
-            "- در bubbling تغییر نمی‌کند\n" +
-            "- currentTarget متفاوت است\n" +
-            "- برای event delegation"
-    },
-    {
-        "id": 372,
-        "question": "What is event.currentTarget during event propagation?",
-        "options": [
-            "The document root element for all events",
-            "The element where event originally occurred",
-            "The element currently executing event handler",
-            "The element that will handle event next"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• element که handler روی آن است\n" +
-            "- در bubbling تغییر می‌کند\n" +
-            "- همیشه element با listener\n" +
-            "- target ثابت است\n" +
-            "- this نیز currentTarget است"
-    },
-    {
-        "id": 373,
-        "question": "Why is event delegation beneficial for dynamic content?",
-        "options": [
-            "Eliminates need for event listeners on elements",
-            "Handles events for elements added after page load",
-            "Prevents events from propagating to children",
-            "Automatically removes listeners when elements disappear"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation": "• elements جدید نیازی به listener ندارند\n" +
-            "- parent listener handle می‌کند\n" +
-            "- کار با dynamically added elements\n" +
-            "- کمتر listeners\n" +
-            "- better performance"
-    },
-    {
-        "id": 374,
-        "question": "What occurs during the target phase of event propagation?",
-        "options": [
-            "Event travels from document to target element",
-            "Event travels from target element to document",
-            "Event executes handlers registered on target element",
-            "Event stops propagation automatically after execution"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• handlers روی target element اجرا می‌شوند\n" +
-            "- بعد از capturing\n" +
-            "- قبل از bubbling\n" +
-            "- event.target === event.currentTarget\n" +
-            "- middle phase"
-    },
-    {
-        "id": 375,
-        "question": "How can you determine which phase an event is in?",
-        "options": [
-            "Check event.phase property for current phase",
-            "Check event.eventPhase property for current phase",
-            "Compare event.target with event.currentTarget values",
-            "Use event.stopPropagation() to test behavior"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation": "• event.eventPhase property\n" +
-            "- 1: CAPTURING_PHASE\n" +
-            "- 2: AT_TARGET\n" +
-            "- 3: BUBBLING_PHASE\n" +
-            "- numeric constants"
-    },
-    {
-        "id": 376,
-        "question": "What happens with multiple listeners on same element?",
-        "options": [
-            "Only the first registered listener executes",
-            "Only the last registered listener executes",
-            "All listeners execute in registration order",
-            "Listeners execute in reverse registration order"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• همه listeners به ترتیب registration اجرا می‌شوند\n" +
-            "- اولین registered، اولین executed\n" +
-            "- مگر stopImmediatePropagation\n" +
-            "- همه در همان phase\n" +
-            "- deterministic order"
-    },
-    {
-        "id": 377,
-        "question": "What happens when you update a ref's current value?",
-        "options": [
-            "Component re-renders automatically after update",
-            "Component re-renders only on next state change",
-            "Component does not re-render from ref changes",
-            "Component re-renders after short delay period"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• ref تغییر می‌کند اما re-render نمی‌شود\n" +
-            "- mutable value\n" +
-            "- state نیست\n" +
-            "- برای values که UI affect نمی‌کنند\n" +
-            "- synchronous update"
-    },
-    {
-        "id": 378,
-        "question": "How do you access a DOM element using useRef?",
-        "options": [
-            "Pass ref object to element's ref prop",
-            "Call ref.current() method on element",
-            "Use ref.getValue() to retrieve element",
-            "Access element through ref.element property"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• برای دسترسی به DOM element باید ref object را به prop مخصوص ref المنت پاس داد\n" +
-            "- React به صورت خودکار المنت DOM را در ref.current ذخیره می‌کند\n" +
-            "- بعد از mount شدن کامپوننت می‌توان از ref.current برای دسترسی مستقیم به المنت استفاده کرد"
-    },
-    {
-        "id": 379,
-        "question": "When should you access ref.current in function components?",
-        "options": [
-            "During component render phase directly",
-            "Inside useEffect or event handlers only",
-            "Only during component initialization phase",
-            "Anytime within component function body"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation": "• فقط در useEffect یا event handlers\n" +
-            "- نه در render body\n" +
-            "- render phase باید pure باشد\n" +
-            "- بعد از mount قابل دسترس\n" +
-            "- side effect محسوب می‌شود"
-    },
-    {
-        "id": 380,
-        "question": "What value does useRef return initially?",
-        "options": [
-            "Object with current property set to initial value",
-            "Function that returns current reference value",
-            "Array containing current value and setter function",
-            "Promise that resolves to reference value"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• object با property به نام current\n" +
-            "- { current: initialValue }\n" +
-            "- current mutable است\n" +
-            "- همان object در renders\n" +
-            "- stable reference"
-    },
-    {
-        "id": 381,
-        "question":  "How does useRef differ from useState when storing values across renders?",
-        "options": [
-            "useRef updates do not trigger re-renders, while useState updates do",
-            "useRef values reset on every render, while useState persists them",
-            "useRef only stores DOM nodes, while useState can store any data",
-            "useRef is asynchronous, while useState is synchronous"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• useRef تغییر بدون re-render\n" +
-            "- useState تغییر با re-render\n" +
-            "- ref برای non-UI values\n" +
-            "- state برای UI-affecting values\n" +
-            "- useRef synchronous، useState asynchronous"
-    },
-    {
-        "id": 382,
-        "question": "What is the difference between useRef and createRef?",
-        "options": [
-            "No difference, they are identical",
-            "useRef persists across renders, createRef creates new each time",
-            "createRef is for functional components only",
-            "useRef is deprecated, use createRef"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• useRef همان object را در renders نگه می‌دارد\n" +
-            "- createRef هر بار object جدید می‌سازد\n" +
-            "- useRef برای function components\n" +
-            "- createRef برای class components\n" +
-            "- در function components حتماً useRef"
-    },
-    {
-        "id": 383,
-        "question": "Can you pass refs between components?",
-        "options": [
-            "Yes, refs can be passed like props",
-            "No, refs are component-private only",
-            "Yes, using forwardRef wrapper",
-            "Only in Class Components"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• با React.forwardRef می‌توانید ref را forward کنید\n" +
-            "- ref به عنوان prop pass نمی‌شود (reserved)\n" +
-            "- forwardRef component را wrap می‌کند\n" +
-            "- ref به عنوان argument دوم می‌آید\n" +
-            "- برای library components مفید است"
-    },
-    {
-        "id": 384,
-        "question": "What is the useImperativeHandle hook used for?",
-        "options": [
-            "To expose custom instance methods to parent via ref",
-            "To handle imperative animations",
-            "To manage component lifecycle imperatively",
-            "To replace useEffect with imperative code"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• useImperativeHandle متدهای custom را از طریق ref expose می‌کند\n" +
-            "- با forwardRef استفاده می‌شود\n" +
-            "- parent می‌تواند این متدها را صدا بزند\n" +
-            "- برای control کردن child از parent\n" +
-            "- مثل focus()، play()، pause() custom"
-    },
-    {
-        "id": 385,
-        "question": "When should you use refs instead of state?",
-        "options": [
-            "Always use refs for better performance",
-            "When value doesn't affect render output",
-            "Never, state is always better",
-            "Only for DOM manipulation"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation": "• refs برای values که render را trigger نمی‌کنند\n" +
-            "- مثل timer IDs، previous values\n" +
-            "- DOM references برای focus یا scroll\n" +
-            "- mutable values که UI effect ندارند\n" +
-            "- state برای data که UI را affect می‌کند"
-    },
-    {
-        "id": 386,
-        "question": "Can you store interval or timeout IDs in refs?",
-        "options": [
-            "No, use state instead",
-            "Yes, refs are perfect for this",
-            "Only with special configuration",
-            "Intervals don't work with React"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• refs عالی برای storing timer IDs هستند\n" +
-            "- تغییر ref re-render نمی‌کند\n" +
-            "- می‌توانید در cleanup آن را clear کنید\n" +
-            "- const timerRef = useRef()\n" +
-            "- timerRef.current = setInterval(...)"
-    },
-    {
-        "id": 387,
-        "question": "What happens if you update ref.current during render?",
-        "options": [
-            "It's fine, no side effects",
-            "Causes component to re-render immediately",
-            "Should be avoided, may cause issues",
-            "Ref updates are ignored during render"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation": "• updating ref.current در render phase باید avoided شود\n" +
-            "- می‌تواند باعث inconsistency شود\n" +
-            "- render باید pure باشد\n" +
-            "- در useEffect یا event handlers update کنید\n" +
-            "- exception: اولین render برای initialize"
-    },
-    {
-        "id": 388,
-        "question": "Can refs be used in Server Components?",
-        "options": [
-            "Yes, refs work everywhere",
-            "No, refs require client-side interactivity",
-            "Only with special server-refs",
-            "Only for reading, not writing"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation": "• refs در Server Components کار نمی‌کنند\n" +
-            "- نیاز به client-side interactivity دارند\n" +
-            "- DOM reference در server وجود ندارد\n" +
-            "- باید component را 'use client' کنید\n" +
-            "- refs فقط در Client Components"
-    },
-    {
-        "id": 389,
-        "question": "How do you access child component methods from parent?",
-        "options": [
-            "Direct access through props",
-            "Using forwardRef and useImperativeHandle",
-            "Child methods are always accessible",
-            "Use global event emitters"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation": "• با forwardRef + useImperativeHandle\n" +
-            "- child با forwardRef wrap می‌شود\n" +
-            "- useImperativeHandle متدها را expose می‌کند\n" +
-            "- parent با ref.current.method() صدا می‌زند\n" +
-            "- encapsulation را حفظ می‌کند"
-    },
-    {
-        "id": 390,
-        "question":"What is a common use case for using useRef with timers?",
-        "options": [
-            "Automatically re-rendering the component when the timer completes",
-            "Storing a timer ID so it can be cleared later",
-            "Synchronizing multiple timers across components",
-            "Replacing setTimeout with a synchronous execution"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• storing timer ID برای clearInterval/clearTimeout\n" +
-            "- timerRef.current = setInterval(...)\n" +
-            "- در cleanup: clearInterval(timerRef.current)\n" +
-            "- بدون re-render\n" +
-            "- persistent بین renders"
-    },
-    {
-        "id": 391,
-        "question": "Why is useRef often used to store previous values in a component?",
-        "options": [
-            "Because useRef automatically tracks a history of values",
-            "Because useRef values trigger updates when they change",
-            "Because useRef stores values without causing re-renders",
-            "Because useRef has built-in comparison helpers for values"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation": "• ذخیره value قبلی بدون re-render\n" +
-            "- comparison با value فعلی\n" +
-            "- usePrevious custom hook\n" +
-            "- state قبلی در memory\n" +
-            "- برای detecting changes"
-    },
-    {
-        "id": 392,
-        "question": "What happens to a ref when its component unmounts?",
-        "options": [
-            "The ref value stays in memory until you clear it manually",
-            "The ref is reset and its memory can be freed automatically",
-            "Accessing the ref after unmount will throw an error",
-            "The ref is passed to the parent component automatically"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• ref garbage collected می‌شود\n" +
-            "- memory آزاد می‌شود\n" +
-            "- automatic cleanup\n" +
-            "- DOM references نیز cleared\n" +
-            "- memory leak نمی‌کند"
-    },
-    {
-        "id": 393,
-        "question": "Can refs be passed to child components as props?",
-        "options": [
-            "Yes, refs can always be passed like any normal prop",
-            "No, refs cannot be shared between components",
-            "Yes, but it requires using forwardRef in the child component",
-            "No, refs only work in the component where they are declared"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation": "Can refs be passed to child components as props?\",\n" +
-            "\"explanation\": \"• نه به صورت مستقیم، ref reserved است\\n\" +\n" +
-            "    \"- باید از forwardRef استفاده کنید\\n\" +\n" +
-            "    \"- یا نام دیگری بدهید\\n\" +\n" +
-            "    \"- React.forwardRef wrapper\\n\" +\n" +
-            "    \"- special handling لازم"
-    },
-    {
-        "id": 394,
-        "question": "What is the primary purpose of forwardRef in React?",
-        "options": [
-            "To create multiple refs inside a single component",
-            "To allow a parent component to pass a ref to a child component",
-            "To convert refs into state variables automatically",
-            "To clear a ref when a component unmounts"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• passing ref از parent به child component\n" +
-            "- child می‌تواند DOM element را expose کند\n" +
-            "- ref در props نیست\n" +
-            "- argument دوم در component function\n" +
-            "- برای library components"
-    },
-    {
-        "id": 395,
-        "question": "When is useRef preferable over using a regular variable in a function component?",
-        "options": [
-            "When you need a value to persist across re-renders",
-            "When you want a change in value to trigger a re-render",
-            "When you need to share values between different components",
-            "When you want to reset a value every time the component renders"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• وقتی value باید persist بین renders\n" +
-            "- let variable هر render reset می‌شود\n" +
-            "- ref.current نگه داشته می‌شود\n" +
-            "- برای mutable values\n" +
-            "- stable reference"
-    },
-    {
-        "id": 396,
-        "question": "What types of values can be stored in a useRef?",
-        "options": [
-            "Only DOM element references for direct manipulation",
-            "Only primitive values like numbers and strings",
-            "Any mutable value including objects, arrays, or functions",
-            "Only values that implement a special React interface"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• هر type: primitives، objects، arrays، functions\n" +
-            "- DOM references\n" +
-            "- timer IDs\n" +
-            "- previous values\n" +
-            "- any mutable value"
-    },
-    {
-        "id": 397,
-        "question":"How can you focus an input element using useRef?",
-        "options": [
-            "By calling inputRef.current.focus() inside an effect or event handler",
-            "By calling inputRef.focus() directly during render",
-            "By invoking inputRef.current() with 'focus' as a parameter",
-            "By setting a 'focus' property with inputRef.setValue()"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• برای focus کردن input باید inputRef.current.focus() را در useEffect یا event handler فراخوانی کنیم\n" +
-            "- ref.current به المنت DOM واقعی اشاره می‌کند و تمام متدهای DOM مثل focus() را دارد\n" +
-            "- نباید در حین render مستقیماً DOM را دستکاری کرد، بلکه باید در effect یا event handler انجام شود"
-    },
-    {
-        "id": 398,
-        "question": "What is the main difference between refs and state in React?",
-        "options": [
-            "Refs store immutable values, while state stores mutable values",
-            "Refs trigger re-renders, while state manages lifecycle events",
-            "Refs persist values without re-rendering, while state updates trigger re-renders",
-            "Refs only store objects, while state only stores primitive values"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• refs: persist بدون re-render\n" +
-            "- state: persist با re-render\n" +
-            "- refs: mutable directly\n" +
-            "- state: immutable updates\n" +
-            "- use cases متفاوت"
-    },
-    {
-        "id": 399,
-        "question":"Can you attach both capturing and bubbling event listeners on the same element in React?",
-        "options": [
-            "Yes, bubbling listeners run before capturing listeners on the same element",
-            "No, React allows only one event phase per element",
-            "Yes, capturing listeners run before bubbling listeners on the same element",
-            "No, attaching both phases causes runtime errors"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation": "• بله، با addEventListener دو بار\n" +
-            "- یکی با capture: true\n" +
-            "- یکی با capture: false\n" +
-            "- capturing اول اجرا می‌شود\n" +
-            "- هر دو handlers execute می‌شوند"
-    },
-    {
-        "id": 400,
-        "question": "What is the primary purpose of a mutation in React Query?",
-        "options": [
-            "To create, update, or delete server data",
-            "To read server data from the cache only",
-            "To render React components",
-            "To automatically generate CSS styles"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• تغییر دادن server data\n" +
-            "- POST، PUT، PATCH، DELETE\n" +
-            "- create، update، delete operations\n" +
-            "- side effects روی server\n" +
-            "- opposite از queries (read-only)"
-    },
-    {
-        "id": 401,
-        "question": "Which React Query hook is used for modifying server data?",
-        "options": [
-            "useQuery for fetching data",
-            "useMutation for modifying server data",
-            "useEffect for managing side effects",
-            "useState for updating local state"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• useMutation برای CUD operations\n" +
-            "- create، update، delete\n" +
-            "- useQuery فقط برای read\n" +
-            "- mutate function برای trigger\n" +
-            "- callbacks برای side effects"
-    },
-    {
-        "id": 402,
-        "question":"Why use mutation callbacks like onSuccess in React Query?",
-        "options": [
-            "To update the cache or trigger side effects after a mutation",
-            "To transform mutations into query operations",
-            "To block UI updates after data changes",
-            "To permanently disable caching mechanisms"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation": "• اجرای code بعد از successful mutation\n" +
-            "- invalidate کردن queries\n" +
-            "- showing success messages\n" +
-            "- navigation به صفحه دیگر\n" +
-            "- side effects management"
-    },
-    {
-        "id": 403,
-        "question": "What does offline support enable in React Query?",
-        "options": [
-            "Blocking all server communication permanently",
-            "Automatically reloading the entire page when offline",
-            "Turning queries into static file operations",
-            "Queuing mutations until the network is available"
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation": "• ذخیره mutations در queue وقتی offline\n" +
-            "- وقتی online شد، اجرا می‌شوند\n" +
-            "- seamless user experience\n" +
-            "- automatic retry mechanism\n" +
-            "- persistence بین page refreshes"
-    },
-    {
-        "id": 404,
-        "question": "How does React Query provide a smooth offline experience?",
-        "options": [
-            "By disabling all UI components",
-            "By serving cached data and queuing mutations",
-            "By blocking queries from executing again",
-            "By converting asynchronous API calls into synchronous ones"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• cached data فوراً نشان داده می‌شود\n" +
-            "- mutations در queue ذخیره می‌شوند\n" +
-            "- optimistic updates\n" +
-            "- automatic sync وقتی reconnect\n" +
-            "- user می‌تواند کار کند offline"
-    },
-    {
-        "id": 405,
-        "question":"Which combination supports effective offline-first behavior?",
-        "options": [
-            "Permanently disabling staleTime and cacheTime",
-            "Managing server state only with useState",
-            "Combining caching, background refetching, and mutation queuing",
-            "Clearing the cache whenever the app reconnects"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation": "• caching: instant data access\n" +
-            "- background refetching: freshness\n" +
-            "- mutation queuing: offline operations\n" +
-            "- persistence: survive page refresh\n" +
-            "- ترکیب همه برای best experience"
-    },
-    {
-        "id": 406,
-        "question":  "Why is React Query valuable for managing server state?",
-        "options": [
-            "It automates fetching, caching, and synchronization of data",
-            "It only replaces react's useState and useEffect for local state",
-            "It automatically generates UI components",
-            "It completely disables all network requests"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• automating fetching، caching، synchronization\n" +
-            "- کاهش boilerplate code\n" +
-            "- loading و error states automatic\n" +
-            "- background updates\n" +
-            "- alternative به Redux برای server data"
-    },
-    {
-        "id": 407,
-        "question": "Which problems does React Query solve in applications?",
-        "options": [
-            "Automatically applying styles to components without CSS",
-            "Preventing duplicate network requests and keeping server data in sync",
-            "Eliminating the need for any backend APIs",
-            "Allowing React apps to work entirely without state management"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• جلوگیری از duplicate requests\n" +
-            "- keeping data synchronized\n" +
-            "- caching برای performance\n" +
-            "- background refetching\n" +
-            "- ساده‌سازی async state management"
-    },
-    {
-        "id": 408,
-        "question": "Why is manual server state management challenging?",
-        "options": [
-            "Because React Query is needed to create components",
-            "Because it blocks component rendering completely",
-            "Because caching, synchronization, and updates are complex to handle by hand",
-            "Because it automatically transforms APIs between REST and GraphQL"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation": "• caching پیچیده برای implement\n" +
-            "- synchronization بین components\n" +
-            "- handling loading/error states\n" +
-            "- avoiding duplicate requests\n" +
-            "- React Query این مشکلات را حل می‌کند"
-    },
-    {
-        "id": 409,
-        "question":"How do useQuery and useMutation differ in purpose?",
-        "options": [
-            "useQuery styles components, useMutation handles routing",
-            "useQuery manages local storage, useMutation controls authentication",
-            "useQuery updates the DOM, useMutation adds event listeners",
-            "useQuery fetches data, useMutation modifies data",
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation": "• useQuery برای reading/fetching data\n" +
-            "- GET requests\n" +
-            "- useMutation برای modifying data\n" +
-            "- POST، PUT، DELETE requests\n" +
-            "- read vs write operations"
-    },
-    {
-        "id": 410,
-        "question": "Which React Query hook is mainly responsible for fetching and caching server data?",
-        "options": [
-            "useMutation",
-            "useReducer",
-            "useQuery",
-            "useEffect"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• useQuery برای data fetching\n" +
-            "- automatic caching\n" +
-            "- background refetching\n" +
-            "- stale-while-revalidate\n" +
-            "- primary hook برای GET operations"
-    },
-    {
-        "id": 411,
-        "question": "Where should images be stored in a React project to achieve better optimization and performance?",
-        "options": [
-            "In the public folder for faster serving",
-            "In the src folder and imported in components",
-            "Inside a CSS file as base64 strings",
-            "On a remote server without compression"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• تصاویر در فولدر src هنگام build بهینه‌سازی می‌شوند\n" +
-            "• ابزارهایی مانند Webpack یا Vite آن‌ها را فشرده و با نام هش ذخیره می‌کنند\n" +
-            "• این روش موجب بهبود سرعت بارگذاری و مدیریت بهتر کش مرورگر می‌شود"
-    },
-    {
-        "id": 412,
-        "question": "What is the default behavior of images stored inside the public folder in a React project?",
-        "options": [
-            "They are automatically optimized during build",
-            "They are bundled together with JavaScript code",
-            "They are served directly without build-time optimization",
-            "They are converted into WebP format automatically"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• تصاویر در فولدر public بدون فشرده‌سازی و بهینه‌سازی ارائه می‌شوند\n" +
-            "• فایل‌ها مستقیماً از سرور برای مرورگر ارسال می‌شوند\n" +
-            "• مناسب برای فایل‌های عمومی مانند favicon یا robots.txt هستند"
-    },
-    {
-        "id": 413,
-        "question": "Which feature in Next.js provides automatic image optimization, resizing, and lazy loading?",
-        "options": [
-            "React.StrictMode for image validation",
-            "Next.js <Image> component for optimized images",
-            "Webpack DevServer for live reloading",
-            "React.lazy for component-level optimization"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• کامپوننت <Image> در Next.js به‌طور خودکار اندازه‌ی تصاویر را مدیریت می‌کند\n" +
-            "• تصاویر را به فرمت‌های مدرن مانند WebP تبدیل می‌نماید\n" +
-            "• lazy loading را فعال کرده و عملکرد صفحه را بهبود می‌دهد"
-    },
-    {
-        "id": 414,
-        "question": "What is a major disadvantage of storing images inside the public folder?",
-        "options": [
-            "They skip optimization and remain uncompressed",
-            "They cause errors during component rendering",
-            "They are converted to different formats automatically",
-            "They cannot be accessed from environment variables"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• تصاویر در فولدر public در مرحله‌ی build پردازش نمی‌شوند\n" +
-            "• هیچ فشرده‌سازی یا تغییر اندازه‌ای روی آن‌ها انجام نمی‌شود\n" +
-            "• این موضوع می‌تواند باعث افزایش حجم و کاهش سرعت بارگذاری شود"
-    },
-    {
-        "id": 415,
-        "question": "Why is importing images from the src folder considered a better practice in React?",
-        "options": [
-            "Because it allows auto-optimization and cache busting",
-            "Because it avoids the need for static assets",
-            "Because it disables code splitting for images",
-            "Because it removes them from the final build output"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• ایمپورت تصاویر از src باعث وارد شدن آن‌ها به فرایند build می‌شود\n" +
-            "• ابزارهای build آن‌ها را فشرده و نام فایل‌ها را هش می‌کنند\n" +
-            "• نتیجه: عملکرد بهتر، کش مؤثرتر و حجم کمتر فایل‌ها"
-    },
-    {
-        "id": 416,
-        "question": "In React Query, what occurs when multiple useQuery hooks use the same queryKey?",
-        "options": [
-            "Each query executes independently without caching",
-            "React Query shares and reuses the cached data across them",
-            "It throws an error and crashes the application",
-            "Only the first query runs while the others are skipped"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• data sharing بین hooks\n" +
-            "- فقط یک request\n" +
-            "- همه از cache یکسان استفاده می‌کنند\n" +
-            "- automatic deduplication\n" +
-            "- efficient data management"
-    },
-    {
-        "id": 417,
-        "question": "Which pattern helps prevent unnecessary network requests when using useQuery?",
-        "options": [
-            "Use a unique queryKey with caching enabled",
-            "Disable caching to always fetch fresh data",
-            "Wrap useQuery inside useEffect on every render",
-            "Manually trigger refetch on every component mount"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• unique queryKey با caching enabled\n" +
-            "- staleTime برای control کردن freshness\n" +
-            "- cache hit به جای network request\n" +
-            "- refetchOnWindowFocus کنترل شده\n" +
-            "- smart defaults"
-    },
-    {
-        "id": 418,
-        "question":"Which practice improves efficiency when using useQuery?",
-        "options": [
-            "Provide unique queryKeys and leverage caching",
-            "Turn off caching completely for faster updates",
-            "Call useQuery only inside a useEffect hook",
-            "Refetch data manually each time instead of using cache"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• providing unique queryKeys\n" +
-            "- leveraging caching mechanism\n" +
-            "- appropriate staleTime values\n" +
-            "- avoiding unnecessary refetches\n" +
-            "- proper dependency arrays"
-    },
-    {
-        "id": 419,
-        "question":"Which React Query hook is used for creating, updating, or deleting server data?",
-        "options": [
-            "useQuery",
-            "useMutation",
-            "useReducer",
-            "useState"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• useMutation برای CUD operations\n" +
-            "- POST: create\n" +
-            "- PUT/PATCH: update\n" +
-            "- DELETE: remove\n" +
-            "- side effects روی server"
-    },
-    {
-        "id": 420,
-        "question":  "After a successful mutation, what is the recommended way to update cached queries?",
-        "options": [
-            "Reload the entire page to get fresh data",
-            "Invalidate or update related query keys",
-            "Reset local state manually using useState",
-            "Run the same mutation again to refresh data"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• invalidate کردن related query keys\n" +
-            "- queryClient.invalidateQueries\n" +
-            "- باعث refetch می‌شود\n" +
-            "- یا manual update با setQueryData\n" +
-            "- sync کردن cache با server"
-    },
-    {
-        "id": 421,
-        "question": "Which statement about useMutation compared to useQuery is correct?",
-        "options": [
-            "useMutation executes synchronously by default",
-            "useMutation only works with GraphQL APIs",
-            "useMutation must be triggered manually and does not run automatically",
-            "useMutation cannot handle error states"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation":"• useMutation باید manually trigger شود\n" +
-            "- mutate() function را call می‌کنید\n" +
-            "- useQuery automatic run می‌شود\n" +
-            "- mutations on-demand هستند\n" +
-            "- queries eager loading"
-    },
-    {
-        "id": 422,
-        "question": "What is the primary purpose of the queryKey in useQuery?",
-        "options": [
-            "Uniquely identify queries for caching and refetching",
-            "Define the API endpoint URL",
-            "Specify the type of loading spinner to show",
-            "Configure mutation success callbacks"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation":"• unique identification برای query\n" +
-            "- caching mechanism\n" +
-            "- refetching control\n" +
-            "- invalidation targeting\n" +
-            "- array از identifiers"
-    },
-    {
-        "id": 423,
-        "question": "In React Query, what is the difference between staleTime and cacheTime?",
-        "options": [
-            "staleTime defines retry attempts; cacheTime defines error persistence",
-            "Both represent the same concept of cache duration",
-            "staleTime determines how long data is considered fresh; cacheTime controls how long inactive data stays in memory",
-            "staleTime is only used for mutations; cacheTime only for queries"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation":"• staleTime: مدت fresh بودن\n" +
-            "- تا این مدت refetch نمی‌شود\n" +
-            "- cacheTime: مدت ماندن inactive data\n" +
-            "- garbage collection timing\n" +
-            "- دو concept متفاوت"
-    },
-    {
-        "id": 424,
-        "question":"How can you prevent a useQuery from automatically running when a component mounts?",
-        "options": [
-            "Remove the queryKey entirely",
-            "Use useMutation instead of useQuery",
-            "Disable React StrictMode in the app",
-            "Set enabled: false in the query options"
-        ],
-        "correctOption":3,
-        "points": 10,
-        "explanation":"• enabled: false در options\n" +
-            "- query run نمی‌شود تا true شود\n" +
-            "- conditional fetching\n" +
-            "- manual control\n" +
-            "- refetch() برای manual trigger"
-    },
-    {
-        "id": 425,
-        "question":  "Which callback in useMutation is typically used to update the cache after a successful mutation?",
-        "options": [
-            "onSettled",
-            "onMutate",
-            "onSuccess",
-            "onError"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• onSuccess callback\n" +
-            "- دریافت mutation result\n" +
-            "- invalidate queries\n" +
-            "- setQueryData برای optimistic updates\n" +
-            "- sync cache with server"
-    },
-    {
-        "id": 426,
-        "question":  "Why are optimistic updates useful in useMutation?",
-        "options": [
-            "They automatically retry failed requests",
-            "They update the UI immediately before server response",
-            "They prevent memory leaks in components",
-            "They enforce unique query keys"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation":"• UI بلافاصله update می‌شود\n" +
-            "- قبل از server response\n" +
-            "- instant feedback\n" +
-            "- اگر fail شود rollback\n" +
-            "- بهتر UX"
-    },
-    {
-        "id": 427,
-        "question": "Which React Query function is commonly used inside a mutation's onSuccess callback to refresh relevant queries?",
-        "options": [
-            "resetQueries",
-            "refetchQueries",
-            "cancelQueries",
-            "invalidateQueries"
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation":"• queryClient.invalidateQueries(['queryKey'])\n" +
-            "- marking queries as stale\n" +
-            "- trigger refetch\n" +
-            "- sync کردن cache\n" +
-            "- fresh data بعد از mutation"
-    },
-    {
-        "id": 428,
-        "question": "What happens when multiple queries are dependent in React Query?",
-        "options": [
-            "They run in parallel ignoring dependencies",
-            "The next query waits for previous query's data",
-            "All queries share the same queryKey",
-            "Dependent queries are not supported"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• enabled option برای wait کردن\n" +
-            "- query دوم منتظر data اولی\n" +
-            "- enabled: !!previousData\n" +
-            "- sequential fetching\n" +
-            "- dependency chain"
-    },
-    {
-        "id": 429,
-        "question": "Which tool helps visualize query and mutation states during development?",
-        "options": [
-            "Redux DevTools",
-            "React Query Devtools",
-            "React Profiler",
-            "Apollo Studio"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• React Query Devtools\n" +
-            "- showing query states\n" +
-            "- cache contents\n" +
-            "- mutation status\n" +
-            "- debugging tool powerful"
-    },
-    {
-        "id": 430,
-        "question": "Which option in useQuery allows background synchronization at intervals?",
-        "options": [
-            "cacheTime",
-            "refetchInterval",
-            "retry",
-            "keepPreviousData"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• refetchInterval: milliseconds\n" +
-            "- polling data\n" +
-            "- refetchInterval: 5000 // هر 5 ثانیه\n" +
-            "- real-time like behavior\n" +
-            "- automatic periodic updates"
-    },
-    {
-        "id": 431,
-        "question": "Which useQuery option helps with pagination to avoid blank state while fetching new data?",
-        "options": [
-            "enabled",
-            "refetchOnWindowFocus",
-            "keepPreviousData",
-            "retry"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• keepPreviousData: true\n" +
-            "- previous page data نشان داده می‌شود\n" +
-            "- تا new page load شود\n" +
-            "- no blank screens\n" +
-            "- smooth pagination"
-    },
-    {
-        "id": 432,
-        "question": "How does React Query ensure consistency between server and client after a mutation?",
-        "options": [
-            "Reload the browser window automatically",
-            "Automatically invalidate all cached queries",
-            "Invalidate specific queries or manually refetch",
-            "Clear the entire cache immediately"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• invalidation و refetching strategies\n" +
-            "- queryClient.invalidateQueries\n" +
-            "- automatic refetch of stale queries\n" +
-            "- optimistic updates با rollback\n" +
-            "- cache synchronization"
-    },
-    {
-        "id": 433,
-        "question": "What is query invalidation in React Query?",
-        "options": [
-            "Marking queries stale to trigger refetch",
-            "Deleting all cached data permanently",
-            "Resetting all query keys globally",
-            "Pausing queries until manually enabled"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation":"• invalidation یعنی marking کردن query به عنوان stale\n" +
-            "- باعث refetch خودکار می‌شود\n" +
-            "- معمولاً بعد از mutations استفاده می‌شود\n" +
-            "- با queryClient.invalidateQueries انجام می‌شود\n" +
-            "- data را fresh و synchronized نگه می‌دارد"
-    },
-    {
-        "id": 434,
-        "question": "What does hydrate/dehydrate refer to in React Query?",
-        "options": [
-            "Saving and restoring query state for SSR",
-            "Synchronizing queries with Redux store",
-            "Exporting query data to JSON files",
-            "Clearing memory leaks during refetch"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• dehydrate: ذخیره کردن query state برای SSR\n" +
-            "- hydrate: بازگردانی query state در client\n" +
-            "- برای server-side rendering استفاده می‌شود\n" +
-            "- data از server به client منتقل می‌شود\n" +
-            "- جلوگیری از refetch غیرضروری در client"
-    },
-    {
-        "id": 435,
-        "question": "What is the primary purpose of React Hook Form?",
-        "options": [
-            "Managing server-side data fetching",
-            "Simplifying form state and validation",
-            "Creating component animations",
-            "Managing global application state"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• ساده‌سازی form state و validation management\n" +
-            "- performance بالا با uncontrolled inputs\n" +
-            "- کد کمتر نسبت به راه‌های سنتی\n" +
-            "- built-in validation و error handling\n" +
-            "- integration آسان با UI libraries"
-    },
-    {
-        "id": 436,
-        "question": "Which hook initializes a form in React Hook Form?",
-        "options": [
-            "useState",
-            "useForm",
-            "useController",
-            "useReducer"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• useForm برای initialize کردن form\n" +
-            "- register، handleSubmit و formState return می‌کند\n" +
-            "- options مثل defaultValues و validation mode\n" +
-            "- تمام form logic را مدیریت می‌کند\n" +
-            "- یک بار در component صدا زده می‌شود"
-    },
-    {
-        "id": 437,
-        "question": "What does the register function do in React Hook Form?",
-        "options": [
-            "Submits form data to server",
-            "Resets all form fields",
-            "Connects inputs to form state",
-            "Triggers form re-rendering"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation":"• inputs را به form state متصل می‌کند\n" +
-            "- validation rules را اضافه می‌کند\n" +
-            "- با spread operator به input pass می‌شود\n" +
-            "- onChange، onBlur و ref را set می‌کند\n" +
-            "- tracking خودکار input values"
-    },
-    {
-        "id": 438,
-        "question": "Which function handles form submission in React Hook Form?",
-        "options": [
-            "useSubmit",
-            "submitForm",
-            "handleSubmit",
-            "onSubmitHandler"
-        ],
-        "correctOption":2,
-        "points": 10,
-        "explanation":"• handleSubmit validation و submission را مدیریت می‌کند\n" +
-            "- validation را قبل از submit اجرا می‌کند\n" +
-            "- در صورت موفقیت، callback را صدا می‌زند\n" +
-            "- data را به صورت object می‌دهد\n" +
-            "- preventDefault خودکار"
-    },
-    {
-        "id": 439,
-        "question": "How do you apply validation rules in React Hook Form?",
-        "options": [
-            "Add attributes directly to input",
-            "Wrap input in Validation component",
-            "Pass options object to register",
-            "Use useValidation hook"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• options object را به register pass می‌کنید\n" +
-            "- مثل { required: true, minLength: 3 }\n" +
-            "- pattern، validate و custom rules\n" +
-            "- error messages قابل customize\n" +
-            "- validation مثل HTML5 اما قدرتمندتر"
-    },
-    {
-        "id": 440,
-        "question": "What does the errors object represent in useForm?",
-        "options": [
-            "List of server-side API errors",
-            "Runtime errors during rendering",
-            "Validation errors for form fields",
-            "React component errors"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• شامل validation errors برای هر field\n" +
-            "- از formState.errors دریافت می‌شود\n" +
-            "- type و message برای هر error\n" +
-            "- برای نمایش error messages استفاده می‌شود\n" +
-            "- به صورت real-time update می‌شود"
-    },
-    {
-        "id": 441,
-        "question": "Why is React Hook Form performant?",
-        "options": [
-            "Automatically fetches data from APIs",
-            "Reduces re-renders with isolated reactivity",
-            "Compiles forms into WebAssembly",
-            "Disables validation for speed"
-        ],
-        "correctOption": 1,
-        "points": 30,
-        "explanation":"• از uncontrolled inputs استفاده می‌کند\n" +
-            "- re-renders را به minimum می‌رساند\n" +
-            "- isolated re-rendering فقط برای changed fields\n" +
-            "- بدون dependencies سنگین\n" +
-            "- native HTML validation هم support می‌کند"
-    },
-    {
-        "id": 442,
-        "question": "Which hook controls custom components in React Hook Form?",
-        "options": [
-            "useController",
-            "useFormContext",
-            "useCustomInput",
-            "useReducer"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• useController برای controlled components\n" +
-            "- field object با value، onChange و onBlur\n" +
-            "- برای third-party UI libraries مفید\n" +
-            "- مثل Material-UI یا Ant Design\n" +
-            "- Controller component هم همین کار را می‌کند"
-    },
-    {
-        "id": 443,
-        "question": "Which method lets you programmatically update a field’s value?",
-        "options": [
-            "updateField",
-            "setValue",
-            "patch",
-            "replaceValue"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• setValue برای تغییر مقدار field به صورت برنامه‌نویسی\n" +
-            "- fieldName و value را می‌گیرد\n" +
-            "- options برای validation و touched\n" +
-            "- مفید برای dynamic updates\n" +
-            "- مثل auto-fill یا reset کردن fields"
-    },
-    {
-        "id": 444,
-        "question": "What problem does useController solve?",
-        "options": [
-            "Integrating controlled components with React Hook Form",
-            "Handling async validation across multiple fields",
-            "Improving form styling with custom CSS",
-            "Fetching form data from external APIs"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation":"• integration با controlled components\n" +
-            "- third-party libraries که controlled هستند\n" +
-            "- access به field state و methods\n" +
-            "- consistency با React Hook Form\n" +
-            "- alternative به Controller component"
-    },
-    {
-        "id": 445,
-        "question": "Why does React Hook Form rely primarily on uncontrolled inputs?",
-        "options": [
-            "Because uncontrolled inputs validate themselves automatically",
-            "Because controlled inputs are not React-compatible",
-            "Because uncontrolled inputs reduce re-renders significantly",
-            "Because uncontrolled inputs are easier to style"
-        ],
-        "correctOption":2,
-        "points": 20,
-        "explanation":"• uncontrolled inputs re-renders کمتری دارند\n" +
-            "- performance بهتر برای forms بزرگ\n" +
-            "- React state را برای هر keystroke update نمی‌کند\n" +
-            "- DOM خودش value را نگه می‌دارد\n" +
-            "- فقط در submit مقادیر خوانده می‌شوند"
-    },
-    {
-        "id": 446,
-        "question": "Which option best describes the role of resolvers?",
-        "options": [
-            "They provide schema-based validation support",
-            "They handle async form submissions automatically",
-            "They manage form context across components",
-            "They improve rendering performance significantly"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• resolvers برای schema-based validation\n" +
-            "- integration با Yup، Zod، Joi\n" +
-            "- validation rules centralized\n" +
-            "- type safety با TypeScript\n" +
-            "- reusable validation schemas"
-    },
-    {
-        "id": 447,
-        "question": "Which hook reads field value without subscribing to updates?",
-        "options": [
-            "setValue",
-            "watch",
-            "getValues",
-            "trigger"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation":"• getValues مقدار field را بدون subscription می‌خواند\n" +
-            "- re-render نمی‌کند\n" +
-            "- برای read-only access مناسب\n" +
-            "- watch برای subscription استفاده می‌شود\n" +
-            "- performance بهتر برای simple reads"
-    },
-    {
-        "id": 448,
-        "question": "How can you implement async validation for username?",
-        "options": [
-            "By using watch with useEffect hook",
-            "By wrapping inputs in FormProvider component",
-            "By manually calling setValue in onChange",
-            "By using async resolver or validate function",
-        ],
-        "correctOption": 3,
-        "points": 30,
-        "explanation":"• validate function با async/await\n" +
-            "- API call برای check کردن availability\n" +
-            "- return true/false یا error message\n" +
-            "- در register options قرار می‌گیرد\n" +
-            "- debounce برای کاهش API calls"
-    },
-    {
-        "id": 449,
-        "question": "What is one key performance advantage of React Hook Form?",
-        "options": [
-            "It uses uncontrolled inputs reducing re-renders",
-            "It automatically caches all inputs in Redux",
-            "It ships smaller bundle but causes re-renders",
-            "It doesn't support any validation rules"
-        ],
-        "correctOption": 0,
-        "points": 30,
-        "explanation":"• uncontrolled inputs باعث کاهش re-renders\n" +
-            "- isolated field updates\n" +
-            "- تنها changed fields re-render می‌شوند\n" +
-            "- bundle size کوچک\n" +
-            "- native validation support"
-    },
-    {
-        "id": 450,
-        "question": "What is the primary purpose of the useForm hook?",
-        "options": [
-            "To handle component lifecycle methods",
-            "To register inputs and manage form state",
-            "To create global state across components",
-            "To render conditional UI elements"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• مدیریت کامل form state و behavior\n" +
-            "- register برای inputs، handleSubmit برای submission\n" +
-            "- formState برای errors و touched\n" +
-            "- validation و error handling\n" +
-            "- core hook در React Hook Form"
-    },
-    {
-        "id": 451,
-        "question": "Which prop must be applied for React Hook Form tracking?",
-        "options": [
-            "onChange",
-            "value",
-            "register",
-            "ref"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation":"• register باید به input apply شود\n" +
-            "- با spread operator: {...register('name')}\n" +
-            "- بدون register، tracking نمی‌شود\n" +
-            "- validation rules در register\n" +
-            "- onChange و ref خودکار set می‌شوند"
-    },
-    {
-        "id": 452,
-        "question":  "What does the handleSubmit function return?",
-        "options": [
-            "The final form values as object",
-            "A reset function for form fields",
-            "Nothing, it just triggers re-renders component",
-            "A callback validating inputs and triggering handler",
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation":"• callback که validation و submission را handle می‌کند\n" +
-            "- به onSubmit در form pass می‌شود\n" +
-            "- validation قبل از callback\n" +
-            "- preventDefault خودکار\n" +
-            "- data به صورت object در callback"
-    },
-    {
-        "id": 453,
-        "question": "How can you provide default values to a form?",
-        "options": [
-            "By setting value attribute directly on inputs",
-            "By passing defaultValues object to useForm",
-            "By calling reset after component rendering",
-            "By wrapping inputs in FormProvider component"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• defaultValues در useForm options\n" +
-            "- object با field names و values\n" +
-            "- برای edit forms مفید\n" +
-            "- async defaultValues هم support می‌شود\n" +
-            "- reset() می‌تواند به defaultValues برگردد"
-    },
-    {
-        "id": 454,
-        "question": "Which hook allows subscribing to specific field changes?",
-        "options": [
-            "useEffect",
-            "watch",
-            "useFormContext",
-            "trigger"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• watch برای subscribe به field changes\n" +
-            "- می‌تواند یک یا چند field را watch کند\n" +
-            "- re-render می‌کند وقتی value تغییر کند\n" +
-            "- برای conditional rendering مفید\n" +
-            "- getValues برای بدون re-render"
-    },
-    {
-        "id": 455,
-        "question": "What is the main use of FormProvider and useFormContext?",
-        "options": [
-            "To style forms globally across application",
-            "To share form state across nested components",
-            "To reset form values automatically",
-            "To connect multiple forms together"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• sharing form methods بین nested components\n" +
-            "- بدون prop drilling\n" +
-            "- FormProvider در بالا، useFormContext در children\n" +
-            "- برای forms پیچیده با deeply nested fields\n" +
-            "- Context API pattern"
-    },
-    {
-        "id": 456,
-        "question":  "Which method manually triggers validation for fields?",
-        "options": [
-            "reset",
-            "validate",
-            "trigger",
-            "checkValidity"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• trigger برای manual validation\n" +
-            "- می‌تواند یک یا همه fields را validate کند\n" +
-            "- async است و boolean return می‌کند\n" +
-            "- برای custom validation timing\n" +
-            "- مثل onBlur یا button click"
-    },
-    {
-        "id": 457,
-        "question": "How do you reset all fields to initial values?",
-        "options": [
-            "resetForm()",
-            "reset()",
-            "clear()",
-            "resetFields()"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• reset() همه fields را به default برمی‌گرداند\n" +
-            "- errors و touched را clear می‌کند\n" +
-            "- می‌تواند values جدید بگیرد\n" +
-            "- مفید بعد از successful submission\n" +
-            "- state کامل form را reset می‌کند"
-    },
-    {
-        "id": 458,
-        "question":  "Which option prevents query from running on mount?",
-        "options": [
-            "`enabled`",
-            "`refetchOnMount`",
-            "`refetchIntervalOnMount`",
-            "`retry`"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation":"• enabled: false در useQuery options\n" +
-            "- query تا true شدن اجرا نمی‌شود\n" +
-            "- برای conditional fetching\n" +
-            "- مثل منتظر ماندن برای user input\n" +
-            "- manual refetch با refetch() همیشه کار می‌کند"
-    },
-    {
-        "id": 459,
-        "question":  "Which option controls refetch on window focus?",
-        "options": [
-            "`enabled`",
-            "`refetchOnWindowFocus`",
-            "`refetchOnMount`",
-            "`refetchInterval`"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• refetchOnWindowFocus در query options\n" +
-            "- پیش‌فرض true است\n" +
-            "- وقتی tab دوباره focus شود، refetch می‌کند\n" +
-            "- برای keeping data fresh\n" +
-            "- می‌توانید false کنید برای disable"
-    },
-    {
-        "id": 460,
-        "question":"How do you poll data every 10 seconds in background?",
-        "options": [
-            "`refetchInterval: 10000` and `refetchIntervalInBackground: true`",
-            "`refetchOnWindowFocus: true` and `refetchInterval: 10000`",
-            "`enabled: true` and `refetchOnMount: always`",
-            "`retry: 3` and `refetchIntervalOnMount: true`"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation":"• refetchInterval: 10000 برای polling\n" +
-            "- refetchIntervalInBackground: true برای background\n" +
-            "- حتی وقتی tab focus ندارد\n" +
-            "- برای real-time data مفید\n" +
-            "- automatic cleanup وقتی component unmount شود"
-    },
-    {
-        "id": 461,
-        "question": "What does refetchIntervalOnMount option control?",
-        "options": [
-            "Whether queries refetch when window regains focus",
-            "Whether query starts polling immediately on mount",
-            "How many retries attempted on failure",
-            "Whether query data is fresh or stale"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• آیا interval بلافاصله در mount شروع شود\n" +
-            "- یا منتظر اولین interval بماند\n" +
-            "- پیش‌فرض true است\n" +
-            "- برای timing دقیق polling\n" +
-            "- با refetchInterval کار می‌کند"
-    },
-    {
-        "id": 462,
-        "question": "What happens when cached data becomes stale?",
-        "options": [
-            "Cached data is deleted from memory automatically",
-            "Query state updates to 'stale' allowing custom effects",
-            "Query immediately refetches data regardless of settings",
-            "All queries in cache are reset"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• query state به 'stale' تغییر می‌کند\n" +
-            "- اما data هنوز در cache است و قابل استفاده\n" +
-            "- در background refetch می‌شود\n" +
-            "- staleTime مدت زمان fresh بودن را کنترل می‌کند\n" +
-            "- این behavior مطلوب برای UX است"
-    },
-    {
-        "id": 463,
-        "question":  "Why is TanStack Query considered state management library?",
-        "options": [
-            "It allows direct modification of component state",
-            "It manages server state and keeps UI synchronized",
-            "It replaces Redux for all local state",
-            "It automatically generates forms from API data"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• server state را manage می‌کند\n" +
-            "- caching، synchronization و updates\n" +
-            "- state بین components share می‌شود\n" +
-            "- lifecycle management برای async data\n" +
-            "- alternative برای Redux برای server state"
-    },
-    {
-        "id": 464,
-        "question":"Which combination allows polling data in background?",
-        "options": [
-            "refetchInterval: 5000 and refetchIntervalInBackground: true",
-            "staleTime: 0 and enabled: true",
-            "cacheTime: 10000 and refetchOnWindowFocus: true",
-            "retry: 3 and refetchOnMount: false"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation":"• refetchInterval + refetchIntervalInBackground: true\n" +
-            "- حتی وقتی window focus ندارد\n" +
-            "- برای real-time updates\n" +
-            "- مثل notifications یا live scores\n" +
-            "- باید با احتیاط استفاده شود (battery/bandwidth)"
-    },
-    {
-        "id": 465,
-        "question": "What does CRUD stand for in application development?",
-        "options": [
-            "Compute, Render, Upload, Deploy",
-            "Create, Read, Update, Delete",
-            "Check, Run, Undo, Debug",
-            "Connect, Retry, Update, Deliver"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• Create: ساخت record جدید\n" +
-            "- Read: خواندن/دریافت data\n" +
-            "- Update: تغییر دادن existing data\n" +
-            "- Delete: حذف کردن record\n" +
-            "- چهار عملیات اصلی database"
-    },
-    {
-        "id": 466,
-        "question": "Which of the following represents the 'Read' operation?",
-        "options": [
-            "Adding a new user to database",
-            "Fetching a list of cabins from Supabase",
-            "Changing a user's password field",
-            "Deleting a cabin from system"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• fetching یا retrieving data از database\n" +
-            "- HTTP GET method\n" +
-            "- useQuery در React Query\n" +
-            "- نمایش data به user\n" +
-            "- بدون تغییر در server"
-    },
-    {
-        "id": 467,
-        "question": "Which hook is most commonly used for 'Update' operation?",
-        "options": [
-            "useEffect",
-            "useQuery",
-            "useMutation",
-            "useContext"
-        ],
-        "correctOption": 2,
-        "points": 30,
-        "explanation":"• useMutation برای update operations\n" +
-            "- HTTP PUT یا PATCH\n" +
-            "- تغییر existing records\n" +
-            "- invalidation برای sync کردن cache\n" +
-            "- onSuccess برای UI updates"
-    },
-    {
-        "id": 468,
-        "question": "Which CRUD operation inserts new record into database?",
-        "options": [
-            "Create",
-            "Read",
-            "Update",
-            "Delete"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation":"• Create با HTTP POST\n" +
-            "- record جدید در database\n" +
-            "- useMutation در React Query\n" +
-            "- server معمولاً ID generate می‌کند\n" +
-            "- بعد از success، cache invalidation"
-    },
-    {
-        "id": 469,
-        "question": "Which CRUD operation retrieves data from API endpoint?",
-        "options": [
-            "Create",
-            "Read",
-            "Update",
-            "Delete"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• Read با HTTP GET\n" +
-            "- useQuery در React Query\n" +
-            "- فقط retrieve، بدون modification\n" +
-            "- caching برای performance\n" +
-            "- safe و idempotent"
-    },
-    {
-        "id": 470,
-        "question": "When modifying existing user's email, which CRUD applies?",
-        "options": [
-            "Create",
-            "Read",
-            "Update",
-            "Delete"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation":"• Update با PUT یا PATCH\n" +
-            "- تغییر existing data\n" +
-            "- useMutation در React Query\n" +
-            "- PATCH اگر فقط email\n" +
-            "- PUT اگر تمام user object"
-    },
-        {
-            "id": 471,
-            "question": "Which CRUD action permanently removes record from database?",
-            "options": [
-                "Create",
-                "Read",
-                "Update",
-                "Delete"
-            ],
-            "correctOption": 3,
-            "points": 10,
-         "explanation":"• Delete با HTTP DELETE\n" +
-             "- حذف permanent از database\n" +
-             "- useMutation برای این operation\n" +
-             "- معمولاً confirmation لازم است\n" +
-             "- cache invalidation بعد از success"
-        },
-        {
-            "id": 472,
-            "question":"Which hook is most suitable for Create, Update, Delete?",
-            "options": [
-                "useEffect",
-                "useState",
-                "useMutation",
-                "useContext"
-            ],
-            "correctOption": 2,
-            "points": 20,
-         "explanation":"• useMutation برای همه CUD operations\n" +
-             "- useQuery فقط برای Read\n" +
-             "- mutations state را تغییر می‌دهند\n" +
-             "- callbacks برای side effects\n" +
-             "- optimistic updates support"
-        },
-        {
-            "id": 473,
-            "question": "Which CRUD operation requires invalidating cached queries?",
-            "options": [
-                "Only Read",
-                "Create/Update/Delete",
-                "All of them",
-                "None of them"
-            ],
-            "correctOption": 1,
-            "points": 30,
-         "explanation":"• Create، Update، Delete همه نیاز به invalidation\n" +
-             "- چون server state را تغییر می‌دهند\n" +
-             "- cache باید sync شود\n" +
-             "- Read نیازی به invalidation ندارد\n" +
-             "- queryClient.invalidateQueries بعد از mutations"
-        },
-        {
-            "id": 474,
-            "question":  "Why is Update often more complex than Create?",
-            "options": [
-                "Because it bypasses state management entirely",
-                "Because it does not require validation",
-                "Because it must handle existing and new values",
-                "Because it always deletes old records first",
-            ],
-            "correctOption": 3,
-            "points": 30,
-         "explanation":"• باید existing values را handle کند\n" +
-             "- merge کردن new و old data\n" +
-             "- partial updates (PATCH) vs full (PUT)\n" +
-             "- optimistic updates پیچیده‌تر\n" +
-             "- validation برای هر دو حالت"
-        },
-        {
-            "id": 475,
-            "question": "What does TypeScript mainly add to JavaScript?",
-            "options": [
-                "Server-side rendering capabilities",
-                "Static type checking",
-                "Automatic UI rendering",
-                "Database connectivity"
-            ],
-            "correctOption": 1,
-            "points": 10,
-         "explanation":"• static type checking در compile time\n" +
-             "- errors را قبل از runtime می‌گیرد\n" +
-             "- autocomplete و IntelliSense\n" +
-             "- documentation از طریق types\n" +
-             "- refactoring ایمن‌تر"
-        },
-        {
-            "id": 476,
-            "question":"Which of the following will TypeScript flag as error?",
-            "options": [
-                "let age: number = 30;",
-                "age = 40;",
-                "age = 'thirty';",
-                "console.log(age);"
-            ],
-            "correctOption": 2,
-            "points": 10,
-         "explanation":"• age = 'thirty' چون age تایپ number است\n" +
-             "- type mismatch خطا می‌دهد\n" +
-             "- در compile time catch می‌شود\n" +
-             "- از bugs runtime جلوگیری می‌کند\n" +
-             "- type safety enforcement"
-        },
-        {
-            "id": 477,
-            "question":  "Why does TypeScript check function parameter types?",
-            "options": [
-                "To optimize runtime performance automatically",
-                "To prevent passing arguments of incorrect type",
-                "To convert JavaScript code to HTML",
-                "To automatically fetch data from APIs"
-            ],
-            "correctOption": 1,
-            "points": 10,
-         "explanation":"• جلوگیری از passing wrong argument types\n" +
-             "- function signature را enforce می‌کند\n" +
-             "- compile time errors به جای runtime\n" +
-             "- self-documenting code\n" +
-             "- IDE support برای autocomplete"
-        },
-        {
-            "id": 478,
-            "question": "Which of these will TypeScript catch?",
-            "options": [
-                "Accessing non-existent property on object",
-                "Logic errors in sorting algorithms",
-                "Network request failures at runtime",
-                "CSS styling errors in components"
-            ],
-            "correctOption": 0,
-            "points": 10,
-         "explanation":"• دسترسی به property که وجود ندارد\n" +
-             "- object.nonExistentProperty\n" +
-             "- typos در property names\n" +
-             "- type safety برای objects\n" +
-             "- logic errors را نمی‌گیرد"
-        },
-        {
-            "id": 479,
-            "question": "How does TypeScript handle null in string variable?",
-            "options": [
-                "It ignores the value completely",
-                "It treats undefined as zero value",
-                "It automatically converts null to empty string",
-                "It throws compile error if strict mode enabled",
-            ],
-            "correctOption": 3,
-            "points": 20,
-         "explanation":"• در strict mode، null به string assign نمی‌شود\n" +
-             "- compile error می‌دهد\n" +
-             "- باید type را string | null کنید\n" +
-             "- null safety enforcement\n" +
-             "- از null reference errors جلوگیری"
-        },
-        {
-            "id": 480,
-            "question": "Why is TypeScript helpful in large React projects?",
-            "options": [
-                "It reduces runtime errors and improves productivity",
-                "It automatically styles all React components",
-                "It replaces Redux for state management",
-                "It converts JSX to HTML directly"
-            ],
-            "correctOption": 0,
-            "points": 20,
-         "explanation":"• type safety برای props و state\n" +
-             "- refactoring ایمن‌تر\n" +
-             "- autocomplete برای productivity\n" +
-             "- catch کردن errors در development\n" +
-             "- documentation خودکار از types"
-        },
-    {
-        "id": 481,
-        "question":  "Which TypeScript feature prevents incorrect object shapes?",
-        "options": [
-            "Interfaces and type annotations",
-            "React hooks for state",
-            "Async/await syntax",
-            "CSS modules system"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation":"• interfaces و type annotations\n" +
-            "- object structure را define می‌کنند\n" +
-            "- required و optional properties\n" +
-            "- compile time validation\n" +
-            "- consistency در codebase"
-    },
-    {
-        "id": 482,
-        "question": "What kind of errors does TypeScript detect before runtime?",
-        "options": [
-            "Runtime network connection errors",
-            "Compile-time type mismatches",
-            "CSS styling layout mistakes",
-            "User input validation errors"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• type mismatches و type errors\n" +
-            "- undefined properties\n" +
-            "- wrong function arguments\n" +
-            "- در compile time catch می‌شود\n" +
-            "- logic errors را نمی‌گیرد"
-    },
-    {
-        "id": 483,
-        "question": "Which of the following will TypeScript catch during development?",
-        "options": [
-            "Accessing property that doesn't exist on objects",
-            "Logic errors in complex sorting algorithms",
-            "API response failures during runtime execution",
-            "Broken HTML layout and structure issues"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation":"• accessing non-existent properties\n" +
-            "- typos در property یا method names\n" +
-            "- type mismatches\n" +
-            "- در editor با red underline\n" +
-            "- قبل از run کردن code"
-    },
-    {
-        "id": 484,
-        "question": "Why is detecting errors at compile-time useful?",
-        "options": [
-            "Generates CSS styles for components automatically",
-            "Prevents runtime crashes improving code reliability",
-            "Reduces network latency improving page speed",
-            "Automatically fetches data from external APIs",
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• bugs را قبل از production می‌گیرد\n" +
-            "- debugging آسان‌تر در development\n" +
-            "- runtime crashes کمتر\n" +
-            "- confidence بیشتر در refactoring\n" +
-            "- user experience بهتر"
-    },
-    {
-        "id": 485,
-        "question": "Which scenario is a compile-time error TypeScript detects?",
-        "options": [
-            "Server not responding to network requests",
-            "Button element not triggering click events",
-            "Calling function with incorrect argument types",
-            "User entering wrong login credentials"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation":"• calling function با wrong argument types\n" +
-            "- myFunc(123) اگر string می‌خواهد\n" +
-            "- در compile time error می‌دهد\n" +
-            "- IDE قبل از run نشان می‌دهد\n" +
-            "- network errors runtime هستند"
-    },
-    {
-        "id": 486,
-        "question": "Which TypeScript feature ensures errors before runtime?",
-        "options": [
-            "React hooks implementation",
-            "Static type checking system",
-            "CSS modules integration",
-            "Browser developer tools"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation":"• static type checking system\n" +
-            "- analysis در compile time\n" +
-            "- type inference و annotations\n" +
-            "- strict mode برای safety بیشتر\n" +
-            "- compiler errors قبل از execution"
-    },
-    {
-        "id": 487,
-        "question": "At which stage does TypeScript execute type checks?",
-        "options": [
-            "During runtime execution in browser",
-            "During compilation before code runs",
-            "After deployment to production server",
-            "When user interacts with UI elements"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• during compilation قبل از run\n" +
-            "- TypeScript به JavaScript compile می‌شود\n" +
-            "- type checking در این مرحله\n" +
-            "- runtime فقط JavaScript اجرا می‌شود\n" +
-            "- types در compiled code نیستند"
-    },
-    {
-        "id": 488,
-        "question": "Why is React Hook Form popular among developers?",
-        "options": [
-            "Automatically generates CSS for form elements",
-            "Provides performant form state management",
-            "Replaces Redux for all state management",
-            "Converts forms to server-side code"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation":"• performance عالی با uncontrolled inputs\n" +
-            "- API ساده و intuitive\n" +
-            "- bundle size کوچک\n" +
-            "- validation قدرتمند built-in\n" +
-            "- DevEx خوب با TypeScript"
-    },
-    {
-        "id": 489,
-        "question": "Why does React Hook Form trigger fewer re-renders?",
-        "options": [
-            "Uses uncontrolled inputs reducing re-renders",
-            "Automatically batches all network requests",
-            "Only works with functional components",
-            "Converts inputs to server variables"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation":"• از uncontrolled inputs استفاده می‌کند\n" +
-            "- DOM خودش values را نگه می‌دارد\n" +
-            "- React state برای هر keystroke update نمی‌شود\n" +
-            "- isolated re-rendering فقط لازم\n" +
-            "- performance بهتر از Formik"
-    },
-    {
-        "id": 490,
-        "question": "In React forms, what is a controlled component?",
-        "options": [
-            "Component managing its own internal state",
-            "Component fetching data from APIs automatically",
-            "Component where React controls input value",
-            "Component that cannot receive any props"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation":"• component که React value را control می‌کند\n" +
-            "- value از state می‌آید\n" +
-            "- onChange state را update می‌کند\n" +
-            "- React single source of truth است\n" +
-            "- re-render در هر keystroke"
-    },
-    {
-        "id": 491,
-        "question": "What is best practice for showing validation errors?",
-        "options": [
-            "Show all error messages on mount",
-            "Use touchedFields after user interaction",
-            "Display errors only after submission",
-            "Manually track blur with useState"
-        ],
-        "correctOption": 1,
-        "points": 20,
-         "explanation":"• استفاده از touchedFields بعد از interaction\n" +
-             "- errors فقط برای touched fields\n" +
-             "- بهتر از showing همه errors در mount\n" +
-             "- UX بهتر برای user\n" +
-             "- onBlur یا onChange برای timing"
-    },
-    {
-        "id": 492,
-        "question": "Which is best practice for error messages in forms?",
-        "options": [
-            "Manually implement blur tracking",
-            "Show all errors immediately on mount",
-            "Show errors only after form submission",
-            "Use touchedFields after user interaction",
-        ],
-        "correctOption": 3,
-        "points": 20,
-         "explanation":"• نمایش errors بعد از user interaction\n" +
-             "- با touchedFields check کردن\n" +
-             "- نه بلافاصله در mount\n" +
-             "- progressive validation\n" +
-             "- UX friendly approach"
-    },
-    {
-        "id": 493,
-        "question": "Why does using onTouched improve user experience?",
-        "options": [
-            "Prevents unnecessary component re-renders",
-            "Disables inputs until form submission",
-            "Shows errors only after user interaction",
-            "Automatically fixes all validation rules"
-        ],
-        "correctOption": 2,
-        "points": 30,
-         "explanation":"• errors فقط بعد از interaction نشان داده می‌شوند\n" +
-             "- نه بلافاصله وقتی form باز می‌شود\n" +
-             "- کمتر overwhelming برای user\n" +
-             "- natural validation flow\n" +
-             "- مانند native forms"
-    },
-    {
-        "id": 494,
-        "question": "Why use spread operator with register function?",
-        "options": [
-            "Copies only the input value property",
-            "Passes all necessary props automatically",
-            "Removes need for validation rules",
-            "Prevents React from re-rendering input"
-        ],
-        "correctOption": 1,
-        "points": 20,
-         "explanation":"• تمام props لازم را به input pass می‌کند\n" +
-             "- onChange، onBlur، ref، name\n" +
-             "- {...register('email')} ساده‌تر از manual\n" +
-             "- validation rules هم included\n" +
-             "- cleaner و readable code"
-    },
-    {
-        "id": 495,
-        "question": "What happens if you use register without spreading?",
-        "options": [
-            "Nothing changes, form works the same",
-            "TypeScript throws error but works fine",
-            "Input won't connect to form state",
-            "Automatically infers validation rules"
-        ],
-        "correctOption": 2,
-        "points": 30,
-         "explanation":"• input به form state connect نمی‌شود\n" +
-             "- values track نمی‌شوند\n" +
-             "- validation کار نمی‌کند\n" +
-             "- spread operator ضروری است\n" +
-             "- بدون آن form broken است"
-    },
-    {
-        "id": 496,
-        "question": "Which best describes what ...register does?",
-        "options": [
-            "Spreads only validation rules to component",
-            "Adds custom hook into component props",
-            "Spreads handlers and validation rules",
-            "Overrides default HTML element attributes"
-        ],
-        "correctOption": 2,
-        "points": 30,
-         "explanation":"• handlers (onChange، onBlur) و ref را spread می‌کند\n" +
-             "- validation rules را apply می‌کند\n" +
-             "- name attribute را set می‌کند\n" +
-             "- input را به form متصل می‌کند\n" +
-             "- all-in-one connection"
-    },
-    {
-        "id": 497,
-        "question": "What is the main idea of Render Props pattern?",
-        "options": [
-            "Passing JSX elements as component props",
-            "Passing function as prop controlling render",
-            "Rendering props automatically inside DOM",
-            "Using context API to render props"
-        ],
-        "correctOption": 1,
-        "points": 10,
-         "explanation":"• passing function به عنوان prop که render logic دارد\n" +
-             "- child function به جای JSX\n" +
-             "- sharing logic بین components\n" +
-             "- flexibility در rendering\n" +
-             "- قبل از hooks رایج بود"
-    },
-    {
-        "id": 498,
-        "question": "Why has Render Props usage decreased in recent years?",
-        "options": [
-            "No longer supported in React 18 version",
-            "Hooks provide simpler way to share logic",
-            "Context API completely replaced the pattern",
-            "Caused errors in React strict mode"
-        ],
-        "correctOption": 1,
-        "points": 30,
-         "explanation":"• Hooks راه ساده‌تری برای logic sharing\n" +
-             "- custom hooks جایگزین render props\n" +
-             "- کد خواناتر با hooks\n" +
-             "- کمتر nesting و complexity\n" +
-             "- Hooks modern approach هستند"
-    },
-    {
-        "id": 499,
-        "question": "What is main purpose of Compound Component Pattern?",
-        "options": [
-            "Bundle multiple components into single file",
-            "Allow related components work together unified",
-            "Reduce size of final JavaScript bundle",
-            "Avoid writing any props in child components"
-        ],
-        "correctOption": 1,
-        "points": 10,
-         "explanation":"• components مرتبط با هم کار می‌کنند\n" +
-             "- state implicitly share می‌شود\n" +
-             "- flexible API برای composition\n" +
-             "- مثل Select.Option یا Tabs.Panel\n" +
-             "- readability و reusability"
-    },
-    {
-        "id": 500,
-        "question": "Which technique shares state in Compound Component Pattern?",
-        "options": [
-            "Prop drilling through component tree",
-            "React Context for state sharing",
-            "Redux store for global state",
-            "Direct DOM manipulation methods"
-        ],
-        "correctOption": 1,
-        "points": 10,
-         "explanation":"• React Context برای implicit state sharing\n" +
-             "- parent context provide می‌کند\n" +
-             "- children با useContext مصرف می‌کنند\n" +
-             "- بدون prop drilling\n" +
-             "- clean و flexible API"
-    },
-    {
-        "id": 501,
-        "question": "Why prefer compound components over single component?",
-        "options": [
-            "Makes API more flexible and declarative",
-            "Reduces need for TypeScript typings",
-            "Automatically optimizes rendering performance",
-            "Eliminates need for CSS styling"
-        ],
-        "correctOption": 0,
-        "points": 20,
-         "explanation":"• API flexible و declarative است\n" +
-             "- user کنترل بیشتر روی structure\n" +
-             "- composition بهتر از configuration\n" +
-             "- extensible و customizable\n" +
-             "- readability کد بالاتر"
-    },
-    {
-        "id": 502,
-        "question": "What problem does Compound Component Pattern solve?",
-        "options": [
-            "Reduces JSX nesting making UI flat",
-            "Avoids hard-coding giving flexibility",
-            "Ensures better tree-shaking during build",
-            "Automatically memoizes all child components"
-        ],
-        "correctOption": 1,
-        "points": 20,
-         "explanation":"• از hard-coding structure جلوگیری می‌کند\n" +
-             "- flexibility در چیدمان components\n" +
-             "- user می‌تواند ترتیب را تغییر دهد\n" +
-             "- بدون props drilling زیاد\n" +
-             "- مثل HTML native elements"
-    },
-    {
-        "id": 503,
-        "question": "How do children access parent state in Compound Component pattern?",
-        "options": [
-            "Calling function exported from parent",
-            "Reading from global variables directly",
-            "Through React Context and useContext",
-            "Importing parent hook directly"
-        ],
-        "correctOption": 2,
-        "points": 30,
-         "explanation":"• از React Context و useContext\n" +
-             "- parent Provider است\n" +
-             "- children Consumer هستند\n" +
-             "- implicit connection بدون props\n" +
-             "- clean و maintainable code"
-    },
-    {
-        "id": 504,
-        "question": "Why is React Portal often used for Modal?",
-        "options": [
-            "Replaces need for CSS styling modals",
-            "Renders modal outside root DOM hierarchy",
-            "Improves server-side rendering performance",
-            "Automatically closes modal on route changes"
-        ],
-        "correctOption": 1,
-        "points": 10,
-         "explanation":"• modal را خارج از parent DOM render می‌کند\n" +
-             "- از stacking context issues جلوگیری\n" +
-             "- از overflow: hidden مشکلات فرار\n" +
-             "- z-index management آسان‌تر\n" +
-             "- semantically در document.body"
-    },
-    {
-        "id": 505,
-        "question": "What is main purpose of React Portal for modals?",
-        "options": [
-            "Reduces number of modal re-renders",
-            "Renders modal outside parent DOM hierarchy",
-            "Improves performance of state updates",
-            "Automatically adds animations to modal"
-        ],
-        "correctOption": 1,
-        "points": 20,
-         "explanation":"• rendering خارج از parent DOM hierarchy\n" +
-             "- در document.body یا modal-root\n" +
-             "- از CSS constraints فرار\n" +
-             "- full-screen overlays راحت‌تر\n" +
-             "- event bubbling همچنان کار می‌کند"
-    },
-    {
-        "id": 506,
-        "question": "What problem do React Portals solve?",
-        "options": [
-            "Slow component rendering performance",
-            "Rendering children outside parent DOM hierarchy",
-            "Managing global application state",
-            "Handling asynchronous operations"
-        ],
-        "correctOption": 1,
-        "points": 10,
-         "explanation":"• Portal rendering خارج از parent DOM tree\n" +
-             "- مفید برای modals، tooltips، overlays\n" +
-             "- از CSS stacking context فرار می‌کند\n" +
-             "- اما در React tree همچنان child است\n" +
-             "- event bubbling عادی کار می‌کند"
-    },
+},
+{
+    "id": 343,
+    "question":"What advantage does React Query provide in large apps?",
+    "options": [
+    "Server state caching and synchronization across components",
+    "Prevents re-rendering by removing dependency arrays",
+    "Compiles React code into server-side JavaScript",
+    "Makes applications independent of REST APIs"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• server state caching در سراسر app\n" +
+"- automatic background refetching\n" +
+"- data بین components share می‌شود\n" +
+"- loading و error states unified\n" +
+"- کاهش boilerplate code"
+},
+{
+    "id": 344,
+    "question":  "Why is caching valuable in React Query?",
+    "options": [
+    "Prevents storing any data in memory",
+    "Allows data reuse without repeated server requests",
+    "Replaces need for hooks like useState",
+    "Automatically generates UI components for display"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• data reuse بدون API calls مجدد\n" +
+"- سرعت بالاتر و UX بهتر\n" +
+"- کاهش server load\n" +
+"- کاهش bandwidth usage\n" +
+"- instant navigation بین صفحات"
+},
+{
+    "id": 345,
+    "question":"How does caching improve performance over plain fetch?",
+    "options": [
+    "Cached data enables faster UI updates and reduces unnecessary network requests",
+    "Caching removes the need for APIs in web applications",
+    "Caching only stores styles for components, not data",
+    "Cached data replaces the need for useEffect entirely"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• cached data فوراً available است\n" +
+"- no loading spinners برای cached data\n" +
+"- کمتر network requests\n" +
+"- background updates برای freshness\n" +
+"- perceived performance بسیار بهتر"
+},
+{
+    "id": 346,
+    "question":  "How does React Query caching enhance user experience?",
+    "options": [
+    "forces the UI to reload from scratch whenever new data is fetched",
+    "completely prevents re-renders in all React components",
+    "Keeps data instantly available while ensuring freshness",
+    "converts API responses into static HTML during build time"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation": "• instant page loads با cached data\n" +
+"- در background fresh data می‌آورد\n" +
+"- stale-while-revalidate strategy\n" +
+"- no blank screens\n" +
+"- smooth و responsive UI"
+},
+{
+    "id": 347,
+    "question":  "What does staleTime control in React Query?",
+    "options": [
+    "How long inactive queries stay in memory",
+    "How often React Query clears localStorage",
+    "How many components can subscribe to queries",
+    "How long data remains fresh before refetching",
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation": "• staleTime مدت زمان fresh بودن data\n" +
+"- تا این مدت refetch نمی‌شود\n" +
+"- staleTime: 60000 یعنی 1 دقیقه fresh\n" +
+"- پیش‌فرض 0 (بلافاصله stale)\n" +
+"- برای static data بالا set کنید"
+},
+{
+    "id": 348,
+    "question": "What is the difference between 'staleTime' and 'cacheTime' in React Query?",
+    "options": [
+    "staleTime controls freshness, cacheTime controls memory duration",
+    "staleTime controls data freshness, while cacheTime controls cache duration",
+    "staleTime deletes data permanently, cacheTime saves it forever",
+    "staleTime is for server updates, cacheTime is for local state updates",
+    "staleTime only applies to mutations, cacheTime only applies to queries"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• staleTime: مدت fresh بودن data\n" +
+"- cacheTime: مدت ماندن در memory\n" +
+"- staleTime برای refetch timing\n" +
+"- cacheTime برای garbage collection\n" +
+"- staleTime معمولاً کوتاه‌تر"
+},
+{
+    "id": 349,
+    "question": "When would you increase staleTime for queries?",
+    "options": [
+    "To reduce unnecessary refetches for stable data",
+    "To force React Query to clear queries instantly",
+    "To remove queries from cache when unmounting",
+    "To automatically generate new API endpoints"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• برای data که کم تغییر می‌کند\n" +
+"- مثل user profile، settings\n" +
+"- کاهش unnecessary refetches\n" +
+"- بهبود performance\n" +
+"- کاهش server load"
+},
+{
+    "id": 350,
+    "question": "What does useQuery hook return to components?",
+    "options": [
+    "Only the fetched data from server",
+    "A function that must be manually called to fetch data",
+    "Query state object with data, loading, error",
+    "Only the error object if the request fails"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• object با data، isLoading، error\n" +
+"- isSuccess، isFetching، isError\n" +
+"- refetch function\n" +
+"- status: 'loading' | 'error' | 'success'\n" +
+"- همه چیز برای UI state management"
+},
+{
+    "id": 351,
+    "question":  "Which property is NOT in useQuery return object?",
+    "options": [
+    "data property containing fetched information",
+    "isLoading boolean indicating fetch status",
+    "mutate function for triggering updates",
+    "isError boolean indicating failure state"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• mutate برای useMutation است نه useQuery\n" +
+"- useQuery فقط برای reading\n" +
+"- useMutation برای creating/updating/deleting\n" +
+"- data، isLoading، error در useQuery\n" +
+"- mutate، mutateAsync در useMutation"
+},
+{
+    "id": 352,
+    "question":"How does useQuery output improve UI responsiveness?",
+    "options": [
+    "Exposes states like isLoading and isFetching for instant UI reactions",
+    "automatically converting all data into static HTML at build time",
+    "prevents components from re-rendering after data changes",
+    "replacing the need for client-side state management libraries entirely"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• isLoading برای showing spinners\n" +
+"- isError برای error messages\n" +
+"- isFetching برای background updates\n" +
+"- instant feedback به user\n" +
+"- professional UX"
+},
+{
+    "id": 353,
+    "question": "What is Strapi's primary function?",
+    "options": [
+    "Building frontend UI component libraries",
+    "Managing content and exposing APIs as CMS",
+    "Optimizing bundle size in React applications",
+    "Handling client-side routing and navigation"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• Strapi headless CMS است\n" +
+"- content management با admin panel\n" +
+"- auto-generate REST/GraphQL APIs\n" +
+"- backend بدون coding زیاد\n" +
+"- برای content-heavy apps"
+},
+{
+    "id": 354,
+    "question": "Which feature distinguishes Strapi from traditional CMS?",
+    "options": [
+    "Provides automatic API generation with REST/GraphQL",
+    "Replaces React state management libraries completely",
+    "Works exclusively with serverless databases",
+    "Automatically generates frontend components for display"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• headless: frontend-agnostic\n" +
+"- API-first approach\n" +
+"- customizable با code\n" +
+"- modern tech stack (Node.js)\n" +
+"- WordPress monolithic است"
+},
+{
+    "id": 355,
+    "question":  "Why choose Strapi over WordPress for modern development?",
+    "options": [
+    "Allows complete backend control while staying frontend-agnostic",
+    "comes with a pre-built frontend theme system",
+    "requires no authentication for any API requests",
+    " only supports static site generation"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• API-first برای any frontend\n" +
+"- JavaScript/TypeScript stack\n" +
+"- customization بیشتر\n" +
+"- modern architecture\n" +
+"- WordPress PHP-based و legacy"
+},
+{
+    "id": 356,
+    "question": "What differs between Strapi development and production modes?",
+    "options": [
+    "Development provides better security than production",
+    "Production allows hot-reloading like development mode",
+    "Development for local testing, production for live servers",
+    "Both modes function identically in all aspects"
+],
+    "correctOption":2,
+    "points": 10,
+    "explanation": "• development: admin panel enabled\n" +
+"- hot-reloading و debugging\n" +
+"- production: optimized و secure\n" +
+"- admin panel معمولاً disabled\n" +
+"- environment variables متفاوت"
+},
+{
+    "id": 357,
+    "question": "How does React Query maintain server synchronization?",
+    "options": [
+    "By automatically refetching stale data in background",
+    "By manually refreshing page on every request",
+    "By storing data permanently in localStorage",
+    "By blocking UI updates until calls finish"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• automatic background refetching\n" +
+"- refetchOnWindowFocus: true\n" +
+"- refetchOnReconnect\n" +
+"- stale-while-revalidate\n" +
+"- data همیشه تا حد ممکن fresh"
+},
+{
+    "id": 358,
+    "question":  "What mechanism keeps React Query cache fresh?",
+    "options": [
+    "Server-side rendering exclusively for updates",
+    "Stale-while-revalidate strategy for background updates",
+    "Manual refetching triggered by button clicks",
+    "Long polling on every state change",
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• stale-while-revalidate strategy\n" +
+"- cached data سریع نشان می‌دهد\n" +
+"- در background refetch می‌کند\n" +
+"- UI با fresh data update می‌شود\n" +
+"- best of both worlds"
+},
+{
+    "id": 359,
+    "question":"Why is React Query efficient for server synchronization?",
+    "options": [
+    "Bypasses the cache and forces a fresh API call",
+    "Because it synchronizes data only once when the app starts",
+    "Combines cache, refetch, and dependency updates efficiently",
+    "Mirrors the server database directly inside the client’s memory"
+],
+    "correctOption":2,
+    "points": 30,
+    "explanation": "• caching کاهش network requests\n" +
+"- background updates بدون blocking UI\n" +
+"- smart refetch strategies\n" +
+"- deduplication از duplicate requests\n" +
+"- ترکیب performance و freshness"
+},
+{
+    "id": 360,
+    "question": "What does 'prefetching' data in React Query mean?",
+    "options": [
+    "Fetching data in advance before the component needs it",
+    "Fetching data only after the component renders",
+    "Deleting old cached data",
+    "Blocking UI until all data is fetched"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• loading data قبل از نیاز واقعی\n" +
+"- در background و silent\n" +
+"- data در cache ready\n" +
+"- instant navigation\n" +
+"- predictive data loading"
+},
+{
+    "id": 361,
+    "question": "Why is prefetching useful in React Query?",
+    "options": [
+    "Because it reduces perceived loading time and makes the UI more responsive",
+    "Because it automatically writes data to localStorage",
+    "Because it removes the need for a backend API",
+    "Because it disables caching for the fetched data"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• کاهش perceived loading time\n" +
+"- instant page transitions\n" +
+"- بهتر UX\n" +
+"- data از قبل آماده\n" +
+"- مثل native apps"
+},
+{
+    "id": 362,
+    "question": "Which statement correctly describes how prefetching works in React Query?",
+    "options": [
+    "Prefetching loads and caches the data in advance, so when a component uses useQuery with the same key, the data is immediately available",
+    "Prefetching disables caching and forces a refetch every time the component mounts",
+    "Prefetching automatically converts data into static HTML",
+    "Prefetching prevents the component from ever re-rendering"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• prefetch data را در cache می‌گذارد\n" +
+"- useQuery با همان key فوراً data دارد\n" +
+"- no loading state\n" +
+"- background refetch اگر stale\n" +
+"- seamless experience"
+},
+{
+    "id": 363,
+    "question": "What is event bubbling in the DOM?",
+    "options": [
+    "Events travel from target element up to document root",
+    "Events travel from document root down to target element",
+    "Events execute only on the clicked element",
+    "Events prevent all other handlers from executing"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• events از child به parent travel می‌کنند\n" +
+"- از target element به document\n" +
+"- به ترتیب ancestors\n" +
+"- default behavior در DOM\n" +
+"- می‌توان با stopPropagation جلوگیری کرد"
+},
+{
+    "id": 364,
+    "question": "What is event capturing in the DOM?",
+    "options": [
+    "Events execute only on parent elements",
+    "Events travel from document root down to target element",
+    "Events travel from target element up to ancestors",
+    "Events prevent propagation to child elements"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• events از parent به child travel می‌کنند\n" +
+"- از document به target element\n" +
+"- قبل از bubbling\n" +
+"- addEventListener(event, handler, true)\n" +
+"- کمتر استفاده می‌شود"
+},
+{
+    "id": 365,
+    "question": "In which order do event phases occur?",
+    "options": [
+    "Target phase, bubbling phase, capturing phase",
+    "Bubbling phase, target phase, capturing phase",
+    "Capturing phase, target phase, bubbling phase",
+    "Target phase, capturing phase, bubbling phase"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• 1. Capturing: document → target\n" +
+"- 2. Target: روی element خود\n" +
+"- 3. Bubbling: target → document\n" +
+"- capturing → target → bubbling\n" +
+"- همیشه این ترتیب"
+},
+{
+    "id": 366,
+    "question": "How do you register an event listener for capturing phase?",
+    "options": [
+    "element.addEventListener('click', handler, true)",
+    "element.addEventListener('click', handler, false)",
+    "element.addEventListener('click', handler, {bubble: false})",
+    "element.addEventListener('click', handler, {capture: false})"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• addEventListener با third argument: true\n" +
+"- element.addEventListener('click', handler, true)\n" +
+"- یا { capture: true }\n" +
+"- false یا omit برای bubbling\n" +
+"- پیش‌فرض bubbling است"
+},
+{
+    "id": 367,
+    "question": "What does event.stopPropagation() accomplish?",
+    "options": [
+    "Prevents default browser behavior for events",
+    "Removes all event listeners from element",
+    "Prevents event from continuing through phases",
+    "Triggers event on all parent elements"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• جلوگیری از continue کردن event\n" +
+"- در bubbling یا capturing\n" +
+"- parent handlers اجرا نمی‌شوند\n" +
+"- فقط current element\n" +
+"- preventDefault متفاوت است"
+},
+{
+    "id": 368,
+    "question": "When would you use event capturing over bubbling?",
+    "options": [
+    "When you need to handle events before children",
+    "When you want events to execute on target only",
+    "When you need to prevent all event propagation",
+    "When you want to remove event listeners automatically"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• وقتی می‌خواهید parent زودتر handle کند\n" +
+"- قبل از child elements\n" +
+"- برای global handlers\n" +
+"- event delegation خاص\n" +
+"- کمتر common است"
+},
+{
+    "id": 369,
+    "question": "What happens if you call stopPropagation() during capturing?",
+    "options": [
+    "Event continues to target and bubbling phases",
+    "Event stops and skips target and bubbling phases",
+    "Event jumps directly to bubbling phase",
+    "Event executes on all elements simultaneously"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation": "• event متوقف می‌شود\n" +
+"- به target نمی‌رسد\n" +
+"- bubbling هم اتفاق نمی‌افتد\n" +
+"- فقط handlers تا آن نقطه اجرا شده‌اند\n" +
+"- complete stop"
+},
+{
+    "id": 370,
+    "question": "How does event delegation utilize event bubbling?",
+    "options": [
+    "Attaches listeners to each individual child element",
+    "Prevents events from reaching parent elements",
+    "Uses parent listener to handle child events",
+    "Creates separate event phases for each element"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• یک listener روی parent\n" +
+"- children events به parent bubble می‌کنند\n" +
+"- event.target برای تشخیص child\n" +
+"- efficient برای many children\n" +
+"- کمتر memory usage"
+},
+{
+    "id": 371,
+    "question": "What is event.target in the context of bubbling?",
+    "options": [
+    "The element currently handling the event",
+    "The element where the event originally occurred",
+    "The topmost parent element in hierarchy",
+    "The element that registered the event listener"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• element که event روی آن شروع شد\n" +
+"- original target\n" +
+"- در bubbling تغییر نمی‌کند\n" +
+"- currentTarget متفاوت است\n" +
+"- برای event delegation"
+},
+{
+    "id": 372,
+    "question": "What is event.currentTarget during event propagation?",
+    "options": [
+    "The document root element for all events",
+    "The element where event originally occurred",
+    "The element currently executing event handler",
+    "The element that will handle event next"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• element که handler روی آن است\n" +
+"- در bubbling تغییر می‌کند\n" +
+"- همیشه element با listener\n" +
+"- target ثابت است\n" +
+"- this نیز currentTarget است"
+},
+{
+    "id": 373,
+    "question": "Why is event delegation beneficial for dynamic content?",
+    "options": [
+    "Eliminates need for event listeners on elements",
+    "Handles events for elements added after page load",
+    "Prevents events from propagating to children",
+    "Automatically removes listeners when elements disappear"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation": "• elements جدید نیازی به listener ندارند\n" +
+"- parent listener handle می‌کند\n" +
+"- کار با dynamically added elements\n" +
+"- کمتر listeners\n" +
+"- better performance"
+},
+{
+    "id": 374,
+    "question": "What occurs during the target phase of event propagation?",
+    "options": [
+    "Event travels from document to target element",
+    "Event travels from target element to document",
+    "Event executes handlers registered on target element",
+    "Event stops propagation automatically after execution"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• handlers روی target element اجرا می‌شوند\n" +
+"- بعد از capturing\n" +
+"- قبل از bubbling\n" +
+"- event.target === event.currentTarget\n" +
+"- middle phase"
+},
+{
+    "id": 375,
+    "question": "How can you determine which phase an event is in?",
+    "options": [
+    "Check event.phase property for current phase",
+    "Check event.eventPhase property for current phase",
+    "Compare event.target with event.currentTarget values",
+    "Use event.stopPropagation() to test behavior"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation": "• event.eventPhase property\n" +
+"- 1: CAPTURING_PHASE\n" +
+"- 2: AT_TARGET\n" +
+"- 3: BUBBLING_PHASE\n" +
+"- numeric constants"
+},
+{
+    "id": 376,
+    "question": "What happens with multiple listeners on same element?",
+    "options": [
+    "Only the first registered listener executes",
+    "Only the last registered listener executes",
+    "All listeners execute in registration order",
+    "Listeners execute in reverse registration order"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• همه listeners به ترتیب registration اجرا می‌شوند\n" +
+"- اولین registered، اولین executed\n" +
+"- مگر stopImmediatePropagation\n" +
+"- همه در همان phase\n" +
+"- deterministic order"
+},
+{
+    "id": 377,
+    "question": "What happens when you update a ref's current value?",
+    "options": [
+    "Component re-renders automatically after update",
+    "Component re-renders only on next state change",
+    "Component does not re-render from ref changes",
+    "Component re-renders after short delay period"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• ref تغییر می‌کند اما re-render نمی‌شود\n" +
+"- mutable value\n" +
+"- state نیست\n" +
+"- برای values که UI affect نمی‌کنند\n" +
+"- synchronous update"
+},
+{
+    "id": 378,
+    "question": "How do you access a DOM element using useRef?",
+    "options": [
+    "Pass ref object to element's ref prop",
+    "Call ref.current() method on element",
+    "Use ref.getValue() to retrieve element",
+    "Access element through ref.element property"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• برای دسترسی به DOM element باید ref object را به prop مخصوص ref المنت پاس داد\n" +
+"- React به صورت خودکار المنت DOM را در ref.current ذخیره می‌کند\n" +
+"- بعد از mount شدن کامپوننت می‌توان از ref.current برای دسترسی مستقیم به المنت استفاده کرد"
+},
+{
+    "id": 379,
+    "question": "When should you access ref.current in function components?",
+    "options": [
+    "During component render phase directly",
+    "Inside useEffect or event handlers only",
+    "Only during component initialization phase",
+    "Anytime within component function body"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation": "• فقط در useEffect یا event handlers\n" +
+"- نه در render body\n" +
+"- render phase باید pure باشد\n" +
+"- بعد از mount قابل دسترس\n" +
+"- side effect محسوب می‌شود"
+},
+{
+    "id": 380,
+    "question": "What value does useRef return initially?",
+    "options": [
+    "Object with current property set to initial value",
+    "Function that returns current reference value",
+    "Array containing current value and setter function",
+    "Promise that resolves to reference value"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• object با property به نام current\n" +
+"- { current: initialValue }\n" +
+"- current mutable است\n" +
+"- همان object در renders\n" +
+"- stable reference"
+},
+{
+    "id": 381,
+    "question":  "How does useRef differ from useState when storing values across renders?",
+    "options": [
+    "useRef updates do not trigger re-renders, while useState updates do",
+    "useRef values reset on every render, while useState persists them",
+    "useRef only stores DOM nodes, while useState can store any data",
+    "useRef is asynchronous, while useState is synchronous"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• useRef تغییر بدون re-render\n" +
+"- useState تغییر با re-render\n" +
+"- ref برای non-UI values\n" +
+"- state برای UI-affecting values\n" +
+"- useRef synchronous، useState asynchronous"
+},
+{
+    "id": 382,
+    "question": "What is the difference between useRef and createRef?",
+    "options": [
+    "No difference, they are identical",
+    "useRef persists across renders, createRef creates new each time",
+    "createRef is for functional components only",
+    "useRef is deprecated, use createRef"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• useRef همان object را در renders نگه می‌دارد\n" +
+"- createRef هر بار object جدید می‌سازد\n" +
+"- useRef برای function components\n" +
+"- createRef برای class components\n" +
+"- در function components حتماً useRef"
+},
+{
+    "id": 383,
+    "question": "Can you pass refs between components?",
+    "options": [
+    "Yes, refs can be passed like props",
+    "No, refs are component-private only",
+    "Yes, using forwardRef wrapper",
+    "Only in Class Components"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• با React.forwardRef می‌توانید ref را forward کنید\n" +
+"- ref به عنوان prop pass نمی‌شود (reserved)\n" +
+"- forwardRef component را wrap می‌کند\n" +
+"- ref به عنوان argument دوم می‌آید\n" +
+"- برای library components مفید است"
+},
+{
+    "id": 384,
+    "question": "What is the useImperativeHandle hook used for?",
+    "options": [
+    "To expose custom instance methods to parent via ref",
+    "To handle imperative animations",
+    "To manage component lifecycle imperatively",
+    "To replace useEffect with imperative code"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• useImperativeHandle متدهای custom را از طریق ref expose می‌کند\n" +
+"- با forwardRef استفاده می‌شود\n" +
+"- parent می‌تواند این متدها را صدا بزند\n" +
+"- برای control کردن child از parent\n" +
+"- مثل focus()، play()، pause() custom"
+},
+{
+    "id": 385,
+    "question": "When should you use refs instead of state?",
+    "options": [
+    "Always use refs for better performance",
+    "When value doesn't affect render output",
+    "Never, state is always better",
+    "Only for DOM manipulation"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation": "• refs برای values که render را trigger نمی‌کنند\n" +
+"- مثل timer IDs، previous values\n" +
+"- DOM references برای focus یا scroll\n" +
+"- mutable values که UI effect ندارند\n" +
+"- state برای data که UI را affect می‌کند"
+},
+{
+    "id": 386,
+    "question": "Can you store interval or timeout IDs in refs?",
+    "options": [
+    "No, use state instead",
+    "Yes, refs are perfect for this",
+    "Only with special configuration",
+    "Intervals don't work with React"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• refs عالی برای storing timer IDs هستند\n" +
+"- تغییر ref re-render نمی‌کند\n" +
+"- می‌توانید در cleanup آن را clear کنید\n" +
+"- const timerRef = useRef()\n" +
+"- timerRef.current = setInterval(...)"
+},
+{
+    "id": 387,
+    "question": "What happens if you update ref.current during render?",
+    "options": [
+    "It's fine, no side effects",
+    "Causes component to re-render immediately",
+    "Should be avoided, may cause issues",
+    "Ref updates are ignored during render"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation": "• updating ref.current در render phase باید avoided شود\n" +
+"- می‌تواند باعث inconsistency شود\n" +
+"- render باید pure باشد\n" +
+"- در useEffect یا event handlers update کنید\n" +
+"- exception: اولین render برای initialize"
+},
+{
+    "id": 388,
+    "question": "Can refs be used in Server Components?",
+    "options": [
+    "Yes, refs work everywhere",
+    "No, refs require client-side interactivity",
+    "Only with special server-refs",
+    "Only for reading, not writing"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation": "• refs در Server Components کار نمی‌کنند\n" +
+"- نیاز به client-side interactivity دارند\n" +
+"- DOM reference در server وجود ندارد\n" +
+"- باید component را 'use client' کنید\n" +
+"- refs فقط در Client Components"
+},
+{
+    "id": 389,
+    "question": "How do you access child component methods from parent?",
+    "options": [
+    "Direct access through props",
+    "Using forwardRef and useImperativeHandle",
+    "Child methods are always accessible",
+    "Use global event emitters"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation": "• با forwardRef + useImperativeHandle\n" +
+"- child با forwardRef wrap می‌شود\n" +
+"- useImperativeHandle متدها را expose می‌کند\n" +
+"- parent با ref.current.method() صدا می‌زند\n" +
+"- encapsulation را حفظ می‌کند"
+},
+{
+    "id": 390,
+    "question":"What is a common use case for using useRef with timers?",
+    "options": [
+    "Automatically re-rendering the component when the timer completes",
+    "Storing a timer ID so it can be cleared later",
+    "Synchronizing multiple timers across components",
+    "Replacing setTimeout with a synchronous execution"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• storing timer ID برای clearInterval/clearTimeout\n" +
+"- timerRef.current = setInterval(...)\n" +
+"- در cleanup: clearInterval(timerRef.current)\n" +
+"- بدون re-render\n" +
+"- persistent بین renders"
+},
+{
+    "id": 391,
+    "question": "Why is useRef often used to store previous values in a component?",
+    "options": [
+    "Because useRef automatically tracks a history of values",
+    "Because useRef values trigger updates when they change",
+    "Because useRef stores values without causing re-renders",
+    "Because useRef has built-in comparison helpers for values"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation": "• ذخیره value قبلی بدون re-render\n" +
+"- comparison با value فعلی\n" +
+"- usePrevious custom hook\n" +
+"- state قبلی در memory\n" +
+"- برای detecting changes"
+},
+{
+    "id": 392,
+    "question": "What happens to a ref when its component unmounts?",
+    "options": [
+    "The ref value stays in memory until you clear it manually",
+    "The ref is reset and its memory can be freed automatically",
+    "Accessing the ref after unmount will throw an error",
+    "The ref is passed to the parent component automatically"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• ref garbage collected می‌شود\n" +
+"- memory آزاد می‌شود\n" +
+"- automatic cleanup\n" +
+"- DOM references نیز cleared\n" +
+"- memory leak نمی‌کند"
+},
+{
+    "id": 393,
+    "question": "Can refs be passed to child components as props?",
+    "options": [
+    "Yes, refs can always be passed like any normal prop",
+    "No, refs cannot be shared between components",
+    "Yes, but it requires using forwardRef in the child component",
+    "No, refs only work in the component where they are declared"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation": "Can refs be passed to child components as props?\",\n" +
+"\"explanation\": \"• نه به صورت مستقیم، ref reserved است\\n\" +\n" +
+"    \"- باید از forwardRef استفاده کنید\\n\" +\n" +
+"    \"- یا نام دیگری بدهید\\n\" +\n" +
+"    \"- React.forwardRef wrapper\\n\" +\n" +
+"    \"- special handling لازم"
+},
+{
+    "id": 394,
+    "question": "What is the primary purpose of forwardRef in React?",
+    "options": [
+    "To create multiple refs inside a single component",
+    "To allow a parent component to pass a ref to a child component",
+    "To convert refs into state variables automatically",
+    "To clear a ref when a component unmounts"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• passing ref از parent به child component\n" +
+"- child می‌تواند DOM element را expose کند\n" +
+"- ref در props نیست\n" +
+"- argument دوم در component function\n" +
+"- برای library components"
+},
+{
+    "id": 395,
+    "question": "When is useRef preferable over using a regular variable in a function component?",
+    "options": [
+    "When you need a value to persist across re-renders",
+    "When you want a change in value to trigger a re-render",
+    "When you need to share values between different components",
+    "When you want to reset a value every time the component renders"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• وقتی value باید persist بین renders\n" +
+"- let variable هر render reset می‌شود\n" +
+"- ref.current نگه داشته می‌شود\n" +
+"- برای mutable values\n" +
+"- stable reference"
+},
+{
+    "id": 396,
+    "question": "What types of values can be stored in a useRef?",
+    "options": [
+    "Only DOM element references for direct manipulation",
+    "Only primitive values like numbers and strings",
+    "Any mutable value including objects, arrays, or functions",
+    "Only values that implement a special React interface"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• هر type: primitives، objects، arrays، functions\n" +
+"- DOM references\n" +
+"- timer IDs\n" +
+"- previous values\n" +
+"- any mutable value"
+},
+{
+    "id": 397,
+    "question":"How can you focus an input element using useRef?",
+    "options": [
+    "By calling inputRef.current.focus() inside an effect or event handler",
+    "By calling inputRef.focus() directly during render",
+    "By invoking inputRef.current() with 'focus' as a parameter",
+    "By setting a 'focus' property with inputRef.setValue()"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• برای focus کردن input باید inputRef.current.focus() را در useEffect یا event handler فراخوانی کنیم\n" +
+"- ref.current به المنت DOM واقعی اشاره می‌کند و تمام متدهای DOM مثل focus() را دارد\n" +
+"- نباید در حین render مستقیماً DOM را دستکاری کرد، بلکه باید در effect یا event handler انجام شود"
+},
+{
+    "id": 398,
+    "question": "What is the main difference between refs and state in React?",
+    "options": [
+    "Refs store immutable values, while state stores mutable values",
+    "Refs trigger re-renders, while state manages lifecycle events",
+    "Refs persist values without re-rendering, while state updates trigger re-renders",
+    "Refs only store objects, while state only stores primitive values"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• refs: persist بدون re-render\n" +
+"- state: persist با re-render\n" +
+"- refs: mutable directly\n" +
+"- state: immutable updates\n" +
+"- use cases متفاوت"
+},
+{
+    "id": 399,
+    "question":"Can you attach both capturing and bubbling event listeners on the same element in React?",
+    "options": [
+    "Yes, bubbling listeners run before capturing listeners on the same element",
+    "No, React allows only one event phase per element",
+    "Yes, capturing listeners run before bubbling listeners on the same element",
+    "No, attaching both phases causes runtime errors"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation": "• بله، با addEventListener دو بار\n" +
+"- یکی با capture: true\n" +
+"- یکی با capture: false\n" +
+"- capturing اول اجرا می‌شود\n" +
+"- هر دو handlers execute می‌شوند"
+},
+{
+    "id": 400,
+    "question": "What is the primary purpose of a mutation in React Query?",
+    "options": [
+    "To create, update, or delete server data",
+    "To read server data from the cache only",
+    "To render React components",
+    "To automatically generate CSS styles"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• تغییر دادن server data\n" +
+"- POST، PUT، PATCH، DELETE\n" +
+"- create، update، delete operations\n" +
+"- side effects روی server\n" +
+"- opposite از queries (read-only)"
+},
+{
+    "id": 401,
+    "question": "Which React Query hook is used for modifying server data?",
+    "options": [
+    "useQuery for fetching data",
+    "useMutation for modifying server data",
+    "useEffect for managing side effects",
+    "useState for updating local state"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• useMutation برای CUD operations\n" +
+"- create، update، delete\n" +
+"- useQuery فقط برای read\n" +
+"- mutate function برای trigger\n" +
+"- callbacks برای side effects"
+},
+{
+    "id": 402,
+    "question":"Why use mutation callbacks like onSuccess in React Query?",
+    "options": [
+    "To update the cache or trigger side effects after a mutation",
+    "To transform mutations into query operations",
+    "To block UI updates after data changes",
+    "To permanently disable caching mechanisms"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• اجرای code بعد از successful mutation\n" +
+"- invalidate کردن queries\n" +
+"- showing success messages\n" +
+"- navigation به صفحه دیگر\n" +
+"- side effects management"
+},
+{
+    "id": 403,
+    "question": "What does offline support enable in React Query?",
+    "options": [
+    "Blocking all server communication permanently",
+    "Automatically reloading the entire page when offline",
+    "Turning queries into static file operations",
+    "Queuing mutations until the network is available"
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation": "• ذخیره mutations در queue وقتی offline\n" +
+"- وقتی online شد، اجرا می‌شوند\n" +
+"- seamless user experience\n" +
+"- automatic retry mechanism\n" +
+"- persistence بین page refreshes"
+},
+{
+    "id": 404,
+    "question": "How does React Query provide a smooth offline experience?",
+    "options": [
+    "By disabling all UI components",
+    "By serving cached data and queuing mutations",
+    "By blocking queries from executing again",
+    "By converting asynchronous API calls into synchronous ones"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• cached data فوراً نشان داده می‌شود\n" +
+"- mutations در queue ذخیره می‌شوند\n" +
+"- optimistic updates\n" +
+"- automatic sync وقتی reconnect\n" +
+"- user می‌تواند کار کند offline"
+},
+{
+    "id": 405,
+    "question":"Which combination supports effective offline-first behavior?",
+    "options": [
+    "Permanently disabling staleTime and cacheTime",
+    "Managing server state only with useState",
+    "Combining caching, background refetching, and mutation queuing",
+    "Clearing the cache whenever the app reconnects"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation": "• caching: instant data access\n" +
+"- background refetching: freshness\n" +
+"- mutation queuing: offline operations\n" +
+"- persistence: survive page refresh\n" +
+"- ترکیب همه برای best experience"
+},
+{
+    "id": 406,
+    "question":  "Why is React Query valuable for managing server state?",
+    "options": [
+    "It automates fetching, caching, and synchronization of data",
+    "It only replaces react's useState and useEffect for local state",
+    "It automatically generates UI components",
+    "It completely disables all network requests"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• automating fetching، caching، synchronization\n" +
+"- کاهش boilerplate code\n" +
+"- loading و error states automatic\n" +
+"- background updates\n" +
+"- alternative به Redux برای server data"
+},
+{
+    "id": 407,
+    "question": "Which problems does React Query solve in applications?",
+    "options": [
+    "Automatically applying styles to components without CSS",
+    "Preventing duplicate network requests and keeping server data in sync",
+    "Eliminating the need for any backend APIs",
+    "Allowing React apps to work entirely without state management"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• جلوگیری از duplicate requests\n" +
+"- keeping data synchronized\n" +
+"- caching برای performance\n" +
+"- background refetching\n" +
+"- ساده‌سازی async state management"
+},
+{
+    "id": 408,
+    "question": "Why is manual server state management challenging?",
+    "options": [
+    "Because React Query is needed to create components",
+    "Because it blocks component rendering completely",
+    "Because caching, synchronization, and updates are complex to handle by hand",
+    "Because it automatically transforms APIs between REST and GraphQL"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation": "• caching پیچیده برای implement\n" +
+"- synchronization بین components\n" +
+"- handling loading/error states\n" +
+"- avoiding duplicate requests\n" +
+"- React Query این مشکلات را حل می‌کند"
+},
+{
+    "id": 409,
+    "question":"How do useQuery and useMutation differ in purpose?",
+    "options": [
+    "useQuery styles components, useMutation handles routing",
+    "useQuery manages local storage, useMutation controls authentication",
+    "useQuery updates the DOM, useMutation adds event listeners",
+    "useQuery fetches data, useMutation modifies data",
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation": "• useQuery برای reading/fetching data\n" +
+"- GET requests\n" +
+"- useMutation برای modifying data\n" +
+"- POST، PUT، DELETE requests\n" +
+"- read vs write operations"
+},
+{
+    "id": 410,
+    "question": "Which React Query hook is mainly responsible for fetching and caching server data?",
+    "options": [
+    "useMutation",
+    "useReducer",
+    "useQuery",
+    "useEffect"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• useQuery برای data fetching\n" +
+"- automatic caching\n" +
+"- background refetching\n" +
+"- stale-while-revalidate\n" +
+"- primary hook برای GET operations"
+},
+{
+    "id": 411,
+    "question": "Where should images be stored in a React project to achieve better optimization and performance?",
+    "options": [
+    "In the public folder for faster serving",
+    "In the src folder and imported in components",
+    "Inside a CSS file as base64 strings",
+    "On a remote server without compression"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• تصاویر در فولدر src هنگام build بهینه‌سازی می‌شوند\n" +
+"• ابزارهایی مانند Webpack یا Vite آن‌ها را فشرده و با نام هش ذخیره می‌کنند\n" +
+"• این روش موجب بهبود سرعت بارگذاری و مدیریت بهتر کش مرورگر می‌شود"
+},
+{
+    "id": 412,
+    "question": "What is the default behavior of images stored inside the public folder in a React project?",
+    "options": [
+    "They are automatically optimized during build",
+    "They are bundled together with JavaScript code",
+    "They are served directly without build-time optimization",
+    "They are converted into WebP format automatically"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• تصاویر در فولدر public بدون فشرده‌سازی و بهینه‌سازی ارائه می‌شوند\n" +
+"• فایل‌ها مستقیماً از سرور برای مرورگر ارسال می‌شوند\n" +
+"• مناسب برای فایل‌های عمومی مانند favicon یا robots.txt هستند"
+},
+{
+    "id": 413,
+    "question": "Which feature in Next.js provides automatic image optimization, resizing, and lazy loading?",
+    "options": [
+    "React.StrictMode for image validation",
+    "Next.js <Image> component for optimized images",
+    "Webpack DevServer for live reloading",
+    "React.lazy for component-level optimization"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• کامپوننت <Image> در Next.js به‌طور خودکار اندازه‌ی تصاویر را مدیریت می‌کند\n" +
+"• تصاویر را به فرمت‌های مدرن مانند WebP تبدیل می‌نماید\n" +
+"• lazy loading را فعال کرده و عملکرد صفحه را بهبود می‌دهد"
+},
+{
+    "id": 414,
+    "question": "What is a major disadvantage of storing images inside the public folder?",
+    "options": [
+    "They skip optimization and remain uncompressed",
+    "They cause errors during component rendering",
+    "They are converted to different formats automatically",
+    "They cannot be accessed from environment variables"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• تصاویر در فولدر public در مرحله‌ی build پردازش نمی‌شوند\n" +
+"• هیچ فشرده‌سازی یا تغییر اندازه‌ای روی آن‌ها انجام نمی‌شود\n" +
+"• این موضوع می‌تواند باعث افزایش حجم و کاهش سرعت بارگذاری شود"
+},
+{
+    "id": 415,
+    "question": "Why is importing images from the src folder considered a better practice in React?",
+    "options": [
+    "Because it allows auto-optimization and cache busting",
+    "Because it avoids the need for static assets",
+    "Because it disables code splitting for images",
+    "Because it removes them from the final build output"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• ایمپورت تصاویر از src باعث وارد شدن آن‌ها به فرایند build می‌شود\n" +
+"• ابزارهای build آن‌ها را فشرده و نام فایل‌ها را هش می‌کنند\n" +
+"• نتیجه: عملکرد بهتر، کش مؤثرتر و حجم کمتر فایل‌ها"
+},
+{
+    "id": 416,
+    "question": "In React Query, what occurs when multiple useQuery hooks use the same queryKey?",
+    "options": [
+    "Each query executes independently without caching",
+    "React Query shares and reuses the cached data across them",
+    "It throws an error and crashes the application",
+    "Only the first query runs while the others are skipped"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• data sharing بین hooks\n" +
+"- فقط یک request\n" +
+"- همه از cache یکسان استفاده می‌کنند\n" +
+"- automatic deduplication\n" +
+"- efficient data management"
+},
+{
+    "id": 417,
+    "question": "Which pattern helps prevent unnecessary network requests when using useQuery?",
+    "options": [
+    "Use a unique queryKey with caching enabled",
+    "Disable caching to always fetch fresh data",
+    "Wrap useQuery inside useEffect on every render",
+    "Manually trigger refetch on every component mount"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• unique queryKey با caching enabled\n" +
+"- staleTime برای control کردن freshness\n" +
+"- cache hit به جای network request\n" +
+"- refetchOnWindowFocus کنترل شده\n" +
+"- smart defaults"
+},
+{
+    "id": 418,
+    "question":"Which practice improves efficiency when using useQuery?",
+    "options": [
+    "Provide unique queryKeys and leverage caching",
+    "Turn off caching completely for faster updates",
+    "Call useQuery only inside a useEffect hook",
+    "Refetch data manually each time instead of using cache"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• providing unique queryKeys\n" +
+"- leveraging caching mechanism\n" +
+"- appropriate staleTime values\n" +
+"- avoiding unnecessary refetches\n" +
+"- proper dependency arrays"
+},
+{
+    "id": 419,
+    "question":"Which React Query hook is used for creating, updating, or deleting server data?",
+    "options": [
+    "useQuery",
+    "useMutation",
+    "useReducer",
+    "useState"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• useMutation برای CUD operations\n" +
+"- POST: create\n" +
+"- PUT/PATCH: update\n" +
+"- DELETE: remove\n" +
+"- side effects روی server"
+},
+{
+    "id": 420,
+    "question":  "After a successful mutation, what is the recommended way to update cached queries?",
+    "options": [
+    "Reload the entire page to get fresh data",
+    "Invalidate or update related query keys",
+    "Reset local state manually using useState",
+    "Run the same mutation again to refresh data"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• invalidate کردن related query keys\n" +
+"- queryClient.invalidateQueries\n" +
+"- باعث refetch می‌شود\n" +
+"- یا manual update با setQueryData\n" +
+"- sync کردن cache با server"
+},
+{
+    "id": 421,
+    "question": "Which statement about useMutation compared to useQuery is correct?",
+    "options": [
+    "useMutation executes synchronously by default",
+    "useMutation only works with GraphQL APIs",
+    "useMutation must be triggered manually and does not run automatically",
+    "useMutation cannot handle error states"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• useMutation باید manually trigger شود\n" +
+"- mutate() function را call می‌کنید\n" +
+"- useQuery automatic run می‌شود\n" +
+"- mutations on-demand هستند\n" +
+"- queries eager loading"
+},
+{
+    "id": 422,
+    "question": "What is the primary purpose of the queryKey in useQuery?",
+    "options": [
+    "Uniquely identify queries for caching and refetching",
+    "Define the API endpoint URL",
+    "Specify the type of loading spinner to show",
+    "Configure mutation success callbacks"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• unique identification برای query\n" +
+"- caching mechanism\n" +
+"- refetching control\n" +
+"- invalidation targeting\n" +
+"- array از identifiers"
+},
+{
+    "id": 423,
+    "question": "In React Query, what is the difference between staleTime and cacheTime?",
+    "options": [
+    "staleTime defines retry attempts; cacheTime defines error persistence",
+    "Both represent the same concept of cache duration",
+    "staleTime determines how long data is considered fresh; cacheTime controls how long inactive data stays in memory",
+    "staleTime is only used for mutations; cacheTime only for queries"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• staleTime: مدت fresh بودن\n" +
+"- تا این مدت refetch نمی‌شود\n" +
+"- cacheTime: مدت ماندن inactive data\n" +
+"- garbage collection timing\n" +
+"- دو concept متفاوت"
+},
+{
+    "id": 424,
+    "question":"How can you prevent a useQuery from automatically running when a component mounts?",
+    "options": [
+    "Remove the queryKey entirely",
+    "Use useMutation instead of useQuery",
+    "Disable React StrictMode in the app",
+    "Set enabled: false in the query options"
+],
+    "correctOption":3,
+    "points": 10,
+    "explanation":"• enabled: false در options\n" +
+"- query run نمی‌شود تا true شود\n" +
+"- conditional fetching\n" +
+"- manual control\n" +
+"- refetch() برای manual trigger"
+},
+{
+    "id": 425,
+    "question":  "Which callback in useMutation is typically used to update the cache after a successful mutation?",
+    "options": [
+    "onSettled",
+    "onMutate",
+    "onSuccess",
+    "onError"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• onSuccess callback\n" +
+"- دریافت mutation result\n" +
+"- invalidate queries\n" +
+"- setQueryData برای optimistic updates\n" +
+"- sync cache with server"
+},
+{
+    "id": 426,
+    "question":  "Why are optimistic updates useful in useMutation?",
+    "options": [
+    "They automatically retry failed requests",
+    "They update the UI immediately before server response",
+    "They prevent memory leaks in components",
+    "They enforce unique query keys"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• UI بلافاصله update می‌شود\n" +
+"- قبل از server response\n" +
+"- instant feedback\n" +
+"- اگر fail شود rollback\n" +
+"- بهتر UX"
+},
+{
+    "id": 427,
+    "question": "Which React Query function is commonly used inside a mutation's onSuccess callback to refresh relevant queries?",
+    "options": [
+    "resetQueries",
+    "refetchQueries",
+    "cancelQueries",
+    "invalidateQueries"
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation":"• queryClient.invalidateQueries(['queryKey'])\n" +
+"- marking queries as stale\n" +
+"- trigger refetch\n" +
+"- sync کردن cache\n" +
+"- fresh data بعد از mutation"
+},
+{
+    "id": 428,
+    "question": "What happens when multiple queries are dependent in React Query?",
+    "options": [
+    "They run in parallel ignoring dependencies",
+    "The next query waits for previous query's data",
+    "All queries share the same queryKey",
+    "Dependent queries are not supported"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• enabled option برای wait کردن\n" +
+"- query دوم منتظر data اولی\n" +
+"- enabled: !!previousData\n" +
+"- sequential fetching\n" +
+"- dependency chain"
+},
+{
+    "id": 429,
+    "question": "Which tool helps visualize query and mutation states during development?",
+    "options": [
+    "Redux DevTools",
+    "React Query Devtools",
+    "React Profiler",
+    "Apollo Studio"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• React Query Devtools\n" +
+"- showing query states\n" +
+"- cache contents\n" +
+"- mutation status\n" +
+"- debugging tool powerful"
+},
+{
+    "id": 430,
+    "question": "Which option in useQuery allows background synchronization at intervals?",
+    "options": [
+    "cacheTime",
+    "refetchInterval",
+    "retry",
+    "keepPreviousData"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• refetchInterval: milliseconds\n" +
+"- polling data\n" +
+"- refetchInterval: 5000 // هر 5 ثانیه\n" +
+"- real-time like behavior\n" +
+"- automatic periodic updates"
+},
+{
+    "id": 431,
+    "question": "Which useQuery option helps with pagination to avoid blank state while fetching new data?",
+    "options": [
+    "enabled",
+    "refetchOnWindowFocus",
+    "keepPreviousData",
+    "retry"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• keepPreviousData: true\n" +
+"- previous page data نشان داده می‌شود\n" +
+"- تا new page load شود\n" +
+"- no blank screens\n" +
+"- smooth pagination"
+},
+{
+    "id": 432,
+    "question": "How does React Query ensure consistency between server and client after a mutation?",
+    "options": [
+    "Reload the browser window automatically",
+    "Automatically invalidate all cached queries",
+    "Invalidate specific queries or manually refetch",
+    "Clear the entire cache immediately"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• invalidation و refetching strategies\n" +
+"- queryClient.invalidateQueries\n" +
+"- automatic refetch of stale queries\n" +
+"- optimistic updates با rollback\n" +
+"- cache synchronization"
+},
+{
+    "id": 433,
+    "question": "What is query invalidation in React Query?",
+    "options": [
+    "Marking queries stale to trigger refetch",
+    "Deleting all cached data permanently",
+    "Resetting all query keys globally",
+    "Pausing queries until manually enabled"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• invalidation یعنی marking کردن query به عنوان stale\n" +
+"- باعث refetch خودکار می‌شود\n" +
+"- معمولاً بعد از mutations استفاده می‌شود\n" +
+"- با queryClient.invalidateQueries انجام می‌شود\n" +
+"- data را fresh و synchronized نگه می‌دارد"
+},
+{
+    "id": 434,
+    "question": "What does hydrate/dehydrate refer to in React Query?",
+    "options": [
+    "Saving and restoring query state for SSR",
+    "Synchronizing queries with Redux store",
+    "Exporting query data to JSON files",
+    "Clearing memory leaks during refetch"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• dehydrate: ذخیره کردن query state برای SSR\n" +
+"- hydrate: بازگردانی query state در client\n" +
+"- برای server-side rendering استفاده می‌شود\n" +
+"- data از server به client منتقل می‌شود\n" +
+"- جلوگیری از refetch غیرضروری در client"
+},
+{
+    "id": 435,
+    "question": "What is the primary purpose of React Hook Form?",
+    "options": [
+    "Managing server-side data fetching",
+    "Simplifying form state and validation",
+    "Creating component animations",
+    "Managing global application state"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• ساده‌سازی form state و validation management\n" +
+"- performance بالا با uncontrolled inputs\n" +
+"- کد کمتر نسبت به راه‌های سنتی\n" +
+"- built-in validation و error handling\n" +
+"- integration آسان با UI libraries"
+},
+{
+    "id": 436,
+    "question": "Which hook initializes a form in React Hook Form?",
+    "options": [
+    "useState",
+    "useForm",
+    "useController",
+    "useReducer"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• useForm برای initialize کردن form\n" +
+"- register، handleSubmit و formState return می‌کند\n" +
+"- options مثل defaultValues و validation mode\n" +
+"- تمام form logic را مدیریت می‌کند\n" +
+"- یک بار در component صدا زده می‌شود"
+},
+{
+    "id": 437,
+    "question": "What does the register function do in React Hook Form?",
+    "options": [
+    "Submits form data to server",
+    "Resets all form fields",
+    "Connects inputs to form state",
+    "Triggers form re-rendering"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation":"• inputs را به form state متصل می‌کند\n" +
+"- validation rules را اضافه می‌کند\n" +
+"- با spread operator به input pass می‌شود\n" +
+"- onChange، onBlur و ref را set می‌کند\n" +
+"- tracking خودکار input values"
+},
+{
+    "id": 438,
+    "question": "Which function handles form submission in React Hook Form?",
+    "options": [
+    "useSubmit",
+    "submitForm",
+    "handleSubmit",
+    "onSubmitHandler"
+],
+    "correctOption":2,
+    "points": 10,
+    "explanation":"• handleSubmit validation و submission را مدیریت می‌کند\n" +
+"- validation را قبل از submit اجرا می‌کند\n" +
+"- در صورت موفقیت، callback را صدا می‌زند\n" +
+"- data را به صورت object می‌دهد\n" +
+"- preventDefault خودکار"
+},
+{
+    "id": 439,
+    "question": "How do you apply validation rules in React Hook Form?",
+    "options": [
+    "Add attributes directly to input",
+    "Wrap input in Validation component",
+    "Pass options object to register",
+    "Use useValidation hook"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• options object را به register pass می‌کنید\n" +
+"- مثل { required: true, minLength: 3 }\n" +
+"- pattern، validate و custom rules\n" +
+"- error messages قابل customize\n" +
+"- validation مثل HTML5 اما قدرتمندتر"
+},
+{
+    "id": 440,
+    "question": "What does the errors object represent in useForm?",
+    "options": [
+    "List of server-side API errors",
+    "Runtime errors during rendering",
+    "Validation errors for form fields",
+    "React component errors"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• شامل validation errors برای هر field\n" +
+"- از formState.errors دریافت می‌شود\n" +
+"- type و message برای هر error\n" +
+"- برای نمایش error messages استفاده می‌شود\n" +
+"- به صورت real-time update می‌شود"
+},
+{
+    "id": 441,
+    "question": "Why is React Hook Form performant?",
+    "options": [
+    "Automatically fetches data from APIs",
+    "Reduces re-renders with isolated reactivity",
+    "Compiles forms into WebAssembly",
+    "Disables validation for speed"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• از uncontrolled inputs استفاده می‌کند\n" +
+"- re-renders را به minimum می‌رساند\n" +
+"- isolated re-rendering فقط برای changed fields\n" +
+"- بدون dependencies سنگین\n" +
+"- native HTML validation هم support می‌کند"
+},
+{
+    "id": 442,
+    "question": "Which hook controls custom components in React Hook Form?",
+    "options": [
+    "useController",
+    "useFormContext",
+    "useCustomInput",
+    "useReducer"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• useController برای controlled components\n" +
+"- field object با value، onChange و onBlur\n" +
+"- برای third-party UI libraries مفید\n" +
+"- مثل Material-UI یا Ant Design\n" +
+"- Controller component هم همین کار را می‌کند"
+},
+{
+    "id": 443,
+    "question": "Which method lets you programmatically update a field’s value?",
+    "options": [
+    "updateField",
+    "setValue",
+    "patch",
+    "replaceValue"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• setValue برای تغییر مقدار field به صورت برنامه‌نویسی\n" +
+"- fieldName و value را می‌گیرد\n" +
+"- options برای validation و touched\n" +
+"- مفید برای dynamic updates\n" +
+"- مثل auto-fill یا reset کردن fields"
+},
+{
+    "id": 444,
+    "question": "What problem does useController solve?",
+    "options": [
+    "Integrating controlled components with React Hook Form",
+    "Handling async validation across multiple fields",
+    "Improving form styling with custom CSS",
+    "Fetching form data from external APIs"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• integration با controlled components\n" +
+"- third-party libraries که controlled هستند\n" +
+"- access به field state و methods\n" +
+"- consistency با React Hook Form\n" +
+"- alternative به Controller component"
+},
+{
+    "id": 445,
+    "question": "Why does React Hook Form rely primarily on uncontrolled inputs?",
+    "options": [
+    "Because uncontrolled inputs validate themselves automatically",
+    "Because controlled inputs are not React-compatible",
+    "Because uncontrolled inputs reduce re-renders significantly",
+    "Because uncontrolled inputs are easier to style"
+],
+    "correctOption":2,
+    "points": 20,
+    "explanation":"• uncontrolled inputs re-renders کمتری دارند\n" +
+"- performance بهتر برای forms بزرگ\n" +
+"- React state را برای هر keystroke update نمی‌کند\n" +
+"- DOM خودش value را نگه می‌دارد\n" +
+"- فقط در submit مقادیر خوانده می‌شوند"
+},
+{
+    "id": 446,
+    "question": "Which option best describes the role of resolvers?",
+    "options": [
+    "They provide schema-based validation support",
+    "They handle async form submissions automatically",
+    "They manage form context across components",
+    "They improve rendering performance significantly"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• resolvers برای schema-based validation\n" +
+"- integration با Yup، Zod، Joi\n" +
+"- validation rules centralized\n" +
+"- type safety با TypeScript\n" +
+"- reusable validation schemas"
+},
+{
+    "id": 447,
+    "question": "Which hook reads field value without subscribing to updates?",
+    "options": [
+    "setValue",
+    "watch",
+    "getValues",
+    "trigger"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• getValues مقدار field را بدون subscription می‌خواند\n" +
+"- re-render نمی‌کند\n" +
+"- برای read-only access مناسب\n" +
+"- watch برای subscription استفاده می‌شود\n" +
+"- performance بهتر برای simple reads"
+},
+{
+    "id": 448,
+    "question": "How can you implement async validation for username?",
+    "options": [
+    "By using watch with useEffect hook",
+    "By wrapping inputs in FormProvider component",
+    "By manually calling setValue in onChange",
+    "By using async resolver or validate function",
+],
+    "correctOption": 3,
+    "points": 30,
+    "explanation":"• validate function با async/await\n" +
+"- API call برای check کردن availability\n" +
+"- return true/false یا error message\n" +
+"- در register options قرار می‌گیرد\n" +
+"- debounce برای کاهش API calls"
+},
+{
+    "id": 449,
+    "question": "What is one key performance advantage of React Hook Form?",
+    "options": [
+    "It uses uncontrolled inputs reducing re-renders",
+    "It automatically caches all inputs in Redux",
+    "It ships smaller bundle but causes re-renders",
+    "It doesn't support any validation rules"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation":"• uncontrolled inputs باعث کاهش re-renders\n" +
+"- isolated field updates\n" +
+"- تنها changed fields re-render می‌شوند\n" +
+"- bundle size کوچک\n" +
+"- native validation support"
+},
+{
+    "id": 450,
+    "question": "What is the primary purpose of the useForm hook?",
+    "options": [
+    "To handle component lifecycle methods",
+    "To register inputs and manage form state",
+    "To create global state across components",
+    "To render conditional UI elements"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• مدیریت کامل form state و behavior\n" +
+"- register برای inputs، handleSubmit برای submission\n" +
+"- formState برای errors و touched\n" +
+"- validation و error handling\n" +
+"- core hook در React Hook Form"
+},
+{
+    "id": 451,
+    "question": "Which prop must be applied for React Hook Form tracking?",
+    "options": [
+    "onChange",
+    "value",
+    "register",
+    "ref"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation":"• register باید به input apply شود\n" +
+"- با spread operator: {...register('name')}\n" +
+"- بدون register، tracking نمی‌شود\n" +
+"- validation rules در register\n" +
+"- onChange و ref خودکار set می‌شوند"
+},
+{
+    "id": 452,
+    "question":  "What does the handleSubmit function return?",
+    "options": [
+    "The final form values as object",
+    "A reset function for form fields",
+    "Nothing, it just triggers re-renders component",
+    "A callback validating inputs and triggering handler",
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation":"• callback که validation و submission را handle می‌کند\n" +
+"- به onSubmit در form pass می‌شود\n" +
+"- validation قبل از callback\n" +
+"- preventDefault خودکار\n" +
+"- data به صورت object در callback"
+},
+{
+    "id": 453,
+    "question": "How can you provide default values to a form?",
+    "options": [
+    "By setting value attribute directly on inputs",
+    "By passing defaultValues object to useForm",
+    "By calling reset after component rendering",
+    "By wrapping inputs in FormProvider component"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• defaultValues در useForm options\n" +
+"- object با field names و values\n" +
+"- برای edit forms مفید\n" +
+"- async defaultValues هم support می‌شود\n" +
+"- reset() می‌تواند به defaultValues برگردد"
+},
+{
+    "id": 454,
+    "question": "Which hook allows subscribing to specific field changes?",
+    "options": [
+    "useEffect",
+    "watch",
+    "useFormContext",
+    "trigger"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• watch برای subscribe به field changes\n" +
+"- می‌تواند یک یا چند field را watch کند\n" +
+"- re-render می‌کند وقتی value تغییر کند\n" +
+"- برای conditional rendering مفید\n" +
+"- getValues برای بدون re-render"
+},
+{
+    "id": 455,
+    "question": "What is the main use of FormProvider and useFormContext?",
+    "options": [
+    "To style forms globally across application",
+    "To share form state across nested components",
+    "To reset form values automatically",
+    "To connect multiple forms together"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• sharing form methods بین nested components\n" +
+"- بدون prop drilling\n" +
+"- FormProvider در بالا، useFormContext در children\n" +
+"- برای forms پیچیده با deeply nested fields\n" +
+"- Context API pattern"
+},
+{
+    "id": 456,
+    "question":  "Which method manually triggers validation for fields?",
+    "options": [
+    "reset",
+    "validate",
+    "trigger",
+    "checkValidity"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• trigger برای manual validation\n" +
+"- می‌تواند یک یا همه fields را validate کند\n" +
+"- async است و boolean return می‌کند\n" +
+"- برای custom validation timing\n" +
+"- مثل onBlur یا button click"
+},
+{
+    "id": 457,
+    "question": "How do you reset all fields to initial values?",
+    "options": [
+    "resetForm()",
+    "reset()",
+    "clear()",
+    "resetFields()"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• reset() همه fields را به default برمی‌گرداند\n" +
+"- errors و touched را clear می‌کند\n" +
+"- می‌تواند values جدید بگیرد\n" +
+"- مفید بعد از successful submission\n" +
+"- state کامل form را reset می‌کند"
+},
+{
+    "id": 458,
+    "question":  "Which option prevents query from running on mount?",
+    "options": [
+    "`enabled`",
+    "`refetchOnMount`",
+    "`refetchIntervalOnMount`",
+    "`retry`"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation":"• enabled: false در useQuery options\n" +
+"- query تا true شدن اجرا نمی‌شود\n" +
+"- برای conditional fetching\n" +
+"- مثل منتظر ماندن برای user input\n" +
+"- manual refetch با refetch() همیشه کار می‌کند"
+},
+{
+    "id": 459,
+    "question":  "Which option controls refetch on window focus?",
+    "options": [
+    "`enabled`",
+    "`refetchOnWindowFocus`",
+    "`refetchOnMount`",
+    "`refetchInterval`"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• refetchOnWindowFocus در query options\n" +
+"- پیش‌فرض true است\n" +
+"- وقتی tab دوباره focus شود، refetch می‌کند\n" +
+"- برای keeping data fresh\n" +
+"- می‌توانید false کنید برای disable"
+},
+{
+    "id": 460,
+    "question":"How do you poll data every 10 seconds in background?",
+    "options": [
+    "`refetchInterval: 10000` and `refetchIntervalInBackground: true`",
+    "`refetchOnWindowFocus: true` and `refetchInterval: 10000`",
+    "`enabled: true` and `refetchOnMount: always`",
+    "`retry: 3` and `refetchIntervalOnMount: true`"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• refetchInterval: 10000 برای polling\n" +
+"- refetchIntervalInBackground: true برای background\n" +
+"- حتی وقتی tab focus ندارد\n" +
+"- برای real-time data مفید\n" +
+"- automatic cleanup وقتی component unmount شود"
+},
+{
+    "id": 461,
+    "question": "What does refetchIntervalOnMount option control?",
+    "options": [
+    "Whether queries refetch when window regains focus",
+    "Whether query starts polling immediately on mount",
+    "How many retries attempted on failure",
+    "Whether query data is fresh or stale"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• آیا interval بلافاصله در mount شروع شود\n" +
+"- یا منتظر اولین interval بماند\n" +
+"- پیش‌فرض true است\n" +
+"- برای timing دقیق polling\n" +
+"- با refetchInterval کار می‌کند"
+},
+{
+    "id": 462,
+    "question": "What happens when cached data becomes stale?",
+    "options": [
+    "Cached data is deleted from memory automatically",
+    "Query state updates to 'stale' allowing custom effects",
+    "Query immediately refetches data regardless of settings",
+    "All queries in cache are reset"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• query state به 'stale' تغییر می‌کند\n" +
+"- اما data هنوز در cache است و قابل استفاده\n" +
+"- در background refetch می‌شود\n" +
+"- staleTime مدت زمان fresh بودن را کنترل می‌کند\n" +
+"- این behavior مطلوب برای UX است"
+},
+{
+    "id": 463,
+    "question":  "Why is TanStack Query considered state management library?",
+    "options": [
+    "It allows direct modification of component state",
+    "It manages server state and keeps UI synchronized",
+    "It replaces Redux for all local state",
+    "It automatically generates forms from API data"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• server state را manage می‌کند\n" +
+"- caching، synchronization و updates\n" +
+"- state بین components share می‌شود\n" +
+"- lifecycle management برای async data\n" +
+"- alternative برای Redux برای server state"
+},
+{
+    "id": 464,
+    "question":"Which combination allows polling data in background?",
+    "options": [
+    "refetchInterval: 5000 and refetchIntervalInBackground: true",
+    "staleTime: 0 and enabled: true",
+    "cacheTime: 10000 and refetchOnWindowFocus: true",
+    "retry: 3 and refetchOnMount: false"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• refetchInterval + refetchIntervalInBackground: true\n" +
+"- حتی وقتی window focus ندارد\n" +
+"- برای real-time updates\n" +
+"- مثل notifications یا live scores\n" +
+"- باید با احتیاط استفاده شود (battery/bandwidth)"
+},
+{
+    "id": 465,
+    "question": "What does CRUD stand for in application development?",
+    "options": [
+    "Compute, Render, Upload, Deploy",
+    "Create, Read, Update, Delete",
+    "Check, Run, Undo, Debug",
+    "Connect, Retry, Update, Deliver"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• Create: ساخت record جدید\n" +
+"- Read: خواندن/دریافت data\n" +
+"- Update: تغییر دادن existing data\n" +
+"- Delete: حذف کردن record\n" +
+"- چهار عملیات اصلی database"
+},
+{
+    "id": 466,
+    "question": "Which of the following represents the 'Read' operation?",
+    "options": [
+    "Adding a new user to database",
+    "Fetching a list of cabins from Supabase",
+    "Changing a user's password field",
+    "Deleting a cabin from system"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• fetching یا retrieving data از database\n" +
+"- HTTP GET method\n" +
+"- useQuery در React Query\n" +
+"- نمایش data به user\n" +
+"- بدون تغییر در server"
+},
+{
+    "id": 467,
+    "question": "Which hook is most commonly used for 'Update' operation?",
+    "options": [
+    "useEffect",
+    "useQuery",
+    "useMutation",
+    "useContext"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• useMutation برای update operations\n" +
+"- HTTP PUT یا PATCH\n" +
+"- تغییر existing records\n" +
+"- invalidation برای sync کردن cache\n" +
+"- onSuccess برای UI updates"
+},
+{
+    "id": 468,
+    "question": "Which CRUD operation inserts new record into database?",
+    "options": [
+    "Create",
+    "Read",
+    "Update",
+    "Delete"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation":"• Create با HTTP POST\n" +
+"- record جدید در database\n" +
+"- useMutation در React Query\n" +
+"- server معمولاً ID generate می‌کند\n" +
+"- بعد از success، cache invalidation"
+},
+{
+    "id": 469,
+    "question": "Which CRUD operation retrieves data from API endpoint?",
+    "options": [
+    "Create",
+    "Read",
+    "Update",
+    "Delete"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• Read با HTTP GET\n" +
+"- useQuery در React Query\n" +
+"- فقط retrieve، بدون modification\n" +
+"- caching برای performance\n" +
+"- safe و idempotent"
+},
+{
+    "id": 470,
+    "question": "When modifying existing user's email, which CRUD applies?",
+    "options": [
+    "Create",
+    "Read",
+    "Update",
+    "Delete"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation":"• Update با PUT یا PATCH\n" +
+"- تغییر existing data\n" +
+"- useMutation در React Query\n" +
+"- PATCH اگر فقط email\n" +
+"- PUT اگر تمام user object"
+},
+{
+    "id": 471,
+    "question": "Which CRUD action permanently removes record from database?",
+    "options": [
+    "Create",
+    "Read",
+    "Update",
+    "Delete"
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation":"• Delete با HTTP DELETE\n" +
+"- حذف permanent از database\n" +
+"- useMutation برای این operation\n" +
+"- معمولاً confirmation لازم است\n" +
+"- cache invalidation بعد از success"
+},
+{
+    "id": 472,
+    "question":"Which hook is most suitable for Create, Update, Delete?",
+    "options": [
+    "useEffect",
+    "useState",
+    "useMutation",
+    "useContext"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• useMutation برای همه CUD operations\n" +
+"- useQuery فقط برای Read\n" +
+"- mutations state را تغییر می‌دهند\n" +
+"- callbacks برای side effects\n" +
+"- optimistic updates support"
+},
+{
+    "id": 473,
+    "question": "Which CRUD operation requires invalidating cached queries?",
+    "options": [
+    "Only Read",
+    "Create/Update/Delete",
+    "All of them",
+    "None of them"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• Create، Update، Delete همه نیاز به invalidation\n" +
+"- چون server state را تغییر می‌دهند\n" +
+"- cache باید sync شود\n" +
+"- Read نیازی به invalidation ندارد\n" +
+"- queryClient.invalidateQueries بعد از mutations"
+},
+{
+    "id": 474,
+    "question":  "Why is Update often more complex than Create?",
+    "options": [
+    "Because it bypasses state management entirely",
+    "Because it does not require validation",
+    "Because it must handle existing and new values",
+    "Because it always deletes old records first",
+],
+    "correctOption": 3,
+    "points": 30,
+    "explanation":"• باید existing values را handle کند\n" +
+"- merge کردن new و old data\n" +
+"- partial updates (PATCH) vs full (PUT)\n" +
+"- optimistic updates پیچیده‌تر\n" +
+"- validation برای هر دو حالت"
+},
+{
+    "id": 475,
+    "question": "What does TypeScript mainly add to JavaScript?",
+    "options": [
+    "Server-side rendering capabilities",
+    "Static type checking",
+    "Automatic UI rendering",
+    "Database connectivity"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• static type checking در compile time\n" +
+"- errors را قبل از runtime می‌گیرد\n" +
+"- autocomplete و IntelliSense\n" +
+"- documentation از طریق types\n" +
+"- refactoring ایمن‌تر"
+},
+{
+    "id": 476,
+    "question":"Which of the following will TypeScript flag as error?",
+    "options": [
+    "let age: number = 30;",
+    "age = 40;",
+    "age = 'thirty';",
+    "console.log(age);"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation":"• age = 'thirty' چون age تایپ number است\n" +
+"- type mismatch خطا می‌دهد\n" +
+"- در compile time catch می‌شود\n" +
+"- از bugs runtime جلوگیری می‌کند\n" +
+"- type safety enforcement"
+},
+{
+    "id": 477,
+    "question":  "Why does TypeScript check function parameter types?",
+    "options": [
+    "To optimize runtime performance automatically",
+    "To prevent passing arguments of incorrect type",
+    "To convert JavaScript code to HTML",
+    "To automatically fetch data from APIs"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• جلوگیری از passing wrong argument types\n" +
+"- function signature را enforce می‌کند\n" +
+"- compile time errors به جای runtime\n" +
+"- self-documenting code\n" +
+"- IDE support برای autocomplete"
+},
+{
+    "id": 478,
+    "question": "Which of these will TypeScript catch?",
+    "options": [
+    "Accessing non-existent property on object",
+    "Logic errors in sorting algorithms",
+    "Network request failures at runtime",
+    "CSS styling errors in components"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation":"• دسترسی به property که وجود ندارد\n" +
+"- object.nonExistentProperty\n" +
+"- typos در property names\n" +
+"- type safety برای objects\n" +
+"- logic errors را نمی‌گیرد"
+},
+{
+    "id": 479,
+    "question": "How does TypeScript handle null in string variable?",
+    "options": [
+    "It ignores the value completely",
+    "It treats undefined as zero value",
+    "It automatically converts null to empty string",
+    "It throws compile error if strict mode enabled",
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation":"• در strict mode، null به string assign نمی‌شود\n" +
+"- compile error می‌دهد\n" +
+"- باید type را string | null کنید\n" +
+"- null safety enforcement\n" +
+"- از null reference errors جلوگیری"
+},
+{
+    "id": 480,
+    "question": "Why is TypeScript helpful in large React projects?",
+    "options": [
+    "It reduces runtime errors and improves productivity",
+    "It automatically styles all React components",
+    "It replaces Redux for state management",
+    "It converts JSX to HTML directly"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• type safety برای props و state\n" +
+"- refactoring ایمن‌تر\n" +
+"- autocomplete برای productivity\n" +
+"- catch کردن errors در development\n" +
+"- documentation خودکار از types"
+},
+{
+    "id": 481,
+    "question":  "Which TypeScript feature prevents incorrect object shapes?",
+    "options": [
+    "Interfaces and type annotations",
+    "React hooks for state",
+    "Async/await syntax",
+    "CSS modules system"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• interfaces و type annotations\n" +
+"- object structure را define می‌کنند\n" +
+"- required و optional properties\n" +
+"- compile time validation\n" +
+"- consistency در codebase"
+},
+{
+    "id": 482,
+    "question": "What kind of errors does TypeScript detect before runtime?",
+    "options": [
+    "Runtime network connection errors",
+    "Compile-time type mismatches",
+    "CSS styling layout mistakes",
+    "User input validation errors"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• type mismatches و type errors\n" +
+"- undefined properties\n" +
+"- wrong function arguments\n" +
+"- در compile time catch می‌شود\n" +
+"- logic errors را نمی‌گیرد"
+},
+{
+    "id": 483,
+    "question": "Which of the following will TypeScript catch during development?",
+    "options": [
+    "Accessing property that doesn't exist on objects",
+    "Logic errors in complex sorting algorithms",
+    "API response failures during runtime execution",
+    "Broken HTML layout and structure issues"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation":"• accessing non-existent properties\n" +
+"- typos در property یا method names\n" +
+"- type mismatches\n" +
+"- در editor با red underline\n" +
+"- قبل از run کردن code"
+},
+{
+    "id": 484,
+    "question": "Why is detecting errors at compile-time useful?",
+    "options": [
+    "Generates CSS styles for components automatically",
+    "Prevents runtime crashes improving code reliability",
+    "Reduces network latency improving page speed",
+    "Automatically fetches data from external APIs",
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• bugs را قبل از production می‌گیرد\n" +
+"- debugging آسان‌تر در development\n" +
+"- runtime crashes کمتر\n" +
+"- confidence بیشتر در refactoring\n" +
+"- user experience بهتر"
+},
+{
+    "id": 485,
+    "question": "Which scenario is a compile-time error TypeScript detects?",
+    "options": [
+    "Server not responding to network requests",
+    "Button element not triggering click events",
+    "Calling function with incorrect argument types",
+    "User entering wrong login credentials"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation":"• calling function با wrong argument types\n" +
+"- myFunc(123) اگر string می‌خواهد\n" +
+"- در compile time error می‌دهد\n" +
+"- IDE قبل از run نشان می‌دهد\n" +
+"- network errors runtime هستند"
+},
+{
+    "id": 486,
+    "question": "Which TypeScript feature ensures errors before runtime?",
+    "options": [
+    "React hooks implementation",
+    "Static type checking system",
+    "CSS modules integration",
+    "Browser developer tools"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• static type checking system\n" +
+"- analysis در compile time\n" +
+"- type inference و annotations\n" +
+"- strict mode برای safety بیشتر\n" +
+"- compiler errors قبل از execution"
+},
+{
+    "id": 487,
+    "question": "At which stage does TypeScript execute type checks?",
+    "options": [
+    "During runtime execution in browser",
+    "During compilation before code runs",
+    "After deployment to production server",
+    "When user interacts with UI elements"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• during compilation قبل از run\n" +
+"- TypeScript به JavaScript compile می‌شود\n" +
+"- type checking در این مرحله\n" +
+"- runtime فقط JavaScript اجرا می‌شود\n" +
+"- types در compiled code نیستند"
+},
+{
+    "id": 488,
+    "question": "Why is React Hook Form popular among developers?",
+    "options": [
+    "Automatically generates CSS for form elements",
+    "Provides performant form state management",
+    "Replaces Redux for all state management",
+    "Converts forms to server-side code"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• performance عالی با uncontrolled inputs\n" +
+"- API ساده و intuitive\n" +
+"- bundle size کوچک\n" +
+"- validation قدرتمند built-in\n" +
+"- DevEx خوب با TypeScript"
+},
+{
+    "id": 489,
+    "question": "Why does React Hook Form trigger fewer re-renders?",
+    "options": [
+    "Uses uncontrolled inputs reducing re-renders",
+    "Automatically batches all network requests",
+    "Only works with functional components",
+    "Converts inputs to server variables"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• از uncontrolled inputs استفاده می‌کند\n" +
+"- DOM خودش values را نگه می‌دارد\n" +
+"- React state برای هر keystroke update نمی‌شود\n" +
+"- isolated re-rendering فقط لازم\n" +
+"- performance بهتر از Formik"
+},
+{
+    "id": 490,
+    "question": "In React forms, what is a controlled component?",
+    "options": [
+    "Component managing its own internal state",
+    "Component fetching data from APIs automatically",
+    "Component where React controls input value",
+    "Component that cannot receive any props"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation":"• component که React value را control می‌کند\n" +
+"- value از state می‌آید\n" +
+"- onChange state را update می‌کند\n" +
+"- React single source of truth است\n" +
+"- re-render در هر keystroke"
+},
+{
+    "id": 491,
+    "question": "What is best practice for showing validation errors?",
+    "options": [
+    "Show all error messages on mount",
+    "Use touchedFields after user interaction",
+    "Display errors only after submission",
+    "Manually track blur with useState"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• استفاده از touchedFields بعد از interaction\n" +
+"- errors فقط برای touched fields\n" +
+"- بهتر از showing همه errors در mount\n" +
+"- UX بهتر برای user\n" +
+"- onBlur یا onChange برای timing"
+},
+{
+    "id": 492,
+    "question": "Which is best practice for error messages in forms?",
+    "options": [
+    "Manually implement blur tracking",
+    "Show all errors immediately on mount",
+    "Show errors only after form submission",
+    "Use touchedFields after user interaction",
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation":"• نمایش errors بعد از user interaction\n" +
+"- با touchedFields check کردن\n" +
+"- نه بلافاصله در mount\n" +
+"- progressive validation\n" +
+"- UX friendly approach"
+},
+{
+    "id": 493,
+    "question": "Why does using onTouched improve user experience?",
+    "options": [
+    "Prevents unnecessary component re-renders",
+    "Disables inputs until form submission",
+    "Shows errors only after user interaction",
+    "Automatically fixes all validation rules"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• errors فقط بعد از interaction نشان داده می‌شوند\n" +
+"- نه بلافاصله وقتی form باز می‌شود\n" +
+"- کمتر overwhelming برای user\n" +
+"- natural validation flow\n" +
+"- مانند native forms"
+},
+{
+    "id": 494,
+    "question": "Why use spread operator with register function?",
+    "options": [
+    "Copies only the input value property",
+    "Passes all necessary props automatically",
+    "Removes need for validation rules",
+    "Prevents React from re-rendering input"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• تمام props لازم را به input pass می‌کند\n" +
+"- onChange، onBlur، ref، name\n" +
+"- {...register('email')} ساده‌تر از manual\n" +
+"- validation rules هم included\n" +
+"- cleaner و readable code"
+},
+{
+    "id": 495,
+    "question": "What happens if you use register without spreading?",
+    "options": [
+    "Nothing changes, form works the same",
+    "TypeScript throws error but works fine",
+    "Input won't connect to form state",
+    "Automatically infers validation rules"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• input به form state connect نمی‌شود\n" +
+"- values track نمی‌شوند\n" +
+"- validation کار نمی‌کند\n" +
+"- spread operator ضروری است\n" +
+"- بدون آن form broken است"
+},
+{
+    "id": 496,
+    "question": "Which best describes what ...register does?",
+    "options": [
+    "Spreads only validation rules to component",
+    "Adds custom hook into component props",
+    "Spreads handlers and validation rules",
+    "Overrides default HTML element attributes"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• handlers (onChange، onBlur) و ref را spread می‌کند\n" +
+"- validation rules را apply می‌کند\n" +
+"- name attribute را set می‌کند\n" +
+"- input را به form متصل می‌کند\n" +
+"- all-in-one connection"
+},
+{
+    "id": 497,
+    "question": "What is the main idea of Render Props pattern?",
+    "options": [
+    "Passing JSX elements as component props",
+    "Passing function as prop controlling render",
+    "Rendering props automatically inside DOM",
+    "Using context API to render props"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• passing function به عنوان prop که render logic دارد\n" +
+"- child function به جای JSX\n" +
+"- sharing logic بین components\n" +
+"- flexibility در rendering\n" +
+"- قبل از hooks رایج بود"
+},
+{
+    "id": 498,
+    "question": "Why has Render Props usage decreased in recent years?",
+    "options": [
+    "No longer supported in React 18 version",
+    "Hooks provide simpler way to share logic",
+    "Context API completely replaced the pattern",
+    "Caused errors in React strict mode"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• Hooks راه ساده‌تری برای logic sharing\n" +
+"- custom hooks جایگزین render props\n" +
+"- کد خواناتر با hooks\n" +
+"- کمتر nesting و complexity\n" +
+"- Hooks modern approach هستند"
+},
+{
+    "id": 499,
+    "question": "What is main purpose of Compound Component Pattern?",
+    "options": [
+    "Bundle multiple components into single file",
+    "Allow related components work together unified",
+    "Reduce size of final JavaScript bundle",
+    "Avoid writing any props in child components"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• components مرتبط با هم کار می‌کنند\n" +
+"- state implicitly share می‌شود\n" +
+"- flexible API برای composition\n" +
+"- مثل Select.Option یا Tabs.Panel\n" +
+"- readability و reusability"
+},
+{
+    "id": 500,
+    "question": "Which technique shares state in Compound Component Pattern?",
+    "options": [
+    "Prop drilling through component tree",
+    "React Context for state sharing",
+    "Redux store for global state",
+    "Direct DOM manipulation methods"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• React Context برای implicit state sharing\n" +
+"- parent context provide می‌کند\n" +
+"- children با useContext مصرف می‌کنند\n" +
+"- بدون prop drilling\n" +
+"- clean و flexible API"
+},
+{
+    "id": 501,
+    "question": "Why prefer compound components over single component?",
+    "options": [
+    "Makes API more flexible and declarative",
+    "Reduces need for TypeScript typings",
+    "Automatically optimizes rendering performance",
+    "Eliminates need for CSS styling"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation":"• API flexible و declarative است\n" +
+"- user کنترل بیشتر روی structure\n" +
+"- composition بهتر از configuration\n" +
+"- extensible و customizable\n" +
+"- readability کد بالاتر"
+},
+{
+    "id": 502,
+    "question": "What problem does Compound Component Pattern solve?",
+    "options": [
+    "Reduces JSX nesting making UI flat",
+    "Avoids hard-coding giving flexibility",
+    "Ensures better tree-shaking during build",
+    "Automatically memoizes all child components"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• از hard-coding structure جلوگیری می‌کند\n" +
+"- flexibility در چیدمان components\n" +
+"- user می‌تواند ترتیب را تغییر دهد\n" +
+"- بدون props drilling زیاد\n" +
+"- مثل HTML native elements"
+},
+{
+    "id": 503,
+    "question": "How do children access parent state in Compound Component pattern?",
+    "options": [
+    "Calling function exported from parent",
+    "Reading from global variables directly",
+    "Through React Context and useContext",
+    "Importing parent hook directly"
+],
+    "correctOption": 2,
+    "points": 30,
+    "explanation":"• از React Context و useContext\n" +
+"- parent Provider است\n" +
+"- children Consumer هستند\n" +
+"- implicit connection بدون props\n" +
+"- clean و maintainable code"
+},
+{
+    "id": 504,
+    "question": "Why is React Portal often used for Modal?",
+    "options": [
+    "Replaces need for CSS styling modals",
+    "Renders modal outside root DOM hierarchy",
+    "Improves server-side rendering performance",
+    "Automatically closes modal on route changes"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• modal را خارج از parent DOM render می‌کند\n" +
+"- از stacking context issues جلوگیری\n" +
+"- از overflow: hidden مشکلات فرار\n" +
+"- z-index management آسان‌تر\n" +
+"- semantically در document.body"
+},
+{
+    "id": 505,
+    "question": "What is main purpose of React Portal for modals?",
+    "options": [
+    "Reduces number of modal re-renders",
+    "Renders modal outside parent DOM hierarchy",
+    "Improves performance of state updates",
+    "Automatically adds animations to modal"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation":"• rendering خارج از parent DOM hierarchy\n" +
+"- در document.body یا modal-root\n" +
+"- از CSS constraints فرار\n" +
+"- full-screen overlays راحت‌تر\n" +
+"- event bubbling همچنان کار می‌کند"
+},
+{
+    "id": 506,
+    "question": "What problem do React Portals solve?",
+    "options": [
+    "Slow component rendering performance",
+    "Rendering children outside parent DOM hierarchy",
+    "Managing global application state",
+    "Handling asynchronous operations"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation":"• Portal rendering خارج از parent DOM tree\n" +
+"- مفید برای modals، tooltips، overlays\n" +
+"- از CSS stacking context فرار می‌کند\n" +
+"- اما در React tree همچنان child است\n" +
+"- event bubbling عادی کار می‌کند"
+},
 {
     "id": 507,
     "question": "How do you create a Portal in React?",
@@ -8349,10 +8347,10 @@ export const mockQuestions: Question[] = [
     "correctOption": 0,
     "points": 10,
     "explanation":"• ReactDOM.createPortal(children, domNode)\n" +
-        "- children: JSX که می‌خواهید render کنید\n" +
-        "- domNode: DOM element هدف (مثل document.body)\n" +
-        "- در component return می‌شود\n" +
-        "- مثل JSX عادی اما در DOM دیگر"
+"- children: JSX که می‌خواهید render کنید\n" +
+"- domNode: DOM element هدف (مثل document.body)\n" +
+"- در component return می‌شود\n" +
+"- مثل JSX عادی اما در DOM دیگر"
 },
 {
     "id": 508,
@@ -8366,10 +8364,10 @@ export const mockQuestions: Question[] = [
     "correctOption": 1,
     "points": 30,
     "explanation":"• events در React tree bubble می‌کنند نه DOM tree\n" +
-        "- حتی اگر Portal در DOM جای دیگر باشد\n" +
-        "- parent می‌تواند events Portal را بگیرد\n" +
-        "- React event system این را handle می‌کند\n" +
-        "- برای event delegation مفید است"
+"- حتی اگر Portal در DOM جای دیگر باشد\n" +
+"- parent می‌تواند events Portal را بگیرد\n" +
+"- React event system این را handle می‌کند\n" +
+"- برای event delegation مفید است"
 },
 {
     "id": 509,
@@ -8383,10 +8381,10 @@ export const mockQuestions: Question[] = [
     "correctOption": 1,
     "points": 10,
     "explanation":"• Portals برای UI elements که باید خارج از parent باشند\n" +
-        "- Modals که full-screen هستند\n" +
-        "- Tooltips که از overflow فرار می‌کنند\n" +
-        "- Dropdown menus با positioning پیچیده\n" +
-        "- هر چیزی که z-index issues دارد"
+"- Modals که full-screen هستند\n" +
+"- Tooltips که از overflow فرار می‌کنند\n" +
+"- Dropdown menus با positioning پیچیده\n" +
+"- هر چیزی که z-index issues دارد"
 },
 {
     "id": 510,
@@ -8400,141 +8398,181 @@ export const mockQuestions: Question[] = [
     "correctOption": 1,
     "points": 20,
     "explanation":"• بله، Context بر اساس React tree است نه DOM\n" +
-        "- Portal child همچنان در React tree است\n" +
-        "- می‌تواند Context از ancestors بخواند\n" +
-        "- DOM location مهم نیست\n" +
-        "- React relationship را حفظ می‌کند"
+"- Portal child همچنان در React tree است\n" +
+"- می‌تواند Context از ancestors بخواند\n" +
+"- DOM location مهم نیست\n" +
+"- React relationship را حفظ می‌کند"
 },
-    // {
-//         "id": 1390,
-//         "question": "What happens when a Portal's target container doesn't exist?",
-//         "options": [
-//             "React creates it automatically",
-//             "Error is thrown during render",
-//             "Portal is rendered in parent instead",
-//             "Component doesn't render anything"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 476,
-//         "question": "Where is modal typically rendered using React Portal?",
-//         "options": [
-//             "Inside closest parent component directly",
-//             "Directly in component tree of App",
-//             "In separate DOM node like modal-root",
-//             "In virtual DOM but not real DOM"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//  "explanation":""
-//     },
-//     {
-//         "id": 477,
-//         "question": "Why is Portal beneficial for modals regarding CSS?",
-//         "options": [
-//             "Automatically sets modal's z-index property",
-//             "Avoids overflow hidden and stacking issues",
-//             "Converts modal styles into inline styles",
-//             "Removes need for CSS classes entirely"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 478,
-//         "question": "Which React method is used to render into Portal?",
-//         "options": [
-//             "ReactDOM.render()",
-//             "React.createElement()",
-//             "ReactDOM.createPortal()",
-//             "usePortal()"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//  "explanation":""
-//     },
-//     {
-//         "id": 479,
-//         "question": "What is important for accessibility in Portal Modal?",
-//         "options": [
-//             "Rendering modal with useEffect hook",
-//             "Ensuring modal has random ID assigned",
-//             "Applying inline styles only to elements",
-//             "Making sure focus trapped inside modal",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 480,
-//         "question": "What is prefetching in React Query?",
-//         "options": [
-//             "Fetching data only after component renders",
-//             "Fetching data before components need it",
-//             "Deleting cached data to free memory",
-//             "Blocking UI updates until data loads"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//  "explanation":""
-//     },
-//     {
-//         "id": 481,
-//         "question": "What is primary benefit of prefetching data?",
-//         "options": [
-//             "Automatically writes data to localStorage",
-//             "Reduces loading time improving responsiveness",
-//             "Eliminates need for backend API calls",
-//             "Disables caching for better performance"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 482,
-//         "question": "How does prefetching work with React Query caching?",
-//         "options": [
-//             "Prefetching bypasses cache forcing fresh requests",
-//             "Prefetching converts data into static HTML",
-//             "Prefetching loads and caches for instant use",
-//             "Prefetching prevents components from re-rendering"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 483,
-//         "question": "Which method is used to prefetch queries manually?",
-//         "options": [
-//             "queryClient.prefetchQuery() with query config",
-//             "useQuery() with prefetch parameter set true",
-//             "usePrefetch() hook in component body",
-//             "React.prefetch() with query key and function"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 484,
-//         "question": "When should you typically implement prefetching?",
-//         "options": [
-//             "After user already navigated to page",
-//             "Before user likely needs data soon",
-//             "Only when network connection very slow",
-//             "During component unmounting for cleanup"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
+    {
+        "id": 511,
+        "question": "What happens when a Portal's target container doesn't exist?",
+        "options": [
+            "React creates it automatically",
+            "Error is thrown during render",
+            "Portal is rendered in parent instead",
+            "Component doesn't render anything"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• اگر container وجود نداشته باشد، error می‌دهد\n" +
+            "- باید container قبلاً در DOM باشد\n" +
+            "- معمولاً در index.html تعریف می‌شود\n" +
+            "- یا با useEffect ایجاد می‌شود\n" +
+            "- check کردن existence توصیه می‌شود"
+    },
+    {
+        "id": 512,
+        "question": "Where is modal typically rendered using React Portal?",
+        "options": [
+            "Inside closest parent component directly",
+            "Directly in component tree of App",
+            "In separate DOM node like modal-root",
+            "In virtual DOM but not real DOM"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• در DOM node جداگانه مثل modal-root\n" +
+            "- معمولاً در document.body\n" +
+            "- خارج از app root element\n" +
+            "- مستقل از parent component\n" +
+            "- accessibility بهتر"
+    },
+    {
+        "id": 513,
+        "question": "Why is Portal beneficial for modals regarding CSS?",
+        "options": [
+            "Automatically sets modal's z-index property",
+            "Avoids overflow hidden and stacking issues",
+            "Converts modal styles into inline styles",
+            "Removes need for CSS classes entirely"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• از overflow: hidden در parent فرار می‌کند\n" +
+            "- stacking context مشکلات حل می‌شود\n" +
+            "- z-index management ساده‌تر\n" +
+            "- full viewport coverage راحت\n" +
+            "- CSS isolation بهتر"
+    },
+    {
+        "id": 514,
+        "question": "Which React method is used to render into Portal?",
+        "options": [
+            "ReactDOM.render()",
+            "React.createElement()",
+            "ReactDOM.createPortal()",
+            "usePortal()"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• ReactDOM.createPortal(child, container)\n" +
+            "- child: JSX برای render\n" +
+            "- container: DOM node هدف\n" +
+            "- return value در component tree\n" +
+            "- اما DOM در جای دیگر"
+    },
+    {
+        "id": 515,
+        "question": "What is important for accessibility in Portal Modal?",
+        "options": [
+            "Rendering modal with useEffect hook",
+            "Ensuring modal has random ID assigned",
+            "Applying inline styles only to elements",
+            "Making sure focus trapped inside modal",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• focus management و trap کردن focus\n" +
+            "- keyboard navigation (ESC برای close)\n" +
+            "- aria-modal و role attributes\n" +
+            "- focus return بعد از close\n" +
+            "- screen reader announcements"
+    },
+    {
+        "id": 516,
+        "question": "What is prefetching in React Query?",
+        "options": [
+            "Fetching data only after component renders",
+            "Fetching data before components need it",
+            "Deleting cached data to free memory",
+            "Blocking UI updates until data loads"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• loading data قبل از نیاز واقعی\n" +
+            "- در background و silent\n" +
+            "- data در cache ready می‌شود\n" +
+            "- instant navigation experience\n" +
+            "- بهبود perceived performance"
+    },
+    {
+        "id": 517,
+        "question": "What is primary benefit of prefetching data?",
+        "options": [
+            "Automatically writes data to localStorage",
+            "Reduces loading time improving responsiveness",
+            "Eliminates need for backend API calls",
+            "Disables caching for better performance"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• کاهش loading time و بهبود UX\n" +
+            "- data از قبل در cache است\n" +
+            "- navigation instant به نظر می‌رسد\n" +
+            "- کاربر منتظر نمی‌ماند\n" +
+            "- perceived performance بالا"
+    },
+    {
+        "id": 518,
+        "question": "How does prefetching work with React Query caching?",
+        "options": [
+            "Prefetching bypasses cache forcing fresh requests",
+            "Prefetching converts data into static HTML",
+            "Prefetching loads and caches for instant use",
+            "Prefetching prevents components from re-rendering"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• data را prefetch و در cache می‌گذارد\n" +
+            "- وقتی useQuery صدا زده شود، instant available\n" +
+            "- staleTime و cacheTime عادی\n" +
+            "- refetch در background اگر stale\n" +
+            "- seamless integration با cache system"
+    },
+    {
+        "id": 519,
+        "question": "Which method is used to prefetch queries manually?",
+        "options": [
+            "queryClient.prefetchQuery() with query config",
+            "useQuery() with prefetch parameter set true",
+            "usePrefetch() hook in component body",
+            "React.prefetch() with query key and function"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• queryClient.prefetchQuery({ queryKey، queryFn })\n" +
+            "- مثل useQuery اما manual\n" +
+            "- معمولاً در event handlers\n" +
+            "- onMouseEnter برای hover prefetch\n" +
+            "- Promise return می‌کند"
+    },
+    {
+        "id": 520,
+        "question": "When should you typically implement prefetching?",
+        "options": [
+            "After user already navigated to page",
+            "Before user likely needs data soon",
+            "Only when network connection very slow",
+            "During component unmounting for cleanup"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• قبل از اینکه user احتمالاً نیاز داشته باشد\n" +
+            "- onHover روی links\n" +
+            "- در idle time\n" +
+            "- pagination: next page\n" +
+            "- predictive based on user behavior"
+    },
 //     {
 //         "id": 485,
 //         "question": "What happens when component uses useQuery after prefetch?",
@@ -8689,7 +8727,7 @@ export const mockQuestions: Question[] = [
 //         ],
 //         "correctOption": 2,
 //         "points": 20,
-    //  "explanation":""
+//  "explanation":""
 //     },
 //     {
 //         "id": 497,
@@ -18520,1040 +18558,1040 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 1,
 //         "points": 30
 //     },
-    {
-        "id": 1406,
-        "question": "How do you initialize a new project with npm?",
-        "options": [
-            "npm start",
-            "npm create",
-            "npm init",
-            "npm new"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• npm init برای ساخت package.json جدید\n" +
-            "- سوالاتی درباره نام، version، description می‌پرسد\n" +
-            "- npm init -y برای skip کردن سوالات و default values\n" +
-            "- اولین قدم هر پروژه Node.js\n" +
-            "- package.json فایل اصلی برای مدیریت dependencies"
-    },
-    {
-        "id": 1407,
-        "question": "How do you install a package and save it to package.json?",
-        "options": [
-            "npm get react",
-            "npm add react",
-            "npm download react",
-            "npm install react",
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation": "• npm install react یا npm i react برای نصب\n" +
-            "- خودکار در package.json و node_modules اضافه می‌شود\n" +
-            "- npm install react --save دیگر لازم نیست (پیش‌فرض است)\n" +
-            "- همزمان package-lock.json هم update می‌شود\n" +
-            "- برای چند package: npm install react react-dom"
-    },
-    {
-        "id": 1408,
-        "question": "How do you remove a package from your project?",
-        "options": [
-            "npm delete package-name",
-            "npm remove package-name",
-            "npm uninstall package-name",
-            "npm drop package-name"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• npm uninstall package-name یا npm un package-name\n" +
-            "- از node_modules و package.json حذف می‌شود\n" +
-            "- npm remove و npm rm هم کار می‌کنند (alias)\n" +
-            "- package-lock.json نیز update می‌شود\n" +
-            "- برای چند package: npm uninstall react react-dom"
-    },
-    {
-        "id": 1412,
-        "question": "How do you add a package using Yarn?",
-        "options": [
-            "yarn install react",
-            "yarn add react",
-            "yarn get react",
-            "yarn set react"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• yarn add react برای نصب package جدید\n" +
-            "- خودکار در package.json و yarn.lock اضافه می‌شود\n" +
-            "- yarn add react react-dom برای چند package\n" +
-            "- yarn add eslint --dev برای devDependencies\n" +
-            "- معادل npm install react"
-    },
-    {
-        "id": 1411,
-        "question": "What is the Yarn equivalent of npm install?",
-        "options": [
-            "yarn get",
-            "yarn add",
-            "yarn download",
-            "yarn install",
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation": "• yarn install یا فقط yarn\n" +
-            "- تمام dependencies از package.json نصب می‌شود\n" +
-            "- yarn.lock برای lock کردن versions\n" +
-            "- معمولاً سریع‌تر از npm\n" +
-            "- offline caching برای installs بدون اینترنت"
-    },
-    {
-        "id": 1413,
-        "question": "How do you run scripts defined in package.json?",
-        "options": [
-            "npm exec start",
-            "npm run start",
-            "npm do start",
-            "npm script start"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• npm run script-name برای اجرای scripts\n" +
-            "- مثل npm run dev، npm run build، npm run test\n" +
-            "- npm start و npm test بدون run کار می‌کنند\n" +
-            "- در yarn فقط yarn dev کافی است\n" +
-            "- scripts در package.json تعریف می‌شوند"
-    },
-    {
-        "id": 1414,
-        "question": "How do you check the installed version of a package?",
-        "options": [
-            "npm version react",
-            "npm check react",
-            "npm list react",
-            "npm info react"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• npm list react یا npm ls react\n" +
-            "- version نصب شده در پروژه را نشان می‌دهد\n" +
-            "- npm list --depth=0 فقط top-level packages\n" +
-            "- npm list -g --depth=0 برای global packages\n" +
-            "- yarn list react در Yarn"
-    },
-    {
-        "id": 1415,
-        "question": "What command shows available updates for packages?",
-        "options": [
-            "npm check",
-            "npm updates",
-            "npm outdated",
-            "npm versions"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• npm outdated لیست packages با version جدیدتر\n" +
-            "- Current: version فعلی نصب شده\n" +
-            "- Wanted: latest version در semver range\n" +
-            "- Latest: جدیدترین version در registry\n" +
-            "- yarn upgrade-interactive برای Yarn"
-    },
-    {
-        "id": 1419,
-        "question": "What does npm start command do?",
-        "options": [
-            "Starts npm service",
-            "Runs the 'start' script from package.json",
-            "Installs all dependencies",
-            "Creates a new project"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• npm start اجرای script با نام 'start' از package.json\n" +
-            "- معمولاً development server را start می‌کند\n" +
-            "- مثل npm run start اما بدون 'run'\n" +
-            "- npm test نیز همین رفتار را دارد\n" +
-            "- shortcut برای commonly used scripts"
-    },
-    {
-        "id": 1420,
-        "question": "How do you update a single package to latest version?",
-        "options": [
-            "npm update package-name",
-            "npm upgrade package-name",
-            "npm refresh package-name",
-            "npm latest package-name"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• npm update package-name برای update یک package\n" +
-            "- در محدوده semver range مشخص شده\n" +
-            "- npm update بدون نام، همه را update می‌کند\n" +
-            "- yarn upgrade package-name در Yarn\n" +
-            "- package-lock.json نیز update می‌شود"
-    },
-    {
-        "id": 1421,
-        "question": "What is the Yarn equivalent of npm uninstall?",
-        "options": [
-            "yarn delete",
-            "yarn remove",
-            "yarn drop",
-            "yarn uninstall"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• yarn remove package-name برای حذف\n" +
-            "- از package.json و yarn.lock حذف می‌شود\n" +
-            "- node_modules نیز پاک می‌شود\n" +
-            "- معادل npm uninstall\n" +
-            "- yarn remove react react-dom برای چند package"
-    },
-    {
-        "id": 1422,
-        "question": "How do you check npm version installed on your system?",
-        "options": [
-            "npm --version",
-            "npm check version",
-            "npm get version",
-            "npm info"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• npm --version یا npm -v برای check کردن\n" +
-            "- version npm روی سیستم شما\n" +
-            "- node --version یا node -v برای Node.js\n" +
-            "- yarn --version برای Yarn\n" +
-            "- مهم برای compatibility و troubleshooting"
-    },
-    {
-        "id": 1426,
-        "question": "How do you clear npm cache?",
-        "options": [
-            "npm cache clear",
-            "npm clean cache",
-            "npm cache clean --force",
-            "npm remove cache"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• npm cache clean --force برای پاک کردن cache\n" +
-            "- --force ضروری است برای تایید\n" +
-            "- وقتی corruption یا مشکلات عجیب دارید\n" +
-            "- yarn cache clean در Yarn\n" +
-            "- معمولاً نیازی به manual cleaning نیست"
-    },
-    {
-        "id": 1391,
-        "question": "What is the difference between npm install and npm ci?",
-        "options": [
-            "No difference, they are identical commands",
-            "npm install is for production, npm ci for development",
-            "npm ci is faster and uses exact versions from lock file",
-            "npm ci only installs devDependencies"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• npm ci برای CI/CD و production builds\n" +
-            "- از package-lock.json دقیقاً استفاده می‌کند\n" +
-            "- node_modules را حذف و از نو نصب می‌کند\n" +
-            "- سریع‌تر و deterministic است\n" +
-            "- npm install می‌تواند package-lock را update کند"
-    },
-    {
-        "id": 1393,
-        "question": "What is the difference between dependencies and devDependencies?",
-        "options": [
-            "devDependencies are faster to install",
-            "No difference, both are installed the same way",
-            "dependencies are optional, devDependencies required",
-            "dependencies for production, devDependencies for development",
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation": "• dependencies برای runtime نیاز است\n" +
-            "- در production bundle می‌آیند\n" +
-            "- devDependencies فقط برای development (testing, build tools)\n" +
-            "- npm install --production فقط dependencies را نصب می‌کند\n" +
-            "- eslint, jest در devDependencies قرار می‌گیرند"
-    },
-    {
-        "id": 1395,
-        "question": "What is the purpose of package-lock.json?",
-        "options": [
-            "Locks package.json from being edited",
-            "Ensures exact dependency versions across installs",
-            "Prevents npm install from running",
-            "Encrypts sensitive package information"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• package-lock.json exact versions تمام dependencies را ذخیره می‌کند\n" +
-            "- including nested dependencies\n" +
-            "- deterministic installs را تضمین می‌کند\n" +
-            "- در git commit می‌شود\n" +
-            "- npm ci از آن استفاده می‌کند"
-    },
-    {
-        "id": 1396,
-        "question": "What does npm outdated command show?",
-        "options": [
-            "Old files in project directory",
-            "Packages with available newer versions",
-            "Deprecated npm commands used",
-            "Unused dependencies in package.json"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• npm outdated لیست packages با versions جدیدتر\n" +
-            "- Current, Wanted و Latest versions\n" +
-            "- Wanted: مطابق با semver range در package.json\n" +
-            "- Latest: جدیدترین version در npm registry\n" +
-            "- برای planning updates مفید است"
-    },
-    {
-        "id": 1399,
-        "question": "What is npx used for?",
-        "options": [
-            "Installing packages permanently",
-            "Executing packages without global install",
-            "Removing unused packages",
-            "Updating package.json automatically"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• npx packages را بدون global install اجرا می‌کند\n" +
-            "- temporary download و execute\n" +
-            "- همیشه latest version استفاده می‌کند\n" +
-            "- npx create-react-app my-app\n" +
-            "- جلوگیری از global pollution"
-    },
-    {
-        "id": 1405,
-        "question": "What is npm cache and when should you clean it?",
-        "options": [
-            "Cache stores installed packages for faster reinstalls",
-            "Cache is browser cookies for npm website",
-            "Cache stores user preferences",
-            "Cache is temporary build files"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• npm cache downloaded packages را ذخیره می‌کند\n" +
-            "- برای faster subsequent installs\n" +
-            "- npm cache clean --force برای پاک کردن\n" +
-            "- زمانی که corruption یا weird errors\n" +
-            "- معمولاً نیازی به manual cleaning نیست"
-    },
-    {
-        "id": 1431,
-        "question": "What command creates a new Git repository?",
-        "options": [
-            "git create",
-            "git start",
-            "git init",
-            "git new"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• git init برای ساخت repository جدید\n" +
-            "- فولدر .git ایجاد می‌شود\n" +
-            "- اولین command برای شروع Git\n" +
-            "- در root directory پروژه اجرا می‌شود\n" +
-            "- بعد از آن می‌توانید commit کنید"
-    },
-    {
-        "id": 1432,
-        "question": "How do you download a repository from GitHub?",
-        "options": [
-            "git download <url>",
-            "git clone <url>",
-            "git pull <url>",
-            "git get <url>"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• git clone <url> برای دانلود repository\n" +
-            "- تمام history و files را می‌آورد\n" +
-            "- git clone https://github.com/user/repo.git\n" +
-            "- یک folder جدید ایجاد می‌کند\n" +
-            "- remote origin خودکار set می‌شود"
-    },
-    {
-        "id": 1433,
-        "question": "What command shows the current status of your repository?",
-        "options": [
-            "git info",
-            "git state",
-            "git status",
-            "git check"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• git status برای دیدن وضعیت فعلی\n" +
-            "- فایل‌های modified، staged، untracked\n" +
-            "- branch فعلی\n" +
-            "- commits ahead/behind\n" +
-            "- پرکاربردترین command روزانه"
-    },
-    {
-        "id": 1437,
-        "question": "What command downloads changes from GitHub?",
-        "options": [
-            "git fetch",
-            "git pull",
-            "git get",
-            "git download",
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• git pull برای دانلود و merge تغییرات\n" +
-            "- git pull origin main\n" +
-            "- معادل git fetch + git merge\n" +
-            "- تغییرات دیگران را می‌آورد\n" +
-            "- قبل از شروع کار روزانه اجرا کنید"
-    },
-    {
-        "id": 1442,
-        "question": "What file tells Git which files to ignore?",
-        "options": [
-            ".gitignore",
-            ".ignore",
-            "ignore.txt",
-            "git-ignore.txt"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• .gitignore فایل برای ignore کردن\n" +
-            "- node_modules/، .env، *.log\n" +
-            "- در root directory قرار می‌گیرد\n" +
-            "- patterns برای matching files\n" +
-            "- sensitive data را ignore کنید"
-    },
-    {
-        "id": 1443,
-        "question": "How do you temporarily save uncommitted changes?",
-        "options": [
-            "git save",
-            "git temp",
-            "git stash",
-            "git hold"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• git stash برای ذخیره موقت تغییرات\n" +
-            "- git stash pop برای برگرداندن\n" +
-            "- git stash list برای لیست stashes\n" +
-            "- وقتی می‌خواهید branch عوض کنید\n" +
-            "- git stash drop برای حذف"
-    },
-    {
-        "id": 1444,
-        "question": "What is the difference between git fetch and git pull?",
-        "options": [
-            "No difference, they are the same",
-            "fetch downloads, pull downloads and merges",
-            "fetch is faster than pull",
-            "pull only works with main branch"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• git fetch فقط تغییرات را download می‌کند\n" +
-            "- local branch را تغییر نمی‌دهد\n" +
-            "- git pull = fetch + merge\n" +
-            "- fetch برای دیدن تغییرات قبل از merge\n" +
-            "- pull مستقیماً تغییرات را apply می‌کند"
-    },
-    {
-        "id": 1445,
-        "question": "How do you undo the last commit but keep changes?",
-        "options": [
-            "git undo",
-            "git reset --soft HEAD~1",
-            "git revert HEAD",
-            "git back"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• git reset --soft HEAD~1 برای undo commit\n" +
-            "- changes در staging area می‌مانند\n" +
-            "- git reset --hard HEAD~1 همه را حذف می‌کند\n" +
-            "- git reset --mixed HEAD~1 از staging خارج می‌کند\n" +
-            "- فقط برای local commits که push نشده"
-    },
-    {
-        "id": 1448,
-        "question": "What is a Pull Request in GitHub?",
-        "options": [
-            "Pulling code from another repository",
-            "Request to merge your branch into another branch",
-            "Downloading repository files",
-            "Creating a new branch"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• Pull Request (PR) درخواست merge است\n" +
-            "- معمولاً از feature branch به main\n" +
-            "- دیگران code را review می‌کنند\n" +
-            "- discussion و comments\n" +
-            "- بعد از approval، merge می‌شود"
-    },
-    {
-        "id": 1450,
-        "question": "What does git clone do differently than downloading a ZIP?",
-        "options": [
-            "ZIP is faster than clone",
-            "Clone only downloads main branch",
-            "Clone includes Git history, ZIP doesn't",
-            "No difference between them"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• git clone تمام history و .git را می‌آورد\n" +
-            "- می‌توانید commit، branch، push کنید\n" +
-            "- ZIP فقط فایل‌های فعلی\n" +
-            "- ZIP نمی‌توانید با Git کار کنید\n" +
-            "- clone برای development، ZIP برای فقط دیدن"
-    },
-    {
-        "id": 1456,
-        "question": "What is TypeScript?",
-        "options": [
-            "A new programming language replacing JavaScript",
-            "JavaScript with static type checking",
-            "A JavaScript framework like React",
-            "A database query language"
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• TypeScript superset از JavaScript است\n" +
-            "- اضافه کردن types به JavaScript\n" +
-            "- compile می‌شود به JavaScript\n" +
-            "- type errors در compile time\n" +
-            "- همه JavaScript کد، TypeScript معتبر است"
-    },
-    {
-        "id": 1461,
-        "question": "How do you define an array type in TypeScript?",
-        "options": [
-            "let numbers: number[] = [1, 2, 3]",
-            "let numbers: array<number> = [1, 2, 3]",
-            "let numbers: [number] = [1, 2, 3]",
-            "let numbers = number[1, 2, 3]"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• number[] برای array از numbers\n" +
-            "- string[] برای array از strings\n" +
-            "- Array<number> syntax دیگر (generics)\n" +
-            "- (number | string)[] برای mixed types\n" +
-            "- readonly number[] برای immutable"
-    },
-    {
-        "id": 1462,
-        "question": "What is an interface in TypeScript?",
-        "options": [
-            "A way to define object shape/structure",
-            "A class that can't be instantiated",
-            "A function type definition",
-            "A variable declaration"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• interface برای define کردن object structure\n" +
-            "- interface User { name: string; age: number }\n" +
-            "- می‌تواند extend شود\n" +
-            "- برای type checking objects\n" +
-            "- compile نمی‌شود به JavaScript"
-    },
-    {
-        "id": 1464,
-        "question": "What is the difference between interface and type?",
-        "options": [
-            "No difference, completely interchangeable",
-            "Interface can extend, type can't extend",
-            "Interface for objects, type for unions and other types",
-            "Type is deprecated, use interface"
-        ],
-        "correctOption": 2,
-        "points": 20,
-        "explanation": "• interface بیشتر برای object shapes\n" +
-            "- type برای unions، primitives، tuples\n" +
-            "- interface می‌تواند merged شود\n" +
-            "- type برای complex types بهتر\n" +
-            "- در React Props معمولاً interface"
-    },
-    {
-        "id": 1466,
-        "question": "What does the void type represent?",
-        "options": [
-            "Empty object",
-            "Null or undefined",
-            "Function that returns nothing",
-            "Any type"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• void برای functions که return ندارند\n" +
-            "- function log(message: string): void {}\n" +
-            "- معمولاً برای side effects\n" +
-            "- undefined return می‌توان داشت\n" +
-            "- null نمی‌تواند assign شود (strict mode)"
-    },
-    {
-        "id": 1470,
-        "question": "What is a tuple in TypeScript?",
-        "options": [
-            "An array with fixed length and types",
-            "A special kind of object",
-            "An array of only numbers",
-            "A function return type"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• tuple array با length و type ثابت\n" +
-            "- let point: [number, number] = [10, 20]\n" +
-            "- let user: [string, number] = ['Ali', 25]\n" +
-            "- ترتیب types مهم است\n" +
-            "- مثل Python tuples اما با type safety"
-    },
-    {
-        "id": 1471,
-        "question": "How do you define a type for React component props?",
-        "options": [
-            "interface Props { name: string }",
-            "type Props = { name: string }",
-            "props: { name: string }",
-            "Both interface and type work"
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation": "• هم interface و هم type کار می‌کنند\n" +
-            "- interface Props { name: string; age?: number }\n" +
-            "- const MyComponent = (props: Props) => {}\n" +
-            "- یا destructure: ({ name, age }: Props)\n" +
-            "- convention معمولاً interface در React"
-    },
-    {
-        "id": 1472,
-        "question": "What does the never type represent?",
-        "options": [
-            "Values that never occur",
-            "Null values only",
-            "Empty arrays",
-            "Undefined values"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• never برای values که هرگز اتفاق نمی‌افتند\n" +
-            "- functions که throw می‌کنند\n" +
-            "- infinite loops\n" +
-            "- unreachable code\n" +
-            "- exhaustive checks در switch/if"
-    },
-    {
-        "id": 1474,
-        "question": "What is the unknown type in TypeScript?",
-        "options": [
-            "Same as any type",
-            "Safer version of any, requires type checking",
-            "For undefined values only",
-            "For objects only"
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• unknown ایمن‌تر از any است\n" +
-            "- نمی‌توانید بدون check استفاده کنید\n" +
-            "- باید typeof یا type guard استفاده کنید\n" +
-            "- let value: unknown = getValue()\n" +
-            "- توصیه می‌شود به جای any"
-    },
-    {
-        "id": 1475,
-        "question": "How do you type a variable that can be null?",
-        "options": [
-            "let name: string | null",
-            "let name: string?",
-            "let name: nullable<string>",
-            "let name: string = null"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• | null برای nullable types\n" +
-            "- let name: string | null = null\n" +
-            "- در strictNullChecks mode ضروری است\n" +
-            "- string | undefined نیز متفاوت است\n" +
-            "- optional (?) شامل undefined است"
-    },
-    {
-        "id": 1480,
-        "question": "What is the difference between type and interface for extending?",
-        "options": [
-            "interface uses extends, type uses &",
-            "Only type can extend",
-            "Only interface can extend",
-            "Both use extends keyword"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• interface با extends کار می‌کند\n" +
-            "- interface User extends Person {}\n" +
-            "- type با & (intersection)\n" +
-            "- type User = Person & { age: number }\n" +
-            "- هر دو برای composition استفاده می‌شوند"
-    },
-    {
-        "id": 1481,
-        "question": "How do you type an event handler in React?",
-        "options": [
-            "React.MouseEvent<HTMLButtonElement>",
-            "Event<HTMLInputElement>",
-            "MouseEvent",
-            "ButtonEvent"
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• React.MouseEvent<HTMLButtonElement> برای click\n" +
-            "- React.ChangeEvent<HTMLInputElement> برای input\n" +
-            "- React.FormEvent<HTMLFormElement> برای form\n" +
-            "- const handleClick = (e: React.MouseEvent) => {}\n" +
-            "- generic برای element type"
-    },
-    {
-        "id": 1487,
-        "question": "How do you type an async function?",
-        "options": [
-            "async function fetch(): Promise<Data> {}",
-            "async function fetch(): async<Data> {}",
-            "async function fetch(): Future<Data> {}",
-            "async function fetch(): Async<Data> {}"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• Promise<Type> برای async functions\n" +
-            "- async function getData(): Promise<User> {}\n" +
-            "- const getData = async (): Promise<User[]> => {}\n" +
-            "- Promise<void> اگر return ندارد\n" +
-            "- await نتیجه unwrap می‌کند"
-    },
-    {
-        "id": 53,
-        "question": "When encountering a temporary build error like 'Module not found: Error: Can't resolve \"path/index.js\"' after recent file changes, what is the first recommended action?",
-        "options": [
-            "Restart the development server using CTRL + C and npm start.",
-            "Reinstall all dependencies by deleting node_modules and running npm install.",
-            "Create a new package.json file and reinitialize the project.",
-            "Clear browser cache and refresh the page."
-        ],
-        "correctOption": 0,
-        "points": 20,
-        "explanation": "• در برخی مواقع پس از تغییرات اخیر در فایل‌ها، build موقتاً دچار خطا می‌شود\n" +
-            "- ری‌استارت سرور توسعه باعث ری‌بیلد کامل پروژه و رفع خطاهای موقت می‌شود\n" +
-            "- در صورت تداوم خطا پس از ری‌استارت، حذف و نصب مجدد وابستگی‌ها مرحله بعدی است\n" +
-            "- پاک‌کردن کش مرورگر تأثیری بر خطاهای build ندارد"
-    },
-    {
-        "id": 54,
-        "question": "What is the primary purpose of the src folder in a React project?",
-        "options": [
-            "It serves as the brain of the app, containing all the JavaScript and TypeScript files.",
-            "It stores static assets like images and HTML templates.",
-            "It maintains a snapshot of the project’s dependency tree.",
-            "It contains the compiled production-ready code after the build process."
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• پوشه src محل اصلی کدهای منبع برنامه است\n" +
-            "- شامل فایل‌های logic، component و ماژول‌های TypeScript/JavaScript است\n" +
-            "- فایل‌های استاتیک مانند تصاویر معمولاً در پوشه public نگهداری می‌شوند\n" +
-            "- خروجی نهایی build در پوشه dist یا build ذخیره می‌شود، نه در src"
-    },
-    {
-        "id": 55,
-        "question": "Which of the following statements about React components is correct?",
-        "options": [
-            "Components cannot return JSX directly and require a wrapper function.",
-            "Components must always use function declarations; arrow functions are not allowed.",
-            "Components must start with a capital letter to be recognized by React.",
-            "Components can only be created using class syntax in modern React."
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• در React نام کامپوننت‌ها باید با حرف بزرگ شروع شود تا React بتواند آن‌ها را از عناصر HTML متمایز کند\n" +
-            "- استفاده از حروف کوچک باعث می‌شود React آن را به عنوان یک تگ HTML معمولی تفسیر کند\n" +
-            "- می‌توان از function declaration یا arrow function برای تعریف کامپوننت استفاده کرد\n" +
-            "- نیاز به هیچ wrapper خاصی برای بازگرداندن JSX وجود ندارد"
-    },
-    {
-        "id": 56,
-        "question": "In JSX, why do we use className instead of class for styling elements?",
-        "options": [
-            "className automatically applies camelCase conventions to all class names.",
-            "className provides better browser compatibility for styled components.",
-            "className is used to avoid conflicts with the class keyword in JavaScript.",
-            "className enables conditional rendering of CSS styles automatically."
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• در JSX از className به جای class استفاده می‌شود چون 'class' در JavaScript یک کلمه رزرو شده است\n" +
-            "- JSX در نهایت به JavaScript کامپایل می‌شود، بنابراین استفاده از class باعث بروز خطا می‌شود\n" +
-            "- React هنگام render مقدار className را به ویژگی HTML class تبدیل می‌کند\n" +
-            "- این ویژگی رفتاری خاصی برای camelCase یا styled components ندارد"
-    },
-    {
-        "id": 57,
-        "question": "What is the purpose of adding 'emmet.includeLanguages': { 'javascript': 'javascript react' } in the settings.json file?",
-        "options": [
-            "It ensures automatic formatting of JSX elements on save.",
-            "It automatically renames React components to match file names.",
-            "It enables Emmet support in .js files for JSX syntax.",
-            "It converts JavaScript files into TypeScript automatically."
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• با این تنظیم، VS Code تشخیص می‌دهد که فایل‌های JavaScript حاوی JSX هستند\n" +
-            "- این ویژگی پشتیبانی Emmet (شامل auto-complete و expand کردن shorthand) را برای JSX فعال می‌کند\n" +
-            "- به طور پیش‌فرض Emmet فقط در فایل‌های .jsx یا .tsx فعال است\n" +
-            "- این تنظیم هیچ ربطی به فرمت خودکار یا TypeScript ندارد"
-    },
-    {
-        "id": 58,
-        "question": "Why is React.Fragment or shorthand <> used in React components?",
-        "options": [
-            "To improve performance by optimizing how JSX is compiled.",
-            "To ensure that JSX elements use camelCase property naming convention.",
-            "To group multiple elements without adding extra DOM nodes.",
-            "To automatically wrap elements with a parent <div> during rendering."
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• از React.Fragment یا فرم کوتاه <> برای گروه‌بندی چند المنت JSX استفاده می‌شود\n" +
-            "- این کار بدون افزودن تگ اضافی به DOM انجام می‌شود\n" +
-            "- استفاده از div اضافی می‌تواند باعث به‌هم‌ریختگی ساختار و مشکلات در استایل شود\n" +
-            "- Fragment هیچ تأثیری بر نام‌گذاری camelCase یا عملکرد JSX ندارد"
-    },
-    {
-        "id": 59,
-        "question": "Why are components like Image, Title, and Author separated into their own functional components?",
-        "options": [
-            "To enable independent styling and testing of each component.",
-            "To promote reusability and maintainability in larger applications.",
-            "To reduce the number of return statements in the parent component.",
-            "To automatically fetch data for each component from an API."
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• جداسازی کامپوننت‌ها باعث افزایش قابلیت استفاده مجدد و نگهداری آسان‌تر کد می‌شود\n" +
-            "- هر کامپوننت می‌تواند مستقل تست و استایل‌دهی شود\n" +
-            "- کاهش تعداد return هدف اصلی نیست و داده‌ها به صورت خودکار fetch نمی‌شوند\n" +
-            "- این ساختار به خوانایی و سازمان‌دهی بهتر پروژه کمک می‌کند"
-    },
-    {
-        "id": 60,
-        "question": "In the Greeting component, why is Person called as <Person /> instead of Person()?",
-        "options": [
-            "Calling Person() directly would break React's virtual DOM mechanism.",
-            "Using <Person /> is required only if the component is a functional component.",
-            "It is just a stylistic choice and both approaches work identically.",
-            "React components must be invoked as JSX elements to ensure proper rendering.",
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation": "• در React، کامپوننت‌ها باید به صورت JSX (<Person />) فراخوانی شوند تا React بتواند lifecycle و virtual DOM را مدیریت کند\n" +
-            "- فراخوانی مستقیم Person() ممکن است باعث عدم هماهنگی با سیستم رندر React شود\n" +
-            "- این محدودیت فقط برای functional components نیست و برای class components هم صادق است\n" +
-            "- این موضوع صرفاً یک انتخاب استایلی نیست و رفتار رندر را تحت تأثیر قرار می‌دهد"
-    },
-    {
-        "id": 61,
-        "question": "What is the purpose of React Developer Tools?",
-        "options": [
-            "To modify component styles directly in the browser.",
-            "To inspect and debug the component hierarchy and props in a React.",
-            "To automatically optimize React components for better performance.",
-            "To convert class components to functional components automatically."
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• React Developer Tools برای بررسی و دیباگ کامپوننت‌ها و props در یک برنامه React استفاده می‌شود\n" +
-            "- امکان مشاهده درخت کامپوننت‌ها، state و props به صورت زنده فراهم می‌کند\n" +
-            "- این ابزار تغییر خودکار استایل یا بهینه‌سازی کامپوننت‌ها را انجام نمی‌دهد\n" +
-            "- تبدیل خودکار نوع کامپوننت‌ها نیز توسط این ابزار انجام نمی‌شود"
-    },
-    {
-        "id": 62,
-        "question": "What is the main reason for using the style prop for inline styling in JSX?",
-        "options": [
-            "Inline styles allow using CSS syntax without transformations.",
-            "Inline styles are more performant than external CSS in React applications.",
-            "The style prop is a JavaScript object, allowing dynamic styling with computed properties.",
-            "The style prop automatically converts CSS files into scoped modules."
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• در JSX، ویژگی style به صورت یک شیء جاوااسکریپت تعریف می‌شود\n" +
-            "- این ساختار امکان استفاده از مقادیر پویا و متغیرها را در استایل‌ها فراهم می‌کند\n" +
-            "- از سینتکس CSS معمول (با خط فاصله) پشتیبانی نمی‌کند و باید از camelCase استفاده شود\n" +
-            "- عملکرد آن بهتر از CSS خارجی نیست و برای استایل‌های ساده یا پویا مناسب‌تر است"
-    },
-    {
-        "id": 63,
-        "question": "What happens when an array index is used as the key instead of a unique identifier in a list of React components?",
-        "options": [
-            "The key will improve the rendering speed by using the index value.",
-            "The list will render correctly, but reordering or modifying items may cause unexpected behavior.",
-            "React will throw an error because key should be a string.",
-            "The list items will automatically re-render even without state changes."
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• استفاده از index به عنوان key باعث می‌شود React در تغییر ترتیب یا حذف آیتم‌ها، تشخیص درستی از تغییرات نداشته باشد\n" +
-            "- این موضوع می‌تواند به render اشتباه یا از دست رفتن state محلی منجر شود\n" +
-            "- هرچند کامپوننت‌ها بدون خطا render می‌شوند، رفتار آن‌ها در به‌روزرسانی‌ها غیرقابل پیش‌بینی است\n" +
-            "- کلید باید مقدار یکتا و پایدار (مانند id) داشته باشد تا الگوریتم diff به‌درستی کار کند"
-    },
-    {
-        "id": 64,
-        "question": "What is the purpose of using the spread operator (...) when passing props to a React component?",
-        "options": [
-            "It improves performance by reducing the size of the props object.",
-            "It passes each property as separate props to the component.",
-            "It combines all props into a single object for the component.",
-            "It prevents unnecessary re-renders by memoizing the props."
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• عملگر spread در زمان ارسال props باعث می‌شود ویژگی‌های یک شیء به صورت جداگانه به کامپوننت منتقل شوند\n" +
-            "- به عنوان مثال، اگر شیء شامل title و author باشد، این دو به صورت جداگانه به عنوان props در دسترس خواهند بود\n" +
-            "- این روش عملکرد را بهبود نمی‌دهد بلکه فقط کد را خواناتر می‌کند\n" +
-            "- props جدید ساخته نمی‌شود بلکه پراپرتی‌های شیء به همان شکل گسترش می‌یابند"
-    },
-    {
-        "id": 65,
-        "question": "Why is the key prop important when rendering a list of items in React?",
-        "options": [
-            "It ensures the props are passed correctly to the child components.",
-            "It prevents the application from throwing an error during rendering.",
-            "It automatically provides a unique ID for each list element in the DOM.",
-            "It uniquely identifies a list item to optimize rendering and updates efficiently.",
-        ],
-        "correctOption": 3,
-        "points": 20,
-        "explanation": "• ویژگی key به React کمک می‌کند تا هر آیتم در لیست را به‌طور یکتا شناسایی کند\n" +
-            "- این شناسایی باعث بهینه‌سازی فرآیند diffing و جلوگیری از render غیرضروری می‌شود\n" +
-            "- در صورت عدم وجود key، React هشدار می‌دهد اما الزاماً خطا رخ نمی‌دهد\n" +
-            "- key برای props یا ایجاد ID خودکار در DOM استفاده نمی‌شود"
-    },
-    {
-        "id": 66,
-        "question": "How can you pass the event object in an inline event handler in React?",
-        "options": [
-            "By accessing it directly within the onChange handler.",
-            "By using an inline arrow function to pass the event object to the handler.",
-            "By declaring a global variable named e to represent the event object.",
-            "By importing the event object from the React library manually."
-        ],
-        "correctOption": 1,
-        "points": 20,
-        "explanation": "• در React، برای دریافت event باید از تابع پیکان (arrow function) استفاده کرد که رویداد را به عنوان آرگومان دریافت می‌کند\n" +
-            "- مثال: (e) => handleChange(e) یا مستقیماً (e) => console.log(e.target.value)\n" +
-            "- event به‌صورت خودکار به تابع منتقل نمی‌شود مگر آن‌که در تعریف تابع اشاره شود\n" +
-            "- نیازی به تعریف متغیر global یا import جداگانه برای event نیست"
-    },
-    {
-        "id": 67,
-        "question": "What happens when you use an inline function directly in an onClick event in React?",
-        "options": [
-            "The function only runs when the button is clicked.",
-            "The function runs immediately when the component renders.",
-            "The function cannot use variables from outside its scope.",
-            "The function must be defined outside the component to work."
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• در React اگر تابع ناشناس مستقیماً در رویداد onClick نوشته شود، فقط هنگام کلیک اجرا می‌شود\n" +
-            "- این روش باعث می‌شود تابع در زمان render فراخوانی نشود\n" +
-            "- تابع می‌تواند به متغیرها و state های بیرونی دسترسی داشته باشد\n" +
-            "- نیازی نیست تابع خارج از کامپوننت تعریف شود مگر برای بهینه‌سازی"
-    },
-    {
-        "id": 68,
-        "question": "What is the default file where the root React component is rendered in a create-react-app project?",
-        "options": [
-            "public/index.html",
-            "src/App.js",
-            "src/index.js",
-            "src/main.js"
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• در پروژه‌هایی که با create-react-app ساخته می‌شوند، ریشه برنامه در فایل src/index.js رندر می‌شود\n" +
-            "- این فایل کامپوننت <App /> را در عنصر DOM با شناسه root که در public/index.html قرار دارد، mount می‌کند\n" +
-            "- فایل App.js تنها کامپوننت اصلی برنامه است، نه محل رندر\n" +
-            "- فایل index.html صرفاً ساختار پایه HTML را فراهم می‌کند و شامل هیچ کد React نیست"
-    },
-    {
-        "id": 69,
-        "question": "What is a fundamental rule about JSX syntax in React components?",
-        "options": [
-            "JSX can include multiple sibling elements without a parent.",
-            "JSX must return a single element as its parent.",
-            "JSX allows comments using // directly within the HTML structure.",
-            "JSX requires every element to have a key prop."
-        ],
-        "correctOption": 1,
-        "points": 10,
-        "explanation": "• در JSX باید تمام المنت‌ها درون یک المنت والد (مثل div یا Fragment) قرار گیرند\n" +
-            "- JSX نمی‌تواند چند المنت هم‌سطح را بدون والد برگرداند\n" +
-            "- برای نوشتن کامنت باید از {/* comment */} استفاده کرد، نه //\n" +
-            "- ویژگی key فقط هنگام ساخت لیست الزامی است، نه برای تمام المنت‌ها"
-    },
-    {
-        "id": 70,
-        "question": "When using the style prop in JSX, what is the correct syntax?",
-        "options": [
-            "The value should be an object with camelCase property names.",
-            "The value can only be imported from an external CSS file.",
-            "The value should be a string with CSS rules.",
-            "The value must be written in a separate style tag inside JSX."
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation": "• در JSX ویژگی style باید به‌صورت یک شیء جاوااسکریپت تعریف شود\n" +
-            "- نام ویژگی‌ها باید به شکل camelCase نوشته شوند (مثل backgroundColor به‌جای background-color)\n" +
-            "- استایل‌ها نمی‌توانند به‌صورت رشته CSS معمولی نوشته شوند\n" +
-            "- برای استایل‌های خارجی باید از فایل CSS مجزا استفاده کرد، نه از ویژگی style"
-    },
-    {
-        "id": 71,
-        "question": "In React, why is using camelCase important for attribute names in JSX?",
-        "options": [
-            "Because camelCase attributes ensure compatibility with CSS frameworks.",
-            "Because React does not support traditional HTML attribute naming conventions.",
-            "Because camelCase automatically optimizes rendering performance.",
-            "Because JSX attributes map directly to JavaScript properties.",
-        ],
-        "correctOption": 3,
-        "points": 10,
-        "explanation": "• در JSX ویژگی‌ها (attributes) در واقع به ویژگی‌های جاوااسکریپت نگاشت می‌شوند\n" +
-            "- به همین دلیل باید از نام‌گذاری camelCase استفاده شود (مثل onClick به‌جای onclick)\n" +
-            "- این ساختار با نحوه‌ی تعریف پراپرتی‌ها در DOM مطابقت دارد\n" +
-            "- ربطی به فریم‌ورک‌های CSS یا بهینه‌سازی عملکرد ندارد"
-    },
-    {
-        "id": 72,
-        "question": "Which of the following statements about import in React is true?",
-        "options": [
-            "Named imports cannot coexist with default imports in the same file.",
-            "Default imports can include multiple variables in a single statement.",
-            "Named imports require the same name as the exported variable.",
-            "Default imports must always be renamed using the 'as' keyword."
-        ],
-        "correctOption": 2,
-        "points": 10,
-        "explanation": "• در import های نام‌دار باید نام دقیق متغیر export شده را استفاده کرد\n" +
-            "- مثال: export const Button → import { Button } from './Button'\n" +
-            "- default import فقط یک مقدار را دریافت می‌کند ولی می‌تواند همراه named import استفاده شود\n" +
-            "- استفاده از as فقط برای تغییر نام اختیاری است و اجباری نیست"
-    }
+{
+    "id": 1406,
+    "question": "How do you initialize a new project with npm?",
+    "options": [
+    "npm start",
+    "npm create",
+    "npm init",
+    "npm new"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• npm init برای ساخت package.json جدید\n" +
+"- سوالاتی درباره نام، version، description می‌پرسد\n" +
+"- npm init -y برای skip کردن سوالات و default values\n" +
+"- اولین قدم هر پروژه Node.js\n" +
+"- package.json فایل اصلی برای مدیریت dependencies"
+},
+{
+    "id": 1407,
+    "question": "How do you install a package and save it to package.json?",
+    "options": [
+    "npm get react",
+    "npm add react",
+    "npm download react",
+    "npm install react",
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation": "• npm install react یا npm i react برای نصب\n" +
+"- خودکار در package.json و node_modules اضافه می‌شود\n" +
+"- npm install react --save دیگر لازم نیست (پیش‌فرض است)\n" +
+"- همزمان package-lock.json هم update می‌شود\n" +
+"- برای چند package: npm install react react-dom"
+},
+{
+    "id": 1408,
+    "question": "How do you remove a package from your project?",
+    "options": [
+    "npm delete package-name",
+    "npm remove package-name",
+    "npm uninstall package-name",
+    "npm drop package-name"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• npm uninstall package-name یا npm un package-name\n" +
+"- از node_modules و package.json حذف می‌شود\n" +
+"- npm remove و npm rm هم کار می‌کنند (alias)\n" +
+"- package-lock.json نیز update می‌شود\n" +
+"- برای چند package: npm uninstall react react-dom"
+},
+{
+    "id": 1412,
+    "question": "How do you add a package using Yarn?",
+    "options": [
+    "yarn install react",
+    "yarn add react",
+    "yarn get react",
+    "yarn set react"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• yarn add react برای نصب package جدید\n" +
+"- خودکار در package.json و yarn.lock اضافه می‌شود\n" +
+"- yarn add react react-dom برای چند package\n" +
+"- yarn add eslint --dev برای devDependencies\n" +
+"- معادل npm install react"
+},
+{
+    "id": 1411,
+    "question": "What is the Yarn equivalent of npm install?",
+    "options": [
+    "yarn get",
+    "yarn add",
+    "yarn download",
+    "yarn install",
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation": "• yarn install یا فقط yarn\n" +
+"- تمام dependencies از package.json نصب می‌شود\n" +
+"- yarn.lock برای lock کردن versions\n" +
+"- معمولاً سریع‌تر از npm\n" +
+"- offline caching برای installs بدون اینترنت"
+},
+{
+    "id": 1413,
+    "question": "How do you run scripts defined in package.json?",
+    "options": [
+    "npm exec start",
+    "npm run start",
+    "npm do start",
+    "npm script start"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• npm run script-name برای اجرای scripts\n" +
+"- مثل npm run dev، npm run build، npm run test\n" +
+"- npm start و npm test بدون run کار می‌کنند\n" +
+"- در yarn فقط yarn dev کافی است\n" +
+"- scripts در package.json تعریف می‌شوند"
+},
+{
+    "id": 1414,
+    "question": "How do you check the installed version of a package?",
+    "options": [
+    "npm version react",
+    "npm check react",
+    "npm list react",
+    "npm info react"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• npm list react یا npm ls react\n" +
+"- version نصب شده در پروژه را نشان می‌دهد\n" +
+"- npm list --depth=0 فقط top-level packages\n" +
+"- npm list -g --depth=0 برای global packages\n" +
+"- yarn list react در Yarn"
+},
+{
+    "id": 1415,
+    "question": "What command shows available updates for packages?",
+    "options": [
+    "npm check",
+    "npm updates",
+    "npm outdated",
+    "npm versions"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• npm outdated لیست packages با version جدیدتر\n" +
+"- Current: version فعلی نصب شده\n" +
+"- Wanted: latest version در semver range\n" +
+"- Latest: جدیدترین version در registry\n" +
+"- yarn upgrade-interactive برای Yarn"
+},
+{
+    "id": 1419,
+    "question": "What does npm start command do?",
+    "options": [
+    "Starts npm service",
+    "Runs the 'start' script from package.json",
+    "Installs all dependencies",
+    "Creates a new project"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• npm start اجرای script با نام 'start' از package.json\n" +
+"- معمولاً development server را start می‌کند\n" +
+"- مثل npm run start اما بدون 'run'\n" +
+"- npm test نیز همین رفتار را دارد\n" +
+"- shortcut برای commonly used scripts"
+},
+{
+    "id": 1420,
+    "question": "How do you update a single package to latest version?",
+    "options": [
+    "npm update package-name",
+    "npm upgrade package-name",
+    "npm refresh package-name",
+    "npm latest package-name"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• npm update package-name برای update یک package\n" +
+"- در محدوده semver range مشخص شده\n" +
+"- npm update بدون نام، همه را update می‌کند\n" +
+"- yarn upgrade package-name در Yarn\n" +
+"- package-lock.json نیز update می‌شود"
+},
+{
+    "id": 1421,
+    "question": "What is the Yarn equivalent of npm uninstall?",
+    "options": [
+    "yarn delete",
+    "yarn remove",
+    "yarn drop",
+    "yarn uninstall"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• yarn remove package-name برای حذف\n" +
+"- از package.json و yarn.lock حذف می‌شود\n" +
+"- node_modules نیز پاک می‌شود\n" +
+"- معادل npm uninstall\n" +
+"- yarn remove react react-dom برای چند package"
+},
+{
+    "id": 1422,
+    "question": "How do you check npm version installed on your system?",
+    "options": [
+    "npm --version",
+    "npm check version",
+    "npm get version",
+    "npm info"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• npm --version یا npm -v برای check کردن\n" +
+"- version npm روی سیستم شما\n" +
+"- node --version یا node -v برای Node.js\n" +
+"- yarn --version برای Yarn\n" +
+"- مهم برای compatibility و troubleshooting"
+},
+{
+    "id": 1426,
+    "question": "How do you clear npm cache?",
+    "options": [
+    "npm cache clear",
+    "npm clean cache",
+    "npm cache clean --force",
+    "npm remove cache"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• npm cache clean --force برای پاک کردن cache\n" +
+"- --force ضروری است برای تایید\n" +
+"- وقتی corruption یا مشکلات عجیب دارید\n" +
+"- yarn cache clean در Yarn\n" +
+"- معمولاً نیازی به manual cleaning نیست"
+},
+{
+    "id": 1391,
+    "question": "What is the difference between npm install and npm ci?",
+    "options": [
+    "No difference, they are identical commands",
+    "npm install is for production, npm ci for development",
+    "npm ci is faster and uses exact versions from lock file",
+    "npm ci only installs devDependencies"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• npm ci برای CI/CD و production builds\n" +
+"- از package-lock.json دقیقاً استفاده می‌کند\n" +
+"- node_modules را حذف و از نو نصب می‌کند\n" +
+"- سریع‌تر و deterministic است\n" +
+"- npm install می‌تواند package-lock را update کند"
+},
+{
+    "id": 1393,
+    "question": "What is the difference between dependencies and devDependencies?",
+    "options": [
+    "devDependencies are faster to install",
+    "No difference, both are installed the same way",
+    "dependencies are optional, devDependencies required",
+    "dependencies for production, devDependencies for development",
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation": "• dependencies برای runtime نیاز است\n" +
+"- در production bundle می‌آیند\n" +
+"- devDependencies فقط برای development (testing, build tools)\n" +
+"- npm install --production فقط dependencies را نصب می‌کند\n" +
+"- eslint, jest در devDependencies قرار می‌گیرند"
+},
+{
+    "id": 1395,
+    "question": "What is the purpose of package-lock.json?",
+    "options": [
+    "Locks package.json from being edited",
+    "Ensures exact dependency versions across installs",
+    "Prevents npm install from running",
+    "Encrypts sensitive package information"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• package-lock.json exact versions تمام dependencies را ذخیره می‌کند\n" +
+"- including nested dependencies\n" +
+"- deterministic installs را تضمین می‌کند\n" +
+"- در git commit می‌شود\n" +
+"- npm ci از آن استفاده می‌کند"
+},
+{
+    "id": 1396,
+    "question": "What does npm outdated command show?",
+    "options": [
+    "Old files in project directory",
+    "Packages with available newer versions",
+    "Deprecated npm commands used",
+    "Unused dependencies in package.json"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• npm outdated لیست packages با versions جدیدتر\n" +
+"- Current, Wanted و Latest versions\n" +
+"- Wanted: مطابق با semver range در package.json\n" +
+"- Latest: جدیدترین version در npm registry\n" +
+"- برای planning updates مفید است"
+},
+{
+    "id": 1399,
+    "question": "What is npx used for?",
+    "options": [
+    "Installing packages permanently",
+    "Executing packages without global install",
+    "Removing unused packages",
+    "Updating package.json automatically"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• npx packages را بدون global install اجرا می‌کند\n" +
+"- temporary download و execute\n" +
+"- همیشه latest version استفاده می‌کند\n" +
+"- npx create-react-app my-app\n" +
+"- جلوگیری از global pollution"
+},
+{
+    "id": 1405,
+    "question": "What is npm cache and when should you clean it?",
+    "options": [
+    "Cache stores installed packages for faster reinstalls",
+    "Cache is browser cookies for npm website",
+    "Cache stores user preferences",
+    "Cache is temporary build files"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• npm cache downloaded packages را ذخیره می‌کند\n" +
+"- برای faster subsequent installs\n" +
+"- npm cache clean --force برای پاک کردن\n" +
+"- زمانی که corruption یا weird errors\n" +
+"- معمولاً نیازی به manual cleaning نیست"
+},
+{
+    "id": 1431,
+    "question": "What command creates a new Git repository?",
+    "options": [
+    "git create",
+    "git start",
+    "git init",
+    "git new"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• git init برای ساخت repository جدید\n" +
+"- فولدر .git ایجاد می‌شود\n" +
+"- اولین command برای شروع Git\n" +
+"- در root directory پروژه اجرا می‌شود\n" +
+"- بعد از آن می‌توانید commit کنید"
+},
+{
+    "id": 1432,
+    "question": "How do you download a repository from GitHub?",
+    "options": [
+    "git download <url>",
+    "git clone <url>",
+    "git pull <url>",
+    "git get <url>"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• git clone <url> برای دانلود repository\n" +
+"- تمام history و files را می‌آورد\n" +
+"- git clone https://github.com/user/repo.git\n" +
+"- یک folder جدید ایجاد می‌کند\n" +
+"- remote origin خودکار set می‌شود"
+},
+{
+    "id": 1433,
+    "question": "What command shows the current status of your repository?",
+    "options": [
+    "git info",
+    "git state",
+    "git status",
+    "git check"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• git status برای دیدن وضعیت فعلی\n" +
+"- فایل‌های modified، staged، untracked\n" +
+"- branch فعلی\n" +
+"- commits ahead/behind\n" +
+"- پرکاربردترین command روزانه"
+},
+{
+    "id": 1437,
+    "question": "What command downloads changes from GitHub?",
+    "options": [
+    "git fetch",
+    "git pull",
+    "git get",
+    "git download",
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• git pull برای دانلود و merge تغییرات\n" +
+"- git pull origin main\n" +
+"- معادل git fetch + git merge\n" +
+"- تغییرات دیگران را می‌آورد\n" +
+"- قبل از شروع کار روزانه اجرا کنید"
+},
+{
+    "id": 1442,
+    "question": "What file tells Git which files to ignore?",
+    "options": [
+    ".gitignore",
+    ".ignore",
+    "ignore.txt",
+    "git-ignore.txt"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• .gitignore فایل برای ignore کردن\n" +
+"- node_modules/، .env، *.log\n" +
+"- در root directory قرار می‌گیرد\n" +
+"- patterns برای matching files\n" +
+"- sensitive data را ignore کنید"
+},
+{
+    "id": 1443,
+    "question": "How do you temporarily save uncommitted changes?",
+    "options": [
+    "git save",
+    "git temp",
+    "git stash",
+    "git hold"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• git stash برای ذخیره موقت تغییرات\n" +
+"- git stash pop برای برگرداندن\n" +
+"- git stash list برای لیست stashes\n" +
+"- وقتی می‌خواهید branch عوض کنید\n" +
+"- git stash drop برای حذف"
+},
+{
+    "id": 1444,
+    "question": "What is the difference between git fetch and git pull?",
+    "options": [
+    "No difference, they are the same",
+    "fetch downloads, pull downloads and merges",
+    "fetch is faster than pull",
+    "pull only works with main branch"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• git fetch فقط تغییرات را download می‌کند\n" +
+"- local branch را تغییر نمی‌دهد\n" +
+"- git pull = fetch + merge\n" +
+"- fetch برای دیدن تغییرات قبل از merge\n" +
+"- pull مستقیماً تغییرات را apply می‌کند"
+},
+{
+    "id": 1445,
+    "question": "How do you undo the last commit but keep changes?",
+    "options": [
+    "git undo",
+    "git reset --soft HEAD~1",
+    "git revert HEAD",
+    "git back"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• git reset --soft HEAD~1 برای undo commit\n" +
+"- changes در staging area می‌مانند\n" +
+"- git reset --hard HEAD~1 همه را حذف می‌کند\n" +
+"- git reset --mixed HEAD~1 از staging خارج می‌کند\n" +
+"- فقط برای local commits که push نشده"
+},
+{
+    "id": 1448,
+    "question": "What is a Pull Request in GitHub?",
+    "options": [
+    "Pulling code from another repository",
+    "Request to merge your branch into another branch",
+    "Downloading repository files",
+    "Creating a new branch"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• Pull Request (PR) درخواست merge است\n" +
+"- معمولاً از feature branch به main\n" +
+"- دیگران code را review می‌کنند\n" +
+"- discussion و comments\n" +
+"- بعد از approval، merge می‌شود"
+},
+{
+    "id": 1450,
+    "question": "What does git clone do differently than downloading a ZIP?",
+    "options": [
+    "ZIP is faster than clone",
+    "Clone only downloads main branch",
+    "Clone includes Git history, ZIP doesn't",
+    "No difference between them"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• git clone تمام history و .git را می‌آورد\n" +
+"- می‌توانید commit، branch، push کنید\n" +
+"- ZIP فقط فایل‌های فعلی\n" +
+"- ZIP نمی‌توانید با Git کار کنید\n" +
+"- clone برای development، ZIP برای فقط دیدن"
+},
+{
+    "id": 1456,
+    "question": "What is TypeScript?",
+    "options": [
+    "A new programming language replacing JavaScript",
+    "JavaScript with static type checking",
+    "A JavaScript framework like React",
+    "A database query language"
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• TypeScript superset از JavaScript است\n" +
+"- اضافه کردن types به JavaScript\n" +
+"- compile می‌شود به JavaScript\n" +
+"- type errors در compile time\n" +
+"- همه JavaScript کد، TypeScript معتبر است"
+},
+{
+    "id": 1461,
+    "question": "How do you define an array type in TypeScript?",
+    "options": [
+    "let numbers: number[] = [1, 2, 3]",
+    "let numbers: array<number> = [1, 2, 3]",
+    "let numbers: [number] = [1, 2, 3]",
+    "let numbers = number[1, 2, 3]"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• number[] برای array از numbers\n" +
+"- string[] برای array از strings\n" +
+"- Array<number> syntax دیگر (generics)\n" +
+"- (number | string)[] برای mixed types\n" +
+"- readonly number[] برای immutable"
+},
+{
+    "id": 1462,
+    "question": "What is an interface in TypeScript?",
+    "options": [
+    "A way to define object shape/structure",
+    "A class that can't be instantiated",
+    "A function type definition",
+    "A variable declaration"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• interface برای define کردن object structure\n" +
+"- interface User { name: string; age: number }\n" +
+"- می‌تواند extend شود\n" +
+"- برای type checking objects\n" +
+"- compile نمی‌شود به JavaScript"
+},
+{
+    "id": 1464,
+    "question": "What is the difference between interface and type?",
+    "options": [
+    "No difference, completely interchangeable",
+    "Interface can extend, type can't extend",
+    "Interface for objects, type for unions and other types",
+    "Type is deprecated, use interface"
+],
+    "correctOption": 2,
+    "points": 20,
+    "explanation": "• interface بیشتر برای object shapes\n" +
+"- type برای unions، primitives، tuples\n" +
+"- interface می‌تواند merged شود\n" +
+"- type برای complex types بهتر\n" +
+"- در React Props معمولاً interface"
+},
+{
+    "id": 1466,
+    "question": "What does the void type represent?",
+    "options": [
+    "Empty object",
+    "Null or undefined",
+    "Function that returns nothing",
+    "Any type"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• void برای functions که return ندارند\n" +
+"- function log(message: string): void {}\n" +
+"- معمولاً برای side effects\n" +
+"- undefined return می‌توان داشت\n" +
+"- null نمی‌تواند assign شود (strict mode)"
+},
+{
+    "id": 1470,
+    "question": "What is a tuple in TypeScript?",
+    "options": [
+    "An array with fixed length and types",
+    "A special kind of object",
+    "An array of only numbers",
+    "A function return type"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• tuple array با length و type ثابت\n" +
+"- let point: [number, number] = [10, 20]\n" +
+"- let user: [string, number] = ['Ali', 25]\n" +
+"- ترتیب types مهم است\n" +
+"- مثل Python tuples اما با type safety"
+},
+{
+    "id": 1471,
+    "question": "How do you define a type for React component props?",
+    "options": [
+    "interface Props { name: string }",
+    "type Props = { name: string }",
+    "props: { name: string }",
+    "Both interface and type work"
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation": "• هم interface و هم type کار می‌کنند\n" +
+"- interface Props { name: string; age?: number }\n" +
+"- const MyComponent = (props: Props) => {}\n" +
+"- یا destructure: ({ name, age }: Props)\n" +
+"- convention معمولاً interface در React"
+},
+{
+    "id": 1472,
+    "question": "What does the never type represent?",
+    "options": [
+    "Values that never occur",
+    "Null values only",
+    "Empty arrays",
+    "Undefined values"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• never برای values که هرگز اتفاق نمی‌افتند\n" +
+"- functions که throw می‌کنند\n" +
+"- infinite loops\n" +
+"- unreachable code\n" +
+"- exhaustive checks در switch/if"
+},
+{
+    "id": 1474,
+    "question": "What is the unknown type in TypeScript?",
+    "options": [
+    "Same as any type",
+    "Safer version of any, requires type checking",
+    "For undefined values only",
+    "For objects only"
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• unknown ایمن‌تر از any است\n" +
+"- نمی‌توانید بدون check استفاده کنید\n" +
+"- باید typeof یا type guard استفاده کنید\n" +
+"- let value: unknown = getValue()\n" +
+"- توصیه می‌شود به جای any"
+},
+{
+    "id": 1475,
+    "question": "How do you type a variable that can be null?",
+    "options": [
+    "let name: string | null",
+    "let name: string?",
+    "let name: nullable<string>",
+    "let name: string = null"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• | null برای nullable types\n" +
+"- let name: string | null = null\n" +
+"- در strictNullChecks mode ضروری است\n" +
+"- string | undefined نیز متفاوت است\n" +
+"- optional (?) شامل undefined است"
+},
+{
+    "id": 1480,
+    "question": "What is the difference between type and interface for extending?",
+    "options": [
+    "interface uses extends, type uses &",
+    "Only type can extend",
+    "Only interface can extend",
+    "Both use extends keyword"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• interface با extends کار می‌کند\n" +
+"- interface User extends Person {}\n" +
+"- type با & (intersection)\n" +
+"- type User = Person & { age: number }\n" +
+"- هر دو برای composition استفاده می‌شوند"
+},
+{
+    "id": 1481,
+    "question": "How do you type an event handler in React?",
+    "options": [
+    "React.MouseEvent<HTMLButtonElement>",
+    "Event<HTMLInputElement>",
+    "MouseEvent",
+    "ButtonEvent"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• React.MouseEvent<HTMLButtonElement> برای click\n" +
+"- React.ChangeEvent<HTMLInputElement> برای input\n" +
+"- React.FormEvent<HTMLFormElement> برای form\n" +
+"- const handleClick = (e: React.MouseEvent) => {}\n" +
+"- generic برای element type"
+},
+{
+    "id": 1487,
+    "question": "How do you type an async function?",
+    "options": [
+    "async function fetch(): Promise<Data> {}",
+    "async function fetch(): async<Data> {}",
+    "async function fetch(): Future<Data> {}",
+    "async function fetch(): Async<Data> {}"
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• Promise<Type> برای async functions\n" +
+"- async function getData(): Promise<User> {}\n" +
+"- const getData = async (): Promise<User[]> => {}\n" +
+"- Promise<void> اگر return ندارد\n" +
+"- await نتیجه unwrap می‌کند"
+},
+{
+    "id": 53,
+    "question": "When encountering a temporary build error like 'Module not found: Error: Can't resolve \"path/index.js\"' after recent file changes, what is the first recommended action?",
+    "options": [
+    "Restart the development server using CTRL + C and npm start.",
+    "Reinstall all dependencies by deleting node_modules and running npm install.",
+    "Create a new package.json file and reinitialize the project.",
+    "Clear browser cache and refresh the page."
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• در برخی مواقع پس از تغییرات اخیر در فایل‌ها، build موقتاً دچار خطا می‌شود\n" +
+"- ری‌استارت سرور توسعه باعث ری‌بیلد کامل پروژه و رفع خطاهای موقت می‌شود\n" +
+"- در صورت تداوم خطا پس از ری‌استارت، حذف و نصب مجدد وابستگی‌ها مرحله بعدی است\n" +
+"- پاک‌کردن کش مرورگر تأثیری بر خطاهای build ندارد"
+},
+{
+    "id": 54,
+    "question": "What is the primary purpose of the src folder in a React project?",
+    "options": [
+    "It serves as the brain of the app, containing all the JavaScript and TypeScript files.",
+    "It stores static assets like images and HTML templates.",
+    "It maintains a snapshot of the project’s dependency tree.",
+    "It contains the compiled production-ready code after the build process."
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• پوشه src محل اصلی کدهای منبع برنامه است\n" +
+"- شامل فایل‌های logic، component و ماژول‌های TypeScript/JavaScript است\n" +
+"- فایل‌های استاتیک مانند تصاویر معمولاً در پوشه public نگهداری می‌شوند\n" +
+"- خروجی نهایی build در پوشه dist یا build ذخیره می‌شود، نه در src"
+},
+{
+    "id": 55,
+    "question": "Which of the following statements about React components is correct?",
+    "options": [
+    "Components cannot return JSX directly and require a wrapper function.",
+    "Components must always use function declarations; arrow functions are not allowed.",
+    "Components must start with a capital letter to be recognized by React.",
+    "Components can only be created using class syntax in modern React."
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• در React نام کامپوننت‌ها باید با حرف بزرگ شروع شود تا React بتواند آن‌ها را از عناصر HTML متمایز کند\n" +
+"- استفاده از حروف کوچک باعث می‌شود React آن را به عنوان یک تگ HTML معمولی تفسیر کند\n" +
+"- می‌توان از function declaration یا arrow function برای تعریف کامپوننت استفاده کرد\n" +
+"- نیاز به هیچ wrapper خاصی برای بازگرداندن JSX وجود ندارد"
+},
+{
+    "id": 56,
+    "question": "In JSX, why do we use className instead of class for styling elements?",
+    "options": [
+    "className automatically applies camelCase conventions to all class names.",
+    "className provides better browser compatibility for styled components.",
+    "className is used to avoid conflicts with the class keyword in JavaScript.",
+    "className enables conditional rendering of CSS styles automatically."
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• در JSX از className به جای class استفاده می‌شود چون 'class' در JavaScript یک کلمه رزرو شده است\n" +
+"- JSX در نهایت به JavaScript کامپایل می‌شود، بنابراین استفاده از class باعث بروز خطا می‌شود\n" +
+"- React هنگام render مقدار className را به ویژگی HTML class تبدیل می‌کند\n" +
+"- این ویژگی رفتاری خاصی برای camelCase یا styled components ندارد"
+},
+{
+    "id": 57,
+    "question": "What is the purpose of adding 'emmet.includeLanguages': { 'javascript': 'javascript react' } in the settings.json file?",
+    "options": [
+    "It ensures automatic formatting of JSX elements on save.",
+    "It automatically renames React components to match file names.",
+    "It enables Emmet support in .js files for JSX syntax.",
+    "It converts JavaScript files into TypeScript automatically."
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• با این تنظیم، VS Code تشخیص می‌دهد که فایل‌های JavaScript حاوی JSX هستند\n" +
+"- این ویژگی پشتیبانی Emmet (شامل auto-complete و expand کردن shorthand) را برای JSX فعال می‌کند\n" +
+"- به طور پیش‌فرض Emmet فقط در فایل‌های .jsx یا .tsx فعال است\n" +
+"- این تنظیم هیچ ربطی به فرمت خودکار یا TypeScript ندارد"
+},
+{
+    "id": 58,
+    "question": "Why is React.Fragment or shorthand <> used in React components?",
+    "options": [
+    "To improve performance by optimizing how JSX is compiled.",
+    "To ensure that JSX elements use camelCase property naming convention.",
+    "To group multiple elements without adding extra DOM nodes.",
+    "To automatically wrap elements with a parent <div> during rendering."
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• از React.Fragment یا فرم کوتاه <> برای گروه‌بندی چند المنت JSX استفاده می‌شود\n" +
+"- این کار بدون افزودن تگ اضافی به DOM انجام می‌شود\n" +
+"- استفاده از div اضافی می‌تواند باعث به‌هم‌ریختگی ساختار و مشکلات در استایل شود\n" +
+"- Fragment هیچ تأثیری بر نام‌گذاری camelCase یا عملکرد JSX ندارد"
+},
+{
+    "id": 59,
+    "question": "Why are components like Image, Title, and Author separated into their own functional components?",
+    "options": [
+    "To enable independent styling and testing of each component.",
+    "To promote reusability and maintainability in larger applications.",
+    "To reduce the number of return statements in the parent component.",
+    "To automatically fetch data for each component from an API."
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• جداسازی کامپوننت‌ها باعث افزایش قابلیت استفاده مجدد و نگهداری آسان‌تر کد می‌شود\n" +
+"- هر کامپوننت می‌تواند مستقل تست و استایل‌دهی شود\n" +
+"- کاهش تعداد return هدف اصلی نیست و داده‌ها به صورت خودکار fetch نمی‌شوند\n" +
+"- این ساختار به خوانایی و سازمان‌دهی بهتر پروژه کمک می‌کند"
+},
+{
+    "id": 60,
+    "question": "In the Greeting component, why is Person called as <Person /> instead of Person()?",
+    "options": [
+    "Calling Person() directly would break React's virtual DOM mechanism.",
+    "Using <Person /> is required only if the component is a functional component.",
+    "It is just a stylistic choice and both approaches work identically.",
+    "React components must be invoked as JSX elements to ensure proper rendering.",
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation": "• در React، کامپوننت‌ها باید به صورت JSX (<Person />) فراخوانی شوند تا React بتواند lifecycle و virtual DOM را مدیریت کند\n" +
+"- فراخوانی مستقیم Person() ممکن است باعث عدم هماهنگی با سیستم رندر React شود\n" +
+"- این محدودیت فقط برای functional components نیست و برای class components هم صادق است\n" +
+"- این موضوع صرفاً یک انتخاب استایلی نیست و رفتار رندر را تحت تأثیر قرار می‌دهد"
+},
+{
+    "id": 61,
+    "question": "What is the purpose of React Developer Tools?",
+    "options": [
+    "To modify component styles directly in the browser.",
+    "To inspect and debug the component hierarchy and props in a React.",
+    "To automatically optimize React components for better performance.",
+    "To convert class components to functional components automatically."
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• React Developer Tools برای بررسی و دیباگ کامپوننت‌ها و props در یک برنامه React استفاده می‌شود\n" +
+"- امکان مشاهده درخت کامپوننت‌ها، state و props به صورت زنده فراهم می‌کند\n" +
+"- این ابزار تغییر خودکار استایل یا بهینه‌سازی کامپوننت‌ها را انجام نمی‌دهد\n" +
+"- تبدیل خودکار نوع کامپوننت‌ها نیز توسط این ابزار انجام نمی‌شود"
+},
+{
+    "id": 62,
+    "question": "What is the main reason for using the style prop for inline styling in JSX?",
+    "options": [
+    "Inline styles allow using CSS syntax without transformations.",
+    "Inline styles are more performant than external CSS in React applications.",
+    "The style prop is a JavaScript object, allowing dynamic styling with computed properties.",
+    "The style prop automatically converts CSS files into scoped modules."
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• در JSX، ویژگی style به صورت یک شیء جاوااسکریپت تعریف می‌شود\n" +
+"- این ساختار امکان استفاده از مقادیر پویا و متغیرها را در استایل‌ها فراهم می‌کند\n" +
+"- از سینتکس CSS معمول (با خط فاصله) پشتیبانی نمی‌کند و باید از camelCase استفاده شود\n" +
+"- عملکرد آن بهتر از CSS خارجی نیست و برای استایل‌های ساده یا پویا مناسب‌تر است"
+},
+{
+    "id": 63,
+    "question": "What happens when an array index is used as the key instead of a unique identifier in a list of React components?",
+    "options": [
+    "The key will improve the rendering speed by using the index value.",
+    "The list will render correctly, but reordering or modifying items may cause unexpected behavior.",
+    "React will throw an error because key should be a string.",
+    "The list items will automatically re-render even without state changes."
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• استفاده از index به عنوان key باعث می‌شود React در تغییر ترتیب یا حذف آیتم‌ها، تشخیص درستی از تغییرات نداشته باشد\n" +
+"- این موضوع می‌تواند به render اشتباه یا از دست رفتن state محلی منجر شود\n" +
+"- هرچند کامپوننت‌ها بدون خطا render می‌شوند، رفتار آن‌ها در به‌روزرسانی‌ها غیرقابل پیش‌بینی است\n" +
+"- کلید باید مقدار یکتا و پایدار (مانند id) داشته باشد تا الگوریتم diff به‌درستی کار کند"
+},
+{
+    "id": 64,
+    "question": "What is the purpose of using the spread operator (...) when passing props to a React component?",
+    "options": [
+    "It improves performance by reducing the size of the props object.",
+    "It passes each property as separate props to the component.",
+    "It combines all props into a single object for the component.",
+    "It prevents unnecessary re-renders by memoizing the props."
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• عملگر spread در زمان ارسال props باعث می‌شود ویژگی‌های یک شیء به صورت جداگانه به کامپوننت منتقل شوند\n" +
+"- به عنوان مثال، اگر شیء شامل title و author باشد، این دو به صورت جداگانه به عنوان props در دسترس خواهند بود\n" +
+"- این روش عملکرد را بهبود نمی‌دهد بلکه فقط کد را خواناتر می‌کند\n" +
+"- props جدید ساخته نمی‌شود بلکه پراپرتی‌های شیء به همان شکل گسترش می‌یابند"
+},
+{
+    "id": 65,
+    "question": "Why is the key prop important when rendering a list of items in React?",
+    "options": [
+    "It ensures the props are passed correctly to the child components.",
+    "It prevents the application from throwing an error during rendering.",
+    "It automatically provides a unique ID for each list element in the DOM.",
+    "It uniquely identifies a list item to optimize rendering and updates efficiently.",
+],
+    "correctOption": 3,
+    "points": 20,
+    "explanation": "• ویژگی key به React کمک می‌کند تا هر آیتم در لیست را به‌طور یکتا شناسایی کند\n" +
+"- این شناسایی باعث بهینه‌سازی فرآیند diffing و جلوگیری از render غیرضروری می‌شود\n" +
+"- در صورت عدم وجود key، React هشدار می‌دهد اما الزاماً خطا رخ نمی‌دهد\n" +
+"- key برای props یا ایجاد ID خودکار در DOM استفاده نمی‌شود"
+},
+{
+    "id": 66,
+    "question": "How can you pass the event object in an inline event handler in React?",
+    "options": [
+    "By accessing it directly within the onChange handler.",
+    "By using an inline arrow function to pass the event object to the handler.",
+    "By declaring a global variable named e to represent the event object.",
+    "By importing the event object from the React library manually."
+],
+    "correctOption": 1,
+    "points": 20,
+    "explanation": "• در React، برای دریافت event باید از تابع پیکان (arrow function) استفاده کرد که رویداد را به عنوان آرگومان دریافت می‌کند\n" +
+"- مثال: (e) => handleChange(e) یا مستقیماً (e) => console.log(e.target.value)\n" +
+"- event به‌صورت خودکار به تابع منتقل نمی‌شود مگر آن‌که در تعریف تابع اشاره شود\n" +
+"- نیازی به تعریف متغیر global یا import جداگانه برای event نیست"
+},
+{
+    "id": 67,
+    "question": "What happens when you use an inline function directly in an onClick event in React?",
+    "options": [
+    "The function only runs when the button is clicked.",
+    "The function runs immediately when the component renders.",
+    "The function cannot use variables from outside its scope.",
+    "The function must be defined outside the component to work."
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• در React اگر تابع ناشناس مستقیماً در رویداد onClick نوشته شود، فقط هنگام کلیک اجرا می‌شود\n" +
+"- این روش باعث می‌شود تابع در زمان render فراخوانی نشود\n" +
+"- تابع می‌تواند به متغیرها و state های بیرونی دسترسی داشته باشد\n" +
+"- نیازی نیست تابع خارج از کامپوننت تعریف شود مگر برای بهینه‌سازی"
+},
+{
+    "id": 68,
+    "question": "What is the default file where the root React component is rendered in a create-react-app project?",
+    "options": [
+    "public/index.html",
+    "src/App.js",
+    "src/index.js",
+    "src/main.js"
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• در پروژه‌هایی که با create-react-app ساخته می‌شوند، ریشه برنامه در فایل src/index.js رندر می‌شود\n" +
+"- این فایل کامپوننت <App /> را در عنصر DOM با شناسه root که در public/index.html قرار دارد، mount می‌کند\n" +
+"- فایل App.js تنها کامپوننت اصلی برنامه است، نه محل رندر\n" +
+"- فایل index.html صرفاً ساختار پایه HTML را فراهم می‌کند و شامل هیچ کد React نیست"
+},
+{
+    "id": 69,
+    "question": "What is a fundamental rule about JSX syntax in React components?",
+    "options": [
+    "JSX can include multiple sibling elements without a parent.",
+    "JSX must return a single element as its parent.",
+    "JSX allows comments using // directly within the HTML structure.",
+    "JSX requires every element to have a key prop."
+],
+    "correctOption": 1,
+    "points": 10,
+    "explanation": "• در JSX باید تمام المنت‌ها درون یک المنت والد (مثل div یا Fragment) قرار گیرند\n" +
+"- JSX نمی‌تواند چند المنت هم‌سطح را بدون والد برگرداند\n" +
+"- برای نوشتن کامنت باید از {/* comment */} استفاده کرد، نه //\n" +
+"- ویژگی key فقط هنگام ساخت لیست الزامی است، نه برای تمام المنت‌ها"
+},
+{
+    "id": 70,
+    "question": "When using the style prop in JSX, what is the correct syntax?",
+    "options": [
+    "The value should be an object with camelCase property names.",
+    "The value can only be imported from an external CSS file.",
+    "The value should be a string with CSS rules.",
+    "The value must be written in a separate style tag inside JSX."
+],
+    "correctOption": 0,
+    "points": 10,
+    "explanation": "• در JSX ویژگی style باید به‌صورت یک شیء جاوااسکریپت تعریف شود\n" +
+"- نام ویژگی‌ها باید به شکل camelCase نوشته شوند (مثل backgroundColor به‌جای background-color)\n" +
+"- استایل‌ها نمی‌توانند به‌صورت رشته CSS معمولی نوشته شوند\n" +
+"- برای استایل‌های خارجی باید از فایل CSS مجزا استفاده کرد، نه از ویژگی style"
+},
+{
+    "id": 71,
+    "question": "In React, why is using camelCase important for attribute names in JSX?",
+    "options": [
+    "Because camelCase attributes ensure compatibility with CSS frameworks.",
+    "Because React does not support traditional HTML attribute naming conventions.",
+    "Because camelCase automatically optimizes rendering performance.",
+    "Because JSX attributes map directly to JavaScript properties.",
+],
+    "correctOption": 3,
+    "points": 10,
+    "explanation": "• در JSX ویژگی‌ها (attributes) در واقع به ویژگی‌های جاوااسکریپت نگاشت می‌شوند\n" +
+"- به همین دلیل باید از نام‌گذاری camelCase استفاده شود (مثل onClick به‌جای onclick)\n" +
+"- این ساختار با نحوه‌ی تعریف پراپرتی‌ها در DOM مطابقت دارد\n" +
+"- ربطی به فریم‌ورک‌های CSS یا بهینه‌سازی عملکرد ندارد"
+},
+{
+    "id": 72,
+    "question": "Which of the following statements about import in React is true?",
+    "options": [
+    "Named imports cannot coexist with default imports in the same file.",
+    "Default imports can include multiple variables in a single statement.",
+    "Named imports require the same name as the exported variable.",
+    "Default imports must always be renamed using the 'as' keyword."
+],
+    "correctOption": 2,
+    "points": 10,
+    "explanation": "• در import های نام‌دار باید نام دقیق متغیر export شده را استفاده کرد\n" +
+"- مثال: export const Button → import { Button } from './Button'\n" +
+"- default import فقط یک مقدار را دریافت می‌کند ولی می‌تواند همراه named import استفاده شود\n" +
+"- استفاده از as فقط برای تغییر نام اختیاری است و اجباری نیست"
+}
 
 
 ]
