@@ -8726,150 +8726,177 @@ export const mockQuestions: Question[] = [
             "- همان logic مثل useQuery\n" +
             "- consistency در behavior"
     },
-//     {
-//         "id": 495,
-//         "question": "How does prefetching improve pagination user experience?",
-//         "options": [
-//             "Automatically updates page URLs in history",
-//             "Loads next page data before clicking",
-//             "Prevents users navigating to invalid pages",
-//             "Reduces total number of pages dataset"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 496,
-//         "question": "When should you prefetch next page in pagination?",
-//         "options": [
-//             "Only after user clicks next button",
-//             "When application startup loading all pages",
-//             "When current page data finishes loading",
-//             "Only when user hovers pagination controls"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 497,
-//         "question": "What is common strategy for pagination prefetching?",
-//         "options": [
-//             "Prefetch all pages at application startup",
-//             "Prefetch only previous pages for navigation",
-//             "Prefetch next few pages while viewing",
-//             "Prefetch random pages to improve performance"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 498,
-//         "question": "How do you prefetch next page data?",
-//         "options": [
-//             "queryClient.prefetchQuery with next page parameters",
-//             "useQuery with prefetch option set true",
-//             "usePagination hook with automatic prefetching",
-//             "React.prefetch with page number and data"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 499,
-//         "question": "What happens when user navigates to prefetched page?",
-//         "options": [
-//             "Page loads instantly from cache without loading",
-//             "Page ignores cache and refetches data",
-//             "Page throws error if prefetched expired",
-//             "Page waits for prefetch operation completion"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 500,
-//         "question": "Should you prefetch all pages in large datasets?",
-//         "options": [
-//             "Yes, but only for datasets under pages",
-//             "No, prefetching only works for singles",
-//             "Yes, prefetching all pages improves performance",
-//             "No, this wastes bandwidth and memory"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 500,
-//         "question": "Should you prefetch all pages in large datasets?",
-//         "options": [
-//             "Yes, but only for datasets under pages",
-//             "No, prefetching only works for singles",
-//             "Yes, prefetching all pages improves performance",
-//             "No, this wastes bandwidth and memory"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//  "explanation":""
-//     },
-//         {
-//             "id": 381,
-//             "question": "What does useQuery return in case of an error?",
-//             "options": [
-//                 "Only null data",
-//                 "An error object along with isError: true",
-//                 "Throws a JavaScript exception",
-//                 "Nothing is returned"
-//             ],
-//             "correctOption": 1,
-//             "points": 20,,
-//  "explanation":""
-//          "explanation":""
-//         },
-//     {
-//         "id": 501,
-//         "question": "How can you implement smart pagination prefetching?",
-//         "options": [
-//             "Prefetch based on user scrolling patterns",
-//             "Prefetch all pages when component mounts",
-//             "Prefetch only when network connection is fast",
-//             "Prefetch randomly to distribute server load"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 502,
-//         "question": "What is the benefit of prefetching previous pages?",
-//         "options": [
-//             "Allows instant back navigation for users",
-//             "Prevents data corruption in pagination state",
-//             "Reduces server load by caching responses",
-//             "Eliminates need for pagination controls completely"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 503,
-//         "question": "How do you handle prefetching with dynamic page sizes?",
-//         "options": [
-//             "Use fixed page size for all prefetch operations",
-//             "Calculate correct offset and limit for each page",
-//             "Disable prefetching when page sizes change",
-//             "Prefetch entire dataset regardless of page size"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
+    {
+        "id": 531,
+        "question": "How does prefetching improve pagination user experience?",
+        "options": [
+            "Automatically updates page URLs in history",
+            "Loads next page data before clicking",
+            "Prevents users navigating to invalid pages",
+            "Reduces total number of pages dataset"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• next page instant load می‌شود\n" +
+            "- no loading برای navigation\n" +
+            "- smooth page transitions\n" +
+            "- user می‌تواند سریع browse کند\n" +
+            "- predictable performance"
+    },
+    {
+        "id": 532,
+        "question": "When should you prefetch next page in pagination?",
+        "options": [
+            "Only after user clicks next button",
+            "When application startup loading all pages",
+            "When current page data finishes loading",
+            "Only when user hovers pagination controls"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• بعد از load شدن current page\n" +
+            "- در useEffect یا onSuccess\n" +
+            "- اگر hasNextPage true باشد\n" +
+            "- automatic در background\n" +
+            "- ready برای user click"
+    },
+    {
+        "id": 533,
+        "question": "What is common strategy for pagination prefetching?",
+        "options": [
+            "Prefetch all pages at application startup",
+            "Prefetch only previous pages for navigation",
+            "Prefetch next few pages while viewing",
+            "Prefetch random pages to improve performance"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• prefetch کردن next 1-2 pages\n" +
+            "- نه همه pages (waste)\n" +
+            "- based on user position\n" +
+            "- balance بین UX و resources\n" +
+            "- adaptive strategy"
+    },
+    {
+        "id": 534,
+        "question": "How do you prefetch next page data?",
+        "options": [
+            "queryClient.prefetchQuery with next page parameters",
+            "useQuery with prefetch option set true",
+            "usePagination hook with automatic prefetching",
+            "React.prefetch with page number and data"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• queryClient.prefetchQuery با next page params\n" +
+            "- page + 1 در queryKey\n" +
+            "- همان queryFn\n" +
+            "- silent در background\n" +
+            "- ready وقتی user next می‌زند"
+    },
+    {
+        "id": 535,
+        "question": "What happens when user navigates to prefetched page?",
+        "options": [
+            "Page loads instantly from cache without loading",
+            "Page ignores cache and refetches data",
+            "Page throws error if prefetched expired",
+            "Page waits for prefetch operation completion"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• data بلافاصله از cache می‌آید\n" +
+            "- no loading state\n" +
+            "- instant page display\n" +
+            "- smooth navigation\n" +
+            "- excellent UX"
+    },
+    {
+        "id": 536,
+        "question": "Should you prefetch all pages in large datasets?",
+        "options": [
+            "Yes, but only for datasets under pages",
+            "No, prefetching only works for singles",
+            "Yes, prefetching all pages improves performance",
+            "No, this wastes bandwidth and memory"
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• نه، این waste of bandwidth و memory\n" +
+            "- فقط next 1-2 pages\n" +
+            "- based on user behavior\n" +
+            "- smart prefetching strategies\n" +
+            "- balance performance با resources"
+    },
+    {
+        "id": 537,
+        "question": "Should you prefetch all pages in large datasets?",
+        "options": [
+            "Yes, but only for datasets under pages",
+            "No, prefetching only works for singles",
+            "Yes, prefetching all pages improves performance",
+            "No, this wastes bandwidth and memory"
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• prefetch کردن همه pages هدر رفت bandwidth و memory است\n" +
+            "- فقط 1-2 صفحه بعدی را prefetch کنید\n" +
+            "- برای datasets بزرگ، استراتژی هوشمندانه لازم است\n" +
+            "- بر اساس رفتار کاربر prefetch را تنظیم کنید\n" +
+            "- balance بین UX و resource usage حفظ کنید"
+    },
+
+    {
+        "id": 538,
+        "question": "How can you implement smart pagination prefetching?",
+        "options": [
+            "Prefetch based on user scrolling patterns",
+            "Prefetch all pages when component mounts",
+            "Prefetch only when network connection is fast",
+            "Prefetch randomly to distribute server load"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• بر اساس الگوی scroll کاربر prefetch کنید\n" +
+            "- اگر کاربر سریع scroll می‌کند، صفحات بیشتری prefetch کنید\n" +
+            "- موقعیت کاربر در لیست را track کنید\n" +
+            "- با machine learning می‌توان رفتار را پیش‌بینی کرد\n" +
+            "- adaptive strategy بهتر از fixed approach است"
+    },
+    {
+        "id": 539,
+        "question": "What is the benefit of prefetching previous pages?",
+        "options": [
+            "Allows instant back navigation for users",
+            "Prevents data corruption in pagination state",
+            "Reduces server load by caching responses",
+            "Eliminates need for pagination controls completely"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• navigation به عقب بدون loading فوری انجام می‌شود\n" +
+            "- کاربر می‌تواند راحت بین صفحات جابجا شود\n" +
+            "- تجربه کاربری مشابه native apps\n" +
+            "- معمولاً 1 صفحه قبلی کافی است\n" +
+            "- در pagination دو طرفه مفید است"
+    },
+    {
+        "id": 540,
+        "question": "How do you handle prefetching with dynamic page sizes?",
+        "options": [
+            "Use fixed page size for all prefetch operations",
+            "Calculate correct offset and limit for each page",
+            "Disable prefetching when page sizes change",
+            "Prefetch entire dataset regardless of page size"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• offset و limit صحیح برای هر صفحه محاسبه کنید\n" +
+            "- اگر page size=20 و page=3، offset=40\n" +
+            "- در prefetch باید page size فعلی را در نظر بگیرید\n" +
+            "- تغییر page size نیاز به recalculation دارد\n" +
+            "- consistency در محاسبات ضروری است"
+    },
 //     {
 //         "id": 504,
 //         "question": "What should you consider when prefetching pagination data?",
@@ -8948,6 +8975,20 @@ export const mockQuestions: Question[] = [
 //         "points": 30,
 //  "explanation":""
 //     },
+//         {
+//             "id": 381,
+//             "question": "What does useQuery return in case of an error?",
+//             "options": [
+//                 "Only null data",
+//                 "An error object along with isError: true",
+//                 "Throws a JavaScript exception",
+//                 "Nothing is returned"
+//             ],
+//             "correctOption": 1,
+//             "points": 20,,
+//  "explanation":""
+//          "explanation":""
+//         },
 //     {
 //         "id": 514,
 //         "question": "What is a 'request waterfall' in client-side rendering?",
@@ -18580,7 +18621,8 @@ export const mockQuestions: Question[] = [
 //         ],
 //         "correctOption": 1,
 //         "points": 30
-//     },
+//     }
+    ,
     {
         "id": 1406,
         "question": "How do you initialize a new project with npm?",
