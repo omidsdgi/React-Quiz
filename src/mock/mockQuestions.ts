@@ -2027,7 +2027,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20,
         "explanation":"• useMemo برای جلوگیری از محاسبات پرهزینه استفاده می‌شود\n" +
-            "- نتیجه محاسبات را cache می‌کند و در renderهای بعدی استفاده می‌کند\n" +
+            "- نتیجه محاسبات را cache می‌کند و در render های بعدی استفاده می‌کند\n" +
             "- فقط زمانی دوباره محاسبه می‌کند که dependencies تغییر کنند"
     },
     {
@@ -2042,7 +2042,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 20,
         "explanation":"• useMemo برای پایدار کردن مقادیر در dependency arrays استفاده می‌شود\n" +
-            "- مانع از re-run شدن غیرضروری hookهای دیگر می‌شود\n" +
+            "- مانع از re-run شدن غیرضروری  hook های دیگر می‌شود\n" +
             "- به خصوص برای objects و arrays که reference جدید می‌گیرند مفید است"
     },
     {
@@ -2088,7 +2088,7 @@ export const mockQuestions: Question[] = [
         "points": 30,
         "explanation":"• useMemo برای پایدار کردن مقادیر پرهزینه در dependency arrays استفاده می‌شود\n" +
             "- reference ثابت برای مقدار ایجاد می‌کند\n" +
-            "- از اجرای مکرر hookهای وابسته جلوگیری می‌کند"
+            "- از اجرای مکرر hook های وابسته جلوگیری می‌کند"
     },
     {
         "id": 135,
@@ -8897,202 +8897,241 @@ export const mockQuestions: Question[] = [
             "- تغییر page size نیاز به recalculation دارد\n" +
             "- consistency در محاسبات ضروری است"
     },
-//     {
-//         "id": 504,
-//         "question": "What should you consider when prefetching pagination data?",
-//         "options": [
-//             "User's network speed and data usage patterns",
-//             "Total number of components in application",
-//             "Browser compatibility with prefetch features",
-//             "Server response time for authentication requests"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 505,
-//         "question": "How does infinite scrolling relate to prefetching?",
-//         "options": [
-//             "Infinite scroll eliminates need for prefetching",
-//             "Infinite scroll conflicts with prefetching mechanisms",
-//             "Infinite scroll automatically prefetches next batch",
-//             "Infinite scroll only works without prefetching"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 506,
-//         "question": "What happens to prefetched pagination data when filters change?",
-//         "options": [
-//             "Prefetched data remains valid for new filters",
-//             "Prefetched data automatically updates with filters",
-//             "Prefetched data prevents filter changes from working",
-//             "Prefetched data becomes stale and needs refetching",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 507,
-//         "question": "How can you optimize prefetching for mobile users?",
-//         "options": [
-//             "Disable prefetching completely on mobile devices",
-//             "Prefetch more aggressively on mobile connections",
-//             "Reduce prefetch amount and respect data usage",
-//             "Use same prefetching strategy as desktop"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 508,
-//         "question": "What is background prefetching in paginated data?",
-//         "options": [
-//             "Prefetching that occurs without user interaction",
-//             "Prefetching that changes page background colors",
-//             "Prefetching that runs on server side",
-//             "Prefetching that works only in background tabs"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//  "explanation":""
-//     },
-//     {
-//         "id": 509,
-//         "question": "How do you balance prefetching with performance?",
-//         "options": [
-//             "Prefetch unlimited pages for best performance",
-//             "Prefetch strategically based on usage patterns",
-//             "Disable prefetching to maximize performance",
-//             "Prefetch only during low network usage"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//         {
-//             "id": 381,
-//             "question": "What does useQuery return in case of an error?",
-//             "options": [
-//                 "Only null data",
-//                 "An error object along with isError: true",
-//                 "Throws a JavaScript exception",
-//                 "Nothing is returned"
-//             ],
-//             "correctOption": 1,
-//             "points": 20,,
-//  "explanation":""
-//          "explanation":""
-//         },
-//     {
-//         "id": 514,
-//         "question": "What is a 'request waterfall' in client-side rendering?",
-//         "options": [
-//             "A sequence of dependent network requests delaying page render",
-//             "A series of API requests made one after another instead of in parallel",
-//             "A rendering issue where resources block each other during load",
-//             "A browser mechanism that preloads scripts to prevent render delay"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 516,
-//         "question": "When does data fetching occur in SSR?",
-//         "options": [
-//             "After the browser finishes executing JavaScript",
-//             "During the hydration phase on the client",
-//             "Before rendering the HTML on the server",
-//             "Only after user interaction"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 518,
-//         "question": "What does 'hydration' mean in SSR and CSR context?",
-//         "options": [
-//             "Re-rendering static HTML with JavaScript to make it interactive",
-//             "Caching all static assets before page load",
-//             "Synchronizing CSS styles between server and client",
-//             "Removing unused HTML nodes from the DOM",
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 519,
-//         "question": "Why does Next.js hydrate server-rendered content on the client?",
-//         "options": [
-//             "To improve SEO by removing dynamic JavaScript",
-//             "To replace all HTML with new client-side markup",
-//             "To add interactivity to the pre-rendered HTML",
-//             "To reset the DOM structure after first paint"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 520,
-//         "question": "Which rendering approach provides better SEO results?",
-//         "options": [
-//             "Client-side rendering (CSR)",
-//             "Dynamic rendering using APIs",
-//             "Static site rendering only",
-//             "Server-side rendering (SSR)",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 521,
-//         "question": "A content-driven website like a blog is best suited for which rendering approach?",
-//         "options": [
-//             "Server-side rendering (SSR)",
-//             "Client-side rendering (CSR)",
-//             "Streaming rendering",
-//             "WebAssembly-based rendering"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 522,
-//         "question": "Why is SEO especially important for content-driven websites?",
-//         "options": [
-//             "Because they rely on client-side routing for navigation",
-//             "Because their visibility depends on search engine indexing",
-//             "Because SEO improves JavaScript bundle size",
-//             "Because SSR reduces interactivity on such sites"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 523,
-//         "question": "Which rendering method is ideal for building highly interactive web applications?",
-//         "options": [
-//             "Server-side rendering (SSR)",
-//             "Static site generation (SSG)",
-//             "Client-side rendering (CSR)",
-//             "Incremental static regeneration (ISR)"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
+    {
+        "id": 541,
+        "question": "What should you consider when prefetching pagination data?",
+        "options": [
+            "User's network speed and data usage patterns",
+            "Total number of components in application",
+            "Browser compatibility with prefetch features",
+            "Server response time for authentication requests"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• سرعت شبکه کاربر تعیین می‌کند چقدر prefetch کنیم\n" +
+            "- در mobile/3G کمتر prefetch کنید\n" +
+            "- data usage مخصوصاً در mobile مهم است\n" +
+            "- الگوی استفاده کاربر (fast/slow scrolling)\n" +
+            "- battery usage در موبایل را در نظر بگیرید"
+    },
+    {
+        "id": 542,
+        "question": "How does infinite scrolling relate to prefetching?",
+        "options": [
+            "Infinite scroll eliminates need for prefetching",
+            "Infinite scroll conflicts with prefetching mechanisms",
+            "Infinite scroll automatically prefetches next batch",
+            "Infinite scroll only works without prefetching"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• infinite scroll خودکار batch بعدی را prefetch می‌کند\n" +
+            "- وقتی کاربر به انتهای لیست نزدیک می‌شود، fetch می‌کند\n" +
+            "- معمولاً با IntersectionObserver پیاده‌سازی می‌شود\n" +
+            "- seamless experience بدون pagination buttons\n" +
+            "- prefetching جزء ذاتی infinite scroll است"
+    },
+    {
+        "id": 543,
+        "question": "What happens to prefetched pagination data when filters change?",
+        "options": [
+            "Prefetched data remains valid for new filters",
+            "Prefetched data automatically updates with filters",
+            "Prefetched data prevents filter changes from working",
+            "Prefetched data becomes stale and needs refetching",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• data prefetch شده دیگر معتبر نیست چون filter تغییر کرده\n" +
+            "- باید cache را invalidate کنید\n" +
+            "- با filters جدید دوباره fetch کنید\n" +
+            "- query key باید شامل filters باشد\n" +
+            "- React Query این invalidation را خودکار handle می‌کند"
+    },
+    {
+        "id": 544,
+        "question": "How can you optimize prefetching for mobile users?",
+        "options": [
+            "Disable prefetching completely on mobile devices",
+            "Prefetch more aggressively on mobile connections",
+            "Reduce prefetch amount and respect data usage",
+            "Use same prefetching strategy as desktop"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• در موبایل مقدار prefetch را کاهش دهید\n" +
+            "- به data usage و battery توجه کنید\n" +
+            "- شاید فقط next page را prefetch کنید نه 2-3 صفحه\n" +
+            "- connection type را detect کنید (WiFi vs 3G)\n" +
+            "- respect کردن user preferences (data saver mode)"
+    },
+    {
+        "id": 545,
+        "question": "What is background prefetching in paginated data?",
+        "options": [
+            "Prefetching that occurs without user interaction",
+            "Prefetching that changes page background colors",
+            "Prefetching that runs on server side",
+            "Prefetching that works only in background tabs"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":"• prefetch بدون interaction مستقیم کاربر انجام می‌شود\n" +
+            "- در idle time browser یا بعد از load صفحه فعلی\n" +
+            "- silent و غیرمسدودکننده است\n" +
+            "- data در cache آماده می‌شود برای استفاده آینده\n" +
+            "- improve کردن perceived performance"
+    },
+    {
+        "id": 546,
+        "question": "How do you balance prefetching with performance?",
+        "options": [
+            "Prefetch unlimited pages for best performance",
+            "Prefetch strategically based on usage patterns",
+            "Disable prefetching to maximize performance",
+            "Prefetch only during low network usage"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• استراتژی prefetch بر اساس usage patterns تنظیم کنید\n" +
+            "- نه خیلی کم که UX ضعیف شود، نه خیلی زیاد که waste باشد\n" +
+            "- monitoring metrics مثل cache hit rate\n" +
+            "- A/B testing برای یافتن sweet spot\n" +
+            "- adaptive approach بر اساس شرایط شبکه"
+    },
+    {
+        "id": 547,
+        "question": "What does useQuery return in case of an error?",
+        "options": [
+            "Only null data",
+            "An error object along with isError: true",
+            "Throws a JavaScript exception",
+            "Nothing is returned"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• object با isError: true و error object برمی‌گرداند\n" +
+            "- data معمولاً undefined یا previous data است\n" +
+            "- می‌توانید error.message را نمایش دهید\n" +
+            "- status به 'error' تغییر می‌کند\n" +
+            "- retry logic به صورت automatic اعمال می‌شود"
+    },
+    {
+        "id": 548,
+        "question": "What is a 'request waterfall' in client-side rendering?",
+        "options": [
+            "A sequence of dependent network requests delaying page render",
+            "A series of API requests made one after another instead of in parallel",
+            "A rendering issue where resources block each other during load",
+            "A browser mechanism that preloads scripts to prevent render delay"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• دنباله‌ای از requests وابسته که render را تاخیر می‌اندازند\n" +
+            "- component A mount → fetch data → render child B → child B fetch\n" +
+            "- هر request منتظر قبلی است\n" +
+            "- loading time کل جمع تمام requests\n" +
+            "- با parallel fetching یا SSR قابل حل است"
+    },
+    {
+        "id": 549,
+        "question": "When does data fetching occur in SSR?",
+        "options": [
+            "After the browser finishes executing JavaScript",
+            "During the hydration phase on the client",
+            "Before rendering the HTML on the server",
+            "Only after user interaction"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• data fetching قبل از render HTML روی server انجام می‌شود\n" +
+            "- server منتظر می‌ماند تا data آماده شود\n" +
+            "- سپس complete HTML با data به client ارسال می‌شود\n" +
+            "- no loading states برای initial render\n" +
+            "- این تفاوت اصلی با CSR است"
+    },
+    {
+        "id": 550,
+        "question": "What does 'hydration' mean in SSR and CSR context?",
+        "options": [
+            "Re-rendering static HTML with JavaScript to make it interactive",
+            "Caching all static assets before page load",
+            "Synchronizing CSS styles between server and client",
+            "Removing unused HTML nodes from the DOM",
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• re-rendering static HTML با JavaScript برای interactive کردن\n" +
+            "- server HTML را render می‌کند (non-interactive)\n" +
+            "- client JavaScript را execute می‌کند\n" +
+            "- event handlers attach می‌شوند\n" +
+            "- React component tree با DOM sync می‌شود"
+    },
+    {
+        "id": 519,
+        "question": "Why does Next.js hydrate server-rendered content on the client?",
+        "options": [
+            "To improve SEO by removing dynamic JavaScript",
+            "To replace all HTML with new client-side markup",
+            "To add interactivity to the pre-rendered HTML",
+            "To reset the DOM structure after first paint"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 520,
+        "question": "Which rendering approach provides better SEO results?",
+        "options": [
+            "Client-side rendering (CSR)",
+            "Dynamic rendering using APIs",
+            "Static site rendering only",
+            "Server-side rendering (SSR)",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 521,
+        "question": "A content-driven website like a blog is best suited for which rendering approach?",
+        "options": [
+            "Server-side rendering (SSR)",
+            "Client-side rendering (CSR)",
+            "Streaming rendering",
+            "WebAssembly-based rendering"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 522,
+        "question": "Why is SEO especially important for content-driven websites?",
+        "options": [
+            "Because they rely on client-side routing for navigation",
+            "Because their visibility depends on search engine indexing",
+            "Because SEO improves JavaScript bundle size",
+            "Because SSR reduces interactivity on such sites"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 523,
+        "question": "Which rendering method is ideal for building highly interactive web applications?",
+        "options": [
+            "Server-side rendering (SSR)",
+            "Static site generation (SSG)",
+            "Client-side rendering (CSR)",
+            "Incremental static regeneration (ISR)"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":""
+    },
 //     {
 //         "id": 524,
 //         "question": "What do SSG and ISR stand for in Next.js?",
@@ -18622,7 +18661,7 @@ export const mockQuestions: Question[] = [
 //         "correctOption": 1,
 //         "points": 30
 //     }
-    ,
+    
     {
         "id": 1406,
         "question": "How do you initialize a new project with npm?",
@@ -19719,7 +19758,7 @@ export const mockQuestions: Question[] = [
     ],
     "correctOption": 2,
     "points": 10,
-    "explanation": "•  body { font-family: 'Roboto', sans-serif; } به همه children inherit می‌شودCSS\n" +
+    "explanation": "•  body { font-family: 'Roboto', sans-serif; } به همه children inherit  می‌شود CSS\n" +
         "- index.css global است → تمام برنامه را پوشش می‌دهد\n" +
         "- یک بار تعریف کنید، در همه components استفاده شود (DRY principle)\n" +
         "- گزینه 1 غلط: تکرار کد و hard to maintain\n" +
