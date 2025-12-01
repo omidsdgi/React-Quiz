@@ -93,7 +93,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation": "• Mounting مرحله اولیه چرخه حیات کامپوننت است\n" +
+        "explanation": "* رندر اولیه (initial render) به اولین باری گفته می‌شود که درخت کامپوننت‌ها (component tree) در DOM ترسیم یا نمایش داده می‌شود. \n" +
+            "*این اتفاق زمانی رخ می‌دهد که برنامه برای نخستین بار بارگذاری می‌شود، یا زمانی که کامپوننت ریشه (root component) برای اولین بار رندر می‌گردد.\n" +
+            "* به این فرآیند همچنین «نصب کامپوننت‌ها» یا Mounting گفته می‌شود.\n" +
+            "• Mounting مرحله اولیه چرخه حیات کامپوننت است\n" +
             "- کامپوننت برای اولین بار ساخته و به DOM اضافه می‌شود\n" +
             "- constructor، render و componentDidMount اجرا می‌شوند\n" +
             "- state و props اولیه تنظیم می‌شوند\n" +
@@ -308,8 +311,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-        "explanation":"• تغییر state در کامپوننت باعث رندر می‌شود\n" +
-            "- رندر مجدد والد باعث رندر فرزندان می‌شود\n" +
+        "explanation":"* رندرهای مجدد (Re-renders) زمانی رخ می‌دهند که state یا props یک کامپوننت تغییر کند و لازم باشد آن کامپوننت برای بازتاب این تغییرات در DOM به‌روزرسانی شود.\n" +
+     "* ری‌اکت از Virtual DOM برای بهینه‌سازی فرآیند به‌روزرسانی DOM واقعی استفاده می‌کند، به‌طوری‌که تنها تغییرات ضروری در آن اعمال می‌شوند.\n" +
+     "• چندین روش برای ایجاد رندر مجدد (re-render) در یک کامپوننت ری‌اکت وجود دارد:\n" +
+     "• با تغییر دادن state یا props یک کامپوننت\n" +
+            "- زمانی که المنت والد (parent element) مجدداً رندر شود، حتی اگر state یا props کامپوننت تغییری نکرده باشند.\n" +
             "- تغییر context value تمام consumers را رندر می‌کند\n" +
             "- رندر به معنی DOM update نیست، بلکه فراخوانی component function است"
     },
@@ -2179,9 +2185,12 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 10,
         "explanation":"• Hooks فقط در function components یا custom Hooks قابل استفاده هستند\n" +
+            "* هوک ها را فقط  درون بدنه‌ی تابع یا کامپوننت فراخوانی (invoke) کنید\n" +
+            "- هوک‌ها (Hooks) را به‌صورت شرطی فراخوانی نکنید\n" +
             "- نمی‌توانید Hooks را در class components استفاده کنید\n" +
             "- Hooks را در توابع معمولی JavaScript فراخوانی نکنید\n" +
             "- custom Hooks باید با 'use' شروع شوند\n" +
+            "- تابع‌های set وضعیت (state) را بلافاصله به‌روزرسانی نمی‌کنند.\n" +
             "- این محدودیت‌ها به React کمک می‌کنند state را صحیح مدیریت کند"
     },
     {
