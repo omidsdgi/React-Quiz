@@ -9251,7 +9251,7 @@ export const mockQuestions: Question[] = [
             "- در CSR کاربر منتظر JavaScript و data fetch می‌ماند"
     },
     {
-        "id": 531,
+        "id": 561,
         "question": "How does a website remain interactive for users in SSR?",
         "options": [
             "By re-rendering all pages on the server every second",
@@ -9261,10 +9261,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
- "explanation":""
+        "explanation":"• از طریق client-side hydration که JavaScript را فعال می‌کند\n" +
+            "- server HTML static می‌فرستد\n" +
+            "- client JavaScript را download و execute می‌کند\n" +
+            "- event handlers به elements attach می‌شوند\n" +
+            "- بعد از hydration، app کاملاً interactive می‌شود"
     },
     {
-        "id": 532,
+        "id": 562,
         "question": "What makes a web app interactive after loading?",
         "options": [
             "HTML parsing before CSS application",
@@ -9274,10 +9278,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
- "explanation":""
+        "explanation":"• JavaScript execution که events را bind و DOM را update می‌کند\n" +
+            "- بدون JS، صفحه فقط static HTML است\n" +
+            "- event listeners برای clicks، inputs و ... لازم است\n" +
+            "- state management برای dynamic updates\n" +
+            "- این همان چیزی است که در hydration اتفاق می‌افتد"
     },
     {
-        "id": 533,
+        "id": 563,
         "question": "What does hydration do in server-side rendered React applications?",
         "options": [
             "It removes unused HTML elements from the DOM",
@@ -9287,99 +9295,131 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
- "explanation":""
+        "explanation":"• event handlers و interactivity را به static HTML اضافه می‌کند\n" +
+            "- React component tree را با DOM موجود sync می‌کند\n" +
+            "- بدون rebuild کردن DOM، فقط attach کردن handlers\n" +
+            "- state initialization و lifecycle hooks اجرا می‌شوند\n" +
+            "- بعد از hydration، app مثل CSR app عمل می‌کند"
     },
-//     {
-//         "id": 534,
-//         "question": "The phrase “watering the dry HTML” refers to what in SSR context?",
-//         "options": [
-//             "Reapplying styles after CSS-in-JS rendering",
-//             "Adding animations after page load",
-//             "Reconnecting interactivity and event handlers via hydration",
-//             "Replacing server-rendered content with new markup"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 535,
-//         "question": "What must React ensure before adopting the server-rendered DOM during hydration?",
-//         "options": [
-//             "The client component tree matches the server-rendered HTML structure",
-//             "The HTML document includes external JavaScript files",
-//             "The CSS styles are loaded before React initializes",
-//             "The page uses browser APIs to rebuild the DOM"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 536,
-//         "question": "What happens if the client-rendered component tree differs from the server-rendered DOM?",
-//         "options": [
-//             "Hydration fails and React re-renders the component tree from scratch",
-//             "React automatically adjusts the DOM to match the server output",
-//             "The mismatch is ignored, and UI updates normally",
-//             "The server sends updated HTML to fix the issue"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 537,
-//         "question": "Which of the following is a common cause of hydration errors?",
-//         "options": [
-//             "Correctly nested HTML elements",
-//             "Using identical data on server and client",
-//             "Accessing browser-only APIs during server rendering",
-//             "Disabling JavaScript execution on client"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 538,
-//         "question": "Why does incorrect HTML nesting lead to hydration mismatches?",
-//         "options": [
-//             "Because React cannot attach events to deeply nested elements",
-//             "Because the actual DOM differs structurally from react's virtual DOM",
-//             "Because the browser blocks nested element rendering",
-//             "Because React skips hydration for child nodes"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 539,
-//         "question": "How can using different data between server and client affect hydration?",
-//         "options": [
-//             "It delays hydration until data matches",
-//             "It causes React to discard existing HTML and rebuild the DOM",
-//             "It improves hydration speed",
-//             "It triggers rehydration of the same content repeatedly"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 540,
-//         "question": "Which best practice helps avoid hydration errors in Next.js apps?",
-//         "options": [
-//             "Wrap all components in useEffect hooks for hydration",
-//             "Disable JavaScript on the client for static rendering",
-//             "Render data differently on server and client for flexibility",
-//             "Avoid using browser-only APIs like window or document during SSR",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//  "explanation":""
-//     },
+    {
+        "id": 564,
+        "question": "The phrase “watering the dry HTML” refers to what in SSR context?",
+        "options": [
+            "Reapplying styles after CSS-in-JS rendering",
+            "Adding animations after page load",
+            "Reconnecting interactivity and event handlers via hydration",
+            "Replacing server-rendered content with new markup"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• اضافه کردن interactivity و event handlers از طریق hydration\n" +
+            "- 'dry' HTML یعنی static بدون JavaScript\n" +
+            "- 'watering' یعنی زنده کردن آن با JS\n" +
+            "- metaphor برای hydration process\n" +
+            "- بعد از watering، HTML 'alive' و interactive می‌شود"
+    },
+    {
+        "id": 565,
+        "question": "What must React ensure before adopting the server-rendered DOM during hydration?",
+        "options": [
+            "The client component tree matches the server-rendered HTML structure",
+            "The HTML document includes external JavaScript files",
+            "The CSS styles are loaded before React initializes",
+            "The page uses browser APIs to rebuild the DOM"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• client component tree باید با server HTML structure match کند\n" +
+            "- React مقایسه می‌کند expected tree با actual DOM\n" +
+            "- اگر match نباشد، hydration error می‌دهد\n" +
+            "- consistency بین server و client ضروری است\n" +
+            "- این validation باعث می‌شود hydration safe باشد"
+    },
+    {
+        "id": 566,
+        "question": "What happens if the client-rendered component tree differs from the server-rendered DOM?",
+        "options": [
+            "Hydration fails and React re-renders the component tree from scratch",
+            "React automatically adjusts the DOM to match the server output",
+            "The mismatch is ignored, and UI updates normally",
+            "The server sends updated HTML to fix the issue"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• hydration fail می‌شود و React از scratch re-render می‌کند\n" +
+            "- warning در console نمایش داده می‌شود\n" +
+            "- performance penalty چون DOM دوباره ساخته می‌شود\n" +
+            "- ممکن است visual flicker رخ دهد\n" +
+            "- این mismatch باید حتماً fix شود"
+    },
+    {
+        "id": 567,
+        "question": "Which of the following is a common cause of hydration errors?",
+        "options": [
+            "Correctly nested HTML elements",
+            "Using identical data on server and client",
+            "Accessing browser-only APIs during server rendering",
+            "Disabling JavaScript execution on client"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• استفاده از browser APIs (window، document) در server rendering\n" +
+            "- این APIs در server وجود ندارند\n" +
+            "- باعث می‌شود output server و client متفاوت باشد\n" +
+            "- باید در useEffect یا client component استفاده شوند\n" +
+            "- typeof window !== 'undefined' check لازم است"
+    },
+    {
+        "id": 568,
+        "question": "Why does incorrect HTML nesting lead to hydration mismatches?",
+        "options": [
+            "Because React cannot attach events to deeply nested elements",
+            "Because the actual DOM differs structurally from react's virtual DOM",
+            "Because the browser blocks nested element rendering",
+            "Because React skips hydration for child nodes"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• browser HTML نامعتبر را automatically اصلاح می‌کند، DOM واقعی تغییر می‌کند\n" +
+            "- مثلاً <p> داخل <p> دیگر invalid است\n" +
+            "- browser آن را restructure می‌کند\n" +
+            "- React virtual DOM با actual DOM فرق می‌کند\n" +
+            "- باید HTML معتبر بنویسید تا hydration درست کار کند"
+    },
+    {
+        "id": 569,
+        "question": "How can using different data between server and client affect hydration?",
+        "options": [
+            "It delays hydration until data matches",
+            "It causes React to discard existing HTML and rebuild the DOM",
+            "It improves hydration speed",
+            "It triggers rehydration of the same content repeatedly"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• React HTML موجود را discard می‌کند و DOM را rebuild می‌کند\n" +
+            "- چون expected output با actual DOM match نمی‌کند\n" +
+            "- مثلاً استفاده از Date.now() در server و client\n" +
+            "- یا random values که هر بار متفاوت است\n" +
+            "- باید data consistent بین server و client باشد"
+    },
+    {
+        "id": 570,
+        "question": "Which best practice helps avoid hydration errors in Next.js apps?",
+        "options": [
+            "Wrap all components in useEffect hooks for hydration",
+            "Disable JavaScript on the client for static rendering",
+            "Render data differently on server and client for flexibility",
+            "Avoid using browser-only APIs like window or document during SSR",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• از browser APIs مثل window یا document در SSR استفاده نکنید\n" +
+            "- این APIs فقط در client موجودند\n" +
+            "- باید در useEffect یا با 'use client' استفاده شوند\n" +
+            "- یا با typeof window !== 'undefined' check کنید\n" +
+            "- این رایج‌ترین علت hydration errors است"
+    },
 //     {
 //             "id": 541,
 //             "question": "What best describes Next.js in relation to React?",
