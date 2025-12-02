@@ -9081,7 +9081,7 @@ export const mockQuestions: Question[] = [
             "- React component tree با DOM sync می‌شود"
     },
     {
-        "id": 519,
+        "id": 551,
         "question": "Why does Next.js hydrate server-rendered content on the client?",
         "options": [
             "To improve SEO by removing dynamic JavaScript",
@@ -9091,10 +9091,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":""
+        "explanation":"• برای اضافه کردن interactivity به HTML از server\n" +
+            "- server فقط static HTML می‌فرستد\n" +
+            "- JavaScript client-side event handlers را attach می‌کند\n" +
+            "- بدون hydration، buttons/forms کار نمی‌کنند\n" +
+            "- این ترکیب SSR (speed) + CSR (interactivity) است"
     },
     {
-        "id": 520,
+        "id": 552,
         "question": "Which rendering approach provides better SEO results?",
         "options": [
             "Client-side rendering (CSR)",
@@ -9104,10 +9108,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-        "explanation":""
+        "explanation":"• SSR چون HTML کامل بلافاصله در دسترس crawlers است\n" +
+            "- search engine bots می‌توانند content را فوراً ببینند\n" +
+            "- در CSR، bots باید منتظر JavaScript execution شوند\n" +
+            "- meta tags و content در initial HTML load هستند\n" +
+            "- indexing سریع‌تر و بهتر انجام می‌شود"
     },
     {
-        "id": 521,
+        "id": 553,
         "question": "A content-driven website like a blog is best suited for which rendering approach?",
         "options": [
             "Server-side rendering (SSR)",
@@ -9117,10 +9125,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation":"• SSR چون content نیاز به SEO دارد و mostly static است\n" +
+            "- blog posts باید توسط search engines پیدا شوند\n" +
+            "- محتوا بیشتر read-only است\n" +
+            "- fast initial load برای readers مهم است\n" +
+            "- SSG (Static Site Generation) هم گزینه عالی است"
     },
     {
-        "id": 522,
+        "id": 554,
         "question": "Why is SEO especially important for content-driven websites?",
         "options": [
             "Because they rely on client-side routing for navigation",
@@ -9130,10 +9142,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":""
+        "explanation":"• visibility آن‌ها وابسته به search engine indexing است\n" +
+            "- اکثر traffic از Google و search engines می‌آید\n" +
+            "- بدون SEO خوب، محتوا پیدا نمی‌شود\n" +
+            "- blogs و news sites به organic traffic وابسته‌اند\n" +
+            "- ranking در search results مستقیماً بر revenue اثر دارد"
     },
     {
-        "id": 523,
+        "id": 555,
         "question": "Which rendering method is ideal for building highly interactive web applications?",
         "options": [
             "Server-side rendering (SSR)",
@@ -9143,10 +9159,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation":"• CSR چون برنامه‌های interactive نیاز به frequent updates دارند\n" +
+            "- مثل dashboards، admin panels، real-time apps\n" +
+            "- client-side state management راحت‌تر است\n" +
+            "- instant updates بدون server round-trips\n" +
+            "- SEO کمتر اهمیت دارد در این نوع apps"
     },
     {
-        "id": 524,
+        "id": 556,
         "question": "What do SSG and ISR stand for in Next.js?",
         "options": [
             "Server-Side Generation and Internal State Rendering",
@@ -9156,10 +9176,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
- "explanation":""
+        "explanation":"• SSG: Static Site Generation - صفحات در build time ساخته می‌شوند\n" +
+            "- ISR: Incremental Static Regeneration - update کردن static pages\n" +
+            "- SSG برای محتوای ثابت، ISR برای محتوای کم‌تغییر\n" +
+            "- هر دو performance عالی دارند\n" +
+            "- ISR ترکیب مزایای static و dynamic است"
     },
     {
-        "id": 525,
+        "id": 557,
         "question": "What is the difference between static and dynamic rendering?",
         "options": [
             "Static rendering requires APIs, dynamic rendering does not",
@@ -9169,10 +9193,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
- "explanation":""
+        "explanation":"• static در build time انجام می‌شود، pages از قبل آماده‌اند\n" +
+            "- dynamic در request time، هر request صفحه جدید می‌سازد\n" +
+            "- static خیلی سریع‌تر اما محدودتر است\n" +
+            "- dynamic برای personalized content لازم است\n" +
+            "- Next.js هر دو را support می‌کند"
     },
     {
-        "id": 526,
+        "id": 558,
         "question": "What does the Largest Contentful Paint (LCP) metric measure?",
         "options": [
             "The time taken to render the largest visible element on the screen",
@@ -9182,10 +9210,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
- "explanation":""
+        "explanation":"• زمانی که بزرگترین element قابل مشاهده render می‌شود\n" +
+            "- معمولاً hero image، video یا text block بزرگ\n" +
+            "- یکی از Core Web Vitals برای performance\n" +
+            "- باید زیر 2.5 ثانیه باشد برای good UX\n" +
+            "- SSR معمولاً LCP بهتری نسبت به CSR دارد"
     },
     {
-        "id": 529,
+        "id": 559,
         "question": "In CSR, when does data fetching occur relative to rendering?",
         "options": [
             "Before HTML generation on the server",
@@ -9195,10 +9227,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
- "explanation":""
+        "explanation":"• بعد از mount شدن component در client انجام می‌شود\n" +
+            "- HTML خالی اول load می‌شود\n" +
+            "- سپس JavaScript execute می‌شود\n" +
+            "- بعد component mount می‌شود و data fetch می‌کند\n" +
+            "- این باعث waterfall و loading states می‌شود"
     },
     {
-        "id": 530,
+        "id": 560,
         "question": "Why is SSR useful for content-heavy websites with large media?",
         "options": [
             "Because it improves Largest Contentful Paint by sending ready HTML",
@@ -9208,7 +9244,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
- "explanation":""
+        "explanation":"• HTML آماده با content را فوراً می‌فرستد، LCP را بهبود می‌دهد\n" +
+            "- کاربر بلافاصله محتوا را می‌بیند\n" +
+            "- images و media می‌توانند lazy load شوند\n" +
+            "- perceived performance بسیار بهتر است\n" +
+            "- در CSR کاربر منتظر JavaScript و data fetch می‌ماند"
     },
     {
         "id": 531,
