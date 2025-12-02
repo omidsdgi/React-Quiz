@@ -164,7 +164,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation": "• در React 18، automatic batching در همه جا فعال است\n" +
+        "explanation": "• «Batching» به فرایند گروه‌بندی چندین به‌روزرسانی وضعیت در یک به‌روزرسانی" +
+            " واحد اشاره دارد.\n" +
+            "این کار به React اجازه می‌دهد با کاهش تعداد به‌روزرسانی‌های لازم در DOM، فرایند رندر کردن کامپوننت‌ها را بهینه‌سازی کند.\n" +
+        "• React از تکنیکی به نام «auto-batching» استفاده می‌کند تا به‌روزرسانی‌های وضعیت را که در یک چرخه‌ی واحد از event loop رخ می‌دهند، در قالب یک به‌روزرسانی واحد گروه‌بندی کند .\n" +
+               "• در React 18، automatic batching در همه جا فعال است\n" +
             "- قبلاً batching فقط در event handlers کار می‌کرد\n" +
             "- حالا در promises، setTimeout و async functions هم کار می‌کند\n" +
             "- تعداد re-renders را کاهش می‌دهد\n" +
@@ -9141,110 +9145,110 @@ export const mockQuestions: Question[] = [
         "points": 30,
         "explanation":""
     },
-//     {
-//         "id": 524,
-//         "question": "What do SSG and ISR stand for in Next.js?",
-//         "options": [
-//             "Server-Side Generation and Internal State Rendering",
-//             "Static Style Guide and Instant Script Rendering",
-//             "Static Site Generation and Incremental Static Regeneration",
-//             "Synchronous Server Generation and Immediate Script Rendering"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 525,
-//         "question": "What is the difference between static and dynamic rendering?",
-//         "options": [
-//             "Static rendering requires APIs, dynamic rendering does not",
-//             "Static rendering happens at build time, dynamic rendering happens per request",
-//             "Both occur during client-side hydration",
-//             "Dynamic rendering generates pages once during build"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 526,
-//         "question": "What does the Largest Contentful Paint (LCP) metric measure?",
-//         "options": [
-//             "The time taken to render the largest visible element on the screen",
-//             "The total JavaScript execution time",
-//             "The delay before first user interaction",
-//             "The number of images loaded in the viewport"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 529,
-//         "question": "In CSR, when does data fetching occur relative to rendering?",
-//         "options": [
-//             "Before HTML generation on the server",
-//             "During hydration phase after SSR",
-//             "Immediately when page loads from cache",
-//             "After the component mounts on the client",
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 530,
-//         "question": "Why is SSR useful for content-heavy websites with large media?",
-//         "options": [
-//             "Because it improves Largest Contentful Paint by sending ready HTML",
-//             "Because it delays image loading until user scrolls",
-//             "Because it eliminates JavaScript completely",
-//             "Because it hides content from crawlers for performance"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 531,
-//         "question": "How does a website remain interactive for users in SSR?",
-//         "options": [
-//             "By re-rendering all pages on the server every second",
-//             "By keeping all logic in static HTML files",
-//             "Through client-side hydration that enables JavaScript interactivity",
-//             "By disabling JavaScript execution entirely"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 532,
-//         "question": "What makes a web app interactive after loading?",
-//         "options": [
-//             "HTML parsing before CSS application",
-//             "Server-rendered HTML without scripts",
-//             "Optimized image compression and caching",
-//             "JavaScript execution that binds events and updates the DOM",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 533,
-//         "question": "What does hydration do in server-side rendered React applications?",
-//         "options": [
-//             "It removes unused HTML elements from the DOM",
-//             "It reattaches event handlers and interactivity to static HTML",
-//             "It sends HTML from client to server for validation",
-//             "It rebuilds the entire UI without using existing markup"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
+    {
+        "id": 524,
+        "question": "What do SSG and ISR stand for in Next.js?",
+        "options": [
+            "Server-Side Generation and Internal State Rendering",
+            "Static Style Guide and Instant Script Rendering",
+            "Static Site Generation and Incremental Static Regeneration",
+            "Synchronous Server Generation and Immediate Script Rendering"
+        ],
+        "correctOption": 2,
+        "points": 20,
+ "explanation":""
+    },
+    {
+        "id": 525,
+        "question": "What is the difference between static and dynamic rendering?",
+        "options": [
+            "Static rendering requires APIs, dynamic rendering does not",
+            "Static rendering happens at build time, dynamic rendering happens per request",
+            "Both occur during client-side hydration",
+            "Dynamic rendering generates pages once during build"
+        ],
+        "correctOption": 1,
+        "points": 30,
+ "explanation":""
+    },
+    {
+        "id": 526,
+        "question": "What does the Largest Contentful Paint (LCP) metric measure?",
+        "options": [
+            "The time taken to render the largest visible element on the screen",
+            "The total JavaScript execution time",
+            "The delay before first user interaction",
+            "The number of images loaded in the viewport"
+        ],
+        "correctOption": 0,
+        "points": 20,
+ "explanation":""
+    },
+    {
+        "id": 529,
+        "question": "In CSR, when does data fetching occur relative to rendering?",
+        "options": [
+            "Before HTML generation on the server",
+            "During hydration phase after SSR",
+            "Immediately when page loads from cache",
+            "After the component mounts on the client",
+        ],
+        "correctOption": 0,
+        "points": 20,
+ "explanation":""
+    },
+    {
+        "id": 530,
+        "question": "Why is SSR useful for content-heavy websites with large media?",
+        "options": [
+            "Because it improves Largest Contentful Paint by sending ready HTML",
+            "Because it delays image loading until user scrolls",
+            "Because it eliminates JavaScript completely",
+            "Because it hides content from crawlers for performance"
+        ],
+        "correctOption": 0,
+        "points": 30,
+ "explanation":""
+    },
+    {
+        "id": 531,
+        "question": "How does a website remain interactive for users in SSR?",
+        "options": [
+            "By re-rendering all pages on the server every second",
+            "By keeping all logic in static HTML files",
+            "Through client-side hydration that enables JavaScript interactivity",
+            "By disabling JavaScript execution entirely"
+        ],
+        "correctOption": 2,
+        "points": 30,
+ "explanation":""
+    },
+    {
+        "id": 532,
+        "question": "What makes a web app interactive after loading?",
+        "options": [
+            "HTML parsing before CSS application",
+            "Server-rendered HTML without scripts",
+            "Optimized image compression and caching",
+            "JavaScript execution that binds events and updates the DOM",
+        ],
+        "correctOption": 3,
+        "points": 30,
+ "explanation":""
+    },
+    {
+        "id": 533,
+        "question": "What does hydration do in server-side rendered React applications?",
+        "options": [
+            "It removes unused HTML elements from the DOM",
+            "It reattaches event handlers and interactivity to static HTML",
+            "It sends HTML from client to server for validation",
+            "It rebuilds the entire UI without using existing markup"
+        ],
+        "correctOption": 1,
+        "points": 20,
+ "explanation":""
+    },
 //     {
 //         "id": 534,
 //         "question": "The phrase “watering the dry HTML” refers to what in SSR context?",
