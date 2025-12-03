@@ -9242,11 +9242,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":"• HTML آماده با content را فوراً می‌فرستد، LCP را بهبود می‌دهد\n" +
-            "- کاربر بلافاصله محتوا را می‌بیند\n" +
-            "- images و media می‌توانند lazy load شوند\n" +
-            "- perceived performance بسیار بهتر است\n" +
-            "- در CSR کاربر منتظر JavaScript و data fetch می‌ماند"
+        "explanation":"•SSR برای وب‌سایت‌های با محتوای سنگین و رسانه‌های بزرگ بسیار مفید است\n" +
+            "HTML آماده‌شده را از سرور ارسال می‌کند که باعث بهبود Largest Contentful Paint (LCP) می‌شود\n" +
+            "- مرورگر بلافاصله محتوا را دریافت و نمایش می‌دهد بدون نیاز به اجرای JavaScript \n" +
+            "- در CSR، کاربر باید منتظر دانلود و اجرای JavaScript، fetch شدن داده‌ها و رندر محتوا بماند\n" +
+            "-این فرآیند برای محتواهای سنگین زمان‌بر است و تجربه کاربری ضعیف‌تری ایجاد می‌کند\n" +
+            "- نکته: ترکیب SSR با Image Optimization و lazy loading می‌تواند Performance وب‌سایت‌های دارای تصاویر و ویدیوهای زیاد را به‌طور چشمگیری بهبود دهد."
     },
     {
         "id": 561,
@@ -9259,11 +9260,13 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":"• از طریق client-side hydration که JavaScript را فعال می‌کند\n" +
-            "- server HTML static می‌فرستد\n" +
-            "- client JavaScript را download و execute می‌کند\n" +
-            "- event handlers به elements attach می‌شوند\n" +
-            "- بعد از hydration، app کاملاً interactive می‌شود"
+        "explanation":"•در SSR، سرور HTML استاتیک را ارسال می‌کند که محتوا را نمایش می‌دهد\n" +
+            "HTML اولیه interactive نیست و فقط نمایش بصری دارد\n" +
+            "- فرآیند Hydration در سمت کلاینت باعث تعاملی شدن صفحه می‌شود\n" +
+            "- در hydration، React JavaScript را اجرا کرده و event handler ها را به المان‌های DOM متصل می‌کند\n" +
+            "- state management فعال شده و کامپوننت‌ها قابل تعامل می‌شوند\n" +
+            "-بدون hydration، کاربر فقط HTML استاتیک را می‌بیند و نمی‌تواند با دکمه‌ها و فرم‌ها کار کند\n" +
+            "- نکته: Hydration باید به‌سرعت انجام شود. استفاده از Server Components در Next.js حجم JavaScript مورد نیاز برای hydration را کاهش می‌دهد و Time to Interactive را بهبود می‌بخشد."
     },
     {
         "id": 562,
@@ -9277,10 +9280,12 @@ export const mockQuestions: Question[] = [
         "correctOption": 3,
         "points": 30,
         "explanation":"• JavaScript execution که events را bind و DOM را update می‌کند\n" +
-            "- بدون JS، صفحه فقط static HTML است\n" +
-            "- event listeners برای clicks، inputs و ... لازم است\n" +
-            "- state management برای dynamic updates\n" +
-            "- این همان چیزی است که در hydration اتفاق می‌افتد"
+            "- JavaScript execution اصلی‌ترین عامل تعاملی شدن وب اپلیکیشن است\n" +
+            "- JavaScript باید event handler ها را به المان‌های DOM متصل کندو \n" +
+            "- قابلیت update کردن DOM به‌صورت dynamic فراهم می‌شود\n" +
+            "-state management و event handling توسط JavaScript مدیریت می‌شود\n" +
+            "- بدون اجرای JavaScript، صفحه صرفاً HTML و CSS استاتیک است\n" +
+            "- نکته: برای بهینه‌سازی، JavaScript غیرضروری را حذف کنید و از code splitting استفاده کنید تا فقط کدهای مورد نیاز برای تعامل اولیه لود شوند.این همان چیزی است که در hydration اتفاق می‌افتد"
     },
     {
         "id": 563,
@@ -9293,10 +9298,11 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":"• event handlers و interactivity را به static HTML اضافه می‌کند\n" +
-            "- React component tree را با DOM موجود sync می‌کند\n" +
-            "- بدون rebuild کردن DOM، فقط attach کردن handlers\n" +
-            "- state initialization و lifecycle hooks اجرا می‌شوند\n" +
+        "explanation":"• Hydration فرآیند اتصال React به HTML رندر شده از سمت سرور است\n" +
+            "- event handlerها و interactivity به HTML استاتیک اضافه می‌شود\n" +
+            "- state management فعال شده و کامپوننت‌ها قابل re-render می‌شوند" +
+            "-بدون hydration، HTML فقط نمایشی است و کاربر نمی‌تواند تعامل داشته باشد\n" +
+            "- این فرآیند بین SSR و CSR پل ارتباطی ایجاد می‌کنداجرا می‌شوند\n" +
             "- بعد از hydration، app مثل CSR app عمل می‌کند"
     },
     {
