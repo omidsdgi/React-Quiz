@@ -6415,12 +6415,10 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation": "Can refs be passed to child components as props?\",\n" +
-            "\"explanation\": \"• نه به صورت مستقیم، ref reserved است\\n\" +\n" +
-            "    \"- باید از forwardRef استفاده کنید\\n\" +\n" +
-            "    \"- یا نام دیگری بدهید\\n\" +\n" +
-            "    \"- React.forwardRef wrapper\\n\" +\n" +
-            "    \"- special handling لازم"
+        "explanation":"•  باید از forwardRef استفاده کنید\n" +
+            "- یا نام دیگری بدهید\n" +
+            "- React.forwardRef wrapper\n" +
+            "-special handling لازم"
     },
     {
         "id": 394,
@@ -20071,6 +20069,57 @@ export const mockQuestions: Question[] = [
         "- مثال خوب: import './other.css' در JS file\n" +
         "- Build tools مثل Webpack این را بهتر optimize می‌کنند"
 },
+    {
+        id: 1511,
+        question: "What is the correct way to update state based on its previous value in React?",
+        options: [
+            "Calling setState with a direct new value",
+            "Passing a function to setState that returns the new value",
+            "Using multiple setState calls in sequence",
+            "Modifying the state variable directly"
+        ],
+        correctOption: 1,
+        points: 10,
+        explanation: `
+  - در React، زمانی که مقدار جدید state به مقدار قبلی وابسته است، باید از فرم تابعی setState استفاده شود.
+  - در این حالت تابعی به setState پاس داده می‌شود که مقدار قبلی state را دریافت کرده و مقدار جدید را برمی‌گرداند.
+  - این روش باعث می‌شود به‌روزرسانی state همیشه دقیق و بدون وابستگی به زمان‌بندی React انجام شود.
+  `
+    },
+    {
+        id: 1512,
+        question: "Why should you use a function inside setState when updating state multiple times quickly?",
+        options: [
+            "Because React batches state updates asynchronously",
+            "Because it prevents the need for useEffect",
+            "Because it converts updates to synchronous ones",
+            "Because it automatically merges multiple states"
+        ],
+        correctOption: 0,
+        points: 10,
+        explanation: `
+  - React ممکن است چند به‌روزرسانی state را به صورت batch انجام دهد.
+  - اگر از مقدار قبلی state استفاده می‌کنی، ممکن است به‌روزرسانی‌ها ناهماهنگ شوند.
+  - با استفاده از فرم تابعی setState، همیشه آخرین مقدار state در اختیار تابع قرار می‌گیرد و مقدار جدید دقیق محاسبه می‌شود.
+  `
+    },
+    {
+        id: 1513,
+        question: "Which code example correctly updates the count based on its previous state?",
+        options: [
+            "setCount(count + 1);",
+            "setCount(prev => prev + 1);",
+            "count = count + 1;",
+            "setCount(() => count + 1);"
+        ],
+        correctOption: 1,
+        points: 10,
+        explanation: `
+  - روش صحیح برای به‌روزرسانی state بر اساس مقدار قبلی استفاده از تابع در setState است.
+  - در مثال بالا، prev پارامتر state فعلی است و مقدار بازگشتی مقدار جدید است.
+  - این روش در شرایطی مثل event های متوالی یا انیمیشن‌ها از بروز خطا جلوگیری می‌کند.
+  `
+    }
 
 
 ]
