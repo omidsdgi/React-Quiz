@@ -8817,30 +8817,13 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
-        "explanation":"• نه، این waste of bandwidth و memory\n" +
-            "- فقط next 1-2 pages\n" +
-            "- based on user behavior\n" +
-            "- smart prefetching strategies\n" +
-            "- balance performance با resources"
+        "explanation":"• prefetch کردن تمام صفحات در dataset های بزرگ اتلاف منابع است\n" +
+            "• bandwidth و memory زیادی مصرف می‌شود بدون نیاز واقعی\n" +
+            "• احتمال مراجعه کاربر به همه صفحات بسیار پایین است\n" +
+            "• استراتژی بهتر: prefetch هوشمند فقط صفحات احتمالی\n" +
+            "• prefetch بی‌رویه performance را کاهش می‌دهد\n" +
+            "• نکته: معمولاً prefetch کردن 2-3 صفحه بعدی/قبلی کافی است"
     },
-    {
-        "id": 537,
-        "question": "Should you prefetch all pages in large datasets?",
-        "options": [
-            "Yes, but only for datasets under pages",
-            "No, prefetching only works for singles",
-            "Yes, prefetching all pages improves performance",
-            "No, this wastes bandwidth and memory"
-        ],
-        "correctOption": 3,
-        "points": 30,
-        "explanation":"• prefetch کردن همه pages هدر رفت bandwidth و memory است\n" +
-            "- فقط 1-2 صفحه بعدی را prefetch کنید\n" +
-            "- برای datasets بزرگ، استراتژی هوشمندانه لازم است\n" +
-            "- بر اساس رفتار کاربر prefetch را تنظیم کنید\n" +
-            "- balance بین UX و resource usage حفظ کنید"
-    },
-
     {
         "id": 538,
         "question": "How can you implement smart pagination prefetching?",
@@ -8852,11 +8835,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":"• بر اساس الگوی scroll کاربر prefetch کنید\n" +
-            "- اگر کاربر سریع scroll می‌کند، صفحات بیشتری prefetch کنید\n" +
-            "- موقعیت کاربر در لیست را track کنید\n" +
-            "- با machine learning می‌توان رفتار را پیش‌بینی کرد\n" +
-            "- adaptive strategy بهتر از fixed approach است"
+        "explanation":"• smart prefetching بر اساس الگوی رفتار کاربر تصمیم می‌گیرد\n" +
+            "• تحلیل scrolling patterns برای پیش‌بینی صفحه بعدی\n" +
+            "• scroll به پایین → prefetch صفحه بعدی\n" +
+            "• scroll به بالا → prefetch صفحات قبلی\n" +
+            "• استفاده از Intersection Observer API\n" +
+            "• نکته: requestIdleCallback برای prefetch در زمان idle browser"
     },
     {
         "id": 539,
@@ -8869,11 +8853,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":"• navigation به عقب بدون loading فوری انجام می‌شود\n" +
-            "- کاربر می‌تواند راحت بین صفحات جابجا شود\n" +
-            "- تجربه کاربری مشابه native apps\n" +
-            "- معمولاً 1 صفحه قبلی کافی است\n" +
-            "- در pagination دو طرفه مفید است"
+        "explanation":"• navigation سریع به عقب بدون reload\n" +
+            "• کاربران اغلب به صفحه قبلی برمی‌گردند\n" +
+            "• تجربه کاربری seamless و fluid\n" +
+            "• back navigation فوری با cache\n" +
+            "• مفید در اپلیکیشن‌های با navigation پیچیده\n" +
+            "• نکته: Next.js Link به‌طور پیش‌فرض صفحات در viewport را prefetch می‌کند"
     },
     {
         "id": 540,
@@ -8886,11 +8871,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":"• offset و limit صحیح برای هر صفحه محاسبه کنید\n" +
-            "- اگر page size=20 و page=3، offset=40\n" +
-            "- در prefetch باید page size فعلی را در نظر بگیرید\n" +
-            "- تغییر page size نیاز به recalculation دارد\n" +
-            "- consistency در محاسبات ضروری است"
+        "explanation":"• محاسبه offset و limit برای هر صفحه\n" +
+            "• page size تغییر کند → محاسبات pagination باید update شوند\n" +
+            "• نمی‌توان page size ثابت برای همه استفاده کرد\n" +
+            "• منطق محاسبه: nextPage = currentPage + 1, offset = currentPage * pageSize\n" +
+            "• state management برای page size در کنار pagination\n" +
+            "• نکته: با تغییر page size، cache قبلی را clear کنید"
     },
     {
         "id": 541,
@@ -8903,11 +8889,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":"• سرعت شبکه کاربر تعیین می‌کند چقدر prefetch کنیم\n" +
-            "- در mobile/3G کمتر prefetch کنید\n" +
-            "- data usage مخصوصاً در mobile مهم است\n" +
-            "- الگوی استفاده کاربر (fast/slow scrolling)\n" +
-            "- battery usage در موبایل را در نظر بگیرید"
+        "explanation":"• سرعت network کاربر: connectionهای کند → prefetch محدودتر\n" +
+            "• data usage patterns: mobile users ممکن است محدودیت data داشته باشند\n" +
+            "• balance بین performance و مصرف منابع\n" +
+            "• استفاده از Network Information API\n" +
+            "• prefetching باید adaptive باشد\n" +
+            "• نکته: navigator.connection.effectiveType برای تشخیص نوع connection"
     },
     {
         "id": 542,
@@ -8920,11 +8907,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":"• infinite scroll خودکار batch بعدی را prefetch می‌کند\n" +
-            "- وقتی کاربر به انتهای لیست نزدیک می‌شود، fetch می‌کند\n" +
-            "- معمولاً با IntersectionObserver پیاده‌سازی می‌شود\n" +
-            "- seamless experience بدون pagination buttons\n" +
-            "- prefetching جزء ذاتی infinite scroll است"
+        "explanation":"• infinite scroll خودکار batch بعدی را fetch می‌کند\n" +
+            "• رفتار شبیه prefetching خودکار\n" +
+            "• Intersection Observer برای تشخیص رسیدن به انتها\n" +
+            "• قبل از انتهای کامل، batch بعدی load می‌شود\n" +
+            "• حذف نیاز به pagination buttons\n" +
+            "• نکته: حتماً loading indicator نمایش دهید"
     },
     {
         "id": 543,
@@ -8937,11 +8925,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
-        "explanation":"• data prefetch شده دیگر معتبر نیست چون filter تغییر کرده\n" +
-            "- باید cache را invalidate کنید\n" +
-            "- با filters جدید دوباره fetch کنید\n" +
-            "- query key باید شامل filters باشد\n" +
-            "- React Query این invalidation را خودکار handle می‌کند"
+        "explanation":"• داده‌های prefetch شده دیگر معتبر نیستند (stale)\n" +
+            "• داده‌های cached مربوط به query قبلی هستند\n" +
+            "• باید cache را invalidate کرد\n" +
+            "• با فیلترهای جدید دوباره fetch کنید\n" +
+            "• prefetched data خودکار update نمی‌شود\n" +
+            "• نکته: query keys شامل فیلترها برای cache management بهتر (React Query)"
     },
     {
         "id": 544,
@@ -8954,11 +8943,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":"• در موبایل مقدار prefetch را کاهش دهید\n" +
-            "- به data usage و battery توجه کنید\n" +
-            "- شاید فقط next page را prefetch کنید نه 2-3 صفحه\n" +
-            "- connection type را detect کنید (WiFi vs 3G)\n" +
-            "- respect کردن user preferences (data saver mode)"
+        "explanation": "• کاهش prefetch amount در mobile devices\n" +
+            "• احترام به data usage محدود کاربران\n" +
+            "• تشخیص saveData mode برای disable کردن prefetch\n" +
+            "•  connection های کند → prefetch می‌تواند performance را بدتر کند\n" +
+            "• aggressive prefetching فقط برای WiFi/ connection های سریع\n" +
+            "• نکته: navigator.connection.saveData برای تشخیص data saving mode"
     },
     {
         "id": 545,
@@ -8971,11 +8961,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-        "explanation":"• prefetch بدون interaction مستقیم کاربر انجام می‌شود\n" +
-            "- در idle time browser یا بعد از load صفحه فعلی\n" +
-            "- silent و غیرمسدودکننده است\n" +
-            "- data در cache آماده می‌شود برای استفاده آینده\n" +
-            "- improve کردن perceived performance"
+        "explanation":"• fetch کردن داده بدون تعامل مستقیم کاربر\n" +
+            "• عملیات خودکار در پس‌زمینه\n" +
+            "• نیاز به کلیک یا scroll خاص نیست\n" +
+            "• در idle time و با اولویت پایین\n" +
+            "• آماده کردن داده قبل از نیاز کاربر\n" +
+            "• نکته: requestIdleCallback برای اطمینان از عدم تداخل با عملکرد اصلی"
     },
     {
         "id": 546,
@@ -8988,11 +8979,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":"• استراتژی prefetch بر اساس usage patterns تنظیم کنید\n" +
-            "- نه خیلی کم که UX ضعیف شود، نه خیلی زیاد که waste باشد\n" +
-            "- monitoring metrics مثل cache hit rate\n" +
-            "- A/B testing برای یافتن sweet spot\n" +
-            "- adaptive approach بر اساس شرایط شبکه"
+        "explanation":"• prefetch بر اساس usage patterns واقعی نه حدس\n" +
+            "• unlimited prefetch → کاهش performance\n" +
+            "• تحلیل تعداد صفحاتی که کاربران معمولاً می‌بینند\n" +
+            "• استراتژی adaptive بر اساس شرایط\n" +
+            "• disable کامل هم بهترین گزینه نیست\n" +
+            "• نکته: analytics و user behavior tracking برای تعیین مقدار مناسب"
     },
     {
         "id": 547,
@@ -9005,11 +8997,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":"• object با isError: true و error object برمی‌گرداند\n" +
-            "- data معمولاً undefined یا previous data است\n" +
-            "- می‌توانید error.message را نمایش دهید\n" +
-            "- status به 'error' تغییر می‌کند\n" +
-            "- retry logic به صورت automatic اعمال می‌شود"
+        "explanation":"• error object به همراه isError: true\n" +
+            "• data در این حالت null/undefined است\n" +
+            "• error property شامل جزئیات خطا\n" +
+            "• isError boolean flag برای تشخیص آسان\n" +
+            "• exception throw نمی‌شود، error به‌صورت state\n" +
+            "• نکته: همیشه isError و error را check کرده و UI مناسب نمایش دهید"
     },
     {
         "id": 548,
