@@ -4,13 +4,16 @@ import {mockQuestions} from "../mock/mockQuestions";
 
 
 export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
-    const [selectedLevel, setSelectedLevel] = useState<"fundamental" | "intermediate" | "advanced" | null>(null);
+    const [selectedLevel, setSelectedLevel] = useState<"fundamental" | "intermediate" | "advanced" | "mixed" | null>(null);
     const [startRange, setStartRange] = useState<number>(1);
     const [endRange, setEndRange] = useState<number>(10);
     const [showRangeSelection, setShowRangeSelection] = useState<boolean>(false);
 
 
-    const getLevelQuestionCount = (level: "fundamental" | "intermediate" | "advanced"): number => {
+    const getLevelQuestionCount = (level: "fundamental" | "intermediate" | "advanced" | "mixed"): number => {
+        if (level === "mixed") {
+            return mockQuestions.length;
+        }
         const pointsMap = {
             fundamental: 10,
             intermediate: 20,
@@ -19,7 +22,7 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
         return mockQuestions.filter(q => q.points === pointsMap[level]).length;
     };
 
-    const handleLevelSelect = (level: "fundamental" | "intermediate" | "advanced") => {
+    const handleLevelSelect = (level: "fundamental" | "intermediate" | "advanced" | "mixed") => {
         const questionCount = getLevelQuestionCount(level);
 
         if (questionCount === 0) {
@@ -83,6 +86,15 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
             difficulty: "Expert",
             points: 30,
             count: getLevelQuestionCount("advanced")
+        },
+        {
+            key: "mixed" as const,
+            title: "Mixed (All Levels)",
+            description: "Questions from all difficulty levels in sequence",
+            icon: "🎯",
+            difficulty: "All Levels",
+            points: "10-30",
+            count: getLevelQuestionCount("mixed")
         }
     ];
 
@@ -119,7 +131,6 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
                                 onChange={(e) => {
                                     const value = e.target.value;
 
-                                    // اجازه خالی بودن یا فقط اعداد
                                     if (value === '' || /^\d+$/.test(value)) {
                                         const numValue = value === '' ? 0 : parseInt(value);
                                         setStartRange(numValue);
@@ -135,7 +146,6 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
 
                                     setStartRange(value);
 
-                                    // تنظیم endRange اگر نیاز باشد
                                     if (endRange < value) {
                                         setEndRange(value);
                                     }
@@ -155,7 +165,6 @@ export function StartScreen({ numQuestions, dispatch }: StartScreenProps) {
                                 onChange={(e) => {
                                     const value = e.target.value;
 
-                                    // اجازه خالی بودن یا فقط اعداد
                                     if (value === '' || /^\d+$/.test(value)) {
                                         const numValue = value === '' ? 0 : parseInt(value);
                                         setEndRange(numValue);
