@@ -18,6 +18,8 @@ export interface ExplanationModalProps {
 
 export type QuizStatus= "loading" | "error" | "ready" | "active" | "finished"
 
+export type LevelType = "fundamental" | "intermediate" | "advanced" | "mixed";
+
 export interface QuizState {
     questions: Question[];
     status: "loading" | "error" | "ready" | "active" | "finished";
@@ -26,7 +28,7 @@ export interface QuizState {
     points: number;
     highScore: number;
     secondsRemaining: number | null;
-    selectedLevel: "fundamental" | "intermediate" | "advanced" | null;
+    selectedLevel: LevelType | null;
     availableQuestions: {
         fundamental: Question[];
         intermediate: Question[];
@@ -91,6 +93,6 @@ export type Action =
     | { type: "finish" }
     | { type: "restart" }
     | { type: "tick" }
-    | { type: "selectLevel"; payload: "fundamental" | "intermediate" | "advanced" }
-    | { type: "selectRange"; payload: { level: "fundamental" | "intermediate" | "advanced"; startIndex: number; endIndex: number } }
-    | { type: "selectLevelWithCount"; payload: { level: "fundamental" | "intermediate" | "advanced"; count: number; startFrom?: number } };
+    | { type: "selectLevel"; payload: LevelType }
+    | { type: "selectRange"; payload: { level: LevelType; startIndex: number; endIndex: number } }
+    | { type: "selectLevelWithCount"; payload: { level: LevelType; count: number; startFrom?: number } };
