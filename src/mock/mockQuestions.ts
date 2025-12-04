@@ -7921,23 +7921,7 @@ export const mockQuestions: Question[] = [
             "- در compile time catch می‌شود\n" +
             "- logic errors را نمی‌گیرد"
     },
-    {
-        "id": 483,
-        "question": "Which of the following will TypeScript catch during development?",
-        "options": [
-            "Accessing property that doesn't exist on objects",
-            "Logic errors in complex sorting algorithms",
-            "API response failures during runtime execution",
-            "Broken HTML layout and structure issues"
-        ],
-        "correctOption": 0,
-        "points": 10,
-        "explanation":"• accessing non-existent properties\n" +
-            "- typos در property یا method names\n" +
-            "- type mismatches\n" +
-            "- در editor با red underline\n" +
-            "- قبل از run کردن code"
-    },
+
     {
         "id": 484,
         "question": "Why is detecting errors at compile-time useful?",
@@ -20124,6 +20108,116 @@ export const mockQuestions: Question[] = [
   - روش صحیح برای به‌روزرسانی state بر اساس مقدار قبلی استفاده از تابع در setState است.
   - در مثال بالا، prev پارامتر state فعلی است و مقدار بازگشتی مقدار جدید است.
   - این روش در شرایطی مثل event های متوالی یا انیمیشن‌ها از بروز خطا جلوگیری می‌کند.
+  `
+    },
+    {
+        id: 1514,
+        question: "What happens when you directly modify a state without using setState in React?",
+        options: [
+            "The component re-renders but shows outdated state values.",
+            "The component doesn’t re-render, and the UI doesn’t update.",
+            "The component crashes with an error.",
+            "React automatically updates the virtual DOM with the new value."
+        ],
+        correctOption: 1,
+        points: 10,
+        explanation: `
+  - در React، state فقط باید از طریق setState (در کامپوننت‌های کلاسی) یا setter تابعی مثل setCount (در useState) تغییر داده شود.
+  - تغییر مستقیم مقدار state باعث نمی‌شود React متوجه تغییر شود، زیرا React از مکانیزم داخلی queue برای هماهنگ‌سازی state و رندر استفاده می‌کند.
+  - نتیجه این است که کامپوننت دوباره رندر نمی‌شود و UI مقدار قدیمی را نمایش می‌دهد.
+  - برای به‌روزرسانی صحیح state همیشه باید از تابع setState یا setterهای useState استفاده کرد تا React چرخه‌ی رندر را مجدداً اجرا کند.
+  `
+    },
+    {
+        id: 1515,
+        question: "What’s the primary reason for React batching multiple setState calls?",
+        options: [
+            "To ensure state updates are always synchronous.",
+            "To optimize rendering and minimize DOM updates.",
+            "To prevent unexpected behavior when state is updated frequently.",
+            "To execute state updates in the exact order they were called."
+        ],
+        correctOption: 1,
+        points: 10,
+        explanation: `
+  - React چند فراخوانی setState را در یک چرخه رندر ترکیب (batch) می‌کند تا از رندرهای غیرضروری جلوگیری کند.
+  - این فرآیند باعث می‌شود همه تغییرات state قبل از به‌روزرسانی DOM پردازش شوند و فقط یک بار رندر انجام شود.
+  - هدف اصلی batching بهینه‌سازی عملکرد (performance optimization) و کاهش تعداد به‌روزرسانی‌های Virtual DOM است.
+  - از React 18 به بعد، batching به‌صورت خودکار برای تمام eventها و Promiseها انجام می‌شود.
+  `
+    },
+    {
+        id: 1516,
+        question: "What will happen if you call a state setter function (setValue) directly within a function outside of useEffect?",
+        options: [
+            "React throws an error, preventing the operation.",
+            "It can cause an infinite render loop if the function is invoked during render.",
+            "The state updates but does not trigger a re-render.",
+            "The update is queued and safely executed after rendering."
+        ],
+        correctOption: 1,
+        points: 10,
+        explanation: `
+  - اگر تابع setter مانند setValue مستقیماً در هنگام رندر یا در تابعی که هر بار در رندر فراخوانی می‌شود اجرا شود، React هر بار state را به‌روزرسانی می‌کند و باعث تکرار بی‌پایان رندرها می‌شود.
+  - این رفتار به دلیل اجرای مجدد کامپوننت پس از هر به‌روزرسانی state اتفاق می‌افتد، که در نتیجه باعث ایجاد یک حلقه رندر بی‌نهایت می‌شود.
+  - برای جلوگیری از این مشکل، باید فراخوانی setter را داخل useEffect یا یک event handler (مثل onClick) قرار داد تا فقط در زمان مناسب اجرا شود.
+  - React در این حالت خطا نمی‌دهد، اما مرورگر یا برنامه ممکن است به‌دلیل حلقه‌ی رندر متوقف شود.
+  `
+    },
+    {
+        id: 1517,
+        question: "What happens when the dependency array of a useEffect is left empty ([])?",
+        options: [
+            "The effect runs only once during the component's initial render.",
+            "The effect does not run at all.",
+            "The effect runs on every state or prop change.",
+            "The effect runs once for each re-render caused by parent components."
+        ],
+        correctOption: 0,
+        points: 10,
+        explanation: `
+  - زمانی که آرایه وابستگی (dependency array) در useEffect خالی باشد، effect فقط یک بار پس از اولین رندر کامپوننت اجرا می‌شود.
+  - این رفتار مشابه متد componentDidMount در کامپوننت‌های کلاسی است.
+  - دلیل آن این است که React تغییر در هیچ وابستگی‌ای را دنبال نمی‌کند، چون آرایه خالی است.
+  - اگر متغیر یا state خاصی را در داخل effect استفاده می‌کنی که در dependency array نیست، هشدار lint دریافت خواهی کرد چون ممکن است داده‌ی آن به‌روز نباشد.
+  `
+    },
+    {
+        id: 1518,
+        question: "What is the role of the cleanup function returned by useEffect?",
+        options: [
+            "It is called to reset all state values to their initial values.",
+            "It performs necessary cleanup tasks like removing event listeners or clearing intervals when the component unmounts or updates.",
+            "It runs every time a state value is updated in the dependency array.",
+            "It triggers a re-render after every completed effect."
+        ],
+        correctOption: 1,
+        points: 10,
+        explanation: `
+  - تابع cleanup در useEffect برای پاک‌سازی منابعی استفاده می‌شود که ممکن است باعث memory leak یا رفتارهای ناخواسته شوند.
+  - این تابع معمولاً برای حذف event listenerها، متوقف کردن intervalها، یا لغو درخواست‌های async هنگام unmount یا قبل از اجرای دوباره effect به کار می‌رود.
+  - React ابتدا cleanup effect قبلی را اجرا می‌کند و سپس effect جدید را اعمال می‌کند.
+  - در نتیجه، cleanup تضمین می‌کند که کامپوننت‌ها منابع خود را به‌درستی آزاد کنند و عملکرد بهینه داشته باشند.
+  `
+    },
+    {
+        id: 1519,
+        question: "When does the cleanup function inside useEffect run in React?",
+        options: [
+            "Only once after the component’s first render.",
+            "Only when the component unmounts.",
+            "Before the effect re-runs and when the component unmounts.",
+            "After every re-render, even if dependencies didn’t change."
+        ],
+        correctOption: 2,
+        points: 10,
+        explanation: `
+  - تابع cleanup در useEffect دو بار اجرا می‌شود: 
+    1. درست قبل از اجرای دوباره همان effect (زمانی که یکی از وابستگی‌ها تغییر کرده باشد)،  
+    2. هنگام unmount شدن کامپوننت برای آزادسازی منابع.
+  - این رفتار باعث می‌شود event listenerها، تایمرها و سایر منابع همیشه در زمان مناسب پاک‌سازی شوند.
+  - اگر آرایه وابستگی خالی باشد، cleanup فقط هنگام unmount اجرا می‌شود چون effect دوباره اجرا نخواهد شد.
+  - این الگو از بروز memory leak و رفتارهای ناخواسته در چرخه عمر کامپوننت جلوگیری می‌کند.
   `
     }
 
