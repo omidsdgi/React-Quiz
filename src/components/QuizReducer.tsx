@@ -1,4 +1,4 @@
-import {QuizState, Question, Action,} from "../type/QuizTypes";
+import {QuizState, Question, Action, LevelType} from "../type/QuizTypes";
 import {mockQuestions} from "../mock/mockQuestions";
 
 
@@ -20,7 +20,12 @@ export const initialState :QuizState= {
     }
 }
 
-function getQuestionsByLevel(level: "fundamental" | "intermediate" | "advanced"): Question[] {
+function getQuestionsByLevel(level: LevelType): Question[] {
+    // اگر mixed باشه، همه سوالات رو برگردون
+    if (level === "mixed") {
+        return mockQuestions;
+    }
+
     const pointsMap = {
         fundamental: 10,
         intermediate: 20,
@@ -31,7 +36,7 @@ function getQuestionsByLevel(level: "fundamental" | "intermediate" | "advanced")
 }
 
 function getQuestionsWithRange(
-    level: "fundamental" | "intermediate" | "advanced",
+    level: LevelType,
     startIndex: number,
     count: number
 ): Question[] {
@@ -69,12 +74,12 @@ export function QuizReducer(state:QuizState,action:Action):QuizState {
                     ? state.points +(question.points ||0)
                     :state.points,
             }
-            case "nextQuestion":
-                return {
-                    ...state,
-                    index:state.index + 1,
-                    answer:null
-                }
+        case "nextQuestion":
+            return {
+                ...state,
+                index:state.index + 1,
+                answer:null
+            }
 
         case "finish":
             return {
