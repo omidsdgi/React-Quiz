@@ -9015,11 +9015,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":"• دنباله‌ای از requests وابسته که render را تاخیر می‌اندازند\n" +
-            "- component A mount → fetch data → render child B → child B fetch\n" +
-            "- هر request منتظر قبلی است\n" +
-            "- loading time کل جمع تمام requests\n" +
-            "- با parallel fetching یا SSR قابل حل است"
+        "explanation":"• request های network به‌صورت sequential و وابسته\n" +
+            "• هر request منتظر complete شدن قبلی\n" +
+            "• delay قابل توجه در rendering\n" +
+            "• مثال: fetch component → wait → fetch data → wait\n" +
+            "• در CSR شایع است چون component ها cascade load می‌شوند\n" +
+            "• نکته: Server Components این مشکل را با fetching در server حل می‌کنند"
     },
     {
         "id": 549,
@@ -9032,11 +9033,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":"• data fetching قبل از render HTML روی server انجام می‌شود\n" +
-            "- server منتظر می‌ماند تا data آماده شود\n" +
-            "- سپس complete HTML با data به client ارسال می‌شود\n" +
-            "- no loading states برای initial render\n" +
-            "- این تفاوت اصلی با CSR است"
+        "explanation":  "• قبل از rendering HTML در سمت server\n" +
+            "• server منتظر fetch شدن تمام داده‌ها\n" +
+            "• سپس HTML کامل با داده‌ها render می‌شود\n" +
+            "• برخلاف CSR که بعد از load شدن JavaScript\n" +
+            "• کاربر HTML کامل و با محتوا دریافت می‌کند\n" +
+            "• نکته: در App Router می‌توانید مستقیماً await fetch() کنید"
     },
     {
         "id": 550,
@@ -9049,11 +9051,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":"• re-rendering static HTML با JavaScript برای interactive کردن\n" +
-            "- server HTML را render می‌کند (non-interactive)\n" +
-            "- client JavaScript را execute می‌کند\n" +
-            "- event handlers attach می‌شوند\n" +
-            "- React component tree با DOM sync می‌شود"
+        "explanation": "• تبدیل static HTML به اپلیکیشن React تعاملی\n" +
+            "• server HTML استاتیک بدون JavaScript می‌فرستد\n" +
+            "• JavaScript اجرا شده و React HTML را hydrate می‌کند\n" +
+            "• event handlerها attach شده و interactive می‌شوند\n" +
+            "• پل بین SSR و full functionality\n" +
+            "• نکته: hydration باید سریع باشد، کاهش JS bundle کمک می‌کند"
     },
     {
         "id": 551,
@@ -9066,11 +9069,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":"• برای اضافه کردن interactivity به HTML از server\n" +
-            "- server فقط static HTML می‌فرستد\n" +
-            "- JavaScript client-side event handlers را attach می‌کند\n" +
-            "- بدون hydration، buttons/forms کار نمی‌کنند\n" +
-            "- این ترکیب SSR (speed) + CSR (interactivity) است"
+        "explanation": "• اضافه کردن interactivity به HTML از قبل رندر شده\n" +
+            "• HTML server-rendered فقط محتوای استاتیک است\n" +
+            "• hydration باعث کار کردن دکمه‌ها و فرم‌ها می‌شود\n" +
+            "• React component tree را در client بازسازی می‌کند\n" +
+            "• DOM structure تغییر نمی‌کند، فقط JS functionality اضافه می‌شود\n" +
+            "• نکته: Next.js خودکار hydration را مدیریت می‌کند"
     },
     {
         "id": 552,
@@ -9083,11 +9087,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-        "explanation":"• SSR چون HTML کامل بلافاصله در دسترس crawlers است\n" +
-            "- search engine bots می‌توانند content را فوراً ببینند\n" +
-            "- در CSR، bots باید منتظر JavaScript execution شوند\n" +
-            "- meta tags و content در initial HTML load هستند\n" +
-            "- indexing سریع‌تر و بهتر انجام می‌شود"
+        "explanation": "• Server-Side Rendering (SSR) بهترین برای SEO\n" +
+            "• crawler ها HTML کامل از سرور دریافت می‌کنند\n" +
+            "• محتوا بلافاصله قابل خواندن بدون JavaScript\n" +
+            "• در  ،CSR crawler ها ممکن است محتوا را نبینند\n" +
+            "• meta tags و محتوا در HTML اولیه موجود است\n" +
+            "• نکته: برای بهترین SEO، SSR/SSG + structured data استفاده کنید"
     },
     {
         "id": 553,
@@ -9100,11 +9105,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":"• SSR چون content نیاز به SEO دارد و mostly static است\n" +
-            "- blog posts باید توسط search engines پیدا شوند\n" +
-            "- محتوا بیشتر read-only است\n" +
-            "- fast initial load برای readers مهم است\n" +
-            "- SSG (Static Site Generation) هم گزینه عالی است"
+        "explanation": "• SSR یا SSG برای blog ها مناسب است\n" +
+            "• محتوای blog ها معمولاً استاتیک و کم تغییر\n" +
+            "• SEO برای blog ها بسیار مهم است\n" +
+            "• crawler ها محتوا را راحت index می‌کنند\n" +
+            "• initial page load سریع‌تر با HTML آماده\n" +
+            "• نکته: SSG با ISR ایده‌آل است - سرعت static + قابلیت update"
     },
     {
         "id": 554,
