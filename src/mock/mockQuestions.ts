@@ -9123,11 +9123,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":"• visibility آن‌ها وابسته به search engine indexing است\n" +
-            "- اکثر traffic از Google و search engines می‌آید\n" +
-            "- بدون SEO خوب، محتوا پیدا نمی‌شود\n" +
-            "- blogs و news sites به organic traffic وابسته‌اند\n" +
-            "- ranking در search results مستقیماً بر revenue اثر دارد"
+        "explanation": "• وابستگی به traffic ارگانیک از موتورهای جستجو\n" +
+            "• visibility در search results = تعداد بازدیدکننده\n" +
+            "• بدون SEO خوب، محتوای با کیفیت دیده نمی‌شود\n" +
+            "• کاربران از Google می‌آیند نه مستقیم\n" +
+            "• رقابت بالا در search results\n" +
+            "• نکته: metadata، structured data، sitemap و performance هم مهم هستند"
     },
     {
         "id": 555,
@@ -9140,11 +9141,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":"• CSR چون برنامه‌های interactive نیاز به frequent updates دارند\n" +
-            "- مثل dashboards، admin panels، real-time apps\n" +
-            "- client-side state management راحت‌تر است\n" +
-            "- instant updates بدون server round-trips\n" +
-            "- SEO کمتر اهمیت دارد در این نوع apps"
+        "explanation": "• Client-Side Rendering (CSR) برای اپلیکیشن‌های تعاملی\n" +
+            "• مناسب dashboards، tools و SPAs که SEO اولویت ندارد\n" +
+            "• تمام logic در client → تعاملات سریع و fluid\n" +
+            "• navigation فوری بدون reload\n" +
+            "• state management و real-time updates آسان‌تر\n" +
+            "• نکته: در Next.js با 'use client' می‌توانید CSR و SSR را ترکیب کنید"
     },
     {
         "id": 556,
@@ -9157,11 +9159,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":"• SSG: Static Site Generation - صفحات در build time ساخته می‌شوند\n" +
-            "- ISR: Incremental Static Regeneration - update کردن static pages\n" +
-            "- SSG برای محتوای ثابت، ISR برای محتوای کم‌تغییر\n" +
-            "- هر دو performance عالی دارند\n" +
-            "- ISR ترکیب مزایای static و dynamic است"
+        "explanation": "• SSG = Static Site Generation\n" +
+            "• ISR = Incremental Static Regeneration\n" +
+            "• SSG صفحات را در build time استاتیک می‌سازد\n" +
+            "• ISR امکان update بدون rebuild کامل\n" +
+            "• ترکیب سرعت static files + قابلیت update\n" +
+            "• نکته: ISR با revalidate option و بهترین حالت برای سایت‌های گاه update شونده"
     },
     {
         "id": 557,
@@ -9174,11 +9177,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":"• static در build time انجام می‌شود، pages از قبل آماده‌اند\n" +
-            "- dynamic در request time، هر request صفحه جدید می‌سازد\n" +
-            "- static خیلی سریع‌تر اما محدودتر است\n" +
-            "- dynamic برای personalized content لازم است\n" +
-            "- Next.js هر دو را support می‌کند"
+        "explanation": "• static در build time، dynamic در request time\n" +
+            "• static: HTML از قبل آماده و سریع‌تر\n" +
+            "• dynamic: برای محتوای personalized/real-time\n" +
+            "• static مناسب محتوای ثابت (blog posts)\n" +
+            "• dynamic مناسب dashboards و user-specific content\n" +
+            "• نکته: Next.js اجازه ترکیب هر دو در یک پروژه را می‌دهد"
     },
     {
         "id": 558,
@@ -9191,11 +9195,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":"• زمانی که بزرگترین element قابل مشاهده render می‌شود\n" +
-            "- معمولاً hero image، video یا text block بزرگ\n" +
-            "- یکی از Core Web Vitals برای performance\n" +
-            "- باید زیر 2.5 ثانیه باشد برای good UX\n" +
-            "- SSR معمولاً LCP بهتری نسبت به CSR دارد"
+        "explanation": "• زمان رندر بزرگ‌ترین المان قابل مشاهده در viewport\n" +
+            "• نشان‌دهنده سرعت perceived loading\n" +
+            "• معمولاً بزرگ‌ترین تصویر، video یا بلوک متنی\n" +
+            "• LCP < 2.5s خوب، 2.5-4 نیاز به بهبود، >4 ضعیف\n" +
+            "• یکی از Core Web Vitals گوگل\n" +
+            "• نکته: optimize کردن تصاویر، SSR و inline critical CSS برای بهبود"
     },
     {
         "id": 559,
@@ -9208,11 +9213,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":"• بعد از mount شدن component در client انجام می‌شود\n" +
-            "- HTML خالی اول load می‌شود\n" +
-            "- سپس JavaScript execute می‌شود\n" +
-            "- بعد component mount می‌شود و data fetch می‌کند\n" +
-            "- این باعث waterfall و loading states می‌شود"
+        "explanation":"• بعد از mount شدن component در client\n" +
+            "• ابتدا JavaScript دانلود و اجرا می‌شود\n" +
+            "• component mount → useEffect اجرا → API requests\n" +
+            "• برخلاف SSR که data fetching قبل از HTML generation\n" +
+            "• کاربر ابتدا loading state می‌بیند سپس محتوا\n" +
+            "• نکته: این تأخیر دلیل سرعت بیشتر SSR برای initial load است"
     },
     {
         "id": 560,
