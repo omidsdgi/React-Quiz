@@ -9420,136 +9420,186 @@ export const mockQuestions: Question[] = [
             "• می‌توانید با use client کل کامپوننت را به Client Component تبدیل کنید\n" +
             "• نکته: اگر کامپوننتی به browser APIs نیاز دارد آن را به Client Component تبدیل کنید یا منطق وابسته به browser را در useEffect قرار دهید"
     },
-//     {
-//             "id": 541,
-//             "question": "What best describes Next.js in relation to React?",
-//             "options": [
-//                 "A standalone JavaScript library for DOM manipulation",
-//                 "A meta-framework built on top of React for web applications",
-//                 "A database engine designed for React components",
-//                 "A CSS preprocessor used with React"
-//             ],
-//             "correctOption": 1,
-//             "points": 10,
-//  "explanation":""
-//         },
-//         {
-//             "id": 542,
-//             "question": "What does it mean that Next.js is an opinionated framework?",
-//             "options": [
-//                 "It enforces a specific set of conventions for building React apps",
-//                 "It restricts the use of JavaScript and JSX syntax",
-//                 "It prevents developers from using React hooks directly",
-//                 "It automatically converts all React code into static HTML"
-//             ],
-//             "correctOption": 0,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 543,
-//             "question": "Which statement best explains why Next.js is called a meta-framework?",
-//             "options": [
-//                 "It converts React into a server-only framework",
-//                 "It removes the need for React components entirely",
-//                 "it replaces react's component model with template files",
-//                 "It provides a higher-level structure built around react's ecosystem",
-//             ],
-//             "correctOption": 3,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 544,
-//             "question": "Which of the following is NOT a key feature of Next.js?",
-//             "options": [
-//                 "File-based routing conventions",
-//                 "Server-side rendering and static generation",
-//                 "CSS-only component styling system",
-//                 "Server-side data fetching and mutation"
-//             ],
-//             "correctOption": 2,
-//             "points": 10,
-//  "explanation":""
-//         },
-//         {
-//             "id": 545,
-//             "question": "What advantage does Next.js provide over plain React for full-stack development?",
-//             "options": [
-//                 "It removes the need to write any server-side code at all",
-//                 "It integrates server-side rendering, routing, and data fetching into one framework",
-//                 "It guarantees no JavaScript will be sent to the client",
-//                 "It automatically generates database schemas from components"
-//             ],
-//             "correctOption": 1,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 546,
-//             "question": "Which of the following React features require framework-level integration provided by Next.js?",
-//             "options": [
-//                 "Suspense, Server Components, and Server Actions",
-//                 "State management using useState and useEffect",
-//                 "Styling with CSS Modules and inline styles",
-//                 "DOM manipulation with document.querySelector"
-//             ],
-//             "correctOption": 0,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 547,
-//             "question": "What does 'file-based routing' in Next.js refer to?",
-//             "options": [
-//                 "Manually defining routes in a central routing configuration",
-//                 "Routing structure automatically generated from the filesystem",
-//                 "Routing based on URL query parameters only",
-//                 "Using server middleware for navigation"
-//             ],
-//             "correctOption": 1,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 548,
-//             "question": "Which rendering types are supported by Next.js out of the box?",
-//             "options": [
-//                 "Only client-side rendering and static generation",
-//                 "Server-side rendering (dynamic and static) and client-side rendering",
-//                 "Only static generation at build time",
-//                 "Server-only rendering without client hydration support"
-//             ],
-//             "correctOption": 1,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 549,
-//             "question": "How does Next.js handle data fetching compared to plain React?",
-//             "options": [
-//                 "Next.js allows fetching and mutating data directly on the server before rendering",
-//                 "Next.js requires all data fetching to happen on the client only",
-//                 "Next.js uses Redux for all data operations",
-//                 "Next.js prevents using asynchronous operations in components"
-//             ],
-//             "correctOption": 0,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 560,
-//             "question": "What is a major benefit of Next.js optimizations?",
-//             "options": [
-//                 "Automatically converting JavaScript into a native mobile app",
-//                 "Removing the need to minify or bundle any client assets",
-//                 "Improved performance and SEO through pre-rendering and smart caching",
-//                 "Enforcing a single large client bundle for easier caching"
-//             ],
-//             "correctOption": 2,
-//             "points": 30,
-//  "explanation":""
-//         },
+    {
+        "id": 571,
+        "question": "What best describes Next.js in relation to React?",
+        "options": [
+            "A standalone JavaScript library for DOM manipulation",
+            "A meta-framework built on top of React for web applications",
+            "A database engine designed for React components",
+            "A CSS preprocessor used with React"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• Next.js یک meta-framework است که روی React ساخته شده است\n" +
+            "• framework اضافی است که ساختار و قابلیت‌های بیشتری به React اضافه می‌کند\n" +
+            "• React فقط یک UI library است اما Next.js یک full-stack framework است\n" +
+            "• قابلیت‌هایی مثل routing و SSR و data fetching و API routes را فراهم می‌کند\n" +
+            "• Next.js نه یک library مستقل است و نه database engine یا CSS preprocessor\n" +
+            "• نکته: اگر React را کتابخانه‌ای برای ساختن UI بدانیم Next.js پلتفرمی کامل برای ساختن وب اپلیکیشن است که تمام نیازهای یک پروژه مدرن را پوشش می‌دهد"
+    },
+    {
+        "id": 572,
+        "question": "What does it mean that Next.js is an opinionated framework?",
+        "options": [
+            "It enforces a specific set of conventions for building React apps",
+            "It restricts the use of JavaScript and JSX syntax",
+            "It prevents developers from using React hooks directly",
+            "It automatically converts all React code into static HTML"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• opinionated بودن یعنی Next.js یک سری قواعد و conventions مشخص دارد که باید رعایت شوند\n" +
+            "• ساختار folder-based routing و قرارگیری فایل‌ها و نام‌گذاری‌های خاصی را enforce می‌کند\n" +
+            "• این رویکرد انتخاب‌ها را محدود می‌کند اما consistency و best practices را تضمین می‌کند\n" +
+            "• برخلاف React که flexible است Next.js مسیر مشخصی برای انجام کارها دارد\n" +
+            "• این محدودیت‌ها در واقع مزیت هستند چون تصمیم‌گیری را ساده‌تر می‌کنند\n" +
+            "• نکته: opinionated frameworks برای تیم‌ها و پروژه‌های بزرگ مناسب‌تر هستند چون کد یکپارچه‌تر و قابل نگهداری‌تر می‌شود"
+    },
+    {
+        "id": 543,
+        "question": "Which statement best explains why Next.js is called a meta-framework?",
+        "options": [
+            "It converts React into a server-only framework",
+            "It removes the need for React components entirely",
+            "it replaces react's component model with template files",
+            "It provides a higher-level structure built around react's ecosystem",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• meta-framework یعنی frameworkی که روی framework دیگری یعنی React ساخته شده است\n" +
+            "• لایه‌ای از قابلیت‌ها و ساختار را روی React ecosystem اضافه می‌کند\n" +
+            "• React را replace نمی‌کند بلکه آن را گسترش می‌دهد و ابزارهای بیشتری ارائه می‌دهد\n" +
+            "• قابلیت‌هایی مثل routing و SSR و data fetching و optimization را می‌افزاید\n" +
+            "• به عنوان یک abstraction layer سطح بالاتر عمل می‌کند\n" +
+            "• نکته: meta-frameworkها مثل Next.js و Remix یا Gatsby روی React بنا شده‌اند و هرکدام رویکرد خاص خود را برای مسائل مشترک دارند"
+    },
+    {
+        "id": 574,
+        "question": "Which of the following is NOT a key feature of Next.js?",
+        "options": [
+            "File-based routing conventions",
+            "Server-side rendering and static generation",
+            "CSS-only component styling system",
+            "Server-side data fetching and mutation"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":"• Next.js قابلیت‌های کلیدی مثل file-based routing و SSR و SSG و server-side data fetching دارد\n" +
+            "• CSS-only component styling system جزو features Next.js نیست\n" +
+            "• Next.js از CSS Modules و Sass و CSS-in-JS و Tailwind پشتیبانی می‌کند اما styling system خاصی ندارد\n" +
+            "• Next.js روی styling تمرکز ندارد و انتخاب آن را به developer واگذار می‌کند\n" +
+            "• سایر گزینه‌ها یعنی routing و SSR و server-side mutations همگی core features هستند\n" +
+            "• نکته: Next.js در مورد styling unopinionated است و به شما اجازه می‌دهد هر روشی که ترجیح می‌دهید استفاده کنید"
+    },
+    {
+        "id": 575,
+        "question": "What advantage does Next.js provide over plain React for full-stack development?",
+        "options": [
+            "It removes the need to write any server-side code at all",
+            "It integrates server-side rendering, routing, and data fetching into one framework",
+            "It guarantees no JavaScript will be sent to the client",
+            "It automatically generates database schemas from components"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• Next.js routing و SSR و data fetching را در یک framework یکپارچه ارائه می‌دهد\n" +
+            "• در React خام باید خودتان router نصب کنید و SSR setup کنید و backend جداگانه بسازید\n" +
+            "• Next.js با API Routes و Server Actions امکان ساخت backend را می‌دهد\n" +
+            "• نیازی به setup کردن Express یا backend framework جداگانه نیست\n" +
+            "• تمام قابلیت‌های مورد نیاز یک full-stack app در یک framework وجود دارد\n" +
+            "• نکته: Next.js به شما اجازه می‌دهد frontend و backend را در یک پروژه و با یک زبان یعنی JavaScript یا TypeScript بنویسید که productivity را افزایش می‌دهد"
+    },
+    {
+        "id": 576,
+        "question": "Which of the following React features require framework-level integration provided by Next.js?",
+        "options": [
+            "Suspense, Server Components, and Server Actions",
+            "State management using useState and useEffect",
+            "Styling with CSS Modules and inline styles",
+            "DOM manipulation with document.querySelector"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• Suspense و Server Components و Server Actions به framework integration نیاز دارند\n" +
+            "• این featureها در React خام قابل استفاده نیستند و به build tool و runtime خاصی نیاز دارند\n" +
+            "• Next.js infrastructure لازم برای این قابلیت‌ها را فراهم می‌کند\n" +
+            "• useState و useEffect hooks معمولی React هستند که framework خاصی نمی‌خواهند\n" +
+            "• CSS Modules و styling نیز به framework خاص نیستند\n" +
+            "• نکته: React 18 featureهای جدیدی مثل Server Components معرفی کرد که فقط در frameworkهایی مثل Next.js App Router قابل استفاده هستند"
+    },
+    {
+        "id": 577,
+        "question": "What does 'file-based routing' in Next.js refer to?",
+        "options": [
+            "Manually defining routes in a central routing configuration",
+            "Routing structure automatically generated from the filesystem",
+            "Routing based on URL query parameters only",
+            "Using server middleware for navigation"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• file-based routing یعنی ساختار فولدرها و فایل‌ها تعیین‌کننده مسیرهای URL است\n" +
+            "• نیازی به تعریف دستی routes در فایل config نیست\n" +
+            "• فایل app/about/page.js به‌طور خودکار route به مسیر /about را می‌سازد\n" +
+            "• این رویکرد ساده‌تر و intuitive تر از manual routing است\n" +
+            "• ساختار filesystem و ساختار URL یکپارچه می‌شوند\n" +
+            "• نکته: file-based routing یکی از قدرتمندترین ویژگی‌های Next.js است که complexity مدیریت routes را به‌شدت کاهش می‌دهد"
+    },
+    {
+        "id": 578,
+        "question": "Which rendering types are supported by Next.js out of the box?",
+        "options": [
+            "Only client-side rendering and static generation",
+            "Server-side rendering (dynamic and static) and client-side rendering",
+            "Only static generation at build time",
+            "Server-only rendering without client hydration support"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• Next.js از SSR یعنی پویا و استاتیک و CSR به‌صورت built-in پشتیبانی می‌کند\n" +
+            "• می‌توانید static generation یعنی SSG برای صفحات استاتیک داشته باشید\n" +
+            "• server-side rendering یعنی SSR برای محتوای dynamic قابل استفاده است\n" +
+            "• client-side rendering یعنی CSR با Client Components امکان‌پذیر است\n" +
+            "• حتی می‌توانید این روش‌ها را در یک پروژه ترکیب کنید\n" +
+            "• نکته: انعطاف‌پذیری Next.js در rendering به شما اجازه می‌دهد بهترین استراتژی را برای هر صفحه انتخاب کنید"
+    },
+    {
+        "id": 579,
+        "question": "How does Next.js handle data fetching compared to plain React?",
+        "options": [
+            "Next.js allows fetching and mutating data directly on the server before rendering",
+            "Next.js requires all data fetching to happen on the client only",
+            "Next.js uses Redux for all data operations",
+            "Next.js prevents using asynchronous operations in components"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• Next.js از SSR یعنی پویا و استاتیک و CSR به‌صورت built-in پشتیبانی می‌کند\n" +
+            "• می‌توانید static generation یعنی SSG برای صفحات استاتیک داشته باشید\n" +
+            "• server-side rendering یعنی SSR برای محتوای dynamic قابل استفاده است\n" +
+            "• client-side rendering یعنی CSR با Client Components امکان‌پذیر است\n" +
+            "• حتی می‌توانید این روش‌ها را در یک پروژه ترکیب کنید\n" +
+            "• نکته: انعطاف‌پذیری Next.js در rendering به شما اجازه می‌دهد بهترین استراتژی را برای هر صفحه انتخاب کنید"
+    },
+    {
+        "id": 580,
+        "question": "What is a major benefit of Next.js optimizations?",
+        "options": [
+            "Automatically converting JavaScript into a native mobile app",
+            "Removing the need to minify or bundle any client assets",
+            "Improved performance and SEO through pre-rendering and smart caching",
+            "Enforcing a single large client bundle for easier caching"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• Next.js optimization های خودکاری برای performance و SEO ارائه می‌دهد\n" +
+            "• pre-rendering یعنی SSR یا SSG باعث بهبود SEO می‌شود چون crawler ها محتوای کامل را می‌بینند\n" +
+            "• smart caching استراتژی‌های پیشرفته برای cache کردن دارد\n" +
+            "• automatic code splitting و image optimization و font optimization انجام می‌دهد\n" +
+            "• این optimization ها بدون نیاز به configuration دستی اعمال می‌شوند\n" +
+            "• نکته: Next.js بسیاری از  best practice های web performance را به‌صورت پیش‌فرض اعمال می‌کند که در React خام باید دستی پیاده‌سازی شوند"
+    },
 //     {
 //         "id": 561,
 //         "question": "Which approach is recommended for navigating between internal pages in a Next.js application?",
