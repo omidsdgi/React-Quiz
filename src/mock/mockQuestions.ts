@@ -9287,12 +9287,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":"• Hydration فرآیند اتصال React به HTML رندر شده از سمت سرور است\n" +
-            "- event handlerها و interactivity به HTML استاتیک اضافه می‌شود\n" +
-            "- state management فعال شده و کامپوننت‌ها قابل re-render می‌شوند" +
-            "-بدون hydration، HTML فقط نمایشی است و کاربر نمی‌تواند تعامل داشته باشد\n" +
-            "- این فرآیند بین SSR و CSR پل ارتباطی ایجاد می‌کنداجرا می‌شوند\n" +
-            "- بعد از hydration، app مثل CSR app عمل می‌کند"
+        "explanation": "• Hydration فرآیند اتصال React به HTML رندر شده از سمت سرور است\n" +
+            "• event handlerها و interactivity به HTML استاتیک اضافه می‌شوند تا کامپوننت‌ها قابل تعامل شوند\n" +
+            "• React component tree را در سمت کلاینت بازسازی کرده و با DOM موجود تطبیق می‌دهد\n" +
+            "• state management فعال شده و کامپوننت‌ها قابل re-render می‌شوند\n" +
+            "• بدون hydration محتوای HTML فقط نمایشی است و کاربر نمی‌تواند تعامل داشته باشد\n" +
+            "• نکته: Hydration errors زمانی رخ می‌دهند که ساختار DOM سمت سرور با سمت کلاینت مطابقت نداشته باشد و همیشه باید مطمئن شوید که داده‌های مشابهی در server و client استفاده می‌شود"
     },
     {
         "id": 564,
@@ -9305,11 +9305,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":"• اضافه کردن interactivity و event handlers از طریق hydration\n" +
-            "- 'dry' HTML یعنی static بدون JavaScript\n" +
-            "- 'watering' یعنی زنده کردن آن با JS\n" +
-            "- metaphor برای hydration process\n" +
-            "- بعد از watering، HTML 'alive' و interactive می‌شود"
+        "explanation": "• Hydration فرآیند اتصال React به HTML رندر شده از سمت سرور است\n" +
+            "• event handler ها و interactivity به HTML استاتیک اضافه می‌شوند تا کامپوننت‌ها قابل تعامل شوند\n" +
+            "• React component tree را در سمت کلاینت بازسازی کرده و با DOM موجود تطبیق می‌دهد\n" +
+            "• state management فعال شده و کامپوننت‌ها قابل re-render می‌شوند\n" +
+            "• بدون hydration محتوای HTML فقط نمایشی است و کاربر نمی‌تواند تعامل داشته باشد\n" +
+            "• نکته: Hydration errors زمانی رخ می‌دهند که ساختار DOM سمت سرور با سمت کلاینت مطابقت نداشته باشد و همیشه باید مطمئن شوید که داده‌های مشابهی در server و client استفاده می‌شود"
     },
     {
         "id": 565,
@@ -9322,11 +9323,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":"• client component tree باید با server HTML structure match کند\n" +
-            "- React مقایسه می‌کند expected tree با actual DOM\n" +
-            "- اگر match نباشد، hydration error می‌دهد\n" +
-            "- consistency بین server و client ضروری است\n" +
-            "- این validation باعث می‌شود hydration safe باشد"
+        "explanation": "• React باید مطمئن شود که component tree سمت کلاینت با HTML سمت سرور کاملاً مطابقت دارد\n" +
+            "• ساختار DOM و ترتیب المان‌ها و محتوای آنها باید یکسان باشند\n" +
+            "• اگر تفاوتی وجود داشته باشد hydration mismatch رخ می‌دهد و خطا ایجاد می‌شود\n" +
+            "• React نمی‌تواند بدون تطبیق کامل event handler ها را به‌درستی متصل کند\n" +
+            "• این بررسی برای جلوگیری از bug های پنهان و رفتار غیرمنتظره اپلیکیشن ضروری است\n" +
+            "• نکته: برای جلوگیری از hydration mismatch از تولید محتوای تصادفی یا استفاده از API های مخصوص browser مثل window در زمان رندر اولیه خودداری کنید"
     },
     {
         "id": 566,
@@ -9339,11 +9341,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":"• hydration fail می‌شود و React از scratch re-render می‌کند\n" +
-            "- warning در console نمایش داده می‌شود\n" +
-            "- performance penalty چون DOM دوباره ساخته می‌شود\n" +
-            "- ممکن است visual flicker رخ دهد\n" +
-            "- این mismatch باید حتماً fix شود"
+        "explanation":"• اگر component tree کلاینت با DOM سرور متفاوت باشد hydration mismatch رخ می‌دهد\n" +
+            "• React نمی‌تواند HTML موجود را adopt کند و مجبور به شروع از نو و re-render کامل می‌شود\n" +
+            "• کل component tree از ابتدا re-render می‌شود که performance را به‌شدت کاهش می‌دهد\n" +
+            "• warning در console نمایش داده می‌شود که مکان و نوع مشکل را مشخص می‌کند\n" +
+            "• تمام مزایای SSR یعنی سرعت نمایش اولیه از دست می‌رود و ممکن است flash of incorrect content برای کاربر قابل مشاهده باشد\n" +
+            "• نکته: برای debug کردن hydration errors به console warnings دقت کنید چون React معمولاً مکان دقیق اختلاف را نشان می‌دهد"
     },
     {
         "id": 567,
@@ -9356,11 +9359,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":"• استفاده از browser APIs (window، document) در server rendering\n" +
-            "- این APIs در server وجود ندارند\n" +
-            "- باعث می‌شود output server و client متفاوت باشد\n" +
-            "- باید در useEffect یا client component استفاده شوند\n" +
-            "- typeof window !== 'undefined' check لازم است"
+        "explanation":"• استفاده از browser-only API ها مثل window و document و localStorage در زمان server rendering\n" +
+            "• این  API ها در سمت سرور وجود ندارند و undefined هستند\n" +
+            "• اگر کدی به این API ها در rendering وابسته باشد خروجی server و client متفاوت می‌شود\n" +
+            "• باید این API ها را فقط در useEffect یا بعد از mount استفاده کنید\n" +
+            "• دلایل دیگر شامل تاریخ و زمان متفاوت و محتوای تصادفی و HTML nesting نادرست است\n" +
+            "• نکته: برای استفاده ایمن از browser APIs آنها را در useEffect قرار دهید یا با typeof window !== 'undefined' بررسی کنید"
     },
     {
         "id": 568,
@@ -9373,11 +9377,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":"• browser HTML نامعتبر را automatically اصلاح می‌کند، DOM واقعی تغییر می‌کند\n" +
-            "- مثلاً <p> داخل <p> دیگر invalid است\n" +
-            "- browser آن را restructure می‌کند\n" +
-            "- React virtual DOM با actual DOM فرق می‌کند\n" +
-            "- باید HTML معتبر بنویسید تا hydration درست کار کند"
+        "explanation":"• HTML نادرست nested شده توسط browser به‌صورت خودکار اصلاح می‌شود\n" +
+            "• ساختار DOM واقعی که browser می‌سازد با Virtual DOM React متفاوت می‌شود\n" +
+            "• مثال قرار دادن div داخل p توسط browser به دو المان جدا تبدیل می‌شود\n" +
+            "• React انتظار ساختار اولیه را دارد اما browser ساختار اصلاح‌شده را ایجاد کرده است\n" +
+            "• این اختلاف ساختاری باعث hydration mismatch می‌شود\n" +
+            "• نکته: همیشه HTML معتبر و درست nested شده بنویسید و از HTML validators استفاده کنید تا خطاهای nesting را قبل از production پیدا کنید"
     },
     {
         "id": 569,
@@ -9390,11 +9395,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":"• React HTML موجود را discard می‌کند و DOM را rebuild می‌کند\n" +
-            "- چون expected output با actual DOM match نمی‌کند\n" +
-            "- مثلاً استفاده از Date.now() در server و client\n" +
-            "- یا random values که هر بار متفاوت است\n" +
-            "- باید data consistent بین server و client باشد"
+        "explanation":"• اگر داده‌های متفاوتی در server و client استفاده شود محتوای رندر شده متفاوت خواهد بود\n" +
+            "• React نمی‌تواند HTML موجود را با component tree جدید تطبیق دهد\n" +
+            "• React مجبور به discard کردن HTML سرور و rebuild کردن کامل DOM می‌شود\n" +
+            "• تمام مزایای SSR از بین رفته و عملاً مانند CSR عمل می‌کند\n" +
+            "• ممکن است flash of content یا layout shift برای کاربر ایجاد شود\n" +
+            "• نکته: برای داده‌های dynamic مثل تاریخ و زمان آنها را در useEffect update کنید تا hydration تحت تأثیر قرار نگیرد یا از Static Generation با ISR استفاده کنید"
     },
     {
         "id": 570,
@@ -9407,11 +9413,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
-        "explanation":"• از browser APIs مثل window یا document در SSR استفاده نکنید\n" +
-            "- این APIs فقط در client موجودند\n" +
-            "- باید در useEffect یا با 'use client' استفاده شوند\n" +
-            "- یا با typeof window !== 'undefined' check کنید\n" +
-            "- این رایج‌ترین علت hydration errors است"
+        "explanation":"• اجتناب از استفاده browser-only APIs مثل window یا document در زمان SSR\n" +
+            "• این APIها در سرور وجود ندارند و باعث undefined شدن و اختلاف output می‌شوند\n" +
+            "• باید این APIها را در useEffect یا Client Components استفاده کنید\n" +
+            "• useEffect فقط در client اجرا می‌شود و در SSR نادیده گرفته می‌شود\n" +
+            "• می‌توانید با use client کل کامپوننت را به Client Component تبدیل کنید\n" +
+            "• نکته: اگر کامپوننتی به browser APIs نیاز دارد آن را به Client Component تبدیل کنید یا منطق وابسته به browser را در useEffect قرار دهید"
     },
 //     {
 //             "id": 541,
