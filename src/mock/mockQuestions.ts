@@ -8889,7 +8889,7 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":"• سرعت network کاربر: connectionهای کند → prefetch محدودتر\n" +
+        "explanation":"• سرعت network کاربر: connection های کند → prefetch محدودتر\n" +
             "• data usage patterns: mobile users ممکن است محدودیت data داشته باشند\n" +
             "• balance بین performance و مصرف منابع\n" +
             "• استفاده از Network Information API\n" +
@@ -9288,7 +9288,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20,
         "explanation": "• Hydration فرآیند اتصال React به HTML رندر شده از سمت سرور است\n" +
-            "• event handlerها و interactivity به HTML استاتیک اضافه می‌شوند تا کامپوننت‌ها قابل تعامل شوند\n" +
+            "• event handler ها و interactivity به HTML استاتیک اضافه می‌شوند تا کامپوننت‌ها قابل تعامل شوند\n" +
             "• React component tree را در سمت کلاینت بازسازی کرده و با DOM موجود تطبیق می‌دهد\n" +
             "• state management فعال شده و کامپوننت‌ها قابل re-render می‌شوند\n" +
             "• بدون hydration محتوای HTML فقط نمایشی است و کاربر نمی‌تواند تعامل داشته باشد\n" +
@@ -9472,7 +9472,7 @@ export const mockQuestions: Question[] = [
             "• React را replace نمی‌کند بلکه آن را گسترش می‌دهد و ابزارهای بیشتری ارائه می‌دهد\n" +
             "• قابلیت‌هایی مثل routing و SSR و data fetching و optimization را می‌افزاید\n" +
             "• به عنوان یک abstraction layer سطح بالاتر عمل می‌کند\n" +
-            "• نکته: meta-frameworkها مثل Next.js و Remix یا Gatsby روی React بنا شده‌اند و هرکدام رویکرد خاص خود را برای مسائل مشترک دارند"
+            "• نکته: meta-framework ها مثل Next.js و Remix یا Gatsby روی React بنا شده‌اند و هرکدام رویکرد خاص خود را برای مسائل مشترک دارند"
     },
     {
         "id": 574,
@@ -9522,11 +9522,11 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 30,
         "explanation": "• Suspense و Server Components و Server Actions به framework integration نیاز دارند\n" +
-            "• این featureها در React خام قابل استفاده نیستند و به build tool و runtime خاصی نیاز دارند\n" +
+            "• این feature ها در React خام قابل استفاده نیستند و به build tool و runtime خاصی نیاز دارند\n" +
             "• Next.js infrastructure لازم برای این قابلیت‌ها را فراهم می‌کند\n" +
             "• useState و useEffect hooks معمولی React هستند که framework خاصی نمی‌خواهند\n" +
             "• CSS Modules و styling نیز به framework خاص نیستند\n" +
-            "• نکته: React 18 featureهای جدیدی مثل Server Components معرفی کرد که فقط در frameworkهایی مثل Next.js App Router قابل استفاده هستند"
+            "• نکته: React 18 feature های جدیدی مثل Server Components معرفی کرد که فقط در framework هایی مثل Next.js App Router قابل استفاده هستند"
     },
     {
         "id": 577,
@@ -9780,136 +9780,186 @@ export const mockQuestions: Question[] = [
             "• اگر فقط یک کامپوننت نیاز به state دارد نیازی به lifting up نیست\n" +
             "• نکته: برای state management پیچیده‌تر از Context API یا state management libraries استفاده کنید"
     },
-//         {
-//             "id": 571,
-//             "question": "Which behavior correctly describes when a Client Component re-renders?",
-//             "options": [
-//                 "To re-render only when navigation occurs",
-//                 "To re-render when sibling Server Components update",
-//                 "To re-render on every server data fetch automatically",
-//                 "To re-render on local state or prop changes within the component",
-//             ],
-//             "correctOption": 3,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 572,
-//             "question": "Which of the following is NOT suitable for a Server Component?",
-//             "options": [
-//                 "To fetch data from an API using async/await function",
-//                 "To manage interactive form inputs and local state",
-//                 "To render static content for SEO",
-//                 "To output pre-rendered HTML to the client"
-//             ],
-//             "correctOption": 1,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 573,
-//             "question": "Which import restriction is true for Client Components?",
-//             "options": [
-//                 "To import any Server or Client Component without restriction",
-//                 "To import Server Components but not Client Components",
-//                 "To import only static JSON or HTML files",
-//                 "To import only other Client Components ",
-//             ],
-//             "correctOption": 3,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 574,
-//             "question": "Which statement about Server Components and Client Components is NOT true?",
-//             "options": [
-//                 "To Server Components cannot automatically re-render on Client Component state changes",
-//                 "To Server Components can render both Server and Client Components passed as props",
-//                 "To Client Components can handle local state and interactivity",
-//                 "To Client Components are preferred for pre-rendering SEO content"
-//             ],
-//             "correctOption": 3,
-//             "points": 30,
-//  "explanation":""
-//         },
-//     {
-//         "id": 575,
-//         "question": "Which of the following is NOT a common problem with Client-Side Rendering (CSR)?",
-//         "options": [
-//             "Slower initial page load due to JavaScript execution",
-//             "Longer time to interactive on slower devices",
-//             "Reduced SEO performance because content loads after hydration",
-//             "Better accessibility for search engine crawlers and static tools",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 576,
-//         "question": "Which of the following is NOT a common limitation of Server-Side Rendering (SSR)?",
-//         "options": [
-//             "Higher server load due to rendering pages on each request",
-//             "Slower time to first byte for complex pages",
-//             "Automatic client-side interactivity without hydration",
-//             "Longer deployment complexity for dynamic applications"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 577,
-//         "question": "In which rendering method does the UI behave like a function where state changes trigger re-renders?",
-//         "options": [
-//             "Server-Side Rendering (SSR), because server sends updated HTML on each state change",
-//             "Client-Side Rendering (CSR), because state updates directly trigger component re-renders",
-//             "Static Site Generation (SSG), because pages are pre-built and do not respond to state",
-//             "Incremental Static Regeneration (ISR), because state is only updated periodically"
-//         ],
-//         "correctOption":1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 578,
-//         "question": "In React or Next.js, what does it mean when we say 'UI behaves like a function'?",
-//         "options": [
-//             "The UI executes server-side functions to fetch new HTML each time",
-//             "The UI stores all application data and acts as a database",
-//             "The UI is a representation of state and props, automatically updating when data changes",
-//             "The UI does not change even if state or props update",
-//         ],
-//         "correctOption":2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 579,
-//         "question": "How does UI behave differently in CSR versus SSR regarding state and data?",
-//         "options": [
-//             "In CSR, UI updates based on component state; in SSR, UI is generated from server-provided data",
-//             "In CSR, UI is static and does not react to state; in SSR, UI updates automatically on client",
-//             "In CSR, UI fetches server data for every render; in SSR, UI relies on local state only",
-//             "In CSR, UI and server data are identical; in SSR, state drives all interactions"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//         {
-//             "id": 580,
-//             "question": "What is the main purpose of React Server Components (RSC)?",
-//             "options": [
-//                 "To replace all client-side components with server-rendered HTML and eliminate any client-side interactivity entirely, forcing users to rely only on server responses",
-//                 "To allow rendering some components entirely on the server, reducing client bundle size and enabling full-stack patterns",
-//                 "To automatically convert all frontend JavaScript logic into backend APIs without any developer intervention or framework setup",
-//                 "To disable React hooks in client components completely for performance improvements, preventing state and effects from being used in interactive components"
-//             ],
-//             "correctOption": 1,
-//             "points": 30,
-//  "explanation":""
-//         },
+    {
+        "id": 591,
+        "question": "Which behavior correctly describes when a Client Component re-renders?",
+        "options": [
+            "To re-render only when navigation occurs",
+            "To re-render when sibling Server Components update",
+            "To re-render on every server data fetch automatically",
+            "To re-render on local state or prop changes within the component",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• Client Component زمانی re-render می‌شود که local state یا props آن تغییر کند\n" +
+            "• تغییرات state داخلی کامپوننت باعث re-render می‌شود\n" +
+            "• تغییرات props از parent component نیز trigger کننده re-render است\n" +
+            "• این رفتار استاندارد React است که در Next.js نیز اعمال می‌شود\n" +
+            "• Server Components تأثیری در re-render کردن Client Components ندارند\n" +
+            "• نکته: از React.memo برای جلوگیری از unnecessary re-renders در Client Components استفاده کنید"
+    },
+    {
+        "id": 592,
+        "question": "Which of the following is NOT suitable for a Server Component?",
+        "options": [
+            "To fetch data from an API using async/await function",
+            "To manage interactive form inputs and local state",
+            "To render static content for SEO",
+            "To output pre-rendered HTML to the client"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• مدیریت interactive form inputs و local state برای Server Component مناسب نیست\n" +
+            "• Server Components نمی‌توانند از hooks مثل useState استفاده کنند\n" +
+            "• event handlers مثل onClick و onChange در Server Components کار نمی‌کنند\n" +
+            "• برای interactivity باید از Client Components استفاده کرد\n" +
+            "• Server Components فقط برای data fetching و rendering static content مناسب هستند\n" +
+            "• نکته: اگر کامپوننت نیاز به user interaction دارد باید Client Component باشد"
+    },
+    {
+        "id": 593,
+        "question": "Which import restriction is true for Client Components?",
+        "options": [
+            "To import any Server or Client Component without restriction",
+            "To import Server Components but not Client Components",
+            "To import only static JSON or HTML files",
+            "To import only other Client Components ",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• Client Components فقط می‌توانند other Client Components را import کنند\n" +
+            "• نمی‌توانند Server Components را مستقیماً import کنند\n" +
+            "• این محدودیت به دلیل تفاوت execution environment است\n" +
+            "• اگر نیاز به Server Component داشته باشید باید آن را به‌عنوان children یا prop پاس کنید\n" +
+            "• این قانون از mixing نادرست server و client code جلوگیری می‌کند\n" +
+            "• نکته: می‌توانید Server Components را به‌عنوان children به Client Components پاس کنید"
+    },
+    {
+        "id": 594,
+        "question": "Which statement about Server Components and Client Components is NOT true?",
+        "options": [
+            "To Server Components cannot automatically re-render on Client Component state changes",
+            "To Server Components can render both Server and Client Components passed as props",
+            "To Client Components can handle local state and interactivity",
+            "To Client Components are preferred for pre-rendering SEO content"
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• Client Components برای pre-rendering SEO content ترجیح داده نمی‌شوند\n" +
+            "• Server Components برای SEO و pre-rendering بهتر هستند چون در server render می‌شوند\n" +
+            "• crawler ها محتوای Server Components را بهتر می‌بینند\n" +
+            "• Client Components برای interactivity و user interactions هستند نه SEO\n" +
+            "• برای بهترین SEO باید از Server Components برای محتوای اصلی استفاده کرد\n" +
+            "• نکته: ترکیب Server Components برای محتوا و Client Components برای interactive elements بهترین رویکرد است"
+    },
+    {
+        "id": 595,
+        "question": "Which of the following is NOT a common problem with Client-Side Rendering (CSR)?",
+        "options": [
+            "Slower initial page load due to JavaScript execution",
+            "Longer time to interactive on slower devices",
+            "Reduced SEO performance because content loads after hydration",
+            "Better accessibility for search engine crawlers and static tools",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• CSR برای search engine crawlers و static tools accessibility بهتر ندارد\n" +
+            "• در واقع CSR مشکل SEO دارد چون محتوا بعد از JavaScript load می‌شود\n" +
+            "• crawler ها ممکن است محتوا را نبینند یا با تأخیر ببینند\n" +
+            "• initial page load کندتر است چون JavaScript باید دانلود و اجرا شود\n" +
+            "• Time to Interactive روی device های کند بالاتر است\n" +
+            "• نکته: SSR یا SSG برای بهبود SEO و accessibility برای crawlers بهتر است"
+    },
+    {
+        "id": 596,
+        "question": "Which of the following is NOT a common limitation of Server-Side Rendering (SSR)?",
+        "options": [
+            "Higher server load due to rendering pages on each request",
+            "Slower time to first byte for complex pages",
+            "Automatic client-side interactivity without hydration",
+            "Longer deployment complexity for dynamic applications"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• SSR به hydration نیاز دارد برای client-side interactivity نه خودکار\n" +
+            "• بعد از ارسال HTML از server باید JavaScript در client اجرا شود\n" +
+            "• hydration فرآیند افزودن interactivity به HTML استاتیک است\n" +
+            "• بدون hydration کامپوننت‌ها interactive نیستند\n" +
+            "• این یکی از چالش‌های SSR است نه مزیت\n" +
+            "• نکته: برای کاهش زمان hydration حجم JavaScript bundle را کم کنید"
+    },
+    {
+        "id": 597,
+        "question": "In which rendering method does the UI behave like a function where state changes trigger re-renders?",
+        "options": [
+            "Server-Side Rendering (SSR), because server sends updated HTML on each state change",
+            "Client-Side Rendering (CSR), because state updates directly trigger component re-renders",
+            "Static Site Generation (SSG), because pages are pre-built and do not respond to state",
+            "Incremental Static Regeneration (ISR), because state is only updated periodically"
+        ],
+        "correctOption":1,
+        "points": 20,
+        "explanation": "• در Client-Side Rendering تغییرات state مستقیماً component re-renders را trigger می‌کند\n" +
+            "• این رفتار اصلی React است که UI را تابعی از state می‌داند\n" +
+            "• وقتی state تغییر می‌کند React به‌طور خودکار UI را update می‌کند\n" +
+            "• در SSR این رفتار reactive وجود ندارد چون render در server است\n" +
+            "• SSG و ISR هم این رفتار dynamic را ندارند\n" +
+            "• نکته: این مدل declarative UI یکی از قدرتمندترین ویژگی‌های React است"
+    },
+    {
+        "id": 598,
+        "question": "In React or Next.js, what does it mean when we say 'UI behaves like a function'?",
+        "options": [
+            "The UI executes server-side functions to fetch new HTML each time",
+            "The UI stores all application data and acts as a database",
+            "The UI is a representation of state and props, automatically updating when data changes",
+            "The UI does not change even if state or props update",
+        ],
+        "correctOption":2,
+        "points": 20,
+        "explanation": "• UI یک representation از state و props است که خودکار با تغییر data update می‌شود\n" +
+            "• مفهوم UI = f(state, props) یعنی UI خروجی تابعی از ورودی‌ها است\n" +
+            "• هر بار state یا props تغییر کند UI دوباره محاسبه و render می‌شود\n" +
+            "• این رویکرد declarative است نه imperative\n" +
+            "• developer تعریف می‌کند UI چگونه باید باشد نه چگونه update شود\n" +
+            "• نکته: این مدل mental model برنامه‌نویسی React را ساده‌تر می‌کند"
+    },
+    {
+        "id": 599,
+        "question": "How does UI behave differently in CSR versus SSR regarding state and data?",
+        "options": [
+            "In CSR, UI updates based on component state; in SSR, UI is generated from server-provided data",
+            "In CSR, UI is static and does not react to state; in SSR, UI updates automatically on client",
+            "In CSR, UI fetches server data for every render; in SSR, UI relies on local state only",
+            "In CSR, UI and server data are identical; in SSR, state drives all interactions"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• در CSR تغییرات component state باعث update خودکار UI می‌شود\n" +
+            "• در SSR محتوای UI از server-provided data تولید می‌شود\n" +
+            "• CSR reactive است و به state changes واکنش نشان می‌دهد\n" +
+            "• SSR محتوا را یک‌بار در server می‌سازد و ارسال می‌کند\n" +
+            "• برای interactivity در SSR نیاز به hydration و Client Components است\n" +
+            "• نکته: ترکیب SSR برای initial render و CSR برای interactivity بهترین رویکرد است"
+    },
+    {
+        "id": 600,
+        "question": "What is the main purpose of React Server Components (RSC)?",
+        "options": [
+            "To replace all client-side components with server-rendered HTML and eliminate any client-side interactivity entirely, forcing users to rely only on server responses",
+            "To allow rendering some components entirely on the server, reducing client bundle size and enabling full-stack patterns",
+            "To automatically convert all frontend JavaScript logic into backend APIs without any developer intervention or framework setup",
+            "To disable React hooks in client components completely for performance improvements, preventing state and effects from being used in interactive components"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• RSC اجازه می‌دهد بعضی کامپوننت‌ها کاملاً در server render شوند\n" +
+            "• client bundle size کاهش می‌یابد چون JavaScript این کامپوننت‌ها به client ارسال نمی‌شود\n" +
+            "• امکان full-stack patterns مثل direct database access فراهم می‌شود\n" +
+            "• Server Components JavaScript خود را به client ارسال نمی‌کنند\n" +
+            "• این باعث بهبود performance و کاهش Time to Interactive می‌شود\n" +
+            "• نکته: RSC interactivity را حذف نمی‌کند بلکه به شما اجازه می‌دهد انتخاب کنید کدام کامپوننت‌ها interactive باشند"
+    },
 //         {
 //             "id": 581,
 //             "question": "Which of the following best describes a Client Component in React Server Components architecture?",
