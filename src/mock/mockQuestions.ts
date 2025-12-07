@@ -9600,136 +9600,186 @@ export const mockQuestions: Question[] = [
             "• این optimization ها بدون نیاز به configuration دستی اعمال می‌شوند\n" +
             "• نکته: Next.js بسیاری از  best practice های web performance را به‌صورت پیش‌فرض اعمال می‌کند که در React خام باید دستی پیاده‌سازی شوند"
     },
-//     {
-//         "id": 561,
-//         "question": "Which approach is recommended for navigating between internal pages in a Next.js application?",
-//         "options": [
-//             "Using standard <a> tags for internal links",
-//             "Using window.location.href assignments for navigation",
-//             "Using the Next.js <Link> component for client-side transitions",
-//             "Using only form submissions to change pages"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 562,
-//         "question": "Why should you generally avoid using the <a> tag for internal navigation in Next.js?",
-//         "options": [
-//             "Because <a> prevents server-side rendering from working",
-//             "Because <a> triggers a full page reload, bypassing Next.js client-side routing",
-//             "Because <a> cannot include CSS classes for styling",
-//             "Because <a> automatically disables JavaScript execution",
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 563,
-//         "question": "Why is using the Next.js <Link> component recommended over a standard <a> tag for internal navigation?",
-//         "options": [
-//             "It prefetches linked routes and enables fast client-side navigation",
-//             "It automatically converts HTML into server-rendered pages",
-//             "It disables JavaScript execution to speed up navigation",
-//             "It ensures external links are opened in a new browser window"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 564,
-//         "question": "Do pages in Next.js automatically refetch data when a user revisits them?",
-//         "options": [
-//             "Only pages using static generation refetch data automatically",
-//             "Yes, Next.js always refetches data for every navigation",
-//             "No, pages served from the client cache",
-//             "Yes, but only when navigating through the browser’s back button"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 565,
-//         "question": "What is the main purpose of the layout file in a Next.js application?",
-//         "options": [
-//             "To handle API requests and server-side logic for each route",
-//             "To manage client-side routing and navigation between pages",
-//             "To define global page structure and shared UI elements across routes",
-//             "To store metadata and SEO configurations for dynamic routes"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 566,
-//         "question": "What is the main purpose of page metadata in Next.js?",
-//         "options": [
-//             "To manage internal navigation between pages in the application",
-//             "To store configuration data such as user settings or global variables",
-//             "To define SEO-related information such as title and description for each page",
-//             "To handle background data fetching and caching before rendering"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//         {
-//             "id": 567,
-//             "question": "Which statement correctly describes a Client Component in Next.js?",
-//             "options": [
-//                 "To handle user interactions and local state within the component",
-//                 "To fetch data on the server and send pre-rendered HTML to the client",
-//                 "To render static content without JavaScript on the client",
-//                 "To generate page metadata for SEO at build time"
-//             ],
-//             "correctOption": 0,
-//             "points": 10,
-//  "explanation":""
-//         },
-//         {
-//             "id": 568,
-//             "question": "Which statement about Server Components is true?",
-//             "options": [
-//                 "To fetch data using async/await and render on the server",
-//                 "To manage client-side local state with useState",
-//                 "To handle click events and interactive forms",
-//                 "To require JavaScript for rendering on the client"
-//             ],
-//             "correctOption": 0,
-//             "points": 10,
-//  "explanation":""
-//         },
-//         {
-//             "id": 569,
-//             "question": "Which rule applies when passing props from a Server Component to a Client Component?",
-//             "options": [
-//                 "To pass only serializable values, avoiding functions or class instances",
-//                 "To pass useState hooks directly to maintain local reactivity",
-//                 "To pass any component references without serialization",
-//                 "To pass client-side event handlers to Server Components"
-//             ],
-//             "correctOption": 0,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 570,
-//             "question": "Which scenario requires lifting state up in Next.js?",
-//             "options": [
-//                 "To render static Server Components without interactivity",
-//                 "To share local state between multiple Client Components",
-//                 "To fetch data only at build time using SSG",
-//                 "To generate metadata for SEO without user interaction"
-//             ],
-//             "correctOption": 1,
-//             "points": 20,
-//  "explanation":""
-//         },
+    {
+        "id": 581,
+        "question": "Which approach is recommended for navigating between internal pages in a Next.js application?",
+        "options": [
+            "Using standard <a> tags for internal links",
+            "Using window.location.href assignments for navigation",
+            "Using the Next.js <Link> component for client-side transitions",
+            "Using only form submissions to change pages"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• استفاده از کامپوننت Link از next/link برای navigation داخلی توصیه می‌شود\n" +
+            "• Link کامپوننت client-side transitions را فعال می‌کند بدون reload کامل صفحه\n" +
+            "• با استفاده از Link صفحه به‌صورت SPA رفتار می‌کند و navigation سریع است\n" +
+            "• Link به‌طور پیش‌فرض prefetching دارد که navigation را سریع‌تر می‌کند\n" +
+            "• استفاده از تگ a معمولی یا window.location.href باعث full page reload می‌شود\n" +
+            "• نکته: Link کامپوننت به‌طور خودکار صفحات را در viewport prefetch می‌کند که تجربه کاربری را بهبود می‌دهد"
+    },
+    {
+        "id": 582,
+        "question": "Why should you generally avoid using the <a> tag for internal navigation in Next.js?",
+        "options": [
+            "Because <a> prevents server-side rendering from working",
+            "Because <a> triggers a full page reload, bypassing Next.js client-side routing",
+            "Because <a> cannot include CSS classes for styling",
+            "Because <a> automatically disables JavaScript execution",
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• استفاده از تگ a برای navigation داخلی باعث full page reload می‌شود\n" +
+            "• با reload کامل صفحه تمام JavaScript دوباره دانلود و اجرا می‌شود\n" +
+            "• client-side routing Next.js که سریع و بدون reload است bypass می‌شود\n" +
+            "• state اپلیکیشن از بین می‌رود و باید دوباره initialize شود\n" +
+            "• تجربه کاربری به‌شدت کاهش می‌یابد و صفحه کند به نظر می‌رسد\n" +
+            "• نکته: تگ a فقط برای لینک‌های خارجی استفاده کنید و برای navigation داخلی حتماً از Link استفاده کنید"
+    },
+    {
+        "id": 583,
+        "question": "Why is using the Next.js <Link> component recommended over a standard <a> tag for internal navigation?",
+        "options": [
+            "It prefetches linked routes and enables fast client-side navigation",
+            "It automatically converts HTML into server-rendered pages",
+            "It disables JavaScript execution to speed up navigation",
+            "It ensures external links are opened in a new browser window"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• Link کامپوننت linked routes را prefetch می‌کند که navigation را سریع می‌کند\n" +
+            "• client-side navigation را فعال می‌کند بدون نیاز به reload کامل صفحه\n" +
+            "• با prefetching وقتی کاربر روی لینک کلیک می‌کند صفحه تقریباً فوری load می‌شود\n" +
+            "• state اپلیکیشن حفظ می‌شود و تجربه SPA مانند ایجاد می‌کند\n" +
+            "• به‌طور پیش‌فرض لینک‌های در viewport را prefetch می‌کند\n" +
+            "• نکته: می‌توانید با پراپ prefetch={false} این رفتار را برای لینک‌های خاص غیرفعال کنید"
+    },
+    {
+        "id": 584,
+        "question": "Do pages in Next.js automatically refetch data when a user revisits them?",
+        "options": [
+            "Only pages using static generation refetch data automatically",
+            "Yes, Next.js always refetches data for every navigation",
+            "No, pages served from the client cache",
+            "Yes, but only when navigating through the browser’s back button"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• صفحات از client cache سرو می‌شوند و خودکار refetch نمی‌شوند\n" +
+            "• Next.js صفحات visited شده را cache می‌کند برای navigation سریع‌تر\n" +
+            "• وقتی کاربر به صفحه قبلی برمی‌گردد از cache استفاده می‌شود\n" +
+            "• این رفتار navigation را فوری و بدون delay می‌کند\n" +
+            "• اگر نیاز به refetch داشته باشید باید از router.refresh استفاده کنید\n" +
+            "• نکته: برای صفحات dynamic که نیاز به fresh data دارند می‌توانید با revalidate یا cache strategies مدیریت کنید"
+    },
+    {
+        "id": 585,
+        "question": "What is the main purpose of the layout file in a Next.js application?",
+        "options": [
+            "To handle API requests and server-side logic for each route",
+            "To manage client-side routing and navigation between pages",
+            "To define global page structure and shared UI elements across routes",
+            "To store metadata and SEO configurations for dynamic routes"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• layout فایل برای تعریف ساختار global صفحه و shared UI elements است\n" +
+            "• المان‌هایی مثل header و footer و sidebar که در چند صفحه مشترک هستند\n" +
+            "• layout در تمام child routes اعمال می‌شود و rerender نمی‌شود\n" +
+            "• این باعث consistency در UI و بهبود performance می‌شود\n" +
+            "• می‌توانید nested layouts برای بخش‌های مختلف اپلیکیشن داشته باشید\n" +
+            "• نکته: layout فایل‌ها state خود را حفظ می‌کنند و با navigation بین صفحات rerender نمی‌شوند"
+    },
+    {
+        "id": 586,
+        "question": "What is the main purpose of page metadata in Next.js?",
+        "options": [
+            "To manage internal navigation between pages in the application",
+            "To store configuration data such as user settings or global variables",
+            "To define SEO-related information such as title and description for each page",
+            "To handle background data fetching and caching before rendering"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• metadata برای تعریف اطلاعات SEO مثل title و description هر صفحه است\n" +
+            "• این اطلاعات در تگ head صفحه قرار می‌گیرند\n" +
+            "• موتورهای جستجو این metadata را برای indexing و نمایش در نتایج استفاده می‌کنند\n" +
+            "• می‌توانید Open Graph و Twitter Cards را نیز تعریف کنید\n" +
+            "• metadata می‌تواند استاتیک یا dynamic باشد\n" +
+            "• نکته: از generateMetadata برای metadata پویا بر اساس route params یا داده‌های fetch شده استفاده کنید"
+    },
+    {
+        "id": 587,
+        "question": "Which statement correctly describes a Client Component in Next.js?",
+        "options": [
+            "To handle user interactions and local state within the component",
+            "To fetch data on the server and send pre-rendered HTML to the client",
+            "To render static content without JavaScript on the client",
+            "To generate page metadata for SEO at build time"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• Client Component برای handle کردن user interactions و local state در کامپوننت است\n" +
+            "• این کامپوننت‌ها در browser اجرا می‌شوند و به browser APIs دسترسی دارند\n" +
+            "• می‌توانند از hooks مثل useState و useEffect استفاده کنند\n" +
+            "• برای interactive elements مثل forms و buttons و event handlers مناسب هستند\n" +
+            "• با use client directive مشخص می‌شوند\n" +
+            "• نکته: فقط کامپوننت‌هایی که واقعاً به interactivity نیاز دارند را Client Component کنید تا bundle size کمتر شود"
+    },
+    {
+        "id": 588,
+        "question": "Which statement about Server Components is true?",
+        "options": [
+            "To fetch data using async/await and render on the server",
+            "To manage client-side local state with useState",
+            "To handle click events and interactive forms",
+            "To require JavaScript for rendering on the client"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• Server Component می‌تواند data را با async و await مستقیماً در کامپوننت fetch کند\n" +
+            "• این کامپوننت‌ها در سرور render می‌شوند قبل از ارسال به client\n" +
+            "• دسترسی مستقیم به database و filesystem و environment variables دارند\n" +
+            "• JavaScript آنها به client ارسال نمی‌شود که bundle size را کاهش می‌دهد\n" +
+            "• نمی‌توانند از hooks یا event handlers استفاده کنند\n" +
+            "• نکته: Server Components به‌طور پیش‌فرض در App Router هستند و نیاز به directive ندارند"
+    },
+    {
+        "id": 589,
+        "question": "Which rule applies when passing props from a Server Component to a Client Component?",
+        "options": [
+            "To pass only serializable values, avoiding functions or class instances",
+            "To pass useState hooks directly to maintain local reactivity",
+            "To pass any component references without serialization",
+            "To pass client-side event handlers to Server Components"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• فقط serializable values یعنی قابل تبدیل به JSON را می‌توانید pass کنید\n" +
+            "• functions و class instances و symbols قابل serialize نیستند\n" +
+            "• props باید به JSON قابل تبدیل باشند تا از server به client منتقل شوند\n" +
+            "• انواع primitive مثل string و number و boolean و arrays و plain objects مجاز هستند\n" +
+            "• این محدودیت به دلیل مرز بین server و client environment است\n" +
+            "• نکته: اگر نیاز به pass کردن function دارید آن را در Client Component تعریف کنید"
+    },
+    {
+        "id": 590,
+        "question": "Which scenario requires lifting state up in Next.js?",
+        "options": [
+            "To render static Server Components without interactivity",
+            "To share local state between multiple Client Components",
+            "To fetch data only at build time using SSG",
+            "To generate metadata for SEO without user interaction"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• lifting state up زمانی لازم است که چند Client Component نیاز به share کردن state دارند\n" +
+            "• state را به parent component مشترک منتقل می‌کنیم\n" +
+            "• سپس از طریق props به child components پاس می‌دهیم\n" +
+            "• این pattern برای synchronize کردن state بین sibling components است\n" +
+            "• اگر فقط یک کامپوننت نیاز به state دارد نیازی به lifting up نیست\n" +
+            "• نکته: برای state management پیچیده‌تر از Context API یا state management libraries استفاده کنید"
+    },
 //         {
 //             "id": 571,
 //             "question": "Which behavior correctly describes when a Client Component re-renders?",
