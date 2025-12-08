@@ -9960,266 +9960,316 @@ export const mockQuestions: Question[] = [
             "• این باعث بهبود performance و کاهش Time to Interactive می‌شود\n" +
             "• نکته: RSC interactivity را حذف نمی‌کند بلکه به شما اجازه می‌دهد انتخاب کنید کدام کامپوننت‌ها interactive باشند"
     },
-//         {
-//             "id": 581,
-//             "question": "Which of the following best describes a Client Component in React Server Components architecture?",
-//             "options": [
-//                 "A regular component that runs on the client and is created using the 'use client' directive",
-//                 "A component that only executes on the server and does not appear in the client bundle",
-//                 "A component that automatically fetches data from the server without rendering",
-//                 "A component that disables interactivity and only renders static HTML"
-//             ],
-//             "correctOption": 0,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 582,
-//             "question": "Which statement is TRUE about Server Components in RSC architecture?",
-//             "options": [
-//                 "They are rendered only on the server and do not increase client bundle size",
-//                 "They are rendered on both client and server simultaneously",
-//                 "They require the 'use client' directive to function",
-//                 "They always include JavaScript in the client bundle for hydration"
-//             ],
-//             "correctOption": 0,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 583,
-//             "question": "Are React Server Components active by default in new React apps like Vite?",
-//             "options": [
-//                 "Yes, but only if 'use server' directive is added to every component",
-//                 "No, React Server Components are deprecated in modern frameworks",
-//                 "Yes, they are enabled automatically in all React apps",
-//                 "No, they need to be implemented via frameworks like Next.js App Router",
-//             ],
-//             "correctOption": 3,
-//             "points": 20,
-//  "explanation":""
-//         },
-//     {
-//         "id": 584,
-//         "question": "Which of the following components in Next.js should be Client Components rather than Server Components?",
-//         "options": [
-//             "To a component that handles user interactions like clicks and input forms",
-//             "To a component that only fetches and displays data from a database",
-//             "To a component that renders static content with no interactivity",
-//             "To a component that outputs metadata for SEO purposes"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//         {
-//             "id": 585,
-//             "question": "Which behavior correctly describes when a Client Component re-renders in Next.js?",
-//             "options": [
-//                 "To re-render automatically on server-side data fetch completion",
-//                 "To re-render only when the URL changes due to navigation",
-//                 "To re-render on local state or prop changes inside the component",
-//                 "To re-render when any parent Server Component updates"
-//             ],
-//             "correctOption": 0,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 586,
-//             "question": "Which statement about Server Components is accurate regarding data fetching?",
-//             "options": [
-//                 "To fetch data and update local state on every user interaction",
-//                 "To fetch data only on the client side using hooks",
-//                 "To fetch data using async/await directly in the component",
-//                 "To prevent fetching data entirely and only render static HTML"
-//             ],
-//             "correctOption": 2,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 587,
-//             "question": "When passing props from a Server Component to a Client Component, which restriction applies?",
-//             "options": [
-//                 "To pass state hooks directly for automatic reactivity",
-//                 "To pass client-side event handlers for server processing",
-//                 "To pass any component instance without serialization",
-//                 "To pass only serializable data, avoiding functions or classes",
-//             ],
-//             "correctOption": 3,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 588,
-//             "question": "Which situation requires lifting state up to a parent component in Next.js?",
-//             "options": [
-//                 "To share state only between Server Components for faster rendering",
-//                 "To share state between multiple Client Components for coordinated updates",
-//                 "To pass server-rendered props to static HTML without interactivity",
-//                 "To prevent any client-side re-renders by using Server Components"
-//             ],
-//             "correctOption": 1,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 589,
-//             "question": "Which import rule correctly applies to Client Components in Next.js?",
-//             "options": [
-//                 "To import only other Client Components and cannot import Server Components back",
-//                 "To import any Server or Client Components without restriction",
-//                 "To import Server Components but not Client Components",
-//                 "To import only static HTML files and JSON data"
-//             ],
-//             "correctOption": 0,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 590,
-//             "question": "Which statement correctly describes rendering capabilities of Server Components?",
-//             "options": [
-//                 "To render only static HTML without any component nesting",
-//                 "To render only Client Components and ignore server logic",
-//                 "To render both Client and Server Components passed as props",
-//                 "To prevent any nested components from rendering"
-//             ],
-//             "correctOption": 2,
-//             "points": 20,
-//  "explanation":""
-//         },
-//         {
-//             "id": 591,
-//             "question": "Which of the following is NOT allowed when passing props from a Server Component to a Client Component?",
-//             "options": [
-//                 "To pass a string value for display purposes",
-//                 "To pass a number or boolean for rendering",
-//                 "To pass a function as a prop for event handling",
-//                 "To pass a serializable object like JSON"
-//             ],
-//             "correctOption": 2,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 592,
-//             "question": "Which scenario is NOT suitable for a Client Component in Next.js?",
-//             "options": [
-//                 "To handle a button click with local state updates",
-//                 "To manage form input fields interactively",
-//                 "To re-render content on state changes",
-//                 "To fetch data using async/await inside a Server Component instead",
-//             ],
-//             "correctOption": 3,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 593,
-//             "question": "Which statement about Server Components is FALSE?",
-//             "options": [
-//                 "To fetch data using async/await in the component",
-//                 "To render both Server and Client Components passed as props",
-//                 "To improve performance by offloading computation to the server",
-//                 "To re-render automatically on every local state change",
-//             ],
-//             "correctOption": 3,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 594,
-//             "question": "Which rule about importing components in Next.js is NOT correct?",
-//             "options": [
-//                 "Allow Server Components to import both Client and Server Components",
-//                 "Allow Client Components to import Server Components and return to client-side logic",
-//                 "Allow Client Components to import other Client Components",
-//                 "Allow circular imports across client-server boundaries"
-//             ],
-//             "correctOption": 1,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 595,
-//             "question": "Which situation does NOT require lifting state up in Next.js?",
-//             "options": [
-//                 "To propagate a user action from child to parent for centralized handling",
-//                 "To synchronize UI changes across multiple interactive components",
-//                 "To keep local state isolated in a single Client Component with no siblings",
-//                 "To share input values across multiple Client Components",
-//             ],
-//             "correctOption": 2,
-//             "points": 30,
-//  "explanation":""
-//         },
-//         {
-//             "id": 596,
-//             "question": "Which statement about re-render behavior is NOT true?",
-//             "options": [
-//                 "To Server Components re-render automatically on local state changes in child Client Components",
-//                 "To Client Components re-render on state or prop changes in child Server Components",
-//                 "To Server Components re-render on navigation or URL change in child Client Components",
-//                 "To Client Components can render Server Components passed as props in child Server Components"
-//             ],
-//             "correctOption": 0,
-//             "points": 30,
-//  "explanation":""
-//         },
-//     {
-//         "id": 597,
-//         "question": "How does a Page Component behave by default in Next.js?",
-//         "options": [
-//             "To run on the server unless marked with 'use client'",
-//             "To always execute on the client for every route",
-//             "To render both server and client content automatically",
-//             "To generate only static HTML without interactivity"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 598,
-//         "question": "What is the purpose of a loading.js file in a Next.js App Router project?",
-//         "options": [
-//             "To render a temporary loading state or skeleton UI while a server component is fetching data",
-//             "To fetch data on the client side using hooks like useEffect",
-//             "To replace the page component entirely with static HTML for SEO",
-//             "To automatically convert server components to client components when state changes"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 599,
-//         "question": "What happens if JavaScript is disabled in the browser while a loading.js component is used in Next.js?",
-//         "options": [
-//             "To convert server components into client components automatically",
-//             "To run the loading.js component with full interactivity",
-//             "To prevent the server from rendering the page",
-//             "To show only the server-rendered content without interactive loading",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 600,
-//         "question": "Why does a child component in Next.js not always need to be marked with 'use client'?",
-//         "options": [
-//             "To force the child to always execute on the client regardless of state",
-//             "To allow server components to render it without requiring client-side state or hooks",
-//             "To prevent server components from being able to render it at all",
-//             "To automatically convert the child into a server component"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
+    {
+        "id": 601,
+        "question": "Which of the following best describes a Client Component in React Server Components architecture?",
+        "options": [
+            "A regular component that runs on the client and is created using the 'use client' directive",
+            "A component that only executes on the server and does not appear in the client bundle",
+            "A component that automatically fetches data from the server without rendering",
+            "A component that disables interactivity and only renders static HTML"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• Client Component یک کامپوننت معمولی است که در client اجرا می‌شود\n" +
+            "• با use client directive در ابتدای فایل مشخص می‌شود\n" +
+            "• می‌تواند از hooks و event handlers و browser APIs استفاده کند\n" +
+            "• JavaScript آن به client bundle اضافه می‌شود\n" +
+            "• برای interactive elements و user interactions مناسب است\n" +
+            "• نکته: فقط کامپوننت‌هایی که واقعاً نیاز به client-side logic دارند را Client Component کنید"
+    },
+    {
+        "id": 602,
+        "question": "Which statement is TRUE about Server Components in RSC architecture?",
+        "options": [
+            "They are rendered only on the server and do not increase client bundle size",
+            "They are rendered on both client and server simultaneously",
+            "They require the 'use client' directive to function",
+            "They always include JavaScript in the client bundle for hydration"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• Server Components فقط در server render می‌شوند و client bundle size را افزایش نمی‌دهند\n" +
+            "• JavaScript آنها به client ارسال نمی‌شود\n" +
+            "• فقط خروجی HTML یا RSC payload به client می‌رود\n" +
+            "• این باعث کاهش قابل توجه bundle size می‌شود\n" +
+            "• دسترسی مستقیم به server resources مثل database دارند\n" +
+            "• نکته: Server Components به‌طور پیش‌فرض در Next.js App Router هستند"
+    },
+    {
+        "id": 603,
+        "question": "Are React Server Components active by default in new React apps like Vite?",
+        "options": [
+            "Yes, but only if 'use server' directive is added to every component",
+            "No, React Server Components are deprecated in modern frameworks",
+            "Yes, they are enabled automatically in all React apps",
+            "No, they need to be implemented via frameworks like Next.js App Router",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• React Server Components در React apps معمولی مثل Vite فعال نیستند\n" +
+            "• RSC نیاز به framework integration دارد که فقط در Next.js App Router موجود است\n" +
+            "• Vite یک build tool است نه framework با RSC support\n" +
+            "• برای استفاده از RSC باید از Next.js یا framework مشابه استفاده کنید\n" +
+            "• React خام این قابلیت را به‌صورت built-in ندارد\n" +
+            "• نکته: اگر می‌خواهید از RSC استفاده کنید Next.js App Router بهترین گزینه است"
+    },
+    {
+        "id": 604,
+        "question": "Which of the following components in Next.js should be Client Components rather than Server Components?",
+        "options": [
+            "To a component that handles user interactions like clicks and input forms",
+            "To a component that only fetches and displays data from a database",
+            "To a component that renders static content with no interactivity",
+            "To a component that outputs metadata for SEO purposes"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• کامپوننت‌هایی که user interactions مثل clicks و input forms را handle می‌کنند باید Client Component باشند\n" +
+            "• Server Components نمی‌توانند event handlers داشته باشند\n" +
+            "• برای useState و useEffect نیاز به Client Component است\n" +
+            "• interactivity فقط در client ممکن است\n" +
+            "• کامپوننت‌های pure display که فقط داده نمایش می‌دهند می‌توانند Server باشند\n" +
+            "• نکته: قانون کلی اگر کامپوننت به user interaction نیاز دارد باید Client Component باشد"
+    },
+    {
+        "id": 605,
+        "question": "Which behavior correctly describes when a Client Component re-renders in Next.js?",
+        "options": [
+            "To re-render automatically on server-side data fetch completion",
+            "To re-render only when the URL changes due to navigation",
+            "To re-render on local state or prop changes inside the component",
+            "To re-render when any parent Server Component updates"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• Client Component با تغییر local state یا props داخل خود re-render می‌شود\n" +
+            "• این رفتار استاندارد React است\n" +
+            "• تغییرات state internal component باعث re-render می‌شود\n" +
+            "• تغییرات props که از parent می‌آید نیز trigger کننده re-render است\n" +
+            "• Server-side data fetch completion خودکار re-render ایجاد نمی‌کند\n" +
+            "• نکته: از React DevTools برای debug کردن unnecessary re-renders استفاده کنید"
+    },
+    {
+        "id": 606,
+        "question": "Which statement about Server Components is accurate regarding data fetching?",
+        "options": [
+            "To fetch data and update local state on every user interaction",
+            "To fetch data only on the client side using hooks",
+            "To fetch data using async/await directly in the component",
+            "To prevent fetching data entirely and only render static HTML"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• Server Components می‌توانند data را با async و await مستقیماً در کامپوننت fetch کنند\n" +
+            "• نیازی به useEffect یا data fetching hooks نیست\n" +
+            "• می‌توانید مستقیماً await fetch() در component body بنویسید\n" +
+            "• این یکی از مزایای اصلی Server Components است\n" +
+            "• دسترسی مستقیم به database و APIs در server\n" +
+            "• نکته: از Server Components برای data-heavy operations استفاده کنید تا client bundle سبک بماند"
+    },
+    {
+        "id": 607,
+        "question": "When passing props from a Server Component to a Client Component, which restriction applies?",
+        "options": [
+            "To pass state hooks directly for automatic reactivity",
+            "To pass client-side event handlers for server processing",
+            "To pass any component instance without serialization",
+            "To pass only serializable data, avoiding functions or classes",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• فقط serializable data یعنی strings و numbers و arrays و plain objects می‌توان pass کرد\n" +
+            "• functions و classes قابل serialize نیستند و نمی‌توان آنها را pass کرد\n" +
+            "• props باید به JSON تبدیل شوند برای انتقال از server به client\n" +
+            "• این محدودیت به دلیل مرز بین server و client environment است\n" +
+            "• event handlers و callbacks نمی‌توان به این صورت pass کرد\n" +
+            "• نکته: اگر نیاز به function دارید آن را در Client Component تعریف کنید"
+    },
+    {
+        "id": 608,
+        "question": "Which situation requires lifting state up to a parent component in Next.js?",
+        "options": [
+            "To share state only between Server Components for faster rendering",
+            "To share state between multiple Client Components for coordinated updates",
+            "To pass server-rendered props to static HTML without interactivity",
+            "To prevent any client-side re-renders by using Server Components"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• زمانی که چند Client Component نیاز به share کردن state برای coordinated updates دارند\n" +
+            "• state را به nearest common parent منتقل می‌کنیم\n" +
+            "• سپس از طریق props به children پاس می‌دهیم\n" +
+            "• این pattern برای synchronization بین sibling components است\n" +
+            "• اگر state فقط در یک component استفاده می‌شود نیازی به lifting نیست\n" +
+            "• نکته: برای state management پیچیده از Context API یا Zustand استفاده کنید"
+    },
+    {
+        "id": 609,
+        "question": "Which import rule correctly applies to Client Components in Next.js?",
+        "options": [
+            "To import only other Client Components and cannot import Server Components back",
+            "To import any Server or Client Components without restriction",
+            "To import Server Components but not Client Components",
+            "To import only static HTML files and JSON data"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• Client Components فقط می‌توانند other Client Components را import کنند\n" +
+            "• نمی‌توانند Server Components را مستقیماً import کنند و استفاده کنند\n" +
+            "• این محدودیت برای جلوگیری از mixing نادرست server و client code است\n" +
+            "• اگر نیاز به Server Component دارید باید به‌عنوان children پاس کنید\n" +
+            "• import کردن Server Component در Client باعث تبدیل آن به Client می‌شود\n" +
+            "• نکته: از composition pattern برای ترکیب Server و Client Components استفاده کنید"
+    },
+    {
+        "id": 610,
+        "question": "Which statement correctly describes rendering capabilities of Server Components?",
+        "options": [
+            "To render only static HTML without any component nesting",
+            "To render only Client Components and ignore server logic",
+            "To render both Client and Server Components passed as props",
+            "To prevent any nested components from rendering"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• Server Components می‌توانند هم Client و هم Server Components را به‌عنوان props یا children render کنند\n" +
+            "• این flexibility امکان composition پیچیده را فراهم می‌کند\n" +
+            "• می‌توانید Client Components را به Server Component پاس کنید\n" +
+            "• nested rendering در هر دو جهت ممکن است\n" +
+            "• این pattern برای ساختن UI های پیچیده بسیار مفید است\n" +
+            "• نکته: از این قابلیت برای ساختن reusable layouts که هم Server و هم Client content دارند استفاده کنید"
+    },
+    {
+        "id": 591,
+        "question": "Which of the following is NOT allowed when passing props from a Server Component to a Client Component?",
+        "options": [
+            "To pass a string value for display purposes",
+            "To pass a number or boolean for rendering",
+            "To pass a function as a prop for event handling",
+            "To pass a serializable object like JSON"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 592,
+        "question": "Which scenario is NOT suitable for a Client Component in Next.js?",
+        "options": [
+            "To handle a button click with local state updates",
+            "To manage form input fields interactively",
+            "To re-render content on state changes",
+            "To fetch data using async/await inside a Server Component instead",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 593,
+        "question": "Which statement about Server Components is FALSE?",
+        "options": [
+            "To fetch data using async/await in the component",
+            "To render both Server and Client Components passed as props",
+            "To improve performance by offloading computation to the server",
+            "To re-render automatically on every local state change",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 594,
+        "question": "Which rule about importing components in Next.js is NOT correct?",
+        "options": [
+            "Allow Server Components to import both Client and Server Components",
+            "Allow Client Components to import Server Components and return to client-side logic",
+            "Allow Client Components to import other Client Components",
+            "Allow circular imports across client-server boundaries"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 595,
+        "question": "Which situation does NOT require lifting state up in Next.js?",
+        "options": [
+            "To propagate a user action from child to parent for centralized handling",
+            "To synchronize UI changes across multiple interactive components",
+            "To keep local state isolated in a single Client Component with no siblings",
+            "To share input values across multiple Client Components",
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 596,
+        "question": "Which statement about re-render behavior is NOT true?",
+        "options": [
+            "To Server Components re-render automatically on local state changes in child Client Components",
+            "To Client Components re-render on state or prop changes in child Server Components",
+            "To Server Components re-render on navigation or URL change in child Client Components",
+            "To Client Components can render Server Components passed as props in child Server Components"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 597,
+        "question": "How does a Page Component behave by default in Next.js?",
+        "options": [
+            "To run on the server unless marked with 'use client'",
+            "To always execute on the client for every route",
+            "To render both server and client content automatically",
+            "To generate only static HTML without interactivity"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 598,
+        "question": "What is the purpose of a loading.js file in a Next.js App Router project?",
+        "options": [
+            "To render a temporary loading state or skeleton UI while a server component is fetching data",
+            "To fetch data on the client side using hooks like useEffect",
+            "To replace the page component entirely with static HTML for SEO",
+            "To automatically convert server components to client components when state changes"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 599,
+        "question": "What happens if JavaScript is disabled in the browser while a loading.js component is used in Next.js?",
+        "options": [
+            "To convert server components into client components automatically",
+            "To run the loading.js component with full interactivity",
+            "To prevent the server from rendering the page",
+            "To show only the server-rendered content without interactive loading",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 600,
+        "question": "Why does a child component in Next.js not always need to be marked with 'use client'?",
+        "options": [
+            "To force the child to always execute on the client regardless of state",
+            "To allow server components to render it without requiring client-side state or hooks",
+            "To prevent server components from being able to render it at all",
+            "To automatically convert the child into a server component"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
 //     {
 //         "id": 601,
 //         "question": "In Next.js, where is a Server Component subtree executed by default?",
