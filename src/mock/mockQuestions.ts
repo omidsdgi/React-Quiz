@@ -10680,136 +10680,186 @@ export const mockQuestions: Question[] = [
             "• برای انتقال logic باید از Server Actions استفاده کرد\n" +
             "• نکته: این محدودیت به clear separation بین server و client logic کمک می‌کند"
     },
-//     {
-//         "id": 621,
-//         "question": "What is the purpose of component references in RSC Payload?",
-//         "options": [
-//             "To indicate where client should load component code",
-//             "To store all component state data permanently",
-//             "To generate complete component documentation",
-//             "To optimize server-side memory usage patterns"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 622,
-//         "question": "How does the client use RSC Payload to render the page?",
-//         "options": [
-//             "Executes all code from payload directly on mount",
-//             "Reconstructs tree using references and passed props",
-//             "Converts payload to static HTML without JavaScript",
-//             "Sends payload back to server for further processing"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 623,
-//         "question": "What makes RSC Payload efficient for performance?",
-//         "options": [
-//             "It includes all JavaScript upfront for better caching",
-//             "It sends minimal data using component references",
-//             "It eliminates need for any client-side JavaScript",
-//             "It compresses everything into optimized binary format"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 624,
-//         "question": "What is the main difference between SSR and RSC?",
-//         "options": [
-//             "SSR renders on server, RSC on client only",
-//             "SSR sends HTML, RSC sends component instructions",
-//             "SSR is faster, RSC is more interactive",
-//             "SSR uses React, RSC uses plain JavaScript"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 625,
-//         "question": "How do SSR and RSC handle component rendering?",
-//         "options": [
-//             "SSR renders all components, RSC splits server and client",
-//             "SSR only renders client, RSC only renders server",
-//             "Both render everything on server before sending",
-//             "Both render everything on client after downloading"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 626,
-//         "question": "What do SSR and RSC have in common?",
-//         "options": [
-//             "Both eliminate need for client JavaScript entirely",
-//             "Both render initial content on the server",
-//             "Both require 'use server' directive for components",
-//             "Both prevent any component interactivity on client"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 627,
-//         "question": "How does data fetching differ between SSR and RSC?",
-//         "options": [
-//             "Both fetch data exactly the same way",
-//             "Neither supports data fetching at all",
-//             "SSR fetches on client, RSC fetches on server",
-//             "SSR fetches before render, RSC fetches during render",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 628,
-//         "question": "What is sent to the client in SSR vs RSC?",
-//         "options": [
-//             "SSR sends JSON, RSC sends complete HTML markup",
-//             "SSR sends HTML, RSC sends serialized tree payload",
-//             "Both send identical HTML without any differences",
-//             "SSR sends nothing, RSC sends full JavaScript bundle"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 629,
-//         "question": "How do SSR and RSC handle JavaScript bundles?",
-//         "options": [
-//             "SSR includes all components, RSC only client ones",
-//             "SSR excludes all code, RSC includes everything",
-//             "Both include identical JavaScript in final bundle",
-//             "Neither sends any JavaScript to the browser"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 630,
-//         "question": "Can SSR and RSC be used together?",
-//         "options": [
-//             "No, they are mutually exclusive rendering methods",
-//             "Yes, RSC can render first then SSR hydrates",
-//             "Yes, modern frameworks combine both for optimization",
-//             "No, RSC completely replaces SSR in all cases"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
+    {
+        "id": 641,
+        "question": "What is the purpose of component references in RSC Payload?",
+        "options": [
+            "To indicate where client should load component code",
+            "To store all component state data permanently",
+            "To generate complete component documentation",
+            "To optimize server-side memory usage patterns"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• component references مشخص می‌کنند client کجا باید component code را load کند\n" +
+            "• مثل یک pointer به module در client bundle هستند\n" +
+            "• client از این reference برای dynamic import استفاده می‌کند\n" +
+            "• این mechanism code splitting و lazy loading را enable می‌کند\n" +
+            "• بدون این references client نمی‌داند کدام code را execute کند\n" +
+            "• نکته: این architecture foundation برای efficient loading است"
+    },
+    {
+        "id": 642,
+        "question": "How does the client use RSC Payload to render the page?",
+        "options": [
+            "Executes all code from payload directly on mount",
+            "Reconstructs tree using references and passed props",
+            "Converts payload to static HTML without JavaScript",
+            "Sends payload back to server for further processing"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• client از payload برای reconstruct کردن tree با استفاده از references و passed props استفاده می‌کند\n" +
+            "• Server Component outputs را مستقیماً در DOM قرار می‌دهد\n" +
+            "• برای Client Components code را load کرده و با props render می‌کند\n" +
+            "• این فرآیند مشابه hydration است اما efficient تر\n" +
+            "• client می‌داند دقیقاً چه چیزی کجا باید render شود\n" +
+            "• نکته: این process باعث faster initial render نسبت به traditional hydration می‌شود"
+    },
+    {
+        "id": 643,
+        "question": "What makes RSC Payload efficient for performance?",
+        "options": [
+            "It includes all JavaScript upfront for better caching",
+            "It sends minimal data using component references",
+            "It eliminates need for any client-side JavaScript",
+            "It compresses everything into optimized binary format"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• RSC Payload با ارسال minimal data و استفاده از component references به‌جای full code بسیار کارآمد است\n" +
+            "• فقط اطلاعات ضروری برای reconstruct کردن UI ارسال می‌شود\n" +
+            "• Server Component code اصلاً به client نمی‌رود\n" +
+            "• Client Component code فقط یک‌بار در bundle است نه در هر payload\n" +
+            "• این approach network transfer را به حداقل می‌رساند\n" +
+            "• نکته: این efficiency یکی از مزایای اصلی RSC architecture است"
+    },
+    {
+        "id": 644,
+        "question": "What is the main difference between SSR and RSC?",
+        "options": [
+            "SSR renders on server, RSC on client only",
+            "SSR sends HTML, RSC sends component instructions",
+            "SSR is faster, RSC is more interactive",
+            "SSR uses React, RSC uses plain JavaScript"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• SSR تمام صفحه را به HTML تبدیل می‌کند در حالی که RSC component instructions می‌فرستد\n" +
+            "• SSR یک HTML string ارسال می‌کند که browser parse می‌کند\n" +
+            "• RSC یک structured payload می‌فرستد که React interpret می‌کند\n" +
+            "• RSC می‌تواند بین Server و Client Components تمایز قائل شود\n" +
+            "• SSR همه چیز را به HTML تبدیل می‌کند بدون این تمایز\n" +
+            "• نکته: RSC یک evolution از SSR است با قابلیت‌های بیشتر"
+    },
+    {
+        "id": 645,
+        "question": "How do SSR and RSC handle component rendering?",
+        "options": [
+            "SSR renders all components, RSC splits server and client",
+            "SSR only renders client, RSC only renders server",
+            "Both render everything on server before sending",
+            "Both render everything on client after downloading"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• SSR تمام components را render می‌کند در حالی که RSC بین server و client split می‌کند\n" +
+            "• در SSR همه چیز ابتدا در server render می‌شود سپس در client hydrate\n" +
+            "• RSC فقط Server Components را در server render می‌کند\n" +
+            "• Client Components در RSC فقط در client render می‌شوند\n" +
+            "• این separation باعث بهتر performance می‌شود\n" +
+            "• نکته: RSC به شما control بیشتری روی rendering strategy می‌دهد"
+    },
+    {
+        "id": 646,
+        "question": "What do SSR and RSC have in common?",
+        "options": [
+            "Both eliminate need for client JavaScript entirely",
+            "Both render initial content on the server",
+            "Both require 'use server' directive for components",
+            "Both prevent any component interactivity on client"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• هر دو initial content را در server render می‌کنند قبل از ارسال به client\n" +
+            "• هر دو باعث بهبود SEO می‌شوند چون crawlerها محتوا را می‌بینند\n" +
+            "• هر دو Time to First Contentful Paint را بهبود می‌دهند\n" +
+            "• هر دو از server برای generating initial UI استفاده می‌کنند\n" +
+            "• تفاوت در نحوه handling و optimization است نه مفهوم اصلی\n" +
+            "• نکته: RSC می‌تواند همراه با SSR استفاده شود برای بهترین نتایج"
+    },
+    {
+        "id": 647,
+        "question": "How does data fetching differ between SSR and RSC?",
+        "options": [
+            "Both fetch data exactly the same way",
+            "Neither supports data fetching at all",
+            "SSR fetches on client, RSC fetches on server",
+            "SSR fetches before render, RSC fetches during render",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• SSR معمولاً data را قبل از render در getServerSideProps fetch می‌کند\n" +
+            "• RSC اجازه می‌دهد data fetching مستقیماً در component با async و await انجام شود\n" +
+            "• در SSR data fetching و rendering جدا هستند\n" +
+            "• در RSC data fetching جزئی از rendering process است\n" +
+            "• RSC approach طبیعی‌تر و colocation بهتری دارد\n" +
+            "• نکته: RSC data fetching را ساده‌تر و intuitive تر می‌کند"
+    },
+    {
+        "id": 648,
+        "question": "What is sent to the client in SSR vs RSC?",
+        "options": [
+            "SSR sends JSON, RSC sends complete HTML markup",
+            "SSR sends HTML, RSC sends serialized tree payload",
+            "Both send identical HTML without any differences",
+            "SSR sends nothing, RSC sends full JavaScript bundle"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• SSR یک HTML string کامل ارسال می‌کند\n" +
+            "• RSC یک serialized tree payload با component instructions ارسال می‌کند\n" +
+            "• HTML در SSR آماده برای parse کردن توسط browser است\n" +
+            "• RSC payload باید توسط React client reconcile شود\n" +
+            "• RSC payload اطلاعات بیشتری نسبت به plain HTML دارد\n" +
+            "• نکته: RSC payload به React اجازه می‌دهد efficient updates انجام دهد"
+    },
+    {
+        "id": 649,
+        "question": "How do SSR and RSC handle JavaScript bundles?",
+        "options": [
+            "SSR includes all components, RSC only client ones",
+            "SSR excludes all code, RSC includes everything",
+            "Both include identical JavaScript in final bundle",
+            "Neither sends any JavaScript to the browser"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• SSR JavaScript تمام components را در bundle شامل می‌شود\n" +
+            "• RSC فقط Client Components را در bundle قرار می‌دهد\n" +
+            "• Server Component code در RSC به client ارسال نمی‌شود\n" +
+            "• این تفاوت باعث bundle size کوچک‌تر در RSC می‌شود\n" +
+            "• SSR نیاز دارد که تمام component code برای hydration موجود باشد\n" +
+            "• نکته: کاهش bundle size یکی از بزرگترین مزایای RSC است"
+    },
+    {
+        "id": 650,
+        "question": "Can SSR and RSC be used together?",
+        "options": [
+            "No, they are mutually exclusive rendering methods",
+            "Yes, RSC can render first then SSR hydrates",
+            "Yes, modern frameworks combine both for optimization",
+            "No, RSC completely replaces SSR in all cases"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• بله modern frameworks مثل Next.js هر دو را برای optimization ترکیب می‌کنند\n" +
+            "• RSC می‌تواند با SSR همراه شود برای بهترین performance\n" +
+            "• Server Components ابتدا render می‌شوند سپس با SSR به HTML تبدیل\n" +
+            "• Client Components هم می‌توانند SSR شوند سپس hydrate\n" +
+            "• این ترکیب بهترین هر دو دنیا را ارائه می‌دهد\n" +
+            "• نکته: Next.js App Router به‌طور پیش‌فرض از این ترکیب استفاده می‌کند"
+    },
 //     {
 //         "id": 631,
 //         "question": "How does hydration differ between SSR and RSC?",
