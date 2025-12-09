@@ -9054,7 +9054,7 @@ export const mockQuestions: Question[] = [
         "explanation": "• تبدیل static HTML به اپلیکیشن React تعاملی\n" +
             "• server HTML استاتیک بدون JavaScript می‌فرستد\n" +
             "• JavaScript اجرا شده و React HTML را hydrate می‌کند\n" +
-            "• event handlerها attach شده و interactive می‌شوند\n" +
+            "• event handler ها attach شده و interactive می‌شوند\n" +
             "• پل بین SSR و full functionality\n" +
             "• نکته: hydration باید سریع باشد، کاهش JS bundle کمک می‌کند"
     },
@@ -9414,8 +9414,8 @@ export const mockQuestions: Question[] = [
         "correctOption": 3,
         "points": 30,
         "explanation":"• اجتناب از استفاده browser-only APIs مثل window یا document در زمان SSR\n" +
-            "• این APIها در سرور وجود ندارند و باعث undefined شدن و اختلاف output می‌شوند\n" +
-            "• باید این APIها را در useEffect یا Client Components استفاده کنید\n" +
+            "• این API ها در سرور وجود ندارند و باعث undefined شدن و اختلاف output می‌شوند\n" +
+            "• باید این API ها را در useEffect یا Client Components استفاده کنید\n" +
             "• useEffect فقط در client اجرا می‌شود و در SSR نادیده گرفته می‌شود\n" +
             "• می‌توانید با use client کل کامپوننت را به Client Component تبدیل کنید\n" +
             "• نکته: اگر کامپوننتی به browser APIs نیاز دارد آن را به Client Component تبدیل کنید یا منطق وابسته به browser را در useEffect قرار دهید"
@@ -9467,7 +9467,7 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-        "explanation": "• meta-framework یعنی frameworkی که روی framework دیگری یعنی React ساخته شده است\n" +
+        "explanation": "• meta-framework یعنی framework ی که روی framework دیگری یعنی React ساخته شده است\n" +
             "• لایه‌ای از قابلیت‌ها و ساختار را روی React ecosystem اضافه می‌کند\n" +
             "• React را replace نمی‌کند بلکه آن را گسترش می‌دهد و ابزارهای بیشتری ارائه می‌دهد\n" +
             "• قابلیت‌هایی مثل routing و SSR و data fetching و optimization را می‌افزاید\n" +
@@ -20387,7 +20387,7 @@ export const mockQuestions: Question[] = [
   - در React، state فقط باید از طریق setState (در کامپوننت‌های کلاسی) یا setter تابعی مثل setCount (در useState) تغییر داده شود.
   - تغییر مستقیم مقدار state باعث نمی‌شود React متوجه تغییر شود، زیرا React از مکانیزم داخلی queue برای هماهنگ‌سازی state و رندر استفاده می‌کند.
   - نتیجه این است که کامپوننت دوباره رندر نمی‌شود و UI مقدار قدیمی را نمایش می‌دهد.
-  - برای به‌روزرسانی صحیح state همیشه باید از تابع setState یا setterهای useState استفاده کرد تا React چرخه‌ی رندر را مجدداً اجرا کند.
+  - برای به‌روزرسانی صحیح state همیشه باید از تابع setState یا setter های useState استفاده کرد تا React چرخه‌ی رندر را مجدداً اجرا کند.
   `
     },
     {
@@ -20405,7 +20405,7 @@ export const mockQuestions: Question[] = [
   - React چند فراخوانی setState را در یک چرخه رندر ترکیب (batch) می‌کند تا از رندرهای غیرضروری جلوگیری کند.
   - این فرآیند باعث می‌شود همه تغییرات state قبل از به‌روزرسانی DOM پردازش شوند و فقط یک بار رندر انجام شود.
   - هدف اصلی batching بهینه‌سازی عملکرد (performance optimization) و کاهش تعداد به‌روزرسانی‌های Virtual DOM است.
-  - از React 18 به بعد، batching به‌صورت خودکار برای تمام eventها و Promiseها انجام می‌شود.
+  - از React 18 به بعد، batching به‌صورت خودکار برای تمام event ها و Promise ها انجام می‌شود.
   `
     },
     {
@@ -20457,7 +20457,7 @@ export const mockQuestions: Question[] = [
         points: 10,
         explanation: `
   - تابع cleanup در useEffect برای پاک‌سازی منابعی استفاده می‌شود که ممکن است باعث memory leak یا رفتارهای ناخواسته شوند.
-  - این تابع معمولاً برای حذف event listenerها، متوقف کردن intervalها، یا لغو درخواست‌های async هنگام unmount یا قبل از اجرای دوباره effect به کار می‌رود.
+  - این تابع معمولاً برای حذف event listener ها، متوقف کردن interval ها، یا لغو درخواست‌های async هنگام unmount یا قبل از اجرای دوباره effect به کار می‌رود.
   - React ابتدا cleanup effect قبلی را اجرا می‌کند و سپس effect جدید را اعمال می‌کند.
   - در نتیجه، cleanup تضمین می‌کند که کامپوننت‌ها منابع خود را به‌درستی آزاد کنند و عملکرد بهینه داشته باشند.
   `
@@ -20477,10 +20477,58 @@ export const mockQuestions: Question[] = [
   - تابع cleanup در useEffect دو بار اجرا می‌شود: 
     1. درست قبل از اجرای دوباره همان effect (زمانی که یکی از وابستگی‌ها تغییر کرده باشد)،  
     2. هنگام unmount شدن کامپوننت برای آزادسازی منابع.
-  - این رفتار باعث می‌شود event listenerها، تایمرها و سایر منابع همیشه در زمان مناسب پاک‌سازی شوند.
+  - این رفتار باعث می‌شود event listener ها، تایمرها و سایر منابع همیشه در زمان مناسب پاک‌سازی شوند.
   - اگر آرایه وابستگی خالی باشد، cleanup فقط هنگام unmount اجرا می‌شود چون effect دوباره اجرا نخواهد شد.
   - این الگو از بروز memory leak و رفتارهای ناخواسته در چرخه عمر کامپوننت جلوگیری می‌کند.
   `
+    },
+    {
+        "id": 1520,
+        "question": "When using the Fetch API, why should you check the response.ok property after making a request?",
+        "options": [
+            "To ensure the received data can be parsed into valid JSON",
+            "To detect network failures that Fetch automatically throws",
+            "To confirm the response status indicates success (like 200 OK)",
+            "To verify that headers are included in the response object"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• ویژگی response.ok نشان می‌دهد که پاسخ از سرور با وضعیت موفق (status code بین 200 تا 299) برگشته است\n" +
+            "- در صورت خطاهای HTTP مانند 404 یا 500، fetch خطا پرتاب نمی‌کند و باید با بررسی ok آن را تشخیص داد\n" +
+            "- خطاهای شبکه توسط fetch مستقیماً پرتاب می‌شوند و نیازی به بررسی ok ندارند\n" +
+            "- این ویژگی ارتباطی با parsing داده‌های JSON ندارد"
+    },
+    {
+        "id": 1521,
+        "question": "What is the primary purpose of using multiple returns in a React component?",
+        "options": [
+            "To manage asynchronous operations such as data fetching",
+            "To separate state updates into multiple rendering phases",
+            "To execute different useEffect hooks within the same component",
+            "To handle conditional rendering for loading, error, or success states",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• استفاده از چند return در یک کامپوننت React برای کنترل رندرهای شرطی در وضعیت‌های مختلف مانند loading، error یا success است\n" +
+            "- این کار باعث خوانایی و سادگی منطق رندر می‌شود\n" +
+            "- useEffect و عملیات async مستقل از ساختار return هستند\n" +
+            "- React در هر بار فقط یکی از return ها را اجرا می‌کند بر اساس شرط‌ها"
+    },
+    {
+        "id": 1522,
+        "question": "What happens if you destructure a property from a null object in a React component?",
+        "options": [
+            "JavaScript throws a runtime error and the application breaks",
+            "React handles it gracefully and returns undefined for the property",
+            "React automatically assigns a default value to the property",
+            "The destructured property is silently ignored without errors"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• در صورت destructure از یک شیء null یا undefined، جاوااسکریپت خطای runtime پرتاب می‌کند\n" +
+            "- خطا معمولاً به صورت 'Cannot destructure property ... of null' ظاهر می‌شود\n" +
+            "- این خطا ربطی به React ندارد و می‌تواند باعث توقف اجرای کامپوننت شود\n" +
+            "- برای جلوگیری از آن می‌توان از مقدار پیش‌فرض یا optional chaining استفاده کرد"
     }
 
 
