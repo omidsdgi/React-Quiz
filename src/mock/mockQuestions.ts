@@ -10320,266 +10320,316 @@ export const mockQuestions: Question[] = [
             "• فقط leaf components که واقعاً interactive هستند باید Client باشند\n" +
             "• نکته: هرچه کمتر Client Component داشته باشید bundle size کمتر و performance بهتر است"
     },
-//     {
-//         "id": 601,
-//         "question": "In Next.js, where is a Server Component subtree executed by default?",
-//         "options": [
-//             "To execute entirely on the client regardless of state",
-//             "To switch execution between server and client automatically",
-//             "To run on the server unless a Client Component is inside",
-//             "To render only static HTML without server processing"
-//         ],
-//         "correctOption":2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 602,
-//         "question": "What does serialization mean in the context of Server Components in Next.js?",
-//         "options": [
-//             "To execute JavaScript functions before sending data to the client",
-//             "To convert data structures into a transferable format like JSON",
-//             "To encrypt props to secure them during server-side rendering",
-//             "To compile server code into a client-compatible bundle"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 603,
-//         "question": "Which type of prop can be safely used in a Server Component in Next.js?",
-//         "options": [
-//             "To pass functions or class instances directly as component props",
-//             "To include browser-only objects like window or document in props",
-//             "To share React hooks or event handlers as props between components",
-//             "To use serializable props such as strings, numbers, and plain objects",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 604,
-//         "question": "Why can't functions or class instances be passed as props in Server Components in Next.js?",
-//         "options": [
-//             "To avoid serialization errors since functions and classes cannot be converted to JSON",
-//             "To prevent duplicate rendering of components during client hydration proses",
-//             "To reduce bundle size by skipping complex objects in server rendering",
-//             "To keep server components isolated from client-side state and events"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 605,
-//         "question": "What is the main difference between using async/await in Server Components and Client Components in Next.js?",
-//         "options": [
-//             "To only support async/await when combined with useEffect in both server and client components",
-//             "To execute async/await automatically on both server and client without any restriction",
-//             "To allow direct async/await usage in Server Components but require external effects in Client Components",
-//             "To restrict async/await usage entirely in Server Components for performance reasons",
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 606,
-//         "question": "When does a Server Component render in a Next.js application?",
-//         "options": [
-//             "To render only once during the initial build process of the application",
-//             "To render continuously whenever client-side state changes occur",
-//             "To render on every navigation or URL change that triggers a new request",
-//             "To render automatically after all client components finish hydrating",
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 607,
-//         "question": "What does streaming mean in the context of Server-Side Rendering in Next.js?",
-//         "options": [
-//             "To buffer the entire HTML output on the server before sending it to the client browse",
-//             "To send HTML chunks to the browser as soon as they are ready instead of waiting for the full page",
-//             "To prefetch all client assets before rendering any server content",
-//             "To synchronize client and server states before starting the rendering process"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 608,
-//         "question": "Which of the following is NOT an advantage of streaming in Next.js Server-Side Rendering?",
-//         "options": [
-//             "To improve the time to first render by sending partial HTML early",
-//             "To enhance user experience through faster perceived loading",
-//             "To delay the first byte of HTML until all server components are ready",
-//             "To allow the browser to progressively render available content"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 609,
-//         "question": "Why can't React hooks be used inside Server Components?",
-//         "options": [
-//             "Because hooks require client-side reactivity and state",
-//             "Because hooks are deprecated in modern React",
-//             "Because hooks only work with class components",
-//             "Because hooks increase server load significantly"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 610,
-//         "question": "What happens if you try to use useState in a Server Component?",
-//         "options": [
-//             "The component automatically converts to client",
-//             "React throws an error during rendering",
-//             "The state works but doesn't update",
-//             "The hook is ignored silently"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 611,
-//         "question": "Which React feature requires client-side execution and cannot work in Server Components?",
-//         "options": [
-//             "Component composition and nesting",
-//             "Props passing between components",
-//             "State management with hooks",
-//             "JSX syntax for rendering"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//  "explanation":""
-//     },
-//     {
-//         "id": 612,
-//         "question": "Why does useEffect not work in Server Components?",
-//         "options": [
-//             "Because it runs after rendering on client",
-//             "Because it's too slow for server",
-//             "Because it only works with async data",
-//             "Because it requires special configuration"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 613,
-//         "question": "What is the fundamental reason hooks don't work in Server Components?",
-//         "options": [
-//             "Hooks depend on component lifecycle and re-renders",
-//             "Hooks are not compatible with async/await",
-//             "Hooks require browser APIs to function",
-//             "Hooks are only for class components"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 614,
-//         "question": "What information does the server need to render a Client Component?",
-//         "options": [
-//             "Only the component's props with serialized values",
-//             "Props, code reference, and client execution placeholder",
-//             "Complete JavaScript bundle including all dependencies",
-//             "Only the component name with its CSS styles"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 615,
-//         "question": "What is RSC Payload in React Server Components?",
-//         "options": [
-//             "The complete JavaScript bundle sent to client",
-//             "Serialized Server Component tree with Client placeholders",
-//             "Only the HTML output from server rendering",
-//             "The database query results for all components"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 616,
-//         "question": "What does RSC Payload contain for Client Components?",
-//         "options": [
-//             "Full component code with implementation details",
-//             "Component location reference with serialized props",
-//             "Only the component's rendered HTML structure",
-//             "Complete source code including all comments"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 617,
-//         "question": "Why is it called 'RSC Payload' instead of just 'data'?",
-//         "options": [
-//             "Because it's based on random naming convention",
-//             "Because it carries structured component tree data",
-//             "Because it only contains external API responses",
-//             "Because it's compressed for network transmission"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 618,
-//         "question": "What happens to Client Component code in RSC Payload?",
-//         "options": [
-//             "The code is fully included in the payload",
-//             "Only reference sent, code loads separately later",
-//             "The code is converted to plain HTML strings",
-//             "The code is executed on the server first"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 619,
-//         "question": "How does RSC Payload handle Server Component output?",
-//         "options": [
-//             "Sends complete component source code to client",
-//             "Includes rendered HTML with all serialized data",
-//             "Converts everything to standard JSON format only",
-//             "Skips Server Components entirely from payload"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 620,
-//         "question": "Why can't functions be included in RSC Payload?",
-//         "options": [
-//             "Because functions are too large for network transfer",
-//             "Because functions cannot be serialized into JSON",
-//             "Because functions only work on the server side",
-//             "Because functions are deprecated in modern React"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
+    {
+        "id": 621,
+        "question": "In Next.js, where is a Server Component subtree executed by default?",
+        "options": [
+            "To execute entirely on the client regardless of state",
+            "To switch execution between server and client automatically",
+            "To run on the server unless a Client Component is inside",
+            "To render only static HTML without server processing"
+        ],
+        "correctOption":2,
+        "points": 20,
+        "explanation": "• Server Component subtree به‌طور پیش‌فرض در server اجرا می‌شود مگر Client Component داخل آن باشد\n" +
+            "• تا زمانی که use client نبینید همه چیز در server است\n" +
+            "• وقتی Client Component وارد tree می‌شود آن و تمام children آن در client اجرا می‌شوند\n" +
+            "• این boundary بین server و client execution مشخص می‌کند\n" +
+            "• Server Components می‌توانند Client Components را render کنند اما نه برعکس\n" +
+            "• نکته: درک این execution model برای طراحی architecture صحیح اپلیکیشن حیاتی است"
+    },
+    {
+        "id": 622,
+        "question": "What does serialization mean in the context of Server Components in Next.js?",
+        "options": [
+            "To execute JavaScript functions before sending data to the client",
+            "To convert data structures into a transferable format like JSON",
+            "To encrypt props to secure them during server-side rendering",
+            "To compile server code into a client-compatible bundle"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• serialization یعنی تبدیل data structures به فرمت قابل انتقال مثل JSON\n" +
+            "• برای انتقال data از server به client باید serialize شود\n" +
+            "• فقط انواع JSON-compatible قابل serialize هستند\n" +
+            "• functions و class instances و symbols نمی‌توانند serialize شوند\n" +
+            "• این فرآیند برای communication بین server و client environment ضروری است\n" +
+            "• نکته: props که از Server به Client Component پاس می‌شوند باید serializable باشند"
+    },
+    {
+        "id": 623,
+        "question": "Which type of prop can be safely used in a Server Component in Next.js?",
+        "options": [
+            "To pass functions or class instances directly as component props",
+            "To include browser-only objects like window or document in props",
+            "To share React hooks or event handlers as props between components",
+            "To use serializable props such as strings, numbers, and plain objects",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• serializable props مثل strings و numbers و booleans و arrays و plain objects امن هستند\n" +
+            "• این انواع می‌توانند به JSON تبدیل شوند\n" +
+            "• از server به client قابل انتقال هستند\n" +
+            "• Date objects هم با تبدیل به string قابل استفاده هستند\n" +
+            "• nested objects و arrays تا زمانی که serializable باشند مشکلی ندارند\n" +
+            "• نکته: همیشه قبل از pass کردن props بررسی کنید که JSON.stringify روی آنها کار می‌کند یا نه"
+    },
+    {
+        "id": 624,
+        "question": "Why can't functions or class instances be passed as props in Server Components in Next.js?",
+        "options": [
+            "To avoid serialization errors since functions and classes cannot be converted to JSON",
+            "To prevent duplicate rendering of components during client hydration proses",
+            "To reduce bundle size by skipping complex objects in server rendering",
+            "To keep server components isolated from client-side state and events"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• functions و classes نمی‌توانند به JSON تبدیل شوند پس serialization error ایجاد می‌کنند\n" +
+            "• JSON.stringify نمی‌تواند function code را capture کند\n" +
+            "• class instances methods و internal state دارند که قابل serialize نیستند\n" +
+            "• این محدودیت به دلیل ماهیت distributed system است\n" +
+            "• server و client در environment های جداگانه هستند\n" +
+            "• نکته: به‌جای pass کردن functions از Server Actions استفاده کنید"
+    },
+    {
+        "id": 625,
+        "question": "What is the main difference between using async/await in Server Components and Client Components in Next.js?",
+        "options": [
+            "To only support async/await when combined with useEffect in both server and client components",
+            "To execute async/await automatically on both server and client without any restriction",
+            "To allow direct async/await usage in Server Components but require external effects in Client Components",
+            "To restrict async/await usage entirely in Server Components for performance reasons",
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• در Server Components می‌توانید مستقیماً async و await در component body استفاده کنید\n" +
+            "• در Client Components باید از useEffect یا data fetching libraries استفاده کنید\n" +
+            "• Client Components نمی‌توانند async function components باشند\n" +
+            "• Server Components به‌طور native از async operations پشتیبانی می‌کنند\n" +
+            "• این یکی از مزایای اصلی Server Components برای data fetching است\n" +
+            "• نکته: برای data fetching همیشه ترجیح دهید از Server Components استفاده کنید"
+    },
+    {
+        "id": 626,
+        "question": "When does a Server Component render in a Next.js application?",
+        "options": [
+            "To render only once during the initial build process of the application",
+            "To render continuously whenever client-side state changes occur",
+            "To render on every navigation or URL change that triggers a new request",
+            "To render automatically after all client components finish hydrating",
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• Server Component با هر navigation یا URL change که new request trigger می‌کند دوباره render می‌شود\n" +
+            "• هر بار که route جدیدی visited می‌شود Server Components آن re-render می‌شوند\n" +
+            "• با manual revalidation هم می‌توانند دوباره render شوند\n" +
+            "• برخلاف Client Components که با state changes re-render می‌شوند\n" +
+            "• Server Components reactive نیستند و فقط با explicit triggers\n" +
+            "• نکته: از revalidatePath یا revalidateTag برای force کردن re-render استفاده کنید"
+    },
+    {
+        "id": 627,
+        "question": "What does streaming mean in the context of Server-Side Rendering in Next.js?",
+        "options": [
+            "To buffer the entire HTML output on the server before sending it to the client browse",
+            "To send HTML chunks to the browser as soon as they are ready instead of waiting for the full page",
+            "To prefetch all client assets before rendering any server content",
+            "To synchronize client and server states before starting the rendering process"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• streaming یعنی ارسال HTML chunks به browser به محض آماده شدن بجای انتظار برای کل صفحه\n" +
+            "• server نمی‌خواهد تا تمام محتوا render شود صبر کند\n" +
+            "• بخش‌های آماده فوراً به client ارسال می‌شوند\n" +
+            "• browser می‌تواند progressively محتوا را render کند\n" +
+            "• این باعث بهبود Time to First Byte و perceived performance می‌شود\n" +
+            "• نکته: با React Suspense می‌توانید control کنید که کدام بخش‌ها stream شوند"
+    },
+    {
+        "id": 628,
+        "question": "Which of the following is NOT an advantage of streaming in Next.js Server-Side Rendering?",
+        "options": [
+            "To improve the time to first render by sending partial HTML early",
+            "To enhance user experience through faster perceived loading",
+            "To delay the first byte of HTML until all server components are ready",
+            "To allow the browser to progressively render available content"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• streaming first byte را delay نمی‌کند بلکه سریع‌تر ارسال می‌کند\n" +
+            "• هدف streaming ارسال سریع partial content است نه انتظار برای همه چیز\n" +
+            "• با streaming کاربر زودتر محتوا را می‌بیند\n" +
+            "• Time to First Byte کاهش می‌یابد نه افزایش\n" +
+            "• browser می‌تواند قبل از complete شدن render شروع به نمایش کند\n" +
+            "• نکته: streaming یکی از بهترین optimization ها برای بهبود perceived performance است"
+    },
+    {
+        "id": 629,
+        "question": "Why can't React hooks be used inside Server Components?",
+        "options": [
+            "Because hooks require client-side reactivity and state",
+            "Because hooks are deprecated in modern React",
+            "Because hooks only work with class components",
+            "Because hooks increase server load significantly"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• hooks به client-side reactivity و state نیاز دارند که در server وجود ندارد\n" +
+            "• useState و useEffect و دیگر hooks برای lifecycle و re-renders طراحی شده‌اند\n" +
+            "• Server Components فقط یک‌بار render می‌شوند نه reactive\n" +
+            "• hooks به browser environment و component lifecycle وابسته هستند\n" +
+            "• Server Components این lifecycle را ندارند\n" +
+            "• نکته: اگر نیاز به hooks دارید باید از Client Component استفاده کنید"
+    },
+    {
+        "id": 630,
+        "question": "What happens if you try to use useState in a Server Component?",
+        "options": [
+            "The component automatically converts to client",
+            "React throws an error during rendering",
+            "The state works but doesn't update",
+            "The hook is ignored silently"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• React یک error در زمان rendering throw می‌کند\n" +
+            "• error message می‌گوید که hooks در Server Components مجاز نیستند\n" +
+            "• این error در development بلافاصله ظاهر می‌شود\n" +
+            "• component اصلاً render نمی‌شود و build fail می‌شود\n" +
+            "• باید component را به Client Component با use client تبدیل کنید\n" +
+            "• نکته: این validation به شما کمک می‌کند mistakes را زود پیدا کنید"
+    },
+    {
+        "id": 611,
+        "question": "Which React feature requires client-side execution and cannot work in Server Components?",
+        "options": [
+            "Component composition and nesting",
+            "Props passing between components",
+            "State management with hooks",
+            "JSX syntax for rendering"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation":""
+    },
+    {
+        "id": 612,
+        "question": "Why does useEffect not work in Server Components?",
+        "options": [
+            "Because it runs after rendering on client",
+            "Because it's too slow for server",
+            "Because it only works with async data",
+            "Because it requires special configuration"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 613,
+        "question": "What is the fundamental reason hooks don't work in Server Components?",
+        "options": [
+            "Hooks depend on component lifecycle and re-renders",
+            "Hooks are not compatible with async/await",
+            "Hooks require browser APIs to function",
+            "Hooks are only for class components"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 614,
+        "question": "What information does the server need to render a Client Component?",
+        "options": [
+            "Only the component's props with serialized values",
+            "Props, code reference, and client execution placeholder",
+            "Complete JavaScript bundle including all dependencies",
+            "Only the component name with its CSS styles"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 615,
+        "question": "What is RSC Payload in React Server Components?",
+        "options": [
+            "The complete JavaScript bundle sent to client",
+            "Serialized Server Component tree with Client placeholders",
+            "Only the HTML output from server rendering",
+            "The database query results for all components"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 616,
+        "question": "What does RSC Payload contain for Client Components?",
+        "options": [
+            "Full component code with implementation details",
+            "Component location reference with serialized props",
+            "Only the component's rendered HTML structure",
+            "Complete source code including all comments"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 617,
+        "question": "Why is it called 'RSC Payload' instead of just 'data'?",
+        "options": [
+            "Because it's based on random naming convention",
+            "Because it carries structured component tree data",
+            "Because it only contains external API responses",
+            "Because it's compressed for network transmission"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 618,
+        "question": "What happens to Client Component code in RSC Payload?",
+        "options": [
+            "The code is fully included in the payload",
+            "Only reference sent, code loads separately later",
+            "The code is converted to plain HTML strings",
+            "The code is executed on the server first"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 619,
+        "question": "How does RSC Payload handle Server Component output?",
+        "options": [
+            "Sends complete component source code to client",
+            "Includes rendered HTML with all serialized data",
+            "Converts everything to standard JSON format only",
+            "Skips Server Components entirely from payload"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 620,
+        "question": "Why can't functions be included in RSC Payload?",
+        "options": [
+            "Because functions are too large for network transfer",
+            "Because functions cannot be serialized into JSON",
+            "Because functions only work on the server side",
+            "Because functions are deprecated in modern React"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
 //     {
 //         "id": 621,
 //         "question": "What is the purpose of component references in RSC Payload?",
