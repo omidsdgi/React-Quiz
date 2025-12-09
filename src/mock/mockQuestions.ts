@@ -10501,7 +10501,7 @@ export const mockQuestions: Question[] = [
             "• نکته: این validation به شما کمک می‌کند mistakes را زود پیدا کنید"
     },
     {
-        "id": 611,
+        "id": 631,
         "question": "Which React feature requires client-side execution and cannot work in Server Components?",
         "options": [
             "Component composition and nesting",
@@ -10511,10 +10511,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-        "explanation":""
+        "explanation": "• state management با hooks نیاز به client-side execution دارد\n" +
+            "• useState و useReducer و دیگر state hooks فقط در client کار می‌کنند\n" +
+            "• state به reactivity و re-renders نیاز دارد که server ندارد\n" +
+            "• component composition و props passing در server کار می‌کنند\n" +
+            "• JSX syntax هم در server component قابل استفاده است\n" +
+            "• نکته: فقط interactive features به client-side execution نیاز دارند"
     },
     {
-        "id": 612,
+        "id": 632,
         "question": "Why does useEffect not work in Server Components?",
         "options": [
             "Because it runs after rendering on client",
@@ -10524,10 +10529,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":""
+        "explanation": "• useEffect بعد از rendering در client اجرا می‌شود و server این lifecycle ندارد\n" +
+            "• Server Components فقط یک‌بار render می‌شوند و دوباره mount نمی‌شوند\n" +
+            "• useEffect برای side effects بعد از commit phase است که در server معنا ندارد\n" +
+            "• server فقط HTML تولید می‌کند و cleanup یا re-run ندارد\n" +
+            "• برای side effects در server از async functions مستقیماً استفاده کنید\n" +
+            "• نکته: data fetching در Server Components با async و await انجام می‌شود نه useEffect"
     },
     {
-        "id": 613,
+        "id": 633,
         "question": "What is the fundamental reason hooks don't work in Server Components?",
         "options": [
             "Hooks depend on component lifecycle and re-renders",
@@ -10537,10 +10547,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":""
+        "explanation": "• hooks به component lifecycle و re-renders وابسته هستند که server ندارد\n" +
+            "• Server Components stateless هستند و lifecycle events ندارند\n" +
+            "• hooks برای managing state و effects در interactive components طراحی شده‌اند\n" +
+            "• server فقط یک‌بار render می‌کند و reactive نیست\n" +
+            "• مفهوم mounting و unmounting در server وجود ندارد\n" +
+            "• نکته: این محدودیت architectural است نه technical limitation ساده"
     },
     {
-        "id": 614,
+        "id": 634,
         "question": "What information does the server need to render a Client Component?",
         "options": [
             "Only the component's props with serialized values",
@@ -10550,10 +10565,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":""
+        "explanation": "• server نیاز به props با serialized values و code reference و client execution placeholder دارد\n" +
+            "• props باید serialize شوند تا قابل انتقال باشند\n" +
+            "• code reference مشخص می‌کند کدام component در client load شود\n" +
+            "• placeholder در RSC payload قرار می‌گیرد\n" +
+            "• خود JavaScript code component به client bundle اضافه می‌شود نه payload\n" +
+            "• نکته: این جداسازی باعث می‌شود RSC payload سبک باشد"
     },
     {
-        "id": 615,
+        "id": 635,
         "question": "What is RSC Payload in React Server Components?",
         "options": [
             "The complete JavaScript bundle sent to client",
@@ -10563,10 +10583,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation": "• RSC Payload یک serialized representation از Server Component tree به همراه Client placeholders است\n" +
+            "• شامل rendered output از Server Components است\n" +
+            "• برای Client Components فقط reference و props می‌فرستد نه code\n" +
+            "• این payload از server به client ارسال می‌شود\n" +
+            "• client از این payload برای reconstruct کردن UI استفاده می‌کند\n" +
+            "• نکته: RSC Payload جایگزین HTML سنتی است و اطلاعات بیشتری دارد"
     },
     {
-        "id": 616,
+        "id": 636,
         "question": "What does RSC Payload contain for Client Components?",
         "options": [
             "Full component code with implementation details",
@@ -10576,10 +10601,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":""
+        "explanation": "• برای Client Components فقط component location reference و serialized props در payload قرار می‌گیرد\n" +
+            "• خود implementation code component در payload نیست\n" +
+            "• JavaScript code به‌صورت جداگانه در client bundle است\n" +
+            "• payload فقط می‌گوید کدام component با چه props باید render شود\n" +
+            "• این رویکرد payload را سبک نگه می‌دارد\n" +
+            "• نکته: این separation of concerns باعث بهتر performance می‌شود"
     },
     {
-        "id": 617,
+        "id": 637,
         "question": "Why is it called 'RSC Payload' instead of just 'data'?",
         "options": [
             "Because it's based on random naming convention",
@@ -10589,10 +10619,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation": "• payload نام مناسب‌تری است چون structured component tree data را حمل می‌کند\n" +
+            "• این فقط raw data نیست بلکه شامل metadata و references هم هست\n" +
+            "• payload مفهوم حمل اطلاعات structured را بهتر منتقل می‌کند\n" +
+            "• شامل instructions برای reconstruct کردن UI است\n" +
+            "• term payload در networking و APIs رایج است\n" +
+            "• نکته: این اصطلاح کمک می‌کند تفاوت آن با simple data transfer را مشخص کند"
     },
     {
-        "id": 618,
+        "id": 638,
         "question": "What happens to Client Component code in RSC Payload?",
         "options": [
             "The code is fully included in the payload",
@@ -10602,10 +10637,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":""
+        "explanation": "• code خود Client Component در payload نیست فقط reference ارسال می‌شود\n" +
+            "• code بعداً به‌صورت جداگانه در client bundle load می‌شود\n" +
+            "• این جداسازی باعث می‌شود payload سبک باشد\n" +
+            "• client می‌داند کجا code را پیدا کند از روی reference\n" +
+            "• این approach code splitting و lazy loading را ممکن می‌کند\n" +
+            "• نکته: این تکنیک یکی از دلایل کارایی بالای RSC است"
     },
     {
-        "id": 619,
+        "id": 639,
         "question": "How does RSC Payload handle Server Component output?",
         "options": [
             "Sends complete component source code to client",
@@ -10615,10 +10655,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation":"• برای Server Components خود rendered HTML به همراه serialized data در payload قرار می‌گیرد\n" +
+            "• تمام output نهایی Server Component در payload است\n" +
+            "• نیازی به load کردن code در client نیست\n" +
+            "• این output آماده برای نمایش است\n" +
+            "• client فقط باید این output را در درست جای DOM قرار دهد\n" +
+            "• نکته: این رویکرد باعث می‌شود Server Components هیچ JavaScript به client نفرستند"
     },
     {
-        "id": 620,
+        "id": 640,
         "question": "Why can't functions be included in RSC Payload?",
         "options": [
             "Because functions are too large for network transfer",
@@ -10628,7 +10673,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation":"• functions نمی‌توانند به JSON serialize شوند چون code execution هستند نه data\n" +
+            "• JSON.stringify روی functions کار نمی‌کند\n" +
+            "• function scope و closures قابل transfer نیستند\n" +
+            "• این محدودیت fundamental در serialization است\n" +
+            "• برای انتقال logic باید از Server Actions استفاده کرد\n" +
+            "• نکته: این محدودیت به clear separation بین server و client logic کمک می‌کند"
     },
 //     {
 //         "id": 621,
