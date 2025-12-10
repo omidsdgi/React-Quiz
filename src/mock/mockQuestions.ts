@@ -10860,240 +10860,291 @@ export const mockQuestions: Question[] = [
             "• این ترکیب بهترین هر دو دنیا را ارائه می‌دهد\n" +
             "• نکته: Next.js App Router به‌طور پیش‌فرض از این ترکیب استفاده می‌کند"
     },
-//     {
-//         "id": 631,
-//         "question": "How does hydration differ between SSR and RSC?",
-//         "options": [
-//             "SSR hydrates all components, RSC only client ones",
-//             "SSR skips hydration, RSC requires full hydration",
-//             "Both hydrate components in exactly same way",
-//             "Neither requires hydration for any components"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 632,
-//         "question": "What advantage does RSC have over traditional SSR?",
-//         "options": [
-//             "RSC eliminates need for any server rendering",
-//             "RSC reduces client bundle by keeping code server-side",
-//             "RSC makes all components interactive without JavaScript",
-//             "RSC renders everything faster than SSR always"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 633,
-//         "question": "How do SSR and RSC affect SEO?",
-//         "options": [
-//             "Both provide server-rendered content for better indexing",
-//             "SSR improves SEO, RSC completely breaks indexing",
-//             "RSC improves SEO, SSR prevents crawler access",
-//             "Neither has any impact on search rankings"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 634,
-//         "question": "Which statement about SSR and RSC is correct?",
-//         "options": [
-//             "SSR is newer technology replacing older RSC",
-//             "RSC is evolution of SSR with better optimization",
-//             "Both are identical with different naming only",
-//             "SSR works only with React, RSC with all frameworks"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 635,
-//         "question": "How do SSR and RSC handle component state?",
-//         "options": [
-//             "SSR preserves all state, RSC loses state completely",
-//             "Both require client-side state management for interactivity",
-//             "RSC manages state, SSR cannot handle any state",
-//             "Neither can manage component state at all"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 636,
-//         "question": "What happens on navigation in SSR vs RSC?",
-//         "options": [
-//             "SSR refetches everything, RSC updates only changed parts",
-//             "Both reload entire page from server completely",
-//             "SSR updates partially, RSC always does full reload",
-//             "Neither supports navigation between different pages"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 637,
-//         "question": "Which rendering approach requires more server resources?",
-//         "options": [
-//             "Traditional SSR due to complete page rendering",
-//             "RSC due to component-level streaming and logic",
-//             "Both require exactly same server resource amounts",
-//             "Neither requires any server resources at all"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 638,
-//         "question": "How do SSR and RSC impact Time to Interactive?",
-//         "options": [
-//             "SSR faster always, RSC slower in all scenarios",
-//             "RSC can be faster by reducing client JavaScript",
-//             "Both have identical Time to Interactive metrics",
-//             "Neither affects Time to Interactive at all"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 639,
-//         "question": "What does the '@' symbol represent in Next.js import paths?",
-//         "options": [
-//             "A special decorator for component styling",
-//             "An alias for the project root directory",
-//             "A prefix for external npm package imports",
-//             "A marker for server-only component imports"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 640,
-//         "question": "Why is '@' used instead of relative paths in Next.js?",
-//         "options": [
-//             "To automatically optimize component bundle size",
-//             "To enable TypeScript type checking automatically",
-//             "To avoid long relative paths like '../../../components'",
-//             "To make imports work only on server",
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 641,
-//         "question": "Where is the '@' alias configured in Next.js?",
-//         "options": [
-//             "In package.json under dependencies section only",
-//             "In tsconfig.json or jsconfig.json paths configuration",
-//             "In next.config.js webpack externals section only",
-//             "In .env file as environment variable"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 642,
-//         "question": "What path does '@/app/_components/Logo' typically resolve to?",
-//         "options": [
-//             "The node_modules folder with app namespace",
-//             "The project root then app/_components/Logo path",
-//             "A CDN URL for external component libraries",
-//             "The public folder for static asset files"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 643,
-//         "question": "Can you customize the '@' alias in Next.js?",
-//         "options": [
-//             "Yes, by modifying paths in tsconfig.json file",
-//             "No, '@' is hardcoded and cannot change",
-//             "Yes, but only in production build environment",
-//             "No, changing it breaks all Next.js features"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 644,
-//         "question": "What is the benefit of using '@' over relative paths?",
-//         "options": [
-//             "It makes imports work faster at runtime",
-//             "It automatically tree-shakes unused component code",
-//             "It prevents deep nesting with cleaner syntax",
-//             "It enables server-side rendering for components"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 645,
-//         "question": "Is '@' alias specific to Next.js only?",
-//         "options": [
-//             "Yes, it only works in Next.js apps",
-//             "Yes, but can be poly filled for other tools",
-//             "No, it's a native JavaScript ES6 feature",
-//             "No, it's common in many modern frameworks",
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 646,
-//         "question": "What happens if '@' is not configured properly?",
-//         "options": [
-//             "Next.js will throw module not found errors",
-//             "Imports will work but run slower than normal",
-//             "The app will build but crash at runtime",
-//             "TypeScript will auto-fix the configuration"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 647,
-//         "question": "Can you use multiple custom aliases besides '@'?",
-//         "options": [
-//             "No, Next.js only allows single alias configuration",
-//             "Yes, but maximum three aliases are allowed",
-//             "Yes, by defining multiple paths in config",
-//             "No, only '@' and '~' are permitted"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 648,
-//         "question": "Does '@' alias work in both JavaScript and TypeScript?",
-//         "options": [
-//             "Yes, but requires additional Babel plugin setup",
-//             "No, it only works with TypeScript projects",
-//             "Yes, when configured in jsconfig or tsconfig",
-//             "No, it's exclusive to JavaScript ES modules"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//  "explanation":""
-//     },
+    {
+        "id": 651,
+        "question": "How does hydration differ between SSR and RSC?",
+        "options": [
+            "SSR hydrates all components, RSC only client ones",
+            "SSR skips hydration, RSC requires full hydration",
+            "Both hydrate components in exactly same way",
+            "Neither requires hydration for any components"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• در SSR تمام components باید hydrate شوند\n" +
+            "• در RSC فقط Client Components نیاز به hydration دارند\n" +
+            "• Server Components در RSC هیچوقت hydrate نمی‌شوند\n" +
+            "• این تفاوت باعث faster Time to Interactive در RSC می‌شود\n" +
+            "• کمتر JavaScript برای hydration یعنی سریع‌تر interactive شدن\n" +
+            "• نکته: selective hydration یکی از performance benefits کلیدی RSC است"
+    },
+    {
+        "id": 652,
+        "question": "What advantage does RSC have over traditional SSR?",
+        "options": [
+            "RSC eliminates need for any server rendering",
+            "RSC reduces client bundle by keeping code server-side",
+            "RSC makes all components interactive without JavaScript",
+            "RSC renders everything faster than SSR always"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• RSC با نگه داشتن Server Component code در server باعث کاهش client bundle می‌شود\n" +
+            "• فقط Client Components به client bundle اضافه می‌شوند\n" +
+            "• این باعث faster download و parsing و execution می‌شود\n" +
+            "• Time to Interactive بهبود می‌یابد\n" +
+            "• کمتر JavaScript یعنی کمتر overhead برای browser\n" +
+            "• نکته: این مزیت به‌خصوص در mobile devices با پردازنده کمتر مهم است"
+    },
+    {
+        "id": 653,
+        "question": "How do SSR and RSC affect SEO?",
+        "options": [
+            "Both provide server-rendered content for better indexing",
+            "SSR improves SEO, RSC completely breaks indexing",
+            "RSC improves SEO, SSR prevents crawler access",
+            "Neither has any impact on search rankings"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• هر دو server-rendered content ارائه می‌دهند که برای indexing مناسب است\n" +
+            "• crawler ها در هر دو حالت محتوای کامل را می‌بینند\n" +
+            "• RSC و SSR هر دو SEO-friendly هستند\n" +
+            "• تفاوت در performance است نه SEO capabilities\n" +
+            "• هر دو بهتر از pure CSR برای SEO هستند\n" +
+            "• نکته: برای بهترین SEO از metadata APIs و structured data نیز استفاده کنید"
+    },
+    {
+        "id": 654,
+        "question": "Which statement about SSR and RSC is correct?",
+        "options": [
+            "SSR is newer technology replacing older RSC",
+            "RSC is evolution of SSR with better optimization",
+            "Both are identical with different naming only",
+            "SSR works only with React, RSC with all frameworks"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• RSC یک evolution از SSR با optimization بهتر است\n" +
+            "• RSC مفاهیم SSR را می‌گیرد و بهبود می‌دهد\n" +
+            "• RSC تکنولوژی جدیدتری است که روی SSR بنا شده\n" +
+            "• هر دو React-based هستند و مفاهیم مشترک دارند\n" +
+            "• RSC قابلیت‌های اضافی مثل selective hydration دارد\n" +
+            "• نکته: RSC نسل بعدی server rendering در React ecosystem است"
+    },
+    {
+        "id": 655,
+        "question": "How do SSR and RSC handle component state?",
+        "options": [
+            "SSR preserves all state, RSC loses state completely",
+            "Both require client-side state management for interactivity",
+            "RSC manages state, SSR cannot handle any state",
+            "Neither can manage component state at all"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• هر دو برای interactivity نیاز به client-side state management دارند\n" +
+            "• Server Components در هیچکدام state ندارند\n" +
+            "• Client Components در هر دو باید برای state استفاده شوند\n" +
+            "• state management pattern در client مشابه است\n" +
+            "• تفاوت در نحوه delivery و hydration است\n" +
+            "• نکته: برای state پیچیده از Context API یا state libraries استفاده کنید"
+    },
+    {
+        "id": 656,
+        "question": "What happens on navigation in SSR vs RSC?",
+        "options": [
+            "SSR refetches everything, RSC updates only changed parts",
+            "Both reload entire page from server completely",
+            "SSR updates partially, RSC always does full reload",
+            "Neither supports navigation between different pages"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• در SSR معمولاً همه چیز دوباره از server fetch می‌شود\n" +
+            "• RSC می‌تواند فقط بخش‌های تغییر یافته را update کند\n" +
+            "• RSC partial updates را support می‌کند\n" +
+            "• SSR معمولاً full page reload یا full client-side navigation است\n" +
+            "• RSC navigation efficient تر و سریع‌تر است\n" +
+            "• نکته: RSC با streaming می‌تواند navigation را بسیار سریع کند"
+    },
+    {
+        "id": 657,
+        "question": "Which rendering approach requires more server resources?",
+        "options": [
+            "Traditional SSR due to complete page rendering",
+            "RSC due to component-level streaming and logic",
+            "Both require exactly same server resource amounts",
+            "Neither requires any server resources at all"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• traditional SSR به دلیل complete page rendering برای هر request منابع بیشتری نیاز دارد\n" +
+            "• SSR باید تمام page را هر بار render کند\n" +
+            "• RSC می‌تواند with caching و partial rendering کارآمدتر باشد\n" +
+            "• RSC streaming دارد که load را توزیع می‌کند\n" +
+            "• هر دو نیاز به server processing دارند اما RSC بهینه‌تر است\n" +
+            "• نکته: با caching strategies مناسب می‌توان server load را در هر دو کاهش داد"
+    },
+    {
+        "id": 658,
+        "question": "How do SSR and RSC impact Time to Interactive?",
+        "options": [
+            "SSR faster always, RSC slower in all scenarios",
+            "RSC can be faster by reducing client JavaScript",
+            "Both have identical Time to Interactive metrics",
+            "Neither affects Time to Interactive at all"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• RSC می‌تواند با کاهش client JavaScript سریع‌تر به interactive برسد\n" +
+            "• کمتر JavaScript یعنی کمتر parsing و execution\n" +
+            "• SSR همه component code را نیاز دارد که TTI را افزایش می‌دهد\n" +
+            "• RSC selective hydration دارد که فقط لازم را hydrate می‌کند\n" +
+            "• این تفاوت در mobile devices قابل توجه است\n" +
+            "• نکته: برای بهترین TTI ترکیب RSC با code splitting استفاده کنید"
+    },
+    {
+        "id": 659,
+        "question": "What does the '@' symbol represent in Next.js import paths?",
+        "options": [
+            "A special decorator for component styling",
+            "An alias for the project root directory",
+            "A prefix for external npm package imports",
+            "A marker for server-only component imports"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• RSC می‌تواند با کاهش client JavaScript سریع‌تر به interactive برسد\n" +
+            "• کمتر JavaScript یعنی کمتر parsing و execution\n" +
+            "• SSR همه component code را نیاز دارد که TTI را افزایش می‌دهد\n" +
+            "• RSC selective hydration دارد که فقط لازم را hydrate می‌کند\n" +
+            "• این تفاوت در mobile devices قابل توجه است\n" +
+            "• نکته: برای بهترین TTI ترکیب RSC با code splitting استفاده کنید"
+    },
+    {
+        "id": 660,
+        "question": "Why is '@' used instead of relative paths in Next.js?",
+        "options": [
+            "To automatically optimize component bundle size",
+            "To enable TypeScript type checking automatically",
+            "To avoid long relative paths like '../../../components'",
+            "To make imports work only on server",
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• برای اجتناب از relative paths طولانی مثل ../../../components\n" +
+            "• import statements خواناتر و maintainable تر می‌شوند\n" +
+            "• وقتی فایل‌ها جابجا می‌شوند imports نیاز به update ندارند\n" +
+            "• refactoring و reorganization ساده‌تر می‌شود\n" +
+            "• کد cleaner و professional تر به نظر می‌رسد\n" +
+            "• نکته: این best practice در پروژه‌های بزرگ بسیار ارزشمند است"
+    },
+
+    {
+        "id": 641,
+        "question": "Where is the '@' alias configured in Next.js?",
+        "options": [
+            "In package.json under dependencies section only",
+            "In tsconfig.json or jsconfig.json paths configuration",
+            "In next.config.js webpack externals section only",
+            "In .env file as environment variable"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 642,
+        "question": "What path does '@/app/_components/Logo' typically resolve to?",
+        "options": [
+            "The node_modules folder with app namespace",
+            "The project root then app/_components/Logo path",
+            "A CDN URL for external component libraries",
+            "The public folder for static asset files"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 643,
+        "question": "Can you customize the '@' alias in Next.js?",
+        "options": [
+            "Yes, by modifying paths in tsconfig.json file",
+            "No, '@' is hardcoded and cannot change",
+            "Yes, but only in production build environment",
+            "No, changing it breaks all Next.js features"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 644,
+        "question": "What is the benefit of using '@' over relative paths?",
+        "options": [
+            "It makes imports work faster at runtime",
+            "It automatically tree-shakes unused component code",
+            "It prevents deep nesting with cleaner syntax",
+            "It enables server-side rendering for components"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 645,
+        "question": "Is '@' alias specific to Next.js only?",
+        "options": [
+            "Yes, it only works in Next.js apps",
+            "Yes, but can be poly filled for other tools",
+            "No, it's a native JavaScript ES6 feature",
+            "No, it's common in many modern frameworks",
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 646,
+        "question": "What happens if '@' is not configured properly?",
+        "options": [
+            "Next.js will throw module not found errors",
+            "Imports will work but run slower than normal",
+            "The app will build but crash at runtime",
+            "TypeScript will auto-fix the configuration"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 647,
+        "question": "Can you use multiple custom aliases besides '@'?",
+        "options": [
+            "No, Next.js only allows single alias configuration",
+            "Yes, but maximum three aliases are allowed",
+            "Yes, by defining multiple paths in config",
+            "No, only '@' and '~' are permitted"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 648,
+        "question": "Does '@' alias work in both JavaScript and TypeScript?",
+        "options": [
+            "Yes, but requires additional Babel plugin setup",
+            "No, it only works with TypeScript projects",
+            "Yes, when configured in jsconfig or tsconfig",
+            "No, it's exclusive to JavaScript ES modules"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
 //     {
 //         "id": 652,
 //         "question": "Why does Next.js self-host Google Fonts?",
