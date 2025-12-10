@@ -11042,7 +11042,7 @@ export const mockQuestions: Question[] = [
     },
 
     {
-        "id": 641,
+        "id": 661,
         "question": "Where is the '@' alias configured in Next.js?",
         "options": [
             "In package.json under dependencies section only",
@@ -11052,10 +11052,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":""
+        "explanation": "• alias @ در فایل tsconfig.json یا jsconfig.json در بخش paths configuration تعریف می‌شود\n" +
+            "• این فایل‌ها path mapping را برای TypeScript یا JavaScript compiler مشخص می‌کنند\n" +
+            "• معمولاً در root پروژه قرار دارند\n" +
+            "• می‌توانید چندین alias مختلف تعریف کنید\n" +
+            "• این configuration هم برای editor autocomplete و هم برای build استفاده می‌شود\n" +
+            "• نکته: حتماً baseUrl را نیز در config تنظیم کنید"
     },
     {
-        "id": 642,
+        "id": 662,
         "question": "What path does '@/app/_components/Logo' typically resolve to?",
         "options": [
             "The node_modules folder with app namespace",
@@ -11065,10 +11070,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation":"• این path به project root سپس مسیر app/_components/Logo resolve می‌شود\n" +
+            "• @ معمولاً به root directory یا src folder map شده است\n" +
+            "• path کامل می‌شود مثلاً /Users/project/app/_components/Logo\n" +
+            "• این absolute path import را ایجاد می‌کند\n" +
+            "• compiler این alias را به actual path تبدیل می‌کند\n" +
+            "• نکته: از underscore prefix برای private folders استفاده کنید"
     },
     {
-        "id": 643,
+        "id": 663,
         "question": "Can you customize the '@' alias in Next.js?",
         "options": [
             "Yes, by modifying paths in tsconfig.json file",
@@ -11078,10 +11088,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":""
+        "explanation": "• بله با تغییر paths در tsconfig.json می‌توانید alias را customize کنید\n" +
+            "• می‌توانید @ را به هر چیزی map کنید یا aliases جدید اضافه کنید\n" +
+            "• می‌توانید چندین alias برای folders مختلف داشته باشید\n" +
+            "• این flexibility به شما اجازه می‌دهد structure دلخواه بسازید\n" +
+            "• تغییرات در tsconfig نیاز به restart development server دارند\n" +
+            "• نکته: alias های واضح و معنادار انتخاب کنید برای readability"
     },
     {
-        "id": 644,
+        "id": 664,
         "question": "What is the benefit of using '@' over relative paths?",
         "options": [
             "It makes imports work faster at runtime",
@@ -11091,10 +11106,16 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":""
+        "explanation":"• جلوگیری از deep nesting با syntax تمیزتر\n" +
+            "• imports هنگام move کردن فایل‌ها break نمی‌شوند\n" +
+            "• خوانایی کد بهبود می‌یابد\n" +
+            "• refactoring راحت‌تر می‌شود\n" +
+            "• consistency در تمام پروژه حفظ می‌شود\n" +
+            "• نکته: این مخصوصاً در large codebases بسیار مفید است"
     },
+
     {
-        "id": 645,
+        "id": 665,
         "question": "Is '@' alias specific to Next.js only?",
         "options": [
             "Yes, it only works in Next.js apps",
@@ -11104,10 +11125,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation": "• خیر @ alias به Next.js اختصاصی نیست\n" +
+            "• این یک TypeScript و JavaScript feature است\n" +
+            "• در بسیاری از modern frameworks رایج است\n" +
+            "• می‌توانید در هر پروژه‌ای که tsconfig یا jsconfig دارد استفاده کنید\n" +
+            "• bundlers مثل Webpack و Vite هم support می‌کنند\n" +
+            "• نکته: این یک standard practice در JavaScript ecosystem است"
     },
     {
-        "id": 646,
+        "id": 666,
         "question": "What happens if '@' is not configured properly?",
         "options": [
             "Next.js will throw module not found errors",
@@ -11117,10 +11143,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
-    },
+        "explanation": "• Next.js خطای module not found throw می‌کند\n" +
+            "• compiler نمی‌تواند path را resolve کند\n" +
+            "• build fail می‌شود\n" +
+            "• editor autocomplete کار نمی‌کند\n" +
+            "• باید tsconfig.json را درست configure کنید\n" +
+            "• نکته: همیشه بعد از تغییر config سرور را restart کنید"
+},
     {
-        "id": 647,
+        "id": 667,
         "question": "Can you use multiple custom aliases besides '@'?",
         "options": [
             "No, Next.js only allows single alias configuration",
@@ -11130,10 +11161,16 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation":"• بله با تعریف multiple paths در config می‌توانید چندین alias داشته باشید\n" +
+            "• مثال @components و @utils و @styles\n" +
+            "• هر alias می‌تواند به directory مختلفی point کند\n" +
+            "• این به organization بهتر کد کمک می‌کند\n" +
+            "• محدودیت تعداد وجود ندارد\n" +
+            "• نکته: alias های زیاد را اجتناب کنید تا confusion ایجاد نشود"
     },
+
     {
-        "id": 648,
+        "id": 668,
         "question": "Does '@' alias work in both JavaScript and TypeScript?",
         "options": [
             "Yes, but requires additional Babel plugin setup",
@@ -11143,134 +11180,149 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
+        "explanation": "• بله وقتی در jsconfig یا tsconfig configure شود در هر دو کار می‌کند\n" +
+            "• jsconfig.json برای JavaScript projects\n" +
+            "• tsconfig.json برای TypeScript projects\n" +
+            "• syntax و configuration یکسان است\n" +
+            "• هیچ تفاوتی در نحوه استفاده نیست\n" +
+            "• نکته: اگر TypeScript دارید از tsconfig استفاده کنید"
+    },
+    {
+        "id": 669,
+        "question": "Why does Next.js self-host Google Fonts?",
+        "options": [
+            "To eliminate external requests and improve privacy",
+            "To reduce font file size automatically",
+            "To enable offline font editing features",
+            "To convert fonts to proprietary format"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• برای حذف external requests و بهبود privacy کاربران\n" +
+            "• فونت‌ها در build time دانلود و locally host می‌شوند\n" +
+            "• هیچ request به سرورهای Google ارسال نمی‌شود\n" +
+            "• GDPR compliance بهتر می‌شود\n" +
+            "• performance بهبود می‌یابد چون latency کمتر است\n" +
+            "• نکته: این automatic optimization یکی از مزایای next/font است"
+    },
+    {
+        "id": 670,
+        "question": "How do you apply a font loaded with next/font?",
+        "options": [
+            "By using the className property from font",
+            "By manually linking CSS file in head",
+            "By importing font directly in global CSS",
+            "By adding font URL to next.config.js"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• با استفاده از className property که font object برمی‌گرداند\n" +
+            "• font را import کرده و instance می‌سازید\n" +
+            "• سپس fontInstance.className را به element اضافه می‌کنید\n" +
+            "• این className حاوی CSS variables و optimizations است\n" +
+            "• می‌توانید در هر component یا layout استفاده کنید\n" +
+            "• نکته: می‌توانید font را globally در root layout apply کنید"
+    },
+    {
+        "id": 654,
+        "question": "What is font sub setting in Next.js?",
+        "options": [
+            "Loading only specific font weights and styles",
+            "Converting fonts to smaller file formats",
+            "Including only used characters in font files",
+            "Splitting fonts across multiple CDN servers"
+        ],
+        "correctOption": 2,
+        "points": 30,
         "explanation":""
     },
-//     {
-//         "id": 652,
-//         "question": "Why does Next.js self-host Google Fonts?",
-//         "options": [
-//             "To eliminate external requests and improve privacy",
-//             "To reduce font file size automatically",
-//             "To enable offline font editing features",
-//             "To convert fonts to proprietary format"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 653,
-//         "question": "How do you apply a font loaded with next/font?",
-//         "options": [
-//             "By using the className property from font",
-//             "By manually linking CSS file in head",
-//             "By importing font directly in global CSS",
-//             "By adding font URL to next.config.js"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 654,
-//         "question": "What is font sub setting in Next.js?",
-//         "options": [
-//             "Loading only specific font weights and styles",
-//             "Converting fonts to smaller file formats",
-//             "Including only used characters in font files",
-//             "Splitting fonts across multiple CDN servers"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 655,
-//         "question": "Which property specifies font subsets to load?",
-//         "options": [
-//             "characters: ['latin']",
-//             "include: ['latin']",
-//             "subsets: ['latin']",
-//             "languages: ['latin']"
-//         ],
-//         "correctOption":2,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 656,
-//         "question": "How do you load custom local fonts in Next.js?",
-//         "options": [
-//             "Using next/font/google with custom URL",
-//             "Using next/font/local with font file path",
-//             "Using standard CSS @font-face rules only",
-//             "Using import statement in global styles"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//  "explanation":""
-//     },
-//     {
-//         "id": 657,
-//         "question": "What is the benefit of font display swap?",
-//         "options": [
-//             "It prevents layout shift during font loading",
-//             "It shows fallback text until font loads",
-//             "It preloads all font variants at once",
-//             "It disables font loading on slow connections"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//  "explanation":""
-//     },
-//     {
-//         "id": 658,
-//         "question": "How do you set font display behavior in Next.js?",
-//         "options": [
-//             "Using fontDisplay: 'swap' in next.config.js",
-//             "Using display: 'swap' in font configuration",
-//             "Using CSS font-display property manually",
-//             "Using preload: true in font options"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 659,
-//         "question": "Can you use multiple fonts in a Next.js app?",
-//         "options": [
-//             "Yes, by importing multiple font instances",
-//             "No, only one font per application",
-//             "Yes, but maximum three fonts allowed",
-//             "No, mixing fonts breaks optimization"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 660,
-//         "question": "What does preload option do for fonts?",
-//         "options": [
-//             "It loads font before any other resources",
-//             "It caches font permanently in browser",
-//             "It converts font to inline base64",
-//             "It downloads font only when visible"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 661,
-//         "question": "How does Next.js prevent layout shift with fonts?",
-//         "options": [
-//             "By using CSS size-adjust property automatically",
-//             "By loading fonts before HTML rendering",
-//             "By setting fixed heights for text",
-//             "By disabling font loading on mobile"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
+    {
+        "id": 655,
+        "question": "Which property specifies font subsets to load?",
+        "options": [
+            "characters: ['latin']",
+            "include: ['latin']",
+            "subsets: ['latin']",
+            "languages: ['latin']"
+        ],
+        "correctOption":2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 656,
+        "question": "How do you load custom local fonts in Next.js?",
+        "options": [
+            "Using next/font/google with custom URL",
+            "Using next/font/local with font file path",
+            "Using standard CSS @font-face rules only",
+            "Using import statement in global styles"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 657,
+        "question": "What is the benefit of font display swap?",
+        "options": [
+            "It prevents layout shift during font loading",
+            "It shows fallback text until font loads",
+            "It preloads all font variants at once",
+            "It disables font loading on slow connections"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 658,
+        "question": "How do you set font display behavior in Next.js?",
+        "options": [
+            "Using fontDisplay: 'swap' in next.config.js",
+            "Using display: 'swap' in font configuration",
+            "Using CSS font-display property manually",
+            "Using preload: true in font options"
+        ],
+        "correctOption": 1,
+        "points": 20
+    },
+    {
+        "id": 659,
+        "question": "Can you use multiple fonts in a Next.js app?",
+        "options": [
+            "Yes, by importing multiple font instances",
+            "No, only one font per application",
+            "Yes, but maximum three fonts allowed",
+            "No, mixing fonts breaks optimization"
+        ],
+        "correctOption": 0,
+        "points": 10
+    },
+    {
+        "id": 660,
+        "question": "What does preload option do for fonts?",
+        "options": [
+            "It loads font before any other resources",
+            "It caches font permanently in browser",
+            "It converts font to inline base64",
+            "It downloads font only when visible"
+        ],
+        "correctOption": 0,
+        "points": 20
+    },
+    {
+        "id": 661,
+        "question": "How does Next.js prevent layout shift with fonts?",
+        "options": [
+            "By using CSS size-adjust property automatically",
+            "By loading fonts before HTML rendering",
+            "By setting fixed heights for text",
+            "By disabling font loading on mobile"
+        ],
+        "correctOption": 0,
+        "points": 30
+    },
 //     {
 //         "id": 662,
 //         "question": "What is the advantage of variable fonts in Next.js?",
