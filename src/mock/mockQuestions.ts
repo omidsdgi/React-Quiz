@@ -11275,54 +11275,54 @@ export const mockQuestions: Question[] = [
         "points": 30,
         "explanation":""
     },
-    {
-        "id": 658,
-        "question": "How do you set font display behavior in Next.js?",
-        "options": [
-            "Using fontDisplay: 'swap' in next.config.js",
-            "Using display: 'swap' in font configuration",
-            "Using CSS font-display property manually",
-            "Using preload: true in font options"
-        ],
-        "correctOption": 1,
-        "points": 20
-    },
-    {
-        "id": 659,
-        "question": "Can you use multiple fonts in a Next.js app?",
-        "options": [
-            "Yes, by importing multiple font instances",
-            "No, only one font per application",
-            "Yes, but maximum three fonts allowed",
-            "No, mixing fonts breaks optimization"
-        ],
-        "correctOption": 0,
-        "points": 10
-    },
-    {
-        "id": 660,
-        "question": "What does preload option do for fonts?",
-        "options": [
-            "It loads font before any other resources",
-            "It caches font permanently in browser",
-            "It converts font to inline base64",
-            "It downloads font only when visible"
-        ],
-        "correctOption": 0,
-        "points": 20
-    },
-    {
-        "id": 661,
-        "question": "How does Next.js prevent layout shift with fonts?",
-        "options": [
-            "By using CSS size-adjust property automatically",
-            "By loading fonts before HTML rendering",
-            "By setting fixed heights for text",
-            "By disabling font loading on mobile"
-        ],
-        "correctOption": 0,
-        "points": 30
-    },
+    // {
+    //     "id": 6580,
+    //     "question": "How do you set font display behavior in Next.js?",
+    //     "options": [
+    //         "Using fontDisplay: 'swap' in next.config.js",
+    //         "Using display: 'swap' in font configuration",
+    //         "Using CSS font-display property manually",
+    //         "Using preload: true in font options"
+    //     ],
+    //     "correctOption": 1,
+    //     "points": 20
+    // },
+    // {
+    //     "id": 659,
+    //     "question": "Can you use multiple fonts in a Next.js app?",
+    //     "options": [
+    //         "Yes, by importing multiple font instances",
+    //         "No, only one font per application",
+    //         "Yes, but maximum three fonts allowed",
+    //         "No, mixing fonts breaks optimization"
+    //     ],
+    //     "correctOption": 0,
+    //     "points": 10
+    // },
+    // {
+    //     "id": 660,
+    //     "question": "What does preload option do for fonts?",
+    //     "options": [
+    //         "It loads font before any other resources",
+    //         "It caches font permanently in browser",
+    //         "It converts font to inline base64",
+    //         "It downloads font only when visible"
+    //     ],
+    //     "correctOption": 0,
+    //     "points": 20
+    // },
+    // {
+    //     "id": 661,
+    //     "question": "How does Next.js prevent layout shift with fonts?",
+    //     "options": [
+    //         "By using CSS size-adjust property automatically",
+    //         "By loading fonts before HTML rendering",
+    //         "By setting fixed heights for text",
+    //         "By disabling font loading on mobile"
+    //     ],
+    //     "correctOption": 0,
+    //     "points": 30
+    // },
 //     {
 //         "id": 662,
 //         "question": "What is the advantage of variable fonts in Next.js?",
@@ -20782,6 +20782,66 @@ export const mockQuestions: Question[] = [
             "- خطا معمولاً به صورت 'Cannot destructure property ... of null' ظاهر می‌شود\n" +
             "- این خطا ربطی به React ندارد و می‌تواند باعث توقف اجرای کامپوننت شود\n" +
             "- برای جلوگیری از آن می‌توان از مقدار پیش‌فرض یا optional chaining استفاده کرد"
+    },
+    {
+        "id": 122,
+        "question": "What is the main difference between the logical OR (||) and nullish coalescing (??) operators in JavaScript?",
+        "options": [
+            "|| returns the right-hand value only if the left is null or undefined",
+            "?? returns the right-hand value when the left is falsy (like 0, '', false)",
+            "|| treats all falsy values as nullish values",
+            "?? returns the right-hand value only if the left is null or undefined"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• عملگر ?? فقط زمانی مقدار سمت راست را برمی‌گرداند که مقدار سمت چپ null یا undefined باشد\n" +
+            "- عملگر || در صورت falsy بودن مقدار سمت چپ (مثل 0، ''، false) نیز سمت راست را برمی‌گرداند\n" +
+            "- تفاوت اصلی در نحوه برخورد با مقادیر falsy مانند 0 یا رشته خالی است"
+    },
+    {
+        "id": 123,
+        "question": "What is the result of '0 || 100' and '0 ?? 100' in JavaScript?",
+        "options": [
+            "Both return 0",
+            "Both return 100",
+            "The first returns 100 and the second returns 0",
+            "The first returns 0 and the second returns 100"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• در عبارت '0 || 100'، چون 0 مقدار falsy است، نتیجه 100 می‌شود\n" +
+            "- در '0 ?? 100'، چون 0 نه null است و نه undefined، نتیجه همان 0 است\n" +
+            "- این مثال تفاوت اصلی || و ?? را به خوبی نشان می‌دهد"
+    },
+    {
+        "id": 124,
+        "question": "When would you prefer using the nullish coalescing operator (??) instead of the OR (||) operator?",
+        "options": [
+            "When you want to treat 0 and '' as valid values",
+            "When you want to treat all falsy values as missing data",
+            "When you need to check Boolean conditions only",
+            "When you need to combine multiple logical comparisons"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• از عملگر ?? زمانی استفاده می‌شود که بخواهیم فقط null و undefined را مقادیر نامعتبر در نظر بگیریم\n" +
+            "- اگر 0 یا رشته خالی مقادیر معتبر هستند، ?? گزینه درست‌تری است\n" +
+            "- عملگر || تمام falsy values (مثل '', 0, false) را نامعتبر فرض می‌کند"
+    },
+    {
+        "id": 125,
+        "question": "What will 'false ?? true' and 'false || true' return?",
+        "options": [
+            "Both return true",
+            "Both return false",
+            "'false ?? true' returns false, 'false || true' returns true",
+            "'false ?? true' returns true, 'false || true' returns false"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• در 'false ?? true'، چون false نه null است و نه undefined، نتیجه false است\n" +
+            "- در 'false || true'، چون false مقدار falsy است، نتیجه true می‌شود\n" +
+            "- این تفاوت رفتار دو عملگر در برخورد با مقادیر falsy را نشان می‌دهد"
     }
 
 
