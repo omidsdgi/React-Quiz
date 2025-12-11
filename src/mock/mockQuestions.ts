@@ -11224,7 +11224,7 @@ export const mockQuestions: Question[] = [
             "• نکته: می‌توانید font را globally در root layout apply کنید"
     },
     {
-        "id": 654,
+        "id": 671,
         "question": "What is font sub setting in Next.js?",
         "options": [
             "Loading only specific font weights and styles",
@@ -11234,10 +11234,16 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation":"• font sub setting  یعنی فقط character های استفاده شده را در font files قرار دادن\n" +
+            "• به‌جای کل font فقط حروف مورد نیاز download می‌شود\n" +
+            "• این باعث کاهش قابل توجه file size می‌شود\n" +
+            "• مثلاً فقط Latin characters برای انگلیسی\n" +
+            "• Next.js این کار را automatic انجام می‌دهد\n" +
+            "• نکته: با subsets option می‌توانید مشخص کنید کدام character sets لازم است"
     },
+
     {
-        "id": 655,
+        "id": 672,
         "question": "Which property specifies font subsets to load?",
         "options": [
             "characters: ['latin']",
@@ -11247,10 +11253,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption":2,
         "points": 20,
-        "explanation":""
+        "explanation": "• property به نام subsets با آرایه‌ای از subset names\n" +
+            "• مثال subsets: ['latin'] یا subsets: ['latin', 'latin-ext']\n" +
+            "• این مشخص می‌کند کدام character ranges باید included شوند\n" +
+            "• هر font subset های متفاوتی دارد\n" +
+            "• این optimization باعث کاهش font file size می‌شود\n" +
+            "• نکته: فقط subsets مورد نیاز زبان خود را بارگذاری کنید"
     },
     {
-        "id": 656,
+        "id": 673,
         "question": "How do you load custom local fonts in Next.js?",
         "options": [
             "Using next/font/google with custom URL",
@@ -11260,10 +11271,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation": "• با استفاده از next/font/local و مشخص کردن font file path\n" +
+            "• src property را به path فایل font تنظیم می‌کنید\n" +
+            "• می‌توانید multiple weights و styles داشته باشید\n" +
+            "• این برای custom fonts یا self-hosted fonts است\n" +
+            "• همان optimizations مثل Google Fonts اعمال می‌شود\n" +
+            "• نکته: font files را در public یا src directory قرار دهید"
     },
     {
-        "id": 657,
+        "id": 674,
         "question": "What is the benefit of font display swap?",
         "options": [
             "It prevents layout shift during font loading",
@@ -11273,356 +11289,420 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":""
+        "explanation":"• با font-display swap متن fallback تا load شدن font نمایش داده می‌شود\n" +
+            "• جلوگیری از FOIT یعنی Flash of Invisible Text\n" +
+            "• کاربر بلافاصله محتوا را می‌بیند حتی قبل از load شدن font\n" +
+            "• بعد از load شدن font جایگزین می‌شود\n" +
+            "• تجربه کاربری بهتر می‌شود\n" +
+            "• نکته: این strategy برای performance و UX توصیه می‌شود"
     },
-    // {
-    //     "id": 6580,
-    //     "question": "How do you set font display behavior in Next.js?",
-    //     "options": [
-    //         "Using fontDisplay: 'swap' in next.config.js",
-    //         "Using display: 'swap' in font configuration",
-    //         "Using CSS font-display property manually",
-    //         "Using preload: true in font options"
-    //     ],
-    //     "correctOption": 1,
-    //     "points": 20
-    // },
-    // {
-    //     "id": 659,
-    //     "question": "Can you use multiple fonts in a Next.js app?",
-    //     "options": [
-    //         "Yes, by importing multiple font instances",
-    //         "No, only one font per application",
-    //         "Yes, but maximum three fonts allowed",
-    //         "No, mixing fonts breaks optimization"
-    //     ],
-    //     "correctOption": 0,
-    //     "points": 10
-    // },
-    // {
-    //     "id": 660,
-    //     "question": "What does preload option do for fonts?",
-    //     "options": [
-    //         "It loads font before any other resources",
-    //         "It caches font permanently in browser",
-    //         "It converts font to inline base64",
-    //         "It downloads font only when visible"
-    //     ],
-    //     "correctOption": 0,
-    //     "points": 20
-    // },
-    // {
-    //     "id": 661,
-    //     "question": "How does Next.js prevent layout shift with fonts?",
-    //     "options": [
-    //         "By using CSS size-adjust property automatically",
-    //         "By loading fonts before HTML rendering",
-    //         "By setting fixed heights for text",
-    //         "By disabling font loading on mobile"
-    //     ],
-    //     "correctOption": 0,
-    //     "points": 30
-    // },
-//     {
-//         "id": 662,
-//         "question": "What is the advantage of variable fonts in Next.js?",
-//         "options": [
-//             "They load faster than standard fonts",
-//             "They include multiple weights in one file",
-//             "They automatically adjust to screen size",
-//             "They work without JavaScript enabled"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 663,
-//         "question": "How do you load a variable font in Next.js?",
-//         "options": [
-//             "Using next/font/google with variable: true",
-//             "Using next/font/variable with font name",
-//             "Same as regular fonts, Next.js detects it",
-//             "Using CSS @font-face with font-variation"
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 664,
-//         "question": "Can fonts be applied globally in Next.js?",
-//         "options": [
-//             "Yes, but only in _app.js file",
-//             "No, fonts must be applied per component",
-//             "Yes, by applying className to body in layout",
-//             "No, global fonts are not supported",
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 665,
-//         "question": "What happens to unused font weights with next/font?",
-//         "options": [
-//             "They are included in bundle for consistency",
-//             "They are automatically excluded from build",
-//             "They are loaded on demand when needed",
-//             "They are converted to lighter formats"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 666,
-//         "question": "How does next/font improve Core Web Vitals?",
-//         "options": [
-//             "By reducing Cumulative Layout Shift with font optimization",
-//             "By eliminating all JavaScript from pages",
-//             "By compressing images alongside fonts",
-//             "By loading fonts only on fast connections"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
-//     {
-//         "id": 667,
-//         "question": "Can you use next/font with Tailwind CSS?",
-//         "options": [
-//             "Yes, by adding font variable to Tailwind config",
-//             "No, Tailwind requires manual font loading",
-//             "Yes, but only with CDN fonts",
-//             "No, they are incompatible technologies"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 668,
-//         "question": "What is the fallback font strategy in next/font?",
-//         "options": [
-//             "It automatically generates system font fallbacks",
-//             "It loads generic sans-serif as backup",
-//             "It displays blank space until font loads",
-//             "It converts text to images temporarily"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
-//     {
-//         "id": 670,
-//         "question": `Which component should you use instead of '<img>' tag?`,
-//         "options": [
-//             "<Picture> from next/image",
-//             "<Image> from next/image",
-//             "<Img> from next/component",
-//             "<OptimizedImage> from next/core"
-//         ],
-//         "correctOption": 1,
-//         "points": 10
-//     },
-//     {
-//         "id": 671,
-//         "question": "What does Next.js Image component do automatically?",
-//         "options": [
-//             "Removes all metadata from image files automatically",
-//             "Converts images to WebP format and lazy-loads",
-//             "Uploads images to CDN automatically",
-//             "Generates alt text using AI"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 672,
-//         "question": "Why is lazy loading important for images?",
-//         "options": [
-//             "It improves SEO ranking significantly",
-//             "It loads images only when entering viewport",
-//             "It prevents users from downloading images",
-//             "It converts images to smaller formats"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 673,
-//         "question": "Which property is required for static image imports?",
-//         "options": [
-//             "url with file path string",
-//             "source with image location",
-//             "src with imported image object",
-//             "path with relative directory"
-//         ],
-//         "correctOption": 2,
-//         "points": 10
-//     },
-//     {
-//         "id": 674,
-//         "question": "How do you specify image dimensions for remote images?",
-//         "options": [
-//             "Next.js detects dimensions automatically",
-//             "Using width and height props explicitly",
-//             "Using size prop with single value",
-//             "Using dimensions prop with object",
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 675,
-//         "question": "What is the purpose of the fill property?",
-//         "options": [
-//             "It fills empty space with background color",
-//             "It makes image fill parent container",
-//             "It adds padding around the image",
-//             "It duplicates image to fill grid"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 676,
-//         "question": "Which property controls how image fits in container?",
-//         "options": [
-//             "fit property with CSS values",
-//             "resize property with custom values",
-//             "scale property with numeric values",
-//             "objectFit property with CSS values",
-//         ],
-//         "correctOption": 3,
-//         "points": 20
-//     },
-//     {
-//         "id": 677,
-//         "question": "What does priority property do for images?",
-//         "options": [
-//             "It disables lazy loading for above-fold images",
-//             "It increases image quality significantly",
-//             "It loads image before HTML parsing",
-//             "It caches image permanently in browser"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
-//     {
-//         "id": 678,
-//         "question": "When should you use priority property?",
-//         "options": [
-//             "For all images to improve performance",
-//             "For largest contentful paint (LCP) images",
-//             "For background images in components",
-//             "For thumbnail images in galleries"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 679,
-//         "question": "How does Next.js handle different screen sizes?",
-//         "options": [
-//             "It generates multiple image sizes automatically",
-//             "It crops images based on viewport",
-//             "It uses same size for all devices",
-//             "It converts images to vector format"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 680,
-//         "question": "What is the purpose of sizes property?",
-//         "options": [
-//             "It defines exact image dimensions in pixels",
-//             "It tells browser which size to download",
-//             "It sets maximum file size limit",
-//             "It configures compression quality level"
-//         ],
-//         "correctOption": 1,
-//         "points": 30
-//     },
-//     {
-//         "id": 681,
-//         "question": "Which image formats does Next.js optimize to?",
-//         "options": [
-//             "WebP and AVIF for modern browsers",
-//             "JPEG and PNG for all browsers",
-//             "SVG and GIF for animations",
-//             "BMP and TIFF for quality"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 682,
-//         "question": "How do you allow external image domains?",
-//         "options": [
-//             "Add domains to images.domains in next.config.js",
-//             "Add URLs to allowedSources in package.json",
-//             "Add hosts to imageHosts in tsconfig.json",
-//             "Add origins to externalImages in .env"
-//         ],
-//         "correctOption": 0,
-//         "points": 20
-//     },
-//     {
-//         "id": 683,
-//         "question": "What happens without configuring remote domains?",
-//         "options": [
-//             "Images load but without optimization",
-//             "Next.js throws error and blocks image",
-//             "Images are downloaded to local server",
-//             "Images load with default placeholder"
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
-//     {
-//         "id": 684,
-//         "question": "What is the purpose of placeholder property?",
-//         "options": [
-//             "It replaces broken images automatically",
-//             "It sets background color for transparency",
-//             "It shows blurred preview while loading",
-//             "It adds caption text below image",
-//         ],
-//         "correctOption": 2,
-//         "points": 20
-//     },
-//     {
-//         "id": 685,
-//         "question": "Which placeholder value creates blur effect?",
-//         "options": [
-//             "placeholder='blur'",
-//             "placeholder='loading'",
-//             "placeholder='skeleton'",
-//             "placeholder='preview'"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
-//     {
-//         "id": 686,
-//         "question": "How do you provide custom blur placeholder?",
-//         "options": [
-//             "Using blurDataURL prop with base64 string",
-//             "Using blurImage prop with file path",
-//             "Using placeholder prop with image URL",
-//             "Using loading prop with preview data"
-//         ],
-//         "correctOption": 0,
-//         "points": 30
-//     },
-//     {
-//         "id": 687,
-//         "question": "What is the quality property range for images?",
-//         "options": [
-//             "0 to 100, where 0 is highest",
-//             "1 to 100, where 100 is highest",
-//             "0 to 10, where 10 is highest",
-//             "1 to 10, where 1 is highest",
-//         ],
-//         "correctOption": 1,
-//         "points": 20
-//     },
+    {
+        "id": 675,
+        "question": "How do you set font display behavior in Next.js?",
+        "options": [
+            "Using fontDisplay: 'swap' in next.config.js",
+            "Using display: 'swap' in font configuration",
+            "Using CSS font-display property manually",
+            "Using preload: true in font options"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• با استفاده از display property در font configuration مثل display: 'swap'\n" +
+            "• options دیگر شامل auto و block و fallback و optional است\n" +
+            "• swap رایج‌ترین و recommended است\n" +
+            "• این مشخص می‌کند browser چگونه font loading را handle کند\n" +
+            "• تأثیر مستقیم روی FOIT و FOUT دارد\n" +
+            "• نکته: swap معمولاً بهترین balance بین performance و visual stability است"
+    },
+    {
+        "id": 676,
+        "question": "Can you use multiple fonts in a Next.js app?",
+        "options": [
+            "Yes, by importing multiple font instances",
+            "No, only one font per application",
+            "Yes, but maximum three fonts allowed",
+            "No, mixing fonts breaks optimization"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":"• بله با import کردن multiple font instances می‌توانید چند font داشته باشید\n" +
+            "• هر font برای heading یا body یا special purposes\n" +
+            "• هر کدام className خاص خود را دارند\n" +
+            "• می‌توانید fonts را ترکیب کنید\n" +
+            "• محدودیت تعداد وجود ندارد\n" +
+            "• نکته: استفاده از fonts زیاد می‌تواند performance را کاهش دهد پس محدود نگه دارید"
+    },
+    {
+        "id": 677,
+        "question": "What does preload option do for fonts?",
+        "options": [
+            "It loads font before any other resources",
+            "It caches font permanently in browser",
+            "It converts font to inline base64",
+            "It downloads font only when visible"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• با preload فونت قبل از هر resource دیگری load می‌شود\n" +
+            "• این به browser می‌گوید این font priority بالایی دارد\n" +
+            "• باعث faster font loading و کمتر layout shift می‌شود\n" +
+            "• معمولاً برای critical fonts استفاده می‌شود\n" +
+            "• Next.js این را به‌طور پیش‌فرض برای Google Fonts انجام می‌دهد\n" +
+            "• نکته: فقط برای fonts مهمی که در initial viewport هستند preload کنید"
+    },
+    {
+        "id": 678,
+        "question": "How does Next.js prevent layout shift with fonts?",
+        "options": [
+            "By using CSS size-adjust property automatically",
+            "By loading fonts before HTML rendering",
+            "By setting fixed heights for text",
+            "By disabling font loading on mobile"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• با استفاده از CSS size-adjust property به‌صورت خودکار\n" +
+            "• fallback font به اندازه final font adjust می‌شود\n" +
+            "• این باعث می‌شود font swap بدون layout shift رخ دهد\n" +
+            "• Cumulative Layout Shift بهبود می‌یابد\n" +
+            "• این optimization automatic است\n" +
+            "• نکته: این یکی از دلایلی است که next/font برای Core Web Vitals خوب است"
+    },
+    {
+        "id": 679,
+        "question": "What is the advantage of variable fonts in Next.js?",
+        "options": [
+            "They load faster than standard fonts",
+            "They include multiple weights in one file",
+            "They automatically adjust to screen size",
+            "They work without JavaScript enabled"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• variable fonts چندین weight و style را در یک فایل شامل می‌شوند\n" +
+            "• به‌جای دانلود multiple font files فقط یک فایل\n" +
+            "• file size کلی کمتر می‌شود\n" +
+            "• می‌توانید هر weight بین min و max داشته باشید\n" +
+            "• performance بهتر و flexibility بیشتر\n" +
+            "• نکته: variable fonts برای modern browsers مناسب هستند"
+    },
+    {
+        "id": 680,
+        "question": "How do you load a variable font in Next.js?",
+        "options": [
+            "Using next/font/google with variable: true",
+            "Using next/font/variable with font name",
+            "Same as regular fonts, Next.js detects it",
+            "Using CSS @font-face with font-variation"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• دقیقاً مثل regular fonts از next/font/google استفاده می‌کنید\n" +
+            "• Next.js خودکار تشخیص می‌دهد که font variable است\n" +
+            "• نیازی به configuration خاصی نیست\n" +
+            "• همان API برای هر دو نوع font\n" +
+            "• variable fonts به‌طور خودکار optimize می‌شوند\n" +
+            "• نکته: از CSS variable برای control کردن weight استفاده کنید"
+    },
+    {
+        "id": 664,
+        "question": "Can fonts be applied globally in Next.js?",
+        "options": [
+            "Yes, but only in _app.js file",
+            "No, fonts must be applied per component",
+            "Yes, by applying className to body in layout",
+            "No, global fonts are not supported",
+        ],
+        "correctOption": 2,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 665,
+        "question": "What happens to unused font weights with next/font?",
+        "options": [
+            "They are included in bundle for consistency",
+            "They are automatically excluded from build",
+            "They are loaded on demand when needed",
+            "They are converted to lighter formats"
+        ],
+        "correctOption": 1,
+        "points": 30,
+            "explanation":""
+    },
+    {
+        "id": 666,
+        "question": "How does next/font improve Core Web Vitals?",
+        "options": [
+            "By reducing Cumulative Layout Shift with font optimization",
+            "By eliminating all JavaScript from pages",
+            "By compressing images alongside fonts",
+            "By loading fonts only on fast connections"
+        ],
+        "correctOption": 0,
+        "points": 30,
+            "explanation":""
+    },
+    {
+        "id": 667,
+        "question": "Can you use next/font with Tailwind CSS?",
+        "options": [
+            "Yes, by adding font variable to Tailwind config",
+            "No, Tailwind requires manual font loading",
+            "Yes, but only with CDN fonts",
+            "No, they are incompatible technologies"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 668,
+        "question": "What is the fallback font strategy in next/font?",
+        "options": [
+            "It automatically generates system font fallbacks",
+            "It loads generic sans-serif as backup",
+            "It displays blank space until font loads",
+            "It converts text to images temporarily"
+        ],
+        "correctOption": 0,
+        "points": 30,
+            "explanation":""
+    },
+    {
+        "id": 670,
+        "question": `Which component should you use instead of '<img>' tag?`,
+        "options": [
+            "<Picture> from next/image",
+            "<Image> from next/image",
+            "<Img> from next/component",
+            "<OptimizedImage> from next/core"
+        ],
+        "correctOption": 1,
+        "points": 10,
+            "explanation":""
+    },
+    {
+        "id": 671,
+        "question": "What does Next.js Image component do automatically?",
+        "options": [
+            "Removes all metadata from image files automatically",
+            "Converts images to WebP format and lazy-loads",
+            "Uploads images to CDN automatically",
+            "Generates alt text using AI"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 672,
+        "question": "Why is lazy loading important for images?",
+        "options": [
+            "It improves SEO ranking significantly",
+            "It loads images only when entering viewport",
+            "It prevents users from downloading images",
+            "It converts images to smaller formats"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 673,
+        "question": "Which property is required for static image imports?",
+        "options": [
+            "url with file path string",
+            "source with image location",
+            "src with imported image object",
+            "path with relative directory"
+        ],
+        "correctOption": 2,
+        "points": 10,
+            "explanation":""
+    },
+    {
+        "id": 674,
+        "question": "How do you specify image dimensions for remote images?",
+        "options": [
+            "Next.js detects dimensions automatically",
+            "Using width and height props explicitly",
+            "Using size prop with single value",
+            "Using dimensions prop with object",
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 675,
+        "question": "What is the purpose of the fill property?",
+        "options": [
+            "It fills empty space with background color",
+            "It makes image fill parent container",
+            "It adds padding around the image",
+            "It duplicates image to fill grid"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 676,
+        "question": "Which property controls how image fits in container?",
+        "options": [
+            "fit property with CSS values",
+            "resize property with custom values",
+            "scale property with numeric values",
+            "objectFit property with CSS values",
+        ],
+        "correctOption": 3,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 677,
+        "question": "What does priority property do for images?",
+        "options": [
+            "It disables lazy loading for above-fold images",
+            "It increases image quality significantly",
+            "It loads image before HTML parsing",
+            "It caches image permanently in browser"
+        ],
+        "correctOption": 0,
+        "points": 30,
+            "explanation":""
+    },
+    {
+        "id": 678,
+        "question": "When should you use priority property?",
+        "options": [
+            "For all images to improve performance",
+            "For largest contentful paint (LCP) images",
+            "For background images in components",
+            "For thumbnail images in galleries"
+        ],
+        "correctOption": 1,
+        "points": 30,
+            "explanation":""
+    },
+    {
+        "id": 679,
+        "question": "How does Next.js handle different screen sizes?",
+        "options": [
+            "It generates multiple image sizes automatically",
+            "It crops images based on viewport",
+            "It uses same size for all devices",
+            "It converts images to vector format"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 680,
+        "question": "What is the purpose of sizes property?",
+        "options": [
+            "It defines exact image dimensions in pixels",
+            "It tells browser which size to download",
+            "It sets maximum file size limit",
+            "It configures compression quality level"
+        ],
+        "correctOption": 1,
+        "points": 30,
+            "explanation":""
+    },
+    {
+        "id": 681,
+        "question": "Which image formats does Next.js optimize to?",
+        "options": [
+            "WebP and AVIF for modern browsers",
+            "JPEG and PNG for all browsers",
+            "SVG and GIF for animations",
+            "BMP and TIFF for quality"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 682,
+        "question": "How do you allow external image domains?",
+        "options": [
+            "Add domains to images.domains in next.config.js",
+            "Add URLs to allowedSources in package.json",
+            "Add hosts to imageHosts in tsconfig.json",
+            "Add origins to externalImages in .env"
+        ],
+        "correctOption": 0,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 683,
+        "question": "What happens without configuring remote domains?",
+        "options": [
+            "Images load but without optimization",
+            "Next.js throws error and blocks image",
+            "Images are downloaded to local server",
+            "Images load with default placeholder"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 684,
+        "question": "What is the purpose of placeholder property?",
+        "options": [
+            "It replaces broken images automatically",
+            "It sets background color for transparency",
+            "It shows blurred preview while loading",
+            "It adds caption text below image",
+        ],
+        "correctOption": 2,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 685,
+        "question": "Which placeholder value creates blur effect?",
+        "options": [
+            "placeholder='blur'",
+            "placeholder='loading'",
+            "placeholder='skeleton'",
+            "placeholder='preview'"
+        ],
+        "correctOption": 0,
+        "points": 10,
+            "explanation":""
+    },
+    {
+        "id": 686,
+        "question": "How do you provide custom blur placeholder?",
+        "options": [
+            "Using blurDataURL prop with base64 string",
+            "Using blurImage prop with file path",
+            "Using placeholder prop with image URL",
+            "Using loading prop with preview data"
+        ],
+        "correctOption": 0,
+        "points": 30,
+            "explanation":""
+    },
+    {
+        "id": 687,
+        "question": "What is the quality property range for images?",
+        "options": [
+            "0 to 100, where 0 is highest",
+            "1 to 100, where 100 is highest",
+            "0 to 10, where 10 is highest",
+            "1 to 10, where 1 is highest",
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation":""
+    },
 //     {
 //         "id": 688,
 //         "question": "What is the default quality value in Next.js?",
@@ -11633,7 +11713,8 @@ export const mockQuestions: Question[] = [
 //             "50 for smallest file size",
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 689,
@@ -11645,7 +11726,8 @@ export const mockQuestions: Question[] = [
 //             "By disabling image loading initially"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 690,
@@ -11657,7 +11739,8 @@ export const mockQuestions: Question[] = [
 //             "You must use fill property instead",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 691,
@@ -11669,7 +11752,8 @@ export const mockQuestions: Question[] = [
 //             "No, only Tailwind classes work"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 692,
@@ -11681,7 +11765,8 @@ export const mockQuestions: Question[] = [
 //             "It preloads images before rendering",
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 693,
@@ -11693,7 +11778,8 @@ export const mockQuestions: Question[] = [
 //             "It stores images only in memory"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 694,
@@ -11705,7 +11791,8 @@ export const mockQuestions: Question[] = [
 //             "It converts all images to vectors"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 695,
@@ -11717,7 +11804,8 @@ export const mockQuestions: Question[] = [
 //             "No, use regular img tag instead"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 696,
@@ -11729,7 +11817,8 @@ export const mockQuestions: Question[] = [
 //             "It disables lazy loading feature"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 697,
@@ -11741,7 +11830,8 @@ export const mockQuestions: Question[] = [
 //             "By loading images only on WiFi"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 698,
@@ -11753,7 +11843,8 @@ export const mockQuestions: Question[] = [
 //             "It changes image format by browser"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 699,
@@ -11765,7 +11856,8 @@ export const mockQuestions: Question[] = [
 //             "Duplicates image to fill grid layout"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 700,
@@ -11777,7 +11869,8 @@ export const mockQuestions: Question[] = [
 //             "width: 100% with height: auto"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 701,
@@ -11789,7 +11882,8 @@ export const mockQuestions: Question[] = [
 //             "Covers only visible viewport area"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 702,
@@ -11801,7 +11895,8 @@ export const mockQuestions: Question[] = [
 //             "object-cover zooms in, object-contain zooms out"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 703,
@@ -11813,7 +11908,8 @@ export const mockQuestions: Question[] = [
 //             "Top margin spacing for image"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 704,
@@ -11825,7 +11921,8 @@ export const mockQuestions: Question[] = [
 //             "No, Next.js throws compilation error"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 705,
@@ -11837,7 +11934,8 @@ export const mockQuestions: Question[] = [
 //             "Using aspect-square class on parent container",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 706,
@@ -11849,7 +11947,8 @@ export const mockQuestions: Question[] = [
 //             "21:9 aspect ratio for ultra wide format"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 707,
@@ -11861,7 +11960,8 @@ export const mockQuestions: Question[] = [
 //             "Container and image both become circles"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 708,
@@ -11873,7 +11973,8 @@ export const mockQuestions: Question[] = [
 //             "Image appears in top-left corner"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 709,
@@ -11885,7 +11986,8 @@ export const mockQuestions: Question[] = [
 //             "No, fill images are always centered"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 710,
@@ -11897,11 +11999,13 @@ export const mockQuestions: Question[] = [
 //             "Tiled image repeating in container"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 711,
-//         "question": "How do you make fill image responsive across breakpoints?",
+//         "question": "How do you make fill image responsive across breakpoints?",,
+//             "explanation":""
 //         "options": [
 //             "Using responsive property on Image component",
 //             "Using responsive classes like md:aspect-video",
@@ -11909,19 +12013,22 @@ export const mockQuestions: Question[] = [
 //             "Using sizes with media query strings"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 712,
 //         "question": "What is the purpose of sizes prop with fill images?",
 //         "options": [
 //             "Tells browser which image size to download",
-//             "Sets container size at different breakpoints",
+//             "Sets container size at different breakpoints",,
+//             "explanation":""
 //             "Defines aspect ratio for containers",
 //             "Controls image quality per viewport"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 713,
@@ -11933,7 +12040,8 @@ export const mockQuestions: Question[] = [
 //             "No, use grid-column property instead"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 714,
@@ -11945,7 +12053,8 @@ export const mockQuestions: Question[] = [
 //             "Crops image from left-top area"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 715,
@@ -11957,7 +12066,8 @@ export const mockQuestions: Question[] = [
 //             "Using ratio property with fraction"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 716,
@@ -11969,7 +12079,8 @@ export const mockQuestions: Question[] = [
 //             "No, use CSS keyframes instead"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 717,
@@ -11981,7 +12092,8 @@ export const mockQuestions: Question[] = [
 //             "Use fill with object-cover and sizes='100vw'",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 718,
@@ -11993,7 +12105,8 @@ export const mockQuestions: Question[] = [
 //             "Increases bundle size significantly"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 721,
@@ -12005,7 +12118,8 @@ export const mockQuestions: Question[] = [
 //             "Using config.VARIABLE_NAME notation"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 722,
@@ -12017,7 +12131,8 @@ export const mockQuestions: Question[] = [
 //             "NEXT_PUBLIC_ prefix for client access",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 723,
@@ -12029,7 +12144,8 @@ export const mockQuestions: Question[] = [
 //             "No, unless explicitly configured"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 724,
@@ -12041,7 +12157,8 @@ export const mockQuestions: Question[] = [
 //             "They throw error in production"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 725,
@@ -12053,7 +12170,8 @@ export const mockQuestions: Question[] = [
 //             ".env is always prioritized first"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 726,
@@ -12065,7 +12183,8 @@ export const mockQuestions: Question[] = [
 //             "Development variables for staging"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 727,
@@ -12077,7 +12196,8 @@ export const mockQuestions: Question[] = [
 //             "No, unless encrypted properly first"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 728,
@@ -12089,7 +12209,8 @@ export const mockQuestions: Question[] = [
 //             "Using defaults.json configuration file",
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 729,
@@ -12101,7 +12222,8 @@ export const mockQuestions: Question[] = [
 //             "No, requires separate config file"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 730,
@@ -12113,7 +12235,8 @@ export const mockQuestions: Question[] = [
 //             "Default fallback for missing variables"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 731,
@@ -12125,7 +12248,8 @@ export const mockQuestions: Question[] = [
 //             "Through external configuration service"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 732,
@@ -12137,7 +12261,8 @@ export const mockQuestions: Question[] = [
 //             "No, they are set at build time",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 733,
@@ -12149,7 +12274,8 @@ export const mockQuestions: Question[] = [
 //             "Application crashes at runtime"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 734,
@@ -12161,7 +12287,8 @@ export const mockQuestions: Question[] = [
 //             "Pass through request headers"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 735,
@@ -12173,7 +12300,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but requires special import"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//                 "explanation":""
 //     },
 //     {
 //         "id": 736,
@@ -12185,7 +12313,8 @@ export const mockQuestions: Question[] = [
 //             "Breaks server-side rendering"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 737,
@@ -12197,7 +12326,8 @@ export const mockQuestions: Question[] = [
 //             "Define in env.schema.json file"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 738,
@@ -12209,7 +12339,8 @@ export const mockQuestions: Question[] = [
 //             "No, requires JSON format instead"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 739,
@@ -12221,7 +12352,8 @@ export const mockQuestions: Question[] = [
 //             "Backup of development configurations"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 740,
@@ -12233,7 +12365,8 @@ export const mockQuestions: Question[] = [
 //             "Must rebuild image for each change",
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 741,
@@ -12245,7 +12378,8 @@ export const mockQuestions: Question[] = [
 //             "No, hardcode for better performance"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 742,
@@ -12257,7 +12391,8 @@ export const mockQuestions: Question[] = [
 //             "Store in public constants file"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 743,
@@ -12269,7 +12404,8 @@ export const mockQuestions: Question[] = [
 //             "Configure in vercel.json file"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 744,
@@ -12281,7 +12417,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only non-NEXT_PUBLIC_ variables",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 745,
@@ -12293,7 +12430,8 @@ export const mockQuestions: Question[] = [
 //             "Removed from production build"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 746,
@@ -12305,7 +12443,8 @@ export const mockQuestions: Question[] = [
 //             "Use separate config.js per environment"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 747,
@@ -12317,7 +12456,8 @@ export const mockQuestions: Question[] = [
 //             "No, use runtime configuration instead"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 748,
@@ -12329,7 +12469,8 @@ export const mockQuestions: Question[] = [
 //             "No typing needed for env variables"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },{
 //         "id": 749,
 //         "question": "What is streaming in React and Next.js?",
@@ -12340,7 +12481,8 @@ export const mockQuestions: Question[] = [
 //             "Continuous data flow from database"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 750,
@@ -12352,7 +12494,8 @@ export const mockQuestions: Question[] = [
 //             "Suspends user interactions until ready"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 751,
@@ -12364,7 +12507,8 @@ export const mockQuestions: Question[] = [
 //             "Shows fallback while streaming component content",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 752,
@@ -12376,7 +12520,8 @@ export const mockQuestions: Question[] = [
 //             "Alternative route on error",
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 753,
@@ -12388,7 +12533,8 @@ export const mockQuestions: Question[] = [
 //             "No, causes infinite loading loops"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 754,
@@ -12400,7 +12546,8 @@ export const mockQuestions: Question[] = [
 //             "CSS animations and transitions"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 755,
@@ -12412,7 +12559,8 @@ export const mockQuestions: Question[] = [
 //             "Reduces server processing time significantly"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 756,
@@ -12424,7 +12572,8 @@ export const mockQuestions: Question[] = [
 //             "Streaming for client, SSR for server"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 757,
@@ -12436,7 +12585,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only in development mode",
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 758,
@@ -12448,7 +12598,8 @@ export const mockQuestions: Question[] = [
 //             "Converts promise to synchronous code"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 759,
@@ -12460,7 +12611,8 @@ export const mockQuestions: Question[] = [
 //             "It defines loading speed for Suspense"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 760,
@@ -12472,7 +12624,8 @@ export const mockQuestions: Question[] = [
 //             "No, lazy and Suspense are incompatible"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 761,
@@ -12484,7 +12637,8 @@ export const mockQuestions: Question[] = [
 //             "Rendering based on user scroll position"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 762,
@@ -12496,7 +12650,8 @@ export const mockQuestions: Question[] = [
 //             "Shows content immediately reducing wait time",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1361,
@@ -12508,7 +12663,8 @@ export const mockQuestions: Question[] = [
 //             "A type of React Router guard"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1362,
@@ -12520,7 +12676,8 @@ export const mockQuestions: Question[] = [
 //             "useErrorBoundary hook"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1363,
@@ -12532,7 +12689,8 @@ export const mockQuestions: Question[] = [
 //             "No, Error Boundaries are deprecated"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1364,
@@ -12544,7 +12702,8 @@ export const mockQuestions: Question[] = [
 //             "Errors in constructor functions"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1365,
@@ -12556,7 +12715,8 @@ export const mockQuestions: Question[] = [
 //             "Use global error handler only"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1366,
@@ -12568,7 +12728,8 @@ export const mockQuestions: Question[] = [
 //             "Error Boundaries are automatic"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1367,
@@ -12580,7 +12741,8 @@ export const mockQuestions: Question[] = [
 //             "The original component again"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1368,
@@ -12592,7 +12754,8 @@ export const mockQuestions: Question[] = [
 //             "Error Boundaries cannot be reset"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 763,
@@ -12604,7 +12767,8 @@ export const mockQuestions: Question[] = [
 //             "No, Suspense replaces error boundaries"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 764,
@@ -12616,7 +12780,8 @@ export const mockQuestions: Question[] = [
 //             "Partial hydration based on user interaction"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 765,
@@ -12628,7 +12793,8 @@ export const mockQuestions: Question[] = [
 //             "No effect on SEO whatsoever"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 766,
@@ -12640,7 +12806,8 @@ export const mockQuestions: Question[] = [
 //             "No, Suspense is server-only feature"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 767,
@@ -12652,7 +12819,8 @@ export const mockQuestions: Question[] = [
 //             "Begins data fetching before rendering",
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 768,
@@ -12664,7 +12832,8 @@ export const mockQuestions: Question[] = [
 //             "Queues requests in order received"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 769,
@@ -12676,7 +12845,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, using multiple Suspense boundaries",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 770,
@@ -12688,7 +12858,8 @@ export const mockQuestions: Question[] = [
 //             "Parent Suspense boundary catches it",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 771,
@@ -12700,7 +12871,8 @@ export const mockQuestions: Question[] = [
 //             "Shows meaningful loading states reducing frustration",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 772,
@@ -12712,7 +12884,8 @@ export const mockQuestions: Question[] = [
 //             "No, strictly for API calls"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 773,
@@ -12724,7 +12897,8 @@ export const mockQuestions: Question[] = [
 //             "Suspense and loading states are unrelated"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 774,
@@ -12736,7 +12910,8 @@ export const mockQuestions: Question[] = [
 //             "No effect on bandwidth whatsoever"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 775,
@@ -12748,7 +12923,8 @@ export const mockQuestions: Question[] = [
 //             "No, requires page refresh to cancel"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 776,
@@ -12760,7 +12936,8 @@ export const mockQuestions: Question[] = [
 //             "Streaming only non-critical components late"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 777,
@@ -12772,7 +12949,8 @@ export const mockQuestions: Question[] = [
 //             "Disables Server Components during loading",
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 778,
@@ -12784,7 +12962,8 @@ export const mockQuestions: Question[] = [
 //             "Avoid Suspense in production builds"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 781,
@@ -12796,7 +12975,8 @@ export const mockQuestions: Question[] = [
 //             "app/posts/[id]/page.js for single parameter route"
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 782,
@@ -12808,7 +12988,8 @@ export const mockQuestions: Question[] = [
 //             "Using [slug...] suffix for paths"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 783,
@@ -12820,7 +13001,8 @@ export const mockQuestions: Question[] = [
 //             "Optional single segment in URL"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 784,
@@ -12832,7 +13014,8 @@ export const mockQuestions: Question[] = [
 //             "Using [...slug|optional] pipe notation"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 785,
@@ -12844,7 +13027,8 @@ export const mockQuestions: Question[] = [
 //             "[...slug] matches optional parameters"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 786,
@@ -12856,7 +13040,8 @@ export const mockQuestions: Question[] = [
 //             "params.slug returns comma-separated string"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 787,
@@ -12868,7 +13053,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, like [category]/[id]/page.js structure"
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 788,
@@ -12880,7 +13066,8 @@ export const mockQuestions: Question[] = [
 //             "Using getServerSideProps for paths"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 789,
@@ -12892,7 +13079,8 @@ export const mockQuestions: Question[] = [
 //             "Promise resolving to route mappings"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 790,
@@ -12904,7 +13092,8 @@ export const mockQuestions: Question[] = [
 //             "Before server starts in development"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 791,
@@ -12916,7 +13105,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only for static generation"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 792,
@@ -12928,7 +13118,8 @@ export const mockQuestions: Question[] = [
 //             "Using return null in page component"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 793,
@@ -12940,7 +13131,8 @@ export const mockQuestions: Question[] = [
 //             "All routes have equal matching priority"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 794,
@@ -12952,7 +13144,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only for root layouts"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 795,
@@ -12964,7 +13157,8 @@ export const mockQuestions: Question[] = [
 //             "Using comma-separated params in single bracket"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 796,
@@ -12976,7 +13170,8 @@ export const mockQuestions: Question[] = [
 //             "Throws 500 server error immediately"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 797,
@@ -12988,7 +13183,8 @@ export const mockQuestions: Question[] = [
 //             "No, use useSearchParams hook instead"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 798,
@@ -13000,7 +13196,8 @@ export const mockQuestions: Question[] = [
 //             "Using middleware for parameter validation"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 799,
@@ -13012,7 +13209,8 @@ export const mockQuestions: Question[] = [
 //             "Configures parameter encoding format"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 800,
@@ -13024,7 +13222,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, using @folder/[param] structure combination"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 801,
@@ -13036,7 +13235,8 @@ export const mockQuestions: Question[] = [
 //             "Using metadataParams in page configuration"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 802,
@@ -13048,7 +13248,8 @@ export const mockQuestions: Question[] = [
 //             "Checks parameter values against schema"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 803,
@@ -13060,7 +13261,8 @@ export const mockQuestions: Question[] = [
 //             "No, they cause routing conflicts always"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 804,
@@ -13072,7 +13274,8 @@ export const mockQuestions: Question[] = [
 //             "Using useLoading hook in component"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 805,
@@ -13084,7 +13287,8 @@ export const mockQuestions: Question[] = [
 //             "params are optional, searchParams required"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 806,
@@ -13096,7 +13300,8 @@ export const mockQuestions: Question[] = [
 //             "No, they have different purposes entirely"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 807,
@@ -13108,7 +13313,8 @@ export const mockQuestions: Question[] = [
 //             "Using <Redirect> component in JSX"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 808,
@@ -13120,7 +13326,8 @@ export const mockQuestions: Question[] = [
 //             "They must be manually encoded first"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 809,
@@ -13132,7 +13339,8 @@ export const mockQuestions: Question[] = [
 //             "Import getMetadata from next/metadata"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 810,
@@ -13144,7 +13352,8 @@ export const mockQuestions: Question[] = [
 //             "Only request object with full details"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 811,
@@ -13156,7 +13365,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only in production mode"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 812,
@@ -13168,7 +13378,8 @@ export const mockQuestions: Question[] = [
 //             "Metadata object with title and description"
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 813,
@@ -13180,7 +13391,8 @@ export const mockQuestions: Question[] = [
 //             "Using dynamicOG property in config"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 814,
@@ -13192,7 +13404,8 @@ export const mockQuestions: Question[] = [
 //             "No, metadata doesn't support inheritance"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 815,
@@ -13204,7 +13417,8 @@ export const mockQuestions: Question[] = [
 //             "Inherit styles from parent components"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 816,
@@ -13216,7 +13430,8 @@ export const mockQuestions: Question[] = [
 //             "Using <title> tag in page JSX"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 817,
@@ -13228,7 +13443,8 @@ export const mockQuestions: Question[] = [
 //             "No, metadata must be synchronous"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 818,
@@ -13240,7 +13456,8 @@ export const mockQuestions: Question[] = [
 //             "Next.js shows 500 error page"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 819,
@@ -13252,7 +13469,8 @@ export const mockQuestions: Question[] = [
 //             "Using canonical property in config"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 820,
@@ -13264,7 +13482,8 @@ export const mockQuestions: Question[] = [
 //             "No, Next.js throws build error"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 821,
@@ -13276,7 +13495,8 @@ export const mockQuestions: Question[] = [
 //             "Use i18n config in next.config.js"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 822,
@@ -13288,7 +13508,8 @@ export const mockQuestions: Question[] = [
 //             "Generates SEO-friendly title strings"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 823,
@@ -13300,7 +13521,8 @@ export const mockQuestions: Question[] = [
 //             "Use title.custom in child metadata"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 824,
@@ -13312,7 +13534,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only NEXT_PUBLIC_ variables"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 825,
@@ -13324,7 +13547,8 @@ export const mockQuestions: Question[] = [
 //             "Using socialMedia.twitter in config"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 826,
@@ -13336,7 +13560,8 @@ export const mockQuestions: Question[] = [
 //             "Root directory for metadata files"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 827,
@@ -13348,7 +13573,8 @@ export const mockQuestions: Question[] = [
 //             "No, causes hydration mismatches"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 828,
@@ -13360,7 +13586,8 @@ export const mockQuestions: Question[] = [
 //             "Using desc property in route config"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 829,
@@ -13372,7 +13599,8 @@ export const mockQuestions: Question[] = [
 //             "Block malicious bots from site"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 830,
@@ -13384,7 +13612,8 @@ export const mockQuestions: Question[] = [
 //             "No, each route is independent"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 831,
@@ -13396,7 +13625,8 @@ export const mockQuestions: Question[] = [
 //             "Using setLanguages from next/head"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 832,
@@ -13408,7 +13638,8 @@ export const mockQuestions: Question[] = [
 //             "Both merge into single metadata"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 833,
@@ -13420,7 +13651,8 @@ export const mockQuestions: Question[] = [
 //             "No, causes server-side errors"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 834,
@@ -13432,7 +13664,8 @@ export const mockQuestions: Question[] = [
 //             "Using screen property in config"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 835,
@@ -13444,7 +13677,8 @@ export const mockQuestions: Question[] = [
 //             "Convert images to icon formats"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 836,
@@ -13456,7 +13690,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, Next.js caches automatically"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 837,
@@ -13468,7 +13703,8 @@ export const mockQuestions: Question[] = [
 //             "Using author property in config"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 838,
@@ -13480,7 +13716,8 @@ export const mockQuestions: Question[] = [
 //             "Define app configuration manifest"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 841,
@@ -13492,7 +13729,8 @@ export const mockQuestions: Question[] = [
 //             "When CSS modules are imported"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 842,
@@ -13504,7 +13742,8 @@ export const mockQuestions: Question[] = [
 //             "Functions that optimize bundle size"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 843,
@@ -13516,7 +13755,8 @@ export const mockQuestions: Question[] = [
 //             "Wrap page with StaticRender component"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 844,
@@ -13528,7 +13768,8 @@ export const mockQuestions: Question[] = [
 //             "Export const dynamic = 'force-dynamic'"
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 845,
@@ -13540,7 +13781,8 @@ export const mockQuestions: Question[] = [
 //             "Indexed Server Response caching"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 846,
@@ -13552,7 +13794,8 @@ export const mockQuestions: Question[] = [
 //             "Wrap page with ISRProvider component"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 847,
@@ -13564,7 +13807,8 @@ export const mockQuestions: Question[] = [
 //             "Page caches for exactly 60 hours"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 848,
@@ -13576,7 +13820,8 @@ export const mockQuestions: Question[] = [
 //             "ISR works offline without internet"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 849,
@@ -13588,7 +13833,8 @@ export const mockQuestions: Question[] = [
 //             "Throws error during build process"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 850,
@@ -13600,7 +13846,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only in production mode"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 851,
@@ -13612,7 +13859,8 @@ export const mockQuestions: Question[] = [
 //             "Browser-based cache clearing method"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 852,
@@ -13624,7 +13872,8 @@ export const mockQuestions: Question[] = [
 //             "Using invalidate method on page"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 853,
@@ -13636,7 +13885,8 @@ export const mockQuestions: Question[] = [
 //             "SSR static, ISR is dynamic always"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 854,
@@ -13648,7 +13898,8 @@ export const mockQuestions: Question[] = [
 //             "For pages requiring authentication"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 855,
@@ -13660,7 +13911,8 @@ export const mockQuestions: Question[] = [
 //             "For personalized user dashboards"
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 856,
@@ -13672,7 +13924,8 @@ export const mockQuestions: Question[] = [
 //             "Dynamic import loading behavior"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 857,
@@ -13684,7 +13937,8 @@ export const mockQuestions: Question[] = [
 //             "Static with automatic ISR enabled"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 858,
@@ -13696,7 +13950,8 @@ export const mockQuestions: Question[] = [
 //             "No, causes build time errors"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 859,
@@ -13708,7 +13963,8 @@ export const mockQuestions: Question[] = [
 //             "Page returns 503 error temporarily"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 860,
@@ -13720,7 +13976,8 @@ export const mockQuestions: Question[] = [
 //             "Using refreshPage with page ID"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 861,
@@ -13732,7 +13989,8 @@ export const mockQuestions: Question[] = [
 //             "Organizing routes in folder structure"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 862,
@@ -13744,7 +14002,8 @@ export const mockQuestions: Question[] = [
 //             "Using tag attribute on components"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 863,
@@ -13756,7 +14015,8 @@ export const mockQuestions: Question[] = [
 //             "Removes tags from cache entries"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 864,
@@ -13768,7 +14028,8 @@ export const mockQuestions: Question[] = [
 //             "No, throws compilation errors"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 865,
@@ -13780,7 +14041,8 @@ export const mockQuestions: Question[] = [
 //             "Debug caching issues in development"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 866,
@@ -13792,7 +14054,8 @@ export const mockQuestions: Question[] = [
 //             "Removes unused CSS from bundles"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 867,
@@ -13804,7 +14067,8 @@ export const mockQuestions: Question[] = [
 //             "Larger JavaScript bundle sizes"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 868,
@@ -13816,7 +14080,8 @@ export const mockQuestions: Question[] = [
 //             "No, causes build errors"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 869,
@@ -13828,7 +14093,8 @@ export const mockQuestions: Question[] = [
 //             "Shows error page to users"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 870,
@@ -13840,7 +14106,8 @@ export const mockQuestions: Question[] = [
 //             "Look at network request timing"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 871,
@@ -13852,7 +14119,8 @@ export const mockQuestions: Question[] = [
 //             "Building pages in multiple stages"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 872,
@@ -13864,7 +14132,8 @@ export const mockQuestions: Question[] = [
 //             "No, causes build configuration errors"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 873,
@@ -13876,7 +14145,8 @@ export const mockQuestions: Question[] = [
 //             "Server returns 404 error"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 874,
@@ -13888,7 +14158,8 @@ export const mockQuestions: Question[] = [
 //             "Use cache: false in request"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 875,
@@ -13900,7 +14171,8 @@ export const mockQuestions: Question[] = [
 //             "Easier authentication implementation"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 876,
@@ -13912,7 +14184,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but loses Server Component benefits"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 877,
@@ -13924,7 +14197,8 @@ export const mockQuestions: Question[] = [
 //             "Forces fresh fetch ignoring cache"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 878,
@@ -13936,7 +14210,8 @@ export const mockQuestions: Question[] = [
 //             "Enable verbose mode in browser"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 881,
@@ -13948,7 +14223,8 @@ export const mockQuestions: Question[] = [
 //             "Caching API responses across pages"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 882,
@@ -13960,7 +14236,8 @@ export const mockQuestions: Question[] = [
 //             "For 60 seconds after request"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 883,
@@ -13972,7 +14249,8 @@ export const mockQuestions: Question[] = [
 //             "Database query result caching"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 884,
@@ -13984,7 +14262,8 @@ export const mockQuestions: Question[] = [
 //             "Using skipCache property in request"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 885,
@@ -13996,7 +14275,8 @@ export const mockQuestions: Question[] = [
 //             "Complete rendered HTML and RSC payload",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 886,
@@ -14008,7 +14288,8 @@ export const mockQuestions: Question[] = [
 //             "When user navigates between pages"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 887,
@@ -14020,7 +14301,8 @@ export const mockQuestions: Question[] = [
 //             "Validates cache before using it"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 888,
@@ -14032,7 +14314,8 @@ export const mockQuestions: Question[] = [
 //             "Temporarily stores data in memory"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 889,
@@ -14044,7 +14327,8 @@ export const mockQuestions: Question[] = [
 //             "Using ttl property in config"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 890,
@@ -14056,7 +14340,8 @@ export const mockQuestions: Question[] = [
 //             "Cache clears after 3600 requests"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 891,
@@ -14068,7 +14353,8 @@ export const mockQuestions: Question[] = [
 //             "No, requires server restart always"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 892,
@@ -14080,7 +14366,8 @@ export const mockQuestions: Question[] = [
 //             "Memory cache for navigation history"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 893,
@@ -14092,7 +14379,8 @@ export const mockQuestions: Question[] = [
 //             "Until user clicks refresh button"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 894,
@@ -14104,7 +14392,8 @@ export const mockQuestions: Question[] = [
 //             "Browser cache serves the page"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 895,
@@ -14116,7 +14405,8 @@ export const mockQuestions: Question[] = [
 //             "Use router.refresh() from next/navigation",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 896,
@@ -14128,7 +14418,8 @@ export const mockQuestions: Question[] = [
 //             "Organizing cache by file type"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 897,
@@ -14140,7 +14431,8 @@ export const mockQuestions: Question[] = [
 //             "Using setTag from next/cache",
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 898,
@@ -14152,7 +14444,8 @@ export const mockQuestions: Question[] = [
 //             "Removes specific tags from cache"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 899,
@@ -14164,7 +14457,8 @@ export const mockQuestions: Question[] = [
 //             "No, causes cache conflicts"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 900,
@@ -14176,7 +14470,8 @@ export const mockQuestions: Question[] = [
 //             "Debugging cache issues in development"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 901,
@@ -14188,7 +14483,8 @@ export const mockQuestions: Question[] = [
 //             "Requires manual cache invalidation"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 902,
@@ -14200,7 +14496,8 @@ export const mockQuestions: Question[] = [
 //             "Revalidates cache before using it"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 903,
@@ -14212,7 +14509,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, with special cache configuration"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 904,
@@ -14224,7 +14522,8 @@ export const mockQuestions: Question[] = [
 //             "Error thrown to user immediately"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 905,
@@ -14236,7 +14535,8 @@ export const mockQuestions: Question[] = [
 //             "Use cache: false in all fetches"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 906,
@@ -14248,7 +14548,8 @@ export const mockQuestions: Question[] = [
 //             "Configure cache encryption settings"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 907,
@@ -14260,7 +14561,8 @@ export const mockQuestions: Question[] = [
 //             "No, third-party blocks caching"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 908,
@@ -14272,7 +14574,8 @@ export const mockQuestions: Question[] = [
 //             "Revalidates on every request"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 909,
@@ -14284,7 +14587,8 @@ export const mockQuestions: Question[] = [
 //             "Cache only works with static params"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 910,
@@ -14296,7 +14600,8 @@ export const mockQuestions: Question[] = [
 //             "Speeds up network request timing"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 911,
@@ -14308,7 +14613,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only 404 errors"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 912,
@@ -14320,7 +14626,8 @@ export const mockQuestions: Question[] = [
 //             "Disables browser cache for request"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 913,
@@ -14332,7 +14639,8 @@ export const mockQuestions: Question[] = [
 //             "Use cacheCheck helper function"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 914,
@@ -14344,7 +14652,8 @@ export const mockQuestions: Question[] = [
 //             "All caches work independently"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 915,
@@ -14356,7 +14665,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, with custom cache adapter"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 916,
@@ -14368,7 +14678,8 @@ export const mockQuestions: Question[] = [
 //             "Cache rebuilds during deployment"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 917,
@@ -14380,7 +14691,8 @@ export const mockQuestions: Question[] = [
 //             "Database queries auto-cache by default"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 918,
@@ -14392,7 +14704,8 @@ export const mockQuestions: Question[] = [
 //             "Validate then serve cached data"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 919,
@@ -14404,7 +14717,8 @@ export const mockQuestions: Question[] = [
 //             "Merging multiple layouts into one"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 920,
@@ -14416,7 +14730,8 @@ export const mockQuestions: Question[] = [
 //             "Client requests data then renders components"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 921,
@@ -14428,7 +14743,8 @@ export const mockQuestions: Question[] = [
 //             "RSC requires full page reloads"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 922,
@@ -14440,7 +14756,8 @@ export const mockQuestions: Question[] = [
 //             "Database relationship structure diagram"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 923,
@@ -14452,7 +14769,8 @@ export const mockQuestions: Question[] = [
 //             "No, they must be separate"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 924,
@@ -14464,7 +14782,8 @@ export const mockQuestions: Question[] = [
 //             "No, causes infinite render loops"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 925,
@@ -14476,7 +14795,8 @@ export const mockQuestions: Question[] = [
 //             "Merging CSS and JavaScript files"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 926,
@@ -14488,7 +14808,8 @@ export const mockQuestions: Question[] = [
 //             "Using useServer hook from React",
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 927,
@@ -14500,7 +14821,8 @@ export const mockQuestions: Question[] = [
 //             "Creating child routes in routing",
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 928,
@@ -14512,7 +14834,8 @@ export const mockQuestions: Question[] = [
 //             "Enables better TypeScript type checking"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 929,
@@ -14524,7 +14847,8 @@ export const mockQuestions: Question[] = [
 //             "Line between Server and Client Components",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 930,
@@ -14536,7 +14860,8 @@ export const mockQuestions: Question[] = [
 //             "No, functions cannot cross boundary",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 931,
@@ -14548,7 +14873,8 @@ export const mockQuestions: Question[] = [
 //             "Only JSON-compatible data structures"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 932,
@@ -14560,7 +14886,8 @@ export const mockQuestions: Question[] = [
 //             "Route slots for parallel rendering"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 933,
@@ -14572,7 +14899,8 @@ export const mockQuestions: Question[] = [
 //             "Deeper trees always reduce bundle"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 934,
@@ -14584,7 +14912,8 @@ export const mockQuestions: Question[] = [
 //             "Causes hydration mismatch errors always"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 935,
@@ -14596,7 +14925,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, context works everywhere seamlessly"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 936,
@@ -14608,7 +14938,8 @@ export const mockQuestions: Question[] = [
 //             "Combining multiple data sources together"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 937,
@@ -14620,7 +14951,8 @@ export const mockQuestions: Question[] = [
 //             "Client Components cause security issues"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 938,
@@ -14632,7 +14964,8 @@ export const mockQuestions: Question[] = [
 //             "Position in component tree structure"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 939,
@@ -14644,7 +14977,8 @@ export const mockQuestions: Question[] = [
 //             "No, unless using polyfills"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 940,
@@ -14656,7 +14990,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, using special fetch configuration"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 941,
@@ -14668,7 +15003,8 @@ export const mockQuestions: Question[] = [
 //             "Separate Server and Client completely"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 942,
@@ -14680,7 +15016,8 @@ export const mockQuestions: Question[] = [
 //             "Cannot share state between them"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 943,
@@ -14692,7 +15029,8 @@ export const mockQuestions: Question[] = [
 //             "Sharing component logic between types"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 944,
@@ -14704,7 +15042,8 @@ export const mockQuestions: Question[] = [
 //             "No, causes streaming errors"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 945,
@@ -14716,7 +15055,8 @@ export const mockQuestions: Question[] = [
 //             "Promoting components to root level"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 946,
@@ -14728,7 +15068,8 @@ export const mockQuestions: Question[] = [
 //             "Eliminates CSS from bundle"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 947,
@@ -14740,7 +15081,8 @@ export const mockQuestions: Question[] = [
 //             "CSS styles for components"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 948,
@@ -14752,7 +15094,8 @@ export const mockQuestions: Question[] = [
 //             "No, unless using async hooks"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 949,
@@ -14764,7 +15107,8 @@ export const mockQuestions: Question[] = [
 //             "Reduces total number of components"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 950,
@@ -14776,7 +15120,8 @@ export const mockQuestions: Question[] = [
 //             "Pass through context provider instead"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 951,
@@ -14788,7 +15133,8 @@ export const mockQuestions: Question[] = [
 //             "Breaking components into atoms"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 952,
@@ -14800,7 +15146,8 @@ export const mockQuestions: Question[] = [
 //             "No, Server Components are static"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 953,
@@ -14812,7 +15159,8 @@ export const mockQuestions: Question[] = [
 //             "Use only Server Components throughout"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 954,
@@ -14824,7 +15172,8 @@ export const mockQuestions: Question[] = [
 //             "Only static components affect TTI"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 955,
@@ -14836,7 +15185,8 @@ export const mockQuestions: Question[] = [
 //             "Debugging component render issues"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 956,
@@ -14848,7 +15198,8 @@ export const mockQuestions: Question[] = [
 //             "No, unless they support RSC"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 957,
@@ -14860,7 +15211,8 @@ export const mockQuestions: Question[] = [
 //             "Layout wrapping all page components"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 958,
@@ -14872,7 +15224,8 @@ export const mockQuestions: Question[] = [
 //             "Increase component nesting depth"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 959,
@@ -14884,7 +15237,8 @@ export const mockQuestions: Question[] = [
 //             "In component state using useState"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 960,
@@ -14896,7 +15250,8 @@ export const mockQuestions: Question[] = [
 //             "Enables offline functionality without network"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 961,
@@ -14908,7 +15263,8 @@ export const mockQuestions: Question[] = [
 //             "Using getSearchParams helper from next/server"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 962,
@@ -14920,7 +15276,8 @@ export const mockQuestions: Question[] = [
 //             "Using window.location.search directly"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 963,
@@ -14932,7 +15289,8 @@ export const mockQuestions: Question[] = [
 //             "Either works depending on requirements"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 964,
@@ -14944,7 +15302,8 @@ export const mockQuestions: Question[] = [
 //             "Next.js preserves them automatically"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 965,
@@ -14956,7 +15315,8 @@ export const mockQuestions: Question[] = [
 //             "Browser reload after URL change"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 966,
@@ -14968,7 +15328,8 @@ export const mockQuestions: Question[] = [
 //             "Use onClick updating window.location"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 967,
@@ -14980,7 +15341,8 @@ export const mockQuestions: Question[] = [
 //             "Call resetParams on router object"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 968,
@@ -14992,7 +15354,8 @@ export const mockQuestions: Question[] = [
 //             "No, causes URL parsing errors"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 969,
@@ -15004,7 +15367,8 @@ export const mockQuestions: Question[] = [
 //             "Combine both in searchParams with keys",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 970,
@@ -15016,7 +15380,8 @@ export const mockQuestions: Question[] = [
 //             "Filters save to localStorage",
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 971,
@@ -15028,7 +15393,8 @@ export const mockQuestions: Question[] = [
 //             "Define in next.config.js file"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 972,
@@ -15040,7 +15406,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only in production"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 973,
@@ -15052,7 +15419,8 @@ export const mockQuestions: Question[] = [
 //             "Use CSS :active pseudo-class"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 974,
@@ -15064,7 +15432,8 @@ export const mockQuestions: Question[] = [
 //             "No, Server Components are static"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 975,
@@ -15076,7 +15445,8 @@ export const mockQuestions: Question[] = [
 //             "Use filter prop on data array"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 976,
@@ -15088,7 +15458,8 @@ export const mockQuestions: Question[] = [
 //             "Use descriptive keys like ?category=books",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 977,
@@ -15100,7 +15471,8 @@ export const mockQuestions: Question[] = [
 //             "Use comma-separated string in searchParam",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 978,
@@ -15112,7 +15484,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, users can manipulate URL params",
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 979,
@@ -15124,7 +15497,8 @@ export const mockQuestions: Question[] = [
 //             "Use radio buttons with forms"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 980,
@@ -15136,7 +15510,8 @@ export const mockQuestions: Question[] = [
 //             "No, static pages cannot have params",
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 981,
@@ -15148,7 +15523,8 @@ export const mockQuestions: Question[] = [
 //             "Navigate to base URL manually"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 982,
@@ -15160,7 +15536,8 @@ export const mockQuestions: Question[] = [
 //             "Better TypeScript type safety"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 983,
@@ -15172,7 +15549,8 @@ export const mockQuestions: Question[] = [
 //             "Next.js shows loading automatically"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 984,
@@ -15184,7 +15562,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only in forms",
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 985,
@@ -15196,7 +15575,8 @@ export const mockQuestions: Question[] = [
 //             "Use slider with single value"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 986,
@@ -15208,7 +15588,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, using CSS transitions on elements",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 987,
@@ -15220,7 +15601,8 @@ export const mockQuestions: Question[] = [
 //             "Use global state counter variable"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 988,
@@ -15232,7 +15614,8 @@ export const mockQuestions: Question[] = [
 //             "Create separate filter page route"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 989,
@@ -15244,7 +15627,8 @@ export const mockQuestions: Question[] = [
 //             "Disable conflicting filter options"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 990,
@@ -15256,7 +15640,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, but only for small datasets",
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 991,
@@ -15268,7 +15653,8 @@ export const mockQuestions: Question[] = [
 //             "Use horizontal scroll for options"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 992,
@@ -15280,7 +15666,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, filtered pages can be indexed",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 993,
@@ -15292,7 +15679,8 @@ export const mockQuestions: Question[] = [
 //             "Next.js handles batch updates automatically"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 994,
@@ -15304,7 +15692,8 @@ export const mockQuestions: Question[] = [
 //             "More filters reduce server response time"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 995,
@@ -15316,7 +15705,8 @@ export const mockQuestions: Question[] = [
 //             "Store sorting in separate state"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 996,
@@ -15328,7 +15718,8 @@ export const mockQuestions: Question[] = [
 //             "Depends on user experience requirements",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 997,
@@ -15340,7 +15731,8 @@ export const mockQuestions: Question[] = [
 //             "Only test UI interaction visually",
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 998,
@@ -15352,7 +15744,8 @@ export const mockQuestions: Question[] = [
 //             "Just keyboard navigation is sufficient",
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 999,
@@ -15364,7 +15757,8 @@ export const mockQuestions: Question[] = [
 //             "In URL searchParams for sharing"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1000,
@@ -15376,7 +15770,8 @@ export const mockQuestions: Question[] = [
 //             "In client Context for access"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1001,
@@ -15388,7 +15783,8 @@ export const mockQuestions: Question[] = [
 //             "In cookies for persistence"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1002,
@@ -15400,7 +15796,8 @@ export const mockQuestions: Question[] = [
 //             "Both client storage and server sync"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1003,
@@ -15412,7 +15809,8 @@ export const mockQuestions: Question[] = [
 //             "In cookies for persistence"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//             "explanation":""
 //     },
 //     {
 //         "id": 1004,
