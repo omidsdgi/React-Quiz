@@ -11405,7 +11405,7 @@ export const mockQuestions: Question[] = [
             "• نکته: از CSS variable برای control کردن weight استفاده کنید"
     },
     {
-        "id": 664,
+        "id": 681,
         "question": "Can fonts be applied globally in Next.js?",
         "options": [
             "Yes, but only in _app.js file",
@@ -11415,10 +11415,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-            "explanation":""
+        "explanation": "• بله با apply کردن className به body element در root layout\n" +
+            "• این باعث می‌شود font در تمام app اعمال شود\n" +
+            "• همچنین می‌توانید CSS variables globally set کنید\n" +
+            "• برای consistency در تمام صفحات مفید است\n" +
+            "• معمولاً در app/layout.tsx انجام می‌شود\n" +
+            "• نکته: می‌توانید different fonts برای different routes نیز داشته باشید"
     },
     {
-        "id": 665,
+        "id": 682,
         "question": "What happens to unused font weights with next/font?",
         "options": [
             "They are included in bundle for consistency",
@@ -11428,10 +11433,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-            "explanation":""
+        "explanation": "• font weights استفاده نشده به‌طور خودکار از build excluded می‌شوند\n" +
+            "• Next.js فقط weights مشخص شده را download می‌کند\n" +
+            "• این optimization automatic است\n" +
+            "• bundle size کوچک‌تر می‌شود\n" +
+            "• فقط آنچه واقعاً نیاز دارید load می‌شود\n" +
+            "• نکته: در font configuration فقط weights مورد نیاز را specify کنید"
     },
     {
-        "id": 666,
+        "id": 683,
         "question": "How does next/font improve Core Web Vitals?",
         "options": [
             "By reducing Cumulative Layout Shift with font optimization",
@@ -11441,10 +11451,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-            "explanation":""
+        "explanation": "• با کاهش Cumulative Layout Shift از طریق font optimization\n" +
+            "• size-adjust برای preventing layout shift\n" +
+            "• preloading برای faster LCP\n" +
+            "• self-hosting برای بهتر TTFB\n" +
+            "• sub setting برای کمتر bytes\n" +
+            "• نکته: این optimizations به‌طور خودکار اعمال می‌شوند و نیازی به manual tuning ندارند"
     },
     {
-        "id": 667,
+        "id": 684,
         "question": "Can you use next/font with Tailwind CSS?",
         "options": [
             "Yes, by adding font variable to Tailwind config",
@@ -11454,10 +11469,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation":""
+        "explanation": "• بله با اضافه کردن font variable به Tailwind config\n" +
+            "• font را به theme.extend.fontFamily اضافه می‌کنید\n" +
+            "• سپس می‌توانید با Tailwind classes استفاده کنید\n" +
+            "• مثال font-sans یا font-custom\n" +
+            "• integration ساده و seamless است\n" +
+            "• نکته: از CSS variables برای easier configuration استفاده کنید"
     },
     {
-        "id": 668,
+        "id": 685,
         "question": "What is the fallback font strategy in next/font?",
         "options": [
             "It automatically generates system font fallbacks",
@@ -11467,10 +11487,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-            "explanation":""
+        "explanation":"• Next.js به‌طور خودکار system font fallbacks با size adjustment تولید می‌کند\n" +
+            "• fallback font به اندازه target font adjust می‌شود\n" +
+            "• این layout shift را minimize می‌کند\n" +
+            "• تا load شدن font اصلی fallback نمایش داده می‌شود\n" +
+            "• این strategy automatic و optimized است\n" +
+            "• نکته: می‌توانید custom fallback fonts نیز specify کنید"
     },
     {
-        "id": 670,
+        "id": 686,
         "question": `Which component should you use instead of '<img>' tag?`,
         "options": [
             "<Picture> from next/image",
@@ -11480,10 +11505,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-            "explanation":""
+        "explanation": "• باید از کامپوننت Image از next/image استفاده کنید\n" +
+            "• این کامپوننت optimizations خودکار دارد\n" +
+            "• lazy loading و responsive images و format optimization\n" +
+            "• تگ img معمولی این قابلیت‌ها را ندارد\n" +
+            "• Image component بهترین performance را ارائه می‌دهد\n" +
+            "• نکته: همیشه Image component برای تصاویر در Next.js استفاده کنید مگر دلیل خاصی داشته باشید"
     },
     {
-        "id": 671,
+        "id": 687,
         "question": "What does Next.js Image component do automatically?",
         "options": [
             "Removes all metadata from image files automatically",
@@ -11493,10 +11523,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation":""
+        "explanation":"• به‌طور خودکار تصاویر را به WebP یا AVIF format تبدیل می‌کند\n" +
+            "• lazy loading پیاده‌سازی می‌کند تا فقط تصاویر در viewport load شوند\n" +
+            "• responsive images برای screen sizes مختلف تولید می‌کند\n" +
+            "• optimization بدون نیاز به configuration دستی\n" +
+            "• quality و size بهینه می‌شود\n" +
+            "• نکته: این optimizations باعث بهبود قابل توجه performance می‌شوند"
     },
     {
-        "id": 672,
+        "id": 688,
         "question": "Why is lazy loading important for images?",
         "options": [
             "It improves SEO ranking significantly",
@@ -11506,10 +11541,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation":""
+        "explanation": "• lazy loading فقط تصاویری که در viewport هستند را load می‌کند\n" +
+            "• تصاویر زیر fold تا scroll کردن کاربر load نمی‌شوند\n" +
+            "• initial page load بسیار سریع‌تر می‌شود\n" +
+            "• bandwidth صرفه‌جویی می‌شود\n" +
+            "• تجربه کاربری بهتر با faster perceived performance\n" +
+            "• نکته: Image component Next.js به‌طور پیش‌فرض lazy loading دارد"
     },
     {
-        "id": 673,
+        "id": 689,
         "question": "Which property is required for static image imports?",
         "options": [
             "url with file path string",
@@ -11519,10 +11559,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 10,
-            "explanation":""
+       "explanation":"• برای static imports باید src property با imported image object استفاده شود\n" +
+           "• image را import کرده و به src پاس می‌دهید\n" +
+           "• Next.js به‌طور خودکار width و height را تشخیص می‌دهد\n" +
+           "• نیازی به manual dimensions نیست\n" +
+           "• این approach type-safe و optimized است\n" +
+           "• نکته: این روش برای local images در پروژه recommended است"
     },
     {
-        "id": 674,
+        "id": 690,
         "question": "How do you specify image dimensions for remote images?",
         "options": [
             "Next.js detects dimensions automatically",
@@ -11532,10 +11577,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation":""
+        "explanation": "• برای remote images باید width و height props را explicitly مشخص کنید\n" +
+            "• Next.js نمی‌تواند dimensions را از remote URLs تشخیص دهد\n" +
+            "• این برای preventing layout shift ضروری است\n" +
+            "• باید actual dimensions تصویر را بدانید\n" +
+            "• این props required هستند مگر از fill استفاده کنید\n" +
+            "• نکته: همیشه aspect ratio صحیح را حفظ کنید"
     },
     {
-        "id": 675,
+        "id": 691,
         "question": "What is the purpose of the fill property?",
         "options": [
             "It fills empty space with background color",
@@ -11545,7 +11595,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation":""
+       "explanation": "• fill property باعث می‌شود image تمام parent container را fill کند\n" +
+           "• دیگر نیازی به width و height نیست\n" +
+           "• image به اندازه parent کشیده می‌شود\n" +
+           "• parent باید position: relative یا absolute داشته باشد\n" +
+           "• برای background images و full-width images مفید است\n" +
+           "• نکته: با objectFit می‌توانید نحوه fill شدن را control کنید"
     },
     {
         "id": 676,
@@ -21240,6 +21295,22 @@ export const mockQuestions: Question[] = [
         "explanation": "• در 'false ?? true'، چون false نه null است و نه undefined، نتیجه false است\n" +
             "- در 'false || true'، چون false مقدار falsy است، نتیجه true می‌شود\n" +
             "- این تفاوت رفتار دو عملگر در برخورد با مقادیر falsy را نشان می‌دهد"
+    },
+    {
+        "id": 126,
+        "question": "What is the purpose of the optional chaining operator (?.) in JavaScript?",
+        "options": [
+            "It prevents errors when accessing properties of null or undefined objects by safely returning undefined.",
+            "It always assigns default values to missing properties automatically.",
+            "It modifies objects by adding default keys for undefined values.",
+            "It converts falsy values like 0 or '' into null automatically."
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• عملگر optional chaining (?.) برای دسترسی ایمن به property یا تابع در یک شیء استفاده می‌شود بدون آن‌که در صورت null یا undefined بودن خطا ایجاد کند\n" +
+            "- در چنین شرایطی، به جای پرتاب خطا، مقدار undefined برگردانده می‌شود\n" +
+            "- این عملگر ویژگی‌ها را تغییر یا مقداردهی نمی‌کند و فقط برای جلوگیری از خطای runtime به کار می‌رود\n" +
+            "- این رفتار هیچ ارتباطی با falsy values مانند 0 یا رشته خالی ندارد"
     }
 
 
