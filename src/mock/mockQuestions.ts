@@ -21311,6 +21311,99 @@ export const mockQuestions: Question[] = [
             "- در چنین شرایطی، به جای پرتاب خطا، مقدار undefined برگردانده می‌شود\n" +
             "- این عملگر ویژگی‌ها را تغییر یا مقداردهی نمی‌کند و فقط برای جلوگیری از خطای runtime به کار می‌رود\n" +
             "- این رفتار هیچ ارتباطی با falsy values مانند 0 یا رشته خالی ندارد"
+    },
+    {
+        "id": 127,
+        "question": "In the ControlledInputs component, what happens if you do not call e.preventDefault() in the handleSubmit function?",
+        "options": [
+            "The page will reload upon form submission.",
+            "The form data will be automatically saved in state.",
+            "An error will occur in the console.",
+            "React will ignore the form submission completely."
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• اگر در تابع handleSubmit از e.preventDefault() استفاده نشود، مرورگر رفتار پیش‌فرض فرم یعنی بارگذاری مجدد صفحه را انجام می‌دهد\n" +
+            "- این باعث می‌شود state های React و داده‌های فرم از بین بروند\n" +
+            "- هیچ خطایی در کنسول نمایش داده نمی‌شود، اما داده‌ها حفظ نخواهند شد\n" +
+            "- React به طور خودکار جلوی ارسال فرم را نمی‌گیرد، این مسئولیت بر عهده توسعه‌دهنده است"
+    },
+    {
+        "id": 128,
+        "question": "In the UncontrolledInputs component, how is the FormData API used to retrieve form data after submission?",
+        "options": [
+            "The FormData object creates key-value pairs from form input fields.",
+            "It directly saves form data to the users state.",
+            "It automatically validates the input fields.",
+            "It converts all form inputs into JSON and sends them to the server."
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• شیء FormData برای استخراج داده‌ها از عناصر فرم استفاده می‌شود و آن‌ها را به صورت جفت‌های کلید-مقدار برمی‌گرداند\n" +
+            "- متد Object.fromEntries(formData) این جفت‌ها را به یک شیء جاوااسکریپت قابل استفاده تبدیل می‌کند\n" +
+            "- FormData هیچ داده‌ای را در state ذخیره نمی‌کند و وظیفه اعتبارسنجی (validation) نیز بر عهده آن نیست\n" +
+            "- این روش بیشتر در فرم‌های uncontrolled کاربرد دارد که از ref یا state مستقیم استفاده نمی‌کنند"
+    },
+    {
+        "id": 129,
+        "question": "In the MultipleInputs component, what ensures that each input updates the correct property in the user state object?",
+        "options": [
+            "Using the name attribute of each input field.",
+            "Assigning a unique id to each input field.",
+            "Manually setting each property in the state object.",
+            "Tracking the input order in the component’s render cycle."
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• در کامپوننت MultipleInputs، ویژگی name در هر input مشخص می‌کند که کدام فیلد از state باید به‌روزرسانی شود\n" +
+            "- در تابع handleChange از [e.target.name] برای تعیین کلید صحیح در شیء state استفاده می‌شود\n" +
+            "- id فقط برای شناسایی بصری input در HTML است و تاثیری در state ندارد\n" +
+            "- نیازی به تنظیم دستی هر property نیست، چون با استفاده از name این فرآیند به صورت پویا انجام می‌شود"
+    },
+    {
+        "id": 130,
+        "question": "What is the main difference between controlled and uncontrolled inputs in React?",
+        "options": [
+            "Controlled inputs use React state to manage values, while uncontrolled inputs rely on the DOM.",
+            "Uncontrolled inputs automatically sync their values with React state.",
+            "Controlled inputs store values in localStorage instead of component state.",
+            "Uncontrolled inputs require the useEffect hook to update their values."
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• در ورودی‌های controlled، مقدار input توسط state در React مدیریت می‌شود و تغییر آن فقط از طریق setState یا setValue انجام می‌گیرد\n" +
+            "- در ورودی‌های uncontrolled، مقدار input مستقیماً در DOM ذخیره می‌شود و از طریق ref یا FormData خوانده می‌شود\n" +
+            "- uncontrolled inputs ارتباط مستقیمی با React state ندارند و نیازی به useEffect برای مقداردهی ندارند"
+    },
+    {
+        "id": 131,
+        "question": "Which statement about controlled inputs is true?",
+        "options": [
+            "Their value is defined by React state and updated via onChange events.",
+            "They automatically update when the user types, without state management.",
+            "They can only be used with useRef hooks for reading values.",
+            "They cannot have an initial value set through state."
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• در controlled input مقدار value به state کامپوننت متصل است و هر تغییر توسط رویداد onChange باعث به‌روزرسانی state می‌شود\n" +
+            "- این نوع کنترل اجازه می‌دهد داده‌ها همواره با state هماهنگ باشند\n" +
+            "- استفاده از useRef در این نوع ورودی‌ها معمولاً لازم نیست"
+    },
+    {
+        "id": 132,
+        "question": "When should you prefer using an uncontrolled input instead of a controlled one?",
+        "options": [
+            "When you need to read the value only on form submission without tracking every keystroke.",
+            "When the input value must always stay in sync with component state.",
+            "When you want to trigger re-renders on every input change.",
+            "When the form uses validation logic stored in component state."
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• از uncontrolled input زمانی استفاده می‌شود که فقط در لحظه ارسال فرم نیاز به خواندن مقدار داریم\n" +
+            "- این نوع ورودی‌ها نیازی به رندر مجدد در هر تغییر کاربر ندارند و سبک‌تر هستند\n" +
+            "- اگر نیاز به کنترل کامل یا اعتبارسنجی لحظه‌ای دارید، از controlled input استفاده کنید"
     }
 
 
