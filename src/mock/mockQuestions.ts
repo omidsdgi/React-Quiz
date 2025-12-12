@@ -11603,7 +11603,7 @@ export const mockQuestions: Question[] = [
            "• نکته: با objectFit می‌توانید نحوه fill شدن را control کنید"
     },
     {
-        "id": 676,
+        "id": 692,
         "question": "Which property controls how image fits in container?",
         "options": [
             "fit property with CSS values",
@@ -11613,10 +11613,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-            "explanation":""
+            "explanation": "• objectFit property با مقادیر CSS مثل cover یا contain یا fill\n" +
+                "• این مشخص می‌کند image چگونه در container قرار بگیرد\n" +
+                "• cover تصویر را crop می‌کند تا container را پر کند\n" +
+                "• contain تمام تصویر را نمایش می‌دهد با حفظ aspect ratio\n" +
+                "• fill تصویر را stretch می‌کند تا container را پر کند\n" +
+                "• نکته: معمولاً با fill property استفاده می‌شود"
     },
     {
-        "id": 677,
+        "id": 693,
         "question": "What does priority property do for images?",
         "options": [
             "It disables lazy loading for above-fold images",
@@ -11626,10 +11631,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-            "explanation":""
+            "explanation": "• priority property باعث disable شدن lazy loading برای تصاویر above-fold می‌شود\n" +
+                "• تصویر بلافاصله و با priority بالا load می‌شود\n" +
+                "• این برای LCP image یعنی بزرگترین تصویر در viewport مهم است\n" +
+                "• جلوگیری از delay در loading تصاویر critical\n" +
+                "• preload tag به HTML اضافه می‌شود\n" +
+                "• نکته: فقط برای 1-2 تصویر مهم در صفحه استفاده کنید"
     },
     {
-        "id": 678,
+        "id": 694,
         "question": "When should you use priority property?",
         "options": [
             "For all images to improve performance",
@@ -11639,10 +11649,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-            "explanation":""
+        "explanation": "• برای Largest Contentful Paint images که در viewport اولیه هستند\n" +
+            "• معمولاً hero images یا banner اصلی صفحه\n" +
+            "• تصاویری که برای first paint حیاتی هستند\n" +
+            "• نه برای thumbnail ها یا تصاویر پایین صفحه\n" +
+            "• این باعث بهبود LCP metric می‌شود\n" +
+            "• نکته: استفاده بیش از حد priority می‌تواند performance را کاهش دهد"
     },
     {
-        "id": 679,
+        "id":695,
         "question": "How does Next.js handle different screen sizes?",
         "options": [
             "It generates multiple image sizes automatically",
@@ -11652,10 +11667,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation":""
+            "explanation":"• Next.js به‌طور خودکار multiple image sizes تولید می‌کند\n" +
+                "• برای screen sizes و resolutions مختلف\n" +
+                "• browser مناسب‌ترین size را بر اساس viewport انتخاب می‌کند\n" +
+                "• srcset attribute به‌طور خودکار تولید می‌شود\n" +
+                "• این responsive images بدون کار اضافی است\n" +
+                "• نکته: با sizes prop می‌توانید این رفتار را fine-tune کنید"
     },
     {
-        "id": 680,
+        "id": 696,
         "question": "What is the purpose of sizes property?",
         "options": [
             "It defines exact image dimensions in pixels",
@@ -11665,10 +11685,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-            "explanation":""
+         "explanation": "• sizes به browser می‌گوید کدام size تصویر را برای viewport فعلی download کند\n" +
+            "• media queries برای screen sizes مختلف\n" +
+            "• مثال sizes='(max-width: 768px) 100vw, 50vw'\n" +
+            "• این باعث بهینه‌سازی network usage می‌شود\n" +
+            "• browser دقیقاً size مورد نیاز را download می‌کند\n" +
+            "• نکته: برای تصاویری که width متغیر دارند حتماً sizes تنظیم کنید"
     },
     {
-        "id": 681,
+        "id": 697,
         "question": "Which image formats does Next.js optimize to?",
         "options": [
             "WebP and AVIF for modern browsers",
@@ -11678,10 +11703,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation":""
+        "explanation": "• Next.js تصاویر را به WebP و AVIF برای modern browsers تبدیل می‌کند\n" +
+            "• این formatها compression بهتری نسبت به JPEG و PNG دارند\n" +
+            "• browser قدیمی‌تر fallback به format اصلی می‌کند\n" +
+            "• file size بسیار کمتر با quality مشابه\n" +
+            "• این conversion خودکار است\n" +
+            "• نکته: WebP و AVIF می‌توانند تا 50% کوچک‌تر از JPEG باشند"
     },
     {
-        "id": 682,
+        "id": 698,
         "question": "How do you allow external image domains?",
         "options": [
             "Add domains to images.domains in next.config.js",
@@ -11691,10 +11721,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-            "explanation":""
+        "explanation":"• باید domains را به images.domains در next.config.js اضافه کنید\n" +
+            "• یا از remotePatterns برای control دقیق‌تر استفاده کنید\n" +
+            "• این یک security measure است\n" +
+            "• جلوگیری از optimization تصاویر از source های unauthorized\n" +
+            "• هر domain باید explicitly مجاز شود\n" +
+            "• نکته: فقط domains قابل اعتماد را اضافه کنید"
     },
     {
-        "id": 683,
+        "id": 699,
         "question": "What happens without configuring remote domains?",
         "options": [
             "Images load but without optimization",
@@ -11704,10 +11739,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation":""
+        "explanation": "• Next.js یک error throw می‌کند و تصویر را block می‌کند\n" +
+            "• error message می‌گوید که domain allowed نیست\n" +
+            "• این برای security است تا از abuse جلوگیری شود\n" +
+            "• باید domain را به config اضافه کنید\n" +
+            "• تصویر اصلاً load نمی‌شود\n" +
+            "• نکته: این یک intentional safeguard است نه bug"
     },
     {
-        "id": 684,
+        "id": 700,
         "question": "What is the purpose of placeholder property?",
         "options": [
             "It replaces broken images automatically",
@@ -11717,7 +11757,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-            "explanation":""
+        "explanation": "• placeholder یک blurred preview در زمان loading تصویر نمایش می‌دهد\n" +
+            "• جلوگیری از empty space و layout shift\n" +
+            "• تجربه کاربری بهتر با visual feedback\n" +
+            "• می‌تواند blur یا empty باشد\n" +
+            "• برای تصاویر بزرگ بسیار مفید است\n" +
+            "• نکته: blur placeholder باعث professional look می‌شود"
     },
     {
         "id": 685,
