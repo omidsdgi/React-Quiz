@@ -11765,7 +11765,7 @@ export const mockQuestions: Question[] = [
             "• نکته: blur placeholder باعث professional look می‌شود"
     },
     {
-        "id": 685,
+        "id": 701,
         "question": "Which placeholder value creates blur effect?",
         "options": [
             "placeholder='blur'",
@@ -11775,10 +11775,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-            "explanation":""
+            "explanation": "• مقدار blur برای placeholder property\n" +
+                "• یعنی placeholder='blur'\n" +
+                "• یک نسخه blurred از تصویر نمایش می‌دهد\n" +
+                "• برای static imports خودکار تولید می‌شود\n" +
+                "• برای remote images باید blurDataURL فراهم کنید\n" +
+                "• نکته: این effect شبیه به Medium و دیگر سایت‌های مدرن است"
     },
     {
-        "id": 686,
+        "id": 702,
         "question": "How do you provide custom blur placeholder?",
         "options": [
             "Using blurDataURL prop with base64 string",
@@ -11788,10 +11793,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-            "explanation":""
+        "explanation": "• با استفاده از blurDataURL prop با یک base64 encoded string\n" +
+            "• این یک data URL کوچک از نسخه blurred تصویر است\n" +
+            "• می‌توانید با ابزارهایی مثل Placeholder تولید کنید\n" +
+            "• برای remote images که auto-generate نمی‌شود ضروری است\n" +
+            "• باید همراه placeholder='blur' استفاده شود\n" +
+            "• نکته: blurDataURL باید خیلی کوچک باشد معمولاً کمتر از 1KB"
     },
     {
-        "id": 687,
+        "id": 703,
         "question": "What is the quality property range for images?",
         "options": [
             "0 to 100, where 0 is highest",
@@ -11801,99 +11811,139 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation":""
+        "explanation":"• quality از 1 تا 100 است که 100 بالاترین کیفیت است\n" +
+            "• عدد بزرگتر یعنی quality بهتر اما file size بیشتر\n" +
+            "• این compression level را کنترل می‌کند\n" +
+            "• balance بین کیفیت و اندازه فایل\n" +
+            "• برای formatهای lossy مثل JPEG و WebP\n" +
+            "• نکته: معمولاً 75-85 یک balance خوب است"
     },
-//     {
-//         "id": 688,
-//         "question": "What is the default quality value in Next.js?",
-//         "options": [
-//             "100 for maximum image quality",
-//             "90 for high quality output",
-//             "75 for balanced size and quality",
-//             "50 for smallest file size",
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 689,
-//         "question": "How does Image component prevent layout shift?",
-//         "options": [
-//             "By reserving space using width and height",
-//             "By loading all images before render",
-//             "By using fixed container dimensions",
-//             "By disabling image loading initially"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 690,
-//         "question": "What should you use instead of width and height attribute when using the<image> in Next.js?",
-//         "options": [
-//             "Next.js calculates them from file",
-//             "Image loads without optimization",
-//             "Component throws runtime error",
-//             "You must use fill property instead",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 691,
-//         "question": "Can you style Next.js Image component?",
-//         "options": [
-//             "Yes, using className or style props",
-//             "No, styling is not supported",
-//             "Yes, but only inline styles",
-//             "No, only Tailwind classes work"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 692,
-//         "question": "What is the purpose of loader property?",
-//         "options": [
-//             "It customizes image optimization service URL",
-//             "It converts images to different formats",
-//             "It shows loading spinner during fetch",
-//             "It preloads images before rendering",
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 693,
-//         "question": "How does Next.js handle image caching?",
-//         "options": [
-//             "It disables caching for dynamic images",
-//             "It caches optimized images automatically",
-//             "It requires manual cache configuration",
-//             "It stores images only in memory"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 694,
-//         "question": "What is the benefit of automatic image optimization?",
-//         "options": [
-//             "It reduces bandwidth and improves load times",
-//             "It removes need for image editing",
-//             "It generates alt text automatically",
-//             "It converts all images to vectors"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 704,
+        "question": "What is the default quality value in Next.js?",
+        "options": [
+            "100 for maximum image quality",
+            "90 for high quality output",
+            "75 for balanced size and quality",
+            "50 for smallest file size",
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• مقدار پیش‌فرض 75 است برای balanced size و quality\n" +
+            "• این یک sweet spot برای اکثر use cases است\n" +
+            "• کیفیت به اندازه کافی بالا برای web\n" +
+            "• file size معقول برای performance خوب\n" +
+            "• می‌توانید برای تصاویر مهم افزایش دهید\n" +
+            "• نکته: فقط در صورت نیاز quality را تغییر دهید"
+    },
+    {
+        "id": 705,
+        "question": "How does Image component prevent layout shift?",
+        "options": [
+            "By reserving space using width and height",
+            "By loading all images before render",
+            "By using fixed container dimensions",
+            "By disabling image loading initially"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• با reserve کردن space از طریق width و height properties\n" +
+            "• browser قبل از load شدن تصویر می‌داند چقدر جا بگیرد\n" +
+            "• aspect ratio حفظ می‌شود\n" +
+            "• این CLS یعنی Cumulative Layout Shift را کاهش می‌دهد\n" +
+            "• تجربه کاربری بهتر بدون jumping content\n" +
+            "• نکته: این یکی از دلایل اصلی استفاده از Image component است"
+    },
+    {
+        "id": 706,
+        "question": "What should you use instead of width and height attribute when using the<image> in Next.js?",
+        "options": [
+            "Next.js calculates them from file",
+            "Image loads without optimization",
+            "Component throws runtime error",
+            "You must use fill property instead",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• اگر width و height ندهید باید از fill property استفاده کنید\n" +
+            "• fill باعث می‌شود image تمام parent را پر کند\n" +
+            "• یکی از این دو approach ضروری است\n" +
+            "• بدون آنها component error می‌دهد\n" +
+            "• این برای preventing layout shift است\n" +
+            "• نکته: انتخاب بین width/height یا fill بستگی به layout شما دارد"
+    },
+    {
+        "id": 707,
+        "question": "Can you style Next.js Image component?",
+        "options": [
+            "Yes, using className or style props",
+            "No, styling is not supported",
+            "Yes, but only inline styles",
+            "No, only Tailwind classes work"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• بله با استفاده از className یا style props\n" +
+            "• می‌توانید CSS classes یا inline styles اضافه کنید\n" +
+            "• Tailwind classes هم کار می‌کنند\n" +
+            "• تمام styling methods React در دسترس هستند\n" +
+            "• می‌توانید border و shadow و transform اضافه کنید\n" +
+            "• نکته: styles روی wrapper applied می‌شود نه خود img tag"
+    },
+    {
+        "id": 708,
+        "question": "What is the purpose of loader property?",
+        "options": [
+            "It customizes image optimization service URL",
+            "It converts images to different formats",
+            "It shows loading spinner during fetch",
+            "It preloads images before rendering",
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• loader یک custom function برای customize کردن image optimization service URL است\n" +
+            "• می‌توانید CDN یا image service خودتان را استفاده کنید\n" +
+            "• function شامل src و width و quality است\n" +
+            "• URL نهایی برای fetch کردن تصویر را برمی‌گرداند\n" +
+            "• برای integration با third-party services مفید است\n" +
+            "• نکته: برای اکثر use cases به custom loader نیازی نیست"
+    },
+    {
+        "id": 709,
+        "question": "How does Next.js handle image caching?",
+        "options": [
+            "It disables caching for dynamic images",
+            "It caches optimized images automatically",
+            "It requires manual cache configuration",
+            "It stores images only in memory"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• Next.js تصاویر optimize شده را به‌طور خودکار cache می‌کند\n" +
+            "• در .next/cache/images ذخیره می‌شود\n" +
+            "• cache headers مناسب برای browser caching تنظیم می‌شود\n" +
+            "• تصاویر یک‌بار optimize شده و reused می‌شوند\n" +
+            "• این باعث faster subsequent loads می‌شود\n" +
+            "• نکته: می‌توانید cache behavior را با minimumCacheTTL configure کنید"
+    },
+    {
+        "id": 710,
+        "question": "What is the benefit of automatic image optimization?",
+        "options": [
+            "It reduces bandwidth and improves load times",
+            "It removes need for image editing",
+            "It generates alt text automatically",
+            "It converts all images to vectors"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• کاهش bandwidth usage و بهبود load times\n" +
+            "• تصاویر کوچک‌تر بدون کاهش quality قابل مشاهده\n" +
+            "• format optimization برای browser support\n" +
+            "• responsive images برای devices مختلف\n" +
+            "• همه این کارها بدون manual work\n" +
+            "• نکته: این می‌تواند تا 70% کاهش در image size داشته باشد"
+    },
 //     {
 //         "id": 695,
 //         "question": "Can Image component work with SVG files?",
