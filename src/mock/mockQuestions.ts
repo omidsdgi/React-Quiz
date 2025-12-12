@@ -21316,12 +21316,12 @@ export const mockQuestions: Question[] = [
         "id": 127,
         "question": "In the ControlledInputs component, what happens if you do not call e.preventDefault() in the handleSubmit function?",
         "options": [
-            "The page will reload upon form submission.",
             "The form data will be automatically saved in state.",
+            "React will ignore the form submission completely.",
+            "The page will reload upon form submission.",
             "An error will occur in the console.",
-            "React will ignore the form submission completely."
         ],
-        "correctOption": 0,
+        "correctOption": 2,
         "points": 20,
         "explanation": "• اگر در تابع handleSubmit از e.preventDefault() استفاده نشود، مرورگر رفتار پیش‌فرض فرم یعنی بارگذاری مجدد صفحه را انجام می‌دهد\n" +
             "- این باعث می‌شود state های React و داده‌های فرم از بین بروند\n" +
@@ -21348,12 +21348,12 @@ export const mockQuestions: Question[] = [
         "id": 129,
         "question": "In the MultipleInputs component, what ensures that each input updates the correct property in the user state object?",
         "options": [
-            "Using the name attribute of each input field.",
             "Assigning a unique id to each input field.",
+            "Using the name attribute of each input field.",
             "Manually setting each property in the state object.",
             "Tracking the input order in the component’s render cycle."
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 20,
         "explanation": "• در کامپوننت MultipleInputs، ویژگی name در هر input مشخص می‌کند که کدام فیلد از state باید به‌روزرسانی شود\n" +
             "- در تابع handleChange از [e.target.name] برای تعیین کلید صحیح در شیء state استفاده می‌شود\n" +
@@ -21364,10 +21364,10 @@ export const mockQuestions: Question[] = [
         "id": 130,
         "question": "What is the main difference between controlled and uncontrolled inputs in React?",
         "options": [
-            "Controlled inputs use React state to manage values, while uncontrolled inputs rely on the DOM.",
-            "Uncontrolled inputs automatically sync their values with React state.",
+            "Uncontrolled inputs require the useEffect hook to update their values.",
             "Controlled inputs store values in localStorage instead of component state.",
-            "Uncontrolled inputs require the useEffect hook to update their values."
+            "Uncontrolled inputs automatically sync their values with React state.",
+            "Controlled inputs use React state to manage values, while uncontrolled inputs rely on the DOM.",
         ],
         "correctOption": 0,
         "points": 20,
@@ -21379,12 +21379,12 @@ export const mockQuestions: Question[] = [
         "id": 131,
         "question": "Which statement about controlled inputs is true?",
         "options": [
-            "Their value is defined by React state and updated via onChange events.",
             "They automatically update when the user types, without state management.",
+            "Their value is defined by React state and updated via onChange events.",
             "They can only be used with useRef hooks for reading values.",
             "They cannot have an initial value set through state."
         ],
-        "correctOption": 0,
+        "correctOption": 1,
         "points": 20,
         "explanation": "• در controlled input مقدار value به state کامپوننت متصل است و هر تغییر توسط رویداد onChange باعث به‌روزرسانی state می‌شود\n" +
             "- این نوع کنترل اجازه می‌دهد داده‌ها همواره با state هماهنگ باشند\n" +
@@ -21404,6 +21404,51 @@ export const mockQuestions: Question[] = [
         "explanation": "• از uncontrolled input زمانی استفاده می‌شود که فقط در لحظه ارسال فرم نیاز به خواندن مقدار داریم\n" +
             "- این نوع ورودی‌ها نیازی به رندر مجدد در هر تغییر کاربر ندارند و سبک‌تر هستند\n" +
             "- اگر نیاز به کنترل کامل یا اعتبارسنجی لحظه‌ای دارید، از controlled input استفاده کنید"
+    },
+    {
+        "id": 129,
+        "question": "In the MultipleInputs component, what ensures that each input updates the correct property in the user state object?",
+        "options": [
+            "Tracking the input order in the component’s render cycle.",
+            "Manually setting each property in the state object.",
+            "Using the name attribute of each input field.",
+            "Assigning a unique id to each input field.",
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• در کامپوننت MultipleInputs، ویژگی name در هر input تعیین می‌کند که مقدار واردشده در آن فیلد به‌درستی در property متناظر در شیء user ذخیره شود، زیرا در تابع handleChange از [e.target.name] برای شناسایی کلید درست استفاده می‌شود.\n" +
+            "• ویژگی id فقط برای شناسایی در HTML استفاده می‌شود و هیچ تأثیری بر مقدار state ندارد.\n" +
+            "• همچنین نیازی به تنظیم دستی هر property نیست، زیرا استفاده از name این فرایند را به‌صورت پویا و خودکار انجام می‌دهد."
+    },
+    {
+        "id": 128,
+        "question": "In the UncontrolledInputs component, how is the FormData API used to retrieve form data after submission?",
+        "options": [
+            "The FormData object creates key-value pairs from form input fields.",
+            "It directly saves form data to the users state.",
+            "It automatically validates the input fields.",
+            "It converts all form inputs into JSON and sends them to the server."
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• در کامپوننت UncontrolledInputs، شیء FormData داده‌های فرم را به‌صورت جفت‌های کلید-مقدار بر اساس نام فیلدهای input جمع‌آوری می‌کند تا بتوان آن‌ها را به‌راحتی پردازش یا به JSON تبدیل کرد.\n" +
+            "• این API داده‌ها را مستقیماً در state ذخیره نمی‌کند و فقط برای استخراج آن‌ها از DOM به‌کار می‌رود.\n" +
+            "• همچنین هیچ عملیات اعتبارسنجی خودکار روی داده‌ها انجام نمی‌دهد و مدیریت validation بر عهده برنامه‌نویس است."
+    },
+    {
+        "id": 127,
+        "question": "In the ControlledInputs component, what happens if you do not call e.preventDefault() in the handleSubmit function?",
+        "options": [
+            "The form data will be automatically saved in state.",
+            "The page will reload upon form submission.",
+            "An error will occur in the console.",
+            "React will ignore the form submission completely."
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• اگر در تابع handleSubmit از e.preventDefault() استفاده نشود، مرورگر رفتار پیش‌فرض فرم را اجرا می‌کند و صفحه پس از ارسال فرم به‌صورت خودکار بارگذاری مجدد می‌شود.\n" +
+            "• این رفتار باعث از بین رفتن stateهای React و داده‌های واردشده توسط کاربر می‌شود، زیرا حافظه داخلی برنامه ریست می‌گردد.\n" +
+            "• هیچ خطای مشخصی در کنسول نمایش داده نمی‌شود، اما داده‌های فرم از بین می‌روند و نتیجه مورد انتظار حاصل نخواهد شد."
     }
 
 
