@@ -10782,7 +10782,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20,
         "explanation": "• هر دو initial content را در server render می‌کنند قبل از ارسال به client\n" +
-            "• هر دو باعث بهبود SEO می‌شوند چون crawlerها محتوا را می‌بینند\n" +
+            "• هر دو باعث بهبود SEO می‌شوند چون crawler ها محتوا را می‌بینند\n" +
             "• هر دو Time to First Contentful Paint را بهبود می‌دهند\n" +
             "• هر دو از server برای generating initial UI استفاده می‌کنند\n" +
             "• تفاوت در نحوه handling و optimization است نه مفهوم اصلی\n" +
@@ -11704,7 +11704,7 @@ export const mockQuestions: Question[] = [
         "correctOption": 0,
         "points": 20,
         "explanation": "• Next.js تصاویر را به WebP و AVIF برای modern browsers تبدیل می‌کند\n" +
-            "• این formatها compression بهتری نسبت به JPEG و PNG دارند\n" +
+            "• این format ها compression بهتری نسبت به JPEG و PNG دارند\n" +
             "• browser قدیمی‌تر fallback به format اصلی می‌کند\n" +
             "• file size بسیار کمتر با quality مشابه\n" +
             "• این conversion خودکار است\n" +
@@ -11815,7 +11815,7 @@ export const mockQuestions: Question[] = [
             "• عدد بزرگتر یعنی quality بهتر اما file size بیشتر\n" +
             "• این compression level را کنترل می‌کند\n" +
             "• balance بین کیفیت و اندازه فایل\n" +
-            "• برای formatهای lossy مثل JPEG و WebP\n" +
+            "• برای format های lossy مثل JPEG و WebP\n" +
             "• نکته: معمولاً 75-85 یک balance خوب است"
     },
     {
@@ -21542,9 +21542,55 @@ export const mockQuestions: Question[] = [
         "correctOption": 1,
         "points": 20,
         "explanation": "• اگر در تابع handleSubmit از e.preventDefault() استفاده نشود، مرورگر رفتار پیش‌فرض فرم را اجرا می‌کند و صفحه پس از ارسال فرم به‌صورت خودکار بارگذاری مجدد می‌شود.\n" +
-            "• این رفتار باعث از بین رفتن stateهای React و داده‌های واردشده توسط کاربر می‌شود، زیرا حافظه داخلی برنامه ریست می‌گردد.\n" +
+            "• این رفتار باعث از بین رفتن  state های React و داده‌های واردشده توسط کاربر می‌شود، زیرا حافظه داخلی برنامه ریست می‌گردد.\n" +
             "• هیچ خطای مشخصی در کنسول نمایش داده نمی‌شود، اما داده‌های فرم از بین می‌روند و نتیجه مورد انتظار حاصل نخواهد شد."
-    }
-
-
+    },
+    {
+        "id": 166,
+        "question": "Why are custom hooks useful in React applications?",
+        "options": [
+            "They allow reusing component logic without duplicating code.",
+            "They directly control the rendering process of React components.",
+            "They improve CSS performance by isolating styles.",
+            "They automatically optimize re-renders across the app."
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• Custom Hook ها به توسعه‌دهندگان این امکان را می‌دهند که منطق تکراری را از چند کامپوننت استخراج کرده و مجدداً مورد استفاده قرار دهند\n" +
+            "این قابلیت باعث می‌شود کد ساختار یافته‌تر، خواناتر و نگهداری آن آسان‌تر باشد.\n" +
+            "• Custom Hook ها از Hook های داخلی مانند  useState یا useEffect .استفاده می‌کنند تا منطق قابل اشتراک‌گذاری ایجاد شود، نه اینکه جایگزین آن‌ها شوند."
+    },
+    {
+        "id": 167,
+        "question": "What is the purpose of the GlobalContext.Provider in the Context API?",
+        "options": [
+            "To create a new context instance for every component in the tree.",
+            "To provide access to the user state and setUser function to all nested components.",
+            "To store and persist state values across different routes.",
+            "To automatically synchronize context data with localStorage."
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• GlobalContext.Provider داده‌ها و توابع context را برای تمام کامپوننت‌های فرزند در دسترس قرار می‌دهد.\n" +
+            "• این کامپوننت مانند یک منبع مرکزی عمل می‌کند که state اصلی را در اختیار تمام سطوح پایین‌تر در درخت کامپوننت‌ها قرار می‌دهد.\n" +
+            "• هر کامپوننتی که داخل Provider قرار گیرد می‌تواند از طریق useContext به مقادیر اشتراکی مانند user و setUser دسترسی داشته باشد.\n" +
+            "• هدف اصلی Provider جلوگیری از prop drilling و ساده‌سازی اشتراک داده بین کامپوننت‌ها است."
+    },
+    {
+        "id": 168,
+        "question": "Why would you use a custom hook with the Context API?",
+        "options": [
+            "To allow multiple contexts to merge into a single context instance.",
+            "To directly manipulate the state in the Provider without dispatch functions.",
+            "To simplify accessing context values and avoid importing useContext repeatedly.",
+            "To automatically memoize all context values for performance."
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• Custom Hook ها با Context API استفاده می‌شوند تا دسترسی به مقادیر context ساده‌تر و خواناتر شود.\n" +
+            "• به‌جای فراخوانی مستقیم useContext در هر کامپوننت، یک Custom Hook مانند useGlobalContext تعریف می‌شود.\n" +
+            "• این روش از تکرار کد جلوگیری کرده و ساختار پروژه را تمیزتر و قابل نگهداری‌تر می‌کند.\n" +
+            "• Custom Hook ها باعث می‌شوند در آینده تغییرات در context تنها در یک نقطه مدیریت شوند."
+    },
+   
 ]
