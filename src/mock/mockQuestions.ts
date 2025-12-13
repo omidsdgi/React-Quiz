@@ -12135,10 +12135,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-        "explanation":""
+        "explanation":"• با استفاده از aspect-square class روی parent container\n" +
+            "• این aspect ratio 1:1 ایجاد می‌کند\n" +
+            "• container مربع می‌شود و image آن را fill می‌کند\n" +
+            "• مفید برای avatars و thumbnails\n" +
+            "• همراه با object-cover برای crop کردن مناسب\n" +
+            "• نکته: aspect-square یک Tailwind utility class است"
     },
     {
-        "id": 706,
+        "id": 722,
         "question": "What does aspect-video class create for image container?",
         "options": [
             "4:3 aspect ratio for standard format",
@@ -12148,10 +12153,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation": "• aspect-video یک aspect ratio 16:9 برای video format ایجاد می‌کند\n" +
+            "• این نسبت استاندارد برای ویدیوها و widescreen است\n" +
+            "• container به این نسبت resize می‌شود\n" +
+            "• مفید برای video thumbnails و hero images\n" +
+            "• width responsive اما height بر اساس aspect ratio\n" +
+            "• نکته: همراه با fill برای responsive video-style images"
     },
     {
-        "id": 707,
+        "id": 723,
         "question": "How does aspect-square work with fill images?",
         "options": [
             "Container maintains square shape while image fills",
@@ -12161,10 +12171,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":""
+        "explanation": "• container با aspect-square به شکل مربع حفظ می‌شود\n" +
+            "• image با fill تمام این فضای مربع را پر می‌کند\n" +
+            "• aspect ratio container ثابت است اما responsive\n" +
+            "• image داخل آن fit یا crop می‌شود بسته به objectFit\n" +
+            "• این pattern برای consistent layouts مفید است\n" +
+            "• نکته: برای grid of images با اندازه یکسان عالی است"
     },
     {
-        "id": 708,
+        "id": 724,
         "question": "What happens without relative class on fill image parent?",
         "options": [
             "Image loads but without optimization",
@@ -12174,10 +12189,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":""
+        "explanation": "• image ممکن است به‌درستی position نگیرد\n" +
+            "• چون absolute positioning نسبت به nearest positioned ancestor است\n" +
+            "• بدون relative ممکن است نسبت به body position بگیرد\n" +
+            "• layout شکسته می‌شود و image جای اشتباهی ظاهر می‌شود\n" +
+            "• این یک common mistake است\n" +
+            "• نکته: همیشه parent را position: relative کنید با fill images"
     },
     {
-        "id": 709,
+        "id": 725,
         "question": "Can you use object-center with fill images?",
         "options": [
             "Yes, but only for square containers",
@@ -12187,10 +12207,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":""
+        "explanation": "• بله object-center تصویر را در center container قرار می‌دهد\n" +
+            "• این positioning برای crop balanced است\n" +
+            "• تصویر از تمام طرف‌ها به‌طور یکسان crop می‌شود\n" +
+            "• رایج‌ترین alignment برای اکثر use cases\n" +
+            "• همراه با object-cover کار می‌کند\n" +
+            "• نکته: object-center معمولاً default است اما explicit بهتر است"
     },
     {
-        "id": 710,
+        "id": 726,
         "question": "What does object-fit: contain show compared to cover?",
         "options": [
             "Full image with possible empty space",
@@ -12200,10 +12225,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":""
+        "explanation":"• contain تمام تصویر را با possible empty space نمایش می‌دهد\n" +
+            "• هیچ بخشی از تصویر crop نمی‌شود\n" +
+            "• aspect ratio حفظ می‌شود\n" +
+            "• ممکن است letterboxing یا pillarboxing داشته باشد\n" +
+            "• cover تصویر را crop می‌کند تا container پر شود\n" +
+            "• نکته: contain برای product images که باید کامل دیده شوند مناسب است"
     },
     {
-        "id": 711,
+        "id": 727,
         "question": "How do you make fill image responsive across breakpoints?",
         "options": [
             "Using responsive property on Image component",
@@ -12213,10 +12243,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":""
+        "explanation":"• با استفاده از responsive classes مثل md:aspect-video یا lg:aspect-square\n" +
+            "• در mobile یک aspect ratio و در desktop دیگری\n" +
+            "• Tailwind breakpoint prefixes استفاده می‌شود\n" +
+            "• layout می‌تواند بر اساس screen size تغییر کند\n" +
+            "• image همیشه container را fill می‌کند\n" +
+            "• نکته: این برای adaptive layouts بسیار قدرتمند است"
     },
     {
-        "id": 712,
+        "id": 728,
         "question": "What is the purpose of sizes prop with fill images?",
         "options": [
             "Tells browser which image size to download",
@@ -12226,10 +12261,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":""
+        "explanation":"• sizes به browser می‌گوید در screen sizes مختلف کدام image size را download کند\n" +
+            "• برای fill images که responsive هستند ضروری است\n" +
+            "• مثال sizes='(max-width: 768px) 100vw, 50vw'\n" +
+            "• optimization بهتر با انتخاب مناسب image size\n" +
+            "• جلوگیری از download تصاویر خیلی بزرگ در mobile\n" +
+            "• نکته: بدون sizes ممکن است images بزرگتر از لازم download شوند"
     },
     {
-        "id": 713,
+        "id": 729,
         "question": "Can you use col-span with fill images for grid layouts?",
         "options": [
             "No, fill images require flexbox only",
@@ -12239,10 +12279,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation": "• بله col-span در grid layouts تعداد columns را که image می‌گیرد کنترل می‌کند\n" +
+            "• parent container می‌تواند چند column بگیرد\n" +
+            "• image با fill تمام این فضا را پر می‌کند\n" +
+            "• برای gallery layouts بسیار مفید است\n" +
+            "• می‌توانید featured images بزرگتر کنید\n" +
+            "• نکته: ترکیب col-span با aspect ratio برای consistent grids"
     },
     {
-        "id": 714,
+        "id": 730,
         "question": "What does object-left-top do for fill images?",
         "options": [
             "Aligns image to top-left corner",
@@ -12252,7 +12297,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-        "explanation":""
+        "explanation":"• object-left-top تصویر را به گوشه بالا سمت چپ container align می‌کند\n" +
+            "• crop از bottom-right اتفاق می‌افتد\n" +
+            "• مفید برای تصاویری که subject در گوشه است\n" +
+            "• می‌توانید positioning را دقیق کنترل کنید\n" +
+            "• ترکیبات دیگر: object-right-bottom و غیره\n" +
+            "• نکته: این برای fine-tuning crop behavior است"
     },
 //     {
 //         "id": 715,
