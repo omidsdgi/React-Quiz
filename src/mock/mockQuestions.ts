@@ -11944,268 +11944,316 @@ export const mockQuestions: Question[] = [
             "• همه این کارها بدون manual work\n" +
             "• نکته: این می‌تواند تا 70% کاهش در image size داشته باشد"
     },
-//     {
-//         "id": 695,
-//         "question": "Can Image component work with SVG files?",
-//         "options": [
-//             "Yes, but SVGs are not optimized",
-//             "No, only raster formats supported",
-//             "Yes, and they are converted to PNG",
-//             "No, use regular img tag instead"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 696,
-//         "question": "What does unoptimized property do?",
-//         "options": [
-//             "It reduces image quality to minimum",
-//             "It serves original image without processing",
-//             "It removes all image metadata",
-//             "It disables lazy loading feature"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 697,
-//         "question": "How does Image component improve Core Web Vitals?",
-//         "options": [
-//             "By optimizing LCP, CLS, and loading performance",
-//             "By removing all JavaScript from pages",
-//             "By compressing HTML alongside images",
-//             "By loading images only on WiFi"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 698,
-//         "question": "What is responsive image loading in Next.js?",
-//         "options": [
-//             "It rotates images based on orientation",
-//             "It adjusts image aspect ratio automatically",
-//             "It serves appropriately sized images per device",
-//             "It changes image format by browser"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 699,
-//         "question": "What does fill property do in Next.js Image component?",
-//         "options": [
-//             "Makes image fill entire parent container",
-//             "Fills empty space with background color",
-//             "Adds padding around image element",
-//             "Duplicates image to fill grid layout"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 700,
-//         "question": "When using fill, what must the parent container have?",
-//         "options": [
-//             "display: flex with align-items center",
-//             "position: relative or absolute styling",
-//             "overflow: hidden with max-width set",
-//             "width: 100% with height: auto"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 701,
-//         "question": "What does object-cover class do for fill images?",
-//         "options": [
-//             "Covers container maintaining aspect ratio",
-//             "Converts image to cover entire page",
-//             "Adds overlay cover on top of image",
-//             "Covers only visible viewport area"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 702,
-//         "question": "What is the difference between object-cover and object-contain?",
-//         "options": [
-//             "object-cover stretches, object-contain maintains size",
-//             "object-cover fills width, object-contain fills height",
-//             "object-cover crops, object-contain shows full image",
-//             "object-cover zooms in, object-contain zooms out"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 703,
-//         "question": "What does object-top class control in Image component?",
-//         "options": [
-//             "Z-index stacking order of image",
-//             "Vertical alignment of text around image",
-//             "Position of image within container",
-//             "Top margin spacing for image"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 704,
-//         "question": "Can you use width and height props with fill?",
-//         "options": [
-//             "Yes, they work together for aspect ratio",
-//             "No, fill and dimensions are mutually exclusive",
-//             "Yes, but only in development mode",
-//             "No, Next.js throws compilation error"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 705,
-//         "question": "How do you create square image container with fill?",
-//         "options": [
-//             "Using ratio='1:1' on parent element",
-//             "Using width and height equal values",
-//             "Using square property on Image component",
-//             "Using aspect-square class on parent container",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 706,
-//         "question": "What does aspect-video class create for image container?",
-//         "options": [
-//             "4:3 aspect ratio for standard format",
-//             "16:9 aspect ratio for video format",
-//             "Square aspect ratio for videos",
-//             "21:9 aspect ratio for ultra wide format"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 707,
-//         "question": "How does aspect-square work with fill images?",
-//         "options": [
-//             "Container maintains square shape while image fills",
-//             "Image is cropped to square automatically",
-//             "Image is stretched to perfect square",
-//             "Container and image both become circles"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 708,
-//         "question": "What happens without relative class on fill image parent?",
-//         "options": [
-//             "Image loads but without optimization",
-//             "Image will not load at all",
-//             "Image may not position correctly",
-//             "Image appears in top-left corner"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 709,
-//         "question": "Can you use object-center with fill images?",
-//         "options": [
-//             "Yes, but only for square containers",
-//             "No, centering requires flexbox instead",
-//             "Yes, it centers image within container",
-//             "No, fill images are always centered"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 710,
-//         "question": "What does object-fit: contain show compared to cover?",
-//         "options": [
-//             "Full image with possible empty space",
-//             "Cropped image filling entire container",
-//             "Stretched image to fit exactly",
-//             "Tiled image repeating in container"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 711,
-//         "question": "How do you make fill image responsive across breakpoints?",,
-//             "explanation":""
-//         "options": [
-//             "Using responsive property on Image component",
-//             "Using responsive classes like md:aspect-video",
-//             "Using breakpoint prop with array values",
-//             "Using sizes with media query strings"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 712,
-//         "question": "What is the purpose of sizes prop with fill images?",
-//         "options": [
-//             "Tells browser which image size to download",
-//             "Sets container size at different breakpoints",,
-//             "explanation":""
-//             "Defines aspect ratio for containers",
-//             "Controls image quality per viewport"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 713,
-//         "question": "Can you use col-span with fill images for grid layouts?",
-//         "options": [
-//             "No, fill images require flexbox only",
-//             "Yes, it controls grid column spanning",
-//             "Yes, but maximum 3 columns allowed",
-//             "No, use grid-column property instead"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 714,
-//         "question": "What does object-left-top do for fill images?",
-//         "options": [
-//             "Aligns image to top-left corner",
-//             "Moves image outside container bounds",
-//             "Rotates image to left orientation",
-//             "Crops image from left-top area"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation":""
-//     },
+    {
+        "id": 711,
+        "question": "Can Image component work with SVG files?",
+        "options": [
+            "Yes, but SVGs are not optimized",
+            "No, only raster formats supported",
+            "Yes, and they are converted to PNG",
+            "No, use regular img tag instead"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• بله اما SVG files توسط Image component optimize نمی‌شوند\n" +
+            "• SVG ها vector هستند و نیازی به optimization ندارند\n" +
+            "• می‌توانید SVG را با Image component استفاده کنید\n" +
+            "• اما lazy loading و دیگر features اعمال می‌شوند\n" +
+            "• format conversion برای SVG اتفاق نمی‌افتد\n" +
+            "• نکته: برای SVG های ساده می‌توانید inline استفاده کنید"
+    },
+    {
+        "id": 712,
+        "question": "What does unoptimized property do?",
+        "options": [
+            "It reduces image quality to minimum",
+            "It serves original image without processing",
+            "It removes all image metadata",
+            "It disables lazy loading feature"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• با unoptimized تصویر اصلی بدون هیچ processing سرو می‌شود\n" +
+            "• هیچ optimization یا format conversion انجام نمی‌شود\n" +
+            "• تصویر دقیقاً همانطور که هست ارسال می‌شود\n" +
+            "• برای مواردی که نمی‌خواهید Next.js دخالت کند\n" +
+            "• مثلاً برای GIF های animated که نباید تبدیل شوند\n" +
+            "• نکته: معمولاً نیازی به این property نیست مگر دلیل خاص"
+    },
+    {
+        "id": 713,
+        "question": "How does Image component improve Core Web Vitals?",
+        "options": [
+            "By optimizing LCP, CLS, and loading performance",
+            "By removing all JavaScript from pages",
+            "By compressing HTML alongside images",
+            "By loading images only on WiFi"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• با بهینه‌سازی LCP از طریق priority loading و optimization\n" +
+            "• کاهش CLS با reserve کردن space با dimensions\n" +
+            "• بهبود loading performance با lazy loading و format optimization\n" +
+            "• تمام این metrics در Core Web Vitals مهم هستند\n" +
+            "• تأثیر مستقیم روی SEO ranking\n" +
+            "• نکته: استفاده صحیح از Image component می‌تواند scores را به‌طور قابل توجهی بهبود دهد"
+    },
+    {
+        "id": 714,
+        "question": "What is responsive image loading in Next.js?",
+        "options": [
+            "It rotates images based on orientation",
+            "It adjusts image aspect ratio automatically",
+            "It serves appropriately sized images per device",
+            "It changes image format by browser"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• سرو کردن appropriately sized images برای هر device\n" +
+            "• mobile کوچک‌تر و desktop بزرگ‌تر\n" +
+            "• browser خودکار مناسب‌ترین size را انتخاب می‌کند\n" +
+            "• srcset و sizes attributes خودکار تولید می‌شوند\n" +
+            "• صرفه‌جویی bandwidth و faster loading\n" +
+            "• نکته: این رفتار پیش‌فرض Image component است"
+    },
+    {
+        "id": 715,
+        "question": "What does fill property do in Next.js Image component?",
+        "options": [
+            "Makes image fill entire parent container",
+            "Fills empty space with background color",
+            "Adds padding around image element",
+            "Duplicates image to fill grid layout"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• fill باعث می‌شود image تمام parent container را پر کند\n" +
+            "• دیگر نیازی به تعیین width و height نیست\n" +
+            "• image به اندازه parent stretch یا fit می‌شود\n" +
+            "• مفید برای background images و hero sections\n" +
+            "• parent باید position: relative داشته باشد\n" +
+            "• نکته: با objectFit می‌توانید رفتار fill را کنترل کنید"
+    },
+    {
+        "id": 716,
+        "question": "When using fill, what must the parent container have?",
+        "options": [
+            "display: flex with align-items center",
+            "position: relative or absolute styling",
+            "overflow: hidden with max-width set",
+            "width: 100% with height: auto"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• parent container باید position: relative یا absolute styling داشته باشد\n" +
+            "• بدون این image نمی‌داند نسبت به چه position بگیرد\n" +
+            "• image به‌صورت absolute position می‌شود\n" +
+            "• این برای proper containment ضروری است\n" +
+            "• معمولاً relative راحت‌تر و common تر است\n" +
+            "• نکته: فراموش کردن این styling یکی از شایع‌ترین اشتباهات است"
+    },
+    {
+        "id": 717,
+        "question": "What does object-cover class do for fill images?",
+        "options": [
+            "Covers container maintaining aspect ratio",
+            "Converts image to cover entire page",
+            "Adds overlay cover on top of image",
+            "Covers only visible viewport area"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• object-cover باعث می‌شود image با حفظ aspect ratio container را بپوشاند\n" +
+            "• تصویر ممکن است crop شود تا container را پر کند\n" +
+            "• aspect ratio اصلی حفظ می‌شود بدون distortion\n" +
+            "• مشابه background-size: cover در CSS\n" +
+            "• برای hero images و backgrounds مناسب است\n" +
+            "• نکته: این یک Tailwind class است که objectFit: 'cover' را اعمال می‌کند"
+    },
+    {
+        "id": 718,
+        "question": "What is the difference between object-cover and object-contain?",
+        "options": [
+            "object-cover stretches, object-contain maintains size",
+            "object-cover fills width, object-contain fills height",
+            "object-cover crops, object-contain shows full image",
+            "object-cover zooms in, object-contain zooms out"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• object-cover تصویر را crop می‌کند تا container را پر کند\n" +
+            "• object-contain تمام تصویر را نمایش می‌دهد با حفظ aspect ratio\n" +
+            "• cover ممکن است بخشی از تصویر را قطع کند\n" +
+            "• contain ممکن است empty space در container داشته باشد\n" +
+            "• cover برای backgrounds و contain برای product images\n" +
+            "• نکته: انتخاب بستگی به اینکه می‌خواهید کل تصویر یا کل container پر شود دارد"
+    },
+    {
+        "id": 719,
+        "question": "What does object-top class control in Image component?",
+        "options": [
+            "Z-index stacking order of image",
+            "Vertical alignment of text around image",
+            "Position of image within container",
+            "Top margin spacing for image"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• object-top موقعیت تصویر را داخل container کنترل می‌کند\n" +
+            "• تصویر را به top container align می‌کند\n" +
+            "• وقتی crop می‌شود از bottom crop می‌شود نه top\n" +
+            "• مفید برای portraits که صورت در بالا است\n" +
+            "• گزینه‌های دیگر: object-center و object-bottom و object-left\n" +
+            "• نکته: این objectPosition در CSS را کنترل می‌کند"
+    },
+    {
+        "id": 720,
+        "question": "Can you use width and height props with fill?",
+        "options": [
+            "Yes, they work together for aspect ratio",
+            "No, fill and dimensions are mutually exclusive",
+            "Yes, but only in development mode",
+            "No, Next.js throws compilation error"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• نه fill و dimensions یعنی width/height با هم mutually exclusive هستند\n" +
+            "• یا از fill استفاده می‌کنید یا از width/height\n" +
+            "• fill یعنی image به اندازه parent می‌شود\n" +
+            "• width/height یعنی image اندازه مشخصی دارد\n" +
+            "• استفاده همزمان منطقی نیست و error می‌دهد\n" +
+            "• نکته: بر اساس layout نیازتان یکی را انتخاب کنید"
+    },
+    {
+        "id": 721,
+        "question": "How do you create square image container with fill?",
+        "options": [
+            "Using ratio='1:1' on parent element",
+            "Using width and height equal values",
+            "Using square property on Image component",
+            "Using aspect-square class on parent container",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 706,
+        "question": "What does aspect-video class create for image container?",
+        "options": [
+            "4:3 aspect ratio for standard format",
+            "16:9 aspect ratio for video format",
+            "Square aspect ratio for videos",
+            "21:9 aspect ratio for ultra wide format"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 707,
+        "question": "How does aspect-square work with fill images?",
+        "options": [
+            "Container maintains square shape while image fills",
+            "Image is cropped to square automatically",
+            "Image is stretched to perfect square",
+            "Container and image both become circles"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 708,
+        "question": "What happens without relative class on fill image parent?",
+        "options": [
+            "Image loads but without optimization",
+            "Image will not load at all",
+            "Image may not position correctly",
+            "Image appears in top-left corner"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 709,
+        "question": "Can you use object-center with fill images?",
+        "options": [
+            "Yes, but only for square containers",
+            "No, centering requires flexbox instead",
+            "Yes, it centers image within container",
+            "No, fill images are always centered"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 710,
+        "question": "What does object-fit: contain show compared to cover?",
+        "options": [
+            "Full image with possible empty space",
+            "Cropped image filling entire container",
+            "Stretched image to fit exactly",
+            "Tiled image repeating in container"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 711,
+        "question": "How do you make fill image responsive across breakpoints?",
+        "options": [
+            "Using responsive property on Image component",
+            "Using responsive classes like md:aspect-video",
+            "Using breakpoint prop with array values",
+            "Using sizes with media query strings"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 712,
+        "question": "What is the purpose of sizes prop with fill images?",
+        "options": [
+            "Tells browser which image size to download",
+            "Sets container size at different breakpoints",
+            "Defines aspect ratio for containers",
+            "Controls image quality per viewport"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 713,
+        "question": "Can you use col-span with fill images for grid layouts?",
+        "options": [
+            "No, fill images require flexbox only",
+            "Yes, it controls grid column spanning",
+            "Yes, but maximum 3 columns allowed",
+            "No, use grid-column property instead"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 714,
+        "question": "What does object-left-top do for fill images?",
+        "options": [
+            "Aligns image to top-left corner",
+            "Moves image outside container bounds",
+            "Rotates image to left orientation",
+            "Crops image from left-top area"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":""
+    },
 //     {
 //         "id": 715,
 //         "question": "How can you use fill without making the image look stretched?",
@@ -21591,6 +21639,6 @@ export const mockQuestions: Question[] = [
             "• به‌جای فراخوانی مستقیم useContext در هر کامپوننت، یک Custom Hook مانند useGlobalContext تعریف می‌شود.\n" +
             "• این روش از تکرار کد جلوگیری کرده و ساختار پروژه را تمیزتر و قابل نگهداری‌تر می‌کند.\n" +
             "• Custom Hook ها باعث می‌شوند در آینده تغییرات در context تنها در یک نقطه مدیریت شوند."
-    },
-   
+    }
+
 ]
