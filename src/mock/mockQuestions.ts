@@ -12304,253 +12304,303 @@ export const mockQuestions: Question[] = [
             "• ترکیبات دیگر: object-right-bottom و غیره\n" +
             "• نکته: این برای fine-tuning crop behavior است"
     },
-//     {
-//         "id": 715,
-//         "question": "How can you use fill without making the image look stretched?",
-//         "options": [
-//             "Using object-cover or object-contain classes",
-//             "Using preserve-aspect property on Image",
-//             "Using fixed width and height values",
-//             "Using ratio property with fraction"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 716,
-//         "question": "Can you animate fill images with Tailwind transitions?",
-//         "options": [
-//             "Yes, but only opacity animations work",
-//             "No, fill images cannot be animated",
-//             "Yes, using transition and hover classes",
-//             "No, use CSS keyframes instead"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 717,
-//         "question": "What is best practice for hero images with fill?",
-//         "options": [
-//             "Use responsive with multiple source sets",
-//             "Use fixed dimensions without fill property",
-//             "Use fill with object-contain for full view",
-//             "Use fill with object-cover and sizes='100vw'",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//                 "explanation":""
-//     },
-//     {
-//         "id": 718,
-//         "question": "How does fill affect image loading performance?",
-//         "options": [
-//             "Loads full resolution image always",
-//             "Still optimizes based on container size",
-//             "Disables lazy loading automatically",
-//             "Increases bundle size significantly"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 721,
-//         "question": "How do you access environment variables in Next.js?",
-//         "options": [
-//             "Using env.get('VARIABLE_NAME') method",
-//             "Using process.env.VARIABLE_NAME syntax",
-//             "Using getEnv('VARIABLE_NAME') function",
-//             "Using config.VARIABLE_NAME notation"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 722,
-//         "question": "What prefix exposes env variables to the browser?",
-//         "options": [
-//             "BROWSER_ prefix for client side",
-//             "PUBLIC_ prefix for frontend usage",
-//             "CLIENT_ prefix for browser exposure",
-//             "NEXT_PUBLIC_ prefix for client access",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 723,
-//         "question": "Can you access server-only env variables in browser?",
-//         "options": [
-//             "Yes, all variables available everywhere",
-//             "No, only NEXT_PUBLIC_ variables accessible",
-//             "Yes, but only in production mode",
-//             "No, unless explicitly configured"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 724,
-//         "question": "What happens to env variables without NEXT_PUBLIC_ prefix?",
-//         "options": [
-//             "They remain server-side only for security",
-//             "They become public automatically",
-//             "They are ignored during build process",
-//             "They throw error in production"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 725,
-//         "question": "Which env file has highest priority in Next.js?",
-//         "options": [
-//             ".env.production takes highest priority",
-//             ".env.development has most precedence",
-//             ".env.local overrides other env files",
-//             ".env is always prioritized first"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 726,
-//         "question": "What is the purpose of .env.production file?",
-//         "options": [
-//             "Variables specific to production builds",
-//             "Backup variables for all environments",
-//             "Testing variables before deployment",
-//             "Development variables for staging"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 727,
-//         "question": "Should .env.local be committed to git repository?",
-//         "options": [
-//             "Yes, for team collaboration purposes",
-//             "No, it contains sensitive local data",
-//             "Yes, but only for public projects",
-//             "No, unless encrypted properly first"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 728,
-//         "question": "How do you provide default values for env variables?",
-//         "options": [
-//             "Using config.defaults object",
-//             "Using fallback.env for defaults",
-//             "Using .env file for default values",
-//             "Using defaults.json configuration file",
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 729,
-//         "question": "Can you use env variables in next.config.js?",
-//         "options": [
-//             "Yes, but only NEXT_PUBLIC_ variables",
-//             "No, config runs before env loading",
-//             "Yes, using process.env directly",
-//             "No, requires separate config file"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 730,
-//         "question": "What is the purpose of .env.example file?",
-//         "options": [
-//             "Backup of production environment variables",
-//             "Template showing required env variables",
-//             "Example values for testing purposes",
-//             "Default fallback for missing variables"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 731,
-//         "question": "How are env variables loaded in Next.js?",
-//         "options": [
-//             "Automatically at build and runtime",
-//             "Manually using loadEnv() function",
-//             "Only during initial server startup",
-//             "Through external configuration service"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 732,
-//         "question": "Can you override env variables at runtime?",
-//         "options": [
-//             "No, unless using serverless functions",
-//             "Yes, using runtime configuration API",
-//             "Yes, but only in development mode",
-//             "No, they are set at build time",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 733,
-//         "question": "What happens when env variable is undefined?",
-//         "options": [
-//             "Variable gets empty string as default",
-//             "Next.js throws build error immediately",
-//             "process.env.VAR returns undefined value",
-//             "Application crashes at runtime"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 734,
-//         "question": "How do you use env variables in API routes?",
-//         "options": [
-//             "Access via process.env like server code",
-//             "Import from special env module",
-//             "Use getEnv() helper function",
-//             "Pass through request headers"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 735,
-//         "question": "Can you use env variables in client components?",
-//         "options": [
-//             "Yes, all variables available automatically",
-//             "No, client components cannot access env",
-//             "Only if prefixed with NEXT_PUBLIC_",
-//             "Yes, but requires special import"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//                 "explanation":""
-//     },
+    {
+        "id": 731,
+        "question": "How can you use fill without making the image look stretched?",
+        "options": [
+            "Using object-cover or object-contain classes",
+            "Using preserve-aspect property on Image",
+            "Using fixed width and height values",
+            "Using ratio property with fraction"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• با استفاده از object-cover یا object-contain classes\n" +
+            "• object-cover aspect ratio را حفظ کرده و crop می‌کند\n" +
+            "• object-contain aspect ratio را حفظ کرده و کل تصویر را نمایش می‌دهد\n" +
+            "• هیچکدام تصویر را stretch نمی‌کنند\n" +
+            "• default objectFit: 'fill' است که stretch می‌کند\n" +
+            "• نکته: تقریباً همیشه باید یکی از این دو را با fill استفاده کنید"
+    },
+    {
+        "id": 732,
+        "question": "Can you animate fill images with Tailwind transitions?",
+        "options": [
+            "Yes, but only opacity animations work",
+            "No, fill images cannot be animated",
+            "Yes, using transition and hover classes",
+            "No, use CSS keyframes instead"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• بله با استفاده از transition و hover classes مثل hover:scale-110\n" +
+            "• می‌توانید scale و opacity و transform انجام دهید\n" +
+            "• transition-transform duration-300 برای smooth animations\n" +
+            "• overflow-hidden روی parent برای جلوگیری از spillover\n" +
+            "• effects مختلف برای hover states\n" +
+            "• نکته: این برای interactive image galleries عالی است"
+    },
+    {
+        "id": 733,
+        "question": "What is best practice for hero images with fill?",
+        "options": [
+            "Use responsive with multiple source sets",
+            "Use fixed dimensions without fill property",
+            "Use fill with object-contain for full view",
+            "Use fill with object-cover and sizes='100vw'",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• استفاده از fill همراه با object-cover و sizes='100vw' برای full-width heroes\n" +
+            "• priority={true} برای بهبود LCP\n" +
+            "• aspect ratio مناسب برای different breakpoints\n" +
+            "• quality بالاتر مثل 90 برای hero images\n" +
+            "• placeholder='blur' برای better loading experience\n" +
+            "• نکته: hero images بیشترین تأثیر visual را دارند پس باید optimized باشند"
+    },
+    {
+        "id": 734,
+        "question": "How does fill affect image loading performance?",
+        "options": [
+            "Loads full resolution image always",
+            "Still optimizes based on container size",
+            "Disables lazy loading automatically",
+            "Increases bundle size significantly"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• fill همچنان بر اساس container size optimize می‌کند\n" +
+            "• Next.js می‌داند parent چقدر بزرگ است\n" +
+            "• appropriate size image تولید می‌شود\n" +
+            "• lazy loading هنوز کار می‌کند\n" +
+            "• performance تفاوت قابل توجهی با fixed dimensions ندارد\n" +
+            "• نکته: sizes prop را درست تنظیم کنید برای بهترین optimization"
+    },
+    {
+        "id": 735,
+        "question": "How do you access environment variables in Next.js?",
+        "options": [
+            "Using env.get('VARIABLE_NAME') method",
+            "Using process.env.VARIABLE_NAME syntax",
+            "Using getEnv('VARIABLE_NAME') function",
+            "Using config.VARIABLE_NAME notation"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• با استفاده از process.env.VARIABLE_NAME syntax\n" +
+            "• این در Node.js environment در دسترس است\n" +
+            "• در server-side code مستقیماً قابل استفاده\n" +
+            "• برای client-side باید NEXT_PUBLIC_ prefix داشته باشد\n" +
+            "• مثال process.env.DATABASE_URL\n" +
+            "• نکته: env variables در build time جایگزین می‌شوند"
+    },
+    {
+        "id": 736,
+        "question": "What prefix exposes env variables to the browser?",
+        "options": [
+            "BROWSER_ prefix for client side",
+            "PUBLIC_ prefix for frontend usage",
+            "CLIENT_ prefix for browser exposure",
+            "NEXT_PUBLIC_ prefix for client access",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• prefix به نام NEXT_PUBLIC_ متغیرها را برای client access expose می‌کند\n" +
+            "• مثال NEXT_PUBLIC_API_URL\n" +
+            "• این متغیرها در JavaScript bundle قرار می‌گیرند\n" +
+            "• در browser قابل دسترسی هستند\n" +
+            "• بدون این prefix فقط server-side در دسترس هستند\n" +
+            "• نکته: هرگز secrets را با NEXT_PUBLIC_ expose نکنید"
+    },
+    {
+        "id": 737,
+        "question": "Can you access server-only env variables in browser?",
+        "options": [
+            "Yes, all variables available everywhere",
+            "No, only NEXT_PUBLIC_ variables accessible",
+            "Yes, but only in production mode",
+            "No, unless explicitly configured"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• نه فقط متغیرهای NEXT_PUBLIC_ در browser قابل دسترسی هستند\n" +
+            "• server-only variables برای security محافظت می‌شوند\n" +
+            "• database credentials و API keys باید server-only باشند\n" +
+            "• تلاش برای access در browser undefined برمی‌گرداند\n" +
+            "• این یک security feature است\n" +
+            "• نکته: همیشه secrets را در server نگه دارید"
+    },
+    {
+        "id": 738,
+        "question": "What happens to env variables without NEXT_PUBLIC_ prefix?",
+        "options": [
+            "They remain server-side only for security",
+            "They become public automatically",
+            "They are ignored during build process",
+            "They throw error in production"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• آنها server-side only می‌مانند برای security\n" +
+            "• فقط در server code قابل دسترسی هستند\n" +
+            "• در client bundle شامل نمی‌شوند\n" +
+            "• این برای protecting sensitive data مثل API keys است\n" +
+            "• database URLs و secrets باید بدون prefix باشند\n" +
+            "• نکته: این default behavior برای preventing accidental exposure است"
+    },
+    {
+        "id": 739,
+        "question": "Which env file has highest priority in Next.js?",
+        "options": [
+            ".env.production takes highest priority",
+            ".env.development has most precedence",
+            ".env.local overrides other env files",
+            ".env is always prioritized first"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• فایل .env.local بالاترین priority را دارد و دیگر env files را override می‌کند\n" +
+            "• این برای local development overrides است\n" +
+            "• .env.local در git ignore قرار می‌گیرد\n" +
+            "• سپس .env.development یا .env.production\n" +
+            "• در نهایت .env به‌عنوان fallback\n" +
+            "• نکته: از .env.local برای developer-specific settings استفاده کنید"
+    },
+    {
+        "id": 740,
+        "question": "What is the purpose of .env.production file?",
+        "options": [
+            "Variables specific to production builds",
+            "Backup variables for all environments",
+            "Testing variables before deployment",
+            "Development variables for staging"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• .env.production متغیرهای specific به production builds را نگه می‌دارد\n" +
+            "• فقط در production environment load می‌شود\n" +
+            "• برای production-specific configuration\n" +
+            "• مثل production API URLs یا feature flags\n" +
+            "• از .env.development جدا است\n" +
+            "• نکته: secrets واقعی را در deployment platform تنظیم کنید نه این فایل"
+    },
+    {
+        "id": 741,
+        "question": "Should .env.local be committed to git repository?",
+        "options": [
+            "Yes, for team collaboration purposes",
+            "No, it contains sensitive local data",
+            "Yes, but only for public projects",
+            "No, unless encrypted properly first"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 728,
+        "question": "How do you provide default values for env variables?",
+        "options": [
+            "Using config.defaults object",
+            "Using fallback.env for defaults",
+            "Using .env file for default values",
+            "Using defaults.json configuration file",
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 729,
+        "question": "Can you use env variables in next.config.js?",
+        "options": [
+            "Yes, but only NEXT_PUBLIC_ variables",
+            "No, config runs before env loading",
+            "Yes, using process.env directly",
+            "No, requires separate config file"
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 730,
+        "question": "What is the purpose of .env.example file?",
+        "options": [
+            "Backup of production environment variables",
+            "Template showing required env variables",
+            "Example values for testing purposes",
+            "Default fallback for missing variables"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 731,
+        "question": "How are env variables loaded in Next.js?",
+        "options": [
+            "Automatically at build and runtime",
+            "Manually using loadEnv() function",
+            "Only during initial server startup",
+            "Through external configuration service"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 732,
+        "question": "Can you override env variables at runtime?",
+        "options": [
+            "No, unless using serverless functions",
+            "Yes, using runtime configuration API",
+            "Yes, but only in development mode",
+            "No, they are set at build time",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 733,
+        "question": "What happens when env variable is undefined?",
+        "options": [
+            "Variable gets empty string as default",
+            "Next.js throws build error immediately",
+            "process.env.VAR returns undefined value",
+            "Application crashes at runtime"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 734,
+        "question": "How do you use env variables in API routes?",
+        "options": [
+            "Access via process.env like server code",
+            "Import from special env module",
+            "Use getEnv() helper function",
+            "Pass through request headers"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 735,
+        "question": "Can you use env variables in client components?",
+        "options": [
+            "Yes, all variables available automatically",
+            "No, client components cannot access env",
+            "Only if prefixed with NEXT_PUBLIC_",
+            "Yes, but requires special import"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":""
+    },
 //     {
 //         "id": 736,
 //         "question": "What is the risk of exposing env variables to browser?",
