@@ -12495,10 +12495,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation": "• نه .env.local نباید commit شود چون حاوی sensitive local data است\n" +
+            "• این فایل personal و machine-specific است\n" +
+            "• معمولاً در .gitignore قرار دارد\n" +
+            "• می‌تواند secrets و credentials داشته باشد\n" +
+            "• هر developer می‌تواند .env.local خودش را داشته باشد\n" +
+            "• نکته: .env.example را commit کنید به‌عنوان template"
     },
     {
-        "id": 728,
+        "id": 742,
         "question": "How do you provide default values for env variables?",
         "options": [
             "Using config.defaults object",
@@ -12508,10 +12513,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":""
+        "explanation": "• با قرار دادن default values در فایل .env\n" +
+            "• .env به‌عنوان base configuration عمل می‌کند\n" +
+            "• این مقادیر توسط environment-specific files override می‌شوند\n" +
+            "• می‌توان fallback values تعریف کرد\n" +
+            "• این فایل معمولاً commit می‌شود\n" +
+            "• نکته: از .env برای non-sensitive defaults استفاده کنید"
     },
     {
-        "id": 729,
+        "id": 743,
         "question": "Can you use env variables in next.config.js?",
         "options": [
             "Yes, but only NEXT_PUBLIC_ variables",
@@ -12521,10 +12531,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
-        "explanation":""
+        "explanation":"• بله با استفاده از process.env مستقیماً در next.config.js\n" +
+            "• تمام env variables در config file در دسترس هستند\n" +
+            "• نه فقط NEXT_PUBLIC_ ones\n" +
+            "• config در build time اجرا می‌شود\n" +
+            "• می‌توانید برای conditional configuration استفاده کنید\n" +
+            "• نکته: config file در Node.js environment اجرا می‌شود"
     },
     {
-        "id": 730,
+        "id": 744,
         "question": "What is the purpose of .env.example file?",
         "options": [
             "Backup of production environment variables",
@@ -12534,10 +12549,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation":"• .env.example یک template است که required env variables را نشان می‌دهد\n" +
+            "• بدون actual values فقط key names\n" +
+            "• این فایل commit می‌شود برای documentation\n" +
+            "• developers جدید می‌دانند چه variables نیاز است\n" +
+            "• راهنمای setup برای تیم\n" +
+            "• نکته: همیشه .env.example را با .env واقعی sync نگه دارید"
     },
     {
-        "id": 731,
+        "id": 745,
         "question": "How are env variables loaded in Next.js?",
         "options": [
             "Automatically at build and runtime",
@@ -12547,10 +12567,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation": "• به‌طور خودکار در build time و runtime load می‌شوند\n" +
+            "• Next.js فایل‌های .env را parse و load می‌کند\n" +
+            "• نیازی به manual loading نیست\n" +
+            "• در process.env در دسترس قرار می‌گیرند\n" +
+            "• priority بر اساس نام فایل\n" +
+            "• نکته: تغییرات env files نیاز به restart development server دارند"
     },
     {
-        "id": 732,
+        "id": 746,
         "question": "Can you override env variables at runtime?",
         "options": [
             "No, unless using serverless functions",
@@ -12560,10 +12585,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
-        "explanation":""
+        "explanation": "• نه env variables در build time set می‌شوند و در runtime قابل تغییر نیستند\n" +
+            "• آنها در compiled code جایگزین می‌شوند\n" +
+            "• برای runtime configuration از API یا database استفاده کنید\n" +
+            "• یا از serverless functions با environment variables\n" +
+            "• این یک static replacement است\n" +
+            "• نکته: برای truly dynamic config از feature flags استفاده کنید"
     },
     {
-        "id": 733,
+        "id": 747,
         "question": "What happens when env variable is undefined?",
         "options": [
             "Variable gets empty string as default",
@@ -12573,10 +12603,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":""
+        "explanation": "• process.env.VARIABLE مقدار undefined برمی‌گرداند\n" +
+            "• هیچ error throw نمی‌شود\n" +
+            "• باید خودتان check کنید و handle کنید\n" +
+            "• می‌تواند باعث runtime errors شود اگر استفاده شود\n" +
+            "• بهتر است validation در startup داشته باشید\n" +
+            "• نکته: از libraries مثل zod برای validating env variables استفاده کنید"
     },
     {
-        "id": 734,
+        "id": 748,
         "question": "How do you use env variables in API routes?",
         "options": [
             "Access via process.env like server code",
@@ -12586,10 +12621,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation":"• مثل server code معمولی با process.env دسترسی دارید\n" +
+            "• تمام env variables بدون نیاز به NEXT_PUBLIC_ در دسترس هستند\n" +
+            "• API routes در server اجرا می‌شوند\n" +
+            "• می‌توانید secrets و credentials استفاده کنید\n" +
+            "• امن برای sensitive operations\n" +
+            "• نکته: API routes محیط امنی برای استفاده از secrets هستند"
     },
     {
-        "id": 735,
+        "id": 749,
         "question": "Can you use env variables in client components?",
         "options": [
             "Yes, all variables available automatically",
@@ -12599,21 +12639,31 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation":"• فقط اگر با NEXT_PUBLIC_ prefix شده باشند\n" +
+            "• Client Components در browser اجرا می‌شوند\n" +
+            "• بدون prefix متغیر undefined است\n" +
+            "• این برای security و preventing exposure است\n" +
+            "• sensitive data نباید در client accessible باشد\n" +
+            "• نکته: فقط non-sensitive data را NEXT_PUBLIC_ کنید"
     },
-//     {
-//         "id": 736,
-//         "question": "What is the risk of exposing env variables to browser?",
-//         "options": [
-//             "Sensitive data visible in client code",
-//             "Increases bundle size significantly",
-//             "Slows down page load performance",
-//             "Breaks server-side rendering"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 750,
+        "question": "What is the risk of exposing env variables to browser?",
+        "options": [
+            "Sensitive data visible in client code",
+            "Increases bundle size significantly",
+            "Slows down page load performance",
+            "Breaks server-side rendering"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• sensitive data مثل API keys و secrets در client code visible می‌شود\n" +
+            "• هر کسی می‌تواند source code را ببیند\n" +
+            "• credentials قابل steal هستند\n" +
+            "• security breach و unauthorized access\n" +
+            "• هیچ راهی برای hiding نیست\n" +
+            "• نکته: فقط public-safe values را expose کنید"
+    },
 //     {
 //         "id": 737,
 //         "question": "How do you validate required env variables?",
