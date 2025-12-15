@@ -12844,97 +12844,127 @@ export const mockQuestions: Question[] = [
             "• streaming بخشی از modern SSR است\n" +
             "• نکته: streaming یک evolution از SSR است نه replacement"
     },
-//     {
-//         "id": 757,
-//         "question": "Can Server Components use Suspense boundaries?",
-//         "options": [
-//             "No, Server Components render synchronously",
-//             "Yes, for async data fetching operations",
-//             "No, only Client Components support it",
-//             "Yes, but only in development mode",
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 758,
-//         "question": "What happens when Suspense boundary catches promise?",
-//         "options": [
-//             "Shows fallback until promise resolves",
-//             "Throws error stopping component render",
-//             "Cancels promise and retries fetch",
-//             "Converts promise to synchronous code"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 759,
-//         "question": "How does loading.js relate to Suspense?",
-//         "options": [
-//             "It's automatic Suspense boundary for routes",
-//             "It replaces Suspense in Next.js completely",
-//             "It loads files before Suspense renders",
-//             "It defines loading speed for Suspense"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 760,
-//         "question": "Can you use Suspense with React.lazy?",
-//         "options": [
-//             "No, lazy requires different loading method",
-//             "Yes, for code-splitting components lazily",
-//             "Yes, but only for small components",
-//             "No, lazy and Suspense are incompatible"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 761,
-//         "question": "What is progressive rendering in streaming?",
-//         "options": [
-//             "Rendering components as data becomes available",
-//             "Gradually improving image quality over time",
-//             "Slowly loading page from top to bottom",
-//             "Rendering based on user scroll position"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 762,
-//         "question": "How does Suspense improve perceived performance?",
-//         "options": [
-//             "Actually makes code run faster",
-//             "Caches everything in browser memory",
-//             "Prefetches all data before rendering",
-//             "Shows content immediately reducing wait time",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1361,
-//         "question": "What is an Error Boundary in React?",
-//         "options": [
-//             "A component that catches JavaScript errors in child tree",
-//             "A validation library for forms",
-//             "A debugging tool in DevTools",
-//             "A type of React Router guard"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation":""
-//     },
+    {
+        "id": 761,
+        "question": "Can Server Components use Suspense boundaries?",
+        "options": [
+            "No, Server Components render synchronously",
+            "Yes, for async data fetching operations",
+            "No, only Client Components support it",
+            "Yes, but only in development mode",
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• بله برای async data fetching operations در Server Components\n" +
+            "• Server Component می‌تواند suspend کند تا data fetch شود\n" +
+            "• fallback در این زمان stream می‌شود\n" +
+            "• بعد از ready شدن actual content stream می‌شود\n" +
+            "• این یکی از قدرتمندترین patterns در Next.js است\n" +
+            "• نکته: این به شما اجازه می‌دهد data fetching را در component collocate کنید"
+    },
+    {
+        "id": 762,
+        "question": "What happens when Suspense boundary catches promise?",
+        "options": [
+            "Shows fallback until promise resolves",
+            "Throws error stopping component render",
+            "Cancels promise and retries fetch",
+            "Converts promise to synchronous code"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• Suspense fallback را نمایش می‌دهد تا promise resolve شود\n" +
+            "• rendering متوقف نمی‌شود بلکه fallback نشان داده می‌شود\n" +
+            "• وقتی promise resolve شد actual content render می‌شود\n" +
+            "• این declarative async handling است\n" +
+            "• error boundaries می‌توانند rejected promises را catch کنند\n" +
+            "• نکته: این pattern loading states را بسیار ساده‌تر می‌کند"
+    },
+    {
+        "id": 763,
+        "question": "How does loading.js relate to Suspense?",
+        "options": [
+            "It's automatic Suspense boundary for routes",
+            "It replaces Suspense in Next.js completely",
+            "It loads files before Suspense renders",
+            "It defines loading speed for Suspense"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• loading.js یک automatic Suspense boundary برای routes است\n" +
+            "• Next.js خودکار route segment را در Suspense wrap می‌کند\n" +
+            "• loading.js محتوا به fallback تبدیل می‌شود\n" +
+            "• نیازی به manual Suspense wrapping نیست\n" +
+            "• convention-based approach\n" +
+            "• نکته: loading.js راه ساده‌ای برای route-level loading states است"
+    },
+    {
+        "id": 764,
+        "question": "Can you use Suspense with React.lazy?",
+        "options": [
+            "No, lazy requires different loading method",
+            "Yes, for code-splitting components lazily",
+            "Yes, but only for small components",
+            "No, lazy and Suspense are incompatible"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• بله برای code-splitting و lazy loading components\n" +
+            "• React.lazy dynamic import را با Suspense compatible می‌کند\n" +
+            "• component فقط وقتی needed است load می‌شود\n" +
+            "• Suspense fallback تا load شدن نمایش داده می‌شود\n" +
+            "• این برای reducing initial bundle size عالی است\n" +
+            "• نکته: این یکی از اولین use cases Suspense بود"
+    },
+    {
+        "id": 765,
+        "question": "What is progressive rendering in streaming?",
+        "options": [
+            "Rendering components as data becomes available",
+            "Gradually improving image quality over time",
+            "Slowly loading page from top to bottom",
+            "Rendering based on user scroll position"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• progressive rendering یعنی rendering components به محض available شدن data\n" +
+            "• نه منتظر ماندن برای همه چیز\n" +
+            "• user زودتر محتوا می‌بیند حتی اگر ناقص باشد\n" +
+            "• صفحه به‌تدریج complete می‌شود\n" +
+            "• این streaming را از traditional rendering متمایز می‌کند\n" +
+            "• نکته: progressive rendering تجربه کاربری را به‌طور چشمگیری بهبود می‌دهد"
+    },
+    {
+        "id": 766,
+        "question": "How does Suspense improve perceived performance?",
+        "options": [
+            "Actually makes code run faster",
+            "Caches everything in browser memory",
+            "Prefetches all data before rendering",
+            "Shows content immediately reducing wait time",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• با نمایش محتوا بلافاصله و reducing wait time\n" +
+            "• fallback UI feedback بصری می‌دهد\n" +
+            "• user می‌داند چیزی در حال load است\n" +
+            "• blank screens اجتناب می‌شود\n" +
+            "• این احساس faster loading ایجاد می‌کند\n" +
+            "• نکته: perceived performance گاهی مهم‌تر از actual performance است"
+    },
+    {
+        "id": 1361,
+        "question": "What is an Error Boundary in React?",
+        "options": [
+            "A component that catches JavaScript errors in child tree",
+            "A validation library for forms",
+            "A debugging tool in DevTools",
+            "A type of React Router guard"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":""
+    },
 //     {
 //         "id": 1362,
 //         "question": "Which lifecycle method is used to catch errors in Error Boundaries?",
