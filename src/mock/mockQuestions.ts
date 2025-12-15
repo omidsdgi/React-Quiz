@@ -12953,7 +12953,7 @@ export const mockQuestions: Question[] = [
             "• نکته: perceived performance گاهی مهم‌تر از actual performance است"
     },
     {
-        "id": 1361,
+        "id": 767,
         "question": "What is an Error Boundary in React?",
         "options": [
             "A component that catches JavaScript errors in child tree",
@@ -12963,99 +12963,115 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-        "explanation":""
+        "explanation": "• Error Boundary یک component خاص است که خطاهای JavaScript را در درخت فرزندان خود می‌گیرد\n" +
+            "• مانند try-catch برای component ها عمل می‌کند\n" +
+            "• جلوی crash کردن کل application را می‌گیرد\n" +
+            "• به جای نمایش صفحه سفید، یک fallback UI نشان می‌دهد\n" +
+            "• نکته: Error Boundary ها فقط خطاهای render، lifecycle و constructor را می‌گیرند"
     },
-//     {
-//         "id": 1362,
-//         "question": "Which lifecycle method is used to catch errors in Error Boundaries?",
-//         "options": [
-//             "componentDidCatch and getDerivedStateFromError",
-//             "componentWillCatch and handleError",
-//             "onError and catchError",
-//             "useErrorBoundary hook"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1363,
-//         "question": "Can functional components be Error Boundaries?",
-//         "options": [
-//             "Yes, using useErrorBoundary hook",
-//             "No, only class components currently",
-//             "Yes, with special wrapper function",
-//             "No, Error Boundaries are deprecated"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1364,
-//         "question": "What errors do Error Boundaries NOT catch?",
-//         "options": [
-//             "Errors in child component render",
-//             "Event handlers, async code, and SSR errors",
-//             "Errors in lifecycle methods",
-//             "Errors in constructor functions"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1365,
-//         "question": "How do you handle errors in event handlers?",
-//         "options": [
-//             "Error Boundaries catch them automatically",
-//             "Use try-catch blocks in handlers",
-//             "Event errors cannot be caught",
-//             "Use global error handler only"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1366,
-//         "question": "Where should Error Boundaries be placed?",
-//         "options": [
-//             "Only at root level of application",
-//             "Around every single component",
-//             "Strategically around key sections for granular handling",
-//             "Error Boundaries are automatic"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1367,
-//         "question": "What should an Error Boundary render on error?",
-//         "options": [
-//             "Nothing, just log the error",
-//             "Fallback UI with error message",
-//             "Redirect to home page automatically",
-//             "The original component again"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1368,
-//         "question": "Can you reset an Error Boundary after an error?",
-//         "options": [
-//             "No, page must be refreshed manually",
-//             "Yes, by updating state to reset boundary",
-//             "Automatic reset after 5 seconds",
-//             "Error Boundaries cannot be reset"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 768,
+        "question": "Which lifecycle method is used to catch errors in Error Boundaries?",
+        "options": [
+            "componentDidCatch and getDerivedStateFromError",
+            "componentWillCatch and handleError",
+            "onError and catchError",
+            "useErrorBoundary hook"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• componentDidCatch برای logging خطا و side effects استفاده می‌شود\n" +
+            "• getDerivedStateFromError برای update کردن state و نمایش fallback UI\n" +
+            "• هر دو method با هم برای Error Boundary کامل نیاز هستند\n" +
+            "• getDerivedStateFromError در render phase اجرا می‌شود\n" +
+            "• نکته: این دو method فقط در class component ها موجود هستند"
+    },
+    {
+        "id": 769,
+        "question": "Can functional components be Error Boundaries?",
+        "options": [
+            "Yes, using useErrorBoundary hook",
+            "No, only class components currently",
+            "Yes, with special wrapper function",
+            "No, Error Boundaries are deprecated"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• خیر، در حال حاضر فقط class component ها می‌توانند Error Boundary باشند\n" +
+            "• هیچ hook معادلی برای componentDidCatch وجود ندارد\n" +
+            "• React هنوز API برای functional Error Boundary ارائه نکرده است\n" +
+            "• باید از class component استفاده کنید یا از کتابخانه third-party\n" +
+            "• نکته: این یکی از معدود موارد است که هنوز نیاز به class component دارید"
+    },
+    {
+        "id": 770,
+        "question": "What errors do Error Boundaries NOT catch?",
+        "options": [
+            "Errors in child component render",
+            "Event handlers, async code, and SSR errors",
+            "Errors in lifecycle methods",
+            "Errors in constructor functions"
+        ],
+        "correctOption": 1,
+        "points": 30,
+            "explanation": "• باید از try-catch block داخل خود event handler استفاده کنید\n" +
+                "• Error Boundary این نوع خطاها را catch نمی‌کند\n" +
+                "• می‌توانید خطا را log کنید یا به کاربر نمایش دهید\n" +
+                "• state را update کنید تا پیام خطا نمایش داده شود\n" +
+                "• نکته: event handler ها خارج از React render cycle هستند پس نیاز به handling دستی دارند"
+    },
+    {
+        "id": 1365,
+        "question": "How do you handle errors in event handlers?",
+        "options": [
+            "Error Boundaries catch them automatically",
+            "Use try-catch blocks in handlers",
+            "Event errors cannot be caught",
+            "Use global error handler only"
+        ],
+        "correctOption": 1,
+        "points": 20,
+            "explanation":""
+    },
+    {
+        "id": 1366,
+        "question": "Where should Error Boundaries be placed?",
+        "options": [
+            "Only at root level of application",
+            "Around every single component",
+            "Strategically around key sections for granular handling",
+            "Error Boundaries are automatic"
+        ],
+        "correctOption": 2,
+        "points": 30,
+            "explanation":""
+    },
+    {
+        "id": 1367,
+        "question": "What should an Error Boundary render on error?",
+        "options": [
+            "Nothing, just log the error",
+            "Fallback UI with error message",
+            "Redirect to home page automatically",
+            "The original component again"
+        ],
+        "correctOption": 1,
+        "points": 10,
+            "explanation":""
+    },
+    {
+        "id": 1368,
+        "question": "Can you reset an Error Boundary after an error?",
+        "options": [
+            "No, page must be refreshed manually",
+            "Yes, by updating state to reset boundary",
+            "Automatic reset after 5 seconds",
+            "Error Boundaries cannot be reset"
+        ],
+        "correctOption": 1,
+        "points": 30,
+            "explanation":""
+    },
 //     {
 //         "id": 763,
 //         "question": "Can Suspense work with error boundaries?",
