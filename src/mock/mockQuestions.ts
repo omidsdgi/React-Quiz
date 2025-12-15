@@ -12664,265 +12664,186 @@ export const mockQuestions: Question[] = [
             "• هیچ راهی برای hiding نیست\n" +
             "• نکته: فقط public-safe values را expose کنید"
     },
-//     {
-//         "id": 737,
-//         "question": "How do you validate required env variables?",
-//         "options": [
-//             "Next.js validates automatically at build",
-//             "Check at runtime or use validation library",
-//             "Use validateEnv() built-in function",
-//             "Define in env.schema.json file"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 738,
-//         "question": "Can you use multiline values in env files?",
-//         "options": [
-//             "Yes, using quotes and newline characters",
-//             "No, env values must be single line",
-//             "Yes, but only in .env.local file",
-//             "No, requires JSON format instead"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 739,
-//         "question": "What is the purpose of .env.development.local?",
-//         "options": [
-//             "Local overrides for development environment",
-//             "Shared development variables for team",
-//             "Production testing before deployment",
-//             "Backup of development configurations"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 740,
-//         "question": "How do env variables work in Docker containers?",
-//         "options": [
-//             "Automatically copied from host system",
-//             "Cannot use env variables in containers",
-//             "Pass via docker run -e or compose file",
-//             "Must rebuild image for each change",
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 741,
-//         "question": "Can you use env variables for database connection strings?",
-//         "options": [
-//             "Yes, but only in development",
-//             "No, use config files instead",
-//             "Yes, common practice for security",
-//             "No, hardcode for better performance"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 742,
-//         "question": "What is best practice for API keys in Next.js?",
-//         "options": [
-//             "Store in NEXT_PUBLIC_ for easy access",
-//             "Store in server-side env variables only",
-//             "Hardcode directly in source code",
-//             "Store in public constants file"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 743,
-//         "question": "How do you handle env variables in Vercel deployment?",
-//         "options": [
-//             "Commit all env files to repository",
-//             "Add through Vercel dashboard or CLI",
-//             "Upload .env.local file to server",
-//             "Configure in vercel.json file"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 744,
-//         "question": "Can you use env variables in middleware?",
-//         "options": [
-//             "No, middleware cannot access env",
-//             "Yes, all variables available",
-//             "No, requires separate configuration",
-//             "Yes, but only non-NEXT_PUBLIC_ variables",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 745,
-//         "question": "What happens to NEXT_PUBLIC_ variables in build output?",
-//         "options": [
-//             "Inlined into JavaScript bundle code",
-//             "Kept separate in env file",
-//             "Encrypted for security purposes",
-//             "Removed from production build"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 746,
-//         "question": "How do you use different API URLs per environment?",
-//         "options": [
-//             "Use different env files per environment",
-//             "Use if statements checking NODE_ENV",
-//             "Use switch case for each environment",
-//             "Use separate config.js per environment"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 747,
-//         "question": "Can you access env variables in getStaticProps?",
-//         "options": [
-//             "Yes, but only NEXT_PUBLIC_ variables",
-//             "No, only available in API routes",
-//             "Yes, runs on server with full access",
-//             "No, use runtime configuration instead"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 748,
-//         "question": "What is the recommended way to type env variables?",
-//         "options": [
-//             "Create TypeScript declaration file for process.env",
-//             "Use any type for all variables",
-//             "Next.js types them automatically",
-//             "No typing needed for env variables"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },{
-//         "id": 749,
-//         "question": "What is streaming in React and Next.js?",
-//         "options": [
-//             "Sending HTML chunks to browser progressively",
-//             "Playing video content in components",
-//             "Real-time data updates via WebSocket",
-//             "Continuous data flow from database"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 750,
-//         "question": "What is the purpose of React Suspense?",
-//         "options": [
-//             "Pauses component rendering permanently",
-//             "Delays JavaScript execution temporarily",
-//             "Shows fallback UI while content loads",
-//             "Suspends user interactions until ready"
-//         ],
-//         "correctOption": 2,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 751,
-//         "question": "How does Suspense work with streaming?",
-//         "options": [
-//             "Stops streaming until data is ready",
-//             "Converts streaming to static rendering",
-//             "Disables streaming for better performance",
-//             "Shows fallback while streaming component content",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 752,
-//         "question": "What does fallback prop specify in Suspense?",
-//         "options": [
-//             "Backup component for rendering",
-//             "UI to show while content loading",
-//             "Default data when fetch fails",
-//             "Alternative route on error",
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 753,
-//         "question": "Can you nest multiple Suspense boundaries?",
-//         "options": [
-//             "Yes, but maximum three levels",
-//             "No, only one per page allowed",
-//             "Yes, for granular loading states",
-//             "No, causes infinite loading loops"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 754,
-//         "question": "What triggers Suspense boundary in components?",
-//         "options": [
-//             "Async operations like data fetching",
-//             "State updates in child components",
-//             "Props changes from parent component",
-//             "CSS animations and transitions"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 755,
-//         "question": "How does streaming improve Time to First Byte?",
-//         "options": [
-//             "Caches responses on CDN edge",
-//             "Sends initial HTML faster without waiting",
-//             "Compresses data before sending response",
-//             "Reduces server processing time significantly"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 756,
-//         "question": "What is the difference between streaming and SSR?",
-//         "options": [
-//             "Streaming works offline, SSR needs server",
-//             "Streaming is faster, SSR is slower",
-//             "Streaming sends chunks, SSR waits for all",
-//             "Streaming for client, SSR for server"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 751,
+        "question": "Can you access env variables in getStaticProps?",
+        "options": [
+            "Yes, but only NEXT_PUBLIC_ variables",
+            "No, only available in API routes",
+            "Yes, runs on server with full access",
+            "No, use runtime configuration instead"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• بله getStaticProps در server اجرا می‌شود با full access به env variables\n" +
+            "• تمام variables بدون NEXT_PUBLIC_ در دسترس هستند\n" +
+            "• برای fetching data در build time\n" +
+            "• می‌توانید API keys و secrets استفاده کنید\n" +
+            "• امن چون در server است\n" +
+            "• نکته: getStaticProps فقط در build time اجرا می‌شود"
+    },
+    {
+        "id": 752,
+        "question": "What is the recommended way to type env variables?",
+        "options": [
+            "Create TypeScript declaration file for process.env",
+            "Use any type for all variables",
+            "Next.js types them automatically",
+            "No typing needed for env variables"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• با ایجاد TypeScript declaration file برای process.env\n" +
+            "• مثلاً env.d.ts با interface برای ProcessEnv\n" +
+            "• type safety و autocomplete\n" +
+            "• validation در compile time\n" +
+            "• documented contract برای required variables\n" +
+            "• نکته: ترکیب با runtime validation برای complete safety"
+    },
+ {
+        "id": 753,
+        "question": "What is streaming in React and Next.js?",
+        "options": [
+            "Sending HTML chunks to browser progressively",
+            "Playing video content in components",
+            "Real-time data updates via WebSocket",
+            "Continuous data flow from database"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• streaming یعنی ارسال HTML chunks به browser به‌صورت progressive\n" +
+            "• بجای انتظار برای کل صفحه بخش‌های آماده ارسال می‌شوند\n" +
+            "• browser می‌تواند زودتر شروع به rendering کند\n" +
+            "• تجربه کاربری بهتر با faster perceived load\n" +
+            "• Server Components این قابلیت را enable می‌کنند\n" +
+            "• نکته: streaming یکی از مزایای اصلی React 18 و Next.js App Router است"
+ },
+    {
+        "id": 754,
+        "question": "What is the purpose of React Suspense?",
+        "options": [
+            "Pauses component rendering permanently",
+            "Delays JavaScript execution temporarily",
+            "Shows fallback UI while content loads",
+            "Suspends user interactions until ready"
+        ],
+        "correctOption": 2,
+        "points": 10,
+        "explanation": "• Suspense برای نمایش fallback UI در زمان load شدن content است\n" +
+            "• می‌توانید loading states را declaratively مدیریت کنید\n" +
+            "• component می‌تواند suspend کند تا data آماده شود\n" +
+            "• fallback UI مثل skeleton یا spinner نمایش داده می‌شود\n" +
+            "• این با streaming و async components کار می‌کند\n" +
+            "• نکته: Suspense مدیریت loading states را بسیار ساده‌تر می‌کند"
+    },
+    {
+        "id": 755,
+        "question": "How does Suspense work with streaming?",
+        "options": [
+            "Stops streaming until data is ready",
+            "Converts streaming to static rendering",
+            "Disables streaming for better performance",
+            "Shows fallback while streaming component content",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• Suspense boundaries مشخص می‌کنند کدام بخش‌ها می‌توانند independently stream شوند\n" +
+            "• وقتی component suspend می‌کند fallback نمایش داده می‌شود\n" +
+            "• بقیه صفحه می‌تواند بدون انتظار stream شود\n" +
+            "• هر Suspense boundary یک streaming unit است\n" +
+            "• این granular loading states ایجاد می‌کند\n" +
+            "• نکته: Suspense و streaming با هم progressive rendering را enable می‌کنند"
+    },
+    {
+        "id": 756,
+        "question": "What does fallback prop specify in Suspense?",
+        "options": [
+            "Backup component for rendering",
+            "UI to show while content loading",
+            "Default data when fetch fails",
+            "Alternative route on error",
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• fallback prop مشخص می‌کند چه UI ای در زمان loading content نمایش داده شود\n" +
+            "• می‌تواند spinner یا skeleton یا هر React element باشد\n" +
+            "• این temporary placeholder است\n" +
+            "• وقتی content آماده شد با actual content جایگزین می‌شود\n" +
+            "• بهبود perceived performance\n" +
+            "• نکته: fallback باید سبک و سریع render شود"
+    },
+    {
+        "id": 757,
+        "question": "Can you nest multiple Suspense boundaries?",
+        "options": [
+            "Yes, but maximum three levels",
+            "No, only one per page allowed",
+            "Yes, for granular loading states",
+            "No, causes infinite loading loops"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• بله برای granular loading states می‌توانید Suspense boundaries را nest کنید\n" +
+            "• هر boundary می‌تواند independently suspend کند\n" +
+            "• مثلاً یک boundary برای کل page و دیگری برای sidebar\n" +
+            "• این fine-grained control روی loading experience می‌دهد\n" +
+            "• محدودیت تعداد سطح وجود ندارد\n" +
+            "• نکته: nested Suspense برای complex UIs بسیار قدرتمند است"
+    },
+    {
+        "id": 758,
+        "question": "What triggers Suspense boundary in components?",
+        "options": [
+            "Async operations like data fetching",
+            "State updates in child components",
+            "Props changes from parent component",
+            "CSS animations and transitions"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• async operations مثل data fetching که component را suspend می‌کنند\n" +
+            "• وقتی component در انتظار promise است\n" +
+            "• lazy loading با React.lazy\n" +
+            "• هر operation که promise throw می‌کند\n" +
+            "• Suspense این promises را catch می‌کند\n" +
+            "• نکته: فقط compatible async patterns باعث suspending می‌شوند"
+    },
+    {
+        "id": 759,
+        "question": "How does streaming improve Time to First Byte?",
+        "options": [
+            "Caches responses on CDN edge",
+            "Sends initial HTML faster without waiting",
+            "Compresses data before sending response",
+            "Reduces server processing time significantly"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• streaming اولین HTML را سریع‌تر بدون انتظار برای تمام content ارسال می‌کند\n" +
+            "• server نمی‌خواهد تا همه چیز ready شود صبر کند\n" +
+            "• TTFB کاهش می‌یابد چون response زودتر شروع می‌شود\n" +
+            "• بخش‌های آماده فوراً ارسال می‌شوند\n" +
+            "• این perceived performance را بهبود می‌دهد\n" +
+            "• نکته: TTFB یکی از مهم‌ترین metrics برای user experience است"
+    },
+    {
+        "id": 760,
+        "question": "What is the difference between streaming and SSR?",
+        "options": [
+            "Streaming works offline, SSR needs server",
+            "Streaming is faster, SSR is slower",
+            "Streaming sends chunks, SSR waits for all",
+            "Streaming for client, SSR for server"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• streaming HTML را به‌صورت chunks ارسال می‌کند در حالی که SSR منتظر تمام content است\n" +
+            "• SSR traditional تمام HTML را یکجا می‌فرستد\n" +
+            "• streaming progressive و faster perceived load دارد\n" +
+            "• SSR blocking است اما streaming non-blocking\n" +
+            "• streaming بخشی از modern SSR است\n" +
+            "• نکته: streaming یک evolution از SSR است نه replacement"
+    },
 //     {
 //         "id": 757,
 //         "question": "Can Server Components use Suspense boundaries?",
