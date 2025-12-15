@@ -21530,7 +21530,7 @@ export const mockQuestions: Question[] = [
             "- برای جلوگیری از آن می‌توان از مقدار پیش‌فرض یا optional chaining استفاده کرد"
     },
     {
-        "id": 122,
+        "id": 1523,
         "question": "What is the main difference between the logical OR (||) and nullish coalescing (??) operators in JavaScript?",
         "options": [
             "|| returns the right-hand value only if the left is null or undefined",
@@ -21545,7 +21545,7 @@ export const mockQuestions: Question[] = [
             "- تفاوت اصلی در نحوه برخورد با مقادیر falsy مانند 0 یا رشته خالی است"
     },
     {
-        "id": 123,
+        "id": 1524,
         "question": "What is the result of '0 || 100' and '0 ?? 100' in JavaScript?",
         "options": [
             "Both return 0",
@@ -21560,7 +21560,7 @@ export const mockQuestions: Question[] = [
             "- این مثال تفاوت اصلی || و ?? را به خوبی نشان می‌دهد"
     },
     {
-        "id": 124,
+        "id": 1525,
         "question": "When would you prefer using the nullish coalescing operator (??) instead of the OR (||) operator?",
         "options": [
             "When you want to treat 0 and '' as valid values",
@@ -21575,7 +21575,7 @@ export const mockQuestions: Question[] = [
             "- عملگر || تمام falsy values (مثل '', 0, false) را نامعتبر فرض می‌کند"
     },
     {
-        "id": 125,
+        "id": 1526,
         "question": "What will 'false ?? true' and 'false || true' return?",
         "options": [
             "Both return true",
@@ -21590,7 +21590,7 @@ export const mockQuestions: Question[] = [
             "- این تفاوت رفتار دو عملگر در برخورد با مقادیر falsy را نشان می‌دهد"
     },
     {
-        "id": 126,
+        "id": 1527,
         "question": "What is the purpose of the optional chaining operator (?.) in JavaScript?",
         "options": [
             "It prevents errors when accessing properties of null or undefined objects by safely returning undefined.",
@@ -21606,7 +21606,7 @@ export const mockQuestions: Question[] = [
             "- این رفتار هیچ ارتباطی با falsy values مانند 0 یا رشته خالی ندارد"
     },
     {
-        "id": 127,
+        "id": 1528,
         "question": "In the ControlledInputs component, what happens if you do not call e.preventDefault() in the handleSubmit function?",
         "options": [
             "The form data will be automatically saved in state.",
@@ -21622,7 +21622,7 @@ export const mockQuestions: Question[] = [
             "- React به طور خودکار جلوی ارسال فرم را نمی‌گیرد، این مسئولیت بر عهده توسعه‌دهنده است"
     },
     {
-        "id": 128,
+        "id": 1529,
         "question": "In the UncontrolledInputs component, how is the FormData API used to retrieve form data after submission?",
         "options": [
             "The FormData object creates key-value pairs from form input fields.",
@@ -21638,7 +21638,7 @@ export const mockQuestions: Question[] = [
             "- این روش بیشتر در فرم‌های uncontrolled کاربرد دارد که از ref یا state مستقیم استفاده نمی‌کنند"
     },
     {
-        "id": 129,
+        "id": 1530,
         "question": "In the MultipleInputs component, what ensures that each input updates the correct property in the user state object?",
         "options": [
             "Assigning a unique id to each input field.",
@@ -21654,7 +21654,7 @@ export const mockQuestions: Question[] = [
             "- نیازی به تنظیم دستی هر property نیست، چون با استفاده از name این فرآیند به صورت پویا انجام می‌شود"
     },
     {
-        "id": 130,
+        "id": 1531,
         "question": "What is the main difference between controlled and uncontrolled inputs in React?",
         "options": [
             "Uncontrolled inputs require the useEffect hook to update their values.",
@@ -21669,7 +21669,7 @@ export const mockQuestions: Question[] = [
             "- uncontrolled inputs ارتباط مستقیمی با React state ندارند و نیازی به useEffect برای مقداردهی ندارند"
     },
     {
-        "id": 131,
+        "id": 1532,
         "question": "Which statement about controlled inputs is true?",
         "options": [
             "They automatically update when the user types, without state management.",
@@ -21684,7 +21684,7 @@ export const mockQuestions: Question[] = [
             "- استفاده از useRef در این نوع ورودی‌ها معمولاً لازم نیست"
     },
     {
-        "id": 132,
+        "id": 1533,
         "question": "When should you prefer using an uncontrolled input instead of a controlled one?",
         "options": [
             "When you need to read the value only on form submission without tracking every keystroke.",
@@ -21699,7 +21699,7 @@ export const mockQuestions: Question[] = [
             "- اگر نیاز به کنترل کامل یا اعتبارسنجی لحظه‌ای دارید، از controlled input استفاده کنید"
     },
     {
-        "id": 129,
+        "id": 1534,
         "question": "In the MultipleInputs component, what ensures that each input updates the correct property in the user state object?",
         "options": [
             "Tracking the input order in the component’s render cycle.",
@@ -21714,7 +21714,7 @@ export const mockQuestions: Question[] = [
             "• همچنین نیازی به تنظیم دستی هر property نیست، زیرا استفاده از name این فرایند را به‌صورت پویا و خودکار انجام می‌دهد."
     },
     {
-        "id": 128,
+        "id": 1356,
         "question": "In the UncontrolledInputs component, how is the FormData API used to retrieve form data after submission?",
         "options": [
             "The FormData object creates key-value pairs from form input fields.",
@@ -21729,7 +21729,7 @@ export const mockQuestions: Question[] = [
             "• همچنین هیچ عملیات اعتبارسنجی خودکار روی داده‌ها انجام نمی‌دهد و مدیریت validation بر عهده برنامه‌نویس است."
     },
     {
-        "id": 127,
+        "id": 1537,
         "question": "In the ControlledInputs component, what happens if you do not call e.preventDefault() in the handleSubmit function?",
         "options": [
             "The form data will be automatically saved in state.",
@@ -21744,7 +21744,7 @@ export const mockQuestions: Question[] = [
             "• هیچ خطای مشخصی در کنسول نمایش داده نمی‌شود، اما داده‌های فرم از بین می‌روند و نتیجه مورد انتظار حاصل نخواهد شد."
     },
     {
-        "id": 166,
+        "id": 1538,
         "question": "Why are custom hooks useful in React applications?",
         "options": [
             "They allow reusing component logic without duplicating code.",
@@ -21759,7 +21759,7 @@ export const mockQuestions: Question[] = [
             "• Custom Hook ها از Hook های داخلی مانند  useState یا useEffect .استفاده می‌کنند تا منطق قابل اشتراک‌گذاری ایجاد شود، نه اینکه جایگزین آن‌ها شوند."
     },
     {
-        "id": 167,
+        "id": 1539,
         "question": "What is the purpose of the GlobalContext.Provider in the Context API?",
         "options": [
             "To create a new context instance for every component in the tree.",
@@ -21775,7 +21775,7 @@ export const mockQuestions: Question[] = [
             "• هدف اصلی Provider جلوگیری از prop drilling و ساده‌سازی اشتراک داده بین کامپوننت‌ها است."
     },
     {
-        "id": 168,
+        "id": 1540,
         "question": "Why would you use a custom hook with the Context API?",
         "options": [
             "To allow multiple contexts to merge into a single context instance.",
@@ -21789,6 +21789,36 @@ export const mockQuestions: Question[] = [
             "• به‌جای فراخوانی مستقیم useContext در هر کامپوننت، یک Custom Hook مانند useGlobalContext تعریف می‌شود.\n" +
             "• این روش از تکرار کد جلوگیری کرده و ساختار پروژه را تمیزتر و قابل نگهداری‌تر می‌کند.\n" +
             "• Custom Hook ها باعث می‌شوند در آینده تغییرات در context تنها در یک نقطه مدیریت شوند."
+    },
+    {
+        "id": 1541,
+        "question": "What is the purpose of the action.type in a reducer function?",
+        "options": [
+            "It identifies the specific action to handle in the reducer function.",
+            "It holds the state updates returned by the reducer function.",
+            "It ensures the reducer function always returns the default state.",
+            "It defines the initial state structure for the reducer."
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• ویژگی action.type در reducer مشخص می‌کند که reducer باید کدام بخش از منطق خود را اجرا کند.\n" +
+            "• هر action دارای نوع (type) منحصربه‌فردی است تا reducer بتواند با استفاده از ساختار switch یا if تصمیم بگیرد چه تغییری روی state اعمال کند.\n" +
+            "• استفاده از action.type باعث می‌شود مدیریت state قابل پیش‌بینی و ساختار کد قابل نگهداری‌تر باشد."
+    },
+    {
+        "id": 1542,
+        "question": "What is the role of dispatch in the useReducer hook?",
+        "options": [
+            "It directly modifies the state without involving the reducer.",
+            "It initializes the state with the defaultState.",
+            "It triggers an action to update the state using the reducer logic.",
+            "It resets the entire reducer state to its initial value."
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• تابع dispatch در useReducer مسئول ارسال action به reducer است تا state بر اساس آن به‌روزرسانی شود.\n" +
+            "• این تابع به صورت مستقیم state را تغییر نمی‌دهد بلکه reducer را فراخوانی می‌کند تا منطق به‌روزرسانی اجرا شود.\n" +
+            "• الگوی کار dispatch مشابه dispatch در Redux است و منجر به کنترل بهتر جریان داده‌ها در کامپوننت‌ها می‌شود."
     }
 
 ]
