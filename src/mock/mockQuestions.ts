@@ -13021,7 +13021,7 @@ export const mockQuestions: Question[] = [
                 "• نکته: event handler ها خارج از React render cycle هستند پس نیاز به handling دستی دارند"
     },
     {
-        "id": 1365,
+        "id": 771,
         "question": "How do you handle errors in event handlers?",
         "options": [
             "Error Boundaries catch them automatically",
@@ -13031,10 +13031,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-            "explanation":""
+        "explanation":"• باید از try-catch block داخل خود event handler استفاده کنید\n" +
+            "• Error Boundary این نوع خطاها را catch نمی‌کند\n" +
+            "• می‌توانید خطا را log کنید یا به کاربر نمایش دهید\n" +
+            "• state را update کنید تا پیام خطا نمایش داده شود\n" +
+            "• نکته: event handler ها خارج از React render cycle هستند پس نیاز به handling دستی دارند"
     },
     {
-        "id": 1366,
+        "id": 772,
         "question": "Where should Error Boundaries be placed?",
         "options": [
             "Only at root level of application",
@@ -13044,10 +13048,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-            "explanation":""
+        "explanation": "• Error Boundary ها را در سطوح مختلف برای کنترل بهتر قرار دهید\n" +
+            "• می‌توانید یکی در root برای خطاهای کلی داشته باشید\n" +
+            "• Error Boundary های دیگر را دور feature های مهم قرار دهید\n" +
+            "• این کار باعث می‌شود فقط بخشی از UI خراب شود نه همه\n" +
+            "• نکته: granular error boundaries تجربه کاربری بهتری ایجاد می‌کنند"
     },
     {
-        "id": 1367,
+        "id": 773,
         "question": "What should an Error Boundary render on error?",
         "options": [
             "Nothing, just log the error",
@@ -13057,10 +13065,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-            "explanation":""
+        "explanation": "• باید یک fallback UI دوستانه و مفید نمایش دهید\n" +
+            "• پیام خطا را به زبان ساده برای کاربر توضیح دهید\n" +
+            "• می‌توانید دکمه retry یا راهنمایی برای رفع مشکل اضافه کنید\n" +
+            "• از نمایش error stack trace به کاربران عادی خودداری کنید\n" +
+            "• نکته: fallback UI باید helpful باشد و به کاربر امید بدهد که مشکل قابل حل است"
     },
     {
-        "id": 1368,
+        "id": 774,
         "question": "Can you reset an Error Boundary after an error?",
         "options": [
             "No, page must be refreshed manually",
@@ -13070,86 +13082,120 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-            "explanation":""
+        "explanation":"• بله، با تغییر state می‌توانید Error Boundary را reset کنید\n" +
+            "• معمولاً یک دکمه Try Again در fallback UI قرار می‌دهید\n" +
+            "• وقتی کلیک شود، state را تغییر دهید تا component دوباره render شود\n" +
+            "• Error Boundary به حالت عادی برمی‌گردد و component را دوباره امتحان می‌کند\n" +
+            "• نکته: reset کردن به کاربر اجازه می‌دهد بدون refresh صفحه، مشکل را حل کند"
     },
-//     {
-//         "id": 763,
-//         "question": "Can Suspense work with error boundaries?",
-//         "options": [
-//             "No, they serve completely different purposes",
-//             "Yes, error boundaries catch Suspense errors",
-//             "Yes, but only in production builds",
-//             "No, Suspense replaces error boundaries"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 764,
-//         "question": "What is selective hydration with Suspense?",
-//         "options": [
-//             "Choosing which components to hydrate manually",
-//             "Hydrating components independently when ready",
-//             "Hydrating only visible components on screen",
-//             "Partial hydration based on user interaction"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 765,
-//         "question": "How does streaming affect SEO?",
-//         "options": [
-//             "Content still indexed but loads progressively",
-//             "Completely breaks search engine crawling",
-//             "Improves SEO by loading faster",
-//             "No effect on SEO whatsoever"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 766,
-//         "question": "Can you use Suspense with client-side data fetching?",
-//         "options": [
-//             "Yes, but requires manual configuration",
-//             "No, only server-side fetching works",
-//             "Yes, with libraries supporting Suspense",
-//             "No, Suspense is server-only feature"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 767,
-//         "question": "What is the purpose of startTransition with Suspense?",
-//         "options": [
-//             "Marks updates as non-urgent allowing interruption",
-//             "Initiates streaming from server immediately",
-//             "Starts CSS transitions during loading",
-//             "Begins data fetching before rendering",
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 768,
-//         "question": "How does Suspense handle concurrent requests?",
-//         "options": [
-//             "Renders whichever resolves first independently",
-//             "Cancels slower requests automatically",
-//             "Waits for all requests to finish",
-//             "Queues requests in order received"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 775,
+        "question": "Can Suspense work with error boundaries?",
+        "options": [
+            "No, they serve completely different purposes",
+            "Yes, error boundaries catch Suspense errors",
+            "Yes, but only in production builds",
+            "No, Suspense replaces error boundaries"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• بله error boundaries می‌توانند errors از Suspense را catch کنند\n" +
+            "• اگر data fetching fail کند error boundary آن را می‌گیرد\n" +
+            "• می‌توانید error UI نمایش دهید\n" +
+            "• این combination برای robust error handling است\n" +
+            "• Suspense برای loading و error boundary برای errors\n" +
+            "• نکته: همیشه Suspense را با error boundary ترکیب کنید"
+    },
+    {
+        "id": 776,
+        "question": "What is selective hydration with Suspense?",
+        "options": [
+            "Choosing which components to hydrate manually",
+            "Hydrating components independently when ready",
+            "Hydrating only visible components on screen",
+            "Partial hydration based on user interaction"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• selective hydration یعنی hydrating components به‌صورت independent وقتی ready هستند\n" +
+            "• نه منتظر ماندن برای تمام page\n" +
+            "• Suspense boundaries hydration را جدا می‌کنند\n" +
+            "• components می‌توانند بدون ترتیب خاص hydrate شوند\n" +
+            "• این Time to Interactive را بهبود می‌دهد\n" +
+            "• نکته: این یکی از قدرتمندترین optimizations React 18 است"
+    },
+    {
+        "id": 777,
+        "question": "How does streaming affect SEO?",
+        "options": [
+            "Content still indexed but loads progressively",
+            "Completely breaks search engine crawling",
+            "Improves SEO by loading faster",
+            "No effect on SEO whatsoever"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• محتوا همچنان indexed می‌شود اما به‌صورت progressive load می‌شود\n" +
+            "• crawler ها منتظر می‌مانند تا تمام content stream شود\n" +
+            "• SEO تحت تأثیر منفی قرار نمی‌گیرد\n" +
+            "• در واقع با faster loading ممکن است بهتر شود\n" +
+            "• Google می‌تواند streaming content را handle کند\n" +
+            "• نکته: streaming باعث بهتر user experience و SEO می‌شود"
+    },
+    {
+        "id": 778,
+        "question": "Can you use Suspense with client-side data fetching?",
+        "options": [
+            "Yes, but requires manual configuration",
+            "No, only server-side fetching works",
+            "Yes, with libraries supporting Suspense",
+            "No, Suspense is server-only feature"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• بله با libraries که Suspense را support می‌کنند مثل React Query\n" +
+            "• باید از Suspense-compatible data fetching استفاده کنید\n" +
+            "• library باید promise throw کند\n" +
+            "• manual implementation نیز ممکن است\n" +
+            "• Client Components می‌توانند suspend کنند\n" +
+            "• نکته: check کنید library شما Suspense mode دارد"
+    },
+    {
+        "id": 779,
+        "question": "What is the purpose of startTransition with Suspense?",
+        "options": [
+            "Marks updates as non-urgent allowing interruption",
+            "Initiates streaming from server immediately",
+            "Starts CSS transitions during loading",
+            "Begins data fetching before rendering",
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• startTransition updates را به‌عنوان non-urgent mark می‌کند و اجازه interruption می‌دهد\n" +
+            "• UI responsive می‌ماند در زمان transitions\n" +
+            "• Suspense fallback برای low-priority updates نمایش داده نمی‌شود\n" +
+            "• این برای better UX در navigation است\n" +
+            "• جلوگیری از unwanted loading states\n" +
+            "• نکته: این با Suspense برای smooth transitions کار می‌کند"
+    },
+    {
+        "id": 780,
+        "question": "How does Suspense handle concurrent requests?",
+        "options": [
+            "Renders whichever resolves first independently",
+            "Cancels slower requests automatically",
+            "Waits for all requests to finish",
+            "Queues requests in order received"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• هر Suspense boundary می‌تواند independently resolve شود\n" +
+            "• requests به‌صورت parallel اجرا می‌شوند\n" +
+            "• هرکدام که اول ready شود render می‌شود\n" +
+            "• blocking یا sequential waiting نیست\n" +
+            "• این concurrent rendering را enable می‌کند\n" +
+            "• نکته: این یکی از مزایای React concurrent features است"
+    },
 //     {
 //         "id": 769,
 //         "question": "Can you show different fallbacks for different sections?",
