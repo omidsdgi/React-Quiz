@@ -13196,136 +13196,186 @@ export const mockQuestions: Question[] = [
             "• این concurrent rendering را enable می‌کند\n" +
             "• نکته: این یکی از مزایای React concurrent features است"
     },
-//     {
-//         "id": 769,
-//         "question": "Can you show different fallbacks for different sections?",
-//         "options": [
-//             "No, fallback is global configuration",
-//             "Yes, but requires custom hook",
-//             "No, only one fallback per page",
-//             "Yes, using multiple Suspense boundaries",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 770,
-//         "question": "What happens if fallback component also suspends?",
-//         "options": [
-//             "Automatically retries rendering fallback",
-//             "Application crashes with error",
-//             "Shows blank screen indefinitely",
-//             "Parent Suspense boundary catches it",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 771,
-//         "question": "How does Suspense improve user experience?",
-//         "options": [
-//             "Prevents users from leaving page",
-//             "Makes application load twice as fast",
-//             "Eliminates all loading states completely",
-//             "Shows meaningful loading states reducing frustration",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 772,
-//         "question": "Can Suspense be used for non-data operations?",
-//         "options": [
-//             "Yes, any async operation throwing promise",
-//             "No, only data fetching supported",
-//             "Yes, but only image loading",
-//             "No, strictly for API calls"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 773,
-//         "question": "What is the relationship between Suspense and loading states?",
-//         "options": [
-//             "Suspense declaratively manages loading states",
-//             "Suspense eliminates need for loading states",
-//             "Suspense converts loading to error states",
-//             "Suspense and loading states are unrelated"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 774,
-//         "question": "How does streaming affect bandwidth usage?",
-//         "options": [
-//             "Reduces bandwidth by compressing streams",
-//             "Same total data sent more efficiently",
-//             "Increases bandwidth due to chunking",
-//             "No effect on bandwidth whatsoever"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 775,
-//         "question": "Can you cancel Suspense loading programmatically?",
-//         "options": [
-//             "Yes, but only during development",
-//             "Yes, using cancelSuspense() method",
-//             "No, Suspense resolves when promise settles",
-//             "No, requires page refresh to cancel"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 776,
-//         "question": "What is Out-of-Order Streaming in React?",
-//         "options": [
-//             "Streaming data in reverse chronological order",
-//             "Components stream in priority order not sequential",
-//             "Random component rendering for performance",
-//             "Streaming only non-critical components late"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 777,
-//         "question": "How does Suspense work with React Server Components?",
-//         "options": [
-//             "Converts Server Components to Client Components",
-//             "Suspense doesn't work with Server Components",
-//             "Allows async Server Components to suspend",
-//             "Disables Server Components during loading",
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 778,
-//         "question": "What is the best practice for Suspense boundaries?",
-//         "options": [
-//             "Wrap every single component individually",
-//             "Only use one boundary per application",
-//             "Place where loading states make sense",
-//             "Avoid Suspense in production builds"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 781,
+        "question": "Can you show different fallbacks for different sections?",
+        "options": [
+            "No, fallback is global configuration",
+            "Yes, but requires custom hook",
+            "No, only one fallback per page",
+            "Yes, using multiple Suspense boundaries",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• بله با استفاده از multiple Suspense boundaries با fallbacks مختلف\n" +
+            "• هر boundary می‌تواند fallback خاص خود را داشته باشد\n" +
+            "• مثلاً skeleton برای content و spinner برای sidebar\n" +
+            "• این fine-grained control روی loading experience می‌دهد\n" +
+            "• هر بخش appropriate loading state خودش را دارد\n" +
+            "• نکته: این به polish شدن UX کمک می‌کند"
+    },
+    {
+        "id": 782,
+        "question": "What happens if fallback component also suspends?",
+        "options": [
+            "Automatically retries rendering fallback",
+            "Application crashes with error",
+            "Shows blank screen indefinitely",
+            "Parent Suspense boundary catches it",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• parent Suspense boundary آن را catch می‌کند\n" +
+            "• fallback نباید suspend کند این anti-pattern است\n" +
+            "• fallbacks باید synchronous و lightweight باشند\n" +
+            "• اگر suspend کند ممکن است infinite loop یا unexpected behavior\n" +
+            "• بهتر است fallbacks ساده باشند\n" +
+            "• نکته: fallback components نباید async dependencies داشته باشند"
+    },
+    {
+        "id": 783,
+        "question": "How does Suspense improve user experience?",
+        "options": [
+            "Prevents users from leaving page",
+            "Makes application load twice as fast",
+            "Eliminates all loading states completely",
+            "Shows meaningful loading states reducing frustration",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• با نمایش meaningful loading states که frustration کاربر را کاهش می‌دهد\n" +
+            "• بجای blank screens یا spinning wheels\n" +
+            "• user می‌داند چه اتفاقی می‌افتد\n" +
+            "• content به‌تدریج ظاهر می‌شود\n" +
+            "• perceived performance بهتر است\n" +
+            "• نکته: good loading states به‌اندازه fast loading مهم هستند"
+    },
+    {
+        "id": 784,
+        "question": "Can Suspense be used for non-data operations?",
+        "options": [
+            "Yes, any async operation throwing promise",
+            "No, only data fetching supported",
+            "Yes, but only image loading",
+            "No, strictly for API calls"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• بله هر async operation که promise throw می‌کند\n" +
+            "• lazy loading components با React.lazy\n" +
+            "• dynamic imports\n" +
+            "• هر عملیات asynchronous compatible\n" +
+            "• نه فقط محدود به data fetching\n" +
+            "• نکته: Suspense یک primitive است برای هر async operation"
+    },
+    {
+        "id": 785,
+        "question": "What is the relationship between Suspense and loading states?",
+        "options": [
+            "Suspense declaratively manages loading states",
+            "Suspense eliminates need for loading states",
+            "Suspense converts loading to error states",
+            "Suspense and loading states are unrelated"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• Suspense یک راه declarative برای managing loading states است\n" +
+            "• بجای manual isLoading flags\n" +
+            "• loading logic از component جدا می‌شود\n" +
+            "• cleaner و maintainable code\n" +
+            "• React خودکار transitions را handle می‌کند\n" +
+            "• نکته: Suspense loading state management را simplify می‌کند"
+    },
+    {
+        "id": 786,
+        "question": "How does streaming affect bandwidth usage?",
+        "options": [
+            "Reduces bandwidth by compressing streams",
+            "Same total data sent more efficiently",
+            "Increases bandwidth due to chunking",
+            "No effect on bandwidth whatsoever"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• همان total data ارسال می‌شود اما به‌صورت efficient تر\n" +
+            "• bandwidth usage تغییر نمی‌کند\n" +
+            "• فقط timing و delivery method متفاوت است\n" +
+            "• ممکن است overhead کمی از chunking باشد\n" +
+            "• اما این negligible است\n" +
+            "• نکته: streaming درباره timing است نه data amount"
+    },
+    {
+        "id": 787,
+        "question": "Can you cancel Suspense loading programmatically?",
+        "options": [
+            "Yes, but only during development",
+            "Yes, using cancelSuspense() method",
+            "No, Suspense resolves when promise settles",
+            "No, requires page refresh to cancel"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• نه Suspense خودکار resolve می‌شود وقتی promise settle شود\n" +
+            "• cancellation باید در data fetching layer باشد\n" +
+            "• می‌توانید AbortController برای fetch requests استفاده کنید\n" +
+            "• اما Suspense خودش cancellation ندارد\n" +
+            "• این intentional برای simplicity است\n" +
+            "• نکته: cancellation در data layer نه Suspense layer"
+    },
+    {
+        "id": 788,
+        "question": "What is Out-of-Order Streaming in React?",
+        "options": [
+            "Streaming data in reverse chronological order",
+            "Components stream in priority order not sequential",
+            "Random component rendering for performance",
+            "Streaming only non-critical components late"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• Out-of-Order Streaming یعنی components به ترتیب priority stream می‌شوند نه sequential\n" +
+            "• component که زودتر ready شود اول stream می‌شود\n" +
+            "• ترتیب در code مهم نیست\n" +
+            "• priority و readiness مهم است\n" +
+            "• این باعث faster perceived loading می‌شود\n" +
+            "• نکته: React intelligent ordering برای optimal UX انجام می‌دهد"
+    },
+    {
+        "id": 789,
+        "question": "How does Suspense work with React Server Components?",
+        "options": [
+            "Converts Server Components to Client Components",
+            "Suspense doesn't work with Server Components",
+            "Allows async Server Components to suspend",
+            "Disables Server Components during loading",
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• Suspense به async Server Components اجازه suspend کردن می‌دهد\n" +
+            "• Server Component می‌تواند در زمان data fetching suspend کند\n" +
+            "• fallback stream می‌شود سپس actual content\n" +
+            "• این native integration است\n" +
+            "• یکی از قدرتمندترین combinations در React است\n" +
+            "• نکته: این async Server Components را practical می‌کند"
+    },
+    {
+        "id": 790,
+        "question": "What is the best practice for Suspense boundaries?",
+        "options": [
+            "Wrap every single component individually",
+            "Only use one boundary per application",
+            "Place where loading states make sense",
+            "Avoid Suspense in production builds"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• Suspense boundaries را جایی قرار دهید که loading states منطقی هستند\n" +
+            "• نه خیلی granular که زیاد loading states داشته باشید\n" +
+            "• نه خیلی coarse که همه چیز block شود\n" +
+            "• بر اساس user experience design کنید\n" +
+            "• معمولاً route-level یا section-level\n" +
+            "• نکته: تعادل بین granularity و simplicity"
+    },
 //     {
 //         "id": 781,
 //         "question": "What is the structure for dynamic route folder?",
