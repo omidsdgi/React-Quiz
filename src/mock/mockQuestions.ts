@@ -13557,7 +13557,7 @@ export const mockQuestions: Question[] = [
             "• نکته: این async function می‌تواند data fetch کند"
     },
     {
-        "id": 791,
+        "id": 801,
         "question": "Can dynamic routes be Server Components by default?",
         "options": [
             "No, they must be Client Components",
@@ -13567,10 +13567,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation":"• بله مگر اینکه با use client mark شوند\n" +
+            "• dynamic routes به‌طور پیش‌فرض Server Components هستند\n" +
+            "• می‌توانند async باشند و data fetch کنند\n" +
+            "• همان rules مثل static routes\n" +
+            "• dynamic بودن route تأثیری در component type ندارد\n" +
+            "• نکته: این یکی از قدرت‌های App Router است"
     },
     {
-        "id": 792,
+        "id": 802,
         "question": "How do you handle 404 for invalid dynamic routes?",
         "options": [
             "Using custom error.js in route folder",
@@ -13580,10 +13585,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation":"• با استفاده از notFound() function از next/navigation\n" +
+            "• در page component اگر param invalid است notFound() صدا بزنید\n" +
+            "• این not-found.js را trigger می‌کند\n" +
+            "• user یک 404 page می‌بیند\n" +
+            "• better UX نسبت به error\n" +
+            "• نکته: همیشه invalid params را validate و handle کنید"
     },
     {
-        "id": 793,
+        "id": 803,
         "question": "What is the priority order for route matching?",
         "options": [
             "Dynamic routes match before static routes",
@@ -13593,10 +13603,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation": "• static routes قبل از dynamic routes match می‌شوند\n" +
+            "• specific routes بر general routes priority دارند\n" +
+            "• /about بر /[slug] priority دارد\n" +
+            "• dynamic routes بر catch-all priority دارند\n" +
+            "• این از conflicts جلوگیری می‌کند\n" +
+            "• نکته: route specificity برای matching order مهم است"
     },
     {
-        "id": 794,
+        "id": 804,
         "question": "Can you use params in layout components?",
         "options": [
             "No, params only available in pages",
@@ -13606,10 +13621,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation":"• بله params به layout components پاس داده می‌شود\n" +
+            "• layouts می‌توانند به route params دسترسی داشته باشند\n" +
+            "• مفید برای conditional layouts بر اساس params\n" +
+            "• همان props interface مثل pages\n" +
+            "• می‌توانید layout را customize کنید\n" +
+            "• نکته: این برای dynamic layouts بر اساس route مفید است"
     },
     {
-        "id": 795,
+        "id": 805,
         "question": "How do you create nested dynamic routes?",
         "options": [
             "Using separate configuration file for nesting",
@@ -13619,10 +13639,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation":"• با استفاده از [param1]/[param2] folder structure برای nesting\n" +
+            "• هر level می‌تواند dynamic segment داشته باشد\n" +
+            "• مثلاً /category/[category]/post/[id]\n" +
+            "• params تمام segments را شامل می‌شود\n" +
+            "• deeply nested routing ممکن است\n" +
+            "• نکته: structure فولدر باید hierarchy را reflect کند"
     },
     {
-        "id": 796,
+        "id": 806,
         "question": "What happens when dynamic route doesn't match?",
         "options": [
             "Shows custom not-found.js component UI",
