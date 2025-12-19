@@ -13657,10 +13657,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation":"• custom not-found.js component UI نمایش داده می‌شود\n" +
+            "• یا default Next.js 404 page\n" +
+            "• 404 status code برگردانده می‌شود\n" +
+            "• error نیست بلکه intentional not found\n" +
+            "• می‌توانید custom UI بسازید\n" +
+            "• نکته: not-found.js در route folder برای custom 404"
     },
     {
-        "id": 797,
+        "id": 807,
         "question": "Can you use searchParams with dynamic routes?",
         "options": [
             "Yes, alongside params in page props",
@@ -13670,10 +13675,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":""
+        "explanation":"• بله هم params و هم searchParams در page props موجود هستند\n" +
+            "• params برای dynamic segments\n" +
+            "• searchParams برای query strings\n" +
+            "• می‌توانید هر دو را combine کنید\n" +
+            "• مثلاً /post/[id]?sort=date\n" +
+            "• نکته: این برای filtering و sorting در dynamic pages مفید است"
     },
     {
-        "id": 798,
+        "id": 808,
         "question": "How do you validate dynamic route parameters?",
         "options": [
             "Using validateParams in page component",
@@ -13683,10 +13693,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation": "• در page component قبل از fetch کردن data validation انجام دهید\n" +
+            "• می‌توانید notFound() برای invalid params بزنید\n" +
+            "• یا redirect() برای correction\n" +
+            "• type checking و format validation\n" +
+            "• business logic validation\n" +
+            "• نکته: همیشه user input را validate کنید حتی از URL"
     },
     {
-        "id": 799,
+        "id": 809,
         "question": "What is dynamicParams configuration option for?",
         "options": [
             "Controls behavior for non-generated params",
@@ -13696,10 +13711,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":""
+        "explanation":"• dynamicParams رفتار برای non-generated params را کنترل می‌کند\n" +
+            "• اگر false باشد فقط generated paths کار می‌کنند\n" +
+            "• اگر true باشد هر param می‌تواند work کند\n" +
+            "• default true است\n" +
+            "• برای strict static generation می‌توانید false کنید\n" +
+            "• نکته: این با generateStaticParams کار می‌کند"
     },
     {
-        "id": 800,
+        "id": 810,
         "question": "Can you use dynamic routes with parallel routes?",
         "options": [
             "No, parallel routes cannot be dynamic",
@@ -13709,7 +13729,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
-        "explanation":""
+        "explanation": "• بله با استفاده از @folder/[param] structure combination\n" +
+            "• parallel routes می‌توانند dynamic باشند\n" +
+            "• هر slot می‌تواند params خودش را داشته باشد\n" +
+            "• complex layouts با dynamic content\n" +
+            "• این advanced pattern است\n" +
+            "• نکته: ترکیب این features برای sophisticated UIs"
     },
 //     {
 //         "id": 801,
