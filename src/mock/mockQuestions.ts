@@ -13736,253 +13736,298 @@ export const mockQuestions: Question[] = [
             "• این advanced pattern است\n" +
             "• نکته: ترکیب این features برای sophisticated UIs"
     },
-//     {
-//         "id": 801,
-//         "question": "How do you generate metadata for dynamic routes?",
-//         "options": [
-//             "Using metadata object with dynamic values",
-//             "Using generateMetadata function with params",
-//             "Using getMetadata exported async function",
-//             "Using metadataParams in page configuration"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 802,
-//         "question": "What does revalidate option do for dynamic routes?",
-//         "options": [
-//             "Validates parameter format before rendering",
-//             "Controls ISR regeneration time interval",
-//             "Revalidates user authentication tokens",
-//             "Checks parameter values against schema"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 803,
-//         "question": "Can catch-all routes coexist with static routes?",
-//         "options": [
-//             "Yes, static routes take higher priority",
-//             "No, catch-all overrides all other routes",
-//             "Yes, but requires manual configuration",
-//             "No, they cause routing conflicts always"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 804,
-//         "question": "How do you handle loading states for dynamic routes?",
-//         "options": [
-//             "Using loading.js in the route folder",
-//             "Using isLoading prop in page component",
-//             "Using Suspense boundary around page",
-//             "Using useLoading hook in component"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 805,
-//         "question": "What is the difference between params and searchParams?",
-//         "options": [
-//             "params from URL path, searchParams from query",
-//             "params for client, searchParams for server",
-//             "params are strings, searchParams are objects",
-//             "params are optional, searchParams required"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 806,
-//         "question": "Can you use dynamic routes with route groups?",
-//         "options": [
-//             "No, route groups don't support dynamics",
-//             "Yes, like (group)/[param]/page.js structure",
-//             "Yes, but only with catch-all routes",
-//             "No, they have different purposes entirely"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 807,
-//         "question": "How do you redirect from dynamic route based on param?",
-//         "options": [
-//             "Using redirect() function from next/navigation",
-//             "Using return redirect in page component",
-//             "Using Router.push in useEffect hook",
-//             "Using <Redirect> component in JSX"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 808,
-//         "question": "What happens with special characters in dynamic params?",
-//         "options": [
-//             "Next.js URL encodes them automatically",
-//             "They cause routing errors immediately",
-//             "They are stripped from parameters",
-//             "They must be manually encoded first"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 809,
-//         "question": "How do you generate dynamic metadata in Next.js pages?",
-//         "options": [
-//             "Export generateMetadata function from page",
-//             "Use metadata object with dynamic values",
-//             "Call setMetadata hook in component body",
-//             "Import getMetadata from next/metadata"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 810,
-//         "question": "What parameters does generateMetadata function receive?",
-//         "options": [
-//             "Only params object from route segments",
-//             "Only searchParams from URL query string",
-//             "Both params and searchParams as objects",
-//             "Only request object with full details"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 811,
-//         "question": "Can generateMetadata be an async function?",
-//         "options": [
-//             "No, metadata must be synchronous always",
-//             "Yes, it can fetch data asynchronously",
-//             "No, async causes hydration errors",
-//             "Yes, but only in production mode"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 812,
-//         "question": "What does generateMetadata function return?",
-//         "options": [
-//             "Promise resolving to metadata object",
-//             "String containing page title only",
-//             "Array of meta tags for head",
-//             "Metadata object with title and description"
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 813,
-//         "question": "How do you set dynamic Open Graph images?",
-//         "options": [
-//             "Using openGraph.images array in metadata",
-//             "Using og:image meta tag in head",
-//             "Using setOGImage function from Next",
-//             "Using dynamicOG property in config"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 814,
-//         "question": "Can you access parent metadata in generateMetadata?",
-//         "options": [
-//             "Yes, but only in root layout",
-//             "No, each route generates independently",
-//             "Yes, through third parameter parent",
-//             "No, metadata doesn't support inheritance"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 815,
-//         "question": "What is the purpose of parent parameter?",
-//         "options": [
-//             "Access parent component props directly",
-//             "Get metadata from parent route segments",
-//             "Reference parent layout configuration",
-//             "Inherit styles from parent components"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 816,
-//         "question": "How do you set dynamic page title with params?",
-//         "options": [
-//             "Using title property with template string",
-//             "Using setTitle hook in component body",
-//             "Using dynamicTitle in route config",
-//             "Using <title> tag in page JSX"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 817,
-//         "question": "Can you fetch data inside generateMetadata function?",
-//         "options": [
-//             "Yes, using async/await for API calls",
-//             "No, fetching must happen in page",
-//             "Yes, but only from static files",
-//             "No, metadata must be synchronous"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 818,
-//         "question": "What happens when generateMetadata throws an error?",
-//         "options": [
-//             "Shows custom error page to user",
-//             "Falls back to static metadata object",
-//             "Page renders without any metadata",
-//             "Next.js shows 500 error page"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 819,
-//         "question": "How do you set dynamic canonical URLs?",
-//         "options": [
-//             "Using alternates.canonical in metadata",
-//             "Using <link rel='canonical'> in JSX",
-//             "Using setCanonical from next/head",
-//             "Using canonical property in config"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 811,
+        "question": "How do you generate metadata for dynamic routes?",
+        "options": [
+            "Using metadata object with dynamic values",
+            "Using generateMetadata function with params",
+            "Using getMetadata exported async function",
+            "Using metadataParams in page configuration"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• با export کردن generateMetadata function که params دریافت می‌کند\n" +
+            "• می‌توانید metadata را بر اساس route params بسازید\n" +
+            "• async function که data fetch می‌کند\n" +
+            "• dynamic titles و descriptions\n" +
+            "• برای SEO در dynamic pages ضروری است\n" +
+            "• نکته: این برای unique metadata per route است"
+    },
+    {
+        "id": 812,
+        "question": "What does revalidate option do for dynamic routes?",
+        "options": [
+            "Validates parameter format before rendering",
+            "Controls ISR regeneration time interval",
+            "Revalidates user authentication tokens",
+            "Checks parameter values against schema"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• revalidate زمان ISR regeneration interval را کنترل می‌کند\n" +
+            "• مثلاً revalidate: 60 یعنی هر 60 ثانیه\n" +
+            "• static generated pages را fresh نگه می‌دارد\n" +
+            "• بدون rebuild کامل\n" +
+            "• برای content که گاهی update می‌شود\n" +
+            "• نکته: balance بین freshness و performance"
+    },
+    {
+        "id": 813,
+        "question": "Can catch-all routes coexist with static routes?",
+        "options": [
+            "Yes, static routes take higher priority",
+            "No, catch-all overrides all other routes",
+            "Yes, but requires manual configuration",
+            "No, they cause routing conflicts always"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• بله static routes higher priority دارند و اول match می‌شوند\n" +
+            "• catch-all فقط unmatched paths را می‌گیرد\n" +
+            "• مثلاً /about static و /[...slug] catch-all\n" +
+            "• /about به static route می‌رود\n" +
+            "• بقیه به catch-all\n" +
+            "• نکته: route specificity همیشه wins می‌کند"
+    },
+    {
+        "id": 814,
+        "question": "How do you handle loading states for dynamic routes?",
+        "options": [
+            "Using loading.js in the route folder",
+            "Using isLoading prop in page component",
+            "Using Suspense boundary around page",
+            "Using useLoading hook in component"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• با استفاده از loading.js در route folder\n" +
+            "• automatic Suspense boundary\n" +
+            "• در زمان data fetching نمایش داده می‌شود\n" +
+            "• می‌توانید skeleton UI بسازید\n" +
+            "• better UX برای dynamic content\n" +
+            "• نکته: loading.js برای هر route level قابل تعریف است"
+    },
+    {
+        "id": 815,
+        "question": "What is the difference between params and searchParams?",
+        "options": [
+            "params from URL path, searchParams from query",
+            "params for client, searchParams for server",
+            "params are strings, searchParams are objects",
+            "params are optional, searchParams required"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• params از URL path یعنی dynamic segments می‌آیند\n" +
+            "• searchParams از query string بعد از ? می‌آیند\n" +
+            "• params بخشی از route definition هستند\n" +
+            "• searchParams optional و variable هستند\n" +
+            "• مثلاً /post/123?sort=date → params.id='123' و searchParams.sort='date'\n" +
+            "• نکته: params برای routing و searchParams برای filtering/options"
+    },
+    {
+        "id": 816,
+        "question": "Can you use dynamic routes with route groups?",
+        "options": [
+            "No, route groups don't support dynamics",
+            "Yes, like (group)/[param]/page.js structure",
+            "Yes, but only with catch-all routes",
+            "No, they have different purposes entirely"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• بله مثل (group)/[param]/page.js structure\n" +
+            "• route groups بر URL تأثیر نمی‌گذارند\n" +
+            "• dynamic segments کار می‌کنند\n" +
+            "• برای organizing code بدون affecting routes\n" +
+            "• می‌توانید layouts مختلف داشته باشید\n" +
+            "• نکته: parentheses برای grouping نه routing"
+    },
+    {
+        "id": 817,
+        "question": "How do you redirect from dynamic route based on param?",
+        "options": [
+            "Using redirect() function from next/navigation",
+            "Using return redirect in page component",
+            "Using Router.push in useEffect hook",
+            "Using <Redirect> component in JSX"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• با استفاده از redirect() function از next/navigation\n" +
+            "• در page component param را check کنید\n" +
+            "• اگر condition met شد redirect() بزنید\n" +
+            "• مثلاً redirect to canonical URL\n" +
+            "• یا redirect based on user permissions\n" +
+            "• نکته: redirect() execution را متوقف می‌کند"
+    },
+    {
+        "id": 818,
+        "question": "What happens with special characters in dynamic params?",
+        "options": [
+            "Next.js URL encodes them automatically",
+            "They cause routing errors immediately",
+            "They are stripped from parameters",
+            "They must be manually encoded first"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• Next.js آنها را به‌طور خودکار URL encode می‌کند\n" +
+            "• spaces به %20 تبدیل می‌شوند\n" +
+            "• special characters escaped می‌شوند\n" +
+            "• decode کردن automatic است\n" +
+            "• params decoded values دریافت می‌کنند\n" +
+            "• نکته: نیازی به manual encoding/decoding نیست"
+    },
+    {
+        "id": 819,
+        "question": "How do you generate dynamic metadata in Next.js pages?",
+        "options": [
+            "Export generateMetadata function from page",
+            "Use metadata object with dynamic values",
+            "Call setMetadata hook in component body",
+            "Import getMetadata from next/metadata"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• با export کردن generateMetadata function از page\n" +
+            "• این function params و searchParams دریافت می‌کند\n" +
+            "• می‌تواند async باشد و data fetch کند\n" +
+            "• metadata object برمی‌گرداند\n" +
+            "• برای dynamic SEO optimization\n" +
+            "• نکته: این preferred method در App Router است"
+    },
+    {
+        "id": 820,
+        "question": "What parameters does generateMetadata function receive?",
+        "options": [
+            "Only params object from route segments",
+            "Only searchParams from URL query string",
+            "Both params and searchParams as objects",
+            "Only request object with full details"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 811,
+        "question": "Can generateMetadata be an async function?",
+        "options": [
+            "No, metadata must be synchronous always",
+            "Yes, it can fetch data asynchronously",
+            "No, async causes hydration errors",
+            "Yes, but only in production mode"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":""
+    },
+    {
+        "id": 812,
+        "question": "What does generateMetadata function return?",
+        "options": [
+            "Promise resolving to metadata object",
+            "String containing page title only",
+            "Array of meta tags for head",
+            "Metadata object with title and description"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 813,
+        "question": "How do you set dynamic Open Graph images?",
+        "options": [
+            "Using openGraph.images array in metadata",
+            "Using og:image meta tag in head",
+            "Using setOGImage function from Next",
+            "Using dynamicOG property in config"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 814,
+        "question": "Can you access parent metadata in generateMetadata?",
+        "options": [
+            "Yes, but only in root layout",
+            "No, each route generates independently",
+            "Yes, through third parameter parent",
+            "No, metadata doesn't support inheritance"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 815,
+        "question": "What is the purpose of parent parameter?",
+        "options": [
+            "Access parent component props directly",
+            "Get metadata from parent route segments",
+            "Reference parent layout configuration",
+            "Inherit styles from parent components"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 816,
+        "question": "How do you set dynamic page title with params?",
+        "options": [
+            "Using title property with template string",
+            "Using setTitle hook in component body",
+            "Using dynamicTitle in route config",
+            "Using <title> tag in page JSX"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":""
+    },
+    {
+        "id": 817,
+        "question": "Can you fetch data inside generateMetadata function?",
+        "options": [
+            "Yes, using async/await for API calls",
+            "No, fetching must happen in page",
+            "Yes, but only from static files",
+            "No, metadata must be synchronous"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 818,
+        "question": "What happens when generateMetadata throws an error?",
+        "options": [
+            "Shows custom error page to user",
+            "Falls back to static metadata object",
+            "Page renders without any metadata",
+            "Next.js shows 500 error page"
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 819,
+        "question": "How do you set dynamic canonical URLs?",
+        "options": [
+            "Using alternates.canonical in metadata",
+            "Using <link rel='canonical'> in JSX",
+            "Using setCanonical from next/head",
+            "Using canonical property in config"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
 //     {
 //         "id": 820,
 //         "question": "Can static metadata and generateMetadata coexist?",
