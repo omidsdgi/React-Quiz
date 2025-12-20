@@ -13912,7 +13912,7 @@ export const mockQuestions: Question[] = [
         "explanation":""
     },
     {
-        "id": 811,
+        "id": 821,
         "question": "Can generateMetadata be an async function?",
         "options": [
             "No, metadata must be synchronous always",
@@ -13922,10 +13922,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-        "explanation":""
+        "explanation": "• بله می‌تواند data را به‌صورت asynchronous fetch کند\n" +
+            "• برای fetching metadata از database یا API\n" +
+            "• await برای promises\n" +
+            "• Next.js منتظر می‌ماند تا resolve شود\n" +
+            "• سپس metadata را apply می‌کند\n" +
+            "• نکته: این برای dynamic SEO data powerful است"
     },
     {
-        "id": 812,
+        "id": 822,
         "question": "What does generateMetadata function return?",
         "options": [
             "Promise resolving to metadata object",
@@ -13935,10 +13940,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-        "explanation":""
+        "explanation": "• یک metadata object با properties مثل title و description برمی‌گرداند\n" +
+            "• می‌تواند openGraph و twitter و icons داشته باشد\n" +
+            "• تمام metadata fields supported هستند\n" +
+            "• این object به HTML head اضافه می‌شود\n" +
+            "• برای SEO و social sharing\n" +
+            "• نکته: structure باید با Metadata type مطابقت داشته باشد"
     },
     {
-        "id": 813,
+        "id": 823,
         "question": "How do you set dynamic Open Graph images?",
         "options": [
             "Using openGraph.images array in metadata",
@@ -13948,10 +13958,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation": "• با استفاده از openGraph.images array در metadata object\n" +
+            "• می‌توانید URL و dimensions و alt text تنظیم کنید\n" +
+            "• dynamic بر اساس content\n" +
+            "• می‌توانید multiple images داشته باشید\n" +
+            "• برای social media previews\n" +
+            "• نکته: OG images بر social sharing تأثیر زیادی دارند"
     },
     {
-        "id": 814,
+        "id": 824,
         "question": "Can you access parent metadata in generateMetadata?",
         "options": [
             "Yes, but only in root layout",
@@ -13961,10 +13976,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation": "• بله از طریق third parameter به نام parent\n" +
+            "• این یک promise است که resolve به parent metadata می‌شود\n" +
+            "• می‌توانید parent metadata را extend کنید\n" +
+            "• برای inheriting و overriding\n" +
+            "• layout metadata accessible است\n" +
+            "• نکته: await parent برای access به parent metadata"
     },
     {
-        "id": 815,
+        "id": 825,
         "question": "What is the purpose of parent parameter?",
         "options": [
             "Access parent component props directly",
@@ -13974,10 +13994,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":""
+        "explanation":"• برای دسترسی به metadata از parent route segments\n" +
+            "• می‌توانید values را inherit کنید\n" +
+            "• یا بر اساس parent customize کنید\n" +
+            "• برای building metadata incrementally\n" +
+            "• مثلاً extend کردن title template\n" +
+            "• نکته: این برای metadata composition مفید است"
     },
     {
-        "id": 816,
+        "id": 826,
         "question": "How do you set dynamic page title with params?",
         "options": [
             "Using title property with template string",
@@ -13987,10 +14012,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 10,
-        "explanation":""
+        "explanation": "• با استفاده از title property با template string که params دارد\n" +
+            "• مثلاً title: Post ${params.id}\n" +
+            "• می‌توانید data fetched را نیز استفاده کنید\n" +
+            "• dynamic content در title\n" +
+            "• برای unique titles per page\n" +
+            "• نکته: descriptive titles برای SEO مهم هستند"
     },
     {
-        "id": 817,
+        "id": 827,
         "question": "Can you fetch data inside generateMetadata function?",
         "options": [
             "Yes, using async/await for API calls",
@@ -14000,10 +14030,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation":"• بله با async و await برای API calls استفاده کنید\n" +
+            "• می‌توانید از database یا external APIs fetch کنید\n" +
+            "• data برای metadata generation\n" +
+            "• مثلاً fetching post title برای page title\n" +
+            "• این یکی از قدرت‌های generateMetadata است\n" +
+            "• نکته: Next.js این requests را deduplicate می‌کند"
     },
     {
-        "id": 818,
+        "id": 828,
         "question": "What happens when generateMetadata throws an error?",
         "options": [
             "Shows custom error page to user",
@@ -14013,10 +14048,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
-        "explanation":""
+        "explanation": "• Next.js یک 500 error page نمایش می‌دهد\n" +
+            "• page render نمی‌شود\n" +
+            "• error boundary می‌تواند catch کند\n" +
+            "• باید error handling داشته باشید\n" +
+            "• fallback metadata ندارد\n" +
+            "• نکته: همیشه errors را در generateMetadata handle کنید"
     },
     {
-        "id": 819,
+        "id": 829,
         "question": "How do you set dynamic canonical URLs?",
         "options": [
             "Using alternates.canonical in metadata",
@@ -14026,21 +14066,31 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation": "• با استفاده از alternates.canonical در metadata object\n" +
+            "• URL را بر اساس params بسازید\n" +
+            "• برای SEO و duplicate content prevention\n" +
+            "• مشخص می‌کند کدام URL preferred است\n" +
+            "• مهم برای dynamic routes\n" +
+            "• نکته: canonical URLs به SEO ranking کمک می‌کنند"
     },
-//     {
-//         "id": 820,
-//         "question": "Can static metadata and generateMetadata coexist?",
-//         "options": [
-//             "Yes, but static takes priority always",
-//             "No, only one method allowed per route",
-//             "Yes, but generateMetadata takes priority",
-//             "No, Next.js throws build error"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 830,
+        "question": "Can static metadata and generateMetadata coexist?",
+        "options": [
+            "Yes, but static takes priority always",
+            "No, only one method allowed per route",
+            "Yes, but generateMetadata takes priority",
+            "No, Next.js throws build error"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• نه فقط یک method در هر route مجاز است\n" +
+            "• یا metadata object یا generateMetadata function\n" +
+            "• استفاده همزمان error می‌دهد\n" +
+            "• باید یکی را انتخاب کنید\n" +
+            "• generateMetadata برای dynamic\n" +
+            "• نکته: برای static metadata از metadata object استفاده کنید"
+    },
 //     {
 //         "id": 821,
 //         "question": "How do you set different metadata per locale?",
