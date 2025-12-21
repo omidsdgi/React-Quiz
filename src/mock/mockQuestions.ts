@@ -14272,7 +14272,7 @@ export const mockQuestions: Question[] = [
             "• نکته: این برای incremental metadata building است"
     },
     {
-        "id": 831,
+        "id": 841,
         "question": "How do you set dynamic alternate language URLs?",
         "options": [
             "Using alternates.languages in metadata",
@@ -14282,10 +14282,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":""
+        "explanation": "• با استفاده از alternates.languages در metadata object\n" +
+            "• object با language codes به‌عنوان keys\n" +
+            "• URLs برای هر language variant\n" +
+            "• برای multilingual SEO\n" +
+            "• hreflang tags تولید می‌شوند\n" +
+            "• نکته: این برای international SEO critical است"
     },
     {
-        "id": 832,
+        "id": 842,
         "question": "What happens when both metadata and generateMetadata exist?",
         "options": [
             "Metadata object takes priority always",
@@ -14295,10 +14300,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":""
+        "explanation":"• Next.js یک compilation error throw می‌کند\n" +
+            "• نمی‌توانید هر دو را همزمان داشته باشید\n" +
+            "• باید یکی را انتخاب کنید\n" +
+            "• metadata برای static و generateMetadata برای dynamic\n" +
+            "• این از confusion جلوگیری می‌کند\n" +
+            "• نکته: clear error message به شما کمک می‌کند مشکل را fix کنید"
     },
     {
-        "id": 833,
+        "id": 843,
         "question": "Can you use React hooks in generateMetadata?",
         "options": [
             "Yes, all React hooks work normally",
@@ -14308,10 +14318,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation": "• نه generateMetadata یک React component نیست\n" +
+            "• این یک plain async function است\n" +
+            "• hooks فقط در components کار می‌کنند\n" +
+            "• استفاده از hooks error می‌دهد\n" +
+            "• برای data از fetch یا database استفاده کنید\n" +
+            "• نکته: generateMetadata خارج از React component lifecycle است"
     },
     {
-        "id": 834,
+        "id": 844,
         "question": "How do you set dynamic viewport metadata?",
         "options": [
             "Using viewport property in metadata",
@@ -14321,10 +14336,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation": "• با استفاده از viewport property در metadata object\n" +
+            "• می‌توانید width و initialScale و other viewport settings تنظیم کنید\n" +
+            "• dynamic بر اساس device یا content\n" +
+            "• برای responsive behavior\n" +
+            "• viewport meta tag control\n" +
+            "• نکته: viewport settings بر mobile experience تأثیر می‌گذارند"
     },
     {
-        "id": 835,
+        "id": 845,
         "question": "What is icons property used for in metadata?",
         "options": [
             "Generate icon sprites automatically",
@@ -14334,10 +14354,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-        "explanation":""
+        "explanation": "• icons property paths به favicon و app icons را تعریف می‌کند\n" +
+            "• می‌تواند favicon و apple-touch-icon و دیگر icon types داشته باشد\n" +
+            "• multiple sizes و formats\n" +
+            "• برای different devices و contexts\n" +
+            "• browser و mobile home screen icons\n" +
+            "• نکته: proper icons برای professional appearance مهم هستند"
     },
     {
-        "id": 836,
+        "id": 846,
         "question": "Can you cache results of generateMetadata function?",
         "options": [
             "No, metadata generates on every request",
@@ -14347,10 +14372,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 30,
-        "explanation":""
+        "explanation": "• بله Next.js به‌طور خودکار results را cache می‌کند\n" +
+            "• fetch requests در generateMetadata deduplicated هستند\n" +
+            "• همان data با page component share می‌شود\n" +
+            "• performance optimization automatic است\n" +
+            "• no double fetching\n" +
+            "• نکته: Next.js request memoization برای efficiency دارد"
     },
     {
-        "id": 837,
+        "id": 847,
         "question": "How do you set dynamic author metadata?",
         "options": [
             "Using <meta name='author'> tag",
@@ -14360,10 +14390,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation": "• با استفاده از authors array در metadata object\n" +
+            "• هر author می‌تواند name و url داشته باشد\n" +
+            "• multiple authors supported هستند\n" +
+            "• برای attribution و SEO\n" +
+            "• author meta tags\n" +
+            "• نکته: structured author data به SEO کمک می‌کند"
     },
     {
-        "id": 838,
+        "id": 848,
         "question": "What is manifest property for in metadata?",
         "options": [
             "Link to web app manifest file",
@@ -14373,10 +14408,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation": "• manifest property لینک به web app manifest file است\n" +
+            "• برای PWA Progressive Web App configuration\n" +
+            "• manifest.json یا manifest.webmanifest\n" +
+            "• defines app behavior وقتی installed است\n" +
+            "• icons و theme colors و display mode\n" +
+            "• نکته: manifest برای installable web apps ضروری است"
     },
     {
-        "id": 841,
+        "id": 849,
         "question": "When does Next.js automatically choose dynamic rendering?",
         "options": [
             "When using dynamic functions like cookies",
@@ -14386,10 +14426,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation":"• وقتی از dynamic functions مثل cookies یا headers یا searchParams استفاده شود\n" +
+            "• این functions نیاز به request-time data دارند\n" +
+            "• Next.js automatically به dynamic rendering switch می‌کند\n" +
+            "• نمی‌تواند در build time pre-render شود\n" +
+            "• این opt-in به dynamic behavior است\n" +
+            "• نکته: استفاده از dynamic functions باعث dynamic rendering می‌شود"
     },
     {
-        "id": 842,
+        "id": 850,
         "question": "What are dynamic functions in Next.js?",
         "options": [
             "Functions that run only on client",
@@ -14399,7 +14444,12 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":""
+        "explanation": "• dynamic functions شامل cookies و headers و searchParams و دیگر request-specific APIs هستند\n" +
+            "• این functions به runtime request data نیاز دارند\n" +
+            "• نمی‌توانند در build time evaluated شوند\n" +
+            "• باعث opt-out از static rendering می‌شوند\n" +
+            "• route را dynamic می‌کنند\n" +
+            "• نکته: استفاده محتاطانه از این functions برای performance"
     },
     {
         "id": 843,
