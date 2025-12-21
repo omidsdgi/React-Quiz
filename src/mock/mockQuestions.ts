@@ -14091,370 +14091,420 @@ export const mockQuestions: Question[] = [
             "• generateMetadata برای dynamic\n" +
             "• نکته: برای static metadata از metadata object استفاده کنید"
     },
-//     {
-//         "id": 821,
-//         "question": "How do you set different metadata per locale?",
-//         "options": [
-//             "Check locale in generateMetadata params",
-//             "Use separate metadata per language file",
-//             "Import translations in metadata object",
-//             "Use i18n config in next.config.js"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 822,
-//         "question": "What is title.template used for in metadata?",
-//         "options": [
-//             "Defines title format for child routes",
-//             "Creates dynamic title from database",
-//             "Validates title length and format",
-//             "Generates SEO-friendly title strings"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 823,
-//         "question": "How do you override parent title template?",
-//         "options": [
-//             "Use title.default in child metadata",
-//             "Use title.absolute in child metadata",
-//             "Use title.override in child metadata",
-//             "Use title.custom in child metadata"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 824,
-//         "question": "Can you use environment variables in generateMetadata?",
-//         "options": [
-//             "No, env variables unavailable there",
-//             "Yes, using process.env like usual",
-//             "No, only in page components",
-//             "Yes, but only NEXT_PUBLIC_ variables"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 825,
-//         "question": "How do you set dynamic Twitter Card metadata?",
-//         "options": [
-//             "Using <meta> tags in page JSX",
-//             "Using twitter property in metadata object",
-//             "Using setTwitterCard from next/head",
-//             "Using socialMedia.twitter in config"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 826,
-//         "question": "What does metadataBase property define?",
-//         "options": [
-//             "Base URL for relative metadata URLs",
-//             "Default metadata for all pages",
-//             "Primary language for content",
-//             "Root directory for metadata files"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 827,
-//         "question": "Can you conditionally return different metadata?",
-//         "options": [
-//             "Yes, based on params or conditions",
-//             "No, metadata must be static always",
-//             "Yes, but only in development mode",
-//             "No, causes hydration mismatches"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 828,
-//         "question": "How do you set dynamic meta description?",
-//         "options": [
-//             "Using description property in metadata",
-//             "Using <meta name='description'> tag",
-//             "Using setDescription hook in component",
-//             "Using desc property in route config"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 829,
-//         "question": "What is robots property used for in metadata?",
-//         "options": [
-//             "Control search engine crawling behavior",
-//             "Validate bot traffic to website",
-//             "Generate robots.txt file automatically",
-//             "Block malicious bots from site"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 830,
-//         "question": "Can you merge parent and child metadata objects?",
-//         "options": [
-//             "No, child completely overrides parent",
-//             "Yes, Next.js merges them automatically",
-//             "Yes, but requires manual spread operator",
-//             "No, each route is independent"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 831,
-//         "question": "How do you set dynamic alternate language URLs?",
-//         "options": [
-//             "Using alternates.languages in metadata",
-//             "Using <link hreflang> tags in JSX",
-//             "Using i18n config in next.config",
-//             "Using setLanguages from next/head"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 832,
-//         "question": "What happens when both metadata and generateMetadata exist?",
-//         "options": [
-//             "Metadata object takes priority always",
-//             "Next.js throws compilation error",
-//             "generateMetadata takes priority",
-//             "Both merge into single metadata"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 833,
-//         "question": "Can you use React hooks in generateMetadata?",
-//         "options": [
-//             "Yes, all React hooks work normally",
-//             "No, it's not a React component",
-//             "Yes, but only useState and useEffect",
-//             "No, causes server-side errors"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 834,
-//         "question": "How do you set dynamic viewport metadata?",
-//         "options": [
-//             "Using viewport property in metadata",
-//             "Using <meta viewport> tag in JSX",
-//             "Using setViewport from next/head",
-//             "Using screen property in config"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 835,
-//         "question": "What is icons property used for in metadata?",
-//         "options": [
-//             "Generate icon sprites automatically",
-//             "Define favicon and app icons paths",
-//             "Optimize icon loading performance",
-//             "Convert images to icon formats"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 836,
-//         "question": "Can you cache results of generateMetadata function?",
-//         "options": [
-//             "No, metadata generates on every request",
-//             "Yes, but only in production builds",
-//             "No, caching causes stale metadata",
-//             "Yes, Next.js caches automatically"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 837,
-//         "question": "How do you set dynamic author metadata?",
-//         "options": [
-//             "Using <meta name='author'> tag",
-//             "Using authors array in metadata object",
-//             "Using setAuthor hook in component",
-//             "Using author property in config"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 838,
-//         "question": "What is manifest property for in metadata?",
-//         "options": [
-//             "Link to web app manifest file",
-//             "Generate manifest.json automatically",
-//             "Configure PWA settings directly",
-//             "Define app configuration manifest"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 841,
-//         "question": "When does Next.js automatically choose dynamic rendering?",
-//         "options": [
-//             "When using dynamic functions like cookies",
-//             "When page has too many components",
-//             "When images are used in page",
-//             "When CSS modules are imported"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 842,
-//         "question": "What are dynamic functions in Next.js?",
-//         "options": [
-//             "Functions that run only on client",
-//             "Functions that change component behavior",
-//             "Functions like cookies, headers, searchParams",
-//             "Functions that optimize bundle size"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 843,
-//         "question": "How do you force static rendering?",
-//         "options": [
-//             "Export const dynamic = 'force-static'",
-//             "Use static property in page config",
-//             "Add staticMode to next.config.js",
-//             "Wrap page with StaticRender component"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 844,
-//         "question": "How do you force dynamic rendering?",
-//         "options": [
-//             "Add dynamicMode to route config",
-//             "Use force dynamic in page settings",
-//             "Wrap component with DynamicRender",
-//             "Export const dynamic = 'force-dynamic'"
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 845,
-//         "question": "What does ISR stand for in Next.js?",
-//         "options": [
-//             "Instant Server Rendering for pages",
-//             "Incremental Static Regeneration technique",
-//             "Internal State Revalidation process",
-//             "Indexed Server Response caching"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 846,
-//         "question": "How do you enable ISR for a page?",
-//         "options": [
-//             "Export const revalidate with time seconds",
-//             "Use ISR property in page config",
-//             "Add revalidate to next.config.js file",
-//             "Wrap page with ISRProvider component"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 847,
-//         "question": "What does revalidate: 60 mean in ISR?",
-//         "options": [
-//             "Page rebuilds every 60 milliseconds",
-//             "Page regenerates after 60 user visits",
-//             "Page revalidates at most every minute",
-//             "Page caches for exactly 60 hours"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 848,
-//         "question": "What is the benefit of ISR over static?",
-//         "options": [
-//             "ISR pages load faster than static",
-//             "ISR updates content without full rebuild",
-//             "ISR reduces server costs significantly",
-//             "ISR works offline without internet"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 849,
-//         "question": "What does revalidate: false do in Next.js?",
-//         "options": [
-//             "Disables page rendering completely",
-//             "Makes page fully dynamic rendering",
-//             "Caches page indefinitely until rebuild",
-//             "Throws error during build process"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 850,
-//         "question": "Can you mix static and dynamic rendering?",
-//         "options": [
-//             "No, entire app uses one method",
-//             "Yes, per route basis configuration",
-//             "No, causes hydration errors always",
-//             "Yes, but only in production mode"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 831,
+        "question": "How do you set different metadata per locale?",
+        "options": [
+            "Check locale in generateMetadata params",
+            "Use separate metadata per language file",
+            "Import translations in metadata object",
+            "Use i18n config in next.config.js"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• با check کردن locale در generateMetadata params\n" +
+            "• می‌توانید conditional metadata بر اساس language بسازید\n" +
+            "• translations برای title و description\n" +
+            "• hreflang tags برای SEO\n" +
+            "• language-specific content\n" +
+            "• نکته: این برای i18n applications ضروری است"
+    },
+    {
+        "id": 832,
+        "question": "What is title.template used for in metadata?",
+        "options": [
+            "Defines title format for child routes",
+            "Creates dynamic title from database",
+            "Validates title length and format",
+            "Generates SEO-friendly title strings"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• title.template format برای child route titles را تعریف می‌کند\n" +
+            "• مثلاً '%s | My Site' که %s با child title جایگزین می‌شود\n" +
+            "• consistency در تمام pages\n" +
+            "• در parent layout تعریف می‌شود\n" +
+            "• children می‌توانند فقط page-specific part را set کنند\n" +
+            "• نکته: این برای site-wide title pattern مفید است"
+    },
+    {
+        "id": 833,
+        "question": "How do you override parent title template?",
+        "options": [
+            "Use title.default in child metadata",
+            "Use title.absolute in child metadata",
+            "Use title.override in child metadata",
+            "Use title.custom in child metadata"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• با استفاده از title.absolute در child metadata\n" +
+            "• این template را ignore می‌کند\n" +
+            "• full title control\n" +
+            "• برای special pages مثل home\n" +
+            "• template نباید applied شود\n" +
+            "• نکته: absolute برای complete override است"
+    },
+    {
+        "id": 834,
+        "question": "Can you use environment variables in generateMetadata?",
+        "options": [
+            "No, env variables unavailable there",
+            "Yes, using process.env like usual",
+            "No, only in page components",
+            "Yes, but only NEXT_PUBLIC_ variables"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• بله با استفاده از process.env مثل usual\n" +
+            "• تمام env variables در server accessible هستند\n" +
+            "• برای dynamic configuration\n" +
+            "• مثلاً API URLs یا site names\n" +
+            "• نیازی به NEXT_PUBLIC_ نیست\n" +
+            "• نکته: generateMetadata در server اجرا می‌شود"
+    },
+    {
+        "id": 835,
+        "question": "How do you set dynamic Twitter Card metadata?",
+        "options": [
+            "Using <meta> tags in page JSX",
+            "Using twitter property in metadata object",
+            "Using setTwitterCard from next/head",
+            "Using socialMedia.twitter in config"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• با استفاده از twitter property در metadata object\n" +
+            "• می‌توانید card type و images و creator تنظیم کنید\n" +
+            "• dynamic بر اساس content\n" +
+            "• برای Twitter/X previews\n" +
+            "• similar به Open Graph اما Twitter-specific\n" +
+            "• نکته: Twitter Cards engagement را در social media بهبود می‌دهند"
+    },
+    {
+        "id": 836,
+        "question": "What does metadataBase property define?",
+        "options": [
+            "Base URL for relative metadata URLs",
+            "Default metadata for all pages",
+            "Primary language for content",
+            "Root directory for metadata files"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• metadataBase یک base URL برای relative metadata URLs تعریف می‌کند\n" +
+            "• برای resolving relative paths در metadata\n" +
+            "• مثلاً برای Open Graph images\n" +
+            "• در root layout تنظیم می‌شود\n" +
+            "• تمام relative URLs به این base resolve می‌شوند\n" +
+            "• نکته: این برای consistent URLs در production ضروری است"
+    },
+    {
+        "id": 837,
+        "question": "Can you conditionally return different metadata?",
+        "options": [
+            "Yes, based on params or conditions",
+            "No, metadata must be static always",
+            "Yes, but only in development mode",
+            "No, causes hydration mismatches"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• بله بر اساس params یا conditions می‌توانید metadata متفاوت برگردانید\n" +
+            "• if statements برای conditional logic\n" +
+            "• different metadata objects بر اساس state\n" +
+            "• مثلاً metadata متفاوت برای published vs draft\n" +
+            "• این flexibility زیادی می‌دهد\n" +
+            "• نکته: conditional metadata برای personalization مفید است"
+    },
+    {
+        "id": 838,
+        "question": "How do you set dynamic meta description?",
+        "options": [
+            "Using description property in metadata",
+            "Using <meta name='description'> tag",
+            "Using setDescription hook in component",
+            "Using desc property in route config"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• با استفاده از description property در metadata object\n" +
+            "• می‌توانید از params یا fetched data استفاده کنید\n" +
+            "• dynamic content در description\n" +
+            "• مثلاً post excerpt به‌عنوان description\n" +
+            "• برای SEO و search results\n" +
+            "• نکته: descriptions باید 150-160 characters باشند"
+    },
+    {
+        "id": 839,
+        "question": "What is robots property used for in metadata?",
+        "options": [
+            "Control search engine crawling behavior",
+            "Validate bot traffic to website",
+            "Generate robots.txt file automatically",
+            "Block malicious bots from site"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• robots برای کنترل search engine crawling behavior است\n" +
+            "• می‌توانید index یا noindex تنظیم کنید\n" +
+            "• follow یا nofollow برای links\n" +
+            "• control بر SEO indexing\n" +
+            "• مثلاً admin pages را noindex کنید\n" +
+            "• نکته: robots meta tag بر crawler behavior تأثیر می‌گذارد"
+    },
+    {
+        "id": 840,
+        "question": "Can you merge parent and child metadata objects?",
+        "options": [
+            "No, child completely overrides parent",
+            "Yes, Next.js merges them automatically",
+            "Yes, but requires manual spread operator",
+            "No, each route is independent"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• بله Next.js آنها را به‌طور خودکار merge می‌کند\n" +
+            "• child values parent را override می‌کنند\n" +
+            "• unspecified fields از parent inherited می‌شوند\n" +
+            "• deep merging برای nested objects\n" +
+            "• این composition pattern است\n" +
+            "• نکته: این برای incremental metadata building است"
+    },
+    {
+        "id": 831,
+        "question": "How do you set dynamic alternate language URLs?",
+        "options": [
+            "Using alternates.languages in metadata",
+            "Using <link hreflang> tags in JSX",
+            "Using i18n config in next.config",
+            "Using setLanguages from next/head"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 832,
+        "question": "What happens when both metadata and generateMetadata exist?",
+        "options": [
+            "Metadata object takes priority always",
+            "Next.js throws compilation error",
+            "generateMetadata takes priority",
+            "Both merge into single metadata"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 833,
+        "question": "Can you use React hooks in generateMetadata?",
+        "options": [
+            "Yes, all React hooks work normally",
+            "No, it's not a React component",
+            "Yes, but only useState and useEffect",
+            "No, causes server-side errors"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 834,
+        "question": "How do you set dynamic viewport metadata?",
+        "options": [
+            "Using viewport property in metadata",
+            "Using <meta viewport> tag in JSX",
+            "Using setViewport from next/head",
+            "Using screen property in config"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 835,
+        "question": "What is icons property used for in metadata?",
+        "options": [
+            "Generate icon sprites automatically",
+            "Define favicon and app icons paths",
+            "Optimize icon loading performance",
+            "Convert images to icon formats"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":""
+    },
+    {
+        "id": 836,
+        "question": "Can you cache results of generateMetadata function?",
+        "options": [
+            "No, metadata generates on every request",
+            "Yes, but only in production builds",
+            "No, caching causes stale metadata",
+            "Yes, Next.js caches automatically"
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 837,
+        "question": "How do you set dynamic author metadata?",
+        "options": [
+            "Using <meta name='author'> tag",
+            "Using authors array in metadata object",
+            "Using setAuthor hook in component",
+            "Using author property in config"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 838,
+        "question": "What is manifest property for in metadata?",
+        "options": [
+            "Link to web app manifest file",
+            "Generate manifest.json automatically",
+            "Configure PWA settings directly",
+            "Define app configuration manifest"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 841,
+        "question": "When does Next.js automatically choose dynamic rendering?",
+        "options": [
+            "When using dynamic functions like cookies",
+            "When page has too many components",
+            "When images are used in page",
+            "When CSS modules are imported"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 842,
+        "question": "What are dynamic functions in Next.js?",
+        "options": [
+            "Functions that run only on client",
+            "Functions that change component behavior",
+            "Functions like cookies, headers, searchParams",
+            "Functions that optimize bundle size"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 843,
+        "question": "How do you force static rendering?",
+        "options": [
+            "Export const dynamic = 'force-static'",
+            "Use static property in page config",
+            "Add staticMode to next.config.js",
+            "Wrap page with StaticRender component"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 844,
+        "question": "How do you force dynamic rendering?",
+        "options": [
+            "Add dynamicMode to route config",
+            "Use force dynamic in page settings",
+            "Wrap component with DynamicRender",
+            "Export const dynamic = 'force-dynamic'"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 845,
+        "question": "What does ISR stand for in Next.js?",
+        "options": [
+            "Instant Server Rendering for pages",
+            "Incremental Static Regeneration technique",
+            "Internal State Revalidation process",
+            "Indexed Server Response caching"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":""
+    },
+    {
+        "id": 846,
+        "question": "How do you enable ISR for a page?",
+        "options": [
+            "Export const revalidate with time seconds",
+            "Use ISR property in page config",
+            "Add revalidate to next.config.js file",
+            "Wrap page with ISRProvider component"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 847,
+        "question": "What does revalidate: 60 mean in ISR?",
+        "options": [
+            "Page rebuilds every 60 milliseconds",
+            "Page regenerates after 60 user visits",
+            "Page revalidates at most every minute",
+            "Page caches for exactly 60 hours"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 848,
+        "question": "What is the benefit of ISR over static?",
+        "options": [
+            "ISR pages load faster than static",
+            "ISR updates content without full rebuild",
+            "ISR reduces server costs significantly",
+            "ISR works offline without internet"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 849,
+        "question": "What does revalidate: false do in Next.js?",
+        "options": [
+            "Disables page rendering completely",
+            "Makes page fully dynamic rendering",
+            "Caches page indefinitely until rebuild",
+            "Throws error during build process"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 850,
+        "question": "Can you mix static and dynamic rendering?",
+        "options": [
+            "No, entire app uses one method",
+            "Yes, per route basis configuration",
+            "No, causes hydration errors always",
+            "Yes, but only in production mode"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":""
+    },
 //     {
 //         "id": 851,
 //         "question": "What is on-demand revalidation in Next.js?",
