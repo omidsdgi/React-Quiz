@@ -14452,7 +14452,7 @@ export const mockQuestions: Question[] = [
             "• نکته: استفاده محتاطانه از این functions برای performance"
     },
     {
-        "id": 843,
+        "id": 851,
         "question": "How do you force static rendering?",
         "options": [
             "Export const dynamic = 'force-static'",
@@ -14462,10 +14462,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation": "• با export کردن const dynamic = 'force-dynamic'\n" +
+            "• همه route به dynamic rendering می‌رود\n" +
+            "• حتی بدون dynamic functions\n" +
+            "• برای always-fresh data\n" +
+            "• equivalent به SSR برای هر request\n" +
+            "• نکته: این caching را disable می‌کند"
     },
     {
-        "id": 844,
+        "id": 852,
         "question": "How do you force dynamic rendering?",
         "options": [
             "Add dynamicMode to route config",
@@ -14475,10 +14480,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-        "explanation":""
+        "explanation":"• با export کردن const dynamic = 'force-dynamic'\n" +
+            "• همه route به dynamic rendering می‌رود\n" +
+            "• حتی بدون dynamic functions\n" +
+            "• برای always-fresh data\n" +
+            "• equivalent به SSR برای هر request\n" +
+            "• نکته: این caching را disable می‌کند"
     },
     {
-        "id": 845,
+        "id": 853,
         "question": "What does ISR stand for in Next.js?",
         "options": [
             "Instant Server Rendering for pages",
@@ -14488,10 +14498,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 10,
-        "explanation":""
+        "explanation": "• ISR مخفف Incremental Static Regeneration است\n" +
+            "• technique برای updating static pages بدون rebuild\n" +
+            "• combination از static generation و dynamic updates\n" +
+            "• pages به‌صورت on-demand regenerate می‌شوند\n" +
+            "• بهترین هر دو دنیای static و dynamic\n" +
+            "• نکته: ISR برای content که گاهی update می‌شود ideal است"
     },
     {
-        "id": 846,
+        "id": 854,
         "question": "How do you enable ISR for a page?",
         "options": [
             "Export const revalidate with time seconds",
@@ -14501,10 +14516,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation": "• با export کردن const revalidate با زمان به ثانیه\n" +
+            "• مثلاً export const revalidate = 60\n" +
+            "• page حداکثر هر 60 ثانیه revalidate می‌شود\n" +
+            "• automatic background regeneration\n" +
+            "• users stale content می‌بینند تا regenerate شود\n" +
+            "• نکته: این در route segment یا page level تنظیم می‌شود"
     },
     {
-        "id": 847,
+        "id": 855,
         "question": "What does revalidate: 60 mean in ISR?",
         "options": [
             "Page rebuilds every 60 milliseconds",
@@ -14514,10 +14534,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":""
+        "explanation": "• page حداکثر هر 60 ثانیه یک‌بار revalidate می‌شود\n" +
+            "• بعد از این time window request جدید regeneration trigger می‌کند\n" +
+            "• نه هر 60 ثانیه automatic بلکه on-demand with time limit\n" +
+            "• old content serve می‌شود تا regeneration complete شود\n" +
+            "• این stale-while-revalidate pattern است\n" +
+            "• نکته: users همیشه fast response می‌گیرند حتی در زمان regeneration"
     },
     {
-        "id": 848,
+        "id": 856,
         "question": "What is the benefit of ISR over static?",
         "options": [
             "ISR pages load faster than static",
@@ -14527,10 +14552,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 30,
-        "explanation":""
+        "explanation": "• ISR content را بدون full rebuild می‌تواند update کند\n" +
+            "• static pure نیاز به rebuild برای updates دارد\n" +
+            "• ISR freshness و speed هر دو را دارد\n" +
+            "• deployment سریع‌تر بدون rebuilding همه pages\n" +
+            "• scale به هزاران pages\n" +
+            "• نکته: ISR برای large sites با frequent updates powerful است"
     },
     {
-        "id": 849,
+        "id": 857,
         "question": "What does revalidate: false do in Next.js?",
         "options": [
             "Disables page rendering completely",
@@ -14540,10 +14570,15 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation": "• page را indefinitely یعنی تا rebuild بعدی cache می‌کند\n" +
+            "• هیچ automatic revalidation نمی‌شود\n" +
+            "• pure static behavior\n" +
+            "• فقط با deployment جدید update می‌شود\n" +
+            "• برای content که هرگز تغییر نمی‌کند\n" +
+            "• نکته: این همان static generation سنتی است"
     },
     {
-        "id": 850,
+        "id": 858,
         "question": "Can you mix static and dynamic rendering?",
         "options": [
             "No, entire app uses one method",
@@ -14553,34 +14588,49 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 1,
         "points": 20,
-        "explanation":""
+        "explanation": "• بله در Next.js به‌صورت per route basis می‌توانید configure کنید\n" +
+            "• هر route می‌تواند rendering strategy خودش را داشته باشد\n" +
+            "• blog pages static و dashboard dynamic\n" +
+            "• maximum flexibility\n" +
+            "• optimize هر page برای use case خودش\n" +
+            "• نکته: این یکی از قدرت‌های Next.js است"
     },
-//     {
-//         "id": 851,
-//         "question": "What is on-demand revalidation in Next.js?",
-//         "options": [
-//             "Automatic revalidation every hour daily",
-//             "User-triggered page refresh manually",
-//             "Manual revalidation via API call",
-//             "Browser-based cache clearing method"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 852,
-//         "question": "How do you trigger on-demand revalidation?",
-//         "options": [
-//             "Using revalidatePath or revalidateTag functions",
-//             "Using refresh button in browser",
-//             "Using clearCache from next/cache",
-//             "Using invalidate method on page"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 859,
+        "question": "What is on-demand revalidation in Next.js?",
+        "options": [
+            "Automatic revalidation every hour daily",
+            "User-triggered page refresh manually",
+            "Manual revalidation via API call",
+            "Browser-based cache clearing method"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• on-demand revalidation یعنی manual triggering از cache invalidation از طریق API call\n" +
+            "• بدون انتظار برای revalidation timer\n" +
+            "• وقتی content updates می‌توانید فوراً revalidate کنید\n" +
+            "• using revalidatePath یا revalidateTag\n" +
+            "• برای immediate updates بعد از CMS changes\n" +
+            "• نکته: این control دقیق روی cache freshness می‌دهد"
+    },
+    {
+        "id": 860,
+        "question": "How do you trigger on-demand revalidation?",
+        "options": [
+            "Using revalidatePath or revalidateTag functions",
+            "Using refresh button in browser",
+            "Using clearCache from next/cache",
+            "Using invalidate method on page"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• با استفاده از revalidatePath یا revalidateTag functions\n" +
+            "• معمولاً در Server Actions یا API routes\n" +
+            "• revalidatePath('/blog/post-1') برای specific path\n" +
+            "• revalidateTag('posts') برای tagged requests\n" +
+            "• immediate cache invalidation\n" +
+            "• نکته: این برای webhook handlers از CMS مفید است"
+    },
 //     {
 //         "id": 853,
 //         "question": "What is the difference between SSR and ISR?",
