@@ -14811,136 +14811,186 @@ export const mockQuestions: Question[] = [
             "• سپس با revalidateTag استفاده کنید\n" +
             "• نکته: descriptive tag names برای maintainability"
     },
-//     {
-//         "id": 863,
-//         "question": "What does revalidateTag function do?",
-//         "options": [
-//             "Validates tag format and syntax",
-//             "Revalidates all pages with that tag",
-//             "Tags pages for future revalidation",
-//             "Removes tags from cache entries"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 864,
-//         "question": "Can you use headers in static rendering?",
-//         "options": [
-//             "Yes, headers available in static pages",
-//             "No, forces switch to dynamic rendering",
-//             "Yes, but only response headers",
-//             "No, throws compilation errors"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 865,
-//         "question": "What is the purpose of unstable_cache?",
-//         "options": [
-//             "Cache function results with custom logic",
-//             "Clear unstable cache entries manually",
-//             "Validate cache before using data",
-//             "Debug caching issues in development"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 866,
-//         "question": "How does static rendering improve performance?",
-//         "options": [
-//             "Reduces server load with pre-rendering",
-//             "Eliminates JavaScript from pages",
-//             "Compresses HTML automatically",
-//             "Removes unused CSS from bundles"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 867,
-//         "question": "What is the trade-off of dynamic rendering?",
-//         "options": [
-//             "Increases build time significantly",
-//             "Reduces SEO ranking potential",
-//             "Slower response time per request",
-//             "Larger JavaScript bundle sizes"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 868,
-//         "question": "Can you use searchParams in static pages?",
-//         "options": [
-//             "Yes, searchParams work in static",
-//             "No, forces dynamic rendering mode",
-//             "Yes, but only with generateStaticParams",
-//             "No, causes build errors"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 869,
-//         "question": "What does export const dynamic = 'error' do?",
-//         "options": [
-//             "Throws error if dynamic rendering needed",
-//             "Enables error boundaries for page",
-//             "Catches dynamic errors automatically",
-//             "Shows error page to users"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 870,
-//         "question": "How do you check rendering type in development?",
-//         "options": [
-//             "Check console logs during build",
-//             "Use Next.js DevTools browser extension",
-//             "Check page source HTML comments",
-//             "Look at network request timing"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 871,
-//         "question": "What is partial pre-rendering in Next.js?",
-//         "options": [
-//             "Rendering only visible viewport content",
-//             "Mix static shell with dynamic content",
-//             "Pre-rendering half of page components",
-//             "Building pages in multiple stages"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 872,
-//         "question": "Can you use ISR with dynamic routes?",
-//         "options": [
-//             "Yes, with generateStaticParams and revalidate",
-//             "No, dynamic routes always render dynamically",
-//             "Yes, but only with catch-all routes",
-//             "No, causes build configuration errors"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 871,
+        "question": "What does revalidateTag function do?",
+        "options": [
+            "Validates tag format and syntax",
+            "Revalidates all pages with that tag",
+            "Tags pages for future revalidation",
+            "Removes tags from cache entries"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• revalidateTag تمام cache entries با آن tag را invalidate می‌کند\n" +
+            "• مثلاً revalidateTag('posts') تمام posts را revalidate می‌کند\n" +
+            "• bulk invalidation با یک call\n" +
+            "• efficient برای related content\n" +
+            "• معمولاً در Server Actions یا webhooks\n" +
+            "• نکته: این برای invalidating groups از pages قدرتمند است"
+    },
+    {
+        "id": 872,
+        "question": "Can you use headers in static rendering?",
+        "options": [
+            "Yes, headers available in static pages",
+            "No, forces switch to dynamic rendering",
+            "Yes, but only response headers",
+            "No, throws compilation errors"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• نه استفاده از headers باعث switch به dynamic rendering می‌شود\n" +
+            "• headers یک dynamic function است\n" +
+            "• request-specific data می‌خواهد\n" +
+            "• build time evaluation ممکن نیست\n" +
+            "• automatic opt-in به dynamic\n" +
+            "• نکته: headers مثل cookies route را dynamic می‌کند"
+    },
+    {
+        "id": 873,
+        "question": "What is the purpose of unstable_cache?",
+        "options": [
+            "Cache function results with custom logic",
+            "Clear unstable cache entries manually",
+            "Validate cache before using data",
+            "Debug caching issues in development"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• unstable_cache برای caching کردن function results با custom logic است\n" +
+            "• می‌توانید هر async function را wrap کنید\n" +
+            "• custom cache keys و revalidation\n" +
+            "• برای expensive computations\n" +
+            "• fine-grained control روی caching\n" +
+            "• نکته: unstable prefix یعنی API ممکن است تغییر کند"
+    },
+    {
+        "id": 874,
+        "question": "How does static rendering improve performance?",
+        "options": [
+            "Reduces server load with pre-rendering",
+            "Eliminates JavaScript from pages",
+            "Compresses HTML automatically",
+            "Removes unused CSS from bundles"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• static rendering با pre-rendering server load را کاهش می‌دهد\n" +
+            "• pages از CDN serve می‌شوند\n" +
+            "• no server computation per request\n" +
+            "• extremely fast response times\n" +
+            "• scalability بهتر\n" +
+            "• نکته: static pages می‌توانند millions of requests را handle کنند"
+    },
+    {
+        "id": 875,
+        "question": "What is the trade-off of dynamic rendering?",
+        "options": [
+            "Increases build time significantly",
+            "Reduces SEO ranking potential",
+            "Slower response time per request",
+            "Larger JavaScript bundle sizes"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• dynamic rendering slower response time per request دارد\n" +
+            "• هر request نیاز به server processing\n" +
+            "• server load بالاتر\n" +
+            "• اما always fresh data\n" +
+            "• personalization ممکن است\n" +
+            "• نکته: trade-off بین speed و freshness"
+    },
+    {
+        "id": 876,
+        "question": "Can you use searchParams in static pages?",
+        "options": [
+            "Yes, searchParams work in static",
+            "No, forces dynamic rendering mode",
+            "Yes, but only with generateStaticParams",
+            "No, causes build errors"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• نه استفاده از searchParams باعث dynamic rendering می‌شود\n" +
+            "• searchParams یک dynamic function است\n" +
+            "• request-time data می‌خواهد\n" +
+            "• query strings در build time unknown هستند\n" +
+            "• automatic switch به dynamic\n" +
+            "• نکته: برای filtering در static pages از client-side state استفاده کنید"
+    },
+    {
+        "id": 877,
+        "question": "What does export const dynamic = 'error' do?",
+        "options": [
+            "Throws error if dynamic rendering needed",
+            "Enables error boundaries for page",
+            "Catches dynamic errors automatically",
+            "Shows error page to users"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• اگر dynamic rendering لازم شود error throw می‌کند\n" +
+            "• برای ensuring که route static می‌ماند\n" +
+            "• accidental dynamic functions را catch می‌کند\n" +
+            "• در development به شما warning می‌دهد\n" +
+            "• strict static enforcement\n" +
+            "• نکته: مفید برای catching unintended dynamic behavior"
+    },
+    {
+        "id": 878,
+        "question": "How do you check rendering type in development?",
+        "options": [
+            "Check console logs during build",
+            "Use Next.js DevTools browser extension",
+            "Check page source HTML comments",
+            "Look at network request timing"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• console logs در build output را check کنید\n" +
+            "• Next.js نشان می‌دهد کدام routes static یا dynamic هستند\n" +
+            "• symbols مختلف برای هر type\n" +
+            "• ○ برای static و λ برای dynamic\n" +
+            "• این در terminal output است\n" +
+            "• نکته: این به optimization decisions کمک می‌کند"
+    },
+    {
+        "id": 879,
+        "question": "What is partial pre-rendering in Next.js?",
+        "options": [
+            "Rendering only visible viewport content",
+            "Mix static shell with dynamic content",
+            "Pre-rendering half of page components",
+            "Building pages in multiple stages"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• partial pre-rendering یعنی mix کردن static shell با dynamic content\n" +
+            "• static parts pre-rendered و dynamic parts streamed\n" +
+            "• instant page shell سپس dynamic data\n" +
+            "• بهترین هر دو دنیای static و dynamic\n" +
+            "• experimental feature در Next.js\n" +
+            "• نکته: این future است و evolution بعدی rendering"
+    },
+    {
+        "id": 880,
+        "question": "Can you use ISR with dynamic routes?",
+        "options": [
+            "Yes, with generateStaticParams and revalidate",
+            "No, dynamic routes always render dynamically",
+            "Yes, but only with catch-all routes",
+            "No, causes build configuration errors"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• بله با generateStaticParams و revalidate option\n" +
+            "• pages pre-generated می‌شوند\n" +
+            "• سپس on-demand regenerate می‌شوند\n" +
+            "• combination از SSG و ISR\n" +
+            "• scalable solution برای dynamic content\n" +
+            "• نکته: این برای blogs با هزاران posts عالی است"
+    },
 //     {
 //         "id": 873,
 //         "question": "What happens when revalidate time expires?",
