@@ -14631,136 +14631,186 @@ export const mockQuestions: Question[] = [
             "• immediate cache invalidation\n" +
             "• نکته: این برای webhook handlers از CMS مفید است"
     },
-//     {
-//         "id": 853,
-//         "question": "What is the difference between SSR and ISR?",
-//         "options": [
-//             "SSR renders per request, ISR regenerates periodically",
-//             "SSR is slower, ISR is faster",
-//             "SSR for server, ISR for client",
-//             "SSR static, ISR is dynamic always"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 854,
-//         "question": "When should you use static rendering?",
-//         "options": [
-//             "For pages with user-specific data",
-//             "For real-time dashboards with updates",
-//             "For content that rarely changes",
-//             "For pages requiring authentication"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 855,
-//         "question": "When should you use dynamic rendering?",
-//         "options": [
-//             "For blog posts that never change",
-//             "For landing pages with static content",
-//             "For documentation sites without updates",
-//             "For personalized user dashboards"
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 856,
-//         "question": "What does dynamicParams option control?",
-//         "options": [
-//             "Behavior for non-preRendered dynamic routes",
-//             "Maximum number of dynamic parameters",
-//             "Parameter validation rules for routes",
-//             "Dynamic import loading behavior"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 857,
-//         "question": "What is the default rendering strategy?",
-//         "options": [
-//             "Always dynamic rendering for all pages",
-//             "Always static rendering for all pages",
-//             "Mixed based on route requirements",
-//             "Static with automatic ISR enabled"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 858,
-//         "question": "Can you use cookies in static rendering?",
-//         "options": [
-//             "Yes, cookies work in static pages",
-//             "No, it forces dynamic rendering automatically",
-//             "Yes, but only in Client Components",
-//             "No, causes build time errors"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 859,
-//         "question": "What happens during ISR regeneration?",
-//         "options": [
-//             "Old page shown while new generates",
-//             "Page shows loading state to users",
-//             "Users wait for regeneration completion",
-//             "Page returns 503 error temporarily"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 860,
-//         "question": "How do you revalidate specific pages only?",
-//         "options": [
-//             "Using revalidatePath with page path",
-//             "Using revalidateAll with page filter",
-//             "Using updatePage from next/cache",
-//             "Using refreshPage with page ID"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 861,
-//         "question": "What is cache tagging in Next.js?",
-//         "options": [
-//             "Labeling cache entries for targeted revalidation",
-//             "Tagging pages with SEO metadata",
-//             "Marking components for code splitting",
-//             "Organizing routes in folder structure"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 862,
-//         "question": "How do you add cache tags?",
-//         "options": [
-//             "Using tags option in fetch requests",
-//             "Using cacheTag property in config",
-//             "Using setTag from next/cache",
-//             "Using tag attribute on components"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 861,
+        "question": "What is the difference between SSR and ISR?",
+        "options": [
+            "SSR renders per request, ISR regenerates periodically",
+            "SSR is slower, ISR is faster",
+            "SSR for server, ISR for client",
+            "SSR static, ISR is dynamic always"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• SSR هر request را render می‌کند در حالی که ISR به‌صورت periodic regenerate می‌کند\n" +
+            "• SSR always fresh اما slower\n" +
+            "• ISR fast اما potentially stale\n" +
+            "• SSR server load بالاتر\n" +
+            "• ISR scalability بهتر با caching\n" +
+            "• نکته: ISR برای most use cases بهترین balance است"
+    },
+    {
+        "id": 862,
+        "question": "When should you use static rendering?",
+        "options": [
+            "For pages with user-specific data",
+            "For real-time dashboards with updates",
+            "For content that rarely changes",
+            "For pages requiring authentication"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• برای content که rarely changes مثل marketing pages\n" +
+            "• blog posts و documentation\n" +
+            "• landing pages و about pages\n" +
+            "• هر چیزی که نیاز به user-specific data ندارد\n" +
+            "• maximum performance با pre-rendering\n" +
+            "• نکته: static برای SEO و speed عالی است"
+    },
+    {
+        "id": 863,
+        "question": "When should you use dynamic rendering?",
+        "options": [
+            "For blog posts that never change",
+            "For landing pages with static content",
+            "For documentation sites without updates",
+            "For personalized user dashboards"
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• برای personalized user dashboards که user-specific data دارند\n" +
+            "• real-time data مثل stock prices\n" +
+            "• user authentication dependent content\n" +
+            "• shopping carts و checkout flows\n" +
+            "• anything که نیاز به request-time data دارد\n" +
+            "• نکته: dynamic برای personalization ضروری است"
+    },
+    {
+        "id": 864,
+        "question": "What does dynamicParams option control?",
+        "options": [
+            "Behavior for non-preRendered dynamic routes",
+            "Maximum number of dynamic parameters",
+            "Parameter validation rules for routes",
+            "Dynamic import loading behavior"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• dynamicParams رفتار برای non-preRendered dynamic routes را کنترل می‌کند\n" +
+            "• اگر true باشد unknown params allowed هستند\n" +
+            "• اگر false باشد فقط generated params کار می‌کنند\n" +
+            "• برای strict static generation می‌توانید false کنید\n" +
+            "• 404 برای ungenerated params\n" +
+            "• نکته: default true است برای flexibility"
+    },
+    {
+        "id": 865,
+        "question": "What is the default rendering strategy?",
+        "options": [
+            "Always dynamic rendering for all pages",
+            "Always static rendering for all pages",
+            "Mixed based on route requirements",
+            "Static with automatic ISR enabled"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• Next.js به‌صورت mixed بر اساس route requirements انتخاب می‌کند\n" +
+            "• routes بدون dynamic functions static هستند\n" +
+            "• routes با dynamic functions dynamic می‌شوند\n" +
+            "• automatic optimization بر اساس code\n" +
+            "• بهترین strategy برای هر route\n" +
+            "• نکته: Next.js intelligent defaults دارد"
+    },
+    {
+        "id": 866,
+        "question": "Can you use cookies in static rendering?",
+        "options": [
+            "Yes, cookies work in static pages",
+            "No, it forces dynamic rendering automatically",
+            "Yes, but only in Client Components",
+            "No, causes build time errors"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• نه استفاده از cookies باعث automatic switch به dynamic rendering می‌شود\n" +
+            "• cookies یک dynamic function است\n" +
+            "• نیاز به request-time data دارد\n" +
+            "• نمی‌تواند در build time evaluated شود\n" +
+            "• route dynamic می‌شود\n" +
+            "• نکته: هر dynamic function استفاده از static rendering را opt-out می‌کند"
+    },
+    {
+        "id": 867,
+        "question": "What happens during ISR regeneration?",
+        "options": [
+            "Old page shown while new generates",
+            "Page shows loading state to users",
+            "Users wait for regeneration completion",
+            "Page returns 503 error temporarily"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• old page به users serve می‌شود تا new page generates شود\n" +
+            "• regeneration در background اتفاق می‌افتد\n" +
+            "• users blocking نمی‌بینند\n" +
+            "• بعد از complete شدن new version cached می‌شود\n" +
+            "• subsequent requests new version می‌گیرند\n" +
+            "• نکته: این stale-while-revalidate pattern performance را حفظ می‌کند"
+    },
+    {
+        "id": 868,
+        "question": "How do you revalidate specific pages only?",
+        "options": [
+            "Using revalidatePath with page path",
+            "Using revalidateAll with page filter",
+            "Using updatePage from next/cache",
+            "Using refreshPage with page ID"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• با استفاده از revalidatePath با specific page path\n" +
+            "• مثلاً revalidatePath('/blog/post-1')\n" +
+            "• فقط آن page invalidated می‌شود\n" +
+            "• بقیه cache دست نخورده می‌ماند\n" +
+            "• targeted cache invalidation\n" +
+            "• نکته: این efficient تر از revalidating همه چیز است"
+    },
+    {
+        "id": 869,
+        "question": "What is cache tagging in Next.js?",
+        "options": [
+            "Labeling cache entries for targeted revalidation",
+            "Tagging pages with SEO metadata",
+            "Marking components for code splitting",
+            "Organizing routes in folder structure"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• cache tagging یعنی labeling کردن cache entries برای targeted revalidation\n" +
+            "• می‌توانید related requests را با tags group کنید\n" +
+            "• سپس تمام entries با یک tag را revalidate کنید\n" +
+            "• مثلاً tag 'posts' برای تمام blog post requests\n" +
+            "• granular cache management\n" +
+            "• نکته: tags cache invalidation را flexible می‌کنند"
+    },
+    {
+        "id": 870,
+        "question": "How do you add cache tags?",
+        "options": [
+            "Using tags option in fetch requests",
+            "Using cacheTag property in config",
+            "Using setTag from next/cache",
+            "Using tag attribute on components"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• با استفاده از tags option در fetch requests\n" +
+            "• fetch(url, { next: { tags: ['posts'] } })\n" +
+            "• multiple tags per request ممکن است\n" +
+            "• tags برای organizing cache entries\n" +
+            "• سپس با revalidateTag استفاده کنید\n" +
+            "• نکته: descriptive tag names برای maintainability"
+    },
 //     {
 //         "id": 863,
 //         "question": "What does revalidateTag function do?",
