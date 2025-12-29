@@ -15171,136 +15171,186 @@ export const mockQuestions: Question[] = [
             "• برای real-time data\n" +
             "• نکته: فقط برای truly dynamic data استفاده کنید"
     },
-//     {
-//         "id": 891,
-//         "question": "What does Full Route Cache store?",
-//         "options": [
-//             "User session data per route",
-//             "API responses for route handlers",
-//             "Only JavaScript bundles for routes",
-//             "Complete rendered HTML and RSC payload",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 886,
-//         "question": "When is Full Route Cache created?",
-//         "options": [
-//             "During build time for static routes",
-//             "On first user request dynamically",
-//             "After page loads in browser",
-//             "When user navigates between pages"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 887,
-//         "question": "What does cache: 'force-cache' do in fetch?",
-//         "options": [
-//             "Clears cache before fetching data",
-//             "Uses cached data or fetches fresh",
-//             "Forces new fetch ignoring cache",
-//             "Validates cache before using it"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 888,
-//         "question": "What does cache: 'no-store' do in fetch?",
-//         "options": [
-//             "Stores data without caching metadata",
-//             "Caches only on client not server",
-//             "Always fetches fresh data skipping cache",
-//             "Temporarily stores data in memory"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 889,
-//         "question": "How do you set custom cache duration?",
-//         "options": [
-//             "Using next.revalidate option in fetch",
-//             "Using cacheTime property in request",
-//             "Using duration from next/cache",
-//             "Using ttl property in config"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 890,
-//         "question": "What does revalidate: 3600 mean?",
-//         "options": [
-//             "Cache expires after 3600 milliseconds",
-//             "Cache revalidates every 3600 seconds",
-//             "Cache stores 3600 entries maximum",
-//             "Cache clears after 3600 requests"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 891,
-//         "question": "Can you revalidate cache programmatically?",
-//         "options": [
-//             "Yes, using revalidatePath or revalidateTag",
-//             "No, only automatic revalidation works",
-//             "Yes, using clearCache from next/cache",
-//             "No, requires server restart always"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 892,
-//         "question": "What is the Router Cache in Next.js?",
-//         "options": [
-//             "Server-side cache for route handlers",
-//             "Client-side cache for route segments",
-//             "Browser cache for router library",
-//             "Memory cache for navigation history"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 893,
-//         "question": "How long does Router Cache persist?",
-//         "options": [
-//             "Permanently until browser closes completely",
-//             "For current session or time-based",
-//             "Only during single page navigation",
-//             "Until user clicks refresh button"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 894,
-//         "question": "What happens when you navigate back in Next.js?",
-//         "options": [
-//             "Page always fetches fresh data",
-//             "Page reloads from server completely",
-//             "Router Cache provides instant navigation",
-//             "Browser cache serves the page"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 891,
+        "question": "What does Full Route Cache store?",
+        "options": [
+            "User session data per route",
+            "API responses for route handlers",
+            "Only JavaScript bundles for routes",
+            "Complete rendered HTML and RSC payload",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":"• Full Route Cache کل rendered HTML و RSC payload را ذخیره می‌کند\n" +
+            "• complete page output\n" +
+            "• برای static routes\n" +
+            "• در server و CDN\n" +
+            "• extremely fast serving\n" +
+            "• نکته: این برای static rendering است"
+    },
+    {
+        "id": 892,
+        "question": "When is Full Route Cache created?",
+        "options": [
+            "During build time for static routes",
+            "On first user request dynamically",
+            "After page loads in browser",
+            "When user navigates between pages"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• در build time برای static routes ایجاد می‌شود\n" +
+            "• pages pre-rendered می‌شوند\n" +
+            "• output cached می‌شود\n" +
+            "• ready برای serving\n" +
+            "• no runtime rendering needed\n" +
+            "• نکته: این چرا static rendering سریع است"
+    },
+    {
+        "id": 893,
+        "question": "What does cache: 'force-cache' do in fetch?",
+        "options": [
+            "Clears cache before fetching data",
+            "Uses cached data or fetches fresh",
+            "Forces new fetch ignoring cache",
+            "Validates cache before using it"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• cached data استفاده می‌کند یا fetch و cache می‌کند\n" +
+            "• aggressive caching strategy\n" +
+            "• default behavior در Next.js\n" +
+            "• revalidation با timer\n" +
+            "• performance optimization\n" +
+            "• نکته: این مناسب‌ترین default برای اکثر cases است"
+    },
+    {
+        "id": 894,
+        "question": "What does cache: 'no-store' do in fetch?",
+        "options": [
+            "Stores data without caching metadata",
+            "Caches only on client not server",
+            "Always fetches fresh data skipping cache",
+            "Temporarily stores data in memory"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• همیشه fresh data fetch می‌کند و cache را skip می‌کند\n" +
+            "• no caching layer\n" +
+            "• هر request به origin می‌رود\n" +
+            "• برای real-time data\n" +
+            "• performance impact دارد\n" +
+            "• نکته: فقط وقتی freshness critical است استفاده کنید"
+    },
+    {
+        "id": 895,
+        "question": "How do you set custom cache duration?",
+        "options": [
+            "Using next.revalidate option in fetch",
+            "Using cacheTime property in request",
+            "Using duration from next/cache",
+            "Using ttl property in config"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• با استفاده از next.revalidate option در fetch\n" +
+            "• fetch(url, { next: { revalidate: 3600 } })\n" +
+            "• time در seconds\n" +
+            "• custom ISR timing per request\n" +
+            "• flexible caching strategies\n" +
+            "• نکته: different requests می‌توانند different revalidation times داشته باشند"
+    },
+    {
+        "id": 896,
+        "question": "What does revalidate: 3600 mean?",
+        "options": [
+            "Cache expires after 3600 milliseconds",
+            "Cache revalidates every 3600 seconds",
+            "Cache stores 3600 entries maximum",
+            "Cache clears after 3600 requests"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• cache هر 3600 ثانیه یعنی 1 ساعت revalidate می‌شود\n" +
+            "• بعد از این time next request regeneration trigger می‌کند\n" +
+            "• stale-while-revalidate pattern\n" +
+            "• balance بین freshness و performance\n" +
+            "• configurable per request\n" +
+            "• نکته: choose timing بر اساس data freshness needs"
+    },
+    {
+        "id": 897,
+        "question": "Can you revalidate cache programmatically?",
+        "options": [
+            "Yes, using revalidatePath or revalidateTag",
+            "No, only automatic revalidation works",
+            "Yes, using clearCache from next/cache",
+            "No, requires server restart always"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• بله با استفاده از revalidatePath یا revalidateTag\n" +
+            "• manual triggering از cache invalidation\n" +
+            "• در Server Actions یا API routes\n" +
+            "• immediate updates ممکن است\n" +
+            "• on-demand revalidation\n" +
+            "• نکته: این برای CMS webhooks و admin actions مفید است"
+    },
+    {
+        "id": 898,
+        "question": "What is the Router Cache in Next.js?",
+        "options": [
+            "Server-side cache for route handlers",
+            "Client-side cache for route segments",
+            "Browser cache for router library",
+            "Memory cache for navigation history"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• Router Cache یک client-side cache برای route segments است\n" +
+            "• visited pages در memory cached می‌شوند\n" +
+            "• instant back/forward navigation\n" +
+            "• in-browser caching\n" +
+            "• automatic management\n" +
+            "• نکته: این SPA-like navigation را enable می‌کند"
+    },
+    {
+        "id": 899,
+        "question": "How long does Router Cache persist?",
+        "options": [
+            "Permanently until browser closes completely",
+            "For current session or time-based",
+            "Only during single page navigation",
+            "Until user clicks refresh button"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• برای current session یا time-based بسته به route type\n" +
+            "• static routes longer cache\n" +
+            "• dynamic routes shorter cache\n" +
+            "• automatic expiration\n" +
+            "• configurable behavior\n" +
+            "• نکته: این balance بین performance و freshness است"
+    },
+    {
+        "id": 900,
+        "question": "What happens when you navigate back in Next.js?",
+        "options": [
+            "Page always fetches fresh data",
+            "Page reloads from server completely",
+            "Router Cache provides instant navigation",
+            "Browser cache serves the page"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• Router Cache instant navigation فراهم می‌کند\n" +
+            "• cached page از memory serve می‌شود\n" +
+            "• no server request\n" +
+            "• extremely fast\n" +
+            "• like SPA behavior\n" +
+            "• نکته: این user experience را dramatically بهبود می‌دهد"
+    },
 //     {
 //         "id": 895,
 //         "question": "How do you invalidate Router Cache?",
