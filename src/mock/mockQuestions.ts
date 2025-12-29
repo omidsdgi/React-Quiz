@@ -14991,138 +14991,188 @@ export const mockQuestions: Question[] = [
             "• scalable solution برای dynamic content\n" +
             "• نکته: این برای blogs با هزاران posts عالی است"
     },
+    {
+        "id": 881,
+        "question": "What happens when revalidate time expires?",
+        "options": [
+            "Page deletes from cache immediately",
+            "Next request triggers background regeneration",
+            "Users see loading state always",
+            "Server returns 404 error"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• next request بعد از expiration background regeneration را trigger می‌کند\n" +
+            "• user stale content می‌بیند\n" +
+            "• regeneration در background\n" +
+            "• بعد از complete شدن subsequent requests fresh content می‌گیرند\n" +
+            "• no blocking برای users\n" +
+            "• نکته: این ensures fast responses همیشه"
+    },
+    {
+        "id": 882,
+        "question": "How do you opt out of caching?",
+        "options": [
+            "Use cache: 'no-store' in fetch",
+            "Use noCache property in config",
+            "Use disableCache from next/cache",
+            "Use cache: false in request"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• با استفاده از cache: 'no-store' در fetch requests\n" +
+            "• یا dynamic = 'force-dynamic' برای کل route\n" +
+            "• هر request fresh data می‌گیرد\n" +
+            "• no caching layer\n" +
+            "• برای truly real-time data\n" +
+            "• نکته: فقط وقتی واقعاً نیاز است از caching opt-out کنید"
+    },
+    {
+        "id": 883,
+        "question": "What is the benefit of static over dynamic?",
+        "options": [
+            "Faster response time and lower costs",
+            "Better personalization per user",
+            "More flexibility with real-time data",
+            "Easier authentication implementation"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• static faster response time و lower costs دارد\n" +
+            "• no server computation per request\n" +
+            "• CDN caching\n" +
+            "• infinite scalability\n" +
+            "• lowest hosting costs\n" +
+            "• نکته: static rendering وقتی ممکن است preferred است"
+    },
+    {
+        "id": 884,
+        "question": "Can you use dynamic rendering in Server Components?",
+        "options": [
+            "No, Server Components always static",
+            "Yes, Server Components support both modes",
+            "No, only Client Components support it",
+            "Yes, but loses Server Component benefits"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• بله Server Components هر دو mode را support می‌کنند\n" +
+            "• static یا dynamic بسته به functions استفاده شده\n" +
+            "• automatic detection توسط Next.js\n" +
+            "• یا explicit configuration با dynamic export\n" +
+            "• flexibility کامل\n" +
+            "• نکته: Server Components rendering mode را dictate نمی‌کنند"
+    },
+    {
+        "id": 885,
+        "question": "What does fetch cache option 'force-cache' do?",
+        "options": [
+            "Forces caching even for dynamic data",
+            "Clears cache before fetching data",
+            "Validates cache before using it",
+            "Forces fresh fetch ignoring cache"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• fetch را مجبور می‌کند cached data استفاده کند یا fetch و cache کند\n" +
+            "• default caching behavior\n" +
+            "• aggressive caching\n" +
+            "• برای static rendering\n" +
+            "• revalidation با timer یا manual\n" +
+            "• نکته: این default است مگر override کنید"
+    },
+    {
+        "id": 886,
+        "question": "How do you debug rendering issues?",
+        "options": [
+            "Check build output and page indicators",
+            "Use debugRender from next/debug",
+            "Add debug: true to config",
+            "Enable verbose mode in browser"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• build output و page indicators در terminal را check کنید\n" +
+            "• console logs برای dynamic function usage\n" +
+            "• Next.js warnings را بخوانید\n" +
+            "• symbols در build output معنی دارند\n" +
+            "• check کنید کدام routes unexpected dynamic هستند\n" +
+            "• نکته: Next.js debugging info خوبی در build time می‌دهد"
+    },
+    {
+        "id": 887,
+        "question": "What is Request Memoization in Next.js?",
+        "options": [
+            "Caching duplicate requests during single render",
+            "Storing requests in browser localStorage",
+            "Memoizing component render results only",
+            "Caching API responses across pages"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• Request Memoization یعنی caching کردن duplicate requests در زمان single render\n" +
+            "• اگر همان request چندین بار شود فقط یک‌بار اجرا می‌شود\n" +
+            "• نتیجه برای تمام calls share می‌شود\n" +
+            "• فقط در duration یک render\n" +
+            "• automatic deduplication\n" +
+            "• نکته: این performance را بدون code changes بهبود می‌دهد"
+    },
+    {
+        "id": 888,
+        "question": "How long does Request Memoization last?",
+        "options": [
+            "Permanently until manual cache clear",
+            "Across entire user session duration",
+            "Only during single server render",
+            "For 60 seconds after request"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• فقط در duration یک single server render\n" +
+            "• بعد از render complete شدن cache cleared می‌شود\n" +
+            "• هر request جدید fresh memoization دارد\n" +
+            "• temporary و short-lived\n" +
+            "• not persistent across requests\n" +
+            "• نکته: این برای eliminating duplicate work در یک render است"
+    },
+    {
+        "id": 889,
+        "question": "What is the Data Cache in Next.js?",
+        "options": [
+            "Temporary memory cache for components",
+            "Persistent storage for fetch requests",
+            "Browser cache for static assets",
+            "Database query result caching"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• Data Cache یک persistent storage برای fetch requests است\n" +
+            "• نتایج fetch ها ذخیره می‌شوند\n" +
+            "• across requests و deployments\n" +
+            "• در server filesystem\n" +
+            "• automatic و configurable\n" +
+            "• نکته: این برای reducing API calls و database queries است"
+    },
+    {
+        "id": 890,
+        "question": "How do you opt out of Data Cache?",
+        "options": [
+            "Using cache: 'no-store' in fetch",
+            "Using noCache: true in config",
+            "Using disableCache from next/cache",
+            "Using skipCache property in request"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• با استفاده از cache: 'no-store' در fetch request\n" +
+            "• fetch(url, { cache: 'no-store' })\n" +
+            "• هر request fresh data می‌گیرد\n" +
+            "• no caching layer\n" +
+            "• برای real-time data\n" +
+            "• نکته: فقط برای truly dynamic data استفاده کنید"
+    },
 //     {
-//         "id": 873,
-//         "question": "What happens when revalidate time expires?",
-//         "options": [
-//             "Page deletes from cache immediately",
-//             "Next request triggers background regeneration",
-//             "Users see loading state always",
-//             "Server returns 404 error"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 874,
-//         "question": "How do you opt out of caching?",
-//         "options": [
-//             "Use cache: 'no-store' in fetch",
-//             "Use noCache property in config",
-//             "Use disableCache from next/cache",
-//             "Use cache: false in request"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 875,
-//         "question": "What is the benefit of static over dynamic?",
-//         "options": [
-//             "Faster response time and lower costs",
-//             "Better personalization per user",
-//             "More flexibility with real-time data",
-//             "Easier authentication implementation"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 876,
-//         "question": "Can you use dynamic rendering in Server Components?",
-//         "options": [
-//             "No, Server Components always static",
-//             "Yes, Server Components support both modes",
-//             "No, only Client Components support it",
-//             "Yes, but loses Server Component benefits"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 877,
-//         "question": "What does fetch cache option 'force-cache' do?",
-//         "options": [
-//             "Forces caching even for dynamic data",
-//             "Clears cache before fetching data",
-//             "Validates cache before using it",
-//             "Forces fresh fetch ignoring cache"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 878,
-//         "question": "How do you debug rendering issues?",
-//         "options": [
-//             "Check build output and page indicators",
-//             "Use debugRender from next/debug",
-//             "Add debug: true to config",
-//             "Enable verbose mode in browser"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 881,
-//         "question": "What is Request Memoization in Next.js?",
-//         "options": [
-//             "Caching duplicate requests during single render",
-//             "Storing requests in browser localStorage",
-//             "Memoizing component render results only",
-//             "Caching API responses across pages"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 882,
-//         "question": "How long does Request Memoization last?",
-//         "options": [
-//             "Permanently until manual cache clear",
-//             "Across entire user session duration",
-//             "Only during single server render",
-//             "For 60 seconds after request"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 883,
-//         "question": "What is the Data Cache in Next.js?",
-//         "options": [
-//             "Temporary memory cache for components",
-//             "Persistent storage for fetch requests",
-//             "Browser cache for static assets",
-//             "Database query result caching"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 884,
-//         "question": "How do you opt out of Data Cache?",
-//         "options": [
-//             "Using cache: 'no-store' in fetch",
-//             "Using noCache: true in config",
-//             "Using disableCache from next/cache",
-//             "Using skipCache property in request"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 885,
+//         "id": 891,
 //         "question": "What does Full Route Cache store?",
 //         "options": [
 //             "User session data per route",
