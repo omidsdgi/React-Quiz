@@ -15351,84 +15351,114 @@ export const mockQuestions: Question[] = [
             "• like SPA behavior\n" +
             "• نکته: این user experience را dramatically بهبود می‌دهد"
     },
-//     {
-//         "id": 895,
-//         "question": "How do you invalidate Router Cache?",
-//         "options": [
-//             "Use resetRouter from next/router",
-//             "Use clearRouter from next/cache",
-//             "Use invalidateCache on router object",
-//             "Use router.refresh() from next/navigation",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 896,
-//         "question": "What is cache tagging used for?",
-//         "options": [
-//             "Grouping related cache entries together",
-//             "Marking cache priority levels",
-//             "Labeling cache with metadata",
-//             "Organizing cache by file type"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 897,
-//         "question": "How do you add tags to fetch cache?",
-//         "options": [
-//             "Using cacheTag property in request",
-//             "Using tags attribute on function",
-//             "Using next.tags array in fetch",
-//             "Using setTag from next/cache",
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 898,
-//         "question": "What does revalidateTag function do?",
-//         "options": [
-//             "Validates tag format and syntax",
-//             "Revalidates all cache entries with tag",
-//             "Tags cache for future revalidation",
-//             "Removes specific tags from cache"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 899,
-//         "question": "Can you use multiple tags per fetch?",
-//         "options": [
-//             "Yes, pass array of tag strings",
-//             "No, only one tag allowed per fetch",
-//             "Yes, but maximum three tags",
-//             "No, causes cache conflicts"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 900,
-//         "question": "What is unstable_cache function for?",
-//         "options": [
-//             "Caching function results with custom keys",
-//             "Clearing unstable cache entries manually",
-//             "Validating cache before using data",
-//             "Debugging cache issues in development"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 901,
+        "question": "How do you invalidate Router Cache?",
+        "options": [
+            "Use resetRouter from next/router",
+            "Use clearRouter from next/cache",
+            "Use invalidateCache on router object",
+            "Use router.refresh() from next/navigation",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• با استفاده از router.refresh() از next/navigation\n" +
+            "• client cache cleared می‌شود\n" +
+            "• fresh data از server fetched می‌شود\n" +
+            "• programmatic refresh\n" +
+            "• یا automatic با revalidation\n" +
+            "• نکته: معمولاً automatic invalidation کافی است"
+    },
+    {
+        "id": 902,
+        "question": "What is cache tagging used for?",
+        "options": [
+            "Grouping related cache entries together",
+            "Marking cache priority levels",
+            "Labeling cache with metadata",
+            "Organizing cache by file type"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• cache tagging برای grouping کردن related cache entries together است\n" +
+            "• می‌توانید تمام entries با یک tag را invalidate کنید\n" +
+            "• bulk cache management\n" +
+            "• logical organization\n" +
+            "• efficient invalidation\n" +
+            "• نکته: tags cache strategy را flexible و powerful می‌کنند"
+    },
+    {
+        "id": 903,
+        "question": "How do you add tags to fetch cache?",
+        "options": [
+            "Using cacheTag property in request",
+            "Using tags attribute on function",
+            "Using next.tags array in fetch",
+            "Using setTag from next/cache",
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• با استفاده از next.tags array در fetch options\n" +
+            "• fetch(url, { next: { tags: ['posts', 'featured'] } })\n" +
+            "• multiple tags per request\n" +
+            "• descriptive naming\n" +
+            "• later invalidation با tag\n" +
+            "• نکته: plan کردن tag strategy از قبل مهم است"
+    },
+    {
+        "id": 904,
+        "question": "What does revalidateTag function do?",
+        "options": [
+            "Validates tag format and syntax",
+            "Revalidates all cache entries with tag",
+            "Tags cache for future revalidation",
+            "Removes specific tags from cache"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• revalidateTag تمام cache entries با آن tag را invalidate می‌کند\n" +
+            "• bulk invalidation با یک function call\n" +
+            "• efficient برای related content\n" +
+            "• در Server Actions استفاده می‌شود\n" +
+            "• immediate effect\n" +
+            "• نکته: این برای content types مثل posts یا products عالی است"
+    },
+    {
+        "id": 905,
+        "question": "Can you use multiple tags per fetch?",
+        "options": [
+            "Yes, pass array of tag strings",
+            "No, only one tag allowed per fetch",
+            "Yes, but maximum three tags",
+            "No, causes cache conflicts"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• بله آرایه‌ای از tag strings پاس دهید\n" +
+            "• tags: ['posts', 'featured', 'homepage']\n" +
+            "• هر tag می‌تواند independently invalidated شود\n" +
+            "• flexible cache management\n" +
+            "• overlap در tags ممکن است\n" +
+            "• نکته: از multiple tags برای cross-cutting concerns استفاده کنید"
+    },
+    {
+        "id": 906,
+        "question": "What is unstable_cache function for?",
+        "options": [
+            "Caching function results with custom keys",
+            "Clearing unstable cache entries manually",
+            "Validating cache before using data",
+            "Debugging cache issues in development"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• unstable_cache برای caching کردن function results با custom keys است\n" +
+            "• wrap کردن expensive computations\n" +
+            "• custom cache strategies\n" +
+            "• fine-grained control\n" +
+            "• برای non-fetch operations\n" +
+            "• نکته: unstable یعنی API ممکن است در آینده تغییر کند"
+    },
 //     {
 //         "id": 901,
 //         "question": "How does unstable_cache differ from fetch cache?",
