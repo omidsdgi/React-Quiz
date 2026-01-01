@@ -15698,71 +15698,91 @@ export const mockQuestions: Question[] = [
             "• در آخر Full Route Cache برای کل صفحه استفاده می‌شود\n" +
             "• نکته: درک این سلسله مراتب به شما کمک می‌کند بفهمید چرا گاهی داده‌ها update نمی‌شوند"
     },
-//     {
-//         "id": 915,
-//         "question": "Can you customize cache storage location?",
-//         "options": [
-//             "No, Next.js controls storage internally",
-//             "Yes, using cacheDirectory in config",
-//             "No, cache uses fixed .next folder",
-//             "Yes, with custom cache adapter"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 916,
-//         "question": "What happens to cache on deployment?",
-//         "options": [
-//             "Cache persists across deployments automatically",
-//             "Cache clears on every deployment",
-//             "Cache transfers to new deployment",
-//             "Cache rebuilds during deployment"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 917,
-//         "question": "How do you cache database queries?",
-//         "options": [
-//             "Using unstable_cache around query function",
-//             "Using cacheQuery from database library",
-//             "Using queryCache in database config",
-//             "Database queries auto-cache by default"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 918,
-//         "question": "What is stale-while-revalidate strategy?",
-//         "options": [
-//             "Serve stale data while fetching fresh",
-//             "Block request until validation completes",
-//             "Serve fresh data or nothing",
-//             "Validate then serve cached data"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 919,
-//         "question": "What is knitting in React Server Components?",
-//         "options": [
-//             "Optimizing component bundle size automatically",
-//             "Combining Server and Client Components together",
-//             "Connecting components with shared state",
-//             "Merging multiple layouts into one"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 921,
+        "question": "Can you customize cache storage location?",
+        "options": [
+            "No, Next.js controls storage internally",
+            "Yes, using cacheDirectory in config",
+            "No, cache uses fixed .next folder",
+            "Yes, with custom cache adapter"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• خیر، Next.js به صورت داخلی مکان ذخیره cache را مدیریت می‌کند\n" +
+            "• cache در پوشه hidden پروژه ذخیره می‌شود\n" +
+            "• این کار برای optimization و performance انجام می‌شود\n" +
+            "• دسترسی مستقیم به این فایل‌ها توصیه نمی‌شود\n" +
+            "• نکته: اعتماد کنید که Next.js این کار را بهینه انجام می‌دهد و نیازی به تغییر ندارید"
+    },
+    {
+        "id": 922,
+        "question": "What happens to cache on deployment?",
+        "options": [
+            "Cache persists across deployments automatically",
+            "Cache clears on every deployment",
+            "Cache transfers to new deployment",
+            "Cache rebuilds during deployment"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• در هر deployment جدید، تمام cache ها پاک می‌شوند\n" +
+            "• این یک رفتار عمدی برای اطمینان از fresh بودن داده‌هاست\n" +
+            "• پس از deployment، cache ها از ابتدا ساخته می‌شوند\n" +
+            "• این تضمین می‌کند که تغییرات کد شما در production اعمال شود\n" +
+            "• نکته: برای جلوگیری از مشکلات cache، همیشه بعد از deploy صفحات مهم را تست کنید"
+    },
+    {
+        "id": 923,
+        "question": "How do you cache database queries?",
+        "options": [
+            "Using unstable_cache around query function",
+            "Using cacheQuery from database library",
+            "Using queryCache in database config",
+            "Database queries auto-cache by default"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• با قرار دادن query داخل unstable_cache می‌توانید نتیجه را cache کنید\n" +
+            "• این کار برای query های پرتکرار و کند بسیار مفید است\n" +
+            "• می‌توانید زمان revalidation را برای هر query تنظیم کنید\n" +
+            "• database queries به صورت پیش‌فرض cache نمی‌شوند\n" +
+            "• نکته: فقط query هایی را cache کنید که داده‌هایشان مکرر تغییر نمی‌کند"
+    },
+    {
+        "id": 924,
+        "question": "What is stale-while-revalidate strategy?",
+        "options": [
+            "Serve stale data while fetching fresh",
+            "Block request until validation completes",
+            "Serve fresh data or nothing",
+            "Validate then serve cached data"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• ابتدا داده قدیمی را سریع به کاربر نشان می‌دهد\n" +
+            "• همزمان در پس‌زمینه داده جدید را از سرور می‌گیرد\n" +
+            "• کاربر هیچ delay یا loading را احساس نمی‌کند\n" +
+            "• در request بعدی، داده fresh نمایش داده می‌شود\n" +
+            "• نکته: بهترین روش برای تعادل بین سرعت و تازگی داده‌ها"
+    },
+    {
+        "id": 925,
+        "question": "What is knitting in React Server Components?",
+        "options": [
+            "Optimizing component bundle size automatically",
+            "Combining Server and Client Components together",
+            "Connecting components with shared state",
+            "Merging multiple layouts into one"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• knitting فرآیند ترکیب Server و Client Components در یک صفحه است\n" +
+            "• React این دو نوع component را با هم می‌بافد تا UI نهایی بسازد\n" +
+            "• هر component در محیط مناسب خود اجرا می‌شود\n" +
+            "• این کار به صورت خودکار توسط React انجام می‌شود\n" +
+            "• نکته: شما فقط باید مشخص کنید کدام component باید Client باشد با 'use client'"
+    },
 //     {
 //         "id": 920,
 //         "question": "What is the traditional React rendering paradigm?",
