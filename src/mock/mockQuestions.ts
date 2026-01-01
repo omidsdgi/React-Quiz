@@ -15528,136 +15528,176 @@ export const mockQuestions: Question[] = [
             "• request بعدی داده fresh را دریافت می‌کند\n" +
             "• نکته: بهترین تعادل بین performance و freshness"
     },
-//     {
-//         "id": 905,
-//         "question": "How do you disable all caching?",
-//         "options": [
-//             "Set export const dynamic = 'force-dynamic'",
-//             "Use noCache: true in config",
-//             "Add disableCache to next.config.js",
-//             "Use cache: false in all fetches"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 906,
-//         "question": "What is the purpose of cache headers?",
-//         "options": [
-//             "Control browser and CDN caching behavior",
-//             "Define cache storage location path",
-//             "Set maximum cache entry size",
-//             "Configure cache encryption settings"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 907,
-//         "question": "Can you cache third-party API responses?",
-//         "options": [
-//             "Yes, using fetch with cache options",
-//             "No, only internal APIs cache",
-//             "Yes, but requires proxy setup",
-//             "No, third-party blocks caching"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 908,
-//         "question": "What does fetch next.revalidate: false do?",
-//         "options": [
-//             "Disables caching for this request",
-//             "Caches indefinitely until rebuild",
-//             "Validates data before caching it",
-//             "Revalidates on every request"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 909,
-//         "question": "How does caching affect dynamic routes?",
-//         "options": [
-//             "Each param value cached separately",
-//             "All params share single cache",
-//             "Dynamic routes never use cache",
-//             "Cache only works with static params"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 910,
-//         "question": "What is the benefit of Request Memoization?",
-//         "options": [
-//             "Eliminates duplicate requests per render",
-//             "Caches requests across page reloads",
-//             "Reduces server memory usage significantly",
-//             "Speeds up network request timing"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 911,
-//         "question": "Can you cache errors in Next.js?",
-//         "options": [
-//             "No, only successful responses cache",
-//             "Yes, error responses can cache",
-//             "No, errors bypass cache completely",
-//             "Yes, but only 404 errors"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 912,
-//         "question": "What does cache: 'no-cache' do in fetch?",
-//         "options": [
-//             "Skips cache completely for request",
-//             "Revalidates cache before using data",
-//             "Caches only in memory temporarily",
-//             "Disables browser cache for request"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 913,
-//         "question": "How do you check if data is cached?",
-//         "options": [
-//             "Check response headers for cache status",
-//             "Use isCached from next/cache",
-//             "Check build output logs only",
-//             "Use cacheCheck helper function"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 914,
-//         "question": "What is the cache hierarchy in Next.js?",
-//         "options": [
-//             "Request Memo → Data Cache → Full Route",
-//             "Full Route → Data Cache → Request Memo",
-//             "Data Cache → Request Memo → Full Route",
-//             "All caches work independently"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 911,
+        "question": "How do you disable all caching?",
+        "options": [
+            "Set export const dynamic = 'force-dynamic'",
+            "Use noCache: true in config",
+            "Add disableCache to next.config.js",
+            "Use cache: false in all fetches"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• export const dynamic = 'force-dynamic' در route/page.js\n" +
+            "• همه requests در آن route uncached می‌شوند\n" +
+            "• مفید برای صفحات real-time یا user-specific\n" +
+            "• معادل SSR کامل در هر request است\n" +
+            "• نکته: فقط زمانی استفاده کنید که واقعاً به dynamic rendering نیاز دارید، چون performance کمتری دارد"
+    },
+    {
+        "id": 912,
+        "question": "What is the purpose of cache headers?",
+        "options": [
+            "Control browser and CDN caching behavior",
+            "Define cache storage location path",
+            "Set maximum cache entry size",
+            "Configure cache encryption settings"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• cache headers مشخص می‌کنند چگونه و چه مدت داده‌ها باید cache شوند\n" +
+            "• به مرورگر و CDN می‌گویند آیا می‌توانند response را ذخیره کنند یا نه\n" +
+            "• مثال: Cache-Control: max-age=3600 یعنی ۱ ساعت cache کن\n" +
+            "• کنترل می‌کنند کی داده‌ها باید refresh شوند\n" +
+            "• نکته: درک cache headers به شما کمک می‌کند performance بهتری بگیرید"
+    },
+    {
+        "id": 913,
+        "question": "Can you cache third-party API responses?",
+        "options": [
+            "Yes, using fetch with cache options",
+            "No, only internal APIs cache",
+            "Yes, but requires proxy setup",
+            "No, third-party blocks caching"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• بله، با استفاده از fetch و تنظیمات cache می‌توانید API های خارجی را cache کنید\n" +
+            "• مثال: fetch('https://api.example.com', { next: { revalidate: 60 } })\n" +
+            "• این کار درخواست‌های تکراری را کاهش می‌دهد\n" +
+            "• هزینه API calls کمتر می‌شود و سرعت بیشتر\n" +
+            "• نکته: حتماً revalidation time مناسب تنظیم کنید تا داده‌ها قدیمی نشوند"
+    },
+    {
+        "id": 914,
+        "question": "What does fetch next.revalidate: false do?",
+        "options": [
+            "Disables caching for this request",
+            "Caches indefinitely until rebuild",
+            "Validates data before caching it",
+            "Revalidates on every request"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• revalidate: false به معنی cache کردن برای همیشه تا build بعدی است\n" +
+            "• داده هیچوقت automatically refresh نمی‌شود\n" +
+            "• فقط با rebuild کردن پروژه cache پاک می‌شود\n" +
+            "• برای داده‌هایی که هرگز تغییر نمی‌کنند مناسب است\n" +
+            "• نکته: با احتیاط استفاده کنید - داده‌های قدیمی ممکن است برای همیشه باقی بمانند"
+    },
+    {
+        "id": 915,
+        "question": "How does caching affect dynamic routes?",
+        "options": [
+            "Each param value cached separately",
+            "All params share single cache",
+            "Dynamic routes never use cache",
+            "Cache only works with static params"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• هر مقدار مختلف param یک cache entry جداگانه دارد\n" +
+            "• مثال: /blog/1 و /blog/2 دو cache مجزا هستند\n" +
+            "• Next.js به صورت خودکار این کار را مدیریت می‌کند\n" +
+            "• هر صفحه با param متفاوت مستقل cache می‌شود\n" +
+            "• نکته: مراقب باشید تعداد زیاد params باعث افزایش حجم cache نشود"
+    },
+    {
+        "id": 916,
+        "question": "What is the benefit of Request Memoization?",
+        "options": [
+            "Eliminates duplicate requests per render",
+            "Caches requests across page reloads",
+            "Reduces server memory usage significantly",
+            "Speeds up network request timing"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• Request Memoization جلوی درخواست‌های تکراری در یک render را می‌گیرد\n" +
+            "• اگر چند component همزمان همان داده را fetch کنند، فقط یک بار درخواست ارسال می‌شود\n" +
+            "• فقط در طول یک render کار می‌کند، نه بین render ها\n" +
+            "• سرعت و کارایی را بهبود می‌دهد بدون تغییر کد\n" +
+            "• نکته: این optimization خودکار است و شما نیازی به کار خاصی ندارید"
+    },
+    {
+        "id": 917,
+        "question": "Can you cache errors in Next.js?",
+        "options": [
+            "No, only successful responses cache",
+            "Yes, error responses can cache",
+            "No, errors bypass cache completely",
+            "Yes, but only 404 errors"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• خیر، خطاها هرگز cache نمی‌شوند و همیشه از cache عبور می‌کنند\n" +
+            "• این رفتار به صورت پیش‌فرض در Next.js تعبیه شده است\n" +
+            "• دلیل: اگر خطا cache شود، کاربر همیشه خطا می‌بیند حتی اگر مشکل برطرف شده باشد\n" +
+            "• فقط response های موفق قابل cache کردن هستند\n" +
+            "• نکته: این یک ویژگی امنیتی است که از نمایش خطاهای قدیمی جلوگیری می‌کند"
+    },
+    {
+        "id": 918,
+        "question": "What does cache: 'no-cache' do in fetch?",
+        "options": [
+            "Skips cache completely for request",
+            "Revalidates cache before using data",
+            "Caches only in memory temporarily",
+            "Disables browser cache for request"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• cache قبل از استفاده چک می‌شود که هنوز معتبر است یا نه\n" +
+            "• اگر معتبر بود از cache استفاده می‌کند، اگر نه از سرور می‌گیرد\n" +
+            "• این یک مرحله validation قبل از استفاده از cache است\n" +
+            "• با 'no-store' فرق دارد که اصلاً cache نمی‌کند\n" +
+            "• نکته: برای داده‌هایی که می‌خواهید مطمئن شوید fresh هستند قبل از نمایش"
+    },
+    {
+        "id": 919,
+        "question": "How do you check if data is cached?",
+        "options": [
+            "Check response headers for cache status",
+            "Use isCached from next/cache",
+            "Check build output logs only",
+            "Use cacheCheck helper function"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• با بررسی response headers می‌توانید وضعیت cache را ببینید\n" +
+            "• header هایی مانند X-Cache یا Age وجود cache را نشان می‌دهند\n" +
+            "• در browser DevTools تب Network این اطلاعات را نمایش می‌دهد\n" +
+            "• در Next.js build output نیز می‌توانید ببینید کدام route ها cached هستند\n" +
+            "• نکته: آشنایی با DevTools به شما کمک می‌کند مشکلات caching را سریع تشخیص دهید"
+    },
+    {
+        "id": 920,
+        "question": "What is the cache hierarchy in Next.js?",
+        "options": [
+            "Request Memo → Data Cache → Full Route",
+            "Full Route → Data Cache → Request Memo",
+            "Data Cache → Request Memo → Full Route",
+            "All caches work independently"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• سه لایه cache به ترتیب اجرا می‌شوند\n" +
+            "• اول Request Memoization در طول یک render چک می‌شود\n" +
+            "• بعد Data Cache برای fetch های قبلی بررسی می‌شود\n" +
+            "• در آخر Full Route Cache برای کل صفحه استفاده می‌شود\n" +
+            "• نکته: درک این سلسله مراتب به شما کمک می‌کند بفهمید چرا گاهی داده‌ها update نمی‌شوند"
+    },
 //     {
 //         "id": 915,
 //         "question": "Can you customize cache storage location?",
