@@ -15459,58 +15459,75 @@ export const mockQuestions: Question[] = [
             "• برای non-fetch operations\n" +
             "• نکته: unstable یعنی API ممکن است در آینده تغییر کند"
     },
-//     {
-//         "id": 901,
-//         "question": "How does unstable_cache differ from fetch cache?",
-//         "options": [
-//             "Works with non-fetch async functions",
-//             "Only caches fetch API requests",
-//             "Stores data in browser only",
-//             "Requires manual cache invalidation"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 902,
-//         "question": "What does cache: 'reload' do in fetch?",
-//         "options": [
-//             "Reloads page after fetching data",
-//             "Fetches fresh data and updates cache",
-//             "Clears cache before each request",
-//             "Revalidates cache before using it"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 903,
-//         "question": "Can you cache POST requests in Next.js?",
-//         "options": [
-//             "No, only GET requests are cached",
-//             "Yes, all HTTP methods cache automatically",
-//             "No, POST always bypasses cache",
-//             "Yes, with special cache configuration"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 904,
-//         "question": "What happens when cache becomes stale?",
-//         "options": [
-//             "Cache deletes automatically from storage",
-//             "Stale data served, revalidation happens background",
-//             "Request blocks until fresh data fetched",
-//             "Error thrown to user immediately"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+    "id": 907,
+    "question": "How does unstable_cache differ from fetch cache?",
+    "options": [
+    "Works with non-fetch async functions",
+    "Only caches fetch API requests",
+    "Stores data in browser only",
+    "Requires manual cache invalidation"
+],
+    "correctOption": 0,
+    "points": 30,
+    "explanation": "• unstable_cache برای هر تابع async کار می‌کند، نه فقط fetch API\n" +
+        "• می‌توانید database queries، file reads و محاسبات پیچیده را cache کنید\n" +
+        "• fetch cache فقط برای HTTP requests است\n" +
+        "• unstable_cache انعطاف‌پذیری بیشتری برای caching logic دارد\n" +
+        "• نکته: از unstable_cache زمانی استفاده کنید که نیاز به cache کردن چیزی غیر از fetch دارید"
+    },
+{
+    "id": 908,
+    "question": "What does cache: 'reload' do in fetch?",
+    "options": [
+    "Reloads page after fetching data",
+    "Fetches fresh data and updates cache",
+    "Clears cache before each request",
+    "Revalidates cache before using it"
+],
+    "correctOption": 1,
+    "points": 30,
+    "explanation":"• cache: 'reload' همیشه درخواست جدید به سرور ارسال می‌کند\n" +
+        "• داده‌های fresh از سرور دریافت می‌شود و cache را update می‌کند\n" +
+        "• مشابه hard refresh در مرورگر است\n" +
+        "• از cache موجود استفاده نمی‌کند، حتی اگر valid باشد\n" +
+        "• نکته: زمانی استفاده کنید که مطمئناً به جدیدترین داده نیاز دارید"
+},
+{
+    "id": 909,
+    "question": "Can you cache POST requests in Next.js?",
+    "options": [
+    "No, only GET requests are cached",
+    "Yes, all HTTP methods cache automatically",
+    "No, POST always bypasses cache",
+    "Yes, with special cache configuration"
+],
+    "correctOption": 0,
+    "points": 20,
+    "explanation": "• فقط GET requests به صورت پیش‌فرض cache می‌شوند\n" +
+        "• POST requests همیشه cache را bypass می‌کنند\n" +
+        "• دلیل: POST معمولاً برای تغییر داده استفاده می‌شود، نه خواندن\n" +
+        "• HTTP semantics: GET idempotent است، POST نیست\n" +
+        "• نکته: برای mutations از Server Actions استفاده کنید، نه cached requests"
+},
+    {
+        "id": 910,
+        "question": "What happens when cache becomes stale?",
+        "options": [
+            "Cache deletes automatically from storage",
+            "Stale data served, revalidation happens background",
+            "Request blocks until fresh data fetched",
+            "Error thrown to user immediately"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• داده stale به کاربر نمایش داده می‌شود (سریع)\n" +
+            "• در پس‌زمینه revalidation انجام می‌شود\n" +
+            "• این الگو 'stale-while-revalidate' نامیده می‌شود\n" +
+            "• کاربر هیچ delay را احساس نمی‌کند\n" +
+            "• request بعدی داده fresh را دریافت می‌کند\n" +
+            "• نکته: بهترین تعادل بین performance و freshness"
+    },
 //     {
 //         "id": 905,
 //         "question": "How do you disable all caching?",
