@@ -15879,10 +15879,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 20,
-        "explanation":""
+        "explanation": "• hybrid composition یعنی استفاده هوشمندانه از هر دو نوع Server و Client Component\n" +
+            "• در یک صفحه، بخش‌های static در server و بخش‌های interactive در client render می‌شوند\n" +
+            "• این ترکیب بهترین performance و user experience را می‌دهد\n" +
+            "• شما تصمیم می‌گیرید هر component کجا اجرا شود\n" +
+            "• نکته: هدف این است که حداقل JavaScript به client ارسال شود"
     },
     {
-        "id": 926,
+        "id": 932,
         "question": "How can Client Components access Server Components?",
         "options": [
             "Import them directly using standard import",
@@ -15892,10 +15896,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 30,
-        "explanation":""
+        "explanation": "• Client Component نمی‌تواند مستقیماً Server Component را import کند\n" +
+            "• باید Server Component را به عنوان children یا prop به Client Component پاس دهید\n" +
+            "• Server Component قبل از Client Component در server render می‌شود\n" +
+            "• نتیجه Server Component به Client Component داده می‌شود\n" +
+            "• نکته: این pattern به شما اجازه می‌دهد Client Component ها wrapper باشند برای Server Component ها"
     },
     {
-        "id": 927,
+        "id": 933,
         "question": "What is the children pattern in RSC composition?",
         "options": [
             "Inheriting props from parent components",
@@ -15905,10 +15913,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 2,
         "points": 20,
-        "explanation":""
+        "explanation": "• children pattern یعنی پاس دادن Server Component به عنوان children به Client Component\n" +
+            "• Client Component فقط یک wrapper است و محتوای داخلش server-rendered است\n" +
+            "• این روش رایج‌ترین pattern برای ترکیب Server و Client است\n" +
+            "• Server Component داخل Client Component قرار می‌گیرد اما server-side باقی می‌ماند\n" +
+            "• نکته: این الگو به شما کمک می‌کند بدون نقض boundary، composition انجام دهید"
     },
     {
-        "id": 928,
+        "id": 934,
         "question": "Why use children pattern over direct import?",
         "options": [
             "Allows Client wrapping Server Components safely",
@@ -15918,10 +15930,14 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 0,
         "points": 30,
-        "explanation":""
+        "explanation": "• children pattern اجازه می‌دهد Client Component دور Server Component wrap شود\n" +
+            "• اگر مستقیماً import کنید، Server Component تبدیل به Client می‌شود\n" +
+            "• با children، Server Component همچنان در server اجرا می‌شود\n" +
+            "• این کار boundary بین server و client را حفظ می‌کند\n" +
+            "• نکته: همیشه سعی کنید تا جایممکن component ها را Server نگه دارید"
     },
     {
-        "id": 929,
+        "id": 935,
         "question": "What is the composition boundary in RSC?",
         "options": [
             "Limit on component nesting depth",
@@ -15931,73 +15947,97 @@ export const mockQuestions: Question[] = [
         ],
         "correctOption": 3,
         "points": 20,
-        "explanation":""
+        "explanation": "• composition boundary خط تقسیم بین Server و Client Component هاست\n" +
+            "• این boundary مشخص می‌کند کدام component در کجا اجرا می‌شود\n" +
+            "• هر چیزی در سمت server نمی‌تواند به چیزهای client-only دسترسی داشته باشد\n" +
+            "• نقض این boundary باعث خطا یا رفتار نامطلوب می‌شود\n" +
+            "• نکته: درک این boundary کلید طراحی صحیح RSC است"
     },
-//     {
-//         "id": 930,
-//         "question": "Can you pass functions through composition boundary?",
-//         "options": [
-//             "Yes, all functions serialize automatically",
-//             "No, unless wrapped in useCallback",
-//             "Yes, but only arrow functions",
-//             "No, functions cannot cross boundary",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 931,
-//         "question": "What data types can cross Server-Client boundary?",
-//         "options": [
-//             "Only primitive types like strings",
-//             "Serializable data excluding functions classes",
-//             "All JavaScript types including symbols",
-//             "Only JSON-compatible data structures"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 932,
-//         "question": "What is the slots pattern in RSC?",
-//         "options": [
-//             "Passing multiple Server Components as props",
-//             "Time slots for rendering components",
-//             "Memory slots for component caching",
-//             "Route slots for parallel rendering"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 933,
-//         "question": "How does the dependency tree affect bundle size?",
-//         "options": [
-//             "More Client Components increase bundle size",
-//             "Server Components always increase bundle",
-//             "Tree structure doesn't affect size",
-//             "Deeper trees always reduce bundle"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 934,
-//         "question": "What happens when Client Component wraps Server Component?",
-//         "options": [
-//             "Server Component becomes Client Component automatically",
-//             "Server Component executes on client side",
-//             "Server Component maintains server execution boundary",
-//             "Causes hydration mismatch errors always"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 936,
+        "question": "Can you pass functions through composition boundary?",
+        "options": [
+            "Yes, all functions serialize automatically",
+            "No, unless wrapped in useCallback",
+            "Yes, but only arrow functions",
+            "No, functions cannot cross boundary",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• خیر، توابع نمی‌توانند از Server به Client Component پاس داده شوند\n" +
+            "• توابع قابل serialize کردن نیستند و نمی‌توان آنها را به JSON تبدیل کرد\n" +
+            "• فقط داده‌های serializable مثل string، number، object ساده قابل انتقال هستند\n" +
+            "• برای event handling باید از Client Component استفاده کنید\n" +
+            "• نکته: برای actions از Server Actions استفاده کنید که مکانیزم خاصی دارند"
+    },
+    {
+        "id": 937,
+        "question": "What data types can cross Server-Client boundary?",
+        "options": [
+            "Only primitive types like strings",
+            "Serializable data excluding functions classes",
+            "All JavaScript types including symbols",
+            "Only JSON-compatible data structures"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• خیر، توابع نمی‌توانند از Server به Client Component پاس داده شوند\n" +
+            "• توابع قابل serialize کردن نیستند و نمی‌توان آنها را به JSON تبدیل کرد\n" +
+            "• فقط داده‌های serializable مثل string، number، object ساده قابل انتقال هستند\n" +
+            "• برای event handling باید از Client Component استفاده کنید\n" +
+            "• نکته: برای actions از Server Actions استفاده کنید که مکانیزم خاصی دارند"
+    },
+    {
+        "id": 938,
+        "question": "What is the slots pattern in RSC?",
+        "options": [
+            "Passing multiple Server Components as props",
+            "Time slots for rendering components",
+            "Memory slots for component caching",
+            "Route slots for parallel rendering"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• slots pattern یعنی پاس دادن چندین Server Component به عنوان prop های مختلف\n" +
+            "• به جای فقط children، می‌توانید header، sidebar، footer و غیره پاس دهید\n" +
+            "• هر slot یک Server Component جداگانه است\n" +
+            "• Client Component فقط layout را مدیریت می‌کند\n" +
+            "• نکته: این pattern برای layout های پیچیده بسیار مفید است"
+    },
+    {
+        "id": 939,
+        "question": "How does the dependency tree affect bundle size?",
+        "options": [
+            "More Client Components increase bundle size",
+            "Server Components always increase bundle",
+            "Tree structure doesn't affect size",
+            "Deeper trees always reduce bundle"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• هر Client Component و تمام dependencies آن به bundle اضافه می‌شوند\n" +
+            "• هر چه Client Component های بیشتری داشته باشید، bundle بزرگتر می‌شود\n" +
+            "• Server Component ها هیچ JavaScript به client ارسال نمی‌کنند\n" +
+            "• استفاده زیاد از Server Component ها bundle را کوچک نگه می‌دارد\n" +
+            "• نکته: همیشه سعی کنید component ها را تا جای ممکن Server نگه دارید"
+    },
+    {
+        "id": 940,
+        "question": "What happens when Client Component wraps Server Component?",
+        "options": [
+            "Server Component becomes Client Component automatically",
+            "Server Component executes on client side",
+            "Server Component maintains server execution boundary",
+            "Causes hydration mismatch errors always"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• Server Component همچنان در server اجرا می‌شود و boundary خود را حفظ می‌کند\n" +
+            "• Client Component فقط یک wrapper است و Server Component را تبدیل نمی‌کند\n" +
+            "• Server Component ابتدا render می‌شود و نتیجه به Client داده می‌شود\n" +
+            "• هیچ تبدیل خودکاری اتفاق نمی‌افتد\n" +
+            "• نکته: این امکان composition انعطاف‌پذیر بدون از دست دادن مزایای server rendering است"
+    },
 //     {
 //         "id": 935,
 //         "question": "Can you use context across Server-Client boundary?",
