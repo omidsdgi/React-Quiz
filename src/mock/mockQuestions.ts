@@ -15783,136 +15783,156 @@ export const mockQuestions: Question[] = [
             "• این کار به صورت خودکار توسط React انجام می‌شود\n" +
             "• نکته: شما فقط باید مشخص کنید کدام component باید Client باشد با 'use client'"
     },
-//     {
-//         "id": 920,
-//         "question": "What is the traditional React rendering paradigm?",
-//         "options": [
-//             "Server renders HTML then client hydrates",
-//             "Everything renders on client side only",
-//             "Server sends static HTML without JavaScript",
-//             "Client requests data then renders components"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 921,
-//         "question": "How does RSC paradigm differ from traditional React?",
-//         "options": [
-//             "RSC eliminates client-side JavaScript completely",
-//             "RSC only works with static generation",
-//             "RSC allows server and client rendering",
-//             "RSC requires full page reloads"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 922,
-//         "question": "What is the dependency tree in RSC?",
-//         "options": [
-//             "Tree showing component render order visually",
-//             "Hierarchy of Server and Client Components",
-//             "NPM package dependencies for project",
-//             "Database relationship structure diagram"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 923,
-//         "question": "Can Server Components import Client Components?",
-//         "options": [
-//             "Yes, Server can import Client Components",
-//             "No, only Client imports Server allowed",
-//             "Yes, but causes hydration errors",
-//             "No, they must be separate"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 924,
-//         "question": "Can Client Components import Server Components?",
-//         "options": [
-//             "Yes, with special import syntax",
-//             "No, it breaks component boundary rules",
-//             "Yes, but only in development",
-//             "No, causes infinite render loops"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 925,
-//         "question": "What is hybrid composition in Next.js?",
-//         "options": [
-//             "Mixing Server and Client Components strategically",
-//             "Combining multiple rendering strategies together",
-//             "Using both React and Vue",
-//             "Merging CSS and JavaScript files"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 926,
-//         "question": "How can Client Components access Server Components?",
-//         "options": [
-//             "Import them directly using standard import",
-//             "Via context API shared between both",
-//             "Through props as children or slots",
-//             "Using useServer hook from React",
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 927,
-//         "question": "What is the children pattern in RSC composition?",
-//         "options": [
-//             "Inheriting props from parent components",
-//             "Nesting components in folder structure",
-//             "Passing Server Components as children prop",
-//             "Creating child routes in routing",
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 928,
-//         "question": "Why use children pattern over direct import?",
-//         "options": [
-//             "Allows Client wrapping Server Components safely",
-//             "Improves performance by lazy loading",
-//             "Reduces bundle size significantly always",
-//             "Enables better TypeScript type checking"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 929,
-//         "question": "What is the composition boundary in RSC?",
-//         "options": [
-//             "Limit on component nesting depth",
-//             "Border between different route segments",
-//             "Maximum props that can pass",
-//             "Line between Server and Client Components",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 926,
+        "question": "What is the traditional React rendering paradigm?",
+        "options": [
+            "Server renders HTML then client hydrates",
+            "Everything renders on client side only",
+            "Server sends static HTML without JavaScript",
+            "Client requests data then renders components"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• در React سنتی همه چیز در سمت client یا مرورگر render می‌شود\n" +
+            "• JavaScript کامل به مرورگر ارسال می‌شود و آنجا اجرا می‌گردد\n" +
+            "• سرور فقط یک HTML خالی ارسال می‌کند\n" +
+            "• تمام logic و rendering در مرورگر کاربر اتفاق می‌افتد\n" +
+            "• نکته: این روش باعث bundle های بزرگ و initial load کند می‌شود"
+    },
+    {
+        "id": 927,
+        "question": "How does RSC paradigm differ from traditional React?",
+        "options": [
+            "RSC eliminates client-side JavaScript completely",
+            "RSC only works with static generation",
+            "RSC allows server and client rendering",
+            "RSC requires full page reloads"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• RSC به شما اجازه می‌دهد برخی component ها را در server و برخی را در client render کنید\n" +
+            "• می‌توانید انتخاب کنید کدام بخش کجا اجرا شود\n" +
+            "• Server Components هیچ JavaScript به client ارسال نمی‌کنند\n" +
+            "• Client Components فقط جایی که interactivity لازم است استفاده می‌شوند\n" +
+            "• نکته: این انعطاف باعث performance بهتر و bundle کوچکتر می‌شود"
+    },
+    {
+        "id": 928,
+        "question": "What is the dependency tree in RSC?",
+        "options": [
+            "Tree showing component render order visually",
+            "Hierarchy of Server and Client Components",
+            "NPM package dependencies for project",
+            "Database relationship structure diagram"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• dependency tree نمایش سلسله مراتب و روابط بین component ها است\n" +
+            "• نشان می‌دهد کدام component parent است و کدام child\n" +
+            "• مشخص می‌کند کدام component ها Server هستند و کدام Client\n" +
+            "• React از این tree برای تصمیم‌گیری درباره rendering استفاده می‌کند\n" +
+            "• نکته: درک این tree به شما کمک می‌کند ساختار بهتری برای app طراحی کنید"
+    },
+    {
+        "id": 929,
+        "question": "Can Server Components import Client Components?",
+        "options": [
+            "Yes, Server can import Client Components",
+            "No, only Client imports Server allowed",
+            "Yes, but causes hydration errors",
+            "No, they must be separate"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• بله، Server Component می‌تواند Client Component را import و استفاده کند\n" +
+            "• این یک pattern معمول و مجاز در RSC است\n" +
+            "• Client Component داخل Server Component render می‌شود\n" +
+            "• این به شما اجازه می‌دهد فقط بخش‌های interactive را client-side کنید\n" +
+            "• نکته: این الگو به شما کمک می‌کند bundle size را minimize کنید"
+    },
+    {
+        "id": 930,
+        "question": "Can Client Components import Server Components?",
+        "options": [
+            "Yes, with special import syntax",
+            "No, it breaks component boundary rules",
+            "Yes, but only in development",
+            "No, causes infinite render loops"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• خیر، Client Component نمی‌تواند مستقیماً Server Component را import کند\n" +
+            "• این کار boundary بین server و client را می‌شکند\n" +
+            "• Client Component در browser اجرا می‌شود و نمی‌تواند server code را صدا بزند\n" +
+            "• باید از pattern های دیگری مثل children prop استفاده کنید\n" +
+            "• نکته: این محدودیت به دلایل معماری و امنیتی وجود دارد"
+    },
+    {
+        "id": 931,
+        "question": "What is hybrid composition in Next.js?",
+        "options": [
+            "Mixing Server and Client Components strategically",
+            "Combining multiple rendering strategies together",
+            "Using both React and Vue",
+            "Merging CSS and JavaScript files"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 926,
+        "question": "How can Client Components access Server Components?",
+        "options": [
+            "Import them directly using standard import",
+            "Via context API shared between both",
+            "Through props as children or slots",
+            "Using useServer hook from React",
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 927,
+        "question": "What is the children pattern in RSC composition?",
+        "options": [
+            "Inheriting props from parent components",
+            "Nesting components in folder structure",
+            "Passing Server Components as children prop",
+            "Creating child routes in routing",
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":""
+    },
+    {
+        "id": 928,
+        "question": "Why use children pattern over direct import?",
+        "options": [
+            "Allows Client wrapping Server Components safely",
+            "Improves performance by lazy loading",
+            "Reduces bundle size significantly always",
+            "Enables better TypeScript type checking"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":""
+    },
+    {
+        "id": 929,
+        "question": "What is the composition boundary in RSC?",
+        "options": [
+            "Limit on component nesting depth",
+            "Border between different route segments",
+            "Maximum props that can pass",
+            "Line between Server and Client Components",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation":""
+    },
 //     {
 //         "id": 930,
 //         "question": "Can you pass functions through composition boundary?",
