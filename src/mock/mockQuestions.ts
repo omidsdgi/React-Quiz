@@ -16038,136 +16038,176 @@ export const mockQuestions: Question[] = [
             "• هیچ تبدیل خودکاری اتفاق نمی‌افتد\n" +
             "• نکته: این امکان composition انعطاف‌پذیر بدون از دست دادن مزایای server rendering است"
     },
-//     {
-//         "id": 935,
-//         "question": "Can you use context across Server-Client boundary?",
-//         "options": [
-//             "No, context doesn't cross boundaries",
-//             "Yes, but only for static values",
-//             "No, unless using special provider",
-//             "Yes, context works everywhere seamlessly"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 936,
-//         "question": "What is the interleaving pattern in RSC?",
-//         "options": [
-//             "Alternating Server and Client Components",
-//             "Interleaving data fetching with rendering",
-//             "Mixing static and dynamic rendering",
-//             "Combining multiple data sources together"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 937,
-//         "question": "Why keep components as Server Components when possible?",
-//         "options": [
-//             "Server Components render faster always",
-//             "Reduces client bundle and improves performance",
-//             "Server Components have more features",
-//             "Client Components cause security issues"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 938,
-//         "question": "What determines if component should be Server or Client?",
-//         "options": [
-//             "Need for interactivity and browser APIs",
-//             "Component file size and complexity",
-//             "Number of props component receives",
-//             "Position in component tree structure"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 939,
-//         "question": "Can Server Components access browser APIs?",
-//         "options": [
-//             "Yes, all browser APIs available",
-//             "No, they run on server only",
-//             "Yes, but only window object",
-//             "No, unless using polyfills"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 940,
-//         "question": "Can Client Components fetch data on server?",
-//         "options": [
-//             "No, Client Components always fetch client-side",
-//             "Yes, during initial server render only",
-//             "No, fetching requires Server Components",
-//             "Yes, using special fetch configuration"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 941,
-//         "question": "What is the recommended composition strategy?",
-//         "options": [
-//             "Use Client Components for everything",
-//             "Use Server Components by default",
-//             "Mix both equally throughout app",
-//             "Separate Server and Client completely"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 942,
-//         "question": "How do you share state between Server and Client?",
-//         "options": [
-//             "Pass state through props boundary",
-//             "Use shared context provider",
-//             "Store in global variable",
-//             "Cannot share state between them"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 943,
-//         "question": "What is component tree colocation in RSC?",
-//         "options": [
-//             "Placing related Server and Client together",
-//             "Storing components in same folder",
-//             "Rendering components at same time",
-//             "Sharing component logic between types"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 944,
-//         "question": "Can you conditionally render Server Components?",
-//         "options": [
-//             "Yes, using standard conditional logic",
-//             "No, Server Components always render",
-//             "Yes, but only in Client Components",
-//             "No, causes streaming errors"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 941,
+        "question": "Can you use context across Server-Client boundary?",
+        "options": [
+            "No, context doesn't cross boundaries",
+            "Yes, but only for static values",
+            "No, unless using special provider",
+            "Yes, context works everywhere seamlessly"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• خیر، Context نمی‌تواند از Server به Client Component منتقل شود\n" +
+            "• Context یک ویژگی client-side است و در server وجود ندارد\n" +
+            "• Server Component ها نمی‌توانند Context Provider یا Consumer باشند\n" +
+            "• برای state sharing باید از روش‌های دیگری استفاده کنید\n" +
+            "• نکته: برای global state، Context Provider را در یک Client Component بگذارید"
+    },
+    {
+        "id": 942,
+        "question": "What is the interleaving pattern in RSC?",
+        "options": [
+            "Alternating Server and Client Components",
+            "Interleaving data fetching with rendering",
+            "Mixing static and dynamic rendering",
+            "Combining multiple data sources together"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• interleaving یعنی تناوب و ترکیب Server و Client Component ها در درخت\n" +
+            "• می‌توانید یک Server داخل Client داخل Server و به همین ترتیب داشته باشید\n" +
+            "• هر لایه می‌تواند نوع متفاوتی داشته باشد\n" +
+            "• این انعطاف به شما اجازه می‌دهد دقیقاً مشخص کنید هر بخش کجا render شود\n" +
+            "• نکته: این pattern قدرت واقعی RSC را نشان می‌دهد"
+    },
+    {
+        "id": 943,
+        "question": "Why keep components as Server Components when possible?",
+        "options": [
+            "Server Components render faster always",
+            "Reduces client bundle and improves performance",
+            "Server Components have more features",
+            "Client Components cause security issues"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• Server Component ها هیچ JavaScript به client ارسال نمی‌کنند\n" +
+            "• bundle size کوچکتر یعنی download و parse سریعتر\n" +
+            "• initial page load سریعتر می‌شود\n" +
+            "• کاربران با اینترنت کند تجربه بهتری دارند\n" +
+            "• نکته: فقط زمانی Client Component استفاده کنید که به interactivity یا browser API نیاز دارید"
+    },
+    {
+        "id": 944,
+        "question": "What determines if component should be Server or Client?",
+        "options": [
+            "Need for interactivity and browser APIs",
+            "Component file size and complexity",
+            "Number of props component receives",
+            "Position in component tree structure"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• اگر به interactivity نیاز دارد باید Client باشد\n" +
+            "• اگر از browser API ها مثل localStorage استفاده می‌کند باید Client باشد\n" +
+            "• اگر از hooks مثل useState یا useEffect استفاده می‌کند باید Client باشد\n" +
+            "• اگر فقط data نمایش می‌دهد و static است بهتر است Server باشد\n" +
+            "• نکته: قانون کلی: تا زمانی که نیازی نباشد، Server Component نگه دارید"
+    },
+    {
+        "id": 945,
+        "question": "Can Server Components access browser APIs?",
+        "options": [
+            "Yes, all browser APIs available",
+            "No, they run on server only",
+            "Yes, but only window object",
+            "No, unless using polyfills"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• خیر، Server Component ها در server اجرا می‌شوند نه browser\n" +
+            "• browser API ها مثل window، document، localStorage در server وجود ندارند\n" +
+            "• تلاش برای استفاده از آنها باعث خطا می‌شود\n" +
+            "• برای استفاده از browser API ها باید component را Client کنید\n" +
+            "• نکته: این محدودیت منطقی است چون server محیط متفاوتی از browser دارد"
+    },
+    {
+        "id": 946,
+        "question": "Can Client Components fetch data on server?",
+        "options": [
+            "No, Client Components always fetch client-side",
+            "Yes, during initial server render only",
+            "No, fetching requires Server Components",
+            "Yes, using special fetch configuration"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• بله، در initial server render، Client Component ها نیز در server اجرا می‌شوند\n" +
+            "• data fetching در server اتفاق می‌افتد و HTML نهایی ساخته می‌شود\n" +
+            "• سپس در client، component دوباره hydrate می‌شود\n" +
+            "• این به SEO و initial load کمک می‌کند\n" +
+            "• نکته: اما بهتر است data fetching را در Server Component ها انجام دهید"
+    },
+    {
+        "id": 947,
+        "question": "What is the recommended composition strategy?",
+        "options": [
+            "Use Client Components for everything",
+            "Use Server Components by default",
+            "Mix both equally throughout app",
+            "Separate Server and Client completely"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• پیش‌فرض را Server Component قرار دهید و فقط در صورت نیاز Client استفاده کنید\n" +
+            "• Client Component ها را تا جای ممکن پایین‌تر در tree قرار دهید\n" +
+            "• هر چه کمتر Client Component داشته باشید، bundle کوچکتر می‌شود\n" +
+            "• interactive parts را جدا کنید و فقط آنها را Client کنید\n" +
+            "• نکته: Server-first approach بهترین performance را می‌دهد"
+    },
+    {
+        "id": 948,
+        "question": "How do you share state between Server and Client?",
+        "options": [
+            "Pass state through props boundary",
+            "Use shared context provider",
+            "Store in global variable",
+            "Cannot share state between them"
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation":"• نمی‌توانید state را مستقیماً بین Server و Client Component share کنید\n" +
+            "• Server Component ها stateless هستند و state ندارند\n" +
+            "• state فقط در Client Component ها وجود دارد\n" +
+            "• برای data sharing، داده را از Server به Client به عنوان prop پاس دهید\n" +
+            "• نکته: برای mutations از Server Actions استفاده کنید"
+    },
+    {
+        "id": 949,
+        "question": "What is component tree colocation in RSC?",
+        "options": [
+            "Placing related Server and Client together",
+            "Storing components in same folder",
+            "Rendering components at same time",
+            "Sharing component logic between types"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• colocation یعنی قرار دادن Server و Client Component های مرتبط کنار هم\n" +
+            "• component هایی که با هم کار می‌کنند در کنار هم نگهداری می‌شوند\n" +
+            "• این کار organization و maintainability را بهبود می‌دهد\n" +
+            "• پیدا کردن و تغییر component های مرتبط آسان‌تر می‌شود\n" +
+            "• نکته: structure واضح کد را خواناتر و قابل نگهداری‌تر می‌کند"
+    },
+    {
+        "id": 950,
+        "question": "Can you conditionally render Server Components?",
+        "options": [
+            "Yes, using standard conditional logic",
+            "No, Server Components always render",
+            "Yes, but only in Client Components",
+            "No, causes streaming errors"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• بله، می‌توانید با استفاده از شرط‌های معمولی Server Component را نمایش دهید\n" +
+            "• تمام logic های JavaScript در server در دسترس هستند\n" +
+            "• conditional rendering در server اتفاق می‌افتد و نتیجه به client ارسال می‌شود\n" +
+            "• هیچ JavaScript اضافی برای شرط‌ها به client ارسال نمی‌شود\n" +
+            "• نکته: این یکی از مزایای Server Component هاست که logic پیچیده را در server نگه می‌دارند"
+    },
 //     {
 //         "id": 945,
 //         "question": "What is the lifting content pattern in RSC?",
