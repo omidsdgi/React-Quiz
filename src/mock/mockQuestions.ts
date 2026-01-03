@@ -16378,136 +16378,176 @@ export const mockQuestions: Question[] = [
             "• کمتر Client Component یعنی صفحه سریعتر interactive می‌شود\n" +
             "• نکته: TTI یکی از مهمترین metric های performance است"
     },
-//     {
-//         "id": 955,
-//         "question": "What is the main challenge of RSC composition?",
-//         "options": [
-//             "Deciding component placement in tree",
-//             "Managing component file organization",
-//             "Handling CSS-in-JS styling",
-//             "Debugging component render issues"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 956,
-//         "question": "Can you use third-party Client libraries in Server Components?",
-//         "options": [
-//             "Yes, with special import syntax",
-//             "No, they violate server boundary",
-//             "Yes, but only pure libraries",
-//             "No, unless they support RSC"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 957,
-//         "question": "What is the wrapper pattern in RSC?",
-//         "options": [
-//             "Client Component wrapping Server children",
-//             "Server Component wrapping Client children",
-//             "HOC pattern for component composition",
-//             "Layout wrapping all page components"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 958,
-//         "question": "How do you optimize the dependency tree?",
-//         "options": [
-//             "Minimize Client Components and push down",
-//             "Use only Server Components throughout",
-//             "Flatten tree structure completely",
-//             "Increase component nesting depth"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 959,
-//         "question": "Where should filter state be stored in Next.js?",
-//         "options": [
-//             "In localStorage for persistence across sessions",
-//             "In URL searchParams for share-ability",
-//             "In global Redux store for access",
-//             "In component state using useState"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 960,
-//         "question": "Why store filter values in URL searchParams?",
-//         "options": [
-//             "Improves component render performance significantly",
-//             "Reduces server load and bandwidth",
-//             "Allows sharing and bookmarking filtered state",
-//             "Enables offline functionality without network"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 961,
-//         "question": "How do you read searchParams in Server Components?",
-//         "options": [
-//             "Through searchParams prop passed to page",
-//             "Using useSearchParams hook from next/navigation",
-//             "Through query prop in component",
-//             "Using getSearchParams helper from next/server"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 962,
-//         "question": "How do you update searchParams in Client Components?",
-//         "options": [
-//             "Using setSearchParams from next/navigation",
-//             "Using updateParams from next/router",
-//             "Using useRouter and router.replace method",
-//             "Using window.location.search directly"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 963,
-//         "question": "Should filter component be Server or Client Component?",
-//         "options": [
-//             "Server Component for better SEO",
-//             "Client Component for interactivity handling",
-//             "Server Component for performance always",
-//             "Either works depending on requirements"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 964,
-//         "question": "How do you preserve other searchParams when updating?",
-//         "options": [
-//             "Merge new params with existing URLSearchParams",
-//             "Clear all params then set new",
-//             "Use preserveParams option in router",
-//             "Next.js preserves them automatically"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 961,
+        "question": "What is the main challenge of RSC composition?",
+        "options": [
+            "Deciding component placement in tree",
+            "Managing component file organization",
+            "Handling CSS-in-JS styling",
+            "Debugging component render issues"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• تصمیم‌گیری درباره اینکه هر component باید Server باشد یا Client\n" +
+            "• باید بین performance و functionality تعادل برقرار کنید\n" +
+            "• نیاز به درک عمیق boundary و محدودیت‌ها دارید\n" +
+            "• گاهی باید component ها را بشکنید و دوباره سازماندهی کنید\n" +
+            "• نکته: با تمرین و تجربه، این تصمیم‌گیری آسان‌تر می‌شود"
+    },
+    {
+        "id": 962,
+        "question": "Can you use third-party Client libraries in Server Components?",
+        "options": [
+            "Yes, with special import syntax",
+            "No, they violate server boundary",
+            "Yes, but only pure libraries",
+            "No, unless they support RSC"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• خیر، کتابخانه‌های third-party که برای client طراحی شده‌اند در Server Component کار نمی‌کنند\n" +
+            "• این کتابخانه‌ها معمولاً از browser API ها یا hooks استفاده می‌کنند\n" +
+            "• باید آنها را در Client Component استفاده کنید\n" +
+            "• یا باید wrapper Client Component بسازید\n" +
+            "• نکته: بسیاری از کتابخانه‌های قدیمی فقط برای client هستند و نیاز به Client Component دارند"
+    },
+    {
+        "id": 963,
+        "question": "What is the wrapper pattern in RSC?",
+        "options": [
+            "Client Component wrapping Server children",
+            "Server Component wrapping Client children",
+            "HOC pattern for component composition",
+            "Layout wrapping all page components"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• wrapper pattern یعنی یک Client Component که دور Server Component ها wrap می‌شود\n" +
+            "• Client Component فقط برای interactivity یا styling استفاده می‌شود\n" +
+            "• محتوای اصلی به عنوان children از Server Component می‌آید\n" +
+            "• این کار boundary را حفظ می‌کند\n" +
+            "• نکته: این یکی از رایج‌ترین pattern ها برای composition است"
+    },
+    {
+        "id": 964,
+        "question": "How do you optimize the dependency tree?",
+        "options": [
+            "Minimize Client Components and push down",
+            "Use only Server Components throughout",
+            "Flatten tree structure completely",
+            "Increase component nesting depth"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• Client Component ها را تا جای ممکن پایین‌تر در tree ببرید\n" +
+            "• component های بزرگ را به قطعات کوچکتر بشکنید\n" +
+            "• فقط بخش‌هایی که واقعاً به interactivity نیاز دارند را Client کنید\n" +
+            "• هر چه کمتر Client Component داشته باشید، bundle کوچکتر می‌شود\n" +
+            "• نکته: leaf node ها در tree بهترین جا برای Client Component ها هستند"
+    },
+    {
+        "id": 965,
+        "question": "Where should filter state be stored in Next.js?",
+        "options": [
+            "In localStorage for persistence across sessions",
+            "In URL searchParams for share-ability",
+            "In global Redux store for access",
+            "In component state using useState"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• بهترین جا برای ذخیره state فیلترها در URL searchParams است\n" +
+            "• این کار باعث می‌شود فیلترها قابل share و bookmark باشند\n" +
+            "• کاربر می‌تواند لینک را برای دیگران ارسال کند\n" +
+            "• back/forward button مرورگر نیز کار می‌کند\n" +
+            "• نکته: URL همیشه source of truth برای فیلترهاست"
+    },
+    {
+        "id": 966,
+        "question": "Why store filter values in URL searchParams?",
+        "options": [
+            "Improves component render performance significantly",
+            "Reduces server load and bandwidth",
+            "Allows sharing and bookmarking filtered state",
+            "Enables offline functionality without network"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• اگر در URL باشد، کاربر می‌تواند لینک را share کند\n" +
+            "• دیگران دقیقاً همان فیلترها را می‌بینند\n" +
+            "• می‌توان صفحه فیلتر شده را bookmark کرد\n" +
+            "• navigation history مرورگر نیز فیلترها را ذخیره می‌کند\n" +
+            "• نکته: این بهترین UX برای فیلترها است و SEO friendly نیز هست"
+    },
+    {
+        "id": 967,
+        "question": "How do you read searchParams in Server Components?",
+        "options": [
+            "Through searchParams prop passed to page",
+            "Using useSearchParams hook from next/navigation",
+            "Through query prop in component",
+            "Using getSearchParams helper from next/server"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation":"• Server Component ها searchParams را به عنوان prop دریافت می‌کنند\n" +
+            "• Next.js به صورت خودکار این prop را به page component ها می‌دهد\n" +
+            "• می‌توانید مستقیماً از آن برای فیلتر کردن داده‌ها استفاده کنید\n" +
+            "• نیازی به useState یا useEffect ندارید\n" +
+            "• نکته: این یکی از مزایای Server Component هاست که به URL دسترسی مستقیم دارند"
+    },
+    {
+        "id": 968,
+        "question": "How do you update searchParams in Client Components?",
+        "options": [
+            "Using setSearchParams from next/navigation",
+            "Using updateParams from next/router",
+            "Using useRouter and router.replace method",
+            "Using window.location.search directly"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• از useRouter hook استفاده کنید و router.push یا router.replace را صدا بزنید\n" +
+            "• URL جدید را با searchParams جدید بسازید\n" +
+            "• Next.js صفحه را با مقادیر جدید دوباره render می‌کند\n" +
+            "• هیچ reload کاملی اتفاق نمی‌افتد\n" +
+            "• نکته: replace به جای push استفاده کنید تا history پر نشود"
+    },
+    {
+        "id": 969,
+        "question": "Should filter component be Server or Client Component?",
+        "options": [
+            "Server Component for better SEO",
+            "Client Component for interactivity handling",
+            "Server Component for performance always",
+            "Either works depending on requirements"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• filter component باید Client Component باشد چون به interactivity نیاز دارد\n" +
+            "• کاربر باید بتواند با button ها یا input ها تعامل کند\n" +
+            "• برای update کردن URL به event handler ها نیاز است\n" +
+            "• event handler ها فقط در Client Component کار می‌کنند\n" +
+            "• نکته: اما می‌توانید داده‌های فیلتر شده را در Server Component render کنید"
+    },
+    {
+        "id": 970,
+        "question": "How do you preserve other searchParams when updating?",
+        "options": [
+            "Merge new params with existing URLSearchParams",
+            "Clear all params then set new",
+            "Use preserveParams option in router",
+            "Next.js preserves them automatically"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• باید searchParams فعلی را بگیرید و فقط مقدار جدید را تغییر دهید\n" +
+            "• از URLSearchParams برای مدیریت query string استفاده کنید\n" +
+            "• پارامترهای دیگر را نگه دارید و فقط یکی را update کنید\n" +
+            "• سپس URL کامل را با تمام params بسازید\n" +
+            "• نکته: اگر این کار را نکنید، تمام فیلترهای دیگر از بین می‌روند"
+    },
 //     {
 //         "id": 965,
 //         "question": "What triggers re-render when searchParams change?",
