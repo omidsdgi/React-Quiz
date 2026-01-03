@@ -16208,136 +16208,176 @@ export const mockQuestions: Question[] = [
             "• هیچ JavaScript اضافی برای شرط‌ها به client ارسال نمی‌شود\n" +
             "• نکته: این یکی از مزایای Server Component هاست که logic پیچیده را در server نگه می‌دارند"
     },
-//     {
-//         "id": 945,
-//         "question": "What is the lifting content pattern in RSC?",
-//         "options": [
-//             "Moving Client Components higher in tree",
-//             "Lifting Server Components into Client slots",
-//             "Hoisting state to parent components",
-//             "Promoting components to root level"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 946,
-//         "question": "How does RSC improve initial page load?",
-//         "options": [
-//             "Reduces JavaScript sent to browser",
-//             "Compresses HTML more efficiently",
-//             "Preloads all components upfront",
-//             "Eliminates CSS from bundle"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 947,
-//         "question": "What is the component payload in RSC?",
-//         "options": [
-//             "Serialized component tree from server",
-//             "JavaScript bundle for components",
-//             "Component props and state data",
-//             "CSS styles for components"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 948,
-//         "question": "Can you use hooks in Server Components?",
-//         "options": [
-//             "Yes, all React hooks work",
-//             "No, hooks are Client-only features",
-//             "Yes, but only useEffect hook",
-//             "No, unless using async hooks"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 949,
-//         "question": "What is the main benefit of hybrid composition?",
-//         "options": [
-//             "Simplifies component architecture design",
-//             "Optimizes both performance and interactivity",
-//             "Eliminates need for state management",
-//             "Reduces total number of components"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 950,
-//         "question": "How do you pass event handlers to Server Components?",
-//         "options": [
-//             "Wrap handler in serializable format",
-//             "Use special serverAction helper function",
-//             "Cannot pass handlers to Server Components",
-//             "Pass through context provider instead"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 951,
-//         "question": "What is the component split strategy in RSC?",
-//         "options": [
-//             "Separating interactive from static parts",
-//             "Splitting large files into smaller",
-//             "Dividing components by route segments",
-//             "Breaking components into atoms"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 952,
-//         "question": "Can Server Components re-render without page reload?",
-//         "options": [
-//             "Yes, through server actions or navigation",
-//             "No, requires full page refresh",
-//             "Yes, but only with client state",
-//             "No, Server Components are static"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 953,
-//         "question": "What is the recommended pattern for forms in RSC?",
-//         "options": [
-//             "Use Client Component for entire form",
-//             "Use Server Component with Server Actions",
-//             "Use Client wrapper with Server children",
-//             "Use only Server Components throughout"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 954,
-//         "question": "How does composition affect Time to Interactive?",
-//         "options": [
-//             "More Server Components reduce TTI time",
-//             "More Client Components reduce TTI time",
-//             "Composition has no effect on TTI",
-//             "Only static components affect TTI"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 951,
+        "question": "What is the lifting content pattern in RSC?",
+        "options": [
+            "Moving Client Components higher in tree",
+            "Lifting Server Components into Client slots",
+            "Hoisting state to parent components",
+            "Promoting components to root level"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• lifting content یعنی بردن Server Component به بالا و پاس دادن آن به Client Component\n" +
+            "• به جای اینکه Server را داخل Client import کنیم، از بالا به عنوان prop می‌فرستیم\n" +
+            "• این کار boundary را حفظ می‌کند و Server Component در server باقی می‌ماند\n" +
+            "• Client Component فقط یک container می‌شود\n" +
+            "• نکته: این pattern برای جلوگیری از تبدیل ناخواسته Server به Client است"
+    },
+    {
+        "id": 952,
+        "question": "How does RSC improve initial page load?",
+        "options": [
+            "Reduces JavaScript sent to browser",
+            "Compresses HTML more efficiently",
+            "Preloads all components upfront",
+            "Eliminates CSS from bundle"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• Server Component ها هیچ JavaScript به browser ارسال نمی‌کنند\n" +
+            "• bundle size کوچکتر یعنی download سریعتر\n" +
+            "• browser باید JavaScript کمتری parse و execute کند\n" +
+            "• صفحه زودتر interactive می‌شود\n" +
+            "• نکته: هر چه کمتر JavaScript داشته باشید، initial load سریعتر است"
+    },
+    {
+        "id": 953,
+        "question": "What is the component payload in RSC?",
+        "options": [
+            "Serialized component tree from server",
+            "JavaScript bundle for components",
+            "Component props and state data",
+            "CSS styles for components"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• component payload نتیجه serialized شده rendering Server Component است\n" +
+            "• این یک representation از component tree است که از server به client ارسال می‌شود\n" +
+            "• شامل HTML و metadata برای hydration است\n" +
+            "• JavaScript اصلی component ها ارسال نمی‌شود\n" +
+            "• نکته: این payload خیلی کوچکتر از JavaScript کامل component است"
+    },
+    {
+        "id": 954,
+        "question": "Can you use hooks in Server Components?",
+        "options": [
+            "Yes, all React hooks work",
+            "No, hooks are Client-only features",
+            "Yes, but only useEffect hook",
+            "No, unless using async hooks"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation": "• خیر، hooks فقط در Client Component ها کار می‌کنند\n" +
+            "• hooks مثل useState، useEffect، useContext ویژگی client-side هستند\n" +
+            "• Server Component ها stateless هستند و lifecycle ندارند\n" +
+            "• اگر به hook نیاز دارید، باید component را Client کنید\n" +
+            "• نکته: این یکی از تفاوت‌های اصلی بین Server و Client Component هاست"
+    },
+    {
+        "id": 955,
+        "question": "What is the main benefit of hybrid composition?",
+        "options": [
+            "Simplifies component architecture design",
+            "Optimizes both performance and interactivity",
+            "Eliminates need for state management",
+            "Reduces total number of components"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• می‌توانید هم performance بالا و هم interactivity داشته باشید\n" +
+            "• بخش‌های static سریع در server render می‌شوند\n" +
+            "• بخش‌های interactive در client کار می‌کنند\n" +
+            "• بهترین تجربه برای کاربر و بهترین performance را می‌گیرید\n" +
+            "• نکته: hybrid composition به شما اجازه می‌دهد قدرت هر دو دنیا را داشته باشید"
+    },
+    {
+        "id": 956,
+        "question": "How do you pass event handlers to Server Components?",
+        "options": [
+            "Wrap handler in serializable format",
+            "Use special serverAction helper function",
+            "Cannot pass handlers to Server Components",
+            "Pass through context provider instead"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• نمی‌توانید event handler را به Server Component پاس دهید\n" +
+            "• توابع از boundary عبور نمی‌کنند و serializable نیستند\n" +
+            "• Server Component ها در server اجرا می‌شوند و event ندارند\n" +
+            "• برای event handling باید از Client Component استفاده کنید\n" +
+            "• نکته: برای actions از Server Actions استفاده کنید که روش دیگری دارند"
+    },
+    {
+        "id": 957,
+        "question": "What is the component split strategy in RSC?",
+        "options": [
+            "Separating interactive from static parts",
+            "Splitting large files into smaller",
+            "Dividing components by route segments",
+            "Breaking components into atoms"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• component split یعنی جدا کردن بخش‌های interactive از بخش‌های static\n" +
+            "• بخش‌های static را Server Component نگه دارید\n" +
+            "• فقط بخش‌های interactive را Client Component کنید\n" +
+            "• این کار bundle size را کاهش می‌دهد\n" +
+            "• نکته: هر چه component ها را ریزتر بشکنید، کنترل بیشتری روی کجا اجرا شوند دارید"
+    },
+    {
+        "id": 958,
+        "question": "Can Server Components re-render without page reload?",
+        "options": [
+            "Yes, through server actions or navigation",
+            "No, requires full page refresh",
+            "Yes, but only with client state",
+            "No, Server Components are static"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• بله، با استفاده از Server Actions یا navigation می‌توانند دوباره render شوند\n" +
+            "• هنگام navigation، Server Component ها دوباره در server اجرا می‌شوند\n" +
+            "• نتیجه جدید بدون reload کامل صفحه به client ارسال می‌شود\n" +
+            "• این یک soft navigation است نه hard reload\n" +
+            "• نکته: این قابلیت SPA experience را با server rendering ترکیب می‌کند"
+    },
+    {
+        "id": 959,
+        "question": "What is the recommended pattern for forms in RSC?",
+        "options": [
+            "Use Client Component for entire form",
+            "Use Server Component with Server Actions",
+            "Use Client wrapper with Server children",
+            "Use only Server Components throughout"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• بهترین روش استفاده از Server Component برای form و Server Action برای submission است\n" +
+            "• form در server render می‌شود و validation و logic در server اجرا می‌شود\n" +
+            "• هیچ JavaScript برای form handling به client ارسال نمی‌شود\n" +
+            "• progressive enhancement هم کار می‌کند حتی بدون JavaScript\n" +
+            "• نکته: این pattern امن‌تر و سریعتر از client-side forms است"
+    },
+    {
+        "id": 960,
+        "question": "How does composition affect Time to Interactive?",
+        "options": [
+            "More Server Components reduce TTI time",
+            "More Client Components reduce TTI time",
+            "Composition has no effect on TTI",
+            "Only static components affect TTI"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• هر چه Server Component های بیشتری داشته باشید، TTI کمتر می‌شود\n" +
+            "• Server Component ها JavaScript ارسال نمی‌کنند که باید parse و execute شود\n" +
+            "• Client Component ها باید download، parse و hydrate شوند\n" +
+            "• کمتر Client Component یعنی صفحه سریعتر interactive می‌شود\n" +
+            "• نکته: TTI یکی از مهمترین metric های performance است"
+    },
 //     {
 //         "id": 955,
 //         "question": "What is the main challenge of RSC composition?",
