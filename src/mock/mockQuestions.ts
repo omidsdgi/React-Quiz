@@ -16718,136 +16718,176 @@ export const mockQuestions: Question[] = [
             "• filter UI باید Client Component باشد اما data fetching می‌تواند Server باشد\n" +
             "• نکته: این ترکیب بهترین performance و UX را می‌دهد"
     },
-//     {
-//         "id": 975,
-//         "question": "How do you create a search filter component?",
-//         "options": [
-//             "Use input with onChange updating searchParams",
-//             "Use form with POST method",
-//             "Use searchBox from next/ui",
-//             "Use filter prop on data array"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 976,
-//         "question": "What is best practice for filter URL structure?",
-//         "options": [
-//             "Use encoded keys like ?filter=encoded",
-//             "Use short keys like ?c=b",
-//             "Use numbered keys like ?f1=value",
-//             "Use descriptive keys like ?category=books",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 977,
-//         "question": "How do you handle multiple values for one filter?",
-//         "options": [
-//             "Use JSON encoded string",
-//             "Use array notation in URL",
-//             "Use separate keys for each value",
-//             "Use comma-separated string in searchParam",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 978,
-//         "question": "Should you validate filter values from URL?",
-//         "options": [
-//             "No, validation causes performance issues",
-//             "Yes, but only in production",
-//             "No, Next.js validates automatically",
-//             "Yes, users can manipulate URL params",
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 979,
-//         "question": "How do you create a dropdown filter?",
-//         "options": [
-//             "Use select with onChange updating URL",
-//             "Use dropdown from next/components",
-//             "Use menu with static options",
-//             "Use radio buttons with forms"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 980,
-//         "question": "Can you use filter with static generation?",
-//         "options": [
-//             "Yes, using generateStaticParams but limited to three filters",
-//             "No, filtering requires dynamic rendering",
-//             "Yes, using generateStaticParams for combinations",
-//             "No, static pages cannot have params",
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 981,
-//         "question": "How do you reset single filter while keeping others?",
-//         "options": [
-//             "Set filter key value to empty string",
-//             "Delete specific key from URLSearchParams",
-//             "Use resetFilter with filter name",
-//             "Navigate to base URL manually"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 982,
-//         "question": "What is the benefit of URL-based filters over state?",
-//         "options": [
-//             "Faster component rendering performance overall",
-//             "Smaller JavaScript bundle size reduction",
-//             "Shareable links and browser navigation support",
-//             "Better TypeScript type safety"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 983,
-//         "question": "How do you handle filter loading states?",
-//         "options": [
-//             "Use Suspense boundary around filtered content",
-//             "Use isLoading from useSearchParams hook",
-//             "Use loading prop on filter component",
-//             "Next.js shows loading automatically"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 984,
-//         "question": "Should filters be accessible via keyboard?",
-//         "options": [
-//             "No, increases complexity unnecessarily",
-//             "No, mouse interaction sufficient",
-//             "Yes, for accessibility and usability",
-//             "Yes, but only in forms",
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 981,
+        "question": "How do you create a search filter component?",
+        "options": [
+            "Use input with onChange updating searchParams",
+            "Use form with POST method",
+            "Use searchBox from next/ui",
+            "Use filter prop on data array"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• یک input با event handler onChange ایجاد کنید\n" +
+            "• در onChange مقدار input را بگیرید و URL searchParams را update کنید\n" +
+            "• از debounce استفاده کنید تا هر کاراکتر navigation ایجاد نکند\n" +
+            "• Server Component داده‌ها را بر اساس search query فیلتر می‌کند\n" +
+            "• نکته: search filter معمولاً نیاز به debouncing دارد برای UX بهتر"
+    },
+    {
+        "id": 982,
+        "question": "What is best practice for filter URL structure?",
+        "options": [
+            "Use encoded keys like ?filter=encoded",
+            "Use short keys like ?c=b",
+            "Use numbered keys like ?f1=value",
+            "Use descriptive keys like ?category=books",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• از key های توصیفی و واضح استفاده کنید مثل category، minPrice، status\n" +
+            "• URL باید خوانا و قابل فهم باشد\n" +
+            "• از کلمات کامل به جای مخفف استفاده کنید\n" +
+            "• این کار SEO را بهبود می‌دهد و debugging را آسان‌تر می‌کند\n" +
+            "• نکته: URL های خوانا به کاربر کمک می‌کنند بفهمند چه فیلترهایی فعال است"
+    },
+    {
+        "id": 983,
+        "question": "How do you handle multiple values for one filter?",
+        "options": [
+            "Use JSON encoded string",
+            "Use array notation in URL",
+            "Use separate keys for each value",
+            "Use comma-separated string in searchParam",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• مقادیر را با کاما یا separator دیگری در یک string ذخیره کنید\n" +
+            "• در server با split کردن string، array بسازید\n" +
+            "• این روش ساده‌تر از استفاده از key های تکراری است\n" +
+            "• URL هم خوانا می‌ماند و query string پیچیده نمی‌شود\n" +
+            "• نکته: مثلاً colors=red,blue,green به جای سه query param جداگانه"
+    },
+    {
+        "id": 984,
+        "question": "Should you validate filter values from URL?",
+        "options": [
+            "No, validation causes performance issues",
+            "Yes, but only in production",
+            "No, Next.js validates automatically",
+            "Yes, users can manipulate URL params",
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• بله حتماً، چون کاربر می‌تواند URL را دستی تغییر دهد\n" +
+            "• مقادیر غیرمجاز می‌توانند باعث خطا یا رفتار نامطلوب شوند\n" +
+            "• چک کنید که مقادیر در لیست valid options هستند\n" +
+            "• اگر نامعتبر بود، به مقدار پیش‌فرض برگردید یا ignore کنید\n" +
+            "• نکته: هیچوقت به input کاربر اعتماد کامل نکنید، حتی در URL"
+    },
+    {
+        "id": 985,
+        "question": "How do you create a dropdown filter?",
+        "options": [
+            "Use select with onChange updating URL",
+            "Use dropdown from next/components",
+            "Use menu with static options",
+            "Use radio buttons with forms"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• از select element با onChange handler استفاده کنید\n" +
+            "• در onChange مقدار انتخاب شده را بگیرید و URL را update کنید\n" +
+            "• مقدار selected را از searchParams بخوانید\n" +
+            "• هر option با value مناسب تعریف کنید\n" +
+            "• نکته: dropdown برای فیلترهایی با تعداد محدود گزینه مناسب است"
+    },
+    {
+        "id": 986,
+        "question": "Can you use filter with static generation?",
+        "options": [
+            "Yes, using generateStaticParams but limited to three filters",
+            "No, filtering requires dynamic rendering",
+            "Yes, using generateStaticParams for combinations",
+            "No, static pages cannot have params",
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation": "• بله، با generateStaticParams می‌توانید ترکیبات مختلف فیلتر را pre-render کنید\n" +
+            "• هر ترکیب فیلتر یک صفحه static جداگانه می‌شود\n" +
+            "• این کار برای performance عالی است اما فقط برای تعداد محدود ترکیب\n" +
+            "• اگر ترکیبات زیاد باشد، از dynamic rendering استفاده کنید\n" +
+            "• نکته: برای e-commerce با صدها فیلتر، static generation عملی نیست"
+    },
+    {
+        "id": 987,
+        "question": "How do you reset single filter while keeping others?",
+        "options": [
+            "Set filter key value to empty string",
+            "Delete specific key from URLSearchParams",
+            "Use resetFilter with filter name",
+            "Navigate to base URL manually"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• مقدار آن key را به empty string تنظیم کنید یا از URL حذف کنید\n" +
+            "• بقیه searchParams را حفظ کنید\n" +
+            "• فقط key مربوط به آن فیلتر تغییر می‌کند\n" +
+            "• با URLSearchParams می‌توانید به راحتی یک key را delete کنید\n" +
+            "• نکته: این pattern برای دکمه clear روی هر فیلتر جداگانه مفید است"
+    },
+    {
+        "id": 988,
+        "question": "What is the benefit of URL-based filters over state?",
+        "options": [
+            "Faster component rendering performance overall",
+            "Smaller JavaScript bundle size reduction",
+            "Shareable links and browser navigation support",
+            "Better TypeScript type safety"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• کاربر می‌تواند لینک فیلتر شده را share کند با دیگران\n" +
+            "• back/forward button مرورگر کار می‌کند\n" +
+            "• می‌توان صفحه را bookmark کرد\n" +
+            "• SEO friendly است و searchable\n" +
+            "• نکته: URL as state یکی از بهترین pattern های web development است"
+    },
+    {
+        "id": 989,
+        "question": "How do you handle filter loading states?",
+        "options": [
+            "Use Suspense boundary around filtered content",
+            "Use isLoading from useSearchParams hook",
+            "Use loading prop on filter component",
+            "Next.js shows loading automatically"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• یک Suspense boundary دور محتوای فیلتر شده قرار دهید\n" +
+            "• fallback UI را برای نمایش loading تعریف کنید\n" +
+            "• وقتی searchParams تغییر می‌کند، Server Component دوباره fetch می‌کند\n" +
+            "• در این مدت Suspense fallback نمایش داده می‌شود\n" +
+            "• نکته: این کار تجربه کاربری را smooth می‌کند و از صفحه خالی جلوگیری می‌کند"
+    },
+    {
+        "id": 990,
+        "question": "Should filters be accessible via keyboard?",
+        "options": [
+            "No, increases complexity unnecessarily",
+            "No, mouse interaction sufficient",
+            "Yes, for accessibility and usability",
+            "Yes, but only in forms",
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• بله حتماً، accessibility یک الزام است نه انتخاب\n" +
+            "• تمام button ها و input ها باید با Tab قابل دسترسی باشند\n" +
+            "• Enter یا Space باید فیلتر را فعال کند\n" +
+            "• از ARIA attributes برای screen reader ها استفاده کنید\n" +
+            "• نکته: کاربران زیادی فقط با keyboard کار می‌کنند، آنها را فراموش نکنید"
+    },
 //     {
 //         "id": 985,
 //         "question": "How do you create a range filter (min-max)?",
