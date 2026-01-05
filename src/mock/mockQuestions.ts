@@ -16548,136 +16548,176 @@ export const mockQuestions: Question[] = [
             "• سپس URL کامل را با تمام params بسازید\n" +
             "• نکته: اگر این کار را نکنید، تمام فیلترهای دیگر از بین می‌روند"
     },
-//     {
-//         "id": 965,
-//         "question": "What triggers re-render when searchParams change?",
-//         "options": [
-//             "Manual refresh required by user",
-//             "Navigation updates page automatically",
-//             "setState call in component",
-//             "Browser reload after URL change"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 966,
-//         "question": "How do you create filter buttons with searchParams?",
-//         "options": [
-//             "Use form with GET method",
-//             "Use Link component with updated href",
-//             "Use <a> tag with new URL",
-//             "Use onClick updating window.location"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 967,
-//         "question": "How do you clear all filters from URL?",
-//         "options": [
-//             "Set searchParams to empty object",
-//             "Navigate to pathname without search",
-//             "Use clearFilters from next/navigation",
-//             "Call resetParams on router object"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 968,
-//         "question": "Can you use multiple filter criteria simultaneously?",
-//         "options": [
-//             "Yes, using multiple searchParams keys",
-//             "No, only one filter allowed",
-//             "Yes, but maximum three filters",
-//             "No, causes URL parsing errors"
-//         ],
-//         "correctOption": 0,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 969,
-//         "question": "How do you handle filter with pagination?",
-//         "options": [
-//             "Use separate state for each",
-//             "Use different routes per page",
-//             "Store pagination in cookies only",
-//             "Combine both in searchParams with keys",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 970,
-//         "question": "What happens to filters on page navigation?",
-//         "options": [
-//             "Filters reset to default values",
-//             "Filters lost unless manually saved",
-//             "Filters persist in URL automatically",
-//             "Filters save to localStorage",
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 971,
-//         "question": "How do you set default filter values?",
-//         "options": [
-//             "Use defaultParams in router config",
-//             "Check if searchParam exists or use default",
-//             "Set in component initial state",
-//             "Define in next.config.js file"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 972,
-//         "question": "Should you debounce filter input updates?",
-//         "options": [
-//             "No, update URL on every keystroke",
-//             "Yes, to reduce navigation and renders",
-//             "No, Next.js debounce&#8217;s automatically",
-//             "Yes, but only in production"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 973,
-//         "question": "How do you style active filter button?",
-//         "options": [
-//             "Next.js adds active class automatically",
-//             "Use activeClassName prop on Link",
-//             "Compare searchParam with button value",
-//             "Use CSS :active pseudo-class"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 974,
-//         "question": "Can filters work with Server Components?",
-//         "options": [
-//             "No, filters require client interactivity",
-//             "Yes, searchParams passed to Server Components",
-//             "Yes, but only with forms",
-//             "No, Server Components are static"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
+    {
+        "id": 971,
+        "question": "What triggers re-render when searchParams change?",
+        "options": [
+            "Manual refresh required by user",
+            "Navigation updates page automatically",
+            "setState call in component",
+            "Browser reload after URL change"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• Next.js به صورت خودکار تغییر URL را تشخیص می‌دهد\n" +
+            "• وقتی searchParams تغییر کند، صفحه دوباره render می‌شود\n" +
+            "• Server Component ها با مقادیر جدید اجرا می‌شوند\n" +
+            "• هیچ کد اضافی برای trigger کردن re-render لازم نیست\n" +
+            "• نکته: این یکی از قدرت‌های Next.js است که navigation را به صورت reactive مدیریت می‌کند"
+    },
+    {
+        "id": 972,
+        "question": "How do you create filter buttons with searchParams?",
+        "options": [
+            "Use form with GET method",
+            "Use Link component with updated href",
+            "Use <a> tag with new URL",
+            "Use onClick updating window.location"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• از Link component با href جدید استفاده کنید\n" +
+            "• href باید URL فعلی به اضافه searchParam جدید باشد\n" +
+            "• Link navigation را بدون reload انجام می‌دهد\n" +
+            "• می‌توانید از onClick هم استفاده کنید اما Link بهتر است\n" +
+            "• نکته: Link باعث می‌شود SEO بهتر شود و back button هم کار کند"
+    },
+    {
+        "id": 973,
+        "question": "How do you clear all filters from URL?",
+        "options": [
+            "Set searchParams to empty object",
+            "Navigate to pathname without search",
+            "Use clearFilters from next/navigation",
+            "Call resetParams on router object"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• به pathname بدون هیچ searchParams navigate کنید\n" +
+            "• فقط مسیر اصلی صفحه را بدون query string بدهید\n" +
+            "• تمام فیلترها از URL حذف می‌شوند\n" +
+            "• صفحه به حالت پیش‌فرض برمی‌گردد\n" +
+            "• نکته: این کار برای دکمه reset یا clear filters مفید است"
+    },
+    {
+        "id": 974,
+        "question": "Can you use multiple filter criteria simultaneously?",
+        "options": [
+            "Yes, using multiple searchParams keys",
+            "No, only one filter allowed",
+            "Yes, but maximum three filters",
+            "No, causes URL parsing errors"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation":"• بله، می‌توانید چندین key مختلف در searchParams داشته باشید\n" +
+            "• هر فیلتر یک key جداگانه در URL دارد\n" +
+            "• می‌توانید آنها را با هم ترکیب کنید\n" +
+            "• Server Component تمام params را دریافت می‌کند و می‌تواند همه را اعمال کند\n" +
+            "• نکته: این روش بسیار قدرتمند برای ساخت filter های پیچیده است"
+    },
+    {
+        "id": 975,
+        "question": "How do you handle filter with pagination?",
+        "options": [
+            "Use separate state for each",
+            "Use different routes per page",
+            "Store pagination in cookies only",
+            "Combine both in searchParams with keys",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• هم filter key و هم page key را در searchParams قرار دهید\n" +
+            "• هر دو به صورت مستقل در URL ذخیره می‌شوند\n" +
+            "• وقتی filter تغییر می‌کند، page را به ۱ reset کنید\n" +
+            "• Server Component هر دو را می‌خواند و به query اعمال می‌کند\n" +
+            "• نکته: مراقب باشید وقتی filter عوض می‌شود، کاربر در صفحه قدیمی pagination نماند"
+    },
+    {
+        "id": 976,
+        "question": "What happens to filters on page navigation?",
+        "options": [
+            "Filters reset to default values",
+            "Filters lost unless manually saved",
+            "Filters persist in URL automatically",
+            "Filters save to localStorage",
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• فیلترها در URL هستند پس به صورت خودکار حفظ می‌شوند\n" +
+            "• وقتی به صفحه دیگری می‌روید و برمی‌گردید، فیلترها همچنان هستند\n" +
+            "• back button مرورگر فیلترها را نگه می‌دارد\n" +
+            "• نیازی به ذخیره در localStorage یا state management ندارید\n" +
+            "• نکته: این یکی از بزرگترین مزایای استفاده از URL برای state است"
+    },
+    {
+        "id": 977,
+        "question": "How do you set default filter values?",
+        "options": [
+            "Use defaultParams in router config",
+            "Check if searchParam exists or use default",
+            "Set in component initial state",
+            "Define in next.config.js file"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• در component چک کنید که آیا searchParam وجود دارد یا نه\n" +
+            "• اگر وجود نداشت، از مقدار پیش‌فرض استفاده کنید\n" +
+            "• می‌توانید از nullish coalescing operator استفاده کنید\n" +
+            "• مقادیر پیش‌فرض را در logic فیلتر کردن اعمال کنید\n" +
+            "• نکته: default value ها را در URL قرار ندهید، فقط در logic استفاده کنید"
+    },
+    {
+        "id": 978,
+        "question": "Should you debounce filter input updates?",
+        "options": [
+            "No, update URL on every keystroke",
+            "Yes, to reduce navigation and renders",
+            "No, Next.js debounce&#8217;s automatically",
+            "Yes, but only in production"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• بله، برای input های text که کاربر تایپ می‌کند حتماً debounce کنید\n" +
+            "• بدون debounce، هر کاراکتر یک navigation و re-render ایجاد می‌کند\n" +
+            "• debounce صبر می‌کند تا کاربر تایپ را تمام کند\n" +
+            "• این کار performance را بهبود می‌دهد و تجربه کاربری بهتری ایجاد می‌کند\n" +
+            "• نکته: معمولاً ۳۰۰-۵۰۰ میلی‌ثانیه delay مناسب است"
+    },
+    {
+        "id": 979,
+        "question": "How do you style active filter button?",
+        "options": [
+            "Next.js adds active class automatically",
+            "Use activeClassName prop on Link",
+            "Compare searchParam with button value",
+            "Use CSS :active pseudo-class"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• مقدار searchParam فعلی را بخوانید\n" +
+            "• با مقدار button مقایسه کنید\n" +
+            "• اگر برابر بود، class یا style مخصوص active را اضافه کنید\n" +
+            "• این کار به صورت conditional در JSX انجام می‌شود\n" +
+            "• نکته: این pattern به کاربر نشان می‌دهد کدام فیلتر فعال است"
+    },
+    {
+        "id": 980,
+        "question": "Can filters work with Server Components?",
+        "options": [
+            "No, filters require client interactivity",
+            "Yes, searchParams passed to Server Components",
+            "Yes, but only with forms",
+            "No, Server Components are static"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• بله، Server Component ها می‌توانند searchParams را بخوانند\n" +
+            "• داده‌ها بر اساس فیلترها در server فیلتر می‌شوند\n" +
+            "• فقط نتیجه نهایی به client ارسال می‌شود\n" +
+            "• filter UI باید Client Component باشد اما data fetching می‌تواند Server باشد\n" +
+            "• نکته: این ترکیب بهترین performance و UX را می‌دهد"
+    },
 //     {
 //         "id": 975,
 //         "question": "How do you create a search filter component?",
