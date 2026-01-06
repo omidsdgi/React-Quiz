@@ -17058,135 +17058,176 @@ export const mockQuestions: Question[] = [
             "• database indexing برای performance مهمتر از تعداد فیلتر است\n" +
             "• نکته: نگران complexity URL نباشید، نگران query performance باشید"
     },
-//     {
-//         "id": 995,
-//         "question": "How do you handle filter with sorting?",
-//         "options": [
-//             "Combine both in single param value",
-//             "Use separate searchParam keys for each",
-//             "Use different routes for sorting",
-//             "Store sorting in separate state"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 996,
-//         "question": "Should you preserve filters across different pages?",
-//         "options": [
-//             "Always preserve for consistency",
-//             "Never preserve to avoid confusion",
-//             "Only preserve on same route",
-//             "Depends on user experience requirements",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 997,
-//         "question": "How do you test filter functionality?",
-//         "options": [
-//             "Next.js tests filters automatically",
-//             "Test URL updates and rendered results",
-//             "Use filterTest from testing library",
-//             "Only test UI interaction visually",
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 998,
-//         "question": "What accessibility features should filters have?",
-//         "options": [
-//             "Accessibility handled by Next.js automatically",
-//             "ARIA labels, keyboard nav, screen reader support",
-//             "Only color contrast and font size",
-//             "Just keyboard navigation is sufficient",
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 999,
-//         "question": "Where should UI state like modal visibility be stored?",
-//         "options": [
-//             "On server for consistency across requests",
-//             "In client component state with useState",
-//             "In cookies for server access",
-//             "In URL searchParams for sharing"
-//         ],
-//         "correctOption": 1,
-//         "points": 10,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1000,
-//         "question": "Where should user authentication state be managed in web apps?",
-//         "options": [
-//             "In client localStorage for convenience",
-//             "In URL searchParams for tracking",
-//             "On server with cookies or sessions",
-//             "In client Context for access"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1001,
-//         "question": "Where should filter state be stored in Next.js?",
-//         "options": [
-//             "On server in database always",
-//             "In client component state only",
-//             "In URL searchParams readable by both",
-//             "In cookies for persistence"
-//         ],
-//         "correctOption": 2,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1002,
-//         "question": "Where should shopping cart state be stored?",
-//         "options": [
-//             "On server database for persistence",
-//             "In client localStorage temporarily",
-//             "In URL for sharing capability",
-//             "Both client storage and server sync"
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1003,
-//         "question": "Where should form validation state be stored?",
-//         "options": [
-//             "On server only for security",
-//             "In client for UX and server for security",
-//             "In URL searchParams for tracking",
-//             "In cookies for persistence"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 1004,
-//         "question": "Where should temporary loading states be stored?",
-//         "options": [
-//             "In client component state only",
-//             "On server for consistency",
-//             "In URL for tracking progress",
-//             "In cookies for persistence"
-//         ],
-//         "correctOption": 0,
-//         "points": 10
-//     },
+    {
+        "id": 1001,
+        "question": "How do you handle filter with sorting?",
+        "options": [
+            "Combine both in single param value",
+            "Use separate searchParam keys for each",
+            "Use different routes for sorting",
+            "Store sorting in separate state"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• sort و filter را به عنوان دو key مستقل در searchParams قرار دهید\n" +
+            "• مثلاً sortBy=price و order=asc\n" +
+            "• هر دو را در server بخوانید و به query اعمال کنید\n" +
+            "• کاربر می‌تواند هم فیلتر کند هم sort کند\n" +
+            "• نکته: sorting و filtering دو عملیات مستقل هستند و نباید با هم قاطی شوند"
+    },
+    {
+        "id": 1002,
+        "question": "Should you preserve filters across different pages?",
+        "options": [
+            "Always preserve for consistency",
+            "Never preserve to avoid confusion",
+            "Only preserve on same route",
+            "Depends on user experience requirements",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• بستگی به requirements و UX دارد\n" +
+            "• برای صفحات مرتبط مثل لیست محصولات، حفظ فیلترها منطقی است\n" +
+            "• برای صفحات نامرتبط، فیلترها را clear کنید\n" +
+            "• تصمیم بگیرید چه رفتاری برای کاربر بهتر است\n" +
+            "• نکته: این یک design decision است که باید با تیم UX مشورت کنید"
+    },
+    {
+        "id": 1003,
+        "question": "How do you test filter functionality?",
+        "options": [
+            "Next.js tests filters automatically",
+            "Test URL updates and rendered results",
+            "Use filterTest from testing library",
+            "Only test UI interaction visually",
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• URL را با searchParams مختلف تست کنید\n" +
+            "• بررسی کنید که نتایج صحیح render می‌شوند\n" +
+            "• interaction با filter UI را تست کنید\n" +
+            "• edge case ها مثل مقادیر نامعتبر را چک کنید\n" +
+            "• نکته: integration test ها برای فیلترها خیلی مهم‌تر از unit test ها هستند"
+    },
+    {
+        "id": 1004,
+        "question": "What accessibility features should filters have?",
+        "options": [
+            "Accessibility handled by Next.js automatically",
+            "ARIA labels, keyboard nav, screen reader support",
+            "Only color contrast and font size",
+            "Just keyboard navigation is sufficient",
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation": "• ARIA labels برای screen reader ها اضافه کنید\n" +
+            "• keyboard navigation کامل پشتیبانی شود\n" +
+            "• focus management صحیح داشته باشید\n" +
+            "• contrast ratio مناسب برای readability\n" +
+            "• نکته: accessibility testing با screen reader ها را فراموش نکنید"
+    },
+    {
+        "id": 1005,
+        "question": "Where should UI state like modal visibility be stored?",
+        "options": [
+            "On server for consistency across requests",
+            "In client component state with useState",
+            "In cookies for server access",
+            "In URL searchParams for sharing"
+        ],
+        "correctOption": 1,
+        "points": 10,
+        "explanation":"• در client component state با useState ذخیره کنید\n" +
+            "• این نوع state موقتی است و نیازی به persistence ندارد\n" +
+            "• وقتی component unmount می‌شود، state از بین می‌رود\n" +
+            "• نیازی به URL یا server ندارد\n" +
+            "• نکته: UI state محلی باید در client باشد نه URL یا server"
+    },
+    {
+        "id": 1006,
+        "question": "Where should user authentication state be managed in web apps?",
+        "options": [
+            "In client localStorage for convenience",
+            "In URL searchParams for tracking",
+            "On server with cookies or sessions",
+            "In client Context for access"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation":"• authentication state باید در server با session یا cookie مدیریت شود\n" +
+            "• این کار امن‌تر است چون token در client قابل دسترسی نیست\n" +
+            "• از httpOnly cookies برای ذخیره token استفاده کنید\n" +
+            "• server در هر request می‌تواند authentication را verify کند\n" +
+            "• نکته: هرگز sensitive authentication data را در client localStorage نگذارید"
+    },
+    {
+        "id": 1007,
+        "question": "Where should filter state be stored in Next.js?",
+        "options": [
+            "On server in database always",
+            "In client component state only",
+            "In URL searchParams readable by both",
+            "In cookies for persistence"
+        ],
+        "correctOption": 2,
+        "points": 20,
+        "explanation": "• در URL searchParams که هم server و هم client می‌توانند بخوانند\n" +
+            "• این کار shareable و SEO friendly است\n" +
+            "• server می‌تواند داده‌ها را فیلتر کند\n" +
+            "• client می‌تواند UI را update کند\n" +
+            "• نکته: URL بهترین جا برای state هایی است که باید shareable باشند"
+    },
+    {
+        "id": 1008,
+        "question": "Where should shopping cart state be stored?",
+        "options": [
+            "On server database for persistence",
+            "In client localStorage temporarily",
+            "In URL for sharing capability",
+            "Both client storage and server sync"
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• باید هم در client و هم در server sync شود\n" +
+            "• client برای immediate updates و UX سریع\n" +
+            "• server برای persistence و sync بین devices\n" +
+            "• localStorage می‌تواند برای temporary storage استفاده شود\n" +
+            "• نکته: cart یک hybrid state است که نیاز به client و server sync دارد"
+    },
+    {
+        "id": 1009,
+        "question": "Where should form validation state be stored?",
+        "options": [
+            "On server only for security",
+            "In client for UX and server for security",
+            "In URL searchParams for tracking",
+            "In cookies for persistence"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• validation باید هم در client و هم در server انجام شود\n" +
+            "• client برای immediate feedback و UX بهتر\n" +
+            "• server برای security و validation نهایی\n" +
+            "• هیچوقت فقط به client-side validation اعتماد نکنید\n" +
+            "• نکته: client validation برای UX است، server validation برای security"
+    },
+    {
+        "id": 1010,
+        "question": "Where should temporary loading states be stored?",
+        "options": [
+            "In client component state only",
+            "On server for consistency",
+            "In URL for tracking progress",
+            "In cookies for persistence"
+        ],
+        "correctOption": 0,
+        "points": 10,
+        "explanation": "• در client component state با useState\n" +
+            "• این state فقط برای نمایش loading indicator است\n" +
+            "• موقتی است و نیازی به persistence ندارد\n" +
+            "• وقتی data می‌آید، loading state به false تبدیل می‌شود\n" +
+            "• نکته: loading state یک UI state محلی است که فقط در client معنا دارد"
+    },
 //     {
 //         "id": 1005,
 //         "question": "Where should theme preferences be stored in Next.js?",
@@ -17197,7 +17238,8 @@ export const mockQuestions: Question[] = [
 //             "In URL searchParams for sharing"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1006,
@@ -17209,7 +17251,8 @@ export const mockQuestions: Question[] = [
 //             "In URL for debugging"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1007,
@@ -17221,7 +17264,8 @@ export const mockQuestions: Question[] = [
 //             "In client sessionStorage temporary"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1008,
@@ -17233,7 +17277,8 @@ export const mockQuestions: Question[] = [
 //             "In cookies for remembering"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1009,
@@ -17245,7 +17290,8 @@ export const mockQuestions: Question[] = [
 //             "In cookies for persistence"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1010,
@@ -17257,7 +17303,8 @@ export const mockQuestions: Question[] = [
 //             "In cookies for auto-save"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1011,
@@ -17269,7 +17316,8 @@ export const mockQuestions: Question[] = [
 //             "In client Context for sharing"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1012,
@@ -17281,7 +17329,8 @@ export const mockQuestions: Question[] = [
 //             "Works offline without network"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1013,
@@ -17293,7 +17342,8 @@ export const mockQuestions: Question[] = [
 //             "Data persists after browser close"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1014,
@@ -17305,7 +17355,8 @@ export const mockQuestions: Question[] = [
 //             "In cookies for persistence"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1015,
@@ -17317,7 +17368,8 @@ export const mockQuestions: Question[] = [
 //             "Depends on state type and requirements"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1016,
@@ -17329,7 +17381,8 @@ export const mockQuestions: Question[] = [
 //             "No, unless using Context"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1017,
@@ -17341,7 +17394,8 @@ export const mockQuestions: Question[] = [
 //             "No, unless passed via props"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1018,
@@ -17353,7 +17407,8 @@ export const mockQuestions: Question[] = [
 //             "In cookies for rollback capability"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1019,
@@ -17365,7 +17420,8 @@ export const mockQuestions: Question[] = [
 //             "In URL for sharing drafts"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1020,
@@ -17377,7 +17433,8 @@ export const mockQuestions: Question[] = [
 //             "In cookies for persistence"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1021,
@@ -17389,7 +17446,8 @@ export const mockQuestions: Question[] = [
 //             "In cookies for user targeting"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1022,
@@ -17401,7 +17459,8 @@ export const mockQuestions: Question[] = [
 //             "Modal open/close toggle state"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1023,
@@ -17413,7 +17472,8 @@ export const mockQuestions: Question[] = [
 //             "Temporary UI interactions and animations",
 //         ],
 //         "correctOption":3,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1024,
@@ -17425,7 +17485,8 @@ export const mockQuestions: Question[] = [
 //             "Framework syncs automatically always"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1025,
@@ -17437,7 +17498,8 @@ export const mockQuestions: Question[] = [
 //             "In localStorage for persistence"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1026,
@@ -17449,7 +17511,8 @@ export const mockQuestions: Question[] = [
 //             "In cookies for persistence"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1027,
@@ -17461,7 +17524,8 @@ export const mockQuestions: Question[] = [
 //             "Depends on form complexity and requirements"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1028,
@@ -17473,7 +17537,8 @@ export const mockQuestions: Question[] = [
 //             "All of the above considerations"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1029,
@@ -17485,7 +17550,8 @@ export const mockQuestions: Question[] = [
 //             "All of the above considerations"
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1030,
@@ -17497,7 +17563,8 @@ export const mockQuestions: Question[] = [
 //             "In URL for connection tracking"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //         {
 //             "id": 1034,
@@ -17509,7 +17576,8 @@ export const mockQuestions: Question[] = [
 //                 "A CSS styling configuration file"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1035,
@@ -17521,7 +17589,8 @@ export const mockQuestions: Question[] = [
 //                 "PUT is public, PATCH is private"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //     {
 //             "id": 1037,
@@ -17533,7 +17602,8 @@ export const mockQuestions: Question[] = [
 //                 "A styling library for CSS"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1039,
@@ -17545,7 +17615,8 @@ export const mockQuestions: Question[] = [
 //                 "Page files have higher priority"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1040,
@@ -17557,7 +17628,8 @@ export const mockQuestions: Question[] = [
 //                 "Resource not found on server"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1041,
@@ -17569,7 +17641,8 @@ export const mockQuestions: Question[] = [
 //                 "To compress response data size"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1042,
@@ -17581,7 +17654,8 @@ export const mockQuestions: Question[] = [
 //                 "Only works with JSON data"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1043,
@@ -17593,7 +17667,8 @@ export const mockQuestions: Question[] = [
 //                 "A styling object for responses"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1044,
@@ -17605,7 +17680,8 @@ export const mockQuestions: Question[] = [
 //                 "App Router is slower overall"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1045,
@@ -17617,7 +17693,8 @@ export const mockQuestions: Question[] = [
 //                 "A CSS property for styling"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1046,
@@ -17629,7 +17706,8 @@ export const mockQuestions: Question[] = [
 //                 "To compress JSON file size"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1047,
@@ -17641,7 +17719,8 @@ export const mockQuestions: Question[] = [
 //                 "Compile, Run, Update, Debug operations"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1048,
@@ -17653,7 +17732,8 @@ export const mockQuestions: Question[] = [
 //                 "Routes only for authenticated users"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //         "id": 1049,
@@ -17665,7 +17745,8 @@ export const mockQuestions: Question[] = [
 //             "export handler POST = (request)"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1050,
@@ -17677,7 +17758,8 @@ export const mockQuestions: Question[] = [
 //             "http://localhost:3000/api/route/users endpoint path"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1051,
@@ -17689,7 +17771,8 @@ export const mockQuestions: Question[] = [
 //             "return new JsonResponse(data) constructor"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //    {
 //         "id": 1052,
@@ -17701,7 +17784,8 @@ export const mockQuestions: Question[] = [
 //             "DROP method for resource deletion"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1053,
@@ -17713,11 +17797,13 @@ export const mockQuestions: Question[] = [
 //             "const data = await request.body()"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1054,
-//         "question": "Where should you create a Route Handler for API endpoints in Next.js?",
+//         "question": "Where should you create a Route Handler for API endpoints in Next.js?",,
+//  "explanation":""
 //         "options": [
 //             "Inside pages directory with api prefix",
 //             "Inside app directory following folder structure",
@@ -17725,7 +17811,8 @@ export const mockQuestions: Question[] = [
 //             "Inside src/api directory with route files"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1055,
@@ -17737,7 +17824,8 @@ export const mockQuestions: Question[] = [
 //             "Only with middleware configuration enabled"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1056,
@@ -17749,7 +17837,8 @@ export const mockQuestions: Question[] = [
 //             "Through request.url.params object property"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1059,
@@ -17761,7 +17850,8 @@ export const mockQuestions: Question[] = [
 //             "Authentication is for APIs only"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //
 //     {
@@ -17774,7 +17864,8 @@ export const mockQuestions: Question[] = [
 //             "At project root or src",
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1063,
@@ -17786,7 +17877,8 @@ export const mockQuestions: Question[] = [
 //             "After component renders on page"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1064,
@@ -17798,7 +17890,8 @@ export const mockQuestions: Question[] = [
 //             "Only for static file serving"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1065,
@@ -17810,7 +17903,8 @@ export const mockQuestions: Question[] = [
 //             "User's browser version compatibility info"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1066,
@@ -17822,7 +17916,8 @@ export const mockQuestions: Question[] = [
 //             "Hashing user password for security"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1067,
@@ -17834,7 +17929,8 @@ export const mockQuestions: Question[] = [
 //             "Validates form input data types"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1068,
@@ -17846,7 +17942,8 @@ export const mockQuestions: Question[] = [
 //             "Joint Web Transport protocol standard"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1069,
@@ -17858,7 +17955,8 @@ export const mockQuestions: Question[] = [
 //             "Response is cached permanently forever"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1070,
@@ -17870,7 +17968,8 @@ export const mockQuestions: Question[] = [
 //             "Only on dynamic routes only"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1071,
@@ -17882,7 +17981,8 @@ export const mockQuestions: Question[] = [
 //             "Only for mobile app authentication"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1072,
@@ -17894,7 +17994,8 @@ export const mockQuestions: Question[] = [
 //             "No authentication is required ever"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1073,
@@ -17906,7 +18007,8 @@ export const mockQuestions: Question[] = [
 //             "Encryption method for sensitive data"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1074,
@@ -17918,7 +18020,8 @@ export const mockQuestions: Question[] = [
 //             "Throws authentication error to user"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1075,
@@ -17930,7 +18033,8 @@ export const mockQuestions: Question[] = [
 //             "Route with faster loading speed"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1076,
@@ -17942,7 +18046,8 @@ export const mockQuestions: Question[] = [
 //             "In package.json configuration file"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1077,
@@ -17954,7 +18059,8 @@ export const mockQuestions: Question[] = [
 //             "headers('header-name') global function call"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1078,
@@ -17966,7 +18072,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically expires after one hour"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1079,
@@ -17978,7 +18085,8 @@ export const mockQuestions: Question[] = [
 //             "Create separate auth.js for conditions"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1080,
@@ -17990,7 +18098,8 @@ export const mockQuestions: Question[] = [
 //             "Compresses cookie data for performance"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1081,
@@ -18002,7 +18111,8 @@ export const mockQuestions: Question[] = [
 //             "Through URL query parameters only"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1082,
@@ -18014,7 +18124,8 @@ export const mockQuestions: Question[] = [
 //             "Internal rewrite without browser change",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1083,
@@ -18026,7 +18137,8 @@ export const mockQuestions: Question[] = [
 //             "Only works with client components"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1084,
@@ -18038,7 +18150,8 @@ export const mockQuestions: Question[] = [
 //             "Both change browser URL visibly",
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1085,
@@ -18050,7 +18163,8 @@ export const mockQuestions: Question[] = [
 //             "Only possible with external services"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1086,
@@ -18062,7 +18176,8 @@ export const mockQuestions: Question[] = [
 //             "No verification needed for JWTs"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1087,
@@ -18074,7 +18189,8 @@ export const mockQuestions: Question[] = [
 //             "Edge Runtime doesn't support middleware"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1088,
@@ -18086,7 +18202,8 @@ export const mockQuestions: Question[] = [
 //             "Prevents CSRF attacks effectively now",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1089,
@@ -18098,7 +18215,8 @@ export const mockQuestions: Question[] = [
 //             "Requires separate server for MFA"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1090,
@@ -18110,7 +18228,8 @@ export const mockQuestions: Question[] = [
 //             "Causes static pages to fail"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1092,
@@ -18122,7 +18241,8 @@ export const mockQuestions: Question[] = [
 //             "'async server' at function top"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1095,
@@ -18134,7 +18254,8 @@ export const mockQuestions: Question[] = [
 //             "Server/Client Components and forms too",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //
 //     {
@@ -18147,19 +18268,23 @@ export const mockQuestions: Question[] = [
 //             "Only during build time phase"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1097,
-//         "question": "What is the main difference between Server Actions and API endpoints?",
+//         "question": "What is the main difference between Server Actions and API endpoints?",,
+//  "explanation":""
 //         "options": [
 //             "Server Actions simpler, no routes",
-//             "API endpoints are always faster",
+//             "API endpoints are always faster",,
+//  "explanation":""
 //             "Server Actions only for databases",
 //             "No difference between them functionally"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1098,
@@ -18171,7 +18296,8 @@ export const mockQuestions: Question[] = [
 //             "Client calls, server executes, returns",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1099,
@@ -18183,7 +18309,8 @@ export const mockQuestions: Question[] = [
 //             "Only in client components specifically"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1100,
@@ -18195,19 +18322,23 @@ export const mockQuestions: Question[] = [
 //             "Only frontend state management logic"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1101,
-//         "question": "How does Next.js create endpoints for Server Actions?",
+//         "question": "How does Next.js create endpoints for Server Actions?",,
+//  "explanation":""
 //         "options": [
 //             "You must manually create them",
-//             "Automatically generates POST endpoints internally",
+//             "Automatically generates POST endpoints internally",,
+//  "explanation":""
 //             "Only works with GET requests",
 //             "Requires external server configuration setup"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1102,
@@ -18219,7 +18350,8 @@ export const mockQuestions: Question[] = [
 //             "Server Actions disable all caching"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1103,
@@ -18231,7 +18363,8 @@ export const mockQuestions: Question[] = [
 //             "Only with external database services"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1104,
@@ -18243,7 +18376,8 @@ export const mockQuestions: Question[] = [
 //             "Enables server-side rendering only mode"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1106,
@@ -18255,7 +18389,8 @@ export const mockQuestions: Question[] = [
 //             "Only with external libraries installed"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1107,
@@ -18267,19 +18402,22 @@ export const mockQuestions: Question[] = [
 //             "Through localStorage in browser only"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1108,
 //         "question": "What is the security benefit of Server Actions?",
 //         "options": [
-//             "Faster than API endpoints always",
+//             "Faster than API endpoints always",,
+//  "explanation":""
 //             "Automatically encrypts all data fully",
 //             "Prevents all SQL injection attacks",
 //             "Code never sent to client",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1109,
@@ -18291,7 +18429,8 @@ export const mockQuestions: Question[] = [
 //             "Only with special configuration setup"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1110,
@@ -18303,7 +18442,8 @@ export const mockQuestions: Question[] = [
 //             "Only through manual page refresh"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1111,
@@ -18315,7 +18455,8 @@ export const mockQuestions: Question[] = [
 //             "Runs only during build process"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1112,
@@ -18327,7 +18468,8 @@ export const mockQuestions: Question[] = [
 //             "Only in class components specifically"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1113,
@@ -18339,7 +18481,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically retries three times always"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1114,
@@ -18351,7 +18494,8 @@ export const mockQuestions: Question[] = [
 //             "No difference between them ever"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1115,
@@ -18363,7 +18507,8 @@ export const mockQuestions: Question[] = [
 //             "Only in production environment mode"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1116,
@@ -18375,7 +18520,8 @@ export const mockQuestions: Question[] = [
 //             "Only global variables are accessible",
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1117,
@@ -18387,7 +18533,8 @@ export const mockQuestions: Question[] = [
 //             "Only client-side validation is possible"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1118,
@@ -18399,7 +18546,8 @@ export const mockQuestions: Question[] = [
 //             "Only in development mode usage"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1119,
@@ -18411,7 +18559,8 @@ export const mockQuestions: Question[] = [
 //             "Styling components with CSS rules"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1120,
@@ -18423,7 +18572,8 @@ export const mockQuestions: Question[] = [
 //             "Only client actions support Suspense",
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //         {
 //             "id": 1123,
@@ -18435,7 +18585,8 @@ export const mockQuestions: Question[] = [
 //                 "Only in production mode only"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1124,
@@ -18447,7 +18598,8 @@ export const mockQuestions: Question[] = [
 //                 "String with form status message"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1125,
@@ -18456,10 +18608,12 @@ export const mockQuestions: Question[] = [
 //                 "Requires external library for integration",
 //                 "Cannot integrate them together ever",
 //                 "Pass Server Action to handleSubmit",
-//                 "Only through API endpoints route",
+//                 "Only through API endpoints route",,
+//  "explanation":""
 //             ],
 //             "correctOption": 2,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1126,
@@ -18471,7 +18625,8 @@ export const mockQuestions: Question[] = [
 //                 "Shows loading state during submission",
 //             ],
 //             "correctOption": 3,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1127,
@@ -18483,7 +18638,8 @@ export const mockQuestions: Question[] = [
 //                 "Only with special configuration setup"
 //             ],
 //             "correctOption": 2,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1128,
@@ -18495,7 +18651,8 @@ export const mockQuestions: Question[] = [
 //                 "Validation only during build time"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1129,
@@ -18507,7 +18664,8 @@ export const mockQuestions: Question[] = [
 //                 "String with current form status"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1130,
@@ -18519,7 +18677,8 @@ export const mockQuestions: Question[] = [
 //                 "Only in Client Components specifically"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1131,
@@ -18531,7 +18690,8 @@ export const mockQuestions: Question[] = [
 //                 "Server Actions cannot access data"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1132,
@@ -18543,7 +18703,8 @@ export const mockQuestions: Question[] = [
 //                 "Contains user authentication token data"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1133,
@@ -18555,7 +18716,8 @@ export const mockQuestions: Question[] = [
 //                 "Only during page navigation events"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1134,
@@ -18567,7 +18729,8 @@ export const mockQuestions: Question[] = [
 //                 "Nothing changes in UI state"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //     {
 //         "id": 1135,
@@ -18579,7 +18742,8 @@ export const mockQuestions: Question[] = [
 //             "Only with external library support"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1136,
@@ -18591,7 +18755,8 @@ export const mockQuestions: Question[] = [
 //             "Yes, in different child components",
 //         ],
 //         "correctOption": 3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1137,
@@ -18603,7 +18768,8 @@ export const mockQuestions: Question[] = [
 //             "Forms submit faster than normal"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1138,
@@ -18611,11 +18777,13 @@ export const mockQuestions: Question[] = [
 //         "options": [
 //             "Validates then calls Server Action",
 //             "Skips validation completely for speed",
-//             "Only works with API endpoints",
+//             "Only works with API endpoints",,
+//  "explanation":""
 //             "Prevents Server Action execution always"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1139,
@@ -18627,7 +18795,8 @@ export const mockQuestions: Question[] = [
 //             "Only in development mode usage"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1140,
@@ -18639,7 +18808,8 @@ export const mockQuestions: Question[] = [
 //             "Database query method for data"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1141,
@@ -18651,7 +18821,8 @@ export const mockQuestions: Question[] = [
 //             "Cannot handle errors from actions",
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1142,
@@ -18663,7 +18834,8 @@ export const mockQuestions: Question[] = [
 //             "Only resets on page refresh"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1143,
@@ -18675,7 +18847,8 @@ export const mockQuestions: Question[] = [
 //             "Automatic feature requiring no code"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1144,
@@ -18687,7 +18860,8 @@ export const mockQuestions: Question[] = [
 //             "Cannot pass additional data ever",
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1145,
@@ -18699,7 +18873,8 @@ export const mockQuestions: Question[] = [
 //             "Only in Server Components specifically"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1146,
@@ -18711,7 +18886,8 @@ export const mockQuestions: Question[] = [
 //             "CSS action for form styling"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1147,
@@ -18723,7 +18899,8 @@ export const mockQuestions: Question[] = [
 //             "Only works with page navigation"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1148,
@@ -18731,11 +18908,13 @@ export const mockQuestions: Question[] = [
 //         "options": [
 //             "Yes, for form state management",
 //             "No, useFormStatus only for actions",
-//             "Only with API endpoints route",
+//             "Only with API endpoints route",,
+//  "explanation":""
 //             "Only in Server Components specifically"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1149,
@@ -18744,10 +18923,12 @@ export const mockQuestions: Question[] = [
 //             "useTransition prevents form submission",
 //             "No relationship between them ever",
 //             "useTransition shows pending UI state",
-//             "Only works with API endpoints"
+//             "Only works with API endpoints",
+//  "explanation":""
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1150,
@@ -18759,7 +18940,8 @@ export const mockQuestions: Question[] = [
 //             "Only through middleware validation layer"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1153,
@@ -18771,7 +18953,8 @@ export const mockQuestions: Question[] = [
 //             "Never with Server Actions usage"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1154,
@@ -18783,7 +18966,8 @@ export const mockQuestions: Question[] = [
 //             "Revert UI to previous state",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1155,
@@ -18795,7 +18979,8 @@ export const mockQuestions: Question[] = [
 //             "useRef for DOM references only"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1156,
@@ -18807,7 +18992,8 @@ export const mockQuestions: Question[] = [
 //             "Promise resolving to state value"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1157,
@@ -18815,11 +19001,13 @@ export const mockQuestions: Question[] = [
 //         "options": [
 //             "No, incompatible with Server Actions",
 //             "Yes, perfect combination for UX",
-//             "Only with API endpoints route",
+//             "Only with API endpoints route",,
+//  "explanation":""
 //             "Only in Client Components specifically"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1158,
@@ -18831,7 +19019,8 @@ export const mockQuestions: Question[] = [
 //             "Deleting all cached data entirely"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1159,
@@ -18843,7 +19032,8 @@ export const mockQuestions: Question[] = [
 //             "Automatically retry infinite times always"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1160,
@@ -18855,7 +19045,8 @@ export const mockQuestions: Question[] = [
 //             "Cannot use with modern frameworks"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1161,
@@ -18867,7 +19058,8 @@ export const mockQuestions: Question[] = [
 //             "Updates UI, action runs, confirms/reverts",
 //         ],
 //         "correctOption":3,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1162,
@@ -18879,7 +19071,8 @@ export const mockQuestions: Question[] = [
 //             "Browser compatibility with CSS only"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //         {
 //             "id": 1163,
@@ -18891,7 +19084,8 @@ export const mockQuestions: Question[] = [
 //                 "Database routing configuration system"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1165,
@@ -18903,7 +19097,8 @@ export const mockQuestions: Question[] = [
 //                 "Neither router supports them ever"
 //             ],
 //             "correctOption": 2,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1168,
@@ -18915,7 +19110,8 @@ export const mockQuestions: Question[] = [
 //                 "Neither supports layouts at all"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1169,
@@ -18927,7 +19123,8 @@ export const mockQuestions: Question[] = [
 //                 "Only through external libraries usage"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1170,
@@ -18939,7 +19136,8 @@ export const mockQuestions: Question[] = [
 //                 "Manual implementation with custom code",
 //             ],
 //             "correctOption": 3,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1171,
@@ -18951,7 +19149,8 @@ export const mockQuestions: Question[] = [
 //                 "Neither supports streaming at all"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1172,
@@ -18963,7 +19162,8 @@ export const mockQuestions: Question[] = [
 //                 "No error handling files available",
 //             ],
 //             "correctOption": 2,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1173,
@@ -18975,7 +19175,8 @@ export const mockQuestions: Question[] = [
 //                 "error.js for custom error pages",
 //             ],
 //             "correctOption": 3,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1174,
@@ -18987,7 +19188,8 @@ export const mockQuestions: Question[] = [
 //                 "Only with external server setup"
 //             ],
 //             "correctOption": 0,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1175,
@@ -18999,7 +19201,8 @@ export const mockQuestions: Question[] = [
 //                 "Cannot create API routes ever",
 //             ],
 //             "correctOption": 2,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1176,
@@ -19011,7 +19214,8 @@ export const mockQuestions: Question[] = [
 //                 "Neither supports nested layouts ever"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1177,
@@ -19023,7 +19227,8 @@ export const mockQuestions: Question[] = [
 //                 "Server-side rendering by default always",
 //             ],
 //             "correctOption": 3,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //     {
 //         "id": 1178,
@@ -19035,7 +19240,8 @@ export const mockQuestions: Question[] = [
 //             "Only static generation supported ever"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1179,
@@ -19047,7 +19253,8 @@ export const mockQuestions: Question[] = [
 //             "Cannot fetch data in components"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1180,
@@ -19059,7 +19266,8 @@ export const mockQuestions: Question[] = [
 //             "Cannot fetch data in pages"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1181,
@@ -19071,7 +19279,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports Server Actions ever"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1182,
@@ -19083,7 +19292,8 @@ export const mockQuestions: Question[] = [
 //             "Not a valid file convention"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1183,
@@ -19095,7 +19305,8 @@ export const mockQuestions: Question[] = [
 //             "Only in production mode available"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1184,
@@ -19107,7 +19318,8 @@ export const mockQuestions: Question[] = [
 //             "Cannot add metadata in routes"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1185,
@@ -19119,7 +19331,8 @@ export const mockQuestions: Question[] = [
 //             "Cannot add metadata in pages"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1186,
@@ -19131,7 +19344,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports parallel routes ever"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1187,
@@ -19143,7 +19357,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports intercepting routes ever"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1188,
@@ -19155,7 +19370,8 @@ export const mockQuestions: Question[] = [
 //             "Custom App component wrapper globally",
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1189,
@@ -19167,7 +19383,8 @@ export const mockQuestions: Question[] = [
 //             "No replacement exists at all"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1190,
@@ -19179,7 +19396,8 @@ export const mockQuestions: Question[] = [
 //             "Styling configuration file for CSS"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1191,
@@ -19191,7 +19409,8 @@ export const mockQuestions: Question[] = [
 //             "Only in production build mode"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1192,
@@ -19203,7 +19422,8 @@ export const mockQuestions: Question[] = [
 //             "With middleware configuration setup"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1193,
@@ -19215,7 +19435,8 @@ export const mockQuestions: Question[] = [
 //             "Only with external libraries usage"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1194,
@@ -19227,19 +19448,22 @@ export const mockQuestions: Question[] = [
 //             "App Router with (group) convention",
 //         ],
 //         "correctOption": 3,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1195,
 //         "question": "What is the purpose of route groups in App Router?",
 //         "options": [
 //             "Organization without affecting URL path",
-//             "Grouping API endpoints together",
+//             "Grouping API endpoints together",,
+//  "explanation":""
 //             "Creating protected routes automatically always",
 //             "No practical purpose at all"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1196,
@@ -19251,7 +19475,8 @@ export const mockQuestions: Question[] = [
 //             "Only with special Next.js version"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1197,
@@ -19263,7 +19488,8 @@ export const mockQuestions: Question[] = [
 //             "Neither, use external router instead"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1198,
@@ -19275,7 +19501,8 @@ export const mockQuestions: Question[] = [
 //             "API route for missing data"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1199,
@@ -19287,7 +19514,8 @@ export const mockQuestions: Question[] = [
 //             "Only works with middleware setup"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1200,
@@ -19299,7 +19527,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports Suspense at all"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1201,
@@ -19311,7 +19540,8 @@ export const mockQuestions: Question[] = [
 //             "Only with special configuration setup"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1202,
@@ -19323,7 +19553,8 @@ export const mockQuestions: Question[] = [
 //             "Only Server Components are supported"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1203,
@@ -19335,7 +19566,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports middleware at all"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1204,
@@ -19347,7 +19579,8 @@ export const mockQuestions: Question[] = [
 //             "Caching only for static pages"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1205,
@@ -19359,7 +19592,8 @@ export const mockQuestions: Question[] = [
 //             "Only for API routes caching"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1206,
@@ -19371,7 +19605,8 @@ export const mockQuestions: Question[] = [
 //             "Only with middleware configuration setup"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1207,
@@ -19383,7 +19618,8 @@ export const mockQuestions: Question[] = [
 //             "Only with custom implementation code"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1208,
@@ -19395,7 +19631,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports route handlers ever"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1209,
@@ -19407,7 +19644,8 @@ export const mockQuestions: Question[] = [
 //             "Function for server-side rendering data",
 //         ],
 //         "correctOption": 3,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1210,
@@ -19419,7 +19657,8 @@ export const mockQuestions: Question[] = [
 //             "Only in production mode available"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1211,
@@ -19431,7 +19670,8 @@ export const mockQuestions: Question[] = [
 //             "API route handler function only"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1212,
@@ -19443,7 +19683,8 @@ export const mockQuestions: Question[] = [
 //             "Only in development mode usage"
 //         ],
 //         "correctOption": 2,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1213,
@@ -19455,7 +19696,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports ISR at all"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1214,
@@ -19467,7 +19709,8 @@ export const mockQuestions: Question[] = [
 //             "Only manual revalidation is possible"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1215,
@@ -19479,7 +19722,8 @@ export const mockQuestions: Question[] = [
 //             "Only with middleware configuration setup"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1216,
@@ -19491,7 +19735,8 @@ export const mockQuestions: Question[] = [
 //             "Neither has TypeScript support ever"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1217,
@@ -19503,7 +19748,8 @@ export const mockQuestions: Question[] = [
 //             "Faster build times in production"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1218,
@@ -19515,7 +19761,8 @@ export const mockQuestions: Question[] = [
 //             "More modern features than App"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1219,
@@ -19527,7 +19774,8 @@ export const mockQuestions: Question[] = [
 //             "Only with special configuration setup"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1220,
@@ -19539,7 +19787,8 @@ export const mockQuestions: Question[] = [
 //             "Neither optimizes fonts at all"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1221,
@@ -19551,7 +19800,8 @@ export const mockQuestions: Question[] = [
 //             "Manual optimization required always for images"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1222,
@@ -19563,7 +19813,8 @@ export const mockQuestions: Question[] = [
 //             "Automatic optimization without configuration always"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1223,
@@ -19575,7 +19826,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports static exports ever"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1224,
@@ -19587,7 +19839,8 @@ export const mockQuestions: Question[] = [
 //             "No performance difference between them",
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1225,
@@ -19599,7 +19852,8 @@ export const mockQuestions: Question[] = [
 //             "Redirects not supported in App"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1226,
@@ -19611,7 +19865,8 @@ export const mockQuestions: Question[] = [
 //             "Redirects not supported in Pages"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1227,
@@ -19623,7 +19878,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports caching control ever"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1443,
@@ -19635,7 +19891,8 @@ export const mockQuestions: Question[] = [
 //             "They are identical in functionality"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1444,
@@ -19647,7 +19904,8 @@ export const mockQuestions: Question[] = [
 //             "Server Components cannot fetch data"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1445,
@@ -19659,7 +19917,8 @@ export const mockQuestions: Question[] = [
 //             "Parallel processing of single request"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1446,
@@ -19671,7 +19930,8 @@ export const mockQuestions: Question[] = [
 //             "Sequential numbering of requests"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1447,
@@ -19683,7 +19943,8 @@ export const mockQuestions: Question[] = [
 //             "Only for GET requests deduplication"
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1448,
@@ -19695,7 +19956,8 @@ export const mockQuestions: Question[] = [
 //             "Database query result cache"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1449,
@@ -19707,7 +19969,8 @@ export const mockQuestions: Question[] = [
 //             "Use different fetch library"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1450,
@@ -19719,7 +19982,8 @@ export const mockQuestions: Question[] = [
 //             "Switches to client-side fetching"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1451,
@@ -19731,7 +19995,8 @@ export const mockQuestions: Question[] = [
 //             "Only in production mode"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1452,
@@ -19743,7 +20008,8 @@ export const mockQuestions: Question[] = [
 //             "Data fetching prevents streaming"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 
 //     {
@@ -19756,7 +20022,8 @@ export const mockQuestions: Question[] = [
 //             "Only in development mode usage"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1229,
@@ -19768,7 +20035,8 @@ export const mockQuestions: Question[] = [
 //             "Neither supports PPR at all"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1230,
@@ -19780,7 +20048,8 @@ export const mockQuestions: Question[] = [
 //             "Only with Link component usage"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1231,
@@ -19792,7 +20061,8 @@ export const mockQuestions: Question[] = [
 //             "Only with Link component usage"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1232,
@@ -19804,7 +20074,8 @@ export const mockQuestions: Question[] = [
 //             "Neither has code splitting support"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1233,
@@ -19816,7 +20087,8 @@ export const mockQuestions: Question[] = [
 //             "App Router typically smaller bundles",
 //         ],
 //         "correctOption": 0,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1234,
@@ -19828,7 +20100,8 @@ export const mockQuestions: Question[] = [
 //             "Neither is good for SEO"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1235,
@@ -19840,7 +20113,8 @@ export const mockQuestions: Question[] = [
 //             "Only in production mode available"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //         {
 //             "id": 1236,
@@ -19852,7 +20126,8 @@ export const mockQuestions: Question[] = [
 //                 "UI stores all state in function scope"
 //             ],
 //             "correctOption": 1,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1237,
@@ -19864,7 +20139,8 @@ export const mockQuestions: Question[] = [
 //                 "The function component definition"
 //             ],
 //             "correctOption": 2,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1238,
@@ -19876,7 +20152,8 @@ export const mockQuestions: Question[] = [
 //                 "Manual DOM manipulation becomes easier"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1239,
@@ -19888,7 +20165,8 @@ export const mockQuestions: Question[] = [
 //                 "By re-rendering components when state changes",
 //             ],
 //             "correctOption": 3,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1240,
@@ -19900,7 +20178,8 @@ export const mockQuestions: Question[] = [
 //                 "UI requires explicit update function call"
 //             ],
 //             "correctOption": 2,
-//             "points": 10
+//             "points": 10,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1241,
@@ -19912,7 +20191,8 @@ export const mockQuestions: Question[] = [
 //                 "You declare what UI should be for state",
 //             ],
 //             "correctOption": 3,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1242,
@@ -19924,7 +20204,8 @@ export const mockQuestions: Question[] = [
 //                 "JavaScript doesn't support functions at all",
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1243,
@@ -19936,7 +20217,8 @@ export const mockQuestions: Question[] = [
 //                 "State determines component lifecycle only"
 //             ],
 //             "correctOption": 0,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1244,
@@ -19948,7 +20230,8 @@ export const mockQuestions: Question[] = [
 //                 "Re-rendering prevents state from changing"
 //             ],
 //             "correctOption": 2,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1245,
@@ -19960,7 +20243,8 @@ export const mockQuestions: Question[] = [
 //                 "Using useEffect for side effects"
 //             ],
 //             "correctOption": 1,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1246,
@@ -19972,7 +20256,8 @@ export const mockQuestions: Question[] = [
 //                 "It ensures UI updates automatically with state changes"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1247,
@@ -19984,7 +20269,8 @@ export const mockQuestions: Question[] = [
 //                 "UI becomes unpredictable and harder to debug",
 //             ],
 //             "correctOption": 3,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1248,
@@ -19996,7 +20282,8 @@ export const mockQuestions: Question[] = [
 //                 "It converts state to virtual objects"
 //             ],
 //             "correctOption": 1,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1249,
@@ -20008,7 +20295,8 @@ export const mockQuestions: Question[] = [
 //                 "Truth values can only be boolean"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1250,
@@ -20020,7 +20308,8 @@ export const mockQuestions: Question[] = [
 //                 "State must always be string type"
 //             ],
 //             "correctOption": 1,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1251,
@@ -20032,7 +20321,8 @@ export const mockQuestions: Question[] = [
 //                 "Functions manage state without components"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1252,
@@ -20044,7 +20334,8 @@ export const mockQuestions: Question[] = [
 //                 "Props prevent function from rendering UI"
 //             ],
 //             "correctOption": 0,
-//             "points": 20
+//             "points": 20,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1253,
@@ -20056,7 +20347,8 @@ export const mockQuestions: Question[] = [
 //                 "Immutability prevents UI from updating"
 //             ],
 //             "correctOption": 1,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //         {
 //             "id": 1254,
@@ -20068,7 +20360,8 @@ export const mockQuestions: Question[] = [
 //                 "State cannot be tested in model"
 //             ],
 //             "correctOption": 2,
-//             "points": 30
+//             "points": 30,
+//  "explanation":""
 //         },
 //     {
 //         "id": 1255,
@@ -20080,7 +20373,8 @@ export const mockQuestions: Question[] = [
 //             "Data flow is circular between components"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //                 "id": 1256,
@@ -20092,7 +20386,8 @@ export const mockQuestions: Question[] = [
 //                     "UI functions fetch data from servers"
 //                 ],
 //                 "correctOption": 1,
-//                 "points": 10
+//                 "points": 10,
+//  "explanation":""
 //             },
 //                 {
 //                     "id": 1257,
@@ -20104,7 +20399,8 @@ export const mockQuestions: Question[] = [
 //                         "Data is always stored locally only"
 //                     ],
 //                     "correctOption": 0,
-//                     "points": 20
+//                     "points": 20,
+//  "explanation":""
 //                 },
 //                 {
 //                     "id": 1258,
@@ -20116,7 +20412,8 @@ export const mockQuestions: Question[] = [
 //                         "UI requires manual DOM manipulation"
 //                     ],
 //                     "correctOption": 1,
-//                     "points": 10
+//                     "points": 10,
+//  "explanation":""
 //                 },
 //                 {
 //                     "id": 1259,
@@ -20128,7 +20425,8 @@ export const mockQuestions: Question[] = [
 //                         "Functions run faster with external data"
 //                     ],
 //                     "correctOption": 1,
-//                     "points": 20
+//                     "points": 20,
+//  "explanation":""
 //                 },
 //                 {
 //                     "id": 1260,
@@ -20140,7 +20438,8 @@ export const mockQuestions: Question[] = [
 //                         "It prevents data from changing",
 //                     ],
 //                     "correctOption": 0,
-//                     "points": 20
+//                     "points": 20,
+//  "explanation":""
 //                 },
 //                 {
 //                     "id": 1261,
@@ -20152,7 +20451,8 @@ export const mockQuestions: Question[] = [
 //                         "Functions cannot accept external data"
 //                     ],
 //                     "correctOption": 1,
-//                     "points": 20
+//                     "points": 20,
+//  "explanation":""
 //                 },
 //                 {
 //                     "id": 1262,
@@ -20164,7 +20464,8 @@ export const mockQuestions: Question[] = [
 //                         "Server Components prevent data fetching"
 //                     ],
 //                     "correctOption": 0,
-//                     "points": 30
+//                     "points": 30,
+//  "explanation":""
 //                 },
 //                 {
 //                     "id": 1263,
@@ -20176,7 +20477,8 @@ export const mockQuestions: Question[] = [
 //                         "Multiple users see consistent data-driven UI",
 //                     ],
 //                     "correctOption": 3,
-//                     "points": 30
+//                     "points": 30,
+//  "explanation":""
 //                 },
 //                 {
 //                     "id": 1264,
@@ -20188,7 +20490,8 @@ export const mockQuestions: Question[] = [
 //                         "Caching stores UI instead of data"
 //                     ],
 //                     "correctOption": 1,
-//                     "points": 20
+//                     "points": 20,
+//  "explanation":""
 //                 },
 //                 {
 //                     "id": 1265,
@@ -20200,7 +20503,8 @@ export const mockQuestions: Question[] = [
 //                         "UI waits for server data always",
 //                     ],
 //                     "correctOption": 0,
-//                     "points": 30
+//                     "points": 30,
+//  "explanation":""
 //                 },
 //         {
 //         "id": 1391,
@@ -20212,7 +20516,8 @@ export const mockQuestions: Question[] = [
 //             "To lazy load images and assets"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1392,
@@ -20224,7 +20529,8 @@ export const mockQuestions: Question[] = [
 //             "No wrapper needed"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1393,
@@ -20236,7 +20542,8 @@ export const mockQuestions: Question[] = [
 //             "Configuration object for lazy loading"
 //         ],
 //         "correctOption": 2,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1394,
@@ -20248,7 +20555,8 @@ export const mockQuestions: Question[] = [
 //             "Named exports work automatically"
 //         ],
 //         "correctOption": 2,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1395,
@@ -20260,7 +20568,8 @@ export const mockQuestions: Question[] = [
 //             "Infinite retry automatically"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1396,
@@ -20272,7 +20581,8 @@ export const mockQuestions: Question[] = [
 //             "SSR doesn't support lazy loading"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1397,
@@ -20284,7 +20594,8 @@ export const mockQuestions: Question[] = [
 //             "Optimizes server response time"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1398,
@@ -20296,7 +20607,8 @@ export const mockQuestions: Question[] = [
 //             "Splitting CSS from JavaScript"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1399,
@@ -20308,7 +20620,8 @@ export const mockQuestions: Question[] = [
 //             "Test all internal state changes"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1400,
@@ -20320,7 +20633,8 @@ export const mockQuestions: Question[] = [
 //             "display() from jest-dom"
 //         ],
 //         "correctOption": 1,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1401,
@@ -20332,7 +20646,8 @@ export const mockQuestions: Question[] = [
 //             "Get element by internal state"
 //         ],
 //         "correctOption": 0,
-//         "points": 10
+//         "points": 10,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1402,
@@ -20344,7 +20659,8 @@ export const mockQuestions: Question[] = [
 //             "Use delay() helper function"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1403,
@@ -20356,7 +20672,8 @@ export const mockQuestions: Question[] = [
 //             "getBy is for async, queryBy for sync"
 //         ],
 //         "correctOption": 1,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1404,
@@ -20368,7 +20685,8 @@ export const mockQuestions: Question[] = [
 //             "Using enzyme's simulate method"
 //         ],
 //         "correctOption": 0,
-//         "points": 20
+//         "points": 20,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1405,
@@ -20380,7 +20698,8 @@ export const mockQuestions: Question[] = [
 //             "Integration with other components"
 //         ],
 //         "correctOption": 1,
-//         "points": 30
+//         "points": 30,
+//  "explanation":""
 //     },
 //     {
 //         "id": 1406,
