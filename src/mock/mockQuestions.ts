@@ -16888,136 +16888,176 @@ export const mockQuestions: Question[] = [
             "• از ARIA attributes برای screen reader ها استفاده کنید\n" +
             "• نکته: کاربران زیادی فقط با keyboard کار می‌کنند، آنها را فراموش نکنید"
     },
-//     {
-//         "id": 985,
-//         "question": "How do you create a range filter (min-max)?",
-//         "options": [
-//             "Use single param with dash separator",
-//             "Use two searchParams for min and max",
-//             "Use range component from next/ui",
-//             "Use slider with single value"
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 986,
-//         "question": "Can you animate filter transitions in Next.js?",
-//         "options": [
-//             "No, routing prevents animations",
-//             "Yes, but only with framer-motion",
-//             "No, breaks navigation behavior",
-//             "Yes, using CSS transitions on elements",
-//         ],
-//         "correctOption": 3,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 987,
-//         "question": "How do you show active filter count?",
-//         "options": [
-//             "Use filterCount from useRouter hook",
-//             "Count non-empty searchParams keys",
-//             "Next.js tracks count automatically",
-//             "Use global state counter variable"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 988,
-//         "question": "What is best pattern for complex filter logic?",
-//         "options": [
-//             "Extract filter logic into helper function",
-//             "Inline all logic in component",
-//             "Use external filter library always",
-//             "Create separate filter page route"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 989,
-//         "question": "How do you handle filter conflicts?",
-//         "options": [
-//             "Use filterResolver from next/navigation",
-//             "Validate and resolve in filter logic",
-//             "Allow all conflicts to pass through",
-//             "Disable conflicting filter options"
-//         ],
-//         "correctOption": 1,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 990,
-//         "question": "Should you show filter results count?",
-//         "options": [
-//             "No, increases server load unnecessarily",
-//             "Yes, improves user experience feedback",
-//             "No, users can count themselves",
-//             "Yes, but only for small datasets",
-//         ],
-//         "correctOption": 1,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 991,
-//         "question": "How do you create mobile-friendly filters?",
-//         "options": [
-//             "Use responsive design with drawer or modal",
-//             "Create separate mobile filter page",
-//             "Hide filters on mobile completely",
-//             "Use horizontal scroll for options"
-//         ],
-//         "correctOption": 0,
-//         "points": 20,
-//             "explanation":""
-//     },
-//     {
-//         "id": 992,
-//         "question": "Can filters affect SEO in Next.js?",
-//         "options": [
-//             "No, searchParams ignored by crawlers",
-//             "Yes, but only with robots meta",
-//             "No, filters are client-only",
-//             "Yes, filtered pages can be indexed",
-//         ],
-//         "correctOption": 3,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 993,
-//         "question": "How do you implement Apply Filters button pattern?",
-//         "options": [
-//             "Update URL on each selection immediately",
-//             "Use form submission to apply filters",
-//             "Store temp state then batch update URL",
-//             "Next.js handles batch updates automatically"
-//         ],
-//         "correctOption": 2,
-//         "points": 30,
-//             "explanation":""
-//     },
-//     {
-//         "id": 994,
-//         "question": "What is the performance impact of many filters?",
-//         "options": [
-//             "More filters increase URL complexity minimally",
-//             "More filters slow rendering significantly",
-//             "Filter count doesn't affect performance",
-//             "More filters reduce server response time"
-//         ],
-//         "correctOption": 0,
-//         "points": 30,
-//             "explanation":""
-//     },
+    {
+        "id": 991,
+        "question": "How do you create a range filter (min-max)?",
+        "options": [
+            "Use single param with dash separator",
+            "Use two searchParams for min and max",
+            "Use range component from next/ui",
+            "Use slider with single value"
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation":"• دو searchParam جداگانه برای min و max استفاده کنید\n" +
+            "• دو input یا یک range slider برای انتخاب محدوده\n" +
+            "• هر دو مقدار را در URL ذخیره کنید\n" +
+            "• در server هر دو را بخوانید و برای فیلتر کردن استفاده کنید\n" +
+            "• نکته: range filter برای قیمت، تاریخ، یا هر مقدار عددی مفید است"
+    },
+    {
+        "id": 992,
+        "question": "Can you animate filter transitions in Next.js?",
+        "options": [
+            "No, routing prevents animations",
+            "Yes, but only with framer-motion",
+            "No, breaks navigation behavior",
+            "Yes, using CSS transitions on elements",
+        ],
+        "correctOption": 3,
+        "points": 20,
+        "explanation": "• بله، می‌توانید از CSS transitions برای animate کردن element ها استفاده کنید\n" +
+            "• وقتی داده‌ها تغییر می‌کنند، transition ها اعمال می‌شوند\n" +
+            "• می‌توانید fade in/out یا slide animation اضافه کنید\n" +
+            "• routing خود Next.js هم می‌تواند smooth باشد\n" +
+            "• نکته: animation باعث می‌شود تغییرات احساس شود و UX بهتر شود"
+    },
+    {
+        "id": 993,
+        "question": "How do you show active filter count?",
+        "options": [
+            "Use filterCount from useRouter hook",
+            "Count non-empty searchParams keys",
+            "Next.js tracks count automatically",
+            "Use global state counter variable"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• تعداد key های non-empty در searchParams را بشمارید\n" +
+            "• key های پیش‌فرض یا خالی را شمارش نکنید\n" +
+            "• این عدد را در UI نمایش دهید\n" +
+            "• به کاربر نشان می‌دهد چند فیلتر فعال است\n" +
+            "• نکته: نمایش تعداد فیلترها به کاربر کمک می‌کند بفهمد چرا نتایج محدود شده‌اند"
+    },
+    {
+        "id": 994,
+        "question": "What is best pattern for complex filter logic?",
+        "options": [
+            "Extract filter logic into helper function",
+            "Inline all logic in component",
+            "Use external filter library always",
+            "Create separate filter page route"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation":"• logic فیلتر کردن را در یک helper function جداگانه بنویسید\n" +
+            "• این function searchParams را می‌گیرد و query یا filtered data برمی‌گرداند\n" +
+            "• کد تمیز و قابل test می‌شود\n" +
+            "• می‌توانید در چند جا reuse کنید\n" +
+            "• نکته: separation of concerns باعث maintainability بهتر می‌شود"
+    },
+    {
+        "id": 995,
+        "question": "How do you handle filter conflicts?",
+        "options": [
+            "Use filterResolver from next/navigation",
+            "Validate and resolve in filter logic",
+            "Allow all conflicts to pass through",
+            "Disable conflicting filter options"
+        ],
+        "correctOption": 1,
+        "points": 30,
+        "explanation":"• در logic فیلتر کردن، تضادها را شناسایی و resolve کنید\n" +
+            "• می‌توانید یک فیلتر را نسبت به دیگری اولویت دهید\n" +
+            "• یا به کاربر warning نمایش دهید\n" +
+            "• مقادیر نامعتبر یا متناقض را ignore کنید\n" +
+            "• نکته: validation و conflict resolution بخش مهمی از filter logic است"
+    },
+    {
+        "id": 996,
+        "question": "Should you show filter results count?",
+        "options": [
+            "No, increases server load unnecessarily",
+            "Yes, improves user experience feedback",
+            "No, users can count themselves",
+            "Yes, but only for small datasets",
+        ],
+        "correctOption": 1,
+        "points": 20,
+        "explanation": "• بله، نمایش تعداد نتایج به کاربر feedback فوری می‌دهد\n" +
+            "• کاربر می‌فهمد فیلترها چقدر موثر هستند\n" +
+            "• می‌تواند تصمیم بگیرد فیلترها را تغییر دهد یا نه\n" +
+            "• این یک best practice در UX است\n" +
+            "• نکته: مثلاً Showing 23 of 150 products بسیار مفید است"
+    },
+    {
+        "id": 997,
+        "question": "How do you create mobile-friendly filters?",
+        "options": [
+            "Use responsive design with drawer or modal",
+            "Create separate mobile filter page",
+            "Hide filters on mobile completely",
+            "Use horizontal scroll for options"
+        ],
+        "correctOption": 0,
+        "points": 20,
+        "explanation": "• از drawer یا modal برای نمایش فیلترها در mobile استفاده کنید\n" +
+            "• دکمه Filter را نمایش دهید که drawer را باز می‌کند\n" +
+            "• فیلترها را به صورت vertical لیست کنید\n" +
+            "• دکمه Apply برای بستن drawer و اعمال فیلترها\n" +
+            "• نکته: فضای محدود mobile نیاز به UI pattern های متفاوت دارد"
+    },
+    {
+        "id": 998,
+        "question": "Can filters affect SEO in Next.js?",
+        "options": [
+            "No, searchParams ignored by crawlers",
+            "Yes, but only with robots meta",
+            "No, filters are client-only",
+            "Yes, filtered pages can be indexed",
+        ],
+        "correctOption": 3,
+        "points": 30,
+        "explanation": "• بله، صفحات فیلتر شده می‌توانند توسط search engine ها index شوند\n" +
+            "• هر ترکیب فیلتر یک URL منحصر به فرد است\n" +
+            "• می‌تواند در نتایج جستجو ظاهر شود\n" +
+            "• این برای دسته‌بندی محصولات در e-commerce بسیار مفید است\n" +
+            "• نکته: اما مراقب duplicate content باشید، از canonical URL استفاده کنید"
+    },
+    {
+        "id": 999,
+        "question": "How do you implement Apply Filters button pattern?",
+        "options": [
+            "Update URL on each selection immediately",
+            "Use form submission to apply filters",
+            "Store temp state then batch update URL",
+            "Next.js handles batch updates automatically"
+        ],
+        "correctOption": 2,
+        "points": 30,
+        "explanation":"• state موقت در Client Component برای فیلترهای انتخاب شده نگه دارید\n" +
+            "• کاربر چندین فیلتر را انتخاب می‌کند بدون navigation\n" +
+            "• وقتی Apply کلیک شد، همه تغییرات را یکجا به URL اعمال کنید\n" +
+            "• این کار تعداد navigation ها را کم می‌کند\n" +
+            "• نکته: این pattern برای فیلترهای متعدد UX بهتری دارد"
+    },
+    {
+        "id": 1000,
+        "question": "What is the performance impact of many filters?",
+        "options": [
+            "More filters increase URL complexity minimally",
+            "More filters slow rendering significantly",
+            "Filter count doesn't affect performance",
+            "More filters reduce server response time"
+        ],
+        "correctOption": 0,
+        "points": 30,
+        "explanation": "• تعداد زیاد فیلتر فقط URL را کمی بلندتر می‌کند\n" +
+            "• تاثیر performance بسیار کم است\n" +
+            "• مهمتر این است که query در server بهینه باشد\n" +
+            "• database indexing برای performance مهمتر از تعداد فیلتر است\n" +
+            "• نکته: نگران complexity URL نباشید، نگران query performance باشید"
+    },
 //     {
 //         "id": 995,
 //         "question": "How do you handle filter with sorting?",
